@@ -54,11 +54,11 @@ CLASS_DESCRIPTIONS = {
 
 KPI_LABELS = {
     "total_travel_distance_m": "Total pick-path travel distance",
-    "avg_travel_distance_m": "Average travel distance per pick batch",
-    "avg_distance_per_order_m": "Average travel distance per order",
-    "total_route_time_sec": "Total pick-route completion time",
-    "avg_route_time_sec": "Average pick-route completion time (per batch)",
-    "avg_time_per_order_sec": "Average pick-cycle time per order",
+    "avg_travel_distance_m": "Average path per person",
+    "avg_distance_per_order_m": "Path per order (per person)",
+    "total_route_time_sec": "Route completion time per person",
+    "avg_route_time_sec": "Average route time per person",
+    "avg_time_per_order_sec": "Pick-cycle time per order",
     "throughput_orders_per_hr": "Throughput",
     "cube_utilization_pct": "Volumetric cube utilization",
     "golden_zone_demand_share_pct": "Golden-zone demand share",
@@ -371,7 +371,13 @@ def location_state(data: dict, layout: str = "optimized") -> pd.DataFrame | None
             "width_cm", "height_cm", "depth_cm", "unit_volume_cm3", "unit_weight_kg",
         ]
         existing = [c for c in product_cols if c in products.columns]
-        frame = frame.merge(products[existing], on="sku_id", how="left")
+        sku_dims = products[existing].rename(columns={
+            # SKU geometry is kept separate from the bin geometry of the location row
+            "width_cm": "sku_width_cm",
+            "height_cm": "sku_height_cm",
+            "depth_cm": "sku_depth_cm",
+        })
+        frame = frame.merge(sku_dims, on="sku_id", how="left")
 
     class_map = abc_class_map(abc)
     frame["abc_class"] = frame["sku_id"].map(class_map).fillna("unassigned")
@@ -603,14 +609,12 @@ def sku_table(data: dict, layout: str = "optimized") -> pd.DataFrame | None:
         df = df.merge(primary, on="sku_id", how="left")
         if locations is not None:
             loc_idx = locations.set_index("location_id")
-            df["distance_to_dispatch_m"] = df["location_id"].map(loc_idx["distance_to_dispatch_m"])
             df["zone_id"] = df["location_id"].map(loc_idx["zone_id"])
             df["shelf_level"] = df["location_id"].map(loc_idx["shelf_level"])
             df["ergonomic_zone"] = df["location_id"].map(loc_idx["ergonomic_zone"])
     else:
         df["assigned_qty"] = pd.NA
         df["location_id"] = pd.NA
-        df["distance_to_dispatch_m"] = pd.NA
         df["zone_id"] = pd.NA
         df["shelf_level"] = pd.NA
         df["ergonomic_zone"] = pd.NA
@@ -800,7 +804,6 @@ def pair_location_detail(data: dict, sku_a: str, sku_b: str, layout: str = "opti
             "shelf_level": int(idx.loc[bins[0], "shelf_level"]) if bins else None,
             "zone_id": str(idx.loc[bins[0], "zone_id"]) if bins else None,
             "aisle_id": str(idx.loc[bins[0], "aisle_id"]) if bins else None,
-            "distance_to_dispatch_m": float(idx.loc[bins[0], "distance_to_dispatch_m"]) if bins else None,
         }
     if out["a"]["primary"] and out["b"]["primary"]:
         out["network_distance_m"] = network_distance(out["a"]["primary"], out["b"]["primary"])
@@ -825,6 +828,163 @@ def network_distance(loc_a: str, loc_b: str) -> float | None:
         return None
     distance = graph.shortest(str(loc_a), str(loc_b))
     return None if distance == float("inf") else round(float(distance), 3)
+
+
+def get_3x3_matrix_zones() -> list[dict]:
+    """Returns the geometry and metadata of all nine zones in a 3x3 matrix in a box."""
+    outer_margin = 3.0
+    zone_size = 9.6
+    aisle_width = 3.0
+    zones = []
+    zone_types = [
+        ("Z1", "General", "#2980b9"),
+        ("Z2", "General", "#2980b9"),
+        ("Z3", "General", "#2980b9"),
+        ("Z4", "Small Parts", "#8e44ad"),
+        ("Z5", "Bulk", "#16a085"),
+        ("Z6", "Bulk", "#16a085"),
+        ("Z7", "Heavy", "#d35400"),
+        ("Z8", "Heavy", "#d35400"),
+        ("Z9", "Hazard", "#c0392b"),
+    ]
+    for idx, (zid, ztype, color) in enumerate(zone_types):
+        col = idx % 3
+        row = idx // 3
+        x0 = outer_margin + col * (zone_size + aisle_width)
+        y0 = outer_margin + row * (zone_size + aisle_width)
+        zones.append({
+            "zone_id": zid,
+            "zone_type": ztype,
+            "color": color,
+            "col": col,
+            "row": row,
+            "x0": round(x0, 2),
+            "y0": round(y0, 2),
+            "x1": round(x0 + zone_size, 2),
+            "y1": round(y0 + zone_size, 2),
+            "x_center": round(x0 + zone_size / 2.0, 2),
+            "y_center": round(y0 + zone_size / 2.0, 2),
+        })
+    return zones
+
+
+def get_3x3_zone_racks() -> pd.DataFrame:
+    """Returns the geometry of the four edge racks on each of the nine zones."""
+    outer_margin = 3.0
+    zone_size = 9.6
+    aisle_width = 3.0
+    rack_depth = 1.0
+    racks = []
+    sides = [
+        ("South", "South Edge (Bottom)"),
+        ("North", "North Edge (Top)"),
+        ("West", "West Edge (Left)"),
+        ("East", "East Edge (Right)"),
+    ]
+    for idx in range(9):
+        zid = f"Z{idx + 1}"
+        col = idx % 3
+        row = idx // 3
+        zx0 = outer_margin + col * (zone_size + aisle_width)
+        zy0 = outer_margin + row * (zone_size + aisle_width)
+        zx1 = zx0 + zone_size
+        zy1 = zy0 + zone_size
+        for side, label in sides:
+            rack_id = f"R{idx + 1}-{side}"
+            if side == "South":
+                x0, x1 = zx0, zx1
+                y0, y1 = zy0, zy0 + rack_depth
+            elif side == "North":
+                x0, x1 = zx0, zx1
+                y0, y1 = zy1 - rack_depth, zy1
+            elif side == "West":
+                x0, x1 = zx0, zx0 + rack_depth
+                y0, y1 = zy0, zy1
+            else:
+                x0, x1 = zx1 - rack_depth, zx1
+                y0, y1 = zy0, zy1
+            racks.append({
+                "zone_id": zid,
+                "side": side,
+                "label": label,
+                "rack_id": rack_id,
+                "x_min": round(x0, 2),
+                "x_max": round(x1, 2),
+                "y_min": round(y0, 2),
+                "y_max": round(y1, 2),
+            })
+    return pd.DataFrame(racks)
+
+
+def get_corridor_grid() -> tuple[list[float], list[float]]:
+    """Returns the four horizontal and four vertical corridor centerlines between/around zones."""
+    outer_margin = 3.0
+    zone_size = 9.6
+    aisle_width = 3.0
+    x_corrs = [
+        outer_margin / 2.0,
+        outer_margin + zone_size + aisle_width / 2.0,
+        outer_margin + 2 * zone_size + 1.5 * aisle_width,
+        outer_margin + 3 * zone_size + 2 * aisle_width + outer_margin / 2.0,
+    ]
+    y_corrs = [
+        outer_margin / 2.0,
+        outer_margin + zone_size + aisle_width / 2.0,
+        outer_margin + 2 * zone_size + 1.5 * aisle_width,
+        outer_margin + 3 * zone_size + 2 * aisle_width + outer_margin / 2.0,
+    ]
+    return [round(v, 2) for v in x_corrs], [round(v, 2) for v in y_corrs]
+
+
+def ruler_path(loc_a: str, loc_b: str, locations: pd.DataFrame | None = None) -> dict:
+    """Calculates the exact path and distance of the invisible ruler between two locations.
+
+    The path strictly follows the perimeter and inter-zone corridors, never cutting through zones.
+    """
+    graph = _graph()
+    if graph is None:
+        return {"distance": None, "path": [], "xs": [], "ys": []}
+    path, dist = graph.shortest_path(str(loc_a), str(loc_b))
+    if dist == float("inf"):
+        return {"distance": None, "path": [], "xs": [], "ys": []}
+
+    loc_lookup = {}
+    if locations is not None and not locations.empty:
+        for r in locations.itertuples(index=False):
+            loc_lookup[str(r.location_id)] = (float(r.x_m), float(r.y_m))
+
+    x_c, y_c = get_corridor_grid()
+    xs: list[float] = []
+    ys: list[float] = []
+
+    for node in path:
+        if node in loc_lookup:
+            xs.append(loc_lookup[node][0])
+            ys.append(loc_lookup[node][1])
+        elif node == "DEPOT":
+            xs.append(20.4)
+            ys.append(0.5)
+        elif node == "CORR_DEPOT_ENTRY":
+            xs.append(20.4)
+            ys.append(y_c[0])
+        elif node.startswith("INT_"):
+            parts = node.split("_")
+            i, j = int(parts[1]), int(parts[2])
+            xs.append(x_c[i])
+            ys.append(y_c[j])
+        elif node.startswith("ACOL_"):
+            # Connect along adjacent corridor
+            if xs:
+                xs.append(xs[-1])
+                ys.append(ys[-1])
+
+    return {
+        "distance": round(dist, 2),
+        "path": path,
+        "xs": xs,
+        "ys": ys,
+    }
+
 
 
 # ----------------------------------------------------------------------------- availability

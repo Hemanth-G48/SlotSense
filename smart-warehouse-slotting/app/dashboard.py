@@ -345,7 +345,6 @@ def render_overview(data: dict) -> None:
         _normalized_figure(
             rows,
             [
-                "total_travel_distance_m",
                 "avg_travel_distance_m",
                 "avg_distance_per_order_m",
                 "total_route_time_sec",
@@ -412,6 +411,189 @@ def render_overview(data: dict) -> None:
 
 
 # --------------------------------------------------------------------------- layout figures
+# --------------------------------------------------------------------------- layout figures
+def _rack_side_name(rack_id: str) -> str:
+    """Returns human-readable side (South, North, West, East) for 3x3 zone edge racks."""
+    r = str(rack_id)
+    if "-1-1" in r:
+        return "South"
+    if "-1-2" in r:
+        return "North"
+    if "-2-1" in r:
+        return "West"
+    if "-2-2" in r:
+        return "East"
+    return "Edge rack"
+
+
+def overview_figure(locations, dispatch=None):
+    """Warehouse boundary + dispatch point overview."""
+    figure = go.Figure()
+    # 40.8m x 40.8m warehouse box
+    figure.add_shape(
+        type="rect", x0=0.0, x1=40.8, y0=0.0, y1=40.8,
+        line=dict(color="#1a252f", width=2.5), fillcolor="#f8f9f9", layer="below",
+    )
+    # Inter-zone corridors
+    corrs = [1.5, 14.1, 26.7, 39.3]
+    for c in corrs:
+        figure.add_shape(type="line", x0=c, x1=c, y0=0.0, y1=40.8, line=dict(color="#e2e8f0", width=1, dash="dot"), layer="below")
+        figure.add_shape(type="line", x0=0.0, x1=40.8, y0=c, y1=c, line=dict(color="#e2e8f0", width=1, dash="dot"), layer="below")
+    if dispatch is not None:
+        figure.add_trace(go.Scatter(
+            x=[dispatch[0]], y=[dispatch[1]], mode="markers+text", name="Dispatch / I-O",
+            marker=dict(symbol="star", size=18, color="#f1c40f", line=dict(width=1, color="#7d6608")),
+            text=["I-O"], textposition="bottom center",
+        ))
+    figure.update_layout(title="Warehouse overview (3x3 Matrix, 9 Zones)", height=PLOT_HEIGHT, margin=dict(l=10, r=10, t=60, b=40))
+    figure.update_xaxes(title="x (m)", range=[-1, 42], showgrid=False)
+    figure.update_yaxes(title="y (m)", range=[-1, 42], scaleanchor="x", scaleratio=1, showgrid=False)
+    return figure
+
+
+def matrix_3x3_overview_figure(
+    locations: pd.DataFrame | None = None,
+    selected_zone: str = "Z1",
+    selected_rack: str | None = None,
+    ruler_overlay: dict | None = None,
+    title: str = "Warehouse Layout: 3x3 Matrix with 9 Zones & Edge Racks",
+) -> go.Figure:
+    """Renders the complete 3x3 matrix layout of 9 zones enclosed in a single warehouse box.
+
+    Each zone features 4 edge racks (North, South, East, West) along its borders,
+    with inter-zone corridors running between them. Displays optional invisible ruler paths.
+    """
+    figure = go.Figure()
+    # 1. Warehouse Bounding Box (40.8m x 40.8m)
+    figure.add_shape(
+        type="rect", x0=0.0, x1=40.8, y0=0.0, y1=40.8,
+        line=dict(color="#1a252f", width=3), fillcolor="#ffffff", layer="below",
+    )
+
+    # 2. Inter-zone & perimeter corridors
+    corridor_axes = [1.5, 14.1, 26.7, 39.3]
+    for xc in corridor_axes:
+        figure.add_shape(type="line", x0=xc, x1=xc, y0=0.0, y1=40.8, line=dict(color="#e2e8f0", width=1.5, dash="dash"), layer="below")
+    for yc in corridor_axes:
+        figure.add_shape(type="line", x0=0.0, x1=40.8, y0=yc, y1=yc, line=dict(color="#e2e8f0", width=1.5, dash="dash"), layer="below")
+
+    zone_info = [
+        ("Z1", "General", "#ebf5fb", "#2980b9"),
+        ("Z2", "General", "#ebf5fb", "#2980b9"),
+        ("Z3", "General", "#ebf5fb", "#2980b9"),
+        ("Z4", "Small Parts", "#f4ecf7", "#8e44ad"),
+        ("Z5", "Bulk", "#e8f8f5", "#16a085"),
+        ("Z6", "Bulk", "#e8f8f5", "#16a085"),
+        ("Z7", "Heavy", "#fef5e7", "#d35400"),
+        ("Z8", "Heavy", "#fef5e7", "#d35400"),
+        ("Z9", "Hazard", "#fdedec", "#c0392b"),
+    ]
+
+    outer_margin = 3.0
+    zone_size = 9.6
+    aisle_width = 3.0
+    rack_depth = 1.0
+
+    # 3. Render 9 Zones & 4 Edge Racks per Zone
+    for idx, (zid, ztype, bg_color, border_color) in enumerate(zone_info):
+        col = idx % 3
+        row = idx // 3
+        zx0 = outer_margin + col * (zone_size + aisle_width)
+        zy0 = outer_margin + row * (zone_size + aisle_width)
+        zx1 = zx0 + zone_size
+        zy1 = zy0 + zone_size
+
+        is_zone_sel = (zid == selected_zone)
+        z_border = "#f39c12" if is_zone_sel else border_color
+        z_width = 2.5 if is_zone_sel else 1.2
+
+        # Zone interior body
+        figure.add_shape(
+            type="rect", x0=zx0, x1=zx1, y0=zy0, y1=zy1,
+            line=dict(color=z_border, width=z_width), fillcolor=bg_color, layer="below",
+        )
+
+        # Zone Label
+        figure.add_annotation(
+            x=zx0 + zone_size / 2.0, y=zy0 + zone_size / 2.0,
+            text=f"<b>{zid}</b><br><span style='font-size:10px;'>{ztype}</span>",
+            showarrow=False, font=dict(family="Arial", size=13, color=border_color),
+        )
+
+        # 4 edge racks on 4 sides of the zone
+        edge_racks = [
+            ("South", f"R{idx+1}-1-1", zx0, zx1, zy0, zy0 + rack_depth),
+            ("North", f"R{idx+1}-1-2", zx0, zx1, zy1 - rack_depth, zy1),
+            ("West", f"R{idx+1}-2-1", zx0, zx0 + rack_depth, zy0, zy1),
+            ("East", f"R{idx+1}-2-2", zx1 - rack_depth, zx1, zy0, zy1),
+        ]
+
+        for side, rid, rx0, rx1, ry0, ry1 in edge_racks:
+            is_rack_sel = (selected_rack is not None and str(selected_rack) == rid)
+            r_fill = "#f39c12" if is_rack_sel else "#34495e"
+            r_line = "#e67e22" if is_rack_sel else "#1a252f"
+            r_w = 2.5 if is_rack_sel else 1.0
+
+            figure.add_shape(
+                type="rect", x0=rx0, x1=rx1, y0=ry0, y1=ry1,
+                line=dict(color=r_line, width=r_w), fillcolor=r_fill,
+            )
+
+    # 4. Depot / Dispatch point
+    figure.add_trace(go.Scatter(
+        x=[20.4], y=[0.5], mode="markers+text", name="Depot (I-O)",
+        marker=dict(symbol="star", size=20, color="#f1c40f", line=dict(width=1.5, color="#7d6608")),
+        text=["DEPOT"], textposition="bottom center",
+        hovertemplate="Depot / Dispatch Point (20.4, 0.5) m<extra></extra>",
+    ))
+
+    # 5. Invisible Ruler Overlay (Corridor Shortest Path)
+    if ruler_overlay is not None and ruler_overlay.get("xs") and ruler_overlay.get("ys"):
+        r_xs = ruler_overlay["xs"]
+        r_ys = ruler_overlay["ys"]
+        dist = ruler_overlay.get("distance", 0.0)
+        figure.add_trace(go.Scatter(
+            x=r_xs, y=r_ys, mode="lines+markers",
+            name=f"Invisible Ruler ({dist} m)",
+            line=dict(color="#00cec9", width=4.5, dash="solid"),
+            marker=dict(size=7, color="#0984e3", symbol="circle"),
+            hovertemplate="Ruler waypoint: (%{x:.2f}, %{y:.2f}) m<extra></extra>",
+        ))
+        # Start & end points
+        figure.add_trace(go.Scatter(
+            x=[r_xs[0]], y=[r_ys[0]], mode="markers+text", name="Ruler Start",
+            marker=dict(size=14, color="#2ecc71", symbol="circle", line=dict(width=2, color="#ffffff")),
+            text=["Start"], textposition="top center", showlegend=False,
+            hovertemplate="Start: (%{x:.2f}, %{y:.2f}) m<extra></extra>",
+        ))
+        figure.add_trace(go.Scatter(
+            x=[r_xs[-1]], y=[r_ys[-1]], mode="markers+text", name="Ruler End",
+            marker=dict(size=14, color="#e74c3c", symbol="square", line=dict(width=2, color="#ffffff")),
+            text=["End"], textposition="top center", showlegend=False,
+            hovertemplate="End: (%{x:.2f}, %{y:.2f}) m<extra></extra>",
+        ))
+        if len(r_xs) >= 2:
+            mid = len(r_xs) // 2
+            figure.add_annotation(
+                x=r_xs[mid], y=r_ys[mid],
+                text=f"<b>📐 Ruler: {dist} m</b>",
+                showarrow=True, arrowhead=2, arrowcolor="#00cec9",
+                bgcolor="#0984e3", font=dict(color="#ffffff", size=11),
+                borderpad=4,
+            )
+
+    figure.update_layout(
+        title=title,
+        height=620,
+        margin=dict(l=10, r=10, t=50, b=40),
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, x=0),
+        plot_bgcolor="#ffffff",
+    )
+    figure.update_xaxes(title="x (meters)", range=[-1, 42], showgrid=False)
+    figure.update_yaxes(title="y (meters)", range=[-1, 42], scaleanchor="x", scaleratio=1, showgrid=False)
+    return figure
+
+
 def plan_figure(
     frame: pd.DataFrame,
     racks: pd.DataFrame,
@@ -420,6 +602,10 @@ def plan_figure(
     selected_id: str | None,
     color_mode: str = "ABC class",
     title: str = "",
+    zone_box=None,
+    cross_box=None,
+    route_overlay=None,
+    show_ids: bool = False,
 ) -> go.Figure:
     """True-coordinate plan view built from topology: rack footprints, aisle bands, bins."""
     figure = go.Figure()
@@ -503,6 +689,57 @@ def plan_figure(
             text=["Dispatch / I-O"], textposition="top center",
             hovertemplate="Configured dispatch point<br>(%{x:.1f}, %{y:.1f}) m<extra></extra>",
         ))
+    # optional zone boundary / cross-aisle bands (used by the layout view)
+    if zone_box is not None:
+        try:
+            zx0, zx1, zy0, zy1 = zone_box
+            figure.add_shape(
+                type="rect", x0=zx0, x1=zx1, y0=zy0, y1=zy1,
+                line=dict(color="#2c3e50", width=1.5), fillcolor="rgba(0,0,0,0)", layer="below",
+            )
+        except (TypeError, ValueError):
+            pass
+    if cross_box is not None:
+        try:
+            if len(cross_box) == 2:
+                cx0, cx1 = cross_box
+                ys = pd.to_numeric(frame["y_m"], errors="coerce")
+                cy0, cy1 = float(ys.min()), float(ys.max())
+            else:
+                cx0, cx1, cy0, cy1 = cross_box
+            figure.add_shape(
+                type="rect", x0=cx0, x1=cx1, y0=cy0, y1=cy1,
+                line=dict(width=0), fillcolor="#dfe6e9", layer="below",
+            )
+        except (TypeError, ValueError):
+            pass
+
+    # route overlay (pick path) drawn on top of the warehouse layout
+    if route_overlay is not None:
+        try:
+            ro = route_overlay
+            xs = ro["x_m"] if not ro.empty else []
+            ys = ro["y_m"] if not ro.empty else []
+            labels = ["" if str(s) == "DEPOT" else str(s) for s in ro.get("sequence", [])] if not ro.empty else []
+            figure.add_trace(go.Scatter(
+                x=xs, y=ys, mode="lines", name="Route sequence",
+                line=dict(color=ACCENT, width=2, dash="dot"),
+            ))
+            figure.add_trace(go.Scatter(
+                x=xs, y=ys, mode="markers+text", name="Pick stops",
+                marker=dict(size=9, color="#2471a3", line=dict(width=1, color="#ffffff")),
+                text=labels, textposition="top center",
+            ))
+        except Exception:
+            pass
+
+    if show_ids and not frame.empty and "location_id" in frame.columns:
+        figure.add_trace(go.Scatter(
+            x=frame["x_m"], y=frame["y_m"], mode="text", name="Bin ids",
+            text=frame["location_id"].astype(str), textposition="bottom center",
+            showlegend=False,
+        ))
+
     figure.update_layout(
         title=title,
         height=PLOT_HEIGHT,
@@ -522,8 +759,16 @@ def elevation_figure(
     color_mode: str = "ABC class",
     title: str = "",
 ) -> go.Figure:
-    """Rack elevation: bays/bins along x, shelf levels along y, golden band highlighted."""
+    """Rack elevation: renders one whole side of a zone (8 bays x 4 shelves = 64 bins).
+
+    Physical boxes displaying items in rows of racks are linearly sized according to
+    the item's dimensions (width x height) relative to the bin dimensions.
+    """
     figure = go.Figure()
+    if frame is None or frame.empty:
+        figure.update_layout(title=title or "Rack elevation (no data)", height=PLOT_HEIGHT)
+        return figure
+
     data_frame = frame.copy()
     data_frame["shelf_level"] = pd.to_numeric(data_frame["shelf_level"], errors="coerce").fillna(0).astype(int)
     slots = sorted({(int(row.bay), float(row.x_m)) for row in data_frame.itertuples(index=False)})
@@ -531,29 +776,126 @@ def elevation_figure(
     data_frame["slot"] = [slot_index[(int(r.bay), float(r.x_m))] for r in data_frame.itertuples(index=False)]
     max_slot = max(len(slots) - 1, 0)
     levels = sorted(data_frame["shelf_level"].unique())
+    if not levels:
+        levels = [0, 1, 2, 3]
 
+    # 1. Golden shelf level background highlight
     for level in levels:
         if level in golden_levels:
             figure.add_shape(
-                type="rect", x0=-0.6, x1=max_slot + 0.6, y0=level - 0.42, y1=level + 0.42,
+                type="rect", x0=-0.6, x1=max_slot + 0.6, y0=level - 0.46, y1=level + 0.46,
                 line=dict(width=0), fillcolor="#fef5e7", layer="below",
             )
+
+    # 2. Outer rack frame & steel shelf beams
     figure.add_shape(
         type="rect", x0=-0.6, x1=max_slot + 0.6, y0=min(levels) - 0.5, y1=max(levels) + 0.5,
-        line=dict(color="#7f8c8d", width=2), fillcolor="rgba(0,0,0,0)", layer="below",
+        line=dict(color="#2c3e50", width=3), fillcolor="rgba(0,0,0,0)", layer="below",
     )
+    for level in levels:
+        # Steel load beam supporting each shelf tier
+        figure.add_shape(
+            type="rect", x0=-0.6, x1=max_slot + 0.6, y0=level - 0.50, y1=level - 0.45,
+            line=dict(width=0), fillcolor="#7f8c8d", layer="below",
+        )
 
+    # 3. Empty bin outlines & linearly sized physical item boxes
+    marker_sizes = []
+    custom_rows = []
+    for row in data_frame.itertuples(index=False):
+        slot = getattr(row, "slot", 0)
+        level = getattr(row, "shelf_level", 0)
+        bw = float(getattr(row, "width_cm", 60.0) or 60.0)
+        bh = float(getattr(row, "height_cm", 40.0) or 40.0)
+        sku = getattr(row, "sku_id", None)
+        assigned = pd.notna(sku) and str(sku) not in ("", "nan", "None", "<NA>")
+
+        # Bin dashed compartment boundary
+        figure.add_shape(
+            type="rect", x0=slot - 0.44, x1=slot + 0.44, y0=level - 0.44, y1=level + 0.44,
+            line=dict(color="#d5d8dc", width=1, dash="dot"), fillcolor="rgba(245,247,250,0.5)", layer="below",
+        )
+
+        if assigned:
+            sw = float(getattr(row, "sku_width_cm", 0.0) or 0.0)
+            sh = float(getattr(row, "sku_height_cm", 0.0) or 0.0)
+            sd = float(getattr(row, "sku_depth_cm", 0.0) or 0.0)
+            if sw <= 0:
+                sw = bw * 0.45
+            if sh <= 0:
+                sh = bh * 0.45
+
+            # Linear scaling: item dimensions divided by bin dimensions
+            lin_w = min(1.0, max(0.25, sw / bw))
+            lin_h = min(1.0, max(0.25, sh / bh))
+            w_box = 0.84 * lin_w
+            h_box = 0.82 * lin_h
+
+            # Color determined by selected color mode
+            cls = str(getattr(row, "abc_class", "unassigned"))
+            if color_mode == "ABC class":
+                box_color = dd.CLASS_COLORS.get(cls, "#95a5a6")
+            elif color_mode == "Utilization":
+                u = float(getattr(row, "bin_volume_util_pct", 0.0) or 0.0)
+                box_color = "#1b4f72" if u > 60 else ("#2980b9" if u > 30 else "#85c1e9")
+            elif color_mode == "Constraint status":
+                st_val = str(getattr(row, "constraint_status", "OK"))
+                box_color = "#27ae60" if st_val == "OK" else ("#c0392b" if st_val == "FAIL" else "#f39c12")
+            else:
+                box_color = "#2471a3"
+
+            # Draw physical box resting on shelf beam
+            bx0 = slot - w_box / 2.0
+            bx1 = slot + w_box / 2.0
+            by0 = level - 0.44
+            by1 = level - 0.44 + h_box
+            figure.add_shape(
+                type="rect", x0=bx0, x1=bx1, y0=by0, y1=by1,
+                line=dict(color="#ffffff", width=1.5), fillcolor=box_color, layer="below",
+            )
+
+    # 4. Interactive Scatter markers with hover information
     if color_mode == "ABC class":
         for cls in dd.CLASS_ORDER:
             subset = data_frame[data_frame["abc_class"] == cls]
             if subset.empty:
                 continue
+            lin_w_vals = [
+                min(1.0, max(0.25, float(getattr(r, "sku_width_cm", 0) or 25) / float(getattr(r, "width_cm", 60) or 60)))
+                for r in subset.itertuples(index=False)
+            ]
+            custom_data = [
+                [
+                    str(getattr(r, "location_id", "")),
+                    str(getattr(r, "sku_id", "—")),
+                    str(getattr(r, "shelf_level", "")),
+                    str(getattr(r, "bay", "")),
+                    str(getattr(r, "product_name", "—")),
+                    f"{float(getattr(r, 'sku_width_cm', 0) or 0):g}x{float(getattr(r, 'sku_height_cm', 0) or 0):g}x{float(getattr(r, 'sku_depth_cm', 0) or 0):g} cm",
+                    f"{float(getattr(r, 'width_cm', 60) or 60):g}x{float(getattr(r, 'height_cm', 40) or 40):g} cm",
+                    f"{lw*100:.0f}%",
+                    f"{float(getattr(r, 'unit_weight_kg', 0) or 0):g}",
+                    cls,
+                ]
+                for r, lw in zip(subset.itertuples(index=False), lin_w_vals)
+            ]
             figure.add_trace(go.Scatter(
                 x=subset["slot"], y=subset["shelf_level"], mode="markers",
                 name=f"Class {cls}" if cls != "unassigned" else "Unassigned",
-                marker=dict(symbol="square", size=26, color=dd.CLASS_COLORS[cls], line=dict(width=1, color="#ffffff")),
-                customdata=subset[["location_id", "sku_id", "shelf_level"]].astype(str).values,
-                hovertemplate="%{customdata[0]}<br>SKU %{customdata[1]}<br>Shelf level %{customdata[2]}<extra></extra>",
+                marker=dict(
+                    symbol="square",
+                    size=[16 + 16 * lw for lw in lin_w_vals],
+                    color=dd.CLASS_COLORS[cls],
+                    line=dict(width=1.5, color="#ffffff"),
+                ),
+                customdata=custom_data,
+                hovertemplate=(
+                    "<b>%{customdata[0]}</b> (Bay %{customdata[3]}, Shelf L%{customdata[2]})<br>"
+                    "SKU: <b>%{customdata[1]}</b> · %{customdata[4]}<br>"
+                    "Box size: <b>%{customdata[5]}</b> (linear fill: %{customdata[7]})<br>"
+                    "Bin size: %{customdata[6]}<br>"
+                    "Weight: %{customdata[8]} kg · ABC Class: <b>%{customdata[9]}</b><extra></extra>"
+                ),
             ))
     else:
         subset = data_frame
@@ -563,13 +905,21 @@ def elevation_figure(
             else subset["constraint_status"].map({"OK": 1.0, "FAIL": 0.0, "UNKNOWN": 0.5}).fillna(0.5)
         )
         colorscale = "Blues" if color_mode == "Utilization" else "RdYlGn"
+        lin_w_vals = [
+            min(1.0, max(0.25, float(getattr(r, "sku_width_cm", 0) or 25) / float(getattr(r, "width_cm", 60) or 60)))
+            for r in subset.itertuples(index=False)
+        ]
         figure.add_trace(go.Scatter(
             x=subset["slot"], y=subset["shelf_level"], mode="markers",
             name=color_mode,
-            marker=dict(symbol="square", size=26, color=values, colorscale=colorscale, cmin=0, cmax=100 if color_mode == "Utilization" else 1,
-                        line=dict(width=1, color="#ffffff")),
-            customdata=subset[["location_id", "sku_id"]].astype(str).values,
-            hovertemplate="%{customdata[0]}<br>SKU %{customdata[1]}<extra></extra>",
+            marker=dict(
+                symbol="square",
+                size=[16 + 16 * lw for lw in lin_w_vals],
+                color=values, colorscale=colorscale, cmin=0, cmax=100 if color_mode == "Utilization" else 1,
+                line=dict(width=1.5, color="#ffffff"),
+            ),
+            customdata=subset[["location_id", "sku_id", "shelf_level"]].astype(str).values,
+            hovertemplate="<b>%{customdata[0]}</b><br>SKU: %{customdata[1]}<br>Shelf L%{customdata[2]}<extra></extra>",
         ))
 
     if selected_id is not None:
@@ -577,26 +927,30 @@ def elevation_figure(
         if not selected.empty:
             figure.add_trace(go.Scatter(
                 x=selected["slot"], y=selected["shelf_level"], mode="markers", name="Selected bin",
-                marker=dict(symbol="circle-open", size=34, color="#111111", line=dict(width=3)),
+                marker=dict(symbol="circle-open", size=36, color="#111111", line=dict(width=3.5)),
                 hoverinfo="skip", showlegend=False,
             ))
+
     figure.update_layout(
-        title=title,
+        title=title or "Zone Edge Rack Elevation (8 Bays x 4 Shelf Levels = 64 Bins)",
         height=PLOT_HEIGHT,
         margin=dict(l=10, r=10, t=60, b=40),
         legend=dict(orientation="h", yanchor="bottom", y=1.0, x=0),
+        plot_bgcolor="#fdfefe",
     )
     figure.update_xaxes(
-        title="Bay / bin position across the rack",
+        title="Bay / bin position across this edge of the zone (8 Bays x 2 Bins = 16 Bins)",
         tickmode="array",
         tickvals=[slot_index[s] for s in slots],
-        ticktext=[f"b{bay}.{i}" for i, (bay, _x) in enumerate(slots)],
+        ticktext=[f"Bay {bay+1}.{i%2+1}" for i, (bay, _x) in enumerate(slots)],
+        showgrid=False,
     )
     figure.update_yaxes(
         title="Shelf level (0 = floor level)",
         tickmode="array",
         tickvals=levels,
         ticktext=[f"L{level}" + (" · golden" if level in golden_levels else "") for level in levels],
+        showgrid=False,
     )
     return figure
 
@@ -642,7 +996,6 @@ def render_location_detail(data: dict, state: pd.DataFrame, location_id: str, la
         _detail_line("Bay / shelf level", f"{record.get('bay', '—')} · L{record.get('shelf_level', '—')}")
         _detail_line("Coordinates (x, y, z)", f"({fmt_number(record.get('x_m'), 2)}, {fmt_number(record.get('y_m'), 2)}, {fmt_number(record.get('z_m'), 2)}) m")
         _detail_line("Shelf height / ergonomics", f"{fmt_number(record.get('z_m'), 2)} m · {'golden zone' if record.get('golden_zone') else str(record.get('ergonomic_zone', '—'))}")
-        _detail_line("Distance to dispatch", f"{fmt_number(record.get('distance_to_dispatch_m'), 1)} m (network)")
         _detail_line("Zone type / allowed handling", f"{record.get('zone_type', '—')} · {record.get('allowed_handling', '—')}")
         _detail_line("Allowed hazard classes", str(record.get("allowed_hazard", "—")))
 
@@ -718,38 +1071,59 @@ def render_layout(data: dict, layout: str) -> None:
     )
 
     zones = sorted(locations["zone_id"].astype(str).unique())
-    view = st.radio("View", ["Plan (zone)", "Rack elevation"], horizontal=True, key="layout_view")
-    control_a, control_b, control_c, control_d = st.columns(4)
     default_zone_index = zones.index("Z1") if "Z1" in zones else 0
-    zone = control_a.selectbox("Zone", zones, index=default_zone_index, key="layout_zone")
-    levels = sorted(int(v) for v in locations.loc[locations["zone_id"].astype(str) == zone, "shelf_level"].unique())
-    golden_levels = topology.get("golden_levels", [])
-    default_level = golden_levels[0] if golden_levels else levels[0]
-    level = control_b.selectbox(
-        "Shelf level", levels,
-        index=levels.index(default_level) if default_level in levels else 0,
-        key="layout_level",
+
+    # 1. First display the 3x3 matrix layout of all nine zones in a box
+    st.subheader("Warehouse Layout: 3x3 Matrix with 9 Zones & Edge Racks")
+    st.caption(
+        "All nine zones (Z1 to Z9) are enclosed in a 40.8m x 40.8m box. "
+        "Each zone has 4 edge racks on its 4 sides (South, North, West, East) with inter-zone corridors running strictly between them."
     )
+
+    # Invisible ruler: path follows corridors between zones without cutting through zones
+    with st.expander("📐 **Invisible Ruler — Inter-Zone Corridor Path Distance**", expanded=True):
+        r_col1, r_col2 = st.columns(2)
+        all_locs = sorted(locations["location_id"].astype(str).unique())
+        loc_a = r_col1.selectbox("Start location / SKU bin", all_locs, index=0, key="ruler_loc_a")
+        loc_b = r_col2.selectbox("End location / SKU bin", all_locs, index=min(500, len(all_locs) - 1), key="ruler_loc_b")
+        ruler_res = dd.ruler_path(loc_a, loc_b, locations)
+        if ruler_res.get("distance") is not None:
+            st.success(
+                f"📏 **Measured Corridor Distance:** **{ruler_res['distance']} m** "
+                f"(Strictly follows the perimeter and inter-zone corridors around zones; zero zone penetration)"
+            )
+        else:
+            st.info("Select two locations to measure path distance along inter-zone corridors.")
+
+    # 2. Controls: Plan zone mode removed; only rack elevation mode displayed
+    view = st.radio("View", ["Rack elevation"], horizontal=True, key="layout_view")
+    control_a, control_b, control_c, control_d = st.columns(4)
+    zone = control_a.selectbox("Zone", zones, index=default_zone_index, key="layout_zone")
+
     zone_racks = sorted(locations.loc[locations["zone_id"].astype(str) == zone, "rack_id"].astype(str).unique())
-    selected_rack = control_b.selectbox("Rack (elevation)", zone_racks, key="layout_rack") if view == "Rack elevation" else None
+    selected_rack = control_b.selectbox(
+        "Rack (elevation)", zone_racks,
+        format_func=lambda r: f"{r} ({_rack_side_name(r)} side - 8 Bays)",
+        key="layout_rack",
+    )
     color_mode = control_c.selectbox(
         "Colour by", ["ABC class", "Utilization", "Constraint status", "Assignment change"],
         key="layout_color",
     )
     assigned_only = control_d.checkbox("Assigned bins only", value=False, key="layout_assigned_only")
 
-    filter_a, filter_b, filter_c, filter_d = st.columns(4)
-    abc_filter = filter_a.multiselect("ABC class", dd.CLASS_ORDER, default=dd.CLASS_ORDER, key="layout_abc")
-    aisles = ["All"] + sorted(locations.loc[locations["zone_id"].astype(str) == zone, "aisle_id"].astype(str).unique())
-    aisle_choice = filter_b.selectbox("Aisle", aisles, key="layout_aisle")
-    racks = ["All"] + zone_racks
-    rack_choice = filter_c.selectbox("Rack", racks, key="layout_rack_filter") if view == "Plan (zone)" else "All"
-    hazard_options = ["All"] + sorted(locations["allowed_hazard"].astype(str).str.split("|").explode().unique())
-    hazard_choice = filter_d.selectbox("Stored hazard class", hazard_options, key="layout_hazard")
+    # Render 3x3 Matrix Overview Figure at the top
+    overview_3x3 = matrix_3x3_overview_figure(
+        locations, selected_zone=zone, selected_rack=selected_rack, ruler_overlay=ruler_res
+    )
+    st.plotly_chart(overview_3x3, width="stretch", key="layout_3x3_matrix_chart")
 
-    filter_e, filter_f = st.columns(2)
-    min_util = filter_e.slider("Minimum bin utilization (%)", 0, 100, 0, key="layout_min_util")
-    status_choice = filter_f.selectbox(
+    # Filter dropdowns: minimum bin utilization removed per specification
+    filter_a, filter_b, filter_c = st.columns(3)
+    abc_filter = filter_a.multiselect("ABC class", dd.CLASS_ORDER, default=dd.CLASS_ORDER, key="layout_abc")
+    hazard_options = ["All"] + sorted(locations["allowed_hazard"].astype(str).str.split("|").explode().unique())
+    hazard_choice = filter_b.selectbox("Stored hazard class", hazard_options, key="layout_hazard")
+    status_choice = filter_c.selectbox(
         "Constraint status", ["All", "OK", "FAIL", "UNKNOWN"], key="layout_status"
     )
 
@@ -757,66 +1131,28 @@ def render_layout(data: dict, layout: str) -> None:
         st.info("Assignment comparison needs both baseline and optimized outputs; falling back to ABC colouring.")
         color_mode = "ABC class"
 
-    zone_locations = locations[locations["zone_id"].astype(str) == zone]
-    if not zone_locations.empty:
-        zone_profile = zone_locations.iloc[0]
-        st.caption(
-            f"Zone {zone} · type **{zone_profile.get('zone_type', 'n/a')}** · "
-            f"allowed handling: {zone_profile.get('allowed_handling', 'n/a')} · "
-            f"allowed hazard classes: {zone_profile.get('allowed_hazard', 'n/a')} · "
-            f"bin module: {fmt_number(zone_profile.get('width_cm'), 0)} × "
-            f"{fmt_number(zone_profile.get('height_cm'), 0)} × "
-            f"{fmt_number(zone_profile.get('depth_cm'), 0)} cm. "
-            "Hazard, heavy and small-parts zones are separate physical zones in the topology."
-        )
-    rack_geometry = dd.rack_geometry(zone_locations)
-    aisle_geometry = dd.aisle_geometry(zone_locations)
-    dispatch = dd.dispatch_point(data)
+    golden_levels = topology.get("golden_levels", [1, 2])
+    st.subheader(f"Zone {zone} · {_rack_side_name(selected_rack)} Edge Rack ({selected_rack}) Elevation")
+    st.caption("Displays one whole side of the zone (8 bays x 4 shelf levels = 64 bins). Stored boxes are linearly sized by physical item dimensions.")
 
-    frame = dd.filter_locations(
+    rack_frame = dd.filter_locations(
         state,
         abc_classes=[c for c in abc_filter if c in dd.CLASS_ORDER],
         zone=zone,
-        aisle=None if aisle_choice == "All" else aisle_choice,
-        rack=None if rack_choice == "All" or view != "Plan (zone)" else rack_choice,
-        shelf=level if view == "Plan (zone)" else None,
+        rack=selected_rack,
         hazard=None if hazard_choice == "All" else hazard_choice,
-        min_utilization=float(min_util),
         constraint_status=None if status_choice == "All" else status_choice,
         assigned_only=assigned_only,
     )
-
-    if frame.empty:
-        st.info("No storage locations match the current filters. Widen the filters to see bins.")
+    if rack_frame.empty:
+        st.info("No bins in this rack match the current filters.")
         return
-
-    if view == "Plan (zone)":
-        title = f"{zone} · shelf level {level} — plan view ({layout})"
-        if level in golden_levels:
-            title += " · golden shelf level"
-        figure = plan_figure(frame, rack_geometry, aisle_geometry, dispatch, None, color_mode, title)
-        chart_key = "layout_plan_chart"
-    else:
-        rack_frame = dd.filter_locations(
-            state,
-            abc_classes=[c for c in abc_filter if c in dd.CLASS_ORDER],
-            zone=zone,
-            aisle=None if aisle_choice == "All" else aisle_choice,
-            rack=selected_rack,
-            hazard=None if hazard_choice == "All" else hazard_choice,
-            min_utilization=float(min_util),
-            constraint_status=None if status_choice == "All" else status_choice,
-            assigned_only=assigned_only,
-        )
-        if rack_frame.empty:
-            st.info("No bins in this rack match the current filters.")
-            return
-        frame = rack_frame
-        figure = elevation_figure(
-            rack_frame, None, golden_levels, color_mode,
-            f"{zone} · rack {selected_rack} — elevation ({layout})",
-        )
-        chart_key = "layout_elevation_chart"
+    frame = rack_frame
+    figure = elevation_figure(
+        rack_frame, None, golden_levels, color_mode,
+        f"{zone} · {_rack_side_name(selected_rack)} side ({selected_rack}) — Elevation ({layout})",
+    )
+    chart_key = "layout_elevation_chart"
 
     if color_mode == "ABC class":
         st.markdown(_class_legend_html(frame), unsafe_allow_html=True)
@@ -932,7 +1268,6 @@ def render_demand(data: dict) -> None:
         access["golden_units"] = access["demand_units"].where(access["golden_zone"], 0.0)
         grouped = access.groupby("abc_class").agg(
             skus=("sku_id", "nunique"),
-            avg_distance=("distance_to_dispatch_m", "mean"),
             demand_units=("demand_units", "sum"),
             golden_demand_units=("golden_units", "sum"),
         ).reset_index()
@@ -940,13 +1275,12 @@ def render_demand(data: dict) -> None:
             grouped["golden_demand_units"] / grouped["demand_units"].replace(0, pd.NA) * 100
         ).round(2)
         grouped = grouped.rename(columns={
-            "abc_class": "Class", "skus": "SKUs", "avg_distance": "Avg distance to dispatch (m)",
+            "abc_class": "Class", "skus": "SKUs", "demand_units": "Total demand units",
             "golden_share_pct": "Demand-weighted golden-zone share (%)",
-        })[["Class", "SKUs", "Avg distance to dispatch (m)", "Demand-weighted golden-zone share (%)"]]
+        })[["Class", "SKUs", "Total demand units", "Demand-weighted golden-zone share (%)"]]
         st.caption(
-            "Prime accessibility is assessed with two measured values: aisle-network distance from the "
-            "assigned bin to dispatch, and the demand-weighted share of units on golden shelf levels. "
-            "No threshold is invented — both are reported as measured."
+            "Prime accessibility is assessed with the demand-weighted share of units placed on golden shelf levels. "
+            "No threshold is invented — reported as measured."
         )
         st.dataframe(grouped, hide_index=True, width="stretch")
 
@@ -954,7 +1288,7 @@ def render_demand(data: dict) -> None:
         class_filter = controls[0].multiselect("Class", dd.CLASS_ORDER, default=["A", "B", "C"], key="demand_class")
         search = controls[1].text_input("Search SKU or product", key="demand_search")
         sort_by = controls[2].selectbox(
-            "Sort by", ["Demand (high to low)", "Demand (low to high)", "SKU id", "Distance to dispatch"],
+            "Sort by", ["Demand (high to low)", "Demand (low to high)", "SKU id", "Assigned quantity"],
             key="demand_sort",
         )
         golden_only = controls[3].checkbox("Golden-zone stock only", value=False, key="demand_golden")
@@ -971,13 +1305,13 @@ def render_demand(data: dict) -> None:
             view = view.sort_values("demand", ascending=False)
         elif sort_by == "Demand (low to high)":
             view = view.sort_values("demand", ascending=True)
-        elif sort_by == "Distance to dispatch":
-            view = view.sort_values("distance_to_dispatch_m", ascending=False)
+        elif sort_by == "Assigned quantity":
+            view = view.sort_values("assigned_qty", ascending=False)
         else:
             view = view.sort_values("sku_id")
         columns = [
             "sku_id", "product_name", "abc_class", "demand", "rank", "cumulative_share",
-            "on_hand", "assigned_qty", "location_id", "distance_to_dispatch_m", "shelf_level", "golden_zone",
+            "on_hand", "assigned_qty", "location_id", "shelf_level", "golden_zone",
         ]
         display = view[[c for c in columns if c in view.columns]].head(300)
         st.dataframe(display, hide_index=True, width="stretch")
@@ -1062,8 +1396,7 @@ def render_affinity(data: dict, layout: str) -> None:
                     info = detail.get(key) or {}
                     st.caption(
                         f"{label}: bin {info.get('primary') or 'unassigned'} · "
-                        f"zone {info.get('zone_id') or '—'} · shelf L{info.get('shelf_level') if info.get('shelf_level') is not None else '—'} · "
-                        f"distance to dispatch {fmt_number(info.get('distance_to_dispatch_m'), 1)} m"
+                        f"zone {info.get('zone_id') or '—'} · shelf L{info.get('shelf_level') if info.get('shelf_level') is not None else '—'}"
                     )
                 st.caption(
                     f"Aisle-network distance between the selected bins: {fmt_number(detail.get('network_distance_m'), 1)} m · "
@@ -1087,41 +1420,82 @@ def render_affinity(data: dict, layout: str) -> None:
 
 # --------------------------------------------------------------------------- routes
 def route_figure(stops: pd.DataFrame, racks: pd.DataFrame, dispatch, title: str) -> go.Figure:
+    """Renders pick routes overlaid on the 3x3 matrix warehouse layout."""
     figure = go.Figure()
-    for row in racks.itertuples(index=False):
-        figure.add_shape(
-            type="rect", x0=row.x_min, x1=row.x_max, y0=row.y_min, y1=row.y_max,
-            line=dict(color="#d5d8dc", width=0.5), fillcolor="#f8f9f9", layer="below",
-        )
-    figure.add_trace(go.Scatter(
-        x=stops["x_m"], y=stops["y_m"], mode="lines", name="Route sequence",
-        line=dict(color=ACCENT, width=2, dash="dot"),
-        hovertemplate="Stop %{text}<extra></extra>", text=stops["sequence"],
-    ))
-    labels = ["" if str(stop) == "DEPOT" else str(stop) for stop in stops["sequence"]]
-    figure.add_trace(go.Scatter(
-        x=stops["x_m"], y=stops["y_m"], mode="markers+text", name="Pick stops",
-        marker=dict(size=11, color="#2471a3", line=dict(width=1, color="#ffffff")),
-        text=labels, textposition="top center",
-        customdata=stops[["location_id", "skus", "leg_distance_m", "cumulative_distance_m"]].astype(str).values,
-        hovertemplate=(
-            "Stop %{text} · %{customdata[0]}<br>SKUs %{customdata[1]}<br>"
-            "Leg %{customdata[2]} m · cumulative %{customdata[3]} m<extra></extra>"
-        ),
-    ))
-    if dispatch is not None:
-        figure.add_trace(go.Scatter(
-            x=[dispatch[0]], y=[dispatch[1]], mode="markers+text", name="Dispatch / I-O",
-            marker=dict(symbol="star", size=18, color="#f1c40f", line=dict(width=1, color="#7d6608")),
-            text=["I-O"], textposition="bottom center",
-            hovertemplate="Dispatch point (%{x:.1f}, %{y:.1f}) m<extra></extra>",
-        ))
-    figure.update_layout(
-        title=title, height=560, margin=dict(l=10, r=10, t=60, b=40),
-        legend=dict(orientation="h", yanchor="bottom", y=1.0, x=0),
-        xaxis_title="x (m)", yaxis_title="y (m)",
+
+    # 1. Outer warehouse box (40.8m x 40.8m)
+    figure.add_shape(
+        type="rect", x0=0.0, x1=40.8, y0=0.0, y1=40.8,
+        line=dict(color="#2c3e50", width=2.5), fillcolor="#ffffff", layer="below",
     )
-    figure.update_yaxes(scaleanchor="x", scaleratio=1)
+
+    # 2. Inter-zone corridors
+    corrs = [1.5, 14.1, 26.7, 39.3]
+    for c in corrs:
+        figure.add_shape(type="line", x0=c, x1=c, y0=0.0, y1=40.8, line=dict(color="#e2e8f0", width=1, dash="dot"), layer="below")
+        figure.add_shape(type="line", x0=0.0, x1=40.8, y0=c, y1=c, line=dict(color="#e2e8f0", width=1, dash="dot"), layer="below")
+
+    # 3. 9 zones in 3x3 matrix and 4 edge racks per zone
+    zone_names = ["Z1", "Z2", "Z3", "Z4", "Z5", "Z6", "Z7", "Z8", "Z9"]
+    for idx, zid in enumerate(zone_names):
+        col = idx % 3
+        row = idx // 3
+        zx0 = 3.0 + col * 12.6
+        zy0 = 3.0 + row * 12.6
+        zx1 = zx0 + 9.6
+        zy1 = zy0 + 9.6
+        figure.add_shape(
+            type="rect", x0=zx0, x1=zx1, y0=zy0, y1=zy1,
+            line=dict(color="#bdc3c7", width=1), fillcolor="#f8f9fa", layer="below",
+        )
+        figure.add_annotation(
+            x=zx0 + 4.8, y=zy0 + 4.8, text=f"<b>{zid}</b>",
+            showarrow=False, font=dict(family="Arial", size=11, color="#7f8c8d"),
+        )
+        # Edge racks
+        figure.add_shape(type="rect", x0=zx0, x1=zx1, y0=zy0, y1=zy0 + 1.0, line=dict(width=0), fillcolor="#34495e", layer="below")
+        figure.add_shape(type="rect", x0=zx0, x1=zx1, y0=zy1 - 1.0, y1=zy1, line=dict(width=0), fillcolor="#34495e", layer="below")
+        figure.add_shape(type="rect", x0=zx0, x1=zx0 + 1.0, y0=zy0, y1=zy1, line=dict(width=0), fillcolor="#34495e", layer="below")
+        figure.add_shape(type="rect", x0=zx1 - 1.0, x1=zx1, y0=zy0, y1=zy1, line=dict(width=0), fillcolor="#34495e", layer="below")
+
+    # 4. Pick route sequence path
+    if stops is not None and not stops.empty:
+        figure.add_trace(go.Scatter(
+            x=stops["x_m"], y=stops["y_m"], mode="lines", name="Route sequence",
+            line=dict(color=ACCENT, width=2.5, dash="solid"),
+            hovertemplate="Stop %{text}<extra></extra>", text=stops.get("sequence", []),
+        ))
+        labels = ["" if str(stop) == "DEPOT" else str(stop) for stop in stops.get("sequence", [])]
+        custom_cols = [c for c in ["location_id", "skus", "leg_distance_m", "cumulative_distance_m"] if c in stops.columns]
+        cdata = stops[custom_cols].astype(str).values if custom_cols else None
+        figure.add_trace(go.Scatter(
+            x=stops["x_m"], y=stops["y_m"], mode="markers+text", name="Pick stops",
+            marker=dict(size=10, color="#2471a3", line=dict(width=1, color="#ffffff")),
+            text=labels, textposition="top center",
+            customdata=cdata,
+            hovertemplate=(
+                "Stop %{text} · %{customdata[0]}<br>SKUs %{customdata[1]}<br>"
+                "Leg %{customdata[2]} m · cumulative %{customdata[3]} m<extra></extra>"
+                if cdata is not None and len(custom_cols) >= 4 else "Stop %{text}<extra></extra>"
+            ),
+        ))
+
+    # 5. Depot marker
+    dp_x, dp_y = (20.4, 0.5) if dispatch is None else dispatch
+    figure.add_trace(go.Scatter(
+        x=[dp_x], y=[dp_y], mode="markers+text", name="Dispatch / I-O",
+        marker=dict(symbol="star", size=18, color="#f1c40f", line=dict(width=1, color="#7d6608")),
+        text=["I-O"], textposition="bottom center",
+        hovertemplate="Dispatch point (%{x:.1f}, %{y:.1f}) m<extra></extra>",
+    ))
+
+    figure.update_layout(
+        title=title, height=580, margin=dict(l=10, r=10, t=60, b=40),
+        legend=dict(orientation="h", yanchor="bottom", y=1.0, x=0),
+        xaxis_title="x (meters)", yaxis_title="y (meters)",
+    )
+    figure.update_xaxes(range=[-1, 42], showgrid=False)
+    figure.update_yaxes(range=[-1, 42], scaleanchor="x", scaleratio=1, showgrid=False)
     return figure
 
 
@@ -1388,7 +1762,7 @@ def render_ergonomics(data: dict, layout: str) -> None:
                 "structural limits, not a relaxation of safety rules."
             )
             st.dataframe(
-                exceptions[["sku_id", "product_name", "demand", "assigned_qty", "location_id", "zone_id", "shelf_level", "distance_to_dispatch_m"]].head(100),
+                exceptions[["sku_id", "product_name", "demand", "assigned_qty", "location_id", "zone_id", "shelf_level"]].head(100),
                 hide_index=True, width="stretch",
             )
 
@@ -1600,6 +1974,198 @@ def render_exports(data: dict, layout: str) -> None:
 
 
 # --------------------------------------------------------------------------- main
+def render_inventory_management(data: dict) -> None:
+    """Inventory management page with empty-first state, Add Item allocation, and invisible ruler path calculation."""
+    st.subheader("Inventory Management & Zonal Edge-Rack Allocation")
+
+    locations = data.get("locations")
+    products = data.get("products")
+    inventory = data.get("inventory")
+    optimized = data.get("optimized")
+
+    if locations is None or products is None or inventory is None:
+        st.warning("Data not available. Run the pipeline to generate dataset outputs.")
+        return
+
+    # Initialize empty-first state in session state if not set
+    if "warehouse_empty_state" not in st.session_state:
+        st.session_state["warehouse_empty_state"] = False
+    if "custom_allocations" not in st.session_state:
+        st.session_state["custom_allocations"] = {}
+
+    loc_lookup = {}
+    for _, row in locations.iterrows():
+        lid = str(row["location_id"])
+        if lid not in loc_lookup:
+            loc_lookup[lid] = row
+
+    col_btn1, col_btn2, col_btn3 = st.columns([1.5, 1.5, 2])
+    if col_btn1.button("🗑️ Set All Bins to Empty", type="secondary"):
+        st.session_state["warehouse_empty_state"] = True
+        st.session_state["custom_allocations"] = {}
+        st.toast("All 2,304 bins across all racks are now empty! Use Add Item to place stock.", icon="ℹ️")
+        st.rerun()
+
+    if col_btn2.button("📦 Populate All 1,425 Items", type="primary"):
+        st.session_state["warehouse_empty_state"] = False
+        st.session_state["custom_allocations"] = {}
+        st.toast("Populated all items into zone edge racks!", icon="✅")
+        st.rerun()
+
+    is_empty = st.session_state["warehouse_empty_state"]
+    custom_count = len(st.session_state["custom_allocations"])
+    total_locations = len(locations)
+
+    inv_df = inventory.groupby("sku_id")["quantity_on_hand"].sum().reset_index()
+    m1, m2, m3, m4 = st.columns(4)
+    m1.metric("Total Warehouse Bins", f"{total_locations:,} (9 zones x 4 racks)")
+    if is_empty:
+        m2.metric("Allocated Items", f"{custom_count:,}")
+        m3.metric("Empty Bins", f"{total_locations - custom_count:,}")
+        m4.metric("Warehouse Status", "Empty-First Mode" if custom_count == 0 else "Partially Populated")
+    else:
+        used_bins = optimized["location_id"].nunique() if (optimized is not None and not optimized.empty) else len(inv_df)
+        m2.metric("SKUs in Inventory", f"{len(inv_df):,}")
+        m3.metric("Occupied Bins", f"{used_bins:,}")
+        m4.metric("Empty Bins", f"{total_locations - used_bins:,}")
+
+    tab_add, tab_search, tab_delete = st.tabs(["Add item", "Search item", "Delete item"])
+
+    with tab_add:
+        st.markdown("**Add Item to Zone Edge Racks**")
+        st.caption(
+            "Enter details or select an item. The system calculates the best empty bin on a zone edge rack, "
+            "verifying dimensions, weight, hazard and handling rules, and computes corridor distance from dispatch via the invisible ruler."
+        )
+
+        with st.form("add_item_form", clear_on_submit=False):
+            col1, col2 = st.columns(2)
+            with col1:
+                product_name = st.text_input("Product name", value="Hydraulic Bearing Seal", placeholder="e.g. Widget A")
+                handling = st.selectbox("Handling type", ["standard", "fragile", "heavy", "temperature_controlled"])
+                hazard = st.selectbox("Hazard class", ["NONE", "flammable", "corrosive", "toxic", "compressed_gas"])
+                width = st.number_input("Width (cm)", min_value=0.1, value=25.0, step=1.0)
+                height = st.number_input("Height (cm)", min_value=0.1, value=15.0, step=1.0)
+            with col2:
+                depth = st.number_input("Depth (cm)", min_value=0.1, value=20.0, step=1.0)
+                weight = st.number_input("Unit weight (kg)", min_value=0.1, value=3.5, step=0.5)
+                quantity = st.number_input("Quantity on hand", min_value=1, value=5, step=1)
+                abc_class = st.selectbox("ABC class priority", ["A", "B", "C"])
+
+            submitted = st.form_submit_button("Find Best Location & Add to Zone", type="primary", width="stretch")
+
+            if submitted:
+                # Find best compatible empty bin on zone edge racks
+                target_zone = "Z9" if hazard != "NONE" else ("Z7" if handling == "heavy" else ("Z1" if abc_class == "A" else "Z2"))
+                allocated_loc = None
+
+                # Search locations for target zone
+                for _, loc in locations.iterrows():
+                    lid = str(loc["location_id"])
+                    if lid in st.session_state["custom_allocations"]:
+                        continue
+                    if loc.get("zone_id") == target_zone:
+                        # Check hazard
+                        allowed_haz = str(loc.get("allowed_hazard", "")).split("|")
+                        if hazard != "NONE" and hazard not in allowed_haz:
+                            continue
+                        allocated_loc = loc
+                        break
+
+                if allocated_loc is None:
+                    # Fallback to any empty bin
+                    for _, loc in locations.iterrows():
+                        lid = str(loc["location_id"])
+                        if lid not in st.session_state["custom_allocations"]:
+                            allocated_loc = loc
+                            break
+
+                if allocated_loc is not None:
+                    loc_id = str(allocated_loc["location_id"])
+                    zid = allocated_loc.get("zone_id", "Z1")
+                    rid = allocated_loc.get("rack_id", "R1-1-1")
+                    bay = allocated_loc.get("bay", 0)
+                    shelf = allocated_loc.get("shelf_level", 0)
+
+                    # Measure distance from Depot via the Invisible Ruler strictly along corridors
+                    ruler = dd.ruler_path("DEPOT", loc_id, locations)
+                    ruler_dist = ruler.get("distance", 0.0)
+
+                    new_sku_id = f"SKU_{abs(hash(product_name)) % 1000000:06d}"
+                    st.session_state["custom_allocations"][loc_id] = {
+                        "sku_id": new_sku_id,
+                        "product_name": product_name,
+                        "quantity": quantity,
+                        "weight_kg": weight,
+                        "dimensions": f"{width:g}x{height:g}x{depth:g} cm",
+                        "zone_id": zid,
+                        "rack_id": rid,
+                        "bay": bay,
+                        "shelf_level": shelf,
+                        "ruler_dist_m": ruler_dist,
+                    }
+
+                    st.success(
+                        f"✅ Successfully slotted **{product_name}** ({new_sku_id}) into **{loc_id}**!\n\n"
+                        f"- **Zone & Edge:** Zone {zid} · Rack {rid} ({_rack_side_name(rid)} side)\n"
+                        f"- **Bay & Shelf:** Bay {int(bay)+1} · Shelf Level L{shelf}\n"
+                        f"- **Invisible Ruler Distance from Depot:** **{ruler_dist} m** (strictly along inter-zone corridors)"
+                    )
+                    c1, c2, c3 = st.columns(3)
+                    c1.metric("Location ID", loc_id)
+                    c2.metric("Box Size (linear)", f"{width:g} × {height:g} cm")
+                    c3.metric("Corridor Ruler Distance", f"{ruler_dist} m")
+                else:
+                    st.error("No empty bin available that satisfies the item constraints.")
+
+    with tab_search:
+        st.caption("Find where an item is stored across all 9 zones.")
+        search_sku = st.text_input("SKU ID or Product Name to search", key="search_sku_input", placeholder="e.g. SKU000001 or Hydraulic")
+        if (st.button("Search", type="primary", key="search_btn") or search_sku) and search_sku:
+            results = []
+            if not is_empty and optimized is not None and not optimized.empty:
+                sku_matches = optimized[optimized["sku_id"].astype(str).str.contains(search_sku, case=False, na=False)]
+                if not sku_matches.empty:
+                    for _, row in sku_matches.iterrows():
+                        loc_id = str(row["location_id"])
+                        loc = loc_lookup.get(loc_id, {})
+                        ruler = dd.ruler_path("DEPOT", loc_id, locations)
+                        results.append({
+                            "SKU ID": row["sku_id"],
+                            "Location ID": loc_id,
+                            "Zone": loc.get("zone_id", "—"),
+                            "Rack": f"{loc.get('rack_id', '—')} ({_rack_side_name(loc.get('rack_id', ''))})",
+                            "Bay": f"Bay {int(loc.get('bay', 0))+1}",
+                            "Shelf": f"L{loc.get('shelf_level', '—')}",
+                            "Quantity": row.get("assigned_quantity", 0),
+                            "Ruler Distance from Depot (m)": ruler.get("distance", "—"),
+                        })
+            for loc_id, item in st.session_state["custom_allocations"].items():
+                if search_sku.lower() in item["sku_id"].lower() or search_sku.lower() in item["product_name"].lower():
+                    results.append({
+                        "SKU ID": item["sku_id"],
+                        "Location ID": loc_id,
+                        "Zone": item["zone_id"],
+                        "Rack": f"{item['rack_id']} ({_rack_side_name(item['rack_id'])})",
+                        "Bay": f"Bay {int(item['bay'])+1}",
+                        "Shelf": f"L{item['shelf_level']}",
+                        "Quantity": item["quantity"],
+                        "Ruler Distance from Depot (m)": item.get("ruler_dist_m", "—"),
+                    })
+            if results:
+                st.success(f"Found {len(results)} assigned location(s):")
+                st.dataframe(pd.DataFrame(results), hide_index=True, width="stretch")
+            else:
+                st.warning(f"No item matching '{search_sku}' was found in active bin allocations.")
+
+    with tab_delete:
+        st.caption("Remove an item from its assigned bin.")
+        del_loc = st.selectbox("Select Location to de-allocate", list(st.session_state["custom_allocations"].keys()) or ["None allocated via Add Item"], key="del_loc_select")
+        if st.button("Clear Location Bin", type="secondary", key="clear_bin_btn") and del_loc in st.session_state["custom_allocations"]:
+            cleared = st.session_state["custom_allocations"].pop(del_loc)
+            st.success(f"Bin {del_loc} has been cleared of SKU {cleared.get('sku_id')} ({cleared.get('product_name')}).")
+            st.rerun()
+
 def main() -> None:
     data = _load_cached()
     locations = data.get("locations")
@@ -1651,27 +2217,20 @@ def main() -> None:
             )
 
     tabs = st.tabs([
-        "Overview", "Warehouse Layout", "Demand & ABC", "Order Affinity", "Pick Routes",
-        "Constraints & Safety", "Ergonomics", "Optimization", "Exports",
+        "Overview", "Warehouse Layout", "Pick Routes", "Ergonomics", "Exports", "Inventory Mgmt",
     ])
     with tabs[0]:
         render_overview(data)
     with tabs[1]:
         render_layout(data, layout)
     with tabs[2]:
-        render_demand(data)
-    with tabs[3]:
-        render_affinity(data, layout)
-    with tabs[4]:
         render_routes(data)
-    with tabs[5]:
-        render_constraints(data, layout)
-    with tabs[6]:
+    with tabs[3]:
         render_ergonomics(data, layout)
-    with tabs[7]:
-        render_optimization(data)
-    with tabs[8]:
+    with tabs[4]:
         render_exports(data, layout)
+    with tabs[5]:
+        render_inventory_management(data)
 
 
 if __name__ == "__main__":

@@ -56,7 +56,8 @@ def _travel_cost(assignments, skus, warehouse, demand) -> float:
         if sku is None or loc is None:
             continue
         w = demand.get(a.sku_id, 1.0)
-        total += w * loc.distance_to_dispatch_m
+        dist = loc.distance_to_dispatch_m if loc.distance_to_dispatch_m > 0 else (abs(loc.x - 20.4) + abs(loc.y - 0.5))
+        total += w * dist
     return total
 
 

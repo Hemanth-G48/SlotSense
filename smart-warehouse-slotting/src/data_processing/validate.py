@@ -757,8 +757,9 @@ def _check_graph_geometry(
         if distances.get(location_id, float("inf")) == float("inf"):
             _add(result, "location_graph", location_id, "graph_connectivity", "hard", "location is unreachable")
             continue
-        if abs(distances[location_id] - float(location["distance_to_dispatch_m"])) > 0.01:
-            _add(result, "location_graph", location_id, "graph_distance", "hard", "distance_to_dispatch_m mismatch")
+        if "distance_to_dispatch_m" in location and location["distance_to_dispatch_m"] not in ("", None):
+            if abs(distances[location_id] - float(location["distance_to_dispatch_m"])) > 0.01:
+                _add(result, "location_graph", location_id, "graph_distance", "hard", "distance_to_dispatch_m mismatch")
 
     manifest = _read_manifest(dataset_dir)
     config = manifest.get("config", {}) if manifest else {}

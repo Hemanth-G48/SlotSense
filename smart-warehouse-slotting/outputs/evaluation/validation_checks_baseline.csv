@@ -14249,700 +14249,186 @@ AS-01,single_sku_per_bin,Hazard & safety,True,info,,LOC002121,1,1,SKUs per bin,s
 LD-01,location_weight,Structural load,True,info,,LOC002187,5.955,50.0,kg,bin load within limit
 VD-01,volume_capacity,Spatial & volumetric,True,info,,LOC002187,5981.58,108000.0,cm3,stored volume within usable bin volume
 AS-01,single_sku_per_bin,Hazard & safety,True,info,,LOC002187,1,1,SKUs per bin,single-SKU bin policy respected
-SL-01,shelf_load,Structural load,True,info,,R8-4-1 shelf 3,0.213,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-3-4 shelf 0,134.413,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-3-1 shelf 3,21.717,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-3-4 shelf 0,0.08,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-3-3 shelf 3,14.793,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-3-1 shelf 2,77.065,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-2-2 shelf 0,42.294,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-2-1 shelf 3,24.918,25.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-1-4 shelf 0,33.842,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-3-4 shelf 1,99.958,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-1-4 shelf 2,25.005,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-1-1 shelf 0,28.723,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-3-4 shelf 1,54.249,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-2-4 shelf 0,62.184,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-2-2 shelf 3,18.402,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-4-2 shelf 0,37.367,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-4-3 shelf 3,15.783,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-2-2 shelf 3,17.775,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-4-4 shelf 3,18.642,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-4-4 shelf 1,130.883,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-1-1 shelf 3,15.05,25.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-2-1 shelf 1,54.456,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-4-1 shelf 2,8.539,30.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-1-3 shelf 3,0.072,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-2-1 shelf 2,48.396,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-2-4 shelf 3,3.009,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-3-4 shelf 2,132.354,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-1-2 shelf 3,20.621,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-4-1 shelf 1,159.971,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-3-3 shelf 2,29.648,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-2-2 shelf 2,23.763,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-3-4 shelf 3,39.821,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-1-2 shelf 1,7.491,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-2-4 shelf 0,59.449,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-2-3 shelf 1,11.727,35.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-1-2 shelf 0,51.914,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-2-3 shelf 3,119.43,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-2-3 shelf 2,31.622,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-2-4 shelf 1,0.963,35.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-2-1 shelf 3,33.076,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-3-2 shelf 3,8.862,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-1-3 shelf 3,2.745,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-1-1 shelf 3,76.769,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-3-4 shelf 1,22.851,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-1-2 shelf 0,33.916,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-2-1 shelf 1,65.33,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-1-4 shelf 2,51.77,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-1-3 shelf 2,1.194,30.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-3-4 shelf 1,51.125,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-2-4 shelf 2,121.169,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-2-3 shelf 2,4.983,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-1-2 shelf 1,15.099,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-2-2 shelf 0,30.844,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-3-3 shelf 1,31.279,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-1-2 shelf 3,7.341,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-2-3 shelf 3,8.847,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-1-1 shelf 0,62.071,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-4-3 shelf 2,6.998,30.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-3-1 shelf 3,0.1,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-4-2 shelf 2,126.81,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-3-4 shelf 2,6.075,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-2-3 shelf 1,5.102,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-3-4 shelf 2,5.911,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-1-4 shelf 3,41.514,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-1-4 shelf 3,1.236,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-1-3 shelf 1,15.958,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-4-3 shelf 1,57.199,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-3-2 shelf 0,0.201,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-4-1 shelf 1,81.064,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-3-4 shelf 3,0.075,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-2-2 shelf 2,16.92,30.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-1-4 shelf 2,47.21,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-2-3 shelf 2,34.555,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-1-1 shelf 2,37.096,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-3-1 shelf 1,8.385,35.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-2-1 shelf 3,17.284,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-3-2 shelf 1,1.765,35.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-4-1 shelf 1,22.392,35.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-1-3 shelf 1,0.072,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-4-2 shelf 0,41.231,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-2-3 shelf 3,111.432,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-2-1 shelf 0,7.839,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-2-3 shelf 2,0.267,30.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-4-2 shelf 1,155.025,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-4-4 shelf 1,16.718,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-4-3 shelf 1,15.765,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-3-4 shelf 0,17.271,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-3-2 shelf 2,60.353,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-4-2 shelf 0,27.702,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-1-3 shelf 3,2.299,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-4-4 shelf 3,6.677,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-1-4 shelf 0,49.427,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-1-1 shelf 1,57.043,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-4-1 shelf 0,117.274,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-3-1 shelf 1,105.465,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-4-2 shelf 1,4.562,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-4-2 shelf 3,87.543,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-4-2 shelf 1,112.315,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-4-2 shelf 2,65.322,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-2-2 shelf 3,12.222,25.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-1-2 shelf 1,6.568,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-2-2 shelf 0,2.359,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-1-1 shelf 3,4.639,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-4-4 shelf 1,1.09,35.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-1-4 shelf 2,25.718,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-4-4 shelf 2,136.618,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-2-2 shelf 1,29.684,35.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-3-2 shelf 0,0.03,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-1-4 shelf 3,18.261,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-4-3 shelf 2,7.23,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-4-1 shelf 0,22.599,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-2-3 shelf 0,174.205,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-3-3 shelf 0,31.051,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-1-3 shelf 2,47.45,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-1-1 shelf 2,79.451,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-4-1 shelf 1,6.993,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-1-3 shelf 0,0.993,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-1-3 shelf 2,28.509,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-1-3 shelf 0,58.891,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-1-3 shelf 0,54.216,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-3-2 shelf 3,5.458,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-4-4 shelf 3,6.648,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-2-3 shelf 3,0.501,25.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-4-4 shelf 0,20.268,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-1-4 shelf 3,31.065,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-2-3 shelf 0,11.667,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-3-2 shelf 3,24.144,25.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-2-4 shelf 2,78.879,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-1-3 shelf 3,2.979,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-1-4 shelf 2,34.178,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-3-4 shelf 0,7.738,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-4-1 shelf 3,11.374,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-1-4 shelf 3,87.334,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-2-2 shelf 3,0.52,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-2-4 shelf 3,5.856,25.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-1-2 shelf 3,24.812,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-3-1 shelf 1,122.987,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-1-1 shelf 1,57.879,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-2-4 shelf 2,90.366,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-3-4 shelf 1,34.418,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-4-1 shelf 3,0.246,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-4-4 shelf 2,43.273,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-3-1 shelf 0,2.572,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-3-2 shelf 2,13.833,30.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-3-1 shelf 1,99.972,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-4-2 shelf 2,1.411,30.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-1-3 shelf 3,33.252,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-3-4 shelf 3,24.991,25.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-2-1 shelf 0,17.239,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-1-1 shelf 1,42.992,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-2-2 shelf 1,98.38,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-1-2 shelf 2,122.16,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-4-3 shelf 3,10.389,25.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-2-4 shelf 3,12.947,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-2-2 shelf 2,6.594,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-3-4 shelf 3,32.715,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-4-3 shelf 3,32.85,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-3-3 shelf 3,7.414,25.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-3-4 shelf 3,119.919,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-4-2 shelf 3,34.875,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-1-2 shelf 1,93.938,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-2-2 shelf 2,139.481,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-1-3 shelf 1,13.069,35.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-3-1 shelf 0,30.394,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-1-4 shelf 3,117.053,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-4-2 shelf 2,111.16,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-2-1 shelf 3,119.81,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-2-1 shelf 1,16.473,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-2-4 shelf 0,6.219,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-2-3 shelf 2,55.133,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-3-3 shelf 3,118.759,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-3-1 shelf 1,98.178,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-2-3 shelf 0,43.782,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-3-4 shelf 0,114.772,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-4-2 shelf 2,74.605,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-1-2 shelf 1,105.736,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-1-2 shelf 0,79.126,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-1-2 shelf 2,5.184,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-3-2 shelf 2,1.311,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-1-4 shelf 1,113.859,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-4-3 shelf 2,136.652,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-1-4 shelf 2,138.438,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-3-2 shelf 2,75.196,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-4-2 shelf 3,34.289,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-4-1 shelf 2,10.259,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-2-4 shelf 0,197.134,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-1-3 shelf 0,8.294,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-3-3 shelf 0,53.315,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-3-3 shelf 3,29.45,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-3-2 shelf 1,10.499,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-2-1 shelf 2,29.96,30.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-2-2 shelf 3,107.086,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-4-3 shelf 0,0.705,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-3-2 shelf 3,0.342,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-4-3 shelf 0,7.344,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-4-4 shelf 0,30.658,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-3-4 shelf 1,34.906,35.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-2-3 shelf 3,2.229,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-4-4 shelf 3,119.352,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-4-2 shelf 3,21.421,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-1-2 shelf 0,32.631,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-2-2 shelf 2,13.0,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-1-1 shelf 1,13.862,35.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-3-2 shelf 1,146.993,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-2-4 shelf 3,3.771,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-3-2 shelf 2,0.86,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-2-1 shelf 2,79.605,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-3-2 shelf 1,137.624,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-3-4 shelf 2,15.892,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-3-1 shelf 1,1.347,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-1-2 shelf 3,10.196,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-4-4 shelf 0,26.949,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-2-4 shelf 0,15.312,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-3-2 shelf 2,1.11,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-4-3 shelf 1,7.483,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-4-4 shelf 3,39.927,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-4-1 shelf 2,138.183,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-2-2 shelf 2,0.075,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-1-4 shelf 2,3.989,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-1-3 shelf 2,4.071,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-1-1 shelf 0,80.959,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-2-3 shelf 1,26.277,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-3-2 shelf 2,139.802,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-1-1 shelf 3,113.14,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-3-2 shelf 3,95.837,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-1-4 shelf 1,30.96,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-2-4 shelf 2,9.373,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-4-1 shelf 0,0.198,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-4-2 shelf 0,118.928,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-1-1 shelf 1,99.178,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-1-2 shelf 2,19.583,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-1-2 shelf 3,24.718,25.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-3-3 shelf 1,55.396,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-1-4 shelf 3,38.654,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-3-3 shelf 0,45.26,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-2-1 shelf 3,52.473,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-1-1 shelf 2,22.953,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-2-1 shelf 2,49.312,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-1-3 shelf 3,3.358,25.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-1-3 shelf 3,103.757,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-4-4 shelf 1,36.345,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-4-3 shelf 1,17.415,35.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-3-1 shelf 3,30.578,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-4-4 shelf 2,23.886,30.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-1-1 shelf 3,0.377,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-3-4 shelf 0,119.89,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-2-1 shelf 1,102.357,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-1-2 shelf 2,38.416,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-3-1 shelf 2,48.553,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-2-1 shelf 0,26.577,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-1-3 shelf 2,57.321,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-1-2 shelf 2,138.715,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-3-2 shelf 0,7.656,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-2-4 shelf 0,23.265,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-2-2 shelf 3,34.108,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-3-1 shelf 2,126.082,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-2-1 shelf 0,0.96,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-2-4 shelf 3,33.969,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-2-3 shelf 1,50.82,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-3-1 shelf 2,37.71,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-3-1 shelf 2,18.121,30.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-4-4 shelf 3,23.971,25.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-4-1 shelf 3,23.241,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-1-4 shelf 1,159.516,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-3-3 shelf 1,122.998,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-4-3 shelf 1,13.498,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-4-2 shelf 2,29.123,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-4-3 shelf 2,24.805,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-3-3 shelf 3,20.722,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-3-4 shelf 2,9.249,30.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-1-4 shelf 3,15.666,25.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-3-1 shelf 1,15.738,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-4-1 shelf 2,42.496,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-3-4 shelf 2,34.248,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-1-4 shelf 0,15.603,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-4-2 shelf 3,3.126,25.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-4-1 shelf 0,78.949,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-1-3 shelf 1,82.496,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-4-3 shelf 3,22.305,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-1-4 shelf 1,58.926,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-4-3 shelf 0,100.846,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-1-2 shelf 1,30.819,35.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-2-3 shelf 3,16.625,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-1-3 shelf 1,59.238,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-4-1 shelf 1,17.031,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-1-4 shelf 1,26.123,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-4-2 shelf 3,23.766,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-2-2 shelf 3,39.463,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-2-1 shelf 3,119.73,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-4-1 shelf 1,99.915,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-3-1 shelf 2,2.646,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-3-4 shelf 0,81.74,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-3-3 shelf 0,42.275,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-1-2 shelf 0,14.037,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-3-2 shelf 0,11.376,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-1-2 shelf 2,38.838,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-2-2 shelf 3,97.441,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-4-4 shelf 0,24.522,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-1-4 shelf 0,190.759,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-4-4 shelf 3,119.573,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-3-1 shelf 0,43.201,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-2-1 shelf 1,19.025,35.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-4-4 shelf 0,2.499,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-3-4 shelf 1,13.245,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-3-1 shelf 0,6.706,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-1-4 shelf 1,1.614,35.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-4-3 shelf 0,185.663,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-4-1 shelf 3,119.765,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-4-3 shelf 0,117.687,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-2-4 shelf 3,2.697,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-3-2 shelf 0,127.747,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-1-2 shelf 3,59.478,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-1-4 shelf 0,17.507,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-4-1 shelf 0,89.15,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-4-2 shelf 2,3.111,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-1-1 shelf 0,79.502,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-2-4 shelf 1,38.192,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-4-2 shelf 1,99.525,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-2-3 shelf 0,22.044,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-3-1 shelf 3,12.204,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-3-3 shelf 2,46.087,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-2-4 shelf 2,29.904,30.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-2-2 shelf 1,27.339,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-1-1 shelf 2,18.555,30.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-4-2 shelf 1,22.202,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-2-2 shelf 1,59.885,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-4-2 shelf 0,23.977,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-4-4 shelf 1,159.75,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-2-2 shelf 0,72.811,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-1-2 shelf 1,96.795,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-4-3 shelf 2,32.551,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-3-3 shelf 1,99.436,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-3-2 shelf 3,39.969,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-4-3 shelf 0,6.276,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-4-2 shelf 1,2.157,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-1-1 shelf 0,12.471,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-4-1 shelf 3,3.782,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-2-1 shelf 0,66.054,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-4-1 shelf 2,15.258,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-3-3 shelf 2,3.879,30.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-2-3 shelf 1,99.522,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-4-2 shelf 0,10.999,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-2-2 shelf 1,42.729,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-2-2 shelf 2,79.897,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-4-1 shelf 0,80.968,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-1-2 shelf 2,22.815,30.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-3-2 shelf 3,39.861,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-2-4 shelf 1,10.554,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-3-4 shelf 0,0.99,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-3-3 shelf 3,14.199,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-3-3 shelf 0,75.548,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-1-3 shelf 1,9.843,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-3-1 shelf 0,3.273,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-4-1 shelf 0,20.298,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-2-1 shelf 2,15.504,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-4-4 shelf 2,49.198,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-1-3 shelf 2,56.073,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-2-1 shelf 2,18.43,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-4-2 shelf 3,37.375,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-1-1 shelf 1,19.596,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-3-2 shelf 0,8.427,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-4-3 shelf 2,17.727,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-2-3 shelf 1,15.78,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-4-3 shelf 3,104.534,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-2-4 shelf 3,117.487,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-1-3 shelf 0,114.153,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-1-2 shelf 1,97.707,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-3-3 shelf 0,152.006,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-2-1 shelf 2,18.654,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-2-4 shelf 1,61.326,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-2-2 shelf 0,196.504,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-2-3 shelf 2,139.507,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-3-3 shelf 0,195.033,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-3-3 shelf 3,34.023,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-3-4 shelf 1,123.376,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-3-3 shelf 1,37.614,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-4-1 shelf 1,48.771,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-3-1 shelf 0,24.578,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-3-1 shelf 0,197.705,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-1-4 shelf 2,10.473,30.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-1-1 shelf 2,62.593,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-4-3 shelf 3,6.954,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-1-1 shelf 0,28.569,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-4-3 shelf 1,42.45,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-3-3 shelf 2,134.926,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-4-4 shelf 0,198.76,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-4-1 shelf 0,27.692,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-1-3 shelf 0,104.185,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-2-1 shelf 3,13.632,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-2-2 shelf 1,159.561,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-4-3 shelf 2,139.905,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-2-1 shelf 1,96.67,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-2-1 shelf 0,95.097,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-4-2 shelf 1,23.223,35.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-1-1 shelf 3,1.446,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-2-4 shelf 1,158.575,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-1-1 shelf 2,10.551,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-3-3 shelf 1,26.488,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-4-4 shelf 3,43.757,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-3-3 shelf 2,71.834,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-1-1 shelf 3,55.874,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-2-3 shelf 0,106.656,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-1-4 shelf 0,193.817,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-3-4 shelf 3,15.765,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-4-1 shelf 2,31.666,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-3-2 shelf 1,35.384,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-3-3 shelf 0,41.921,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-1-3 shelf 1,158.676,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-3-1 shelf 1,20.61,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-2-4 shelf 1,14.811,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-2-2 shelf 0,26.695,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-1-1 shelf 2,40.921,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-4-3 shelf 2,46.998,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-3-1 shelf 3,7.519,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-3-1 shelf 3,116.256,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-3-2 shelf 1,23.41,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-1-2 shelf 0,15.739,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-3-3 shelf 2,75.862,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-4-2 shelf 2,23.389,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-3-4 shelf 2,52.539,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-1-4 shelf 1,8.446,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-1-1 shelf 1,45.3,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-4-1 shelf 3,68.032,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-2-1 shelf 1,35.146,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-3-1 shelf 0,56.907,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-3-1 shelf 2,139.57,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-2-3 shelf 1,25.663,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-2-4 shelf 3,110.382,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-4-4 shelf 0,70.498,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-3-1 shelf 3,20.197,25.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-2-4 shelf 1,71.479,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-3-2 shelf 1,48.206,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-1-1 shelf 0,198.071,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-1-3 shelf 0,191.834,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-4-1 shelf 2,97.761,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-3-4 shelf 3,105.49,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-1-2 shelf 0,99.006,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-3-1 shelf 3,104.219,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-4-3 shelf 0,185.915,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-1-3 shelf 3,116.991,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-3-3 shelf 2,24.656,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-3-2 shelf 2,109.185,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-3-3 shelf 2,134.756,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-3-4 shelf 3,39.247,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-1-1 shelf 3,31.118,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-4-4 shelf 2,76.088,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-2-1 shelf 3,28.827,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-4-2 shelf 0,193.309,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-2-4 shelf 2,15.954,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-4-4 shelf 0,194.094,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-2-3 shelf 0,79.77,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-3-2 shelf 3,94.832,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-4-3 shelf 3,118.753,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-1-2 shelf 3,117.14,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-2-1 shelf 0,42.881,200.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-2-4 shelf 0,26.849,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-1-3 shelf 2,24.015,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-3-3 shelf 3,117.622,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-4-4 shelf 2,131.193,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-2-3 shelf 0,19.042,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-1-3 shelf 1,157.183,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-2-3 shelf 1,150.048,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-2-2 shelf 2,122.91,140.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-1-3 shelf 2,72.203,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-4-2 shelf 3,16.201,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R5-1-1 shelf 1,137.363,160.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-2-3 shelf 3,11.755,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-2-4 shelf 2,38.12,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R6-1-2 shelf 3,100.382,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-3-2 shelf 0,118.495,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-4-2 shelf 0,100.035,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-1-2 shelf 0,119.047,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-4-1 shelf 1,82.067,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-2-2 shelf 0,92.375,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-1-2 shelf 2,78.02,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-2-2 shelf 0,59.581,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-1-4 shelf 0,111.435,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-2-3 shelf 0,102.569,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-2-2 shelf 1,24.168,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-1-4 shelf 1,97.854,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-3-2 shelf 1,39.642,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-4-4 shelf 1,98.481,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-4-1 shelf 2,78.76,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-1-4 shelf 0,95.529,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-3-4 shelf 2,74.679,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-4-4 shelf 1,69.495,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-4-3 shelf 1,97.939,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-4-3 shelf 1,99.477,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-3-2 shelf 0,119.8,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-2-2 shelf 1,92.781,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-2-1 shelf 0,36.748,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-2-4 shelf 2,46.659,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-1-1 shelf 0,92.799,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-3-3 shelf 1,92.304,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-2-4 shelf 0,47.412,120.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-2-1 shelf 2,77.725,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-1-1 shelf 2,79.741,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-4-2 shelf 1,98.032,100.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R8-4-4 shelf 2,79.251,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R7-3-1 shelf 2,53.192,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R3-4-3 shelf 3,27.304,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-4-4 shelf 1,21.21,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-3-3 shelf 1,6.375,35.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-1-3 shelf 0,16.96,80.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R2-2-3 shelf 3,1.594,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R4-4-1 shelf 3,15.951,25.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R1-2-4 shelf 1,1.69,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-1-4 shelf 1,25.224,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-3-2 shelf 1,37.746,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-1-1 shelf 0,18.455,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-4-3 shelf 3,29.238,30.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-2-4 shelf 1,48.988,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-4-4 shelf 2,10.923,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-4-2 shelf 2,21.31,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-1-4 shelf 2,9.033,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-2-2 shelf 0,45.558,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-1-2 shelf 1,7.986,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-2-1 shelf 2,39.073,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-4-4 shelf 3,23.487,30.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-3-4 shelf 3,22.476,30.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-3-4 shelf 1,10.581,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-4-2 shelf 1,28.224,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-2-1 shelf 3,30.0,30.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-1-1 shelf 2,4.968,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-2-1 shelf 0,53.802,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-3-1 shelf 1,31.825,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-4-4 shelf 1,24.275,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-4-2 shelf 0,12.24,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-2-3 shelf 0,17.921,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-2-4 shelf 0,20.724,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-1-4 shelf 0,21.468,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-2-2 shelf 2,36.252,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-2-4 shelf 3,21.942,30.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-2-1 shelf 1,22.023,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-2-3 shelf 3,6.459,30.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-4-1 shelf 0,39.192,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-4-4 shelf 0,25.746,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-3-2 shelf 2,36.6,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-2-2 shelf 1,22.77,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-1-3 shelf 2,36.066,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-3-1 shelf 3,21.08,30.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-1-3 shelf 3,20.013,30.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-4-3 shelf 0,24.617,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-3-1 shelf 0,17.314,60.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-3-3 shelf 1,5.844,50.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-1-1 shelf 3,25.292,30.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-4-1 shelf 2,8.4,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-4-3 shelf 2,9.45,40.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-3-2 shelf 3,12.369,30.0,kg,shelf load within structural limit
-SL-01,shelf_load,Structural load,True,info,,R9-2-2 shelf 3,16.689,30.0,kg,shelf load within structural limit
-RK-01,rack_load,Structural load,True,info,,R8-4-1,194.914,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R5-3-4,510.062,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R3-3-1,74.89,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R4-3-4,69.226,442.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R8-3-3,221.206,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R8-3-1,239.669,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R1-2-2,133.581,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R4-2-1,100.48,442.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R4-1-4,61.595,442.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R8-3-4,250.002,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R3-1-4,130.599,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R3-1-1,113.358,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R7-3-4,248.893,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R6-2-4,273.486,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R1-4-2,100.055,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R1-4-3,70.264,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R3-2-2,91.423,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R3-4-4,87.057,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R6-4-4,575.522,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R4-1-1,76.036,442.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R2-2-1,140.434,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R4-4-1,74.574,442.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R2-1-3,14.979,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R6-2-1,313.444,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R7-2-4,200.779,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R8-1-2,274.879,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R5-4-1,414.914,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R3-3-3,135.637,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R8-2-2,141.62,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R2-3-4,95.835,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R1-1-2,89.156,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R8-2-4,201.403,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R4-2-3,24.162,442.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R7-1-2,287.119,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R5-2-3,438.229,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R1-2-3,67.521,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R4-2-4,42.942,442.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R8-2-1,178.735,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R7-3-2,250.759,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R7-1-3,193.077,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R6-1-1,251.246,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R2-1-2,84.879,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R5-2-1,295.661,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R7-1-4,263.414,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R4-1-3,25.915,442.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R6-3-4,277.462,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R5-2-4,594.365,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R3-2-3,77.271,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R3-1-2,43.363,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R8-2-3,196.299,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R1-1-1,93.664,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R4-4-3,41.078,442.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R1-3-1,25.928,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R5-4-2,519.977,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R3-3-4,52.861,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R8-1-4,231.119,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R1-1-4,70.584,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R3-1-3,119.923,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R2-4-3,104.575,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R5-3-2,342.847,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R6-4-1,339.21,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R4-2-2,61.185,442.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R7-2-3,204.569,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R4-3-1,71.281,442.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R1-2-1,69.426,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R4-3-2,47.398,442.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R1-1-3,74.299,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R8-4-2,240.953,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R6-2-3,435.685,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R6-4-2,408.879,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R3-4-3,51.004,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R8-3-2,225.253,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R3-4-2,75.183,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R1-4-4,113.244,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R2-1-4,130.705,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R7-4-1,307.323,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R6-3-1,404.492,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R2-4-2,86.217,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R4-4-4,69.215,442.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R5-4-4,614.701,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R2-3-2,25.093,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R3-4-1,81.875,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R4-3-3,48.719,442.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R5-1-1,528.025,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R2-4-1,104.982,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R6-1-3,393.634,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R8-4-4,186.052,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R8-1-3,255.701,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R1-3-4,115.651,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R6-1-4,395.941,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R7-2-2,265.573,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R5-3-1,550.993,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R7-3-1,195.762,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R4-4-2,38.759,442.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R2-1-1,127.502,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R5-2-2,515.235,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R5-1-2,432.244,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R1-2-4,53.856,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R2-2-2,100.091,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R8-4-3,274.819,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R6-2-2,478.939,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R5-1-4,608.824,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R6-3-3,528.689,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R7-4-2,294.093,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R6-1-2,423.959,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R5-4-3,483.518,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R2-3-3,149.608,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R3-3-2,59.647,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R6-3-2,509.374,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R3-2-4,54.804,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R2-2-4,94.321,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R1-3-2,87.839,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R2-4-4,85.659,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R7-1-1,298.604,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R4-1-2,92.389,442.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R1-3-3,157.603,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R7-2-1,263.616,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R2-3-1,90.732,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R8-1-1,218.217,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R5-1-3,524.822,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R3-2-1,68.392,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R1-4-1,103.066,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R6-4-3,443.852,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R7-3-3,271.568,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R7-4-3,238.29,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R2-2-3,39.418,782.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R5-3-3,473.899,2108.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R7-4-4,288.824,1224.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R9-1-4,55.725,612.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R9-3-2,86.715,612.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R9-1-1,48.715,612.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R9-4-3,63.305,612.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R9-2-4,91.654,612.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R9-4-4,84.431,612.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R9-4-2,61.774,612.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R9-2-2,121.269,612.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R9-1-2,7.986,612.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R9-2-1,144.898,612.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R9-3-4,33.057,612.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R9-3-1,70.219,612.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R9-2-3,24.38,612.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R9-4-1,47.592,612.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R9-1-3,56.079,612.0,kg,rack load within structural limit
-RK-01,rack_load,Structural load,True,info,,R9-3-3,5.844,612.0,kg,rack load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R8-2-2 shelf 3,74.586,240.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R5-2-1 shelf 0,527.352,800.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R3-2-1 shelf 3,123.743,160.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R4-2-1 shelf 0,63.365,160.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R8-2-1 shelf 3,43.535,240.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R8-2-1 shelf 2,261.791,320.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R1-1-2 shelf 0,101.84,320.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R4-1-2 shelf 3,43.497,100.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R4-1-1 shelf 0,84.742,160.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R8-2-1 shelf 1,330.082,400.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R3-1-1 shelf 2,100.592,200.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R3-1-1 shelf 0,114.281,320.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R7-2-1 shelf 1,301.863,400.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R6-1-2 shelf 0,352.081,800.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R1-1-2 shelf 3,60.388,160.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R1-2-2 shelf 0,84.614,320.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R1-2-2 shelf 3,83.076,160.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R3-1-2 shelf 3,37.407,160.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R3-2-2 shelf 3,62.393,160.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R6-2-2 shelf 1,380.47,640.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R4-1-1 shelf 3,58.792,100.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R2-1-2 shelf 1,135.767,240.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R4-2-2 shelf 2,40.834,120.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R2-1-1 shelf 3,94.656,160.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R6-1-2 shelf 2,278.243,560.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R7-1-2 shelf 3,72.627,240.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R5-2-1 shelf 2,502.377,560.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R8-1-1 shelf 3,65.491,240.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R5-2-2 shelf 1,474.486,640.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R3-2-1 shelf 2,84.972,200.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R8-1-2 shelf 2,205.16,320.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R2-2-1 shelf 3,104.764,160.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R1-1-1 shelf 1,53.282,240.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R8-1-2 shelf 0,291.74,480.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R4-1-2 shelf 1,61.399,140.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R7-1-1 shelf 0,287.293,480.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R5-1-2 shelf 3,454.088,480.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R1-1-2 shelf 2,79.006,200.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R8-1-2 shelf 3,110.0,240.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R7-2-1 shelf 3,41.863,240.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R7-1-1 shelf 3,136.358,240.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R6-1-1 shelf 3,368.242,480.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R2-2-1 shelf 1,99.613,240.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R2-1-1 shelf 0,96.807,320.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R5-1-2 shelf 1,421.807,640.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R7-1-1 shelf 2,264.586,320.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R4-1-1 shelf 2,53.037,120.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R6-2-1 shelf 1,426.581,640.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R5-1-2 shelf 2,399.09,560.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R3-1-2 shelf 2,33.085,200.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R3-1-1 shelf 1,147.026,240.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R3-1-2 shelf 0,102.435,320.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R3-2-1 shelf 1,56.37,240.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R3-1-1 shelf 3,45.344,160.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R1-1-1 shelf 0,129.169,320.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R1-2-1 shelf 3,93.515,160.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R5-2-2 shelf 2,497.841,560.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R6-2-1 shelf 2,420.373,560.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R1-1-2 shelf 1,83.15,240.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R1-1-1 shelf 3,46.13,160.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R2-2-2 shelf 1,89.964,240.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R4-1-2 shelf 2,77.051,120.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R8-1-1 shelf 2,221.44,320.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R7-1-2 shelf 2,271.056,320.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R6-1-1 shelf 2,208.309,560.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R4-2-1 shelf 1,51.431,140.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R4-2-2 shelf 1,64.12,140.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R8-2-2 shelf 0,270.544,480.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R6-1-2 shelf 3,448.71,480.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R2-1-2 shelf 0,71.89,320.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R3-2-2 shelf 1,83.411,240.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R2-2-1 shelf 0,77.322,320.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R3-2-2 shelf 0,53.505,320.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R7-2-2 shelf 0,388.653,480.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R5-2-2 shelf 3,393.901,480.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R8-2-2 shelf 2,201.044,320.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R2-1-1 shelf 1,67.849,240.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R4-1-2 shelf 0,46.822,160.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R1-1-1 shelf 2,99.122,200.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R3-2-2 shelf 2,95.81,200.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R5-1-1 shelf 2,397.37,560.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R4-2-2 shelf 0,65.235,160.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R4-2-1 shelf 3,76.746,100.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R2-1-1 shelf 2,98.753,200.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R1-2-1 shelf 0,63.607,320.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R7-2-2 shelf 3,83.506,240.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R5-2-1 shelf 1,410.475,640.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R6-1-1 shelf 1,434.657,640.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R1-2-1 shelf 1,145.808,240.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R1-2-2 shelf 2,135.878,200.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R4-2-1 shelf 2,45.082,120.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R4-2-2 shelf 3,53.437,100.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R2-1-2 shelf 2,94.026,200.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R5-2-1 shelf 3,437.597,480.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R5-1-1 shelf 1,549.493,640.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R4-1-1 shelf 1,59.364,140.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R7-2-1 shelf 0,344.327,480.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R5-1-1 shelf 3,464.324,480.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R6-2-2 shelf 2,520.441,560.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R6-2-1 shelf 3,435.337,480.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R6-2-1 shelf 0,437.726,800.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R7-2-2 shelf 2,262.004,320.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R6-1-1 shelf 0,453.572,800.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R2-2-1 shelf 2,79.569,200.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R7-2-1 shelf 2,278.929,320.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R2-2-2 shelf 3,100.303,160.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R5-1-2 shelf 0,568.505,800.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R2-2-2 shelf 0,134.792,320.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R6-2-2 shelf 3,367.417,480.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R1-2-1 shelf 2,84.091,200.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R1-2-2 shelf 1,83.061,240.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R3-1-2 shelf 1,118.963,240.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R8-1-1 shelf 1,255.551,400.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R6-2-2 shelf 0,499.135,800.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R7-1-1 shelf 1,353.977,400.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R3-2-1 shelf 0,57.95,320.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R6-1-2 shelf 1,422.52,640.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R7-1-2 shelf 1,311.75,400.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R2-1-2 shelf 3,72.581,160.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R7-2-2 shelf 1,394.367,400.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R8-2-1 shelf 0,300.722,480.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R5-2-2 shelf 0,666.882,800.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R8-2-2 shelf 1,350.564,400.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R2-2-2 shelf 2,56.374,200.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R8-1-1 shelf 0,437.434,480.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R8-1-2 shelf 1,111.157,400.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R5-1-1 shelf 0,682.728,800.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R7-1-2 shelf 0,279.104,480.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R9-1-1 shelf 1,33.21,200.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R9-2-1 shelf 1,85.996,200.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R9-1-1 shelf 0,39.923,240.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R9-2-2 shelf 3,52.725,120.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R9-1-2 shelf 1,93.781,200.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R9-2-2 shelf 2,50.083,160.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R9-1-1 shelf 2,50.067,160.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R9-1-2 shelf 0,138.005,240.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R9-1-2 shelf 2,75.325,160.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R9-2-1 shelf 3,55.925,120.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R9-2-2 shelf 1,52.499,200.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R9-1-2 shelf 3,75.09,120.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R9-2-2 shelf 0,101.795,240.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R9-2-1 shelf 2,36.6,160.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R9-1-1 shelf 3,45.305,120.0,kg,shelf load within structural limit
+SL-01,shelf_load,Structural load,True,info,,R9-2-1 shelf 0,17.314,240.0,kg,shelf load within structural limit
+RK-01,rack_load,Structural load,True,info,,R8-2-2,896.738,4896.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R5-2-1,1877.801,8432.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R3-2-1,323.035,3128.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R4-2-1,236.624,1768.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R8-2-1,936.13,4896.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R1-1-2,324.384,3128.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R4-1-2,228.769,1768.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R4-1-1,255.935,1768.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R3-1-1,407.243,3128.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R7-2-1,966.982,4896.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R6-1-2,1501.554,8432.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R1-2-2,386.629,3128.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R3-1-2,291.89,3128.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R3-2-2,295.119,3128.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R6-2-2,1767.463,8432.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R2-1-2,374.264,3128.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R4-2-2,223.626,1768.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R2-1-1,358.065,3128.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R7-1-2,934.537,4896.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R8-1-1,979.916,4896.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R5-2-2,2033.11,8432.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R8-1-2,718.057,4896.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R2-2-1,361.268,3128.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R1-1-1,327.703,3128.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R7-1-1,1042.214,4896.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R5-1-2,1843.49,8432.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R6-1-1,1464.78,8432.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R6-2-1,1720.017,8432.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R1-2-1,387.021,3128.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R2-2-2,381.433,3128.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R7-2-2,1128.53,4896.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R5-1-1,2093.915,8432.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R9-1-1,168.505,2448.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R9-2-1,195.835,2448.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R9-2-2,257.102,2448.0,kg,rack load within structural limit
+RK-01,rack_load,Structural load,True,info,,R9-1-2,382.201,2448.0,kg,rack load within structural limit
 COMP-01,assignment_completeness,Integrity,True,info,,,0,0,SKUs without a location,every SKU with inventory has a location
 INV-03,inventory_conservation_match,Integrity,True,info,SKU000001,,3,3,units,assigned quantity equals on-hand inventory
 INV-03,inventory_conservation_match,Integrity,True,info,SKU000002,,4,4,units,assigned quantity equals on-hand inventory

@@ -5,13 +5,13 @@
   "inventory_units": 6375,
   "skus_with_inventory": 1200,
   "baseline": {
-    "total_travel_distance_m": 1707167.15,
-    "avg_travel_distance_m": 1576.33,
-    "avg_distance_per_order_m": 315.27,
-    "total_route_time_sec": 1484035.5,
-    "avg_route_time_sec": 1370.3,
-    "avg_time_per_order_sec": 274.06,
-    "throughput_orders_per_hr": 13.14,
+    "total_travel_distance_m": 382544.2,
+    "avg_travel_distance_m": 353.23,
+    "avg_distance_per_order_m": 70.65,
+    "total_route_time_sec": 465094.77,
+    "avg_route_time_sec": 429.45,
+    "avg_time_per_order_sec": 85.89,
+    "throughput_orders_per_hr": 41.91,
     "cube_utilization_pct": 15.42,
     "cube_occupied_volume_cm3": 66411409.47,
     "cube_total_usable_volume_cm3": 430592000.0,
@@ -21,25 +21,25 @@
     "valid_assignments": 1200,
     "required_assignments": 1200,
     "rule_check_pass_pct": 100.0,
-    "checks_run": 16145,
+    "checks_run": 15631,
     "golden_zone_demand_share_pct": 37.72,
     "class_a_skus": 294,
     "class_a_skus_outside_golden": 134,
     "optimization_runtime_sec": null,
     "n_batches": 1083,
     "total_orders": 5415,
-    "affinity_separation_m": 133.324,
+    "affinity_separation_m": 24.373,
     "affinity_pairs_evaluated": 5114,
     "affinity_pairs_skipped": 0
   },
   "optimized": {
-    "total_travel_distance_m": 1296259.4,
-    "avg_travel_distance_m": 1196.92,
-    "avg_distance_per_order_m": 239.38,
-    "total_route_time_sec": 1167952.62,
-    "avg_route_time_sec": 1078.44,
-    "avg_time_per_order_sec": 215.69,
-    "throughput_orders_per_hr": 16.69,
+    "total_travel_distance_m": 279046.4,
+    "avg_travel_distance_m": 257.66,
+    "avg_distance_per_order_m": 51.53,
+    "total_route_time_sec": 385481.08,
+    "avg_route_time_sec": 355.94,
+    "avg_time_per_order_sec": 71.19,
+    "throughput_orders_per_hr": 50.57,
     "cube_utilization_pct": 15.42,
     "cube_occupied_volume_cm3": 66411409.47,
     "cube_total_usable_volume_cm3": 430592000.0,
@@ -49,14 +49,14 @@
     "valid_assignments": 1200,
     "required_assignments": 1200,
     "rule_check_pass_pct": 100.0,
-    "checks_run": 17138,
-    "golden_zone_demand_share_pct": 97.59,
+    "checks_run": 14916,
+    "golden_zone_demand_share_pct": 60.02,
     "class_a_skus": 294,
-    "class_a_skus_outside_golden": 13,
-    "optimization_runtime_sec": 19.441,
+    "class_a_skus_outside_golden": 136,
+    "optimization_runtime_sec": 18.987,
     "n_batches": 1083,
     "total_orders": 5415,
-    "affinity_separation_m": 97.14,
+    "affinity_separation_m": 20.044,
     "affinity_pairs_evaluated": 5114,
     "affinity_pairs_skipped": 0
   },
@@ -67,10 +67,10 @@
       "direction": "lower is better",
       "unit": "m",
       "change_kind": "reduction",
-      "baseline": 1707167.15,
-      "optimized": 1296259.4,
-      "absolute_diff": -410907.75,
-      "percent_change": -24.07
+      "baseline": 382544.2,
+      "optimized": 279046.4,
+      "absolute_diff": -103497.8,
+      "percent_change": -27.06
     },
     {
       "metric": "avg_travel_distance_m",
@@ -78,10 +78,10 @@
       "direction": "lower is better",
       "unit": "m",
       "change_kind": "reduction",
-      "baseline": 1576.33,
-      "optimized": 1196.92,
-      "absolute_diff": -379.41,
-      "percent_change": -24.07
+      "baseline": 353.23,
+      "optimized": 257.66,
+      "absolute_diff": -95.57,
+      "percent_change": -27.06
     },
     {
       "metric": "avg_distance_per_order_m",
@@ -89,10 +89,10 @@
       "direction": "lower is better",
       "unit": "m",
       "change_kind": "reduction",
-      "baseline": 315.27,
-      "optimized": 239.38,
-      "absolute_diff": -75.89,
-      "percent_change": -24.07
+      "baseline": 70.65,
+      "optimized": 51.53,
+      "absolute_diff": -19.12,
+      "percent_change": -27.06
     },
     {
       "metric": "total_route_time_sec",
@@ -100,10 +100,10 @@
       "direction": "lower is better",
       "unit": "s",
       "change_kind": "reduction",
-      "baseline": 1484035.5,
-      "optimized": 1167952.62,
-      "absolute_diff": -316082.88,
-      "percent_change": -21.3
+      "baseline": 465094.77,
+      "optimized": 385481.08,
+      "absolute_diff": -79613.69,
+      "percent_change": -17.12
     },
     {
       "metric": "avg_route_time_sec",
@@ -111,10 +111,10 @@
       "direction": "lower is better",
       "unit": "s",
       "change_kind": "reduction",
-      "baseline": 1370.3,
-      "optimized": 1078.44,
-      "absolute_diff": -291.86,
-      "percent_change": -21.3
+      "baseline": 429.45,
+      "optimized": 355.94,
+      "absolute_diff": -73.51,
+      "percent_change": -17.12
     },
     {
       "metric": "avg_time_per_order_sec",
@@ -122,10 +122,10 @@
       "direction": "lower is better",
       "unit": "s",
       "change_kind": "reduction",
-      "baseline": 274.06,
-      "optimized": 215.69,
-      "absolute_diff": -58.37,
-      "percent_change": -21.3
+      "baseline": 85.89,
+      "optimized": 71.19,
+      "absolute_diff": -14.7,
+      "percent_change": -17.11
     },
     {
       "metric": "throughput_orders_per_hr",
@@ -133,10 +133,10 @@
       "direction": "higher is better",
       "unit": "orders/h",
       "change_kind": "improvement",
-      "baseline": 13.14,
-      "optimized": 16.69,
-      "absolute_diff": 3.55,
-      "percent_change": 27.02
+      "baseline": 41.91,
+      "optimized": 50.57,
+      "absolute_diff": 8.66,
+      "percent_change": 20.66
     },
     {
       "metric": "cube_utilization_pct",
@@ -156,8 +156,8 @@
       "unit": "%",
       "change_kind": "points",
       "baseline": 37.72,
-      "optimized": 97.59,
-      "absolute_diff": 59.87,
+      "optimized": 60.02,
+      "absolute_diff": 22.3,
       "percent_change": null
     },
     {
@@ -167,8 +167,8 @@
       "unit": "SKUs",
       "change_kind": "abs",
       "baseline": 134,
-      "optimized": 13,
-      "absolute_diff": -121,
+      "optimized": 136,
+      "absolute_diff": 2,
       "percent_change": null
     },
     {
@@ -177,10 +177,10 @@
       "direction": "lower is better",
       "unit": "m",
       "change_kind": "reduction",
-      "baseline": 133.324,
-      "optimized": 97.14,
-      "absolute_diff": -36.184,
-      "percent_change": -27.14
+      "baseline": 24.373,
+      "optimized": 20.044,
+      "absolute_diff": -4.329,
+      "percent_change": -17.76
     },
     {
       "metric": "constraint_violations",
@@ -232,9 +232,9 @@
       "direction": "reference",
       "unit": "checks",
       "change_kind": "abs",
-      "baseline": 16145,
-      "optimized": 17138,
-      "absolute_diff": 993,
+      "baseline": 15631,
+      "optimized": 14916,
+      "absolute_diff": -715,
       "percent_change": null
     },
     {
@@ -280,29 +280,29 @@
       "n_batches": 1083,
       "total_orders": 5415,
       "total_pick_lines": 20000,
-      "total_distance_m": 1707167.15,
-      "avg_distance_m": 1576.33,
-      "total_route_time_sec": 1484035.5,
-      "avg_cycle_time_sec": 1370.3,
-      "avg_time_per_order_sec": 274.06,
-      "total_travel_time_sec": 1313205.5,
+      "total_distance_m": 382544.2,
+      "avg_distance_m": 353.23,
+      "total_route_time_sec": 465094.77,
+      "avg_cycle_time_sec": 429.45,
+      "avg_time_per_order_sec": 85.89,
+      "total_travel_time_sec": 294264.77,
       "total_pick_time_sec": 160000.0,
       "total_setup_time_sec": 10830.0,
-      "throughput_orders_per_hr": 13.14
+      "throughput_orders_per_hr": 41.91
     },
     "optimized": {
       "n_batches": 1083,
       "total_orders": 5415,
       "total_pick_lines": 20000,
-      "total_distance_m": 1296259.4,
-      "avg_distance_m": 1196.92,
-      "total_route_time_sec": 1167952.62,
-      "avg_cycle_time_sec": 1078.44,
-      "avg_time_per_order_sec": 215.69,
-      "total_travel_time_sec": 997122.62,
+      "total_distance_m": 279046.4,
+      "avg_distance_m": 257.66,
+      "total_route_time_sec": 385481.08,
+      "avg_cycle_time_sec": 355.94,
+      "avg_time_per_order_sec": 71.19,
+      "total_travel_time_sec": 214651.08,
       "total_pick_time_sec": 160000.0,
       "total_setup_time_sec": 10830.0,
-      "throughput_orders_per_hr": 16.69
+      "throughput_orders_per_hr": 50.57
     }
   },
   "notes": {
@@ -312,8 +312,8 @@
     "baseline_was_validated": true,
     "baseline_constraint_violations": 0,
     "optimized_constraint_violations": 0,
-    "baseline_rule_checks": 16145,
-    "optimized_rule_checks": 17138,
+    "baseline_rule_checks": 15631,
+    "optimized_rule_checks": 14916,
     "baseline_inventory_conservation_violations": 0,
     "optimized_inventory_conservation_violations": 0,
     "same_inventory_units": 6375

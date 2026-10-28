@@ -30,9 +30,15 @@ class NetworkGraph:
 
     def shortest(self, src: str, dst: str) -> float:
         """Dijkstra single-pair distance. Returns inf if unreachable."""
+        _, dist = self.shortest_path(src, dst)
+        return dist
+
+    def shortest_path(self, src: str, dst: str) -> tuple[list[str], float]:
+        """Dijkstra returning the path node sequence and total distance."""
         if src == dst:
-            return 0.0
+            return [src], 0.0
         dist = {src: 0.0}
+        prev: dict[str, str] = {}
         pq = [(0.0, src)]
         seen = set()
         while pq:
@@ -41,13 +47,21 @@ class NetworkGraph:
                 continue
             seen.add(u)
             if u == dst:
-                return d
+                path = []
+                curr = dst
+                while curr in prev:
+                    path.append(curr)
+                    curr = prev[curr]
+                path.append(src)
+                path.reverse()
+                return path, d
             for w, ud in self.adj.get(u, {}).items():
                 nd = d + ud
                 if nd < dist.get(w, float("inf")):
                     dist[w] = nd
+                    prev[w] = u
                     heapq.heappush(pq, (nd, w))
-        return float("inf")
+        return [], float("inf")
 
     def distances_from(self, src: str) -> dict[str, float]:
         """Dijkstra from one source to every reachable node (one pass, all targets)."""
@@ -80,6 +94,11 @@ def build_graph(graph_csv: Path | pd.DataFrame) -> NetworkGraph:
 
 def find_depot_node(graph: NetworkGraph) -> str | None:
     """The depot is the node whose id contains 'depot' (case-insensitive); sorted for determinism."""
+    if "DEPOT" in graph.nodes:
+        return "DEPOT"
+    for n in sorted(graph.nodes):
+        if n.lower() == "depot":
+            return n
     for n in sorted(graph.nodes):
         if "depot" in n.lower():
             return n

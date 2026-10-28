@@ -186,6 +186,194 @@ def generate_products(n_skus: int, seed: int) -> list[dict[str, Any]]:
 # Warehouse topology + distance graph
 # ---------------------------------------------------------------------------
 
+def _build_warehouse_3x3(
+    wh: dict[str, Any], zones: list[dict[str, Any]]
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, str]]:
+    warehouse_id = wh["warehouse_id"]
+    outer_margin = 3.0
+    zone_size = 9.6
+    aisle_width = float(wh.get("aisle_width_m", 3.0))
+    rack_depth = float(wh.get("rack_depth_m", 1.0))
+    total_w = 2 * outer_margin + 3 * zone_size + 2 * aisle_width  # 40.8m
+
+    bin_classes = wh["bin_classes"]
+    zone_rules = wh["zone_rules"]
+    golden_levels = set(int(level) for level in wh.get("golden_levels", [1, 2]))
+    shelf_height = float(wh.get("shelf_height_m", 0.5))
+
+    x_corrs = [
+        round(outer_margin / 2.0, 3),  # 1.5
+        round(outer_margin + zone_size + aisle_width / 2.0, 3),  # 14.1
+        round(outer_margin + 2 * zone_size + 1.5 * aisle_width, 3),  # 26.7
+        round(outer_margin + 3 * zone_size + 2 * aisle_width + outer_margin / 2.0, 3),  # 39.3
+    ]
+    y_corrs = [
+        round(outer_margin / 2.0, 3),  # 1.5
+        round(outer_margin + zone_size + aisle_width / 2.0, 3),  # 14.1
+        round(outer_margin + 2 * zone_size + 1.5 * aisle_width, 3),  # 26.7
+        round(outer_margin + 3 * zone_size + 2 * aisle_width + outer_margin / 2.0, 3),  # 39.3
+    ]
+
+    locations: list[dict[str, Any]] = []
+    location_column: dict[str, str] = {}
+    nodes: dict[str, dict[str, Any]] = {}
+    edges: list[tuple[str, str, float]] = []
+
+    depot_x = round(total_w / 2.0, 3)
+    depot_y = 0.5
+    nodes["DEPOT"] = {"node_type": "depot", "x_m": depot_x, "y_m": depot_y}
+    depot_corr = "CORR_DEPOT_ENTRY"
+    nodes[depot_corr] = {"node_type": "aisle_entrance", "x_m": depot_x, "y_m": y_corrs[0]}
+    edges.append(("DEPOT", depot_corr, round(abs(y_corrs[0] - depot_y), 3)))
+
+    for i, xc in enumerate(x_corrs):
+        for j, yc in enumerate(y_corrs):
+            nodes[f"INT_{i}_{j}"] = {"node_type": "zone_hub", "x_m": xc, "y_m": yc}
+
+    for i in range(len(x_corrs)):
+        for j in range(len(y_corrs) - 1):
+            edges.append((f"INT_{i}_{j}", f"INT_{i}_{j+1}", round(abs(y_corrs[j+1] - y_corrs[j]), 3)))
+    for j in range(len(y_corrs)):
+        for i in range(len(x_corrs) - 1):
+            edges.append((f"INT_{i}_{j}", f"INT_{i+1}_{j}", round(abs(x_corrs[i+1] - x_corrs[i]), 3)))
+
+    edges.append((depot_corr, "INT_1_0", round(abs(depot_x - x_corrs[1]), 3)))
+    edges.append((depot_corr, "INT_2_0", round(abs(x_corrs[2] - depot_x), 3)))
+
+    col_nodes: dict[tuple[float, float], str] = {}
+    loc_id_counter = 0
+    bay_len = zone_size / 8.0
+    bin_len = bay_len / 2.0
+
+    for idx, zone in enumerate(zones):
+        zid = zone["zone_id"]
+        ztype = zone["zone_type"]
+        bclass = zone["bin_class"]
+        col = idx % 3
+        row = idx // 3
+        zx0 = outer_margin + col * (zone_size + aisle_width)
+        zy0 = outer_margin + row * (zone_size + aisle_width)
+        zx1 = zx0 + zone_size
+        zy1 = zy0 + zone_size
+
+        bc = bin_classes[bclass]
+        bin_w_cm, bin_h_cm, bin_d_cm = (float(v) for v in bc["dims_cm"])
+        shelf_weights = [float(v) for v in bc["shelf_weight_kg"]]
+        handling_rule = list(zone_rules[ztype]["allowed_handling"])
+        hazard_rule = list(zone_rules[ztype]["allowed_hazard"])
+        rack_max_weight = round(float(wh.get("rack_limit_factor", 0.85)) * sum(shelf_weights) * 2 * 8, 1)
+
+        sides = [
+            ("South", 1, 1),
+            ("North", 1, 2),
+            ("West", 2, 1),
+            ("East", 2, 2),
+        ]
+        for side, aisle_num, rack_num in sides:
+            rack_id = f"R{idx+1}-{aisle_num}-{rack_num}"
+            aisle_id = f"A{idx+1}-{aisle_num}"
+
+            for bay in range(8):
+                for shelf_level in range(4):
+                    for bin_idx in range(2):
+                        loc_id_counter += 1
+                        loc_id = f"LOC{loc_id_counter:06d}"
+                        z_m = round((shelf_level + 0.5) * shelf_height, 3)
+
+                        if side == "South":
+                            x_m = round(zx0 + (bay * 2 + bin_idx + 0.5) * bin_len, 3)
+                            y_m = round(zy0 + rack_depth / 2.0, 3)
+                            cx, cy = x_m, y_corrs[row]
+                        elif side == "North":
+                            x_m = round(zx0 + (bay * 2 + bin_idx + 0.5) * bin_len, 3)
+                            y_m = round(zy1 - rack_depth / 2.0, 3)
+                            cx, cy = x_m, y_corrs[row + 1]
+                        elif side == "West":
+                            x_m = round(zx0 + rack_depth / 2.0, 3)
+                            y_m = round(zy0 + (bay * 2 + bin_idx + 0.5) * bin_len, 3)
+                            cx, cy = x_corrs[col], y_m
+                        else:  # East
+                            x_m = round(zx1 - rack_depth / 2.0, 3)
+                            y_m = round(zy0 + (bay * 2 + bin_idx + 0.5) * bin_len, 3)
+                            cx, cy = x_corrs[col + 1], y_m
+
+                        if shelf_level in golden_levels:
+                            ergonomic = "golden"
+                        elif shelf_level == 0:
+                            ergonomic = "secondary"
+                        else:
+                            ergonomic = "reserve"
+
+                        allowed_handling = list(handling_rule)
+                        if ztype == "heavy" and shelf_level > 2:
+                            allowed_handling = [h for h in allowed_handling if h != "heavy"]
+
+                        locations.append({
+                            "location_id": loc_id,
+                            "warehouse_id": warehouse_id,
+                            "zone_id": zid,
+                            "zone_type": ztype,
+                            "aisle_id": aisle_id,
+                            "rack_id": rack_id,
+                            "bay": bay,
+                            "shelf_level": shelf_level,
+                            "x_m": x_m,
+                            "y_m": y_m,
+                            "z_m": z_m,
+                            "width_cm": bin_w_cm,
+                            "height_cm": bin_h_cm,
+                            "depth_cm": bin_d_cm,
+                            "max_weight_kg": shelf_weights[shelf_level],
+                            "usable_volume_cm3": round(bin_w_cm * bin_h_cm * bin_d_cm, 2),
+                            "shelf_max_weight_kg": shelf_weights[shelf_level] * 4.0,
+                            "rack_max_weight_kg": rack_max_weight,
+                            "ergonomic_zone": ergonomic,
+                            "allowed_handling": "|".join(allowed_handling),
+                            "allowed_hazard": "|".join(hazard_rule),
+                            "data_source": "synthetic",
+                            "data_quality_status": "valid",
+                            "_handling": frozenset(allowed_handling),
+                            "_hazard": frozenset(hazard_rule),
+                            "_residual_weight": shelf_weights[shelf_level],
+                        })
+
+                        ckey = (cx, cy)
+                        if ckey not in col_nodes:
+                            cid = f"ACOL_{len(col_nodes)+1:04d}"
+                            col_nodes[ckey] = cid
+                            nodes[cid] = {"node_type": "aisle_column", "x_m": cx, "y_m": cy}
+
+                            connected = False
+                            for j, yc in enumerate(y_corrs):
+                                if abs(cy - yc) < 1e-4:
+                                    for i in range(len(x_corrs) - 1):
+                                        if x_corrs[i] <= cx <= x_corrs[i + 1]:
+                                            edges.append((cid, f"INT_{i}_{j}", round(abs(cx - x_corrs[i]), 3)))
+                                            edges.append((cid, f"INT_{i+1}_{j}", round(abs(x_corrs[i + 1] - cx), 3)))
+                                            connected = True
+                                            break
+                                    break
+                            if not connected:
+                                for i, xc in enumerate(x_corrs):
+                                    if abs(cx - xc) < 1e-4:
+                                        for j in range(len(y_corrs) - 1):
+                                            if y_corrs[j] <= cy <= y_corrs[j + 1]:
+                                                edges.append((cid, f"INT_{i}_{j}", round(abs(cy - y_corrs[j]), 3)))
+                                                edges.append((cid, f"INT_{i}_{j+1}", round(abs(y_corrs[j + 1] - cy), 3)))
+                                                connected = True
+                                                break
+                                        break
+
+                        cid = col_nodes[ckey]
+                        location_column[loc_id] = cid
+                        nodes[loc_id] = {"node_type": "location", "x_m": x_m, "y_m": y_m}
+                        lat_dist = round(aisle_width / 2.0 + rack_depth / 2.0, 3)
+                        edges.append((loc_id, cid, lat_dist))
+
+    graph_rows = _build_graph_rows(nodes, edges)
+    return locations, graph_rows, location_column
+
+
 def build_warehouse(config: dict[str, Any]) -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, str]]:
     """Build bins, the aisle-network graph, and each bin's shortest walk to the depot."""
     wh = config["warehouse"]
@@ -208,6 +396,9 @@ def build_warehouse(config: dict[str, Any]) -> tuple[list[dict[str, Any]], list[
                     "bin_class": entry["bin_class"],
                 }
             )
+
+    if len(zones) == 9:
+        return _build_warehouse_3x3(wh, zones)
 
     y_cursor = 0.0
     for zone in zones:

@@ -302,3 +302,52 @@ def test_availability_reports_unmodeled_replenishment(data):
     assert availability["replenishment"][0] is False
     assert "Not modeled" in availability["replenishment"][1]
     assert availability["overview"][0] and availability["routes"][0] and availability["constraints"][0]
+
+
+def test_heatmap_modes_build_from_real_layout_state(data):
+    """Every warehouse-visualization mode (ABC, utilization, load, safety, route overlay)."""
+    from app import dashboard as dash
+    from app import dashboard_data as dd
+
+    state = dd.location_state(data, "optimized")
+    zone_frame = state[state["zone_id"].astype(str) == "Z1"]
+    frame = dd.filter_locations(state, zone="Z1", shelf=2)
+    assert not frame.empty
+    racks = dd.rack_geometry(zone_frame)
+    aisles = dd.aisle_geometry(zone_frame)
+    dispatch = dd.dispatch_point(data)
+
+    for mode in [
+        "ABC class", "Volume utilization", "Structural load — shelf",
+        "Structural load — rack", "Constraint status", "Assignment change",
+    ]:
+        figure = dash.plan_figure(frame, racks, aisles, dispatch, None, mode, "test")
+        assert figure.data, f"no traces drawn for mode {mode}"
+
+    stops = dd.stops_with_coordinates(data, "optimized", 0)
+    assert stops is not None
+    figure = dash.plan_figure(
+        frame, racks, aisles, dispatch, None, "ABC class", "test",
+        zone_box=(0.0, 6.0, 0.0, 20.0), cross_box=(17.0, 18.0),
+        route_overlay=stops[stops["zone_id"].astype(str) == "Z1"], show_ids=True,
+    )
+    names = {trace.name for trace in figure.data}
+    assert "Route sequence" in names and "Pick stops" in names
+    # structural figures (boundary/cross-aisle) are real shapes, not placeholders
+    assert len(figure.layout.shapes) >= len(racks) + 2
+
+
+def test_overview_and_elevation_figures_use_topology(data):
+    from app import dashboard as dash
+    from app import dashboard_data as dd
+
+    overview = dash.overview_figure(data["locations"], dd.dispatch_point(data))
+    assert len(overview.layout.shapes) >= 1, "warehouse boundary must be drawn"
+    assert overview.data, "dispatch marker must be drawn"
+
+    state = dd.location_state(data, "optimized")
+    rack_frame = state[(state["zone_id"].astype(str) == "Z1") & (state["rack_id"].astype(str) == "R1-1-1")]
+    elevation = dash.elevation_figure(rack_frame, None, [1, 2], "ABC class", "test")
+    assert elevation.data
+    golden_shapes = [s for s in elevation.layout.shapes if s.fillcolor == "#fef5e7"]
+    assert len(golden_shapes) >= 1, "golden shelf band must be highlighted"

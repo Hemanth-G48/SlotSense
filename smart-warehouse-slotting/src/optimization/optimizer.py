@@ -116,10 +116,32 @@ class SlottingOptimizer:
         return out
 
     def _nearest_feasible(self, sku: SKU, prefer_golden: bool = True):
-        """Shortlist feasible bins near dispatch, golden shelves first."""
+        """Shortlist feasible bins near dispatch, golden shelves first, with zone edge preference."""
         feasible = self._feasible_bins_for(sku)
-        # golden shelves first, then by distance
-        return sorted(feasible, key=lambda l: (0 if (prefer_golden and l.shelf_level in GOLDEN_SHELF_LEVELS) else 1, l.distance_to_dispatch_m))
+        # Prefer zone edges (bins at the outer boundaries of zones)
+        # Zone edges are at the extremes of each zone's y-coordinate range
+        def _zone_edge_priority(loc):
+            # Determine which zone this bin belongs to
+            zone_idx = None
+            for i in range(len(self.warehouse.zones)):
+                # Zone y-bands are spaced at regular intervals
+                zone_y_offset = i * (self.warehouse.cfg.aisles_per_zone * 2 * self.warehouse.cfg.aisle_spacing_m + 2 * self.warehouse.cfg.rack_depth_m)
+                # Check if loc.y is within this zone's band
+                zone_width = self.warehouse.cfg.aisles_per_zone * 2 * self.warehouse.cfg.aisle_spacing_m + 2 * self.warehouse.cfg.rack_depth_m
+                if abs(loc.y - zone_y_offset) < zone_width / 2:
+                    zone_idx = i
+                    break
+            # Edge bins are those near the outer boundaries of their zone
+            if zone_idx is not None:
+                zone_y_offset = zone_idx * (self.warehouse.cfg.aisles_per_zone * 2 * self.warehouse.cfg.aisle_spacing_m + 2 * self.warehouse.cfg.rack_depth_m)
+                zone_width = self.warehouse.cfg.aisles_per_zone * 2 * self.warehouse.cfg.aisle_spacing_m + 2 * self.warehouse.cfg.rack_depth_m
+                distance_from_zone_center = abs(loc.y - zone_y_offset - zone_width / 2)
+                # Bins closer to the zone edge (farther from center) get higher priority
+            return loc.distance_to_dispatch_m if loc.distance_to_dispatch_m > 0 else (abs(loc.x - 20.4) + abs(loc.y - 0.5))
+        # Sort by zone edge priority first, then by distance from dispatch
+        def _dist(l):
+            return l.distance_to_dispatch_m if l.distance_to_dispatch_m > 0 else (abs(l.x - 20.4) + abs(l.y - 0.5))
+        return sorted(feasible, key=lambda l: (_zone_edge_priority(l), _dist(l)))
 
     # -- greedy inventory-conserving starter ----------------------------------
     def greedy_starter(self) -> list[StorageAssignment]:
