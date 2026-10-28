@@ -1,0 +1,539 @@
+ROADMAP: BUILD A COMPLETE WAREHOUSE OPTIMIZATION DATASET
+
+GOAL
+Build one consistent, relational dataset that supports the Smart Warehouse Slotting & Optimization problem: product dimensions and weight, variable demand, warehouse locations, safety constraints, order affinity, picking routes, and optimization evaluation.
+
+Core principle:
+Combine real data where it exists, generate clearly labeled synthetic data where it is missing, and maintain referential integrity across all tables. Do not merge unrelated datasets as if their product IDs refer to the same products.
+
+============================================================
+PHASE 1 — DEFINE THE DATASET ARCHITECTURE
+============================================================
+
+Before downloading anything, define the final tables and relationships.
+
+Recommended tools:
+- PostgreSQL for the relational database
+- CSV or Parquet for intermediate files
+- Python with Pandas for processing and validation
+
+1.1 CORE TABLES
+
+1. products
+   - sku_id
+   - product_name
+   - category_id
+   - width_cm
+   - height_cm
+   - depth_cm
+   - weight_kg
+   - handling_type
+   - hazard_class
+   - data_source
+
+2. categories
+   - category_id
+   - category_name
+   - storage_requirements
+
+3. orders
+   - order_id
+   - order_timestamp
+   - order_status
+
+4. order_items
+   - order_id
+   - sku_id
+   - quantity
+
+5. warehouses
+   - warehouse_id
+   - warehouse_name
+   - layout_version
+
+6. locations
+   - location_id
+   - warehouse_id
+   - zone_id
+   - aisle_id
+   - rack_id
+   - bay
+   - shelf_level
+   - x
+   - y
+   - z
+   - max_weight_kg
+   - max_volume_cm3
+
+7. inventory
+   - sku_id
+   - location_id
+   - quantity_on_hand
+
+8. compatibility_rules
+   - category_a
+   - category_b
+   - allowed
+   - rule_reason
+
+9. storage_assignments
+   - sku_id
+   - location_id
+   - assigned_quantity
+   - assignment_type
+
+10. pick_events
+    - event_id
+    - order_id
+    - sku_id
+    - location_id
+    - quantity_picked
+    - pick_timestamp
+
+11. location_graph
+    - from_location_id
+    - to_location_id
+    - distance_m
+
+12. optimization_runs
+    - run_id
+    - algorithm
+    - objective_value
+    - status
+
+13. optimization_metrics
+    - run_id
+    - metric_name
+    - baseline_value
+    - optimized_value
+
+Add data_source and data_quality_status fields to relevant tables so measured, sourced, inferred, and synthetic values can be distinguished.
+
+1.2 RELATIONSHIPS AND DESIGN DECISIONS
+
+- A product can move between locations over time, so distinguish current inventory from historical storage assignments.
+- An order can contain multiple products, and a product can appear in multiple orders. Use order_items as the junction table.
+- A warehouse location must have a stable ID independent of which SKU is stored there.
+- A product's dimensions and weight are per-unit attributes. Inventory quantity determines total stored weight and volume.
+- Keep baseline and optimized assignments separate; never overwrite the baseline when evaluating an algorithm.
+
+============================================================
+PHASE 2 — ACQUIRE SOURCE DATASETS
+============================================================
+
+The following sources serve different purposes. They are complementary, not directly interchangeable.
+
+SOURCE A: REAL WAREHOUSE OPERATIONS
+Footwear Warehouse Dataset — Mendeley Data
+https://doi.org/10.17632/pf2w725pw3.1
+
+Potentially useful fields/files:
+- Orders and product references
+- Picking waves
+- Storage locations
+- Layout coordinates
+- Existing storage-assignment strategies
+
+Purpose: real warehouse topology and operational picking data.
+Limitation: product range is focused on footwear and does not necessarily include package dimensions and weight for all SKUs.
+
+SOURCE B: DIVERSE PRODUCT CATALOG
+Amazon product metadata — UCSD
+https://cseweb.ucsd.edu/~jmcauley/datasets.html
+
+Potentially useful:
+- Product categories
+- Titles and descriptions
+- Product identifiers
+
+Purpose: expand beyond footwear into varied product categories.
+Limitation: product metadata does not guarantee reliable physical dimensions, weight, or warehouse transaction data.
+
+SOURCE C: ADDITIONAL ORDER-PICKING DATA
+Artificial Generated Order Picking Data — University of Hamburg
+https://www.fdr.uni-hamburg.de/record/1645
+
+Inspect product, aisle, order-history, and pick-record files.
+Purpose: test order affinity and varied demand patterns.
+Limitation: data is synthetic; preserve its provenance and original schema.
+
+2.1 DOWNLOAD AND INVENTORY FILES
+
+Create a source manifest before transforming anything. Recommended fields:
+- source_id
+- source_name
+- download_date
+- license
+- file_name
+- record_count
+- primary_key
+- notes
+
+Example source_id: warehouse_mendeley_v1
+Example file_name: Storage_Location.csv
+
+Keep original files unchanged in a raw/ directory. Perform cleaning and merging in a separate processed/ directory.
+
+============================================================
+PHASE 3 — CLEAN AND STANDARDIZE THE DATA
+============================================================
+
+Different datasets use different identifiers, units, date formats, and category names. Resolve these before joining data.
+
+3.1 ESTABLISH GLOBAL IDENTIFIERS
+
+Use unified IDs, for example:
+- SKU000001, SKU000002, ...
+- ORD000001, ORD000002, ...
+- LOC000001, LOC000002, ...
+
+Maintain an ID mapping table:
+- source_name
+- source_product_id
+- unified_sku_id
+
+Do not map products from different sources to the same SKU merely because names or categories look similar. Merge only when product identity is supported by evidence.
+
+3.2 STANDARDIZE UNITS
+
+Choose canonical units:
+- Dimensions: centimetres (cm)
+- Weight: kilograms (kg)
+- Volume: cubic centimetres (cm3)
+- Coordinates and travel distance: metres (m)
+- Time: UTC timestamps internally, with the original timezone documented
+
+For rectangular products:
+SKU volume = width x height x depth
+
+For stored inventory:
+Total volume = quantity x unit volume
+Total weight = quantity x unit weight
+
+These calculations assume each unit occupies its full bounding-box volume and that there is no packaging overlap. Actual usable space can be lower because of packing inefficiency and clearance requirements.
+
+3.3 VALIDATION RULES
+
+Reject or flag records with:
+- Missing SKU or order identifiers
+- Zero or negative dimensions
+- Negative quantities or weights
+- Duplicate order-item records that have not been aggregated appropriately
+- Invalid timestamps
+- Storage locations with duplicate IDs
+- Orders referencing nonexistent SKUs
+- Assignments referencing nonexistent locations
+
+Keep an error log rather than silently deleting problematic rows.
+
+Deliverable: cleaned tables with consistent units, unique keys, source traceability, and documented exclusions.
+
+============================================================
+PHASE 4 — BUILD A DIVERSE SKU MASTER
+============================================================
+
+The optimizer needs products that differ physically and operationally, not merely products with different names.
+
+4.1 SUGGESTED INITIAL PRODUCT MIX
+
+For an initial prototype, target 1,000–3,000 SKUs across at least 8–12 categories. These are engineering targets, not requirements imposed by the problem statement.
+
+Illustrative mix:
+- 25% small and lightweight: accessories, cables, small packaged items
+- 30% medium-sized general merchandise: books, household goods, boxed products
+- 15% large or bulky: storage containers, appliances, large cartons
+- 15% heavy or dense: tools, metal parts, packaged bulk goods
+- 10% fragile or special handling: glassware, electronics, sensitive products
+- 5% restricted or hazardous: only appropriate inventory with documented rules
+
+This is a suggested synthetic distribution, not a measured industry distribution.
+
+4.2 PHYSICAL ATTRIBUTES
+
+For every SKU, populate:
+- Width, height, depth
+- Unit weight and calculated volume
+- Product category
+- Handling type: standard, fragile, heavy, temperature-controlled, etc.
+- Hazard class, with explicit NONE or UNKNOWN values
+- Source and confidence for each physical attribute
+
+Use this hierarchy:
+1. Verified manufacturer or supplier specifications
+2. Existing product attributes from the source dataset
+3. Clearly labeled synthetic values generated from documented rules
+
+Do not use product titles or sales popularity as substitutes for physical measurements.
+
+4.3 REALISTIC SYNTHETIC VALUES
+
+Generate dimensions and weights by product class, with plausible ranges and dependencies. For example:
+- Large cartons should generally have larger volumes than small accessories.
+- Heavy tools may have a higher mass per unit volume than soft goods.
+
+Use a reproducible random seed and record the generation method. Avoid independently randomizing all three dimensions and weight without considering their relationships.
+
+Deliverable: products.csv with diverse, physically plausible SKUs and provenance for generated attributes.
+
+============================================================
+PHASE 5 — CONSTRUCT WAREHOUSE TOPOLOGY AND CAPACITY
+============================================================
+
+Two options:
+A. Adapt a real layout using the footwear warehouse locations and coordinates, acknowledging its narrower product population.
+B. Generate a generalized warehouse with multiple zones, aisles, racks, bays, shelf levels, and bins.
+
+Recommendation: use Option B for the main generalized benchmark and preserve the real warehouse as a separate validation case.
+
+5.1 WAREHOUSE HIERARCHY
+
+Warehouse -> Zone -> Aisle -> Rack -> Bay -> Shelf -> Bin
+
+Each bin should have:
+- Unique location_id
+- Coordinates (x, y, z)
+- Internal width, height, and depth
+- Maximum permissible load
+- Usable volume
+- Accessibility or ergonomic zone
+- Allowed handling or hazard categories
+- Distance to dispatch depot
+
+Generate aisle geometry first, then rack positions and bin coordinates. Derive distances from the layout rather than assigning arbitrary distances independently.
+
+5.2 PHYSICAL FEASIBILITY
+
+For a single unit in a bin, a simplified fit condition is:
+SKU width <= bin width
+SKU height <= bin height
+SKU depth <= bin depth
+
+Allow rotations only where permitted. For multiple units, the packing arrangement must also be feasible; comparing total volume alone does not prove that products physically fit.
+
+Load constraint:
+Sum over SKUs of (assigned quantity x unit mass) <= location permitted load.
+
+Also enforce shelf and rack limits, including combined loads transferred to rack structures.
+
+Deliverable: locations.csv, a warehouse layout file, and a distance graph derived from the layout.
+
+============================================================
+PHASE 6 — BUILD COHERENT DEMAND AND TRANSACTION HISTORY
+============================================================
+
+This phase determines whether the system can learn which products move frequently and which are ordered together.
+
+6.1 CHOOSE ONE PRIMARY TRANSACTION SOURCE
+
+Use one primary source for orders in the main benchmark. Do not combine order rows from unrelated datasets and treat them as one warehouse's real history.
+
+Options:
+- Use real transactions and map only verified products into the unified SKU master.
+- Generate synthetic orders over the unified SKU master, clearly labeling transactions as synthetic.
+
+For a generalized warehouse with many categories, synthetic orders are often easier because every order can reference the same SKU population.
+
+6.2 GENERATE MULTIPLE DEMAND SCENARIOS
+
+Scenario A: strongly concentrated demand
+- Tests ABC classification and fast-moving SKU placement.
+
+Scenario B: broad, relatively balanced demand
+- Tests general slotting efficiency.
+
+Scenario C: strong product co-occurrence
+- Tests affinity-based grouping and multi-item pick routes.
+
+Generate orders with timestamps, order IDs, SKUs, and quantities. Document how demand frequencies and product associations are generated.
+
+6.3 ABC CLASSIFICATION
+
+1. Aggregate demand by SKU.
+2. Rank SKUs from highest to lowest demand.
+3. Calculate cumulative demand share.
+4. Use documented thresholds, for example A for the first 80% of cumulative demand, B for the next 15%, and C for the remainder.
+
+These thresholds are configurable conventions, not universal rules.
+
+Demand-frequency example:
+frequency of SKU s = number of distinct orders containing SKU s.
+
+Also calculate total units sold and units picked per time period.
+
+6.4 ORDER AFFINITY
+
+Create SKU-pair statistics from order contents, including co-occurrence counts and association scores. For example, use support, confidence, and lift.
+
+Use affinity statistics as an optimization objective, but do not place associated products together if physical or safety constraints would be violated.
+
+Deliverable: orders.csv, order_items.csv, SKU demand summaries, ABC classifications, and an affinity matrix.
+
+============================================================
+PHASE 7 — BUILD STORAGE ASSIGNMENTS AND SAFETY RULES
+============================================================
+
+A feasible starting layout is required before an optimizer can meaningfully improve it.
+
+7.1 BASELINE ASSIGNMENT
+
+Assign each SKU to one or more storage locations according to the inventory policy. If using a random baseline, randomize among feasible locations rather than assigning products to incompatible bins.
+
+Respect:
+- Dimensions and allowed orientations
+- Weight and volume capacities
+- Inventory quantities
+- Hazard compatibility
+- Handling requirements
+- Shelf-height and ergonomic restrictions
+
+If a baseline is deliberately infeasible, report violations separately. Do not compare it as if it were a valid operational layout.
+
+7.2 COMPATIBILITY RULES
+
+Examples:
+- Fragile items cannot be stored in designated high-impact zones.
+- Heavy products must not exceed permitted shelf heights.
+- Incompatible hazardous categories must be separated.
+- Temperature-controlled items must be assigned only to suitable zones.
+- Restricted products must follow applicable storage rules.
+
+Each rule should include severity, rationale, and source. Use UNKNOWN for unresolved compatibility instead of treating missing data as proof of safety.
+
+7.3 OPTIMIZED ASSIGNMENT
+
+Store the optimized layout separately from the baseline and record:
+- Algorithm name and version
+- Input dataset version
+- Objective weights and constraints
+- Feasibility status
+- Runtime
+- Final assignments
+
+Deliverable: baseline and optimized assignments with evidence that all hard constraints have been checked.
+
+============================================================
+PHASE 8 — GENERATE PICKING ROUTES AND EVALUATION METRICS
+============================================================
+
+8.1 WAREHOUSE TRAVEL GRAPH
+
+Create nodes for storage locations and the dispatch depot. Connect reachable nodes through warehouse aisles, with edge weights representing travel distance.
+
+Calculate routes from the dispatch depot to required locations and back, unless the operational workflow specifies otherwise.
+
+Do not use straight-line distances through racks or walls as if they were actual walking distances.
+
+8.2 METRICS
+
+- Total travel distance: sum of route-edge distances
+- Pick completion time: travel time + handling time + modeled delays
+- Volume utilization: occupied usable volume / usable warehouse volume
+- Weight compliance: verify every bin, shelf, and rack load limit
+- Safety compliance: count hard-rule violations
+- Replenishment workload: count or measure replenishment tasks and travel
+- Optimization runtime: wall-clock execution time
+
+Document whether occupied volume means bounding-box volume or actual packed volume, and whether the denominator excludes inaccessible or reserved space.
+
+The target for safety is zero hard-constraint violations in the final assignment. Compare layouts under equivalent demand, inventory, routing assumptions, and service requirements.
+
+Deliverable: pick_routes.csv, optimization_runs.csv, and optimization_metrics.csv.
+
+============================================================
+PHASE 9 — VALIDATE THE COMPLETE DATASET
+============================================================
+
+Run automated tests for:
+
+1. Referential integrity
+   Every order item references an existing order and SKU; every assignment references an existing location.
+
+2. Physical feasibility
+   Products fit bins, quantities are packable, and weight and volume capacities are respected.
+
+3. Demand quality
+   Order timestamps, quantities, demand distributions, and product associations are internally consistent.
+
+4. Safety compliance
+   All applicable compatibility, height, load, and handling rules are enforced.
+
+5. Geometric consistency
+   Warehouse coordinates, aisle connectivity, and route distances agree with the defined layout.
+
+6. Reproducibility
+   Generation seeds, transformation scripts, dataset versions, and optimization configurations are saved.
+
+Also verify that the optimizer improves the objective. A layout with shorter travel distance but more safety violations or insufficient storage capacity is not a successful solution.
+
+============================================================
+PHASE 10 — ORGANIZE THE FINAL DATASET
+============================================================
+
+Suggested directory structure:
+
+warehouse_dataset/
+  raw/
+    footwear_warehouse/
+    product_catalog/
+    order_picking_benchmark/
+  processed/
+    products.csv
+    categories.csv
+    orders.csv
+    order_items.csv
+    locations.csv
+    inventory.csv
+    compatibility_rules.csv
+    storage_assignments_baseline.csv
+    storage_assignments_optimized.csv
+    pick_routes.csv
+    optimization_metrics.csv
+  metadata/
+    source_manifest.csv
+    schema_documentation.md
+    data_dictionary.csv
+  scripts/
+    ingest_sources.py
+    clean_data.py
+    generate_products.py
+    generate_warehouse.py
+    generate_orders.py
+    validate_dataset.py
+    evaluate_optimization.py
+  reports/
+    data_quality_report.html
+    exploratory_analysis.html
+
+============================================================
+RECOMMENDED INITIAL SCOPE
+============================================================
+
+These are engineering targets, not properties guaranteed by the source datasets:
+
+- Diverse SKUs: 1,000–3,000
+- Product categories: 8–12
+- Storage locations: 500–2,500
+- Historical order records: 20,000–100,000
+- Warehouse layouts: one baseline and one optimized
+- Demand scenarios: three
+- Hard-constraint validation: 100% of assignments checked
+
+Scale up only after the complete pipeline works correctly.
+
+============================================================
+SUGGESTED IMPLEMENTATION ORDER
+============================================================
+
+1. Download the footwear and Hamburg datasets, inspect actual schemas, and create the source manifest.
+2. Implement the unified schema and cleaning scripts.
+3. Generate a diverse SKU master and generalized warehouse layout, marking synthetic fields clearly.
+4. Create coherent order histories, inventory quantities, ABC classifications, and affinity statistics.
+5. Implement physical feasibility and compatibility checks before optimization.
+6. Produce baseline and optimized assignments, calculate routes, and validate performance metrics.
+7. Run exploratory data analysis, publish a data dictionary, and document limitations and reproducibility.
+
+FINAL RECOMMENDATION
+
+Build the generalized synthetic warehouse as the main controlled benchmark, then use the real footwear warehouse as a separate validation case. This lets you test diverse product sizes, weights, demand frequencies, and safety constraints without falsely claiming that a narrow real-world dataset contains attributes it does not provide.
+
+Maintain clear provenance for all records and fields. Distinguish measured, sourced, inferred, and synthetic values. Check each source's license and usage terms before redistributing its data.
