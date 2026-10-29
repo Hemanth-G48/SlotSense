@@ -1,0 +1,85 @@
+# D5 — headline numbers re-derived from the delivered artifacts
+
+Script: /home/hemanth/.hermes/profiles/reviewer/cache/scratch/review_numbers.py
+
+    ======================================================================
+    optimization_summary.json
+      execution_status                              OK
+      feasibility_status                            FEASIBLE
+      feasibility                                   True
+      separation_radius_m                           10.0
+      n_assignments                                 1288
+      n_bins_used                                   1288
+      n_skus_with_inventory                         1200
+      inventory_units                               6375
+      units_placed                                  6375
+      units_unplaced                                0
+      n_violations                                  0
+      violations_by_rule                            {}
+      baseline_variant                              repaired_minimal
+      baseline_feasibility_status                   FEASIBLE
+      baseline_n_violations                         0
+      baseline_violations_by_rule                   {}
+      baseline_feasibility_status_as_supplied       INFEASIBLE
+      baseline_n_violations_as_supplied             1071
+      baseline_violations_by_rule_as_supplied       {'CAT-01': 1071}
+      objective_improvement_pct                     61.132
+      objective_improvement_pct_vs_as_supplied      61.373
+      starter_feasible                              True
+      starter_beam_violations                       0
+      stopping_reason                               max iterations reached (annealing)
+      moves_evaluated                               600
+      moves_accepted                                16
+      runtime_sec                                   33.858
+      globally_optimal                              False
+      n_skus_with_inventory                         1200
+      assignment_completeness: {'units_required': 6375, 'units_placed': 6375, 'units_unplaced': 0, 'complete': True, 'completeness_pct': 100.0, 'unresolved_skus': []}
+      objective: {'value': 902392.9055567493, 'baseline_value': 2321711.3822095753, 'baseline_value_as_supplied': 2336184.1414095755, 'starter_value': 902392.9055567493, 'per_rule_violations': {}, 'violation_severity_score': 0, 'globally_optimal': False}
+      repair: {'enabled': True, 'candidate_mode': 'objective', 'initial_violations': 0, 'final_violations': 0, 'initial_violations_by_rule': {}, 'final_violations_by_rule': {}, 'initial_severity_score': 0, 'final_severity_score': 0, 'moves_attempted': 0, 'moves_accepted': 0, 'moves_rejected': 0, 'cycles_detected': 0, 'unresolved_violations': 0, 'termination_reason': 'already_feasible', 'feasible': True, 'runtime_sec': 0.0, 'max_moves': 400, 'max_seconds': 20.0}
+      separation_grid: {'radius_m': 10.0, 'enabled': True, 'forbidden_pairs': 13, 'cells': 14, 'bins_indexed': 1288, 'queries': 1293, 'rejections': 0}
+      top-level keys: ['algorithm', 'assignment_completeness', 'baseline_as_supplied_source', 'baseline_checks_run', 'baseline_feasibility', 'baseline_feasibility_as_supplied', 'baseline_feasibility_status', 'baseline_feasibility_status_as_supplied', 'baseline_n_violations', 'baseline_n_violations_as_supplied', 'baseline_note', 'baseline_objective', 'baseline_objective_as_supplied', 'baseline_repair', 'baseline_source', 'baseline_variant', 'baseline_violations_by_rule', 'baseline_violations_by_rule_as_supplied', 'dataset', 'execution_status', 'feasibility', 'feasibility_status', 'final_objective', 'globally_optimal', 'inventory_units', 'moves_accepted', 'moves_evaluated', 'n_assignments', 'n_bins_used', 'n_skus_with_inventory', 'n_violations', 'objective', 'objective_improvement_pct', 'objective_improvement_pct_vs_as_supplied', 'objective_weights', 'repair', 'runtime_sec', 'separation_grid', 'separation_radius_m', 'starter_beam_violations', 'starter_feasible', 'starter_objective', 'stopping_reason', 'units_placed', 'units_unplaced', 'unplaced_skus', 'violations_by_rule']
+    ======================================================================
+    evaluation_summary.json
+      evaluation_status                             OK
+      comparison_valid                              True
+      diagnostic_only                               False
+      blocked_layouts                               []
+      baseline_variant                              repaired_minimal
+      separation_radius_m                           10.0
+      inventory_units                               6375
+      skus_with_inventory                           1200
+      n comparison rows: 18
+      diagnostic_comparison: None
+      feasibility: {'baseline': ('FEASIBLE', 0, 18077), 'optimized': ('FEASIBLE', 0, 15167)}
+      baseline travel   : 1691478.55
+      optimized travel  : 750119.5
+      derived reduction %: 55.653
+      baseline cycle    : 1471967.35  optimized cycle: 747845.0
+      baseline tput     : 13.24  optimized tput  : 26.07
+      orders/batches    : 5415 1083
+      baseline checks   : 18077  optimized checks: 15167
+      diagnostic_baseline travel: 1707167.15
+      assumptions.sep   : 10.0
+      notes.comparison_published_as_valid_evidence: True
+    ======================================================================
+    validation_status.json + run_history
+      validation_status: {'separation_radius_m': 10.0, 'n_assignments': 1425, 'n_violations': 1071, 'checks_run': 20699, 'feasible': False}
+      run_history entries: 13
+       run 1 2026-10-28T17:23:19+00:00 variant= None feas= None nviol= 0 radius= None improve%= 63.232 repair_term= None
+       run 2 2026-10-28T20:56:05+00:00 variant= None feas= None nviol= 4 radius= None improve%= 61.507 repair_term= None
+       run 3 2026-10-28T21:18:15+00:00 variant= None feas= None nviol= 0 radius= 10.0 improve%= 61.373 repair_term= None
+       run 4 2026-10-28T21:25:19+00:00 variant= None feas= None nviol= 0 radius= 10.0 improve%= 61.373 repair_term= None
+       run 5 2026-10-28T21:32:05+00:00 variant= None feas= None nviol= 0 radius= 10.0 improve%= 61.373 repair_term= None
+       run 6 2026-10-28T21:40:11+00:00 variant= None feas= None nviol= 0 radius= 10.0 improve%= 61.373 repair_term= None
+       run 7 2026-10-28T21:50:23+00:00 variant= None feas= FEASIBLE nviol= 0 radius= 10.0 improve%= 61.373 repair_term= already_feasible
+       run 8 2026-10-28T21:58:36+00:00 variant= None feas= FEASIBLE nviol= 0 radius= 10.0 improve%= 61.373 repair_term= already_feasible
+       run 9 2026-10-28T22:05:08+00:00 variant= None feas= FEASIBLE nviol= 0 radius= 10.0 improve%= 61.373 repair_term= already_feasible
+       run 10 2026-10-28T22:49:31+00:00 variant= repaired_minimal feas= FEASIBLE nviol= 0 radius= 10.0 improve%= 61.132 repair_term= already_feasible
+       run 11 2026-10-28T22:57:40+00:00 variant= repaired_minimal feas= FEASIBLE nviol= 0 radius= 10.0 improve%= 61.132 repair_term= already_feasible
+       run 12 2026-10-28T23:10:57+00:00 variant= repaired_minimal feas= FEASIBLE nviol= 0 radius= 10.0 improve%= 61.132 repair_term= already_feasible
+       run 13 2026-10-28T23:20:35+00:00 variant= repaired_minimal feas= FEASIBLE nviol= 0 radius= 10.0 improve%= 61.132 repair_term= already_feasible
+    ======================================================================
+    rows / units in the three assignment files
+      as-supplied baseline   rows= 1425 skus= 1200 units=6375
+      repaired baseline      rows= 1425 skus= 1200 units=6375
+      optimized              rows= 1288 skus= 1200 units=6375

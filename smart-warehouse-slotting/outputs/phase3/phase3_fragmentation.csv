@@ -1,0 +1,5 @@
+cell_id,placement,fragmentation_policy,feasible,units_conserved,bins_released,fallback_skus,bins_before,bins_after,multi_bin_skus_before,multi_bin_skus_after,mean_bins_per_sku_before,mean_bins_per_sku_after,fragmentation_index_before,fragmentation_index_after,mean_bin_distance_before_m,mean_bin_distance_after_m
+A1,baseline_repaired,as_is,True,True,0,0,1425,1425,208,208,1.1875,1.1875,1.1875,1.1875,96.8197,96.8197
+A2,baseline_repaired,min_bins,True,True,151,0,1425,1274,208,74,1.1875,1.061667,1.1875,1.061667,96.8197,96.2306
+B1,optimized_fit,as_is,True,True,0,0,1290,1290,89,89,1.075,1.075,1.075,1.075,70.8147,70.8147
+B2,optimized_fit,min_bins,True,True,19,3,1290,1271,89,71,1.075,1.059167,1.075,1.059167,70.8147,70.4519

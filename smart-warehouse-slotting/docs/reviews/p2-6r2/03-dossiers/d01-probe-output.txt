@@ -1,0 +1,38 @@
+==============================================================================
+Q1  objective base (optimization_summary.json)
+==============================================================================
+  objective.value                 = 902392.9055567493
+  objective.baseline_value        = 2321711.3822095753   (repaired)
+  objective.baseline_value_as_supplied = 2336184.1414095755
+  vs repaired     = 61.132425 %   -> rounds to 61.13 %   artifact: 61.132
+  vs as supplied  = 61.373212 %   -> rounds to 61.37 %   artifact: 61.373
+  repaired baseline rounded to whole kg: 2,321,711 ; optimized: 902,393
+  (2321711.382 - 902393)/2321711.382 = 61.1324 %
+
+==============================================================================
+Q2  tolerance direction, per scope, in each limit's own unit
+==============================================================================
+  optimizer.WEIGHT_EPSILON_KG = 1e-09
+  canonical distinct unit weights=1027  unit volumes=1194
+  LD-01 bin weight (kg)  : max overdraft accepted = 9.094947017729282e-13
+      worst case: per_unit=134.063 residual=4826.267999999999 n=36
+  VD-01 bin volume (cm3) : max overdraft accepted = 1.862645149230957e-09
+      worst case: per_unit=273554.81999999995 residual=15319069.919999996 n=56
+
+  guard tolerances in _assert_never_over_limit (optimizer.py:560-565):
+      residual_bin_weight < -WEIGHT_EPSILON_KG  -> -1e-9 kg
+      residual_volume     < -1e-6              -> -1e-6 cm3
+  repair target filters (_feasibility_candidates, optimizer.py:788-790):
+      weight > max_weight_kg + WEIGHT_EPSILON_KG   -> +1e-9 kg
+      volume > usable_volume_cm3 + 1e-6            -> +1e-6 cm3
+
+  bounded check: is any weight overdraft in (1e-9, 1e-6] reachable via _units_affordable?
+      hits in (1e-9, 1e-6]: 0
+
+  _split_quantity returns the min across every scope, so no scope can be overshot
+  beyond its own tolerance; verified signature:
+    Max units that fit loc and all of its structural parents, but <= wanted.
+
+  → conclusion: LD-01 placer tolerance is 1e-9 kg (affordability *and* repair filter),
+    measured max overshoot 9.094947017729282e-13 kg; VD-01 placer tolerance is 1e-6 cm3 (guard/repair
+    filter) with 1e-9 cm3 in the affordability path, measured max 1.862645149230957e-09 cm3.

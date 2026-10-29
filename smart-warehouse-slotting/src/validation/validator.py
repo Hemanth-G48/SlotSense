@@ -24,10 +24,12 @@ SKU/location, observed value, allowed limit, explanation). Failed checks also be
 
 from __future__ import annotations
 
+import math
 from collections import defaultdict
 from dataclasses import dataclass, field
 from typing import Iterator
 
+from src.models.config import DEFAULT_SEPARATION_RADIUS_M
 from src.models.entities import Location, SKU, StorageAssignment, Warehouse
 
 HEAVY_MAX_SHELF_LEVEL = 2  # levels 0..3; heavy goods only on reinforced lower shelves
@@ -67,6 +69,24 @@ class Violation:
     severity: str
     reason: str
     passed: bool = False
+    # For a pairwise rule (CAT-01) the two bins involved, sorted, so the violation has an
+    # identity that does not depend on which side happened to be reported first. It is
+    # internal bookkeeping: the persisted row is unchanged.
+    pair: tuple[str, str] | None = None
+
+    @property
+    def identity(self) -> tuple:
+        """Stable identity of the violated constraint.
+
+        Two validations of the *same* physical layout must produce the same identities,
+        whatever order the cells were visited in. Without this, CAT-01 violations of one bin
+        against many neighbours all collapse onto whichever side was reported, and moving that
+        bin makes the same pairs reappear under different keys — which a repair loop would
+        misread as "a new violation was introduced".
+        """
+        if self.pair is not None:
+            return (self.rule_id, self.pair[0], self.pair[1])
+        return (self.rule_id, self.sku_id or "", self.location_id or "")
 
     def to_dict(self) -> dict:
         return {
@@ -153,6 +173,7 @@ class ValidationResult:
         unit: str = "",
         explanation: str = "",
         severity: str = "high",
+        pair: tuple[str, str] | None = None,
     ) -> None:
         """Record one evaluated rule instance and, when it fails, a violation."""
         self.checks_run += 1
@@ -173,7 +194,7 @@ class ValidationResult:
             )
         if not passed:
             self.violations.append(
-                Violation(rule_id, rule_name, sku_id, location_id, severity, explanation)
+                Violation(rule_id, rule_name, sku_id, location_id, severity, explanation, pair=pair)
             )
 
 
@@ -185,12 +206,21 @@ class Validator:
         compatibility_rules: list | None = None,
         inventory: dict[str, int] | None = None,
         record_checks: bool = True,
+        separation_radius_m: float = DEFAULT_SEPARATION_RADIUS_M,
     ):
         self.skus = skus
         self.warehouse = warehouse
         self.rules = compatibility_rules or []
         self.inventory = inventory or {}
         self.record_checks = record_checks
+        self.separation_radius_m = float(separation_radius_m)
+        # Forbidden category pairs drive CAT-01 (ARCHITECTURE.md §8.1). The matrix is
+        # category-pair level; self-pairs are not separation constraints.
+        self.forbidden_pairs = {
+            frozenset((r.category_a, r.category_b))
+            for r in self.rules
+            if not r.allowed and r.category_a != r.category_b
+        }
 
     def _sku(self, sku_id: str) -> SKU | None:
         return self.skus.get(sku_id)
@@ -220,6 +250,7 @@ class Validator:
             self._check_volume_residual(res, loc_id, group)
             self._check_single_sku_per_bin(res, loc_id, group)
             self._check_co_storage_compatibility(res, loc_id, group)
+        self._check_category_separation(res, assignments)
         self._check_structural_limits(res, by_location)
         self._check_assignee_uniqueness(res, by_location)
         self._check_completeness(res, assignments)
@@ -458,14 +489,86 @@ class Validator:
                 return not rule.allowed
         return False  # single-SKU bins; unknown pairs between different bins are fine
 
-    # -- structural (shelf + rack) limits ------------------------------------------
+    # -- category separation (CAT-01) ---------------------------------------------
+    def _check_category_separation(self, res: ValidationResult, assignments) -> None:
+        """Forbidden category pairs must be at least R metres apart in 3-D.
+
+        Distance is Euclidean over the bin's (x, y, z) -- the physical proximity a
+        hazard cares about -- not aisle-path length (ARCHITECTURE.md §8.1, §10).
+        A uniform grid of cell size R keeps this O(N_R * k) instead of O(N_R^2).
+        """
+        if not self.forbidden_pairs:
+            return
+        radius = self.separation_radius_m
+        if radius <= 0:
+            return
+        cells: dict[tuple[int, int, int], list] = defaultdict(list)
+        for a in assignments:
+            loc = self._loc(a.location_id)
+            sku = self._sku(a.sku_id)
+            if loc is None or sku is None:
+                continue
+            cells[self._cell(loc, radius)].append((sku.category_id, a.sku_id, loc))
+
+        seen: set[tuple[str, str]] = set()
+        for (cx, cy, cz), items in cells.items():
+            for dx in (-1, 0, 1):
+                for dy in (-1, 0, 1):
+                    for dz in (-1, 0, 1):
+                        neighbours = cells.get((cx + dx, cy + dy, cz + dz))
+                        if not neighbours:
+                            continue
+                        for cat_a, sku_a, loc_a in items:
+                            for cat_b, sku_b, loc_b in neighbours:
+                                if cat_a == cat_b:
+                                    continue
+                                pair = frozenset((cat_a, cat_b))
+                                if pair not in self.forbidden_pairs:
+                                    continue
+                                key = tuple(sorted((loc_a.location_id, loc_b.location_id)))
+                                if key in seen:
+                                    continue
+                                seen.add(key)
+                                d = math.dist((loc_a.x, loc_a.y, loc_a.z),
+                                              (loc_b.x, loc_b.y, loc_b.z))
+                                ok = d + 1e-9 >= radius
+                                res.record(
+                                    "CAT-01",
+                                    "category_separation",
+                                    ok,
+                                    sku_id=sku_a,
+                                    location_id=loc_a.location_id,
+                                    observed=round(d, 3),
+                                    limit=radius,
+                                    unit="m (3-D)",
+                                    pair=tuple(sorted((loc_a.location_id, loc_b.location_id))),
+                                    explanation=(
+                                        "forbidden category pair is separated"
+                                        if ok
+                                        else (f"{cat_a} at {loc_a.location_id} and {cat_b} at "
+                                              f"{loc_b.location_id} are {d:.2f} m apart "
+                                              f"(< {radius:g} m)")
+                                    ),
+                                )
+
+    @staticmethod
+    def _cell(loc, size: float) -> tuple[int, int, int]:
+        return (math.floor(loc.x / size), math.floor(loc.y / size), math.floor(loc.z / size))
+
+    # -- structural limits: beam, level, rack ---------------------------------------
     def _check_structural_limits(self, res: ValidationResult, by_location) -> None:
-        # Key shelf loads by (rack_id, shelf_level) and rack loads by rack_id. Use the
-        # tightest limit on each shelf/rack; a missing limit means "not modelled".
-        shelf_load: dict[tuple[str, int], float] = defaultdict(float)
+        """Three aggregate scopes, each against its own limit field.
+
+        A layout can pass the level check (average) while overloading one beam;
+        the PS names beam overload as a failure, so both gate.
+        """
+        beam_load: dict[tuple, float] = defaultdict(float)
+        level_load: dict[tuple, float] = defaultdict(float)
         rack_load: dict[str, float] = defaultdict(float)
-        shelf_limit: dict[tuple[str, int], float] = {}
+        beam_limit: dict[tuple, float] = {}
+        level_limit: dict[tuple, float] = {}
         rack_limit: dict[str, float] = {}
+
         for loc_id, group in by_location.items():
             loc = self._loc(loc_id)
             if loc is None:
@@ -475,55 +578,60 @@ class Validator:
                 for a in group
                 if self._sku(a.sku_id)
             )
-            key = (loc.rack_id, loc.shelf_level)
-            shelf_load[key] += total
+            if total <= 0:
+                continue
+            beam_key = (loc.rack_id, loc.bay, loc.shelf_level)
+            level_key = (loc.rack_id, loc.shelf_level)
+            beam_load[beam_key] += total
+            level_load[level_key] += total
             rack_load[loc.rack_id] += total
-            if loc.shelf_max_weight_kg is not None:
-                shelf_limit[key] = min(
-                    shelf_limit.get(key, loc.shelf_max_weight_kg), loc.shelf_max_weight_kg
-                )
+            if loc.beam_max_weight_kg is not None:
+                beam_limit[beam_key] = min(beam_limit.get(beam_key, loc.beam_max_weight_kg),
+                                           loc.beam_max_weight_kg)
+            level_cap = loc.level_max_weight_kg if loc.level_max_weight_kg is not None else loc.shelf_max_weight_kg
+            if level_cap is not None:
+                level_limit[level_key] = min(level_limit.get(level_key, level_cap), level_cap)
             if loc.rack_max_weight_kg is not None:
-                rack_limit[loc.rack_id] = min(
-                    rack_limit.get(loc.rack_id, loc.rack_max_weight_kg), loc.rack_max_weight_kg
-                )
+                rack_limit[loc.rack_id] = min(rack_limit.get(loc.rack_id, loc.rack_max_weight_kg),
+                                              loc.rack_max_weight_kg)
 
-        for key, load in shelf_load.items():
-            limit = shelf_limit.get(key)
+        for key, load in beam_load.items():
+            limit = beam_limit.get(key)
             if limit is None:
                 continue
             ok = load <= limit + 1e-6
             res.record(
-                "SL-01",
-                "shelf_load",
-                ok,
-                location_id=f"{key[0]} shelf {key[1]}",
-                observed=round(load, 3),
-                limit=limit,
-                unit="kg",
-                explanation=(
-                    "shelf load within structural limit"
-                    if ok
-                    else f"shelf {key} load {load:.1f}kg > limit {limit:.1f}kg"
-                ),
+                "SL-02", "beam_load", ok,
+                location_id=f"{key[0]} bay {key[1]} shelf {key[2]}",
+                observed=round(load, 3), limit=limit, unit="kg",
+                explanation=("beam load within structural limit" if ok
+                             else f"beam {key} load {load:.1f}kg > limit {limit:.1f}kg"),
             )
+
+        for key, load in level_load.items():
+            limit = level_limit.get(key)
+            if limit is None:
+                continue
+            ok = load <= limit + 1e-6
+            res.record(
+                "SL-01", "shelf_load", ok,
+                location_id=f"{key[0]} shelf {key[1]}",
+                observed=round(load, 3), limit=limit, unit="kg",
+                explanation=("shelf level load within structural limit" if ok
+                             else f"shelf {key} load {load:.1f}kg > limit {limit:.1f}kg"),
+            )
+
         for rack, load in rack_load.items():
             limit = rack_limit.get(rack)
             if limit is None:
                 continue
             ok = load <= limit + 1e-6
             res.record(
-                "RK-01",
-                "rack_load",
-                ok,
+                "RK-01", "rack_load", ok,
                 location_id=rack,
-                observed=round(load, 3),
-                limit=limit,
-                unit="kg",
-                explanation=(
-                    "rack load within structural limit"
-                    if ok
-                    else f"rack {rack} load {load:.1f}kg > limit {limit:.1f}kg"
-                ),
+                observed=round(load, 3), limit=limit, unit="kg",
+                explanation=("rack load within structural limit" if ok
+                             else f"rack {rack} load {load:.1f}kg > limit {limit:.1f}kg"),
             )
 
     # -- SKU assigned to at most one bin (consistency; a SKU may span bins in the
@@ -632,8 +740,10 @@ def validate_assignment(
     warehouse: Warehouse,
     compatibility_rules: list | None = None,
     inventory: dict[str, int] | None = None,
+    separation_radius_m: float = DEFAULT_SEPARATION_RADIUS_M,
 ) -> ValidationResult:
-    v = Validator(skus, warehouse, compatibility_rules, inventory)
+    v = Validator(skus, warehouse, compatibility_rules, inventory,
+                  separation_radius_m=separation_radius_m)
     return v.validate(assignments)
 
 

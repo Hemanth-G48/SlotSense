@@ -1,0 +1,60 @@
+{
+  "schema": "phase3.split_manifest/1",
+  "generated_at_utc": "2026-10-29T02:07:26+00:00",
+  "method": "temporal_order_level",
+  "split_unit": "order",
+  "scenario": "A",
+  "fraction_fit": 0.7,
+  "seed": null,
+  "seed_note": "temporal split is deterministic; no random seed is used",
+  "input": {
+    "processed": "/home/hemanth/hackathon/epoch_hackathon/dataset/processed",
+    "sha256": {
+      "orders": "058fc42c97c27629f8ef7ee276d6d6786f8cdf5d5e96575471f64f2488c5e053",
+      "order_items": "a658e68c301f12f1f68e5c31c2e8b3410060d32bc2f742dd36373934497a41ee",
+      "products": "296bd089c6c8391abf7a36106317a6b380e6f7c7c681525501961610eb7d5f86",
+      "inventory": "76fdffc1fb02dabbdbb03f82bb2e3e9257963ee42c2dfc8a46860dd2b0098fe3",
+      "locations": "ff27b087629564de429c766d3b1873475e5cf97b159c8606b80fa241c83e03b4"
+    }
+  },
+  "views": {
+    "fit": {
+      "path": "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase3/split/A70/fit/processed",
+      "scenario_id": "A_FIT",
+      "orders": 3790,
+      "lines": 14003,
+      "skus_with_demand": 1103,
+      "first_order_utc": "2025-01-01 07:09:02+00:00",
+      "last_order_utc": "2025-05-06 21:56:33+00:00",
+      "sha256": {
+        "orders": "e327f217f03e15c643b372934bd79180feec92f563b6dfb7f1791edb06953de0",
+        "order_items": "8b558d1c5a6cf246f48594bcc4360fda1697c5b8968f9aaa177a715d3fd2a09d",
+        "demand_summary": "33ef606c0fc83e3a58414351fcc328e6b53c47866eb158fc50579e333f2fa09c",
+        "sku_affinity": "d5d40f16dbf253f893139db7c49149ed70571d38d036f98b36c6c9349ce59b7b"
+      }
+    },
+    "holdout": {
+      "path": "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase3/split/A70/holdout/processed",
+      "scenario_id": "A_HOLDOUT",
+      "orders": 1625,
+      "lines": 5997,
+      "skus_with_demand": 899,
+      "first_order_utc": "2025-05-07 08:07:13+00:00",
+      "last_order_utc": "2025-06-29 19:26:57+00:00",
+      "sha256": {
+        "orders": "282d0c55d77426c458d28e50c1b98d67d20b7bcbed2a47c252be56f67a224266",
+        "order_items": "e376c95d285ba71b1f3d9c117086107d9c64483b06dcaaf34f1698f1a231fd3b",
+        "demand_summary": "19b6e0e8d293bddf35e14fa6073192aa4a221df9622c24f7246a8586f205fc79",
+        "sku_affinity": "0e191306b6da04c9f7d33bf0bd77d2cae0e7d9655f19f4a01af479a344cfc9bf"
+      }
+    }
+  },
+  "integrity": {
+    "orders_total_input": 5415,
+    "orders_fit_plus_holdout": 5415,
+    "lines_total_input": 20000,
+    "lines_fit_plus_holdout": 20000,
+    "disjoint": true,
+    "note": "disjointness is enforced by slicing one ordered frame; verified in verify_split()"
+  }
+}

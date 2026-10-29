@@ -8,8 +8,38 @@ without an extra parser dependency.
 from __future__ import annotations
 
 import json
+import math
 from dataclasses import dataclass, field
 from pathlib import Path
+
+# Single source of truth for the CAT-01 separation radius (metres).
+#
+# The optimiser and the validator both read the effective value from ``Config``; this
+# constant only exists so that a caller which has no config (unit tests, library use) gets
+# the documented ARCHITECTURE.md §8.1 default instead of a scattered literal.
+DEFAULT_SEPARATION_RADIUS_M: float = 10.0
+
+
+def coerce_separation_radius_m(value: object, *, name: str = "separation_radius_m") -> float:
+    """Validate a CAT-01 radius: a finite number of metres, >= 0.
+
+    A radius of 0 disables CAT-01 distance checking (the validator skips the rule), which is
+    legitimate for geometry-without-hazards experiments; a negative radius is meaningless
+    and is rejected rather than silently clamped.
+    """
+    if isinstance(value, bool):  # bool is an int subclass; True/False are not radii
+        raise ValueError(f"{name} must be a number of metres, got boolean {value!r}")
+    if not isinstance(value, (int, float)):
+        raise ValueError(
+            f"{name} must be a number of metres, got {type(value).__name__} {value!r}"
+        )
+    radius = float(value)
+    if not math.isfinite(radius):
+        raise ValueError(f"{name} must be finite, got {value!r}")
+    if radius < 0:
+        raise ValueError(f"{name} must be >= 0 metres, got {radius}")
+    return radius
+
 
 
 @dataclass
@@ -46,6 +76,7 @@ class OptimizationConfig:
     beta: float = 0.4   # affinity penalty weight
     gamma: float = 0.3  # ergonomics penalty weight
     delta: float = 0.2  # space utilization penalty weight
+    epsilon: float = 0.0  # replenishment-travel weight (0.0 = Phase 2 behaviour)
 
 
 @dataclass
@@ -70,6 +101,12 @@ class Config:
     optimization: OptimizationConfig = field(default_factory=OptimizationConfig)
     slotting: SlottingConfig = field(default_factory=SlottingConfig)
     dataset: DatasetConfig = field(default_factory=DatasetConfig)
+    # CAT-01 radius in metres: the minimum 3-D distance between bins holding a forbidden
+    # category pair. One value, consumed by both the optimiser and the validator.
+    separation_radius_m: float = DEFAULT_SEPARATION_RADIUS_M
+
+    def __post_init__(self) -> None:
+        self.separation_radius_m = coerce_separation_radius_m(self.separation_radius_m)
 
     @classmethod
     def from_dict(cls, d: dict) -> "Config":
@@ -79,6 +116,9 @@ class Config:
         c.optimization = OptimizationConfig(**d.get("optimization", {}))
         c.slotting = SlottingConfig(**d.get("slotting", {}))
         c.dataset = DatasetConfig(**d.get("dataset", {}))
+        c.separation_radius_m = coerce_separation_radius_m(
+            d.get("separation_radius_m", DEFAULT_SEPARATION_RADIUS_M)
+        )
         return c
 
     @classmethod
@@ -104,6 +144,7 @@ class Config:
             "optimization": {k: v for k, v in self.optimization.__dict__.items()},
             "slotting": {k: v for k, v in self.slotting.__dict__.items()},
             "dataset": {k: v for k, v in self.dataset.__dict__.items()},
+            "separation_radius_m": self.separation_radius_m,
         }
 
     def to_json(self) -> str:

@@ -1,0 +1,5 @@
+layout,pick_rule,feasible,demand_weighted_depot_distance,numerator_m,denominator_lines,lines_total,lines_unresolved,coverage_pct,mean_per_line_m,stops,lines_quantity_short,units_short
+baseline_repaired,all_bins,True,694575.975,694575.975,5997,5997,0,100.0,115.8206,8159,94,111
+baseline_repaired,quantity_aware,True,501569.025,501569.025,5997,5997,0,100.0,83.6367,6164,94,111
+optimized_fit,all_bins,True,273292.025,273292.025,5997,5997,0,100.0,45.5715,6258,94,111
+optimized_fit,quantity_aware,True,259336.575,259336.575,5997,5997,0,100.0,43.2444,6033,94,111

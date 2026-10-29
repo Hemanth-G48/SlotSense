@@ -275,6 +275,19 @@ def render_overview(data: dict) -> None:
         return
 
     rows = {row["key"]: row for row in dd.kpi_rows(metrics)}
+    evaluation = data.get("eval_summary") or {}
+    if evaluation.get("evaluation_status") == "BLOCKED_INFEASIBLE_LAYOUT":
+        blocked = ", ".join(evaluation.get("blocked_layouts") or []) or "a layout"
+        feasibility = evaluation.get("feasibility") or {}
+        counts = ", ".join(
+            f"{name}: {info.get('n_violations')} violations ({info.get('violations_by_rule')})"
+            for name, info in sorted(feasibility.items())
+        )
+        st.error(
+            "**Evaluation BLOCKED_INFEASIBLE_LAYOUT** — the independent validator found hard "
+            f"violations in the {blocked} layout ({counts}). No baseline-vs-optimized comparison "
+            "is published as evidence; the KPI cards below are diagnostic only."
+        )
     st.subheader("Baseline vs optimized — operational KPIs")
     st.caption(
         "Same order workload, warehouse geometry, routing method and on-hand inventory in both "
@@ -325,8 +338,14 @@ def render_overview(data: dict) -> None:
     st.subheader("Optimization run")
     optimization = data.get("opt_summary")
     if optimization:
+        if optimization.get("execution_status") == "ERROR":
+            st.error(f"Optimization run failed: {optimization.get('error')}")
         cols = st.columns(4)
-        cols[0].metric("Solver status", "FEASIBLE" if optimization.get("feasibility") else "INFEASIBLE")
+        cols[0].metric(
+            "Solver status",
+            optimization.get("feasibility_status")
+            or ("FEASIBLE" if optimization.get("feasibility") else "INFEASIBLE"),
+        )
         cols[1].metric("Optimization runtime", f"{fmt_number(optimization.get('runtime_sec'), 2)} s")
         cols[2].metric("Moves evaluated", fmt_number(optimization.get("moves_evaluated")))
         cols[3].metric("Globally optimal", "No" if not optimization.get("globally_optimal") else "Yes")
@@ -336,6 +355,21 @@ def render_overview(data: dict) -> None:
             f"objective {fmt_number(optimization.get('final_objective'), 1)} "
             f"(baseline {fmt_number(optimization.get('baseline_objective'), 1)})."
         )
+        repair = optimization.get("repair") or {}
+        if repair:
+            st.caption(
+                f"Repair: {repair.get('initial_violations', 'n/a')} → "
+                f"{repair.get('final_violations', 'n/a')} violations · "
+                f"{repair.get('termination_reason', 'n/a')} · accepted "
+                f"{repair.get('moves_accepted', 0)}/{repair.get('moves_attempted', 0)} candidate moves."
+            )
+        completion = optimization.get("assignment_completeness") or {}
+        if completion:
+            st.caption(
+                f"Assignment completeness: {fmt_number(completion.get('units_placed'))} / "
+                f"{fmt_number(completion.get('units_required'))} units "
+                f"({completion.get('completeness_pct', 'n/a')}%)."
+            )
     else:
         _unavailable("No optimization summary found. Run `python app/main.py optimize` first.")
 
@@ -1870,7 +1904,12 @@ def render_optimization(data: dict) -> None:
                 config.dataset.seed = int(seed)
                 with st.spinner("Running optimizer and re-simulating the identical workload…"):
                     result = run_phase5(dd.DATA_DIR, config, dd.OPT)
-                    run_phase6(dd.DATA_DIR, scenario="A", out=dd.EVAL)
+                    run_phase6(
+                        dd.DATA_DIR,
+                        scenario="A",
+                        out=dd.EVAL,
+                        separation_radius_m=config.separation_radius_m,
+                    )
                 _load_cached.clear()
                 ok = bool(result.get("feasibility")) and result.get("n_violations") == 0
                 st.session_state["optimization_run_message"] = {
@@ -1919,6 +1958,12 @@ def render_optimization(data: dict) -> None:
 # --------------------------------------------------------------------------- exports
 def render_exports(data: dict, layout: str) -> None:
     st.subheader("Exports and reports")
+    evaluation = data.get("eval_summary") or {}
+    if evaluation.get("evaluation_status") == "BLOCKED_INFEASIBLE_LAYOUT":
+        st.error(
+            "This evaluation is **BLOCKED_INFEASIBLE_LAYOUT**: the metrics in these exports are "
+            "diagnostic only and must not be presented as a valid baseline-vs-optimized comparison."
+        )
     st.caption(
         "Every export contains the same results shown on screen; tabular outputs are CSV and structured "
         "run metadata is JSON. PDF report generation is not implemented — the JSON report carries the "

@@ -1,0 +1,1201 @@
+sku_id,product_name,category_id,width_cm,height_cm,depth_cm,unit_volume_cm3,unit_weight_kg,handling_type,hazard_class,data_source,data_quality_status,physical_data_source,physical_confidence
+OL-00001,Bed Bath Table 9b6058,CAT003,40.0,10.0,50.0,20000.0,1.383,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00002,Furniture Decor 4663af,CAT004,30.0,10.0,50.0,15000.0,2.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00003,Garden Tools e7f83d,CAT006,30.0,22.0,30.0,19800.0,1.55,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00004,Computers Accessories 1f2ac4,CAT001,20.0,20.0,20.0,8000.0,6.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00005,Garden Tools 9d9c6b,CAT006,40.0,22.0,37.0,32560.0,1.75,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00006,Watches Gifts 772e08,CAT001,13.0,11.0,16.0,2288.0,0.584,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00007,Garden Tools a372db,CAT006,30.0,22.0,30.0,19800.0,1.65,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00008,Garden Tools 519f73,CAT006,30.0,22.0,30.0,19800.0,1.5,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00009,Health Beauty 5804a6,CAT001,15.0,15.0,20.0,4500.0,0.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00010,Health Beauty 6bc318,CAT001,18.0,10.0,22.0,3960.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00011,Computers Accessories e95ad7,CAT001,20.0,11.0,22.0,4840.0,0.533,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00012,Health Beauty dd3ccf,CAT001,18.0,10.0,22.0,3960.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00013,Watches Gifts 101d05,CAT001,14.0,12.0,17.0,2856.0,4.338,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00014,Unknown c40e48,CAT003,15.0,12.0,20.0,3600.0,0.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00015,Health Beauty 54686c,CAT001,22.0,4.0,34.0,2992.0,0.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00016,Watches Gifts 1aa3d1,CAT001,18.0,8.0,53.0,7632.0,1.0,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00017,Computers Accessories df244b,CAT001,13.0,10.0,17.0,2210.0,0.18,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00018,Housewares c7b934,CAT003,27.0,47.0,26.0,32994.0,7.0,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00019,Watches Gifts bcb4a8,CAT001,20.0,2.0,16.0,640.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00020,Home Confort 793310,CAT003,40.0,10.0,53.0,21200.0,1.825,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00021,Health Beauty 4d3481,CAT001,19.0,12.0,25.0,5700.0,0.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00022,Bed Bath Table 419c9c,CAT003,30.0,12.0,35.0,12600.0,9.75,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00023,Health Beauty 9f1595,CAT001,38.0,12.0,25.0,11400.0,0.9,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00024,Health Beauty 189725,CAT001,13.0,12.0,19.0,2964.0,0.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00025,Garden Tools 22f126,CAT006,20.0,20.0,20.0,8000.0,5.95,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00026,Watches Gifts 2c7a5a,CAT001,16.0,14.0,20.0,4480.0,0.444,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00027,Watches Gifts 108a2e,CAT001,15.0,13.0,18.0,3510.0,0.342,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00028,Consoles Games 3653b1,CAT009,12.0,12.0,16.0,2304.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00029,Health Beauty 068ce7,CAT001,18.0,11.0,19.0,3762.0,1.11,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00030,Fashion Bags Accessories 3d9dcc,CAT003,11.0,2.0,16.0,352.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00031,Health Beauty c59a26,CAT001,15.0,5.0,16.0,1200.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00032,Bed Bath Table 7abea3,CAT003,19.0,8.0,25.0,3800.0,0.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00033,Perfumery 083222,CAT001,21.0,8.0,20.0,3360.0,0.25,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00034,Garden Tools 177f44,CAT006,20.0,20.0,20.0,8000.0,6.05,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00035,Cool Stuff 15ab32,CAT001,15.0,25.0,42.0,15750.0,1.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00036,Watches Gifts f03de0,CAT001,13.0,13.0,18.0,3042.0,0.363,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00037,Cool Stuff a6531a,CAT001,15.0,25.0,42.0,15750.0,1.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00038,Health Beauty 8562fa,CAT001,13.0,19.0,33.0,8151.0,0.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00039,Bed Bath Table f1c29a,CAT003,20.0,20.0,20.0,8000.0,0.8,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00040,Watches Gifts ffeea7,CAT001,16.0,11.0,17.0,2992.0,0.335,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00041,Food 351d40,CAT007,13.0,13.0,17.0,2873.0,0.15,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00042,Cool Stuff 011c2a,CAT001,36.0,6.0,36.0,7776.0,1.867,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00043,Computers Accessories abe3e8,CAT001,12.0,13.0,18.0,2808.0,0.173,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00044,Garden Tools ef6b03,CAT006,20.0,20.0,20.0,8000.0,7.65,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00045,Computers Accessories ce4b60,CAT001,14.0,11.0,19.0,2926.0,0.207,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00046,Art 63cb3b,CAT003,50.0,6.0,65.0,19500.0,1.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00047,Cool Stuff 25c289,CAT001,19.0,30.0,29.0,16530.0,2.425,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00048,Bed Bath Table 4c7fab,CAT003,34.0,14.0,44.0,20944.0,1.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00049,Electronics 35419c,CAT009,16.0,7.0,25.0,2800.0,0.2,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00050,Furniture Decor 00ac20,CAT004,30.0,10.0,40.0,12000.0,2.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00051,Garden Tools 269894,CAT006,40.0,22.0,37.0,32560.0,1.8,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00052,Perfumery c74eb8,CAT001,19.0,13.0,19.0,4693.0,0.4,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00053,Cool Stuff c569b4,CAT001,31.0,24.0,44.0,32736.0,4.475,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00054,Toys ac23ab,CAT003,11.0,7.0,16.0,1232.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00055,Garden Tools 152b4e,CAT006,39.0,12.0,42.0,19656.0,9.0,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00056,Garden Tools 58a2a6,CAT006,40.0,22.0,37.0,32560.0,1.85,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00057,Consoles Games 2c7aa3,CAT009,12.0,12.0,16.0,2304.0,0.1,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00058,Perfumery 74e8c1,CAT001,20.0,12.0,21.0,5040.0,0.55,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00059,Bed Bath Table 92672c,CAT003,35.0,15.0,45.0,23625.0,0.95,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00060,Cool Stuff e8e219,CAT001,22.0,24.0,36.0,19008.0,1.05,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00061,Auto 02b064,CAT006,65.0,11.0,65.0,46475.0,5.95,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00062,Perfumery fe6a30,CAT001,20.0,11.0,18.0,3960.0,0.4,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00063,Baby b9b2b1,CAT003,20.0,14.0,29.0,8120.0,0.375,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00064,Perfumery 1469f0,CAT001,13.0,16.0,16.0,3328.0,0.2,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00065,Watches Gifts 03e6dc,CAT001,11.0,2.0,16.0,352.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00066,Watches Gifts a4a8da,CAT001,14.0,11.0,18.0,2772.0,0.396,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00067,Drinks 4c5fca,CAT007,21.0,21.0,23.0,10143.0,0.175,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00068,Health Beauty 6746f0,CAT001,15.0,11.0,17.0,2805.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00069,Toys b61a50,CAT003,20.0,25.0,40.0,20000.0,1.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00070,Computers Accessories 3edba3,CAT001,20.0,4.0,16.0,1280.0,0.45,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00071,Stationery efd9ee,CAT002,30.0,20.0,60.0,36000.0,7.0,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00072,Health Beauty 9796f3,CAT001,23.0,36.0,24.0,19872.0,1.85,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00073,Sports Leisure 5a90ed,CAT004,11.0,16.0,16.0,2816.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00074,Perfumery 33adf5,CAT001,20.0,20.0,20.0,8000.0,0.1,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00075,Watches Gifts c11a73,CAT001,11.0,14.0,16.0,2464.0,0.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00076,Computers Accessories 49797e,CAT001,13.0,14.0,19.0,3458.0,0.321,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00077,Auto a990a4,CAT006,67.0,10.0,67.0,44890.0,4.105,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00078,Sports Leisure e06f0f,CAT004,17.0,17.0,17.0,4913.0,0.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00079,Computers Accessories 63a2b2,CAT001,15.0,14.0,21.0,4410.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00080,Telephony c6af00,CAT009,14.0,8.0,17.0,1904.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00081,Furniture Decor bdae07,CAT004,20.0,25.0,20.0,10000.0,0.85,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00082,Bed Bath Table d34be1,CAT003,47.0,12.0,67.0,37788.0,1.813,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00083,Stationery 655131,CAT002,28.0,30.0,38.0,31920.0,6.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00084,Computers Accessories f0da45,CAT001,20.0,20.0,20.0,8000.0,0.175,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00085,Auto 64f935,CAT006,30.0,30.0,30.0,27000.0,1.75,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00086,Computers Accessories dd9eb9,CAT001,29.0,2.0,41.0,2378.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00087,Cool Stuff ccd92b,CAT001,15.0,25.0,42.0,15750.0,1.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00088,Bed Bath Table a67efc,CAT003,34.0,14.0,44.0,20944.0,1.825,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00089,Housewares afdf12,CAT003,12.0,9.0,19.0,2052.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00090,Bed Bath Table 5ca522,CAT003,38.0,27.0,50.0,51300.0,8.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00091,Electronics 51602a,CAT009,18.0,10.0,26.0,4680.0,1.25,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00092,Telephony a2a64e,CAT009,13.0,7.0,17.0,1547.0,0.25,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00093,Telephony 85da03,CAT009,12.0,4.0,17.0,816.0,0.3,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00094,Electronics fdeee0,CAT009,16.0,11.0,22.0,3872.0,0.175,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00095,Sports Leisure 389d37,CAT004,11.0,11.0,20.0,2420.0,2.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00096,Health Beauty 5c9032,CAT001,16.0,14.0,19.0,4256.0,0.792,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00097,Computers Accessories 971246,CAT001,13.0,12.0,17.0,2652.0,0.207,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00098,Health Beauty 1bfc4c,CAT001,21.0,25.0,36.0,18900.0,3.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00099,Housewares c17f33,CAT003,19.0,8.0,22.0,3344.0,0.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00100,Cool Stuff 05bdc9,CAT001,47.0,40.0,47.0,88360.0,15.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00101,Auto bdb378,CAT006,15.0,10.0,17.0,2550.0,0.05,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00102,Watches Gifts d088b2,CAT001,14.0,11.0,18.0,2772.0,0.314,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00103,Bed Bath Table 8e478f,CAT003,40.0,18.0,25.0,18000.0,0.85,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00104,Garden Tools 9c90cf,CAT006,30.0,10.0,30.0,9000.0,0.8,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00105,Computers Accessories 8f927a,CAT001,14.0,13.0,16.0,2912.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00106,Cool Stuff 6d1078,CAT001,12.0,12.0,16.0,2304.0,0.125,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00107,Telephony 26f28b,CAT009,21.0,15.0,32.0,10080.0,0.7,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00108,Sports Leisure 082e65,CAT004,16.0,15.0,17.0,4080.0,1.032,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00109,Luggage Accessories c741b8,CAT004,44.0,65.0,35.0,100100.0,16.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00110,Electronics 698593,CAT009,18.0,13.0,20.0,4680.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00111,Baby 07f838,CAT003,35.0,25.0,45.0,39375.0,6.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00112,Furniture Decor a8b141,CAT004,45.0,35.0,45.0,70875.0,12.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00113,Perfumery 8be06c,CAT001,11.0,11.0,18.0,2178.0,0.4,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00114,Telephony e64393,CAT009,28.0,3.0,18.0,1512.0,0.25,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00115,Electronics e771c0,CAT009,11.0,6.0,17.0,1122.0,0.1,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00116,Furniture Decor dd45f3,CAT004,11.0,30.0,30.0,9900.0,0.75,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00117,Computers Accessories eefb61,CAT001,16.0,16.0,16.0,4096.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00118,Toys ed79a4,CAT003,32.0,45.0,32.0,46080.0,3.008,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00119,Computers Accessories 46b249,CAT001,17.0,15.0,30.0,7650.0,0.922,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00120,Bed Bath Table b353b9,CAT003,30.0,30.0,30.0,27000.0,6.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00121,Watches Gifts 1e9d00,CAT001,20.0,2.0,16.0,640.0,0.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00122,Auto 3a61f7,CAT006,61.0,14.0,61.0,52094.0,7.625,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00123,Computers Accessories 9471e9,CAT001,15.0,5.0,25.0,1875.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00124,Bed Bath Table 43e5a2,CAT003,30.0,4.0,40.0,4800.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00125,Perfumery a248e8,CAT001,17.0,13.0,19.0,4199.0,0.56,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00126,Construction Tools Lights d1a2df,CAT006,45.0,35.0,45.0,70875.0,12.0,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00127,Health Beauty 2ed2c6,CAT001,11.0,11.0,11.0,1331.0,0.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00128,Books General Interest f06353,CAT002,20.0,20.0,20.0,8000.0,0.45,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00129,Luggage Accessories 0156e6,CAT004,53.0,74.0,32.0,125504.0,22.35,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00130,Bed Bath Table ef8e75,CAT003,32.0,7.0,34.0,7616.0,1.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00131,Health Beauty 9fe52a,CAT001,17.0,5.0,16.0,1360.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00132,Computers Accessories 542f80,CAT001,29.0,2.0,41.0,2378.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00133,Housewares d3a56d,CAT003,34.0,12.0,33.0,13464.0,3.0,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00134,Bed Bath Table b10d7c,CAT003,36.0,27.0,54.0,52488.0,10.8,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00135,Auto 18c464,CAT006,17.0,16.0,16.0,4352.0,0.05,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00136,Housewares dff921,CAT003,13.0,5.0,53.0,3445.0,0.95,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00137,Food 9a9f97,CAT007,15.0,12.0,16.0,2880.0,0.75,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00138,Food 96f596,CAT007,16.0,15.0,20.0,4800.0,0.33,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00139,Watches Gifts d32f64,CAT001,13.0,12.0,17.0,2652.0,0.263,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00140,Health Beauty c66e71,CAT001,18.0,9.0,27.0,4374.0,1.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00141,Perfumery 682dc6,CAT001,15.0,15.0,25.0,5625.0,0.35,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00142,Office Furniture c8806e,CAT004,22.0,55.0,57.0,68970.0,11.875,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00143,Health Beauty 1c4bea,CAT001,20.0,25.0,35.0,17500.0,0.95,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00144,Cool Stuff be5fd9,CAT001,34.0,20.0,37.0,25160.0,4.65,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00145,Cool Stuff 5e613b,CAT001,15.0,25.0,42.0,15750.0,1.05,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00146,Computers Accessories eb4135,CAT001,29.0,2.0,41.0,2378.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00147,Computers Accessories 9246dd,CAT001,16.0,9.0,16.0,2304.0,0.18,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00148,Cool Stuff 8c249a,CAT001,16.0,40.0,16.0,10240.0,2.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00149,Health Beauty 4b1346,CAT001,14.0,17.0,15.0,3570.0,0.427,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00150,Office Furniture a3f75d,CAT004,25.0,59.0,63.0,92925.0,16.133,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00151,Sports Leisure f42c3b,CAT004,11.0,16.0,16.0,2816.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00152,Telephony cb6899,CAT009,11.0,3.0,17.0,561.0,0.45,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00153,Toys 63f3ca,CAT003,20.0,25.0,30.0,15000.0,0.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00154,Audio 2db522,CAT009,13.0,11.0,17.0,2431.0,6.663,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00155,Bed Bath Table b6902b,CAT003,33.0,9.0,40.0,11880.0,0.835,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00156,Cool Stuff f1e050,CAT001,11.0,11.0,19.0,2299.0,10.225,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00157,Telephony 8cffd9,CAT009,12.0,4.0,17.0,816.0,0.3,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00158,Sports Leisure d55fce,CAT004,18.0,18.0,18.0,5832.0,0.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00159,Sports Leisure 19d006,CAT004,15.0,15.0,67.0,15075.0,0.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00160,Computers Accessories 694a2d,CAT001,40.0,15.0,40.0,24000.0,2.8,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00161,Telephony e98d73,CAT009,12.0,4.0,18.0,864.0,0.275,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00162,Garden Tools 13432d,CAT006,31.0,13.0,17.0,6851.0,1.9,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00163,Sports Leisure 806a48,CAT004,11.0,16.0,16.0,2816.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00164,Office Furniture e50004,CAT004,39.0,45.0,40.0,70200.0,2.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00165,Furniture Decor b586e9,CAT004,20.0,35.0,20.0,14000.0,0.95,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00166,Toys 45eec4,CAT003,11.0,8.0,16.0,1408.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00167,Baby 142721,CAT003,40.0,10.0,40.0,16000.0,5.0,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00168,Computers Accessories a20209,CAT001,14.0,14.0,16.0,3136.0,0.217,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00169,Cool Stuff 633e6f,CAT001,15.0,25.0,42.0,15750.0,2.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00170,Telephony 87c431,CAT009,11.0,3.0,17.0,561.0,0.45,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00171,Housewares dca136,CAT003,31.0,61.0,31.0,58621.0,10.75,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00172,Housewares 2d904c,CAT003,40.0,65.0,22.0,57200.0,16.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00173,Sports Leisure e2119d,CAT004,11.0,16.0,16.0,2816.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00174,Cool Stuff e2169b,CAT001,14.0,12.0,18.0,3024.0,0.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00175,Perfumery 1e66b3,CAT001,20.0,21.0,26.0,10920.0,1.25,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00176,Bed Bath Table 47dd7c,CAT003,15.0,2.0,20.0,600.0,0.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00177,Housewares bc05b0,CAT003,40.0,15.0,89.0,53400.0,10.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00178,Furniture Decor ce1efc,CAT004,20.0,30.0,20.0,12000.0,1.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00179,Furniture Decor 8eabb3,CAT004,30.0,4.0,35.0,4200.0,0.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00180,Watches Gifts edd272,CAT001,14.0,13.0,19.0,3458.0,0.71,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00181,Bed Bath Table cff95d,CAT003,40.0,18.0,25.0,18000.0,0.875,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00182,Toys 00f77e,CAT003,20.0,7.0,16.0,2240.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00183,Sports Leisure fa9120,CAT004,18.0,18.0,18.0,5832.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00184,Telephony 4421f7,CAT009,13.0,6.0,17.0,1326.0,0.175,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00185,Telephony 047ced,CAT009,12.0,4.0,17.0,816.0,0.3,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00186,Bed Bath Table e3e4ae,CAT003,35.0,8.0,45.0,12600.0,1.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00187,Computers Accessories cd1166,CAT001,29.0,2.0,41.0,2378.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00188,Bed Bath Table 3c706c,CAT003,30.0,5.0,30.0,4500.0,1.8,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00189,Sports Leisure 92c0bb,CAT004,13.0,10.0,28.0,3640.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00190,Baby 399bdb,CAT003,14.0,8.0,20.0,2240.0,0.65,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00191,Toys 06a056,CAT003,20.0,11.0,19.0,4180.0,0.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00192,Toys bc182e,CAT003,25.0,35.0,30.0,26250.0,1.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00193,Auto 0dfe6e,CAT006,15.0,10.0,17.0,2550.0,0.1,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00194,Bed Bath Table 175b4b,CAT003,30.0,12.0,35.0,12600.0,2.9,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00195,Unknown a1da98,CAT003,11.0,4.0,16.0,704.0,0.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00196,Construction Tools Construction a370ee,CAT006,11.0,11.0,16.0,1936.0,1.2,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00197,Health Beauty 75c973,CAT001,15.0,15.0,20.0,4500.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00198,Electronics e132d1,CAT009,16.0,7.0,25.0,2800.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00199,Audio 69d8e4,CAT009,20.0,5.0,27.0,2700.0,0.2,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00200,Furniture Decor 289729,CAT004,44.0,5.0,40.0,8800.0,2.85,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00201,Bed Bath Table 52a2ec,CAT003,35.0,15.0,45.0,23625.0,0.8,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00202,Pet Shop 9fe562,CAT007,40.0,20.0,50.0,40000.0,2.2,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00203,Books Technical 897b74,CAT002,21.0,3.0,29.0,1827.0,0.95,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00204,Toys 6d6e6e,CAT003,12.0,10.0,14.0,1680.0,0.147,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00205,Health Beauty 47dedb,CAT001,12.0,11.0,42.0,5544.0,1.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00206,Construction Tools Lights af8816,CAT006,16.0,19.0,16.0,4864.0,1.3,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00207,Electronics 7db370,CAT009,16.0,12.0,19.0,3648.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00208,Bed Bath Table ba7aa0,CAT003,45.0,6.0,35.0,9450.0,0.95,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00209,Fashion Bags Accessories ed18c4,CAT003,20.0,5.0,16.0,1600.0,0.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00210,Housewares 6a64f6,CAT003,26.0,23.0,40.0,23920.0,2.841,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00211,Office Furniture 0169e8,CAT004,31.0,64.0,54.0,107136.0,8.683,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00212,Industry Commerce And Business 6e1cb7,CAT003,30.0,105.0,18.0,56700.0,11.325,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00213,Electronics b14754,CAT009,15.0,12.0,18.0,3240.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00214,Sports Leisure cfaa84,CAT004,25.0,45.0,40.0,45000.0,1.65,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00215,Health Beauty 9476ae,CAT001,15.0,5.0,16.0,1200.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00216,Health Beauty c13ae5,CAT001,15.0,5.0,16.0,1200.0,0.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00217,Watches Gifts ae60da,CAT001,14.0,13.0,18.0,3276.0,0.459,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00218,Watches Gifts b9eafd,CAT001,14.0,13.0,18.0,3276.0,0.501,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00219,Sports Leisure 4d1260,CAT004,15.0,10.0,20.0,3000.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00220,Watches Gifts 1fe021,CAT001,13.0,10.0,18.0,2340.0,0.346,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00221,Stationery 0aedcb,CAT002,15.0,15.0,101.0,22725.0,0.75,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00222,Bed Bath Table 56ca72,CAT003,38.0,15.0,35.0,19950.0,1.225,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00223,Bed Bath Table ff6e4f,CAT003,50.0,18.0,60.0,54000.0,3.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00224,Stationery 554f41,CAT002,29.0,20.0,60.0,34800.0,7.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00225,Bed Bath Table d10651,CAT003,30.0,4.0,40.0,4800.0,0.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00226,Health Beauty ab64d5,CAT001,12.0,9.0,17.0,1836.0,0.21,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00227,Baby 36b67e,CAT003,13.0,13.0,20.0,3380.0,0.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00228,Baby 6cff7d,CAT003,30.0,10.0,30.0,9000.0,0.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00229,Furniture Decor ab09f3,CAT004,30.0,35.0,30.0,31500.0,4.0,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00230,Electronics d57c7f,CAT009,14.0,7.0,25.0,2450.0,0.25,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00231,Baby f922db,CAT003,57.0,62.0,38.0,134292.0,15.8,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00232,Perfumery db5021,CAT001,16.0,18.0,20.0,5760.0,0.341,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00233,Watches Gifts 4e5d2c,CAT001,20.0,2.0,16.0,640.0,0.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00234,Electronics afd31a,CAT009,18.0,8.0,23.0,3312.0,0.1,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00235,Bed Bath Table 5d2877,CAT003,20.0,20.0,20.0,8000.0,0.8,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00236,Health Beauty e7a74c,CAT001,14.0,13.0,43.0,7826.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00237,Watches Gifts 8ed159,CAT001,20.0,2.0,16.0,640.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00238,Sports Leisure 021e39,CAT004,26.0,8.0,42.0,8736.0,0.8,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00239,Auto 790e77,CAT006,63.0,11.0,63.0,43659.0,6.4,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00240,Toys b92925,CAT003,35.0,31.0,31.0,33635.0,1.582,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00241,Furniture Living Room 4ead37,CAT004,46.0,11.0,61.0,30866.0,7.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00242,Audio 175b65,CAT009,11.0,4.0,16.0,704.0,0.167,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00243,Luggage Accessories e61814,CAT004,34.0,10.0,49.0,16660.0,1.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00244,Cool Stuff 039f34,CAT001,20.0,73.0,73.0,106580.0,5.65,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00245,Electronics 850268,CAT009,16.0,12.0,19.0,3648.0,0.541,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00246,Watches Gifts cdb88c,CAT001,13.0,11.0,17.0,2431.0,0.269,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00247,Pet Shop be36d6,CAT007,30.0,20.0,40.0,24000.0,1.25,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00248,Watches Gifts 7ab231,CAT001,20.0,2.0,16.0,640.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00249,Bed Bath Table a83db2,CAT003,38.0,10.0,38.0,14440.0,0.85,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00250,Toys 9e0978,CAT003,11.0,7.0,16.0,1232.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00251,Computers Accessories ceb920,CAT001,13.0,7.0,17.0,1547.0,0.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00252,Toys 9a10e0,CAT003,16.0,16.0,16.0,4096.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00253,Telephony cc0265,CAT009,11.0,5.0,19.0,1045.0,0.125,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00254,Luggage Accessories 5685eb,CAT004,39.0,53.0,18.0,37206.0,16.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00255,Garden Tools 992580,CAT006,43.0,14.0,40.0,24080.0,8.875,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00256,Health Beauty 459ac1,CAT001,17.0,11.0,18.0,3366.0,0.178,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00257,Stationery e3bb37,CAT002,22.0,14.0,22.0,6776.0,0.317,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00258,Computers Accessories a2e97c,CAT001,15.0,5.0,36.0,2700.0,0.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00259,Home Construction 9f1315,CAT006,30.0,35.0,30.0,31500.0,3.8,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00260,Auto 8bf9f8,CAT006,23.0,49.0,49.0,55223.0,17.6,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00261,Cool Stuff 73ca11,CAT001,19.0,44.0,33.0,27588.0,1.95,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00262,Home Appliances d5bd7c,CAT005,15.0,11.0,25.0,4125.0,0.95,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00263,Auto fe1312,CAT006,44.0,44.0,47.0,90992.0,5.417,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00264,Watches Gifts bc1352,CAT001,11.0,2.0,16.0,352.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00265,Bed Bath Table 4d057b,CAT003,12.0,12.0,50.0,7200.0,1.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00266,Computers Accessories 09b160,CAT001,15.0,12.0,18.0,3240.0,0.156,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00267,Sports Leisure febfa9,CAT004,19.0,19.0,19.0,6859.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00268,Fashion Bags Accessories 73cf47,CAT003,20.0,5.0,16.0,1600.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00269,Baby 248f83,CAT003,13.0,13.0,20.0,3380.0,0.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00270,Watches Gifts ac3558,CAT001,11.0,2.0,16.0,352.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00271,Bed Bath Table 8b3a32,CAT003,15.0,2.0,20.0,600.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00272,Sports Leisure df531f,CAT004,28.0,25.0,33.0,23100.0,3.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00273,Electronics ac54df,CAT009,20.0,10.0,30.0,6000.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00274,Computers Accessories a187b5,CAT001,20.0,20.0,20.0,8000.0,2.95,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00275,Housewares aa8317,CAT003,12.0,18.0,16.0,3456.0,0.575,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00276,Housewares 28c7fc,CAT003,26.0,28.0,45.0,32760.0,3.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00277,Computers Accessories 053ef2,CAT001,15.0,14.0,16.0,3360.0,0.233,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00278,Computers 0376af,CAT009,39.0,31.0,16.0,19344.0,2.6,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00279,Home Appliances fc330a,CAT005,30.0,20.0,35.0,21000.0,1.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00280,Garden Tools f80fec,CAT006,31.0,3.0,67.0,6231.0,2.9,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00281,Housewares 093179,CAT003,25.0,25.0,48.0,30000.0,2.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00282,Baby a62a0e,CAT003,40.0,40.0,40.0,64000.0,10.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00283,Perfumery 301fc1,CAT001,18.0,16.0,16.0,4608.0,0.525,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00284,Furniture Decor 89a8cd,CAT004,20.0,12.0,60.0,14400.0,2.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00285,Unknown 1b352f,CAT003,11.0,7.0,16.0,1232.0,0.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00286,Watches Gifts c4287f,CAT001,11.0,2.0,16.0,352.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00287,Bed Bath Table 887289,CAT003,35.0,2.0,44.0,3080.0,1.65,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00288,Computers Accessories d5b3f2,CAT001,14.0,6.0,18.0,1512.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00289,Bed Bath Table d6e7fc,CAT003,30.0,10.0,30.0,9000.0,1.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00290,Toys 20cc94,CAT003,50.0,60.0,20.0,60000.0,5.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00291,Health Beauty e8fad6,CAT001,15.0,17.0,19.0,4845.0,0.431,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00292,Health Beauty 017644,CAT001,20.0,3.0,18.0,1080.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00293,Housewares 58d65b,CAT003,35.0,15.0,35.0,18375.0,0.75,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00294,Computers Accessories 8f0641,CAT001,12.0,15.0,18.0,3240.0,1.583,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00295,Sports Leisure 687de3,CAT004,20.0,10.0,70.0,14000.0,0.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00296,Tablets Printing Image 3402f4,CAT009,21.0,12.0,22.0,5544.0,0.283,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00297,Luggage Accessories e6329c,CAT004,50.0,20.0,75.0,75000.0,18.05,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00298,Bed Bath Table 73a44a,CAT003,40.0,18.0,25.0,18000.0,0.875,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00299,Cool Stuff f267d4,CAT001,30.0,40.0,50.0,60000.0,1.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00300,Baby 43ebbd,CAT003,16.0,16.0,16.0,4096.0,0.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00301,Pet Shop c53267,CAT007,48.0,7.0,35.0,11760.0,1.25,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00302,Luggage Accessories 72441b,CAT004,47.0,20.0,73.0,68620.0,17.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00303,Watches Gifts 47a964,CAT001,16.0,13.0,19.0,3952.0,0.425,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00304,Telephony 46670e,CAT009,11.0,4.0,19.0,836.0,0.35,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00305,Computers Accessories ab1962,CAT001,15.0,15.0,16.0,3600.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00306,Furniture Decor fa53e8,CAT004,16.0,50.0,50.0,40000.0,2.75,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00307,Fashion Bags Accessories 5075c4,CAT003,25.0,2.0,20.0,1000.0,0.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00308,Toys 14c3d8,CAT003,20.0,22.0,30.0,13200.0,0.887,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00309,Fashion Bags Accessories c4f865,CAT003,20.0,2.0,16.0,640.0,0.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00310,Sports Leisure f4727e,CAT004,16.0,15.0,18.0,4320.0,0.225,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00311,Cool Stuff 765786,CAT001,42.0,4.0,89.0,14952.0,4.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00312,Electronics 0769b3,CAT009,17.0,13.0,22.0,4862.0,0.175,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00313,Furniture Decor fff5a0,CAT004,40.0,40.0,40.0,64000.0,12.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00314,Housewares 9d1751,CAT003,20.0,60.0,20.0,24000.0,1.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00315,Bed Bath Table 7a58e1,CAT003,35.0,15.0,45.0,23625.0,0.8,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00316,Stationery b7859e,CAT002,15.0,15.0,51.0,11475.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00317,Telephony 79dd0d,CAT009,12.0,4.0,17.0,816.0,0.3,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00318,Furniture Decor bcf4a9,CAT004,30.0,35.0,30.0,31500.0,2.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00319,Sports Leisure e53f57,CAT004,30.0,30.0,35.0,31500.0,3.775,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00320,Telephony 026c8a,CAT009,13.0,4.0,18.0,936.0,0.217,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00321,Furniture Decor 842edb,CAT004,20.0,20.0,30.0,12000.0,1.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00322,Housewares 3f7096,CAT003,28.0,22.0,41.0,25256.0,1.038,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00323,Health Beauty a21db7,CAT001,34.0,12.0,23.0,9384.0,0.538,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00324,Bed Bath Table 634e47,CAT003,38.0,10.0,38.0,14440.0,1.05,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00325,Office Furniture 9e3f32,CAT004,22.0,56.0,57.0,70224.0,13.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00326,Telephony f48aae,CAT009,12.0,4.0,17.0,816.0,0.35,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00327,Furniture Decor a89731,CAT004,12.0,12.0,60.0,8640.0,1.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00328,Telephony eb4521,CAT009,11.0,4.0,18.0,792.0,0.117,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00329,Electronics bbce06,CAT009,16.0,7.0,25.0,2800.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00330,Computers Accessories 302020,CAT001,10.0,7.0,7.0,490.0,0.107,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00331,Telephony a185e8,CAT009,12.0,4.0,18.0,864.0,0.225,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00332,Health Beauty b0140d,CAT001,18.0,18.0,18.0,5832.0,0.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00333,Health Beauty 58e92e,CAT001,28.0,16.0,31.0,13888.0,1.614,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00334,Watches Gifts c3348f,CAT001,13.0,9.0,18.0,2106.0,0.416,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00335,Telephony 6d2099,CAT009,13.0,10.0,17.0,2210.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00336,Health Beauty b0cda2,CAT001,16.0,16.0,20.0,5120.0,0.371,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00337,Bed Bath Table 58b220,CAT003,50.0,16.0,70.0,56000.0,4.867,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00338,Computers Accessories 860136,CAT001,12.0,10.0,16.0,1920.0,0.169,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00339,Fashion Bags Accessories 8bce23,CAT003,20.0,5.0,16.0,1600.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00340,Auto 21a213,CAT006,14.0,9.0,20.0,2520.0,0.85,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00341,Office Furniture e5c70a,CAT004,17.0,52.0,53.0,46852.0,9.725,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00342,Toys 0e3eff,CAT003,20.0,21.0,20.0,8400.0,0.583,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00343,Sports Leisure f1b921,CAT004,47.0,6.0,95.0,26790.0,0.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00344,Cool Stuff 7b3526,CAT001,15.0,25.0,42.0,15750.0,0.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00345,Health Beauty 67b32a,CAT001,18.0,16.0,20.0,5760.0,0.434,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00346,Telephony d09358,CAT009,12.0,4.0,17.0,816.0,0.3,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00347,Auto 7da3b2,CAT006,30.0,30.0,30.0,27000.0,2.45,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00348,Watches Gifts 411987,CAT001,11.0,2.0,16.0,352.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00349,Bed Bath Table 71424d,CAT003,31.0,13.0,41.0,16523.0,1.975,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00350,Unknown f17099,CAT003,11.0,7.0,16.0,1232.0,0.45,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00351,Perfumery f892a9,CAT001,17.0,11.0,21.0,3927.0,0.375,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00352,Perfumery 8706d9,CAT001,17.0,11.0,21.0,3927.0,0.43,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00353,Computers Accessories c04e43,CAT001,48.0,13.0,54.0,33696.0,3.475,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00354,Auto e0ced3,CAT006,17.0,16.0,19.0,5168.0,1.85,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00355,Sports Leisure 62d72a,CAT004,16.0,15.0,23.0,5520.0,0.353,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00356,Perfumery 2993f8,CAT001,11.0,5.0,16.0,880.0,0.05,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00357,Electronics c5a284,CAT009,16.0,11.0,22.0,3872.0,0.2,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00358,Pet Shop c0f815,CAT007,21.0,21.0,50.0,22050.0,7.05,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00359,Watches Gifts b4248c,CAT001,12.0,10.0,16.0,1920.0,0.31,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00360,Electronics 152dec,CAT009,12.0,9.0,22.0,2376.0,1.05,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00361,Watches Gifts 581cb6,CAT001,15.0,10.0,18.0,2700.0,0.292,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00362,Furniture Decor e94ba0,CAT004,28.0,3.0,39.0,3276.0,0.41,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00363,Furniture Decor aec9c6,CAT004,11.0,3.0,16.0,528.0,0.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00364,Furniture Decor fc36e5,CAT004,20.0,3.0,30.0,1800.0,0.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00365,Telephony 67ba49,CAT009,11.0,4.0,16.0,704.0,0.1,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00366,Watches Gifts cd654d,CAT001,20.0,2.0,16.0,640.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00367,Stationery 340af1,CAT002,60.0,19.0,30.0,34200.0,9.85,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00368,Bed Bath Table e3b862,CAT003,36.0,2.0,46.0,3312.0,1.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00369,Sports Leisure 65acdc,CAT004,21.0,21.0,29.0,12789.0,1.625,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00370,Computers Accessories ea309b,CAT001,24.0,8.0,25.0,4800.0,0.725,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00371,Industry Commerce And Business 43f7f0,CAT003,25.0,103.0,16.0,41200.0,7.225,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00372,Garden Tools 5768e4,CAT006,33.0,14.0,43.0,19866.0,8.325,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00373,Toys 6eec1f,CAT003,35.0,62.0,20.0,43400.0,7.0,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00374,Housewares 3494d6,CAT003,46.0,22.0,32.0,32384.0,3.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00375,Electronics cb2404,CAT009,16.0,17.0,19.0,5168.0,0.138,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00376,Health Beauty eb77e9,CAT001,12.0,17.0,33.0,6732.0,0.9,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00377,Unknown 1f1d61,CAT003,15.0,12.0,20.0,3600.0,0.45,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00378,Home Construction e55e63,CAT006,22.0,38.0,38.0,31768.0,0.8,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00379,Pet Shop 31f55c,CAT007,19.0,17.0,23.0,7429.0,0.625,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00380,Computers Accessories 869f65,CAT001,29.0,2.0,41.0,2378.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00381,Auto 582e28,CAT006,20.0,5.0,16.0,1600.0,0.2,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00382,Bed Bath Table 691127,CAT003,35.0,7.0,45.0,11025.0,1.175,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00383,Audio d1a7bc,CAT009,11.0,2.0,16.0,352.0,0.2,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00384,Kitchen Dining Laundry Garden Furniture 21e4ef,CAT004,30.0,16.0,20.0,9600.0,1.75,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00385,Furniture Decor 372e7d,CAT004,30.0,35.0,30.0,31500.0,2.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00386,Computers Accessories 53649a,CAT001,28.0,3.0,31.0,2604.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00387,Bed Bath Table 7399ca,CAT003,37.0,22.0,59.0,48026.0,6.85,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00388,Luggage Accessories 246278,CAT004,33.0,10.0,49.0,16170.0,1.45,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00389,Office Furniture 3c7655,CAT004,27.0,60.0,50.0,81000.0,11.88,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00390,Housewares 69e2f2,CAT003,13.0,8.0,20.0,2080.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00391,Audio 7a3a41,CAT009,14.0,11.0,17.0,2618.0,0.425,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00392,Computers Accessories 19ca1d,CAT001,20.0,15.0,20.0,6000.0,1.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00393,Sports Leisure ae3608,CAT004,12.0,7.0,23.0,1932.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00394,Health Beauty 9085f7,CAT001,16.0,22.0,25.0,8800.0,2.134,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00395,Baby 4731a5,CAT003,18.0,14.0,24.0,6048.0,0.65,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00396,Health Beauty 047351,CAT001,26.0,11.0,28.0,8008.0,0.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00397,Sports Leisure 91454d,CAT004,11.0,11.0,16.0,1936.0,2.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00398,Health Beauty f1fa8a,CAT001,16.0,6.0,25.0,2400.0,0.925,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00399,Sports Leisure 0c05f5,CAT004,24.0,14.0,26.0,8736.0,0.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00400,Health Beauty be2a16,CAT001,38.0,24.0,30.0,27360.0,5.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00401,Sports Leisure 2de319,CAT004,13.0,10.0,17.0,2210.0,0.175,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00402,Electronics 7ecda3,CAT009,20.0,10.0,30.0,6000.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00403,Furniture Decor 23d2f8,CAT004,20.0,4.0,30.0,2400.0,0.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00404,Watches Gifts 3717bc,CAT001,20.0,2.0,16.0,640.0,0.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00405,Baby 8a9818,CAT003,18.0,14.0,24.0,6048.0,0.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00406,Electronics 327c25,CAT009,16.0,7.0,25.0,2800.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00407,Auto 3c233d,CAT006,65.0,10.0,65.0,42250.0,7.15,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00408,Bed Bath Table f4d815,CAT003,19.0,9.0,25.0,4275.0,0.45,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00409,Furniture Decor 2f6abe,CAT004,20.0,35.0,20.0,14000.0,0.65,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00410,Computers Accessories 2e835a,CAT001,15.0,3.0,16.0,720.0,0.45,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00411,Computers Accessories b4ab99,CAT001,14.0,14.0,22.0,4312.0,0.14,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00412,Watches Gifts f5413a,CAT001,20.0,2.0,16.0,640.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00413,Office Furniture 4abae6,CAT004,26.0,64.0,55.0,91520.0,10.075,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00414,Sports Leisure 9605b2,CAT004,25.0,45.0,40.0,45000.0,1.65,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00415,Health Beauty a899a4,CAT001,15.0,15.0,20.0,4500.0,0.304,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00416,Computers Accessories 1e4e20,CAT001,13.0,12.0,18.0,2808.0,0.213,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00417,Bed Bath Table dc6307,CAT003,25.0,8.0,35.0,7000.0,1.0,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00418,Electronics 821245,CAT009,16.0,7.0,25.0,2800.0,0.2,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00419,Cool Stuff f99780,CAT001,31.0,24.0,44.0,32736.0,0.9,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00420,Stationery 8d77b2,CAT002,30.0,10.0,30.0,9000.0,3.0,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00421,Telephony 044bbb,CAT009,16.0,7.0,23.0,2576.0,0.9,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00422,Watches Gifts d5a03c,CAT001,12.0,8.0,17.0,1632.0,0.292,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00423,Sports Leisure 80a5ff,CAT004,33.0,21.0,52.0,36036.0,0.925,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00424,Perfumery 131d73,CAT001,11.0,5.0,16.0,880.0,0.05,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00425,Bed Bath Table 5290ba,CAT003,15.0,2.0,20.0,600.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00426,Furniture Decor 595400,CAT004,28.0,6.0,32.0,5376.0,1.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00427,Office Furniture b00f89,CAT004,35.0,64.0,56.0,125440.0,7.463,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00428,Toys 685347,CAT003,20.0,20.0,20.0,8000.0,0.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00429,Bed Bath Table 45b8a4,CAT003,36.0,8.0,41.0,11808.0,2.45,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00430,Perfumery 426f2e,CAT001,16.0,14.0,22.0,4928.0,0.61,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00431,Health Beauty 0ea778,CAT001,14.0,10.0,45.0,6300.0,0.225,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00432,Computers Accessories 8ff975,CAT001,19.0,8.0,23.0,3496.0,0.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00433,Cool Stuff 390cc6,CAT001,47.0,19.0,65.0,58045.0,11.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00434,Bed Bath Table 39ed7a,CAT003,30.0,5.0,40.0,6000.0,0.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00435,Cool Stuff 21c827,CAT001,34.0,20.0,37.0,25160.0,5.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00436,Sports Leisure 9753b4,CAT004,22.0,14.0,25.0,7700.0,0.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00437,Sports Leisure 0778e4,CAT004,80.0,30.0,20.0,48000.0,5.95,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00438,Luggage Accessories de32b4,CAT004,30.0,22.0,40.0,26400.0,1.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00439,Watches Gifts d7c432,CAT001,20.0,2.0,16.0,640.0,0.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00440,Computers Accessories d2d50a,CAT001,15.0,11.0,16.0,2640.0,0.167,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00441,Small Appliances 5a68ec,CAT005,25.0,11.0,34.0,9350.0,1.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00442,Telephony a6c32a,CAT009,14.0,8.0,17.0,1904.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00443,Perfumery 29e6f7,CAT001,18.0,13.0,19.0,4446.0,0.55,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00444,Office Furniture 8c0523,CAT004,17.0,51.0,52.0,45084.0,10.475,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00445,Consoles Games f07d54,CAT009,11.0,25.0,33.0,9075.0,1.5,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00446,Sports Leisure ff3e68,CAT004,20.0,23.0,24.0,11040.0,0.283,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00447,Watches Gifts 89bf22,CAT001,20.0,2.0,16.0,640.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00448,Consoles Games 9690dd,CAT009,16.0,16.0,16.0,4096.0,0.3,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00449,Cool Stuff 973cad,CAT001,27.0,18.0,33.0,16038.0,0.65,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00450,Watches Gifts cc7146,CAT001,20.0,2.0,16.0,640.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00451,Watches Gifts 2adca0,CAT001,16.0,8.0,16.0,2048.0,0.05,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00452,Bed Bath Table b89aab,CAT003,35.0,15.0,45.0,23625.0,3.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00453,Stationery 770f9b,CAT002,37.0,55.0,28.0,56980.0,7.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00454,Computers Accessories 162c37,CAT001,29.0,2.0,41.0,2378.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00455,Bed Bath Table e33ee5,CAT003,50.0,19.0,60.0,57000.0,4.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00456,Toys ddadd3,CAT003,21.0,24.0,22.0,11088.0,0.675,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00457,Bed Bath Table e9bb4b,CAT003,30.0,15.0,30.0,13500.0,1.45,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00458,Food Drink 1a2e41,CAT007,15.0,15.0,16.0,3600.0,1.1,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00459,Bed Bath Table aa92ec,CAT003,32.0,7.0,34.0,7616.0,1.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00460,Cool Stuff f4e8fe,CAT001,40.0,30.0,30.0,36000.0,0.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00461,Baby db53c7,CAT003,53.0,20.0,77.0,81620.0,14.95,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00462,Bed Bath Table 8db985,CAT003,36.0,2.0,46.0,3312.0,1.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00463,Toys 8cf2a3,CAT003,55.0,7.0,52.0,20020.0,3.85,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00464,Housewares 7399ce,CAT003,22.0,63.0,22.0,30492.0,4.8,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00465,Unknown b92339,CAT003,12.0,11.0,16.0,2112.0,0.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00466,Housewares ccdc1f,CAT003,15.0,9.0,18.0,2430.0,0.553,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00467,Furniture Living Room aeea90,CAT004,92.0,15.0,27.0,37260.0,9.75,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00468,Musical Instruments 520dfa,CAT009,45.0,12.0,105.0,56700.0,8.35,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00469,Computers Accessories fbfed2,CAT001,20.0,13.0,19.0,4940.0,0.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00470,Housewares bcdc5a,CAT003,16.0,18.0,20.0,5760.0,0.49,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00471,Electronics 939e1c,CAT009,20.0,10.0,30.0,6000.0,0.2,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00472,Furniture Decor 08943e,CAT004,22.0,18.0,43.0,17028.0,3.45,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00473,Cool Stuff 1d5fb8,CAT001,27.0,23.0,24.0,14904.0,2.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00474,Sports Leisure fa264d,CAT004,16.0,21.0,19.0,6384.0,0.902,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00475,Perfumery 72d5dc,CAT001,22.0,6.0,36.0,4752.0,0.35,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00476,Baby 952030,CAT003,20.0,7.0,30.0,4200.0,0.45,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00477,Garden Tools d47bbd,CAT006,22.0,14.0,32.0,9856.0,3.25,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00478,Luggage Accessories 6720c3,CAT004,34.0,47.0,24.0,38352.0,0.45,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00479,Electronics dd72f7,CAT009,13.0,9.0,17.0,1989.0,0.281,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00480,Auto 2ab1bc,CAT006,15.0,10.0,17.0,2550.0,0.3,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00481,Baby e807ca,CAT003,11.0,7.0,16.0,1232.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00482,Market Place 017bd4,CAT003,19.0,10.0,17.0,3230.0,0.175,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00483,Bed Bath Table 98c186,CAT003,45.0,12.0,65.0,35100.0,3.305,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00484,Fashion Bags Accessories d5890b,CAT003,20.0,2.0,16.0,640.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00485,Health Beauty 432e62,CAT001,13.0,11.0,17.0,2431.0,4.05,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00486,Watches Gifts 214b45,CAT001,12.0,11.0,16.0,2112.0,0.308,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00487,Electronics ee0825,CAT009,18.0,12.0,24.0,5184.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00488,Toys eb5a1c,CAT003,52.0,15.0,51.0,39780.0,5.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00489,Furniture Decor 313d46,CAT004,33.0,27.0,28.0,24948.0,2.125,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00490,Watches Gifts eba832,CAT001,11.0,2.0,16.0,352.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00491,Computers Accessories 2d757d,CAT001,13.0,13.0,19.0,3211.0,0.107,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00492,Computers 72b616,CAT009,53.0,50.0,27.0,71550.0,13.7,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00493,Furniture Decor 5bbdec,CAT004,35.0,10.0,40.0,14000.0,2.9,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00494,Perfumery ae33f9,CAT001,16.0,16.0,21.0,5376.0,0.556,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00495,Toys 4c6cf7,CAT003,28.0,20.0,36.0,20160.0,1.167,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00496,Bed Bath Table 48cc88,CAT003,35.0,18.0,40.0,25200.0,0.675,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00497,Telephony 144e59,CAT009,12.0,4.0,17.0,816.0,0.35,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00498,Christmas Supplies 3e05ce,CAT003,45.0,8.0,50.0,18000.0,4.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00499,Electronics ba2b49,CAT009,12.0,8.0,18.0,1728.0,0.125,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00500,Furniture Mattress And Upholstery 3f60b8,CAT004,100.0,10.0,70.0,70000.0,1.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00501,Watches Gifts 2472c2,CAT001,11.0,2.0,16.0,352.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00502,Electronics e880ee,CAT009,18.0,13.0,20.0,4680.0,0.125,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00503,Bed Bath Table 5ebab7,CAT003,16.0,14.0,17.0,3808.0,0.264,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00504,Drinks 226af2,CAT007,17.0,17.0,22.0,6358.0,0.85,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00505,Bed Bath Table 912827,CAT003,36.0,2.0,46.0,3312.0,1.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00506,Electronics 06a334,CAT009,17.0,14.0,22.0,5236.0,0.2,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00507,Fashion Bags Accessories 0132a6,CAT003,29.0,20.0,27.0,15660.0,1.87,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00508,Stationery ceedf4,CAT002,36.0,12.0,49.0,21168.0,1.9,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00509,Computers Accessories e249df,CAT001,16.0,16.0,16.0,4096.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00510,Cool Stuff 17e6cd,CAT001,15.0,25.0,42.0,15750.0,2.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00511,Telephony 2f5e47,CAT009,12.0,4.0,17.0,816.0,0.25,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00512,Sports Leisure eba728,CAT004,12.0,18.0,22.0,4752.0,0.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00513,Fashion Bags Accessories 9aef2f,CAT003,16.0,16.0,16.0,4096.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00514,Sports Leisure 68e272,CAT004,20.0,20.0,40.0,16000.0,1.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00515,Furniture Decor 03c439,CAT004,45.0,45.0,35.0,70875.0,9.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00516,Baby 2f5d20,CAT003,19.0,18.0,22.0,7524.0,0.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00517,Pet Shop bb4623,CAT007,25.0,17.0,20.0,8500.0,1.05,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00518,Fashion Bags Accessories a0a818,CAT003,16.0,16.0,16.0,4096.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00519,Health Beauty ff6b9d,CAT001,16.0,13.0,30.0,6240.0,0.593,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00520,Health Beauty 8a3b74,CAT001,14.0,15.0,17.0,3570.0,0.067,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00521,Telephony be77e6,CAT009,12.0,4.0,18.0,864.0,0.275,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00522,Construction Tools Lights e0377e,CAT006,16.0,16.0,16.0,4096.0,0.2,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00523,Consoles Games 5d3266,CAT009,25.0,15.0,25.0,9375.0,0.3,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00524,Bed Bath Table 36203e,CAT003,30.0,5.0,32.0,4800.0,1.05,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00525,Furniture Decor 0657b2,CAT004,20.0,3.0,30.0,1800.0,0.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00526,Telephony ce5c82,CAT009,12.0,4.0,17.0,816.0,0.3,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00527,Housewares 9d3ad0,CAT003,26.0,61.0,37.0,58682.0,10.05,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00528,Furniture Decor ca2199,CAT004,17.0,17.0,17.0,4913.0,0.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00529,Baby ade44f,CAT003,25.0,10.0,30.0,7500.0,1.0,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00530,Cool Stuff 399fb2,CAT001,17.0,31.0,37.0,19499.0,0.975,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00531,Furniture Living Room 660964,CAT004,47.0,14.0,55.0,36190.0,6.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00532,Bed Bath Table ec6796,CAT003,47.0,17.0,68.0,54332.0,6.038,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00533,Health Beauty 06893d,CAT001,12.0,7.0,17.0,1428.0,0.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00534,Office Furniture c48e89,CAT004,28.0,47.0,54.0,71064.0,13.388,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00535,Bed Bath Table 13634a,CAT003,30.0,4.0,40.0,4800.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00536,Computers Accessories fb365c,CAT001,13.0,10.0,17.0,2210.0,0.285,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00537,Bed Bath Table 02aa2d,CAT003,19.0,9.0,25.0,4275.0,0.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00538,Toys b61248,CAT003,35.0,12.0,38.0,15960.0,1.8,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00539,Watches Gifts 30ac43,CAT001,14.0,11.0,18.0,2772.0,0.48,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00540,Telephony 143e0c,CAT009,12.0,4.0,17.0,816.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00541,Bed Bath Table 2c5a6c,CAT003,31.0,9.0,41.0,11439.0,1.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00542,Agro Industry And Commerce 122aed,CAT007,20.0,30.0,30.0,18000.0,3.0,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00543,Furniture Decor 2d6aa1,CAT004,23.0,7.0,23.0,3703.0,1.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00544,Toys 03336c,CAT003,25.0,18.0,38.0,17100.0,1.232,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00545,Cool Stuff 4b070c,CAT001,47.0,22.0,60.0,62040.0,5.575,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00546,Unknown ed264a,CAT003,11.0,7.0,16.0,1232.0,0.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00547,Bed Bath Table 91c82f,CAT003,33.0,8.0,43.0,11352.0,2.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00548,Toys 685b4e,CAT003,29.0,30.0,39.0,33930.0,5.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00549,Cool Stuff 0638bd,CAT001,42.0,4.0,90.0,15120.0,5.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00550,Computers Accessories 9d76c7,CAT001,30.0,2.0,39.0,2340.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00551,Computers Accessories efb935,CAT001,13.0,12.0,21.0,3276.0,0.117,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00552,Telephony 428127,CAT009,16.0,4.0,18.0,1152.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00553,Health Beauty 929c41,CAT001,11.0,16.0,16.0,2816.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00554,Telephony 0c7ca1,CAT009,20.0,4.0,19.0,1520.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00555,Health Beauty b89706,CAT001,13.0,7.0,16.0,1456.0,0.65,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00556,Housewares a85582,CAT003,31.0,61.0,31.0,58621.0,9.95,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00557,Telephony 090c26,CAT009,12.0,4.0,17.0,816.0,0.35,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00558,Baby fdccf4,CAT003,17.0,22.0,19.0,7106.0,0.34,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00559,Watches Gifts f2ed81,CAT001,11.0,2.0,16.0,352.0,0.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00560,Furniture Decor 6f539f,CAT004,26.0,11.0,31.0,8866.0,0.95,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00561,Bed Bath Table 94279b,CAT003,25.0,18.0,15.0,6750.0,2.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00562,Telephony f08610,CAT009,12.0,4.0,17.0,816.0,0.3,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00563,Furniture Decor 4ca4e4,CAT004,35.0,18.0,52.0,32760.0,8.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00564,Health Beauty bb33b4,CAT001,20.0,20.0,20.0,8000.0,0.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00565,Auto df6a68,CAT006,30.0,30.0,30.0,27000.0,1.4,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00566,Costruction Tools Garden 335e2e,CAT006,30.0,16.0,20.0,9600.0,0.55,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00567,Bed Bath Table 73030c,CAT003,35.0,2.0,44.0,3080.0,1.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00568,Auto 626d1e,CAT006,13.0,8.0,17.0,1768.0,0.075,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00569,Sports Leisure 7ca069,CAT004,21.0,23.0,28.0,13524.0,2.083,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00570,Toys 85d6b6,CAT003,20.0,7.0,16.0,2240.0,0.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00571,Sports Leisure f359c2,CAT004,20.0,20.0,20.0,8000.0,4.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00572,Watches Gifts 0145ad,CAT001,14.0,14.0,16.0,3136.0,0.275,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00573,Office Furniture 10adc1,CAT004,38.0,54.0,40.0,82080.0,12.275,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00574,Toys b2d21f,CAT003,22.0,12.0,44.0,11616.0,0.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00575,Sports Leisure 626923,CAT004,17.0,16.0,20.0,5440.0,1.563,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00576,Construction Tools Safety 6428d6,CAT006,11.0,11.0,16.0,1936.0,0.3,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00577,Health Beauty 1ec314,CAT001,20.0,25.0,35.0,17500.0,1.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00578,Home Construction a180c1,CAT006,16.0,27.0,16.0,6912.0,1.05,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00579,Baby bc1fac,CAT003,50.0,20.0,60.0,60000.0,4.75,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00580,Computers Accessories 61b674,CAT001,20.0,4.0,16.0,1280.0,0.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00581,Baby caf2c3,CAT003,20.0,13.0,20.0,5200.0,0.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00582,Bed Bath Table 93e442,CAT003,35.0,2.0,44.0,3080.0,1.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00583,Toys 0edc61,CAT003,11.0,10.0,105.0,11550.0,0.95,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00584,Office Furniture 2cfbc3,CAT004,17.0,51.0,52.0,45084.0,8.75,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00585,Home Comfort 2 a83de3,CAT003,28.0,18.0,65.0,32760.0,0.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00586,Pet Shop da5050,CAT007,18.0,15.0,19.0,5130.0,0.513,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00587,Sports Leisure 80b330,CAT004,20.0,20.0,40.0,16000.0,1.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00588,Sports Leisure 848d98,CAT004,17.0,2.0,25.0,850.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00589,Unknown 664439,CAT003,14.0,13.0,16.0,2912.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00590,Computers Accessories 1fff76,CAT001,21.0,21.0,21.0,9261.0,0.325,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00591,Drinks 37b5ee,CAT007,18.0,18.0,18.0,5832.0,0.25,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00592,Stationery 6458c3,CAT002,35.0,35.0,27.0,33075.0,2.283,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00593,Electronics 740c72,CAT009,17.0,13.0,22.0,4862.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00594,Sports Leisure 1d2a04,CAT004,25.0,36.0,42.0,37800.0,0.8,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00595,Electronics f13dac,CAT009,20.0,10.0,30.0,6000.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00596,Tablets Printing Image 327011,CAT009,26.0,10.0,26.0,6760.0,0.3,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00597,Health Beauty 574f81,CAT001,14.0,11.0,28.0,4312.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00598,Bed Bath Table 68d777,CAT003,16.0,10.0,16.0,2560.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00599,Bed Bath Table 99a799,CAT003,40.0,18.0,25.0,18000.0,0.825,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00600,Computers Accessories 8ad002,CAT001,12.0,13.0,21.0,3276.0,0.167,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00601,Health Beauty 52469f,CAT001,15.0,3.0,22.0,990.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00602,Telephony e6a0c8,CAT009,12.0,4.0,17.0,816.0,0.35,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00603,Computers Accessories 0d70a4,CAT001,13.0,11.0,39.0,5577.0,0.517,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00604,Toys 11a003,CAT003,15.0,13.0,28.0,5460.0,0.65,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00605,Baby eb0b01,CAT003,13.0,13.0,20.0,3380.0,0.75,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00606,Perfumery b27f01,CAT001,19.0,18.0,23.0,7866.0,0.468,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00607,Cool Stuff d5c2e9,CAT001,21.0,20.0,20.0,8400.0,0.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00608,Audio 89dc74,CAT009,17.0,14.0,19.0,4522.0,0.588,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00609,Health Beauty 834826,CAT001,39.0,22.0,27.0,23166.0,1.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00610,Health Beauty 40cbc3,CAT001,15.0,5.0,29.0,2175.0,0.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00611,Baby 308d88,CAT003,50.0,15.0,75.0,56250.0,9.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00612,Office Furniture e3bfb6,CAT004,24.0,58.0,63.0,87696.0,16.65,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00613,Health Beauty b433e6,CAT001,21.0,14.0,28.0,8232.0,0.838,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00614,Computers Accessories 037f1c,CAT001,11.0,5.0,16.0,880.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00615,Bed Bath Table f3ba12,CAT003,45.0,10.0,35.0,15750.0,1.05,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00616,Watches Gifts b76546,CAT001,20.0,2.0,16.0,640.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00617,Health Beauty a8502e,CAT001,18.0,9.0,12.0,1944.0,0.138,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00618,Cool Stuff f43c75,CAT001,34.0,5.0,34.0,5780.0,1.85,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00619,Bed Bath Table fa122f,CAT003,30.0,4.0,40.0,4800.0,0.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00620,Health Beauty a6f82a,CAT001,15.0,3.0,22.0,990.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00621,Home Construction 236b8e,CAT006,15.0,30.0,23.0,10350.0,1.25,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00622,Bed Bath Table 825326,CAT003,35.0,2.0,44.0,3080.0,1.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00623,Toys fff228,CAT003,29.0,30.0,39.0,33930.0,5.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00624,Furniture Decor bb38f9,CAT004,21.0,19.0,28.0,11172.0,1.9,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00625,Baby 432def,CAT003,32.0,13.0,39.0,16224.0,1.533,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00626,Telephony 1b6276,CAT009,11.0,4.0,19.0,836.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00627,Bed Bath Table 7652ba,CAT003,25.0,20.0,30.0,15000.0,1.75,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00628,Computers 0488f8,CAT009,39.0,31.0,16.0,19344.0,2.75,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00629,Baby f080bd,CAT003,45.0,22.0,35.0,34650.0,0.9,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00630,Watches Gifts 9a3419,CAT001,11.0,14.0,16.0,2464.0,0.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00631,Cool Stuff d02d83,CAT001,12.0,7.0,18.0,1512.0,0.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00632,Health Beauty 22abd5,CAT001,36.0,26.0,36.0,33696.0,5.65,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00633,Cool Stuff 346d28,CAT001,19.0,44.0,33.0,27588.0,1.95,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00634,Pet Shop efa64c,CAT007,28.0,30.0,26.0,21840.0,0.974,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00635,Health Beauty f07ec0,CAT001,16.0,11.0,60.0,10560.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00636,Health Beauty 041a8c,CAT001,16.0,6.0,22.0,2112.0,0.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00637,Stationery 451e9d,CAT002,29.0,20.0,60.0,34800.0,5.85,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00638,Computers Accessories 03d46c,CAT001,29.0,2.0,41.0,2378.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00639,Stationery 404112,CAT002,32.0,10.0,46.0,14720.0,0.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00640,Watches Gifts 92ed5e,CAT001,18.0,10.0,17.0,3060.0,0.733,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00641,Small Appliances Home Oven And Coffee 077663,CAT005,35.0,33.0,45.0,51975.0,9.05,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00642,Computers Accessories c3fcbb,CAT001,21.0,3.0,16.0,1008.0,0.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00643,Cool Stuff ecb2c0,CAT001,15.0,25.0,42.0,15750.0,1.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00644,Furniture Decor ab1255,CAT004,35.0,35.0,23.0,28175.0,3.45,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00645,Toys 3c231e,CAT003,22.0,11.0,23.0,5566.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00646,Furniture Decor 775df9,CAT004,25.0,25.0,30.0,18750.0,1.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00647,Health Beauty 29d53b,CAT001,15.0,9.0,18.0,2430.0,0.123,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00648,Cool Stuff 43c6d6,CAT001,13.0,11.0,18.0,2574.0,0.586,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00649,Cool Stuff 4daa77,CAT001,15.0,12.0,18.0,3240.0,0.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00650,Garden Tools 743df2,CAT006,19.0,18.0,20.0,6840.0,0.7,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00651,Fashion Bags Accessories fda92a,CAT003,11.0,5.0,16.0,880.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00652,Bed Bath Table cf73cd,CAT003,32.0,7.0,34.0,7616.0,1.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00653,Cool Stuff 69f61a,CAT001,34.0,5.0,34.0,5780.0,1.8,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00654,Furniture Decor 25ef46,CAT004,22.0,8.0,26.0,4576.0,0.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00655,Office Furniture f7a3ba,CAT004,83.0,7.0,81.0,47061.0,15.475,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00656,Watches Gifts fd2785,CAT001,11.0,2.0,16.0,352.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00657,Telephony e468c0,CAT009,15.0,15.0,19.0,4275.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00658,Furniture Decor 1466a1,CAT004,84.0,8.0,84.0,56448.0,14.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00659,Cool Stuff 2e0c5e,CAT001,33.0,33.0,34.0,37026.0,7.75,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00660,Furniture Decor 139e62,CAT004,20.0,3.0,30.0,1800.0,0.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00661,Agro Industry And Commerce 003690,CAT007,20.0,30.0,30.0,18000.0,5.8,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00662,Cool Stuff 7f1baa,CAT001,13.0,11.0,17.0,2431.0,0.163,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00663,Health Beauty 36cfc5,CAT001,30.0,30.0,30.0,27000.0,0.75,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00664,Small Appliances e7da54,CAT005,16.0,19.0,21.0,6384.0,0.625,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00665,Electronics 891f24,CAT009,16.0,7.0,25.0,2800.0,0.2,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00666,Sports Leisure 29a975,CAT004,33.0,10.0,85.0,28050.0,9.45,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00667,Fashion Bags Accessories 24f508,CAT003,20.0,2.0,16.0,640.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00668,Luggage Accessories a92c52,CAT004,32.0,45.0,23.0,33120.0,0.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00669,Cool Stuff 8c1ea8,CAT001,79.0,2.0,63.0,9954.0,5.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00670,Musical Instruments 80586c,CAT009,20.0,20.0,20.0,8000.0,0.6,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00671,Housewares da714e,CAT003,22.0,17.0,21.0,7854.0,1.45,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00672,Housewares 5aa298,CAT003,20.0,50.0,60.0,60000.0,9.9,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00673,Health Beauty d82cb1,CAT001,15.0,3.0,22.0,990.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00674,Baby cf8e2d,CAT003,44.0,47.0,38.0,78584.0,10.75,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00675,Sports Leisure 6b160f,CAT004,11.0,7.0,100.0,7700.0,1.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00676,Pet Shop bf264a,CAT007,30.0,20.0,40.0,24000.0,1.15,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00677,Sports Leisure 291d50,CAT004,11.0,10.0,17.0,1870.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00678,Sports Leisure cdfead,CAT004,20.0,16.0,21.0,6720.0,0.26,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00679,Health Beauty ad0dbf,CAT001,20.0,10.0,16.0,3200.0,0.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00680,Furniture Decor 9546a9,CAT004,30.0,30.0,30.0,27000.0,2.65,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00681,Kitchen Dining Laundry Garden Furniture 2449f9,CAT004,35.0,15.0,45.0,23625.0,1.85,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00682,Computers Accessories 335b08,CAT001,14.0,11.0,19.0,2926.0,0.16,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00683,Office Furniture 62bde1,CAT004,17.0,52.0,53.0,46852.0,9.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00684,Pet Shop 712899,CAT007,60.0,19.0,81.0,92340.0,15.7,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00685,Computers Accessories fc23e4,CAT001,23.0,4.0,31.0,2852.0,0.95,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00686,Furniture Decor 4bd23e,CAT004,16.0,8.0,16.0,2048.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00687,Sports Leisure f9ff20,CAT004,25.0,15.0,50.0,18750.0,0.8,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00688,Bed Bath Table d415b6,CAT003,28.0,4.0,22.0,2464.0,1.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00689,Auto ec353f,CAT006,20.0,6.0,17.0,2040.0,0.35,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00690,Health Beauty 1859b2,CAT001,11.0,9.0,16.0,1584.0,0.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00691,Bed Bath Table 6c920b,CAT003,49.0,17.0,68.0,56644.0,2.584,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00692,Health Beauty d2451b,CAT001,12.0,4.0,15.0,720.0,0.117,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00693,Books General Interest 921283,CAT002,15.0,22.0,20.0,6600.0,0.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00694,Musical Instruments 15ec27,CAT009,25.0,20.0,30.0,15000.0,0.8,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00695,Sports Leisure d3fa15,CAT004,25.0,6.0,27.0,4050.0,0.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00696,Stationery f32445,CAT002,24.0,7.0,25.0,4200.0,0.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00697,Telephony 7d2bb2,CAT009,12.0,4.0,17.0,816.0,0.25,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00698,Bed Bath Table fd0c9a,CAT003,20.0,20.0,20.0,8000.0,0.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00699,Housewares 84b567,CAT003,45.0,19.0,45.0,38475.0,11.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00700,Toys d701dd,CAT003,48.0,35.0,44.0,73920.0,6.133,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00701,Computers Accessories 25a921,CAT001,20.0,5.0,16.0,1600.0,0.275,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00702,Baby bb3c36,CAT003,11.0,7.0,16.0,1232.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00703,Cool Stuff 6d29bd,CAT001,15.0,10.0,27.0,4050.0,0.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00704,Kitchen Dining Laundry Garden Furniture 5b0f5e,CAT004,12.0,12.0,41.0,5904.0,0.975,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00705,Telephony 954226,CAT009,12.0,4.0,17.0,816.0,0.3,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00706,Health Beauty abf358,CAT001,17.0,14.0,26.0,6188.0,1.075,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00707,Health Beauty 484dcb,CAT001,13.0,11.0,17.0,2431.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00708,Sports Leisure a2aa05,CAT004,20.0,16.0,29.0,9280.0,0.525,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00709,Health Beauty 1f3955,CAT001,30.0,20.0,20.0,12000.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00710,Furniture Decor 311b95,CAT004,11.0,11.0,69.0,8349.0,0.75,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00711,Perfumery f1d16e,CAT001,14.0,9.0,20.0,2520.0,0.475,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00712,Computers Accessories 0946e0,CAT001,20.0,6.0,28.0,3360.0,0.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00713,Perfumery d3c5d4,CAT001,12.0,4.0,17.0,816.0,0.135,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00714,Furniture Decor c82946,CAT004,13.0,8.0,68.0,7072.0,0.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00715,Auto 4f7ee1,CAT006,27.0,25.0,30.0,20250.0,1.277,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00716,Telephony bc1585,CAT009,20.0,4.0,16.0,1280.0,0.25,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00717,Computers Accessories a92bc4,CAT001,20.0,16.0,16.0,5120.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00718,Computers Accessories cc990e,CAT001,13.0,12.0,16.0,2496.0,0.167,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00719,Housewares fa0365,CAT003,30.0,30.0,30.0,27000.0,2.85,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00720,Bed Bath Table dd66d8,CAT003,26.0,20.0,30.0,15600.0,1.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00721,Health Beauty 9fa1db,CAT001,15.0,3.0,21.0,945.0,0.175,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00722,Baby cb4388,CAT003,15.0,10.0,21.0,3150.0,0.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00723,Baby c2a923,CAT003,40.0,10.0,40.0,16000.0,4.95,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00724,Bed Bath Table 1184ee,CAT003,23.0,21.0,26.0,12558.0,1.575,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00725,Sports Leisure 81165e,CAT004,35.0,30.0,30.0,31500.0,1.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00726,Telephony c24662,CAT009,12.0,4.0,17.0,816.0,0.35,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00727,Toys 284be9,CAT003,25.0,31.0,18.0,13950.0,1.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00728,Computers 74032f,CAT009,39.0,31.0,16.0,19344.0,2.65,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00729,Bed Bath Table 8efb12,CAT003,19.0,8.0,25.0,3800.0,0.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00730,Bed Bath Table 8dd7a0,CAT003,19.0,9.0,25.0,4275.0,0.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00731,Perfumery 51d74a,CAT001,20.0,11.0,18.0,3960.0,0.35,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00732,Bed Bath Table 653847,CAT003,23.0,26.0,26.0,15548.0,2.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00733,Computers Accessories 6ca73c,CAT001,14.0,14.0,19.0,3724.0,0.245,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00734,Watches Gifts ca734f,CAT001,11.0,2.0,16.0,352.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00735,Office Furniture 60dbf0,CAT004,26.0,26.0,16.0,10816.0,2.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00736,Telephony a39791,CAT009,12.0,4.0,17.0,816.0,0.3,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00737,Watches Gifts 6c3869,CAT001,20.0,2.0,16.0,640.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00738,Health Beauty c0aea0,CAT001,18.0,14.0,25.0,6300.0,0.125,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00739,Toys 579d00,CAT003,22.0,39.0,46.0,39468.0,4.267,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00740,Pet Shop 4a7240,CAT007,14.0,10.0,18.0,2520.0,0.156,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00741,Health Beauty 9d2891,CAT001,14.0,10.0,18.0,2520.0,0.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00742,Bed Bath Table a2092a,CAT003,30.0,10.0,30.0,9000.0,1.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00743,Telephony d20522,CAT009,13.0,9.0,18.0,2106.0,0.183,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00744,Telephony adaa94,CAT009,13.0,6.0,17.0,1326.0,0.225,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00745,Stationery 2b7f26,CAT002,29.0,20.0,60.0,34800.0,7.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00746,Sports Leisure c48b67,CAT004,25.0,14.0,30.0,10500.0,0.281,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00747,Bed Bath Table abef72,CAT003,30.0,10.0,40.0,12000.0,1.85,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00748,Health Beauty 11b17e,CAT001,22.0,9.0,26.0,5148.0,0.633,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00749,Electronics 946375,CAT009,22.0,9.0,28.0,5544.0,0.275,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00750,Stationery 506658,CAT002,37.0,55.0,28.0,56980.0,7.65,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00751,Auto 9b0b47,CAT006,17.0,6.0,16.0,1632.0,0.358,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00752,Office Furniture cadb1a,CAT004,21.0,21.0,27.0,11907.0,3.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00753,Office Furniture 1b8834,CAT004,24.0,62.0,63.0,93744.0,17.05,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00754,Health Beauty 24eadc,CAT001,17.0,10.0,27.0,4590.0,1.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00755,Electronics aff958,CAT009,14.0,6.0,16.0,1344.0,0.2,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00756,Perfumery cce962,CAT001,15.0,8.0,23.0,2760.0,0.5,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00757,Computers Accessories 1535fa,CAT001,11.0,10.0,30.0,3300.0,0.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00758,Health Beauty 101a85,CAT001,16.0,12.0,30.0,5760.0,0.543,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00759,Computers Accessories e28faa,CAT001,25.0,2.0,35.0,1750.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00760,Bed Bath Table 9dc0a4,CAT003,23.0,15.0,23.0,7935.0,0.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00761,Bed Bath Table 3a9847,CAT003,16.0,10.0,16.0,2560.0,0.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00762,Bed Bath Table 9f5489,CAT003,30.0,5.0,40.0,6000.0,0.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00763,Health Beauty 6a9bf8,CAT001,15.0,3.0,22.0,990.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00764,Bed Bath Table 451f32,CAT003,19.0,3.0,30.0,1710.0,0.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00765,Fashion Bags Accessories d41ebd,CAT003,20.0,2.0,16.0,640.0,0.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00766,Sports Leisure febeb0,CAT004,21.0,26.0,21.0,11466.0,0.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00767,Computers Accessories 64bd78,CAT001,23.0,8.0,25.0,4600.0,0.625,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00768,Bed Bath Table d23e33,CAT003,33.0,9.0,34.0,10098.0,1.95,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00769,Telephony 6614a4,CAT009,12.0,4.0,17.0,816.0,0.3,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00770,Toys cce9ea,CAT003,21.0,6.0,18.0,2268.0,0.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00771,Perfumery 718a4c,CAT001,19.0,13.0,23.0,5681.0,0.54,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00772,Fashion Bags Accessories 829d3f,CAT003,20.0,5.0,16.0,1600.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00773,Kitchen Dining Laundry Garden Furniture 9151a4,CAT004,15.0,15.0,100.0,22500.0,14.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00774,Luggage Accessories 491657,CAT004,33.0,10.0,48.0,15840.0,1.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00775,Watches Gifts 0271cd,CAT001,25.0,10.0,40.0,10000.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00776,Housewares 01e09b,CAT003,20.0,25.0,20.0,10000.0,1.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00777,Construction Tools Construction f32dcb,CAT006,15.0,10.0,20.0,3000.0,0.45,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00778,Computers Accessories 67aefd,CAT001,15.0,7.0,18.0,1890.0,0.125,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00779,Stationery 756258,CAT002,29.0,20.0,60.0,34800.0,10.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00780,Toys 70c792,CAT003,45.0,50.0,45.0,101250.0,19.45,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00781,Office Furniture 821560,CAT004,16.0,50.0,53.0,42400.0,8.45,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00782,Fashion Bags Accessories a77e02,CAT003,11.0,13.0,16.0,2288.0,0.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00783,Home Construction cd8daf,CAT006,16.0,20.0,16.0,5120.0,0.75,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00784,Housewares 16b892,CAT003,29.0,66.0,60.0,114840.0,30.0,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00785,Cool Stuff 127dfd,CAT001,32.0,24.0,44.0,33792.0,1.625,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00786,Sports Leisure 3c7c11,CAT004,15.0,15.0,30.0,6750.0,0.12,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00787,Computers Accessories 8b43a1,CAT001,36.0,6.0,32.0,6912.0,0.338,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00788,Bed Bath Table 89054b,CAT003,15.0,2.0,20.0,600.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00789,Sports Leisure 02506a,CAT004,31.0,32.0,31.0,30752.0,1.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00790,Toys 7187ed,CAT003,26.0,12.0,33.0,10296.0,2.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00791,Sports Leisure e55bd8,CAT004,15.0,15.0,105.0,23625.0,2.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00792,Bed Bath Table 7dfc31,CAT003,36.0,8.0,41.0,11808.0,2.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00793,Bed Bath Table 2bda34,CAT003,16.0,10.0,16.0,2560.0,0.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00794,Fixed Telephony 63bee6,CAT009,13.0,5.0,16.0,1040.0,0.1,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00795,Perfumery fa0802,CAT001,20.0,14.0,20.0,5600.0,0.46,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00796,Housewares d5956b,CAT003,30.0,30.0,50.0,45000.0,3.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00797,Health Beauty 7400c8,CAT001,19.0,13.0,21.0,5187.0,1.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00798,Furniture Decor e06d0d,CAT004,20.0,30.0,16.0,9600.0,0.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00799,Bed Bath Table 531c18,CAT003,22.0,6.0,30.0,3960.0,1.375,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00800,Computers Accessories 710dae,CAT001,20.0,5.0,20.0,2000.0,0.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00801,Health Beauty d7f2b7,CAT001,18.0,15.0,19.0,5130.0,0.083,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00802,Toys 84cca1,CAT003,20.0,21.0,25.0,10500.0,0.888,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00803,Sports Leisure 29a342,CAT004,20.0,20.0,20.0,8000.0,4.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00804,Computers Accessories 603d36,CAT001,13.0,19.0,19.0,4693.0,0.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00805,Costruction Tools Tools 945faf,CAT006,16.0,16.0,16.0,4096.0,0.2,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00806,Telephony 564c23,CAT009,12.0,4.0,18.0,864.0,0.275,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00807,Sports Leisure 30e119,CAT004,24.0,31.0,28.0,20832.0,2.438,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00808,Watches Gifts dae7b0,CAT001,11.0,2.0,16.0,352.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00809,Construction Tools Construction 74ce39,CAT006,42.0,12.0,39.0,19656.0,10.9,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00810,Bed Bath Table f28a42,CAT003,30.0,5.0,30.0,4500.0,1.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00811,Telephony e18728,CAT009,12.0,4.0,17.0,816.0,0.3,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00812,Electronics f5f12e,CAT009,15.0,12.0,18.0,3240.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00813,Computers Accessories 3172fc,CAT001,11.0,5.0,16.0,880.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00814,Computers Accessories 7dd64c,CAT001,13.0,14.0,17.0,3094.0,0.225,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00815,Auto 6e05f5,CAT006,61.0,13.0,61.0,48373.0,7.225,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00816,Sports Leisure 108e4a,CAT004,35.0,10.0,41.0,14350.0,1.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00817,Housewares 2957be,CAT003,20.0,45.0,20.0,18000.0,0.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00818,Computers df2abc,CAT009,39.0,31.0,16.0,19344.0,2.8,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00819,Health Beauty 775420,CAT001,18.0,11.0,43.0,8514.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00820,Pet Shop 31cca6,CAT007,30.0,20.0,30.0,18000.0,0.85,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00821,Furniture Decor a130da,CAT004,35.0,35.0,35.0,42875.0,7.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00822,Telephony d100de,CAT009,11.0,4.0,17.0,748.0,0.3,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00823,Electronics 779fae,CAT009,25.0,65.0,16.0,26000.0,5.45,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00824,Sports Leisure 321e5c,CAT004,50.0,10.0,58.0,29000.0,4.8,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00825,Audio 90dc72,CAT009,13.0,11.0,19.0,2717.0,0.343,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00826,Audio adf7e5,CAT009,15.0,14.0,19.0,3990.0,0.53,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00827,Cool Stuff 83874c,CAT001,16.0,40.0,23.0,14720.0,2.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00828,Bed Bath Table fc31ef,CAT003,30.0,4.0,40.0,4800.0,0.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00829,Auto 1b3deb,CAT006,12.0,4.0,17.0,816.0,0.3,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00830,Home Construction d0f87c,CAT006,11.0,24.0,32.0,8448.0,0.9,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00831,Telephony 9fc147,CAT009,11.0,6.0,16.0,1056.0,0.5,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00832,Health Beauty e78ccc,CAT001,38.0,39.0,30.0,44460.0,9.9,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00833,Health Beauty e24c4a,CAT001,15.0,3.0,22.0,990.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00834,Cool Stuff 830724,CAT001,15.0,25.0,42.0,15750.0,1.0,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00835,Watches Gifts f954e0,CAT001,12.0,20.0,40.0,9600.0,0.95,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00836,Pet Shop 0b3dcb,CAT007,23.0,19.0,26.0,11362.0,0.9,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00837,Electronics e54ba8,CAT009,15.0,11.0,22.0,3630.0,0.175,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00838,Health Beauty dea406,CAT001,12.0,11.0,42.0,5544.0,1.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00839,Electronics 4edbe0,CAT009,16.0,7.0,25.0,2800.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00840,Home Appliances 0df5a7,CAT005,17.0,12.0,30.0,6120.0,0.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00841,Baby 7be2a5,CAT003,40.0,20.0,30.0,24000.0,0.8,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00842,Computers Accessories 55cea1,CAT001,16.0,16.0,16.0,4096.0,0.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00843,Musical Instruments c2cadd,CAT009,45.0,18.0,55.0,44550.0,7.5,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00844,Health Beauty ae7573,CAT001,56.0,75.0,50.0,210000.0,30.0,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00845,Telephony db0403,CAT009,13.0,8.0,15.0,1560.0,0.128,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00846,Air Conditioning b42cdb,CAT005,20.0,39.0,33.0,25740.0,1.132,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00847,Electronics 99ae01,CAT009,14.0,6.0,16.0,1344.0,0.2,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00848,Baby e907a3,CAT003,50.0,10.0,50.0,25000.0,0.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00849,Unknown d3f14e,CAT003,11.0,4.0,16.0,704.0,0.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00850,Furniture Decor a3eeb4,CAT004,60.0,10.0,80.0,48000.0,0.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00851,Sports Leisure 336e8f,CAT004,20.0,10.0,35.0,7000.0,1.0,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00852,Office Furniture 210dd4,CAT004,26.0,62.0,53.0,85436.0,7.513,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00853,Bed Bath Table b9ab20,CAT003,35.0,15.0,45.0,23625.0,2.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00854,Luggage Accessories fb1870,CAT004,49.0,10.0,33.0,16170.0,1.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00855,Auto d5ebd0,CAT006,17.0,4.0,17.0,1156.0,0.1,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00856,Office Furniture 6e436e,CAT004,57.0,8.0,101.0,46056.0,13.867,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00857,Pet Shop 930c83,CAT007,15.0,10.0,19.0,2850.0,0.15,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00858,Cool Stuff c5afb3,CAT001,30.0,40.0,50.0,60000.0,1.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00859,Consoles Games 929201,CAT009,13.0,8.0,17.0,1768.0,0.157,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00860,Perfumery 0cdae3,CAT001,11.0,11.0,20.0,2420.0,0.4,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00861,Toys 3e9131,CAT003,36.0,28.0,36.0,36288.0,3.89,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00862,Furniture Decor c10910,CAT004,35.0,15.0,25.0,13125.0,0.75,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00863,Toys 46b64b,CAT003,14.0,16.0,20.0,4480.0,0.442,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00864,Toys ce5895,CAT003,30.0,17.0,30.0,15300.0,0.75,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00865,Furniture Decor 8df397,CAT004,11.0,11.0,69.0,8349.0,0.85,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00866,Garden Tools e987ec,CAT006,11.0,2.0,16.0,352.0,0.15,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00867,Computers Accessories 3ccf61,CAT001,13.0,12.0,24.0,3744.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00868,Sports Leisure 0b5739,CAT004,16.0,12.0,19.0,3648.0,0.491,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00869,Electronics ab6a46,CAT009,17.0,13.0,22.0,4862.0,0.175,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00870,Furniture Decor c0becb,CAT004,20.0,5.0,30.0,3000.0,1.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00871,Cool Stuff 83073b,CAT001,22.0,6.0,22.0,2904.0,0.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00872,Housewares ce0ba5,CAT003,18.0,31.0,21.0,11718.0,0.628,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00873,Consoles Games 897ff4,CAT009,16.0,2.0,18.0,576.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00874,Food 3d7131,CAT007,20.0,21.0,20.0,8400.0,3.35,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00875,Construction Tools Lights 3e95aa,CAT006,16.0,19.0,16.0,4864.0,1.05,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00876,Perfumery 9c3318,CAT001,17.0,17.0,19.0,5491.0,0.532,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00877,Bed Bath Table 02b648,CAT003,30.0,20.0,35.0,21000.0,2.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00878,Unknown 66f6f6,CAT003,15.0,5.0,25.0,1875.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00879,Fashion Bags Accessories caa258,CAT003,20.0,15.0,22.0,6600.0,2.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00880,Bed Bath Table 4c42db,CAT003,28.0,20.0,16.0,8960.0,0.8,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00881,Toys fe4fd8,CAT003,35.0,62.0,20.0,43400.0,7.05,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00882,Sports Leisure 4155f9,CAT004,15.0,18.0,62.0,16740.0,1.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00883,Health Beauty 350fc7,CAT001,27.0,30.0,28.0,22680.0,2.017,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00884,Bed Bath Table 503033,CAT003,17.0,17.0,16.0,4624.0,0.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00885,Food 3631df,CAT007,11.0,8.0,16.0,1408.0,0.125,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00886,Bed Bath Table 515b2e,CAT003,16.0,10.0,16.0,2560.0,0.65,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00887,Watches Gifts 512478,CAT001,20.0,2.0,16.0,640.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00888,Computers Accessories 15657a,CAT001,29.0,2.0,41.0,2378.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00889,Sports Leisure 4045f9,CAT004,22.0,10.0,62.0,13640.0,3.05,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00890,Sports Leisure c9f032,CAT004,22.0,14.0,28.0,8624.0,1.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00891,Housewares 2475cd,CAT003,40.0,5.0,40.0,8000.0,0.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00892,Watches Gifts 651158,CAT001,20.0,2.0,16.0,640.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00893,Computers Accessories b947a4,CAT001,15.0,15.0,20.0,4500.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00894,Health Beauty 0f15da,CAT001,15.0,9.0,20.0,2700.0,0.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00895,Computers Accessories fbbf2c,CAT001,16.0,9.0,19.0,2736.0,0.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00896,Fashion Bags Accessories 183965,CAT003,11.0,9.0,16.0,1584.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00897,Health Beauty a6929e,CAT001,16.0,20.0,21.0,6720.0,0.8,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00898,Bed Bath Table 97ad6a,CAT003,50.0,17.0,70.0,59500.0,1.85,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00899,Garden Tools a3ec5a,CAT006,20.0,18.0,23.0,8280.0,0.625,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00900,Cool Stuff ad3c26,CAT001,40.0,8.0,86.0,27520.0,9.65,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00901,Health Beauty c98deb,CAT001,34.0,29.0,34.0,33524.0,5.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00902,Sports Leisure c7bd9e,CAT004,11.0,14.0,22.0,3388.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00903,Perfumery ee93c1,CAT001,30.0,24.0,20.0,14400.0,1.7,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00904,Cool Stuff 9e6d1b,CAT001,14.0,8.0,20.0,2240.0,1.75,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00905,Health Beauty d03388,CAT001,25.0,12.0,38.0,11400.0,0.75,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00906,Health Beauty 0d1359,CAT001,20.0,8.0,18.0,2880.0,1.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00907,Stationery bf5dee,CAT002,28.0,30.0,38.0,31920.0,6.05,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00908,Watches Gifts ac2fcc,CAT001,11.0,2.0,16.0,352.0,0.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00909,Telephony 4ee59e,CAT009,14.0,8.0,17.0,1904.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00910,Health Beauty b1c4cf,CAT001,13.0,7.0,19.0,1729.0,0.23,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00911,Housewares 5ac79d,CAT003,22.0,8.0,30.0,5280.0,1.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00912,Sports Leisure 1986c4,CAT004,20.0,20.0,20.0,8000.0,0.105,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00913,Electronics 6cc8b2,CAT009,13.0,15.0,20.0,3900.0,4.1,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00914,Furniture Decor f3dd44,CAT004,17.0,20.0,17.0,5780.0,0.75,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00915,Bed Bath Table 8bcd58,CAT003,15.0,2.0,20.0,600.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00916,Tablets Printing Image a4729f,CAT009,26.0,3.0,26.0,2028.0,0.3,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00917,Telephony d95abb,CAT009,12.0,4.0,17.0,816.0,0.35,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00918,Electronics bbb818,CAT009,17.0,8.0,19.0,2584.0,0.161,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00919,Housewares c56609,CAT003,31.0,61.0,31.0,58621.0,10.05,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00920,Stationery ed9087,CAT002,29.0,20.0,60.0,34800.0,8.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00921,Housewares b0194c,CAT003,30.0,30.0,30.0,27000.0,3.05,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00922,Housewares a322db,CAT003,25.0,62.0,25.0,38750.0,7.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00923,Sports Leisure 9cc3b3,CAT004,35.0,10.0,41.0,14350.0,2.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00924,Sports Leisure 6e7401,CAT004,11.0,11.0,20.0,2420.0,0.05,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00925,Health Beauty e2d39f,CAT001,15.0,3.0,22.0,990.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00926,Garden Tools 958a53,CAT006,26.0,26.0,26.0,17576.0,17.3,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00927,Computers Accessories c527a2,CAT001,11.0,13.0,16.0,2288.0,0.115,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00928,Bed Bath Table c2995e,CAT003,30.0,4.0,40.0,4800.0,0.9,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00929,Computers Accessories 27e23d,CAT001,11.0,9.0,36.0,3564.0,0.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00930,Home Appliances 8155ec,CAT005,15.0,10.0,30.0,4500.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00931,Agro Industry And Commerce 7b79fd,CAT007,20.0,30.0,30.0,18000.0,2.65,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00932,Telephony 0f50ad,CAT009,13.0,10.0,18.0,2340.0,0.3,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00933,Luggage Accessories 15d4a4,CAT004,49.0,10.0,33.0,16170.0,1.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00934,Watches Gifts ef5765,CAT001,25.0,10.0,40.0,10000.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00935,Computers Accessories d4eed2,CAT001,13.0,13.0,17.0,2873.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00936,Electronics 4d533e,CAT009,14.0,12.0,22.0,3696.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00937,Sports Leisure f7593c,CAT004,35.0,10.0,41.0,14350.0,1.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00938,Sports Leisure 8e9ec5,CAT004,16.0,16.0,16.0,4096.0,0.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00939,Sports Leisure 683cbe,CAT004,22.0,27.0,22.0,13068.0,1.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00940,Toys 295855,CAT003,11.0,7.0,16.0,1232.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00941,Health Beauty e2c0e6,CAT001,13.0,9.0,17.0,1989.0,0.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00942,Perfumery 4f9db3,CAT001,17.0,17.0,22.0,6358.0,0.448,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00943,Telephony cbe453,CAT009,14.0,12.0,16.0,2688.0,0.25,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00944,Market Place 8573c7,CAT003,14.0,8.0,20.0,2240.0,0.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00945,Bed Bath Table cc1df2,CAT003,32.0,7.0,34.0,7616.0,1.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00946,Garden Tools 64891c,CAT006,39.0,13.0,42.0,21294.0,9.1,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00947,Health Beauty 152c4c,CAT001,11.0,13.0,16.0,2288.0,0.18,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00948,Telephony 94f7d5,CAT009,11.0,6.0,18.0,1188.0,0.1,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00949,Computers Accessories 5a697e,CAT001,13.0,7.0,17.0,1547.0,0.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00950,Health Beauty a47a48,CAT001,12.0,7.0,19.0,1596.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00951,Health Beauty 132579,CAT001,20.0,25.0,35.0,17500.0,0.95,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00952,Health Beauty 57f479,CAT001,17.0,15.0,20.0,5100.0,1.029,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00953,Bed Bath Table b4133e,CAT003,35.0,15.0,45.0,23625.0,0.8,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00954,Telephony 715dde,CAT009,16.0,8.0,19.0,2432.0,0.317,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00955,Unknown 512bfb,CAT003,20.0,30.0,35.0,21000.0,0.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00956,Watches Gifts eca049,CAT001,11.0,2.0,16.0,352.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00957,Construction Tools Construction f6bd2c,CAT006,36.0,29.0,16.0,16704.0,2.1,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00958,Computers Accessories 310f0a,CAT001,30.0,2.0,42.0,2520.0,0.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00959,Sports Leisure edea9c,CAT004,20.0,100.0,40.0,80000.0,3.45,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00960,Pet Shop d532a3,CAT007,45.0,8.0,50.0,18000.0,8.75,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00961,Watches Gifts 36b29c,CAT001,14.0,9.0,18.0,2268.0,0.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00962,Bed Bath Table 4aaa59,CAT003,30.0,4.0,40.0,4800.0,0.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00963,Electronics 1455f3,CAT009,12.0,7.0,16.0,1344.0,0.213,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00964,Office Furniture fc34d1,CAT004,18.0,54.0,54.0,52488.0,12.65,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00965,Computers Accessories 03697f,CAT001,13.0,9.0,16.0,1872.0,0.145,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00966,Garden Tools 9a37dd,CAT006,18.0,6.0,90.0,9720.0,1.45,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00967,Drinks 48bdb2,CAT007,16.0,16.0,17.0,4352.0,0.333,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00968,Housewares b9e9d4,CAT003,34.0,35.0,43.0,51170.0,11.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00969,Electronics 672ea6,CAT009,23.0,17.0,18.0,7038.0,1.167,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00970,Telephony 66d035,CAT009,16.0,5.0,23.0,1840.0,0.17,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00971,Baby d5d6b7,CAT003,16.0,9.0,32.0,4608.0,0.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00972,Cool Stuff a346a6,CAT001,15.0,25.0,42.0,15750.0,1.45,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00973,Health Beauty 833a7f,CAT001,15.0,3.0,16.0,720.0,0.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00974,Perfumery f9ea20,CAT001,15.0,12.0,18.0,3240.0,0.471,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00975,Pet Shop a9dd4a,CAT007,49.0,10.0,69.0,33810.0,6.2,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00976,Office Furniture 3eeddc,CAT004,69.0,41.0,52.0,147108.0,7.625,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00977,Bed Bath Table 5a5135,CAT003,41.0,11.0,48.0,21648.0,1.938,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00978,Watches Gifts 8e3c08,CAT001,11.0,6.0,16.0,1056.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00979,Bed Bath Table d2a0bc,CAT003,30.0,15.0,45.0,20250.0,0.85,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00980,Furniture Decor 6d44eb,CAT004,28.0,6.0,34.0,5712.0,1.8,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00981,Bed Bath Table 7811c2,CAT003,34.0,3.0,46.0,4692.0,1.8,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00982,Bed Bath Table 1547ff,CAT003,16.0,14.0,28.0,6272.0,1.0,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00983,Telephony 95e32b,CAT009,12.0,6.0,18.0,1296.0,0.117,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-00984,Stationery 341f4b,CAT002,15.0,15.0,51.0,11475.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00985,Office Furniture bad633,CAT004,25.0,62.0,64.0,99200.0,16.167,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00986,Health Beauty 57c493,CAT001,17.0,17.0,16.0,4624.0,0.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00987,Toys 9133c1,CAT003,20.0,35.0,20.0,14000.0,0.8,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00988,Construction Tools Construction ecbf0b,CAT006,23.0,24.0,23.0,12696.0,5.45,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00989,Perfumery 0db394,CAT001,17.0,15.0,21.0,5355.0,0.479,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00990,Bed Bath Table fedb4f,CAT003,34.0,3.0,46.0,4692.0,1.65,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00991,Health Beauty 54f7fb,CAT001,13.0,13.0,18.0,3042.0,0.45,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00992,Watches Gifts 310062,CAT001,12.0,10.0,16.0,1920.0,0.165,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00993,Furniture Decor 20221c,CAT004,32.0,6.0,35.0,6720.0,1.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00994,Perfumery 346ab9,CAT001,13.0,11.0,20.0,2860.0,0.431,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-00995,Stationery 31c3c0,CAT002,25.0,15.0,25.0,9375.0,0.45,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00996,Cool Stuff 08b183,CAT001,16.0,40.0,16.0,10240.0,2.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00997,Office Furniture 00ecfb,CAT004,17.0,52.0,52.0,45968.0,8.217,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-00998,Auto 6fd522,CAT006,25.0,16.0,46.0,18400.0,2.7,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-00999,Telephony bce19d,CAT009,20.0,4.0,19.0,1520.0,0.05,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01000,Cool Stuff 898300,CAT001,15.0,25.0,42.0,15750.0,2.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01001,Housewares b6ce5a,CAT003,22.0,22.0,25.0,12100.0,1.683,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01002,Furniture Decor 67dc45,CAT004,20.0,20.0,20.0,8000.0,1.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01003,Housewares b52984,CAT003,25.0,25.0,25.0,15625.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01004,Housewares 473211,CAT003,25.0,20.0,45.0,22500.0,0.9,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01005,Bed Bath Table ea7a7c,CAT003,30.0,10.0,30.0,9000.0,1.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01006,Furniture Decor 8375c8,CAT004,20.0,35.0,20.0,14000.0,0.95,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01007,Computers Accessories 6849e0,CAT001,20.0,10.0,28.0,5600.0,1.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01008,Bed Bath Table c580a1,CAT003,30.0,4.0,40.0,4800.0,0.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01009,Health Beauty a3e2c3,CAT001,11.0,18.0,26.0,5148.0,1.65,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01010,Health Beauty 42ebd3,CAT001,20.0,18.0,23.0,8280.0,1.025,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01011,Housewares 236387,CAT003,20.0,4.0,33.0,2640.0,0.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01012,Perfumery 885f95,CAT001,15.0,8.0,24.0,2880.0,0.555,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-01013,Housewares 2956c2,CAT003,22.0,14.0,42.0,12936.0,3.95,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01014,Stationery b6ffd4,CAT002,28.0,16.0,28.0,12544.0,0.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01015,Watches Gifts cfec5e,CAT001,20.0,2.0,16.0,640.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01016,Baby 331fda,CAT003,36.0,10.0,47.0,16920.0,0.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01017,Industry Commerce And Business ce68dc,CAT003,18.0,51.0,36.0,33048.0,5.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01018,Electronics c058c2,CAT009,15.0,13.0,22.0,4290.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01019,Sports Leisure bf54e0,CAT004,14.0,9.0,36.0,4536.0,2.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01020,Baby 06f8ff,CAT003,84.0,50.0,23.0,96600.0,23.25,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-01021,Bed Bath Table 62a839,CAT003,40.0,29.0,54.0,62640.0,7.474,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01022,Sports Leisure 803e5b,CAT004,32.0,20.0,42.0,26880.0,6.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01023,Bed Bath Table 62e0e9,CAT003,55.0,10.0,45.0,24750.0,1.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01024,Health Beauty 1f6d3e,CAT001,20.0,10.0,25.0,5000.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01025,Computers Accessories 6d8d2c,CAT001,14.0,15.0,20.0,4200.0,0.28,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01026,Sports Leisure 95ae6a,CAT004,25.0,7.0,25.0,4375.0,0.75,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01027,Health Beauty 4ed7c1,CAT001,16.0,13.0,21.0,4368.0,0.558,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01028,Perfumery 215cda,CAT001,17.0,15.0,19.0,4845.0,0.317,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-01029,Market Place 7102c4,CAT003,22.0,6.0,33.0,4356.0,1.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01030,Perfumery c87a8f,CAT001,11.0,5.0,16.0,880.0,0.05,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-01031,Small Appliances abeeb4,CAT005,20.0,20.0,25.0,10000.0,1.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01032,Health Beauty 26adc1,CAT001,19.0,19.0,22.0,7942.0,1.067,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01033,Telephony 997d28,CAT009,12.0,4.0,17.0,816.0,0.3,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01034,Furniture Decor 6fc1e3,CAT004,20.0,35.0,20.0,14000.0,0.75,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01035,Musical Instruments 6a14f0,CAT009,14.0,4.0,16.0,896.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01036,Computers Accessories 3d8c9a,CAT001,26.0,2.0,20.0,1040.0,0.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01037,Sports Leisure b5f97b,CAT004,24.0,24.0,30.0,17280.0,3.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01038,Musical Instruments a3f45b,CAT009,40.0,30.0,105.0,126000.0,18.0,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01039,Electronics 1da7b7,CAT009,14.0,11.0,18.0,2772.0,0.133,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01040,Health Beauty 3e143b,CAT001,15.0,3.0,22.0,990.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01041,Telephony 83f7da,CAT009,11.0,5.0,19.0,1045.0,0.125,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01042,Watches Gifts fd7704,CAT001,16.0,12.0,18.0,3456.0,0.82,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01043,Sports Leisure 566816,CAT004,20.0,20.0,20.0,8000.0,2.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01044,Garden Tools 3b29ca,CAT006,35.0,10.0,45.0,15750.0,1.5,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-01045,Sports Leisure 42e1de,CAT004,11.0,7.0,100.0,7700.0,2.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01046,Baby b2827b,CAT003,30.0,30.0,40.0,36000.0,1.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01047,Electronics 238162,CAT009,24.0,6.0,61.0,8784.0,1.836,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01048,Housewares 63aa24,CAT003,26.0,26.0,27.0,18252.0,1.225,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01049,Consoles Games 3063aa,CAT009,20.0,20.0,20.0,8000.0,0.35,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01050,Bed Bath Table 59d09c,CAT003,28.0,10.0,32.0,8960.0,1.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01051,Sports Leisure f84ae3,CAT004,25.0,8.0,25.0,5000.0,1.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01052,Computers Accessories 0578bd,CAT001,42.0,20.0,28.0,23520.0,0.8,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01053,Furniture Decor f20b79,CAT004,20.0,20.0,20.0,8000.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01054,Cool Stuff f05673,CAT001,13.0,4.0,17.0,884.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01055,Musical Instruments 29d9bc,CAT009,17.0,12.0,103.0,21012.0,2.75,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01056,Market Place caaa11,CAT003,25.0,25.0,35.0,21875.0,1.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01057,Perfumery 4d8d38,CAT001,11.0,5.0,16.0,880.0,0.05,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-01058,Computers Accessories 505916,CAT001,20.0,12.0,27.0,6480.0,0.61,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01059,Pet Shop 6d6f8a,CAT007,42.0,3.0,55.0,6930.0,1.2,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-01060,Housewares 0e5332,CAT003,15.0,15.0,25.0,5625.0,0.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01061,Electronics 444ff4,CAT009,16.0,8.0,24.0,3072.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01062,Garden Tools 2aecba,CAT006,19.0,22.0,23.0,9614.0,2.3,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-01063,Furniture Decor dc95ee,CAT004,45.0,35.0,45.0,70875.0,13.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01064,Bed Bath Table 29e9cd,CAT003,30.0,4.0,40.0,4800.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01065,Watches Gifts e54d24,CAT001,20.0,2.0,16.0,640.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01066,Perfumery d56e98,CAT001,35.0,26.0,26.0,23660.0,1.8,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-01067,Computers Accessories c6d67d,CAT001,20.0,15.0,20.0,6000.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01068,Telephony d3a478,CAT009,16.0,8.0,19.0,2432.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01069,Housewares 9c0b6b,CAT003,30.0,30.0,30.0,27000.0,1.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01070,Health Beauty 720ef6,CAT001,19.0,16.0,20.0,6080.0,0.125,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01071,Sports Leisure 734df7,CAT004,13.0,4.0,16.0,832.0,0.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01072,Computers Accessories 9f6f1e,CAT001,40.0,10.0,50.0,20000.0,2.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01073,Health Beauty 3419f7,CAT001,15.0,3.0,22.0,990.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01074,Watches Gifts 7b68fd,CAT001,15.0,12.0,18.0,3240.0,0.381,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01075,Baby 6fef27,CAT003,50.0,20.0,60.0,60000.0,3.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01076,Watches Gifts b18d00,CAT001,20.0,2.0,16.0,640.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01077,Perfumery 9fc152,CAT001,15.0,13.0,20.0,3900.0,0.51,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-01078,Construction Tools Construction c2a230,CAT006,20.0,9.0,26.0,4680.0,1.7,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-01079,Furniture Decor 2ff244,CAT004,65.0,11.0,45.0,32175.0,3.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01080,Sports Leisure cb1d39,CAT004,20.0,15.0,27.0,8100.0,0.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01081,Perfumery 190da0,CAT001,16.0,12.0,23.0,4416.0,0.367,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-01082,Health Beauty 452a38,CAT001,11.0,18.0,26.0,5148.0,1.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01083,Bed Bath Table cf4c7d,CAT003,38.0,14.0,60.0,31920.0,6.45,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01084,Watches Gifts 2adf31,CAT001,15.0,14.0,19.0,3990.0,0.757,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01085,Health Beauty 90ece7,CAT001,12.0,12.0,20.0,2880.0,0.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01086,Health Beauty 76e25b,CAT001,12.0,12.0,20.0,2880.0,0.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01087,Stationery d9ce9f,CAT002,12.0,12.0,66.0,9504.0,0.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01088,Food 056886,CAT007,15.0,12.0,16.0,2880.0,0.75,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-01089,Home Appliances 2 2c311e,CAT005,35.0,33.0,45.0,51975.0,8.85,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01090,Health Beauty 92024e,CAT001,15.0,7.0,23.0,2415.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01091,Housewares b62b36,CAT003,30.0,30.0,30.0,27000.0,1.05,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01092,Bed Bath Table 0f1d07,CAT003,30.0,15.0,45.0,20250.0,1.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01093,Telephony c9c92b,CAT009,14.0,7.0,20.0,1960.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01094,Small Appliances fa400f,CAT005,15.0,14.0,24.0,5040.0,0.895,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01095,Computers Accessories 3b54dd,CAT001,14.0,14.0,35.0,6860.0,0.875,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01096,Telephony a8d85f,CAT009,15.0,13.0,19.0,3705.0,0.343,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01097,Stationery ed976d,CAT002,37.0,55.0,28.0,56980.0,7.75,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01098,Furniture Decor 09dd4e,CAT004,30.0,30.0,30.0,27000.0,0.85,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01099,Housewares 149afd,CAT003,20.0,12.0,16.0,3840.0,0.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01100,Furniture Decor dd033a,CAT004,25.0,3.0,50.0,3750.0,0.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01101,Telephony b5c9cf,CAT009,12.0,4.0,17.0,816.0,0.183,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01102,Furniture Decor 1f780a,CAT004,35.0,35.0,25.0,30625.0,3.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01103,Air Conditioning 00d7ad,CAT005,25.0,25.0,25.0,15625.0,8.75,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01104,Food Drink 84451b,CAT007,11.0,17.0,16.0,2992.0,1.15,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-01105,Stationery ffb99d,CAT002,35.0,55.0,30.0,57750.0,8.0,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01106,Bed Bath Table 306f4f,CAT003,19.0,9.0,25.0,4275.0,0.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01107,Baby b4103a,CAT003,44.0,47.0,38.0,78584.0,13.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01108,Health Beauty e20e85,CAT001,20.0,16.0,24.0,7680.0,0.929,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01109,Small Appliances 9a42e3,CAT005,17.0,11.0,21.0,3927.0,0.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01110,Health Beauty 8960d9,CAT001,17.0,12.0,19.0,3876.0,0.39,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01111,Health Beauty f77742,CAT001,17.0,16.0,19.0,5168.0,0.114,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01112,Health Beauty 75bf13,CAT001,16.0,76.0,87.0,105792.0,19.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01113,Bed Bath Table cabb37,CAT003,23.0,15.0,40.0,13800.0,4.05,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01114,Fixed Telephony c8ba4c,CAT009,15.0,9.0,20.0,2700.0,0.283,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01115,Bed Bath Table 724036,CAT003,39.0,7.0,33.0,9009.0,2.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01116,Telephony 59fb10,CAT009,12.0,3.0,18.0,648.0,0.075,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01117,Sports Leisure 362929,CAT004,22.0,27.0,22.0,13068.0,1.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01118,Watches Gifts 854fac,CAT001,11.0,2.0,16.0,352.0,0.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01119,Bed Bath Table 724625,CAT003,30.0,5.0,30.0,4500.0,1.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01120,Housewares 80338c,CAT003,21.0,3.0,26.0,1638.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01121,Cool Stuff ddd832,CAT001,18.0,25.0,45.0,20250.0,2.275,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01122,Watches Gifts 4fe1d7,CAT001,11.0,2.0,16.0,352.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01123,Small Appliances 2626be,CAT005,22.0,19.0,21.0,8778.0,1.833,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01124,Bed Bath Table 2b90f0,CAT003,36.0,2.0,44.0,3168.0,0.9,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01125,Watches Gifts db4d1c,CAT001,13.0,10.0,17.0,2210.0,0.119,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01126,Computers Accessories a6ec61,CAT001,22.0,17.0,31.0,11594.0,1.033,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01127,Stationery 3eb50e,CAT002,29.0,20.0,60.0,34800.0,8.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01128,Housewares 052ecd,CAT003,20.0,23.0,23.0,10580.0,1.291,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01129,Bed Bath Table 97361c,CAT003,15.0,13.0,19.0,3705.0,0.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01130,Toys f40186,CAT003,13.0,4.0,17.0,884.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01131,Health Beauty 623ad3,CAT001,12.0,8.0,13.0,1248.0,0.083,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01132,Watches Gifts 533b05,CAT001,20.0,2.0,16.0,640.0,0.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01133,Housewares f2f133,CAT003,15.0,7.0,23.0,2415.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01134,Bed Bath Table 9881c1,CAT003,30.0,5.0,43.0,6450.0,1.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01135,Telephony 536db4,CAT009,12.0,4.0,17.0,816.0,0.3,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01136,Musical Instruments e810aa,CAT009,20.0,5.0,16.0,1600.0,0.3,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01137,Office Furniture fc04e9,CAT004,31.0,68.0,57.0,120156.0,7.433,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01138,Health Beauty 3b80a0,CAT001,15.0,3.0,22.0,990.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01139,Bed Bath Table 2be0b6,CAT003,16.0,10.0,16.0,2560.0,0.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01140,Pet Shop 0fbe9f,CAT007,14.0,11.0,18.0,2772.0,0.129,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-01141,Housewares 4c3e9f,CAT003,23.0,25.0,23.0,13225.0,0.975,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01142,Housewares 846cbc,CAT003,60.0,25.0,25.0,37500.0,5.675,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01143,Toys 354aae,CAT003,23.0,22.0,25.0,12650.0,0.704,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01144,Electronics 0fa223,CAT009,15.0,12.0,22.0,3960.0,0.175,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01145,Sports Leisure 1d1d88,CAT004,16.0,14.0,80.0,17920.0,1.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01146,Housewares c3208a,CAT003,14.0,10.0,16.0,2240.0,0.4,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01147,Telephony 77b4d8,CAT009,16.0,6.0,23.0,2208.0,0.65,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01148,Sports Leisure 7d7595,CAT004,20.0,15.0,16.0,4800.0,3.45,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01149,Fashion Bags Accessories 7ddd45,CAT003,20.0,2.0,16.0,640.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01150,Bed Bath Table 8d42c5,CAT003,44.0,19.0,65.0,54340.0,2.069,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01151,Health Beauty 7e6c90,CAT001,15.0,3.0,21.0,945.0,0.275,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01152,Housewares 984bb7,CAT003,25.0,25.0,48.0,30000.0,2.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01153,Telephony 12f26f,CAT009,12.0,6.0,17.0,1224.0,0.188,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01154,Bed Bath Table bd7364,CAT003,36.0,8.0,41.0,11808.0,2.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01155,Computers Accessories a8828e,CAT001,11.0,9.0,39.0,3861.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01156,Electronics 575ffc,CAT009,18.0,16.0,20.0,5760.0,0.175,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01157,Electronics 4f6972,CAT009,40.0,30.0,35.0,42000.0,0.8,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01158,Cds Dvds Musicals dca000,CAT002,25.0,15.0,35.0,13125.0,0.55,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01159,Baby 4e2d60,CAT003,27.0,36.0,33.0,32076.0,1.72,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01160,Office Furniture a09e2e,CAT004,28.0,51.0,56.0,79968.0,12.16,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01161,Agro Industry And Commerce 43e054,CAT007,11.0,11.0,17.0,2057.0,0.5,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-01162,Bed Bath Table 39108a,CAT003,30.0,5.0,30.0,4500.0,1.75,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01163,Perfumery 59764d,CAT001,13.0,10.0,18.0,2340.0,0.1,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-01164,Food Drink 4de777,CAT007,15.0,12.0,20.0,3600.0,0.2,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-01165,Stationery f47af0,CAT002,29.0,20.0,60.0,34800.0,6.1,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01166,Telephony 241c08,CAT009,12.0,4.0,18.0,864.0,0.1,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01167,Furniture Decor 56e07b,CAT004,16.0,32.0,16.0,8192.0,1.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01168,Perfumery b4fb0d,CAT001,15.0,27.0,21.0,8505.0,0.45,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-01169,Sports Leisure b4101c,CAT004,22.0,17.0,16.0,5984.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01170,Bed Bath Table f2cb7c,CAT003,34.0,10.0,45.0,15300.0,0.8,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01171,Housewares 490c4e,CAT003,17.0,14.0,23.0,5474.0,0.39,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01172,Computers Accessories f5f785,CAT001,11.0,12.0,16.0,2112.0,0.2,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01173,Cool Stuff 3d9361,CAT001,20.0,20.0,28.0,11200.0,0.9,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01174,Watches Gifts de76ab,CAT001,19.0,6.0,50.0,5700.0,1.75,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01175,Sports Leisure 00a7a2,CAT004,15.0,20.0,20.0,6000.0,0.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01176,Watches Gifts 138660,CAT001,18.0,16.0,19.0,5472.0,0.645,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01177,Sports Leisure a47836,CAT004,21.0,24.0,26.0,13104.0,2.152,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01178,Health Beauty b91093,CAT001,15.0,5.0,16.0,1200.0,0.25,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01179,Furniture Decor e25ec1,CAT004,20.0,30.0,16.0,9600.0,0.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01180,Electronics 85909c,CAT009,13.0,15.0,20.0,3900.0,5.7,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01181,Health Beauty aa1c86,CAT001,26.0,2.0,35.0,1820.0,0.15,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01182,Auto bcff90,CAT006,25.0,4.0,35.0,3500.0,0.4,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-01183,Fixed Telephony 4b44eb,CAT009,11.0,4.0,16.0,704.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01184,Health Beauty 8c662b,CAT001,15.0,10.0,19.0,2850.0,0.35,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01185,Agro Industry And Commerce d77f44,CAT007,13.0,4.0,20.0,1040.0,0.125,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-01186,Cool Stuff 037c95,CAT001,36.0,21.0,42.0,31752.0,5.7,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01187,Bed Bath Table 2aa2b5,CAT003,36.0,8.0,41.0,11808.0,2.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01188,Musical Instruments 23d9e5,CAT009,31.0,9.0,31.0,8649.0,0.617,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01189,Watches Gifts 6bf839,CAT001,20.0,5.0,50.0,5000.0,2.05,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01190,Bed Bath Table d625c6,CAT003,19.0,8.0,25.0,3800.0,0.3,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01191,Consoles Games 847774,CAT009,15.0,7.0,16.0,1680.0,0.25,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01192,Electronics 5c0953,CAT009,11.0,7.0,18.0,1386.0,0.15,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01193,Telephony e1967e,CAT009,15.0,8.0,22.0,2640.0,0.2,fragile,NONE,sourced,valid,olist_products_dataset,medium
+OL-01194,Bed Bath Table 62ad78,CAT003,16.0,10.0,16.0,2560.0,0.6,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01195,Auto 8607b1,CAT006,30.0,25.0,30.0,22500.0,1.5,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-01196,Auto f518c9,CAT006,14.0,9.0,20.0,2520.0,0.45,heavy,NONE,sourced,valid,olist_products_dataset,medium
+OL-01197,Health Beauty 0426df,CAT001,22.0,12.0,36.0,9504.0,1.05,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01198,Cool Stuff 0c27be,CAT001,49.0,8.0,45.0,17640.0,0.5,standard,NONE,sourced,valid,olist_products_dataset,medium
+OL-01199,Perfumery 2e9ae1,CAT001,11.0,5.0,16.0,880.0,0.05,standard,flammable,sourced,valid,olist_products_dataset,medium
+OL-01200,Furniture Decor 7bdd73,CAT004,17.0,17.0,17.0,4913.0,0.6,standard,NONE,sourced,valid,olist_products_dataset,medium

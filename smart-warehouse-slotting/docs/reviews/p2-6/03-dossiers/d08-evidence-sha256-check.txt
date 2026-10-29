@@ -1,0 +1,133 @@
+# D8 — is PHASE_2_EVIDENCE.json still true of the files on disk?
+
+Script: /home/hemanth/.hermes/profiles/reviewer/cache/scratch/evidence_check.py — recomputes every sha256 it records.
+
+    == sha256 recorded vs on disk ==
+      OK       dataset/processed/locations.csv
+      OK       dataset/processed/locations.csv.bak-pre-limits
+      OK       dataset/processed/products.csv
+      OK       dataset/processed/compatibility_rules.csv
+      OK       dataset/processed/inventory.csv
+      OK       dataset/processed/storage_assignments_baseline.csv
+      OK       configs/benchmark.json
+      OK       outputs/optimized/optimized_assignments.csv
+      OK       outputs/baseline_repaired_assignments.csv
+      OK       outputs/baseline_assignments.csv
+      OK       outputs/optimized/optimization_summary.json
+      OK       outputs/evaluation/evaluation_summary.json
+      -> 12/12 match
+    
+    == evidence keys ==
+      ['baseline_repair', 'cat01_sensitivity', 'commands_run', 'cross_checks_vs_pipeline_claims', 'environment', 'findings', 'gate_and_exit_codes', 'generated_at_utc', 'generated_by', 'inputs', 'integrity', 'layouts', 'radius', 'reproducibility', 'schema', 'scratch_scripts', 'structural_sl02', 'task', 'verdict']
+    
+    == findings ==
+      [F1] info: The as-supplied canonical baseline is genuinely infeasible at 10 m, and only at 10 m
+      [F2] major: The published comparison baseline is a feasibility-repaired layout, not the supplied one
+      [F3] info: The result is deterministic and fully reproducible
+      [F4] major: Structural limit schema: Phase 1 added derived beam/level caps and redefined shelf_max; the derivation is undocumented in the Phase-1 note
+      [F5] major: Stale pre-Phase-2 artifacts exist and one evidence path named by the follow-up card does not exist
+      [F6] minor: Phase-1 '4 SL-02 after optimisation' is not reproducible from the retained artifact
+      [F7] info: docs/PHASE_2_CONSTRAINT_ENGINE.md appeared while P2-4 was running
+      [F8] info: run_history entries 1-2 predate the radius field
+    
+    == gate evidence in the file ==
+    {
+      "canonical_run_all": {
+        "command": "cd <sandbox copy of repo> && .venv/bin/python app/main.py run-all",
+        "exit_code": 0,
+        "evaluation_status": "OK",
+        "comparison_valid": true,
+        "blocked_layouts": [],
+        "comparison_rows_published": 18,
+        "feasibility": {
+          "baseline": "FEASIBLE 0",
+          "optimized": "FEASIBLE 0"
+        },
+        "note": "run in a byte-faithful sandbox copy (/tmp/p2v4/sbx) so the delivered outputs/ tree was not rewritten; the regenerated artifacts were then hash-compared to the delivered ones (18/18 identical)"
+      },
+      "canonical_run_all_with_unrepairable_fixture": {
+        "command": "cd <sandbox copy of repo> && .venv/bin/python app/main.py run-all --processed /tmp/p2v4/fixture/processed",
+        "fixture": "copy of the canonical dataset with one extra inventory row for a SKU that does not exist in products.csv (COMP-01 + INV-02, unrepairable by relocation); the canonical dataset was not touched",
+        "exit_code": 1,
+        "evaluation_status": "BLOCKED_INFEASIBLE_LAYOUT",
+        "blocked_layouts": [
+          "baseline",
+          "optimized"
+        ],
+        "comparison_rows_published": 0,
+        "observed": "validate -> 1073 violations; repair 1073 -> 2, terminated=no_improving_move; the repaired layout was REFUSED (baseline_variant stayed as_supplied, conservation 6375/6380 exact=false); simulate printed the gate message and the process exited 1"
+      },
+      "simulate_with_infeasible_layout": {
+        "command": ".venv/bin/python app/main.py simulate --processed /tmp/p2v4/sbx/dataset/processed --scenario A --optimized /tmp/p2v4/sbx/dataset/processed/storage_assignments_baseline.csv --output /tmp/p2v4/cli_blocked_opt_eval",
+        "exit_code": 1,
+        "evaluation_status": "BLOCKED_INFEASIBLE_LAYOUT",
+        "comparison_valid": false,
+        "blocked_layouts": [
+          "optimized"
+        ],
+        "stderr": "BLOCKED by the feasibility gate: ... The diagnostic metrics are not valid evidence; fix the layouts and re-run."
+      },
+      "run_phase6_probes": {
+        "evaluated_baseline_as_supplied": {
+          "evaluation_status": "BLOCKED_INFEASIBLE_LAYOUT",
+          "blocked_layouts": [
+            "baseline"
+          ],
+          "comparison_rows_published": 0,
+          "diagnostic_comparison_rows": 18,
+          "all_diagnostic_rows_labelled_diagnostic_only": true,
+          "comparison_valid": false
+        },
+        "infeasible_optimized_layout": {
+          "evaluation_status": "BLOCKED_INFEASIBLE_LAYOUT",
+          "blocked_layouts": [
+            "optimized"
+          ],
+          "comparison_rows_published": 0
+        }
+      },
+      "exi
+    
+    == reproducibility block ==
+    {
+      "independent_reruns_of_the_canonical_pipeline": {
+        "baseline_repair": {
+          "sha256": "17380197ee66e1ced7a341ce4b15bdb51774cb479e2bfd9ca14deb8ababdd3fa",
+          "byte_identical_to_delivered": true,
+          "stats_match": true
+        },
+        "optimize": {
+          "sha256": "1269e1114e77b631f06cbcdbcb9aaf2588246f8a6cbb8e6ea1d7439444cf16f0",
+          "byte_identical_to_delivered": true,
+          "summary_numbers_equal": true
+        },
+        "evaluation": {
+          "metric_values_equal": true,
+          "comparison_table_byte_equal": true,
+          "rows": 18
+        },
+        "cli_run_all_in_sandbox": {
+          "artifacts_compared": 18,
+          "artifacts_byte_identical": 18,
+          "summary_json_differences": [
+            "optimization_summary.baseline_repair.runtime_sec (wall clock)",
+            "optimization_summary.runtime_sec (wall clock)",
+            "evaluation_summary.baseline_repair.runtime_sec (wall clock)",
+            "evaluation_summary.optimized.optimization_runtime_sec (wall clock)"
+          ],
+          "non_runtime_differences": 0
+        }
+      },
+      "determinism": "canonical seed 42; two independent repair runs and two independent optimizer runs produced identical sha256"
+    }
+    
+    == does the evidence mention beam/level headroom of the OPTIMIZED layout? ==
+      '99.3': FOUND
+      '99.5': FOUND
+      '99.55': -
+      'headroom': -
+      '214.64': FOUND
+      '458.76': FOUND
+      'max_beam': FOUND
+      'beam_utilisation': FOUND
+      'utilization': -

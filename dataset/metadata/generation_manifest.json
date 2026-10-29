@@ -243,7 +243,7 @@
     },
     "processed/locations.csv": {
       "rows": 2304,
-      "sha256": "1b4c378fe5d985371e258dca6cabba3c0556d8e79d26407834625d9af0e77538"
+      "sha256": "ff27b087629564de429c766d3b1873475e5cf97b159c8606b80fa241c83e03b4"
     },
     "processed/inventory.csv": {
       "rows": 1425,

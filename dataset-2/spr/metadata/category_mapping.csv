@@ -1,0 +1,9 @@
+source_category,canonical_category,canonical_name,rule,records
+item master row,CAT001,Accessories & Cables,weight/volume/keyword/hazmat rule,797
+item master row,CAT002,Books & Media,weight/volume/keyword/hazmat rule,104
+item master row,CAT003,Household Goods,weight/volume/keyword/hazmat rule,6
+item master row,CAT006,Tools & Metal Parts,weight/volume/keyword/hazmat rule,52
+item master row,CAT007,Packaged Bulk Goods,weight/volume/keyword/hazmat rule,8
+item master row,CAT008,Glassware,weight/volume/keyword/hazmat rule,1
+item master row,CAT009,Electronics & Sensitive,weight/volume/keyword/hazmat rule,12
+item master row,CAT010,Restricted / Hazardous,weight/volume/keyword/hazmat rule,20

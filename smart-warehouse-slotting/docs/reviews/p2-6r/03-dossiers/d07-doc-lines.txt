@@ -1,0 +1,72 @@
+- Counting: the grid evaluates only **forbidden-category pairs whose bins fall inside the same R-sized cell window**, one check per unordered pair — 3,594 checks for 1,425 occupied bins. A bin is never compared with itself. The check is not a full n² sweep, and the count is not `n(n−1)/2`.
+- Precedence matches the validator: bin → beam → level → rack. **Tolerances differ by rule and this is deliberate**: `LD-01`/`VD-01` apply none, `SL-01`/`SL-02`/`RK-01` apply `+1e-6`, and the placer compares with `1e-9`. The divergence is safe in the direction that matters — the placer is stricter than the validator, so it cannot accept a placement the validator would reject.
+- Verified empirically: the optimized layout has **0 `SL-02` violations** over **662 beam groups** (the repaired baseline evaluates 922, the as-supplied baseline 960 — quoting 960 for the optimized layout would attribute another layout's count to it). Phase 1 had 4 such violations.
+"objective": {"value": 902392.906, "baseline_value": 2321711.382, "per_rule_violations": {},
+| Cycle time (repaired baseline → optimized) | 1,471,967 s → 747,845 s (**−49.19 %**) |
+| Throughput (repaired baseline → optimized) | 13.24 → 26.07 orders/h (**+96.90 %**) |
+| Optimizer objective (un-normalised v1 form) | 2,336,184 → 902,393 (−61.4 %) |
+--- §11.2 ---
+### 11.2 Structural headroom of the delivered layout
+
+The optimized layout is feasible, but only just. The verifier recorded its worst structural scopes:
+
+| Scope | Observed | Limit | Utilisation |
+|---|---|---|---|
+| Beam — rack `R5-3-1`, bay 0, shelf 3 | 214.64 kg | 216.00 kg | **99.37 %** |
+| Level — rack `R5-3-1`, shelf 1 | 458.76 kg | 460.80 kg | **99.56 %** |
+| One bin | at its `LD-01` limit | — | **100.00 %** |
+
+So "0 violations" is true but **not robust**: a 0.6 % increase in stock on one beam, or any change to the
+inventory snapshot, would flip the layout infeasible. This is a property of the greedy filling the best-located
+bins to the brim, and it should be read as a *risk*, not as slack. A production version would need either a
+headroom constraint (e.g. refuse placements above 95 % of any structural limit) or a repair pass that
+redistributes load away from the binding beam.
+--- §14 limitation 6 ---
+6. **The delivered layout has almost no structural headroom** — 99.37 % of one beam, 99.56 % of one level, one bin exactly at its `LD-01` limit (see §11.2). Feasible, but brittle to any inventory change.
+--- test_phase5_optimizer.py:68-84 ---
+def test_optimizer_assignments_pass_phase4_validator(optimized):
+    out, summary = optimized
+    from src.models.entities import AssignmentType, StorageAssignment
+    from src.validation.loader import load_shipping
+    from src.validation.validator import validate_assignment
+
+    wh, skus, comp, _baseline, inventory = load_shipping(PROCESSED)
+    opt_df = pd.read_csv(out / "optimized_assignments.csv")
+    assignments = [
+        StorageAssignment(r.sku_id, r.location_id, int(r.assigned_quantity), AssignmentType(r.assignment_type))
+        for r in opt_df.itertuples(index=False)
+    ]
+    cfg = Config.from_json(PROJECT_ROOT / "configs" / "benchmark.json")
+    res = validate_assignment(
+        assignments, skus, wh, comp, inventory, separation_radius_m=cfg.separation_radius_m
+    )
+    assert res.is_feasible, f"optimized output has violations: {[v.reason for v in res.violations[:5]]}"
+--- test_phase6_evaluation.py:26-44 ---
+
+@pytest.fixture(scope="module")
+def evaluation(tmp_path_factory):
+    if not PROCESSED.exists():
+        pytest.skip("canonical dataset not generated")
+    base = tmp_path_factory.mktemp("eval")
+    cfg = Config.from_json(PROJECT_ROOT / "configs" / "benchmark.json")
+    run_phase5(PROCESSED, cfg, base / "optimized")
+    result = run_phase6(
+        PROCESSED,
+        scenario="A",
+        out=base / "evaluation",
+        optimized_path=base / "optimized" / "optimized_assignments.csv",
+    )
+    return base / "evaluation", result
+
+
+def test_routing_math_small_graph():
+    g = NetworkGraph()
+
+SOURCES (PRIMARY)
+/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/docs/PHASE_2_CONSTRAINT_ENGINE.md
+ -> §4:58, §5:79-80, §7:97, §11:169-171, §11.2:204-218 and §14:250 verbatim
+/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/tests/test_phase5_optimizer.py
+ -> Lines 68-84: the changed validation call and its unchanged assertion
+/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/tests/test_phase6_evaluation.py
+ -> Lines 26-44: the evaluation fixture still calls run_phase6 without the configured radius
+Command: sed -n '<ranges>p' <file>

@@ -1,0 +1,58 @@
+# D7 — structural headroom of the two published layouts (LD-01 / SL-02 / SL-01 / RK-01)
+
+Script: /home/hemanth/.hermes/profiles/reviewer/cache/scratch/beam_headroom.py — independent aggregation, no pipeline code reused.
+
+    
+    === repaired baseline ===
+      top 5 beam  utilisations:
+         72.493%  load=  130.49 kg  cap=  180.00 kg  headroom=  49.51 kg  ('R7-4-1', np.int64(1), np.int64(1))
+         62.375%  load=  112.28 kg  cap=  180.00 kg  headroom=  67.72 kg  ('R7-2-1', np.int64(0), np.int64(1))
+         58.218%  load=  104.79 kg  cap=  180.00 kg  headroom=  75.21 kg  ('R7-1-4', np.int64(0), np.int64(1))
+         57.223%  load=  103.00 kg  cap=  180.00 kg  headroom=  77.00 kg  ('R7-1-4', np.int64(1), np.int64(1))
+         55.556%  load=   30.00 kg  cap=   54.00 kg  headroom=  24.00 kg  ('R9-2-1', np.int64(0), np.int64(3))
+      top 5 level utilisations:
+         72.151%  load=  207.80 kg  cap=  288.00 kg  ('R7-1-4', np.int64(1))
+         71.292%  load=  205.32 kg  cap=  288.00 kg  ('R7-2-1', np.int64(1))
+         65.271%  load=  150.38 kg  cap=  230.40 kg  ('R7-1-2', np.int64(2))
+         64.618%  load=  148.88 kg  cap=  230.40 kg  ('R7-3-4', np.int64(2))
+         59.661%  load=  171.82 kg  cap=  288.00 kg  ('R7-4-1', np.int64(1))
+      top 5 rack  utilisations:
+         36.048%  load=  441.23 kg  cap= 1224.00 kg  R7-1-2
+         35.028%  load=  428.75 kg  cap= 1224.00 kg  R7-1-4
+         34.792%  load=  425.85 kg  cap= 1224.00 kg  R7-2-1
+         32.930%  load=  403.06 kg  cap= 1224.00 kg  R7-4-2
+         31.279%  load=  382.86 kg  cap= 1224.00 kg  R7-4-1
+      top 5 bin   utilisations:
+        100.000%  load=   30.00 kg  cap=   30.00 kg  LOC002120
+         99.680%  load=   29.90 kg  cap=   30.00 kg  LOC000886
+         98.850%  load=  118.62 kg  cap=  120.00 kg  LOC001352
+         98.657%  load=   39.46 kg  cap=   40.00 kg  LOC000344
+         98.407%  load=   29.52 kg  cap=   30.00 kg  LOC000846
+    
+    === optimized ===
+      top 5 beam  utilisations:
+         99.369%  load=  214.64 kg  cap=  216.00 kg  headroom=   1.36 kg  ('R5-3-1', np.int64(0), np.int64(3))
+         98.364%  load=  247.88 kg  cap=  252.00 kg  headroom=   4.12 kg  ('R5-1-1', np.int64(0), np.int64(2))
+         97.689%  load=   70.34 kg  cap=   72.00 kg  headroom=   1.66 kg  ('R1-2-2', np.int64(0), np.int64(3))
+         94.571%  load=   85.11 kg  cap=   90.00 kg  headroom=   4.89 kg  ('R1-3-2', np.int64(0), np.int64(2))
+         94.522%  load=   51.04 kg  cap=   54.00 kg  headroom=   2.96 kg  ('R9-2-2', np.int64(0), np.int64(3))
+      top 5 level utilisations:
+         99.557%  load=  458.76 kg  cap=  460.80 kg  ('R5-3-1', np.int64(1))
+         99.501%  load=  401.19 kg  cap=  403.20 kg  ('R5-2-2', np.int64(2))
+         99.082%  load=  114.14 kg  cap=  115.20 kg  ('R1-2-2', np.int64(3))
+         98.392%  load=  226.70 kg  cap=  230.40 kg  ('R7-3-1', np.int64(2))
+         97.598%  load=  112.43 kg  cap=  115.20 kg  ('R1-3-1', np.int64(3))
+      top 5 rack  utilisations:
+         73.196%  load= 1542.98 kg  cap= 2108.00 kg  R5-2-1
+         65.216%  load= 1374.76 kg  cap= 2108.00 kg  R5-3-3
+         64.946%  load= 1369.06 kg  cap= 2108.00 kg  R5-3-2
+         61.499%  load= 1296.41 kg  cap= 2108.00 kg  R5-3-1
+         60.894%  load= 1283.66 kg  cap= 2108.00 kg  R5-2-2
+      top 5 bin   utilisations:
+        100.000%  load=   30.00 kg  cap=   30.00 kg  LOC002136
+         99.576%  load=  139.41 kg  cap=  140.00 kg  LOC001029
+         99.456%  load=   24.86 kg  cap=   25.00 kg  LOC000928
+         99.025%  load=   79.22 kg  cap=   80.00 kg  LOC001677
+         98.895%  load=  158.23 kg  cap=  160.00 kg  LOC001028
+    
+    == does any doc mention the optimized layout's beam headroom? ==

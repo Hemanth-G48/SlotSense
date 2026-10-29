@@ -1,0 +1,5 @@
+source_id,source_name,url,license,download_date,file_name,record_count,primary_key,notes,status
+olist_orders,Olist orders dataset,https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce,CC BY-NC-SA 4.0,2026-10-28,raw/olist/olist_orders_dataset.csv,99441,order_id,Delivered orders only; purchase timestamp is real.,sourced
+olist_items,Olist order items,https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce,CC BY-NC-SA 4.0,2026-10-28,raw/olist/olist_order_items_dataset.csv,112650,order_id + order_item_id,One unit per line in the source; quantity is fixed at 1.,sourced
+olist_products,Olist product master,https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce,CC BY-NC-SA 4.0,2026-10-28,raw/olist/olist_products_dataset.csv,32951,product_id,"Seller-declared weight and dimensions, used unmodified.",sourced
+warehouse_generated,Generated warehouse grid,,Project-internal,2026-10-28,processed/locations.csv,2816,location_id,"Topology, capacities and aisle graph generated; no real warehouse data.",generated

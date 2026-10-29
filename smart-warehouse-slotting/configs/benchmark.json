@@ -24,8 +24,10 @@
     "alpha": 1.0,
     "beta": 0.4,
     "gamma": 0.3,
-    "delta": 0.2
+    "delta": 0.2,
+    "epsilon": 0.0
   },
+  "separation_radius_m": 10.0,
   "slotting": {
     "single_sku_per_location": true,
     "max_quantity_per_location": 0

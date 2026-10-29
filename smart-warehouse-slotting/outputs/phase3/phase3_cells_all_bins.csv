@@ -1,0 +1,5 @@
+cell_id,placement,fragmentation_policy,feasible,pick_rule,demand_weighted_depot_distance,numerator_m,denominator_lines,lines_total,mean_per_line_m,stops,lines_quantity_short,units_short
+A1,baseline_repaired,as_is,True,all_bins,694575.975,694575.975,5997,5997,115.8206,8159,94,111
+A2,baseline_repaired,min_bins,True,all_bins,524645.825,524645.825,5997,5997,87.4847,6192,94,111
+B1,optimized_fit,as_is,True,all_bins,273292.025,273292.025,5997,5997,45.5715,6258,94,111
+B2,optimized_fit,min_bins,True,all_bins,268271.5,268271.5,5997,5997,44.7343,6160,94,111

@@ -1,0 +1,1001 @@
+sku_id,product_name,category_id,width_cm,height_cm,depth_cm,unit_volume_cm3,unit_weight_kg,handling_type,hazard_class,data_source,data_quality_status,physical_data_source,physical_confidence
+SPR-00001,"CLIP,BINDER,SM,12 EA/DZ",CAT002,1.5,0.9,2.7,3.65,0.02,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00002,"CRTDG,INK,DESIGNJT 700,BK",CAT001,3.9,1.1,4.6,19.73,0.34,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00003,"CLIP,BINDER,MED,12 EA/DZ",CAT002,2.4,1.5,4.8,17.28,0.16,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00004,"STAPLES,CHISEL PT,STD,5M/BX",CAT001,2.1,0.9,4.3,8.13,0.43,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00005,"PAD,LEGAL,LTR SZ,WE",CAT002,8.2,0.3,11.5,28.29,0.45,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00006,"FLUID,CORRECTION,QUICKDRY",CAT010,1.5,1.0,2.6,3.9,0.1,standard,toxic,measured,valid,spr_sku_dimensions,high
+SPR-00007,"PEN,BALLPT,RDSTIC,MED,BK",CAT001,2.8,1.1,6.1,18.79,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00008,"CLIP,GEM,JUMBO,REGULAR",CAT001,2.5,1.4,4.5,15.75,0.27,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00009,"TAPE,INVISBL,ECON,3/4X1296",CAT001,2.7,0.9,2.7,6.56,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00010,"PEN,BALLPT,RDSTIC,MED,BE",CAT001,2.8,1.1,6.1,18.79,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00011,"HIGHLDNOTES,S/S,PLN,3X3,YW",CAT001,3.1,0.5,3.0,4.65,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00012,"PENCIL,WDCASE,SFT,#2",CAT001,1.9,0.7,7.6,10.11,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00013,"TAPE,TRANS,MAGIC.75""-1""CORE",CAT001,2.6,0.9,2.6,6.08,0.09,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00014,"PAD,LEGAL,LTR SZ,CA",CAT002,8.4,0.3,11.6,29.23,0.38,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00015,"PEN,BALLPT,STICK,MED,BE",CAT001,2.9,1.1,6.2,19.78,0.14,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00016,"CRTDG,INKJT,DSKJT 810C,812C",CAT001,4.5,1.1,4.6,22.77,0.31,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00017,"REMOVER,STAPLE",CAT001,1.7,1.4,2.5,5.95,0.04,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00018,"RBN,PRNT,NYL,""C"" WIND,BK/RD",CAT001,2.6,1.2,3.4,10.61,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00019,"CLIP,BINDER,LRG,12 EA/DZ",CAT002,4.3,2.3,6.3,62.31,0.57,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00020,"DISPENSER,TAPE,BK",CAT001,2.8,2.7,6.6,49.9,1.06,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00021,"CLIP,PANEL,WALL,WHITE",CAT001,2.9,1.1,5.3,16.91,0.25,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00022,"CLIP,BINDER,SMALL",CAT002,1.6,0.9,2.5,3.6,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00023,"TAPE,CORRECTION",CAT001,2.8,0.6,7.3,12.26,0.06,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00024,"PEN,BALLPT,STICK,MED,BK",CAT001,2.9,1.1,6.2,19.78,0.14,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00025,"CRTDG,LEX 70,X85/125,Z45,BK",CAT001,1.9,2.0,4.1,15.58,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00026,SEE NO. PAP 56401-32,CAT010,0.9,0.9,2.3,1.86,0.1,standard,toxic,measured,valid,spr_sku_dimensions,high
+SPR-00027,"CARTRIDGE,TAPE,1/2""-BK/WE",CAT001,5.2,1.1,7.3,41.76,0.12,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00028,"CARTRIDGE,1170/1270/1770,BK",CAT001,7.7,4.1,12.5,394.62,1.65,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00029,"LABEL,LSR,ADD,1X2-5/8,WE,3M",CAT001,8.9,0.9,11.4,91.31,2.75,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00030,"CRTDG,LEX 20,F/Z52/Z51,CLR",CAT001,1.9,2.0,4.0,15.2,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00031,"ROLL,ADD MACHINE,2.25X150",CAT001,9.0,2.8,8.5,214.2,3.21,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00032,"PAD,LEGAL,JR SZ,WE",CAT002,4.8,0.3,7.7,11.09,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00033,"TAPE,CORRECTION,WITE-OUT,WE",CAT001,3.6,0.7,6.0,15.12,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00034,"FLUID,CORRECTION,MULTI,WE",CAT010,0.9,0.9,2.3,1.86,0.1,standard,toxic,measured,valid,spr_sku_dimensions,high
+SPR-00035,"CLEANER,DUSTOFF XL",CAT010,2.7,7.8,2.6,54.76,0.9,standard,flammable,measured,valid,spr_sku_dimensions,high
+SPR-00036,"CRTDG,LEX 16,Z33,Z23,BK",CAT001,2.7,1.5,4.0,16.2,0.02,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00037,"CLIP,BINDER,MINI,BK",CAT002,1.1,0.5,2.2,1.21,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00038,"CRTDG,INK,DESKJT 660C,BK",CAT001,4.5,1.5,5.5,37.12,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00039,"CRTDG,LEX 50,Z32/22/12,BK",CAT001,1.9,2.0,4.1,15.58,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00040,"PENCIL,MECH,DISPOSABLE,YW",CAT001,0.3,0.3,6.0,0.54,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00041,"DISK,3.5,IBM FM,10PK#556423",CAT001,3.9,2.0,3.9,30.42,0.3,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00042,"POST-IT,PLN,3X3,YW",CAT001,3.0,0.4,3.0,3.6,0.06,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00043,"PAD,DESK/WALL,MO,22X17,WE",CAT002,19.0,0.5,24.0,228.0,1.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00044,"FILE,QCK,NON-STK,12X9X15,CL",CAT001,9.5,0.13,11.5,14.2,0.41,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00045,"DISK,3.5,DS-HD,IBM FRMT",CAT001,3.9,2.0,3.9,30.42,0.48,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00046,"NOTES,ADHESIVE,3-7/8X5-7/8",CAT001,4.0,1.2,6.1,29.28,0.7,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00047,"BINDER,VUE,3-RNG,1""-WE",CAT002,9.9,1.5,11.6,172.26,0.75,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00048,"PAPER,COPY,MULTIPURP,92BRT",CAT007,11.5,10.0,17.7,2035.5,50.45,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00049,"MARKER,PERM,CHISELTP,LRG,BK",CAT001,0.8,0.8,6.4,4.1,0.14,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00050,"PAD,LEGAL,JR SZ,CA",CAT002,4.8,0.3,7.7,11.09,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00051,"HIGHLIGHTER,CHISEL TP,YW",CAT001,0.6,0.5,4.9,1.47,0.02,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00052,"BATTERY,ALKAA,AA,12PK,ENGZR",CAT001,2.0,1.2,3.5,8.4,0.64,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00053,"CREAMER,CANISTER,12 OZ.",CAT001,3.1,2.9,7.1,63.83,0.8,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00054,"NOTEBOOK,STENO,6X9,60CT,WE",CAT002,5.8,0.3,9.0,15.66,0.29,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00055,"RBN,PRNT,NYL,ML182,BK",CAT001,2.7,1.1,3.4,10.1,0.07,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00056,"CALC,DISP,SOLAR,SUPERVW,8DG",CAT001,5.5,0.6,6.2,20.46,0.25,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00057,"FLDR,LTR,11PT,MAN,1/3,SGL",CAT006,10.0,2.2,12.25,269.5,6.3,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00058,"SUGAR,CANISTER,20 OZ.",CAT001,3.0,3.0,7.1,63.9,1.3,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00059,"CLIP,BINDER,MEDIUM",CAT002,2.3,1.4,4.8,15.46,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00060,"NOTEBOOK,STENO,6X9,GN",CAT002,5.8,0.4,9.0,20.88,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00061,"TAPE,INVISBL,ECON,3/4X1000",CAT001,2.3,2.3,4.8,25.39,0.45,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00062,"FORM,IMPORT MESS,4.25X5.5PK",CAT001,4.1,0.2,5.2,4.26,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00063,"CLIPS,GEM,GIANT",CAT001,2.2,1.3,3.9,11.15,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00064,"NOTES,ADHESIVE,3""X3""-YW",CAT001,3.0,0.4,3.0,3.6,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00065,"PENCILS,WOODCASE,#2",CAT001,1.7,0.4,7.5,5.1,0.07,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00066,"ADAPTOR,CLIP,ID STRAP,25",CAT001,3.8,1.2,3.6,16.42,0.3,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00067,"PENCILS,#2,EAGLE",CAT001,1.9,0.7,7.6,10.11,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00068,"POST-IT,FLAGS,ARROW",CAT001,3.8,0.2,5.0,3.8,0.04,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00069,"REEL,F/ID CARD,BK",CAT001,2.0,0.3,3.5,2.1,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00070,"REST,SHOULDR,TELEPHONE,BK",CAT009,3.4,2.7,8.8,80.78,0.3,fragile,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00071,"CLIP,PAPER,#1,NON-SKID",CAT002,5.25,2.88,5.25,79.38,0.12,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00072,"LEAD,.5MM",CAT001,0.3,0.1,2.6,0.08,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00073,"POST-IT,FLAGS,ARROW",CAT001,3.0,0.3,2.0,1.8,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00074,"STAPLES,STD,HIGH QUALITY,5M",CAT001,4.25,1.25,4.25,22.58,0.38,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00075,"SOFTSOAP,LIQUID,GALLON",CAT006,5.8,10.7,5.8,359.95,8.9,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00076,SEE NO. GEP SX9,CAT001,8.7,6.0,8.1,422.82,4.3,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00077,"TAB,INSERT,HANG,FLDR,1/3CT",CAT001,2.0,0.5,2.25,2.25,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00078,"CRTDG,TONER,LSRJT 1200/1220",CAT001,4.8,7.5,13.5,486.0,2.25,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00079,"BAND,RUBBER,1 LB",CAT001,4.9,3.5,7.4,126.91,1.11,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00080,"RBN,TYP,CORR,WHEELWRTR,BK",CAT001,6.3,1.1,6.5,45.05,0.3,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00081,"PEN,BALLPT,RETRACT,BK,MED",CAT001,0.2,0.2,5.4,0.22,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00082,"FLUID,CORRECTION,SPERSMOOTH",CAT010,1.5,1.0,2.6,3.9,0.1,standard,toxic,measured,valid,spr_sku_dimensions,high
+SPR-00083,"PEN,STICK,MED,BK",CAT001,2.6,0.8,6.2,12.9,0.12,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00084,SEE NO. GEP 230-00,CAT007,13.5,11.0,22.0,3267.0,17.4,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00085,"STAPLER,STD,PREM,FULL,BK",CAT001,2.6,1.8,7.5,35.1,0.62,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00086,"HIGHLIGHTER,DESK,FYW",CAT001,0.8,0.8,5.1,3.26,0.14,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00087,"BINDER,VUE,3-RNG,2""-WE",CAT002,11.1,2.5,11.2,310.8,0.95,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00088,"ROLLER,INK,CNM15D,BK/RD",CAT001,4.2,0.3,6.5,8.19,0.02,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00089,"TAPE,SEALING,2""X60YD,CL",CAT001,4.1,1.9,4.2,32.72,0.4,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00090,"CLIPS,GEM,VINYL,#1,ASSORTED",CAT001,3.9,3.2,3.9,48.67,0.63,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00091,"TAPE,LTR,MTL,1/2""-BK/WE",CAT001,3.1,0.7,5.1,11.07,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00092,"HIGHLDNOTES,S/S,PLN,1.5X2YW",CAT001,2.1,1.6,4.6,15.46,0.37,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00093,"FLUID,CORRECTION,ALLPURPOSE",CAT010,1.1,1.1,2.4,2.9,0.1,standard,toxic,measured,valid,spr_sku_dimensions,high
+SPR-00094,"PEN,BALLPT,FLEXGRIP,MED,BK",CAT001,0.3,0.3,5.4,0.49,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00095,"PEN,BALLPT,RDSTIC,MED,RD",CAT001,2.8,1.1,6.1,18.79,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00096,"FASTENER,CLIP N' HOOK",CAT001,3.4,0.2,5.3,3.6,0.07,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00097,"PEN,BALLPT,FLEXGRIP,BE",CAT001,0.3,0.2,5.5,0.33,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00098,"HOOK,WALL,PANEL,AST",CAT001,4.0,0.8,7.0,22.4,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00099,"STAMP,PHRASE,SZ 1.5",CAT001,3.3,1.3,3.5,15.02,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00100,"CRTDG,PRT,F/DJ970,TRI-C,LG",CAT001,4.5,1.7,4.6,35.19,0.44,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00101,"MARKER,HIGHLIGHTER,DESK,YW",CAT001,0.8,0.8,5.1,3.26,0.14,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00102,"PUSH PIN,ASSORTED,100/BX",CAT001,2.7,1.2,3.8,12.31,0.09,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00103,SEE NO. GEP FM20,CAT001,6.4,1.7,7.6,82.69,0.65,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00104,"INK,REFILL,10ML,F/STAMPS,RD",CAT001,1.2,1.0,2.6,3.12,0.03,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00105,"TAPE,INVISIBLE,3/4""X1296""",CAT001,2.6,1.0,2.6,6.76,0.08,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00106,"SHRPNR,PENCIL,W/RCPT,PLAST",CAT001,0.5,0.5,1.8,0.45,0.06,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00107,SEE NO. GEP TM20,CAT001,6.1,2.1,7.4,94.79,0.65,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00108,"INK,REFILL,10ML,F/STAMPS,BK",CAT001,1.2,1.0,2.6,3.12,0.03,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00109,"PAPER,COPY,8.5X11,GN",CAT006,8.7,2.1,11.1,202.8,5.27,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00110,"NOTES,ADHSV,SPRSAVR,3X3,YW",CAT001,3.0,0.3,2.9,2.61,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00111,"PUSH PIN,CLEAR,100/BX",CAT001,2.7,1.2,3.8,12.31,0.09,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00112,"FLUID,CORRECTION,CVRG,XTRA",CAT010,1.5,1.0,2.6,3.9,0.1,standard,flammable,measured,valid,spr_sku_dimensions,high
+SPR-00113,"CRTDG,INKJT,720/890",CAT001,4.6,1.7,4.7,36.75,0.41,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00114,"DISKETTES,PRIMARIS,3.5,DSHD",CAT001,3.9,2.0,4.1,31.98,0.42,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00115,"STAPLER,FULL STRIP,BK",CAT001,2.3,1.7,6.5,25.41,0.38,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00116,"CRTDG,INK,DESKJT,BK",CAT001,4.4,1.5,5.4,35.64,0.21,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00117,"MARKER,FLAIR,RD",CAT001,0.3,0.3,5.5,0.49,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00118,"CARTRIDGE,FAX,PRINT,BK",CAT001,6.9,2.8,11.0,212.52,0.7,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00119,"PEN,BALLPT,FLEXGRIP,BK",CAT001,0.3,0.2,5.5,0.33,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00120,"REINFORCEMENT,P/S,1/4""-CL",CAT001,2.8,0.8,3.0,6.72,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00121,"DISK,3.5""-DS-HD,FRMT,100EA",CAT001,7.3,4.0,7.3,213.16,3.06,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00122,"POST-IT,POPUP,RECY,3X3,YW",CAT001,3.1,0.5,3.0,4.65,0.07,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00123,"CLIPBOARD,9X12.5",CAT001,8.8,1.3,12.3,140.71,0.65,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00124,"POST-IT,PLN,1.5X2,YW",CAT001,2.1,1.6,4.6,15.46,0.4,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00125,"PEN,STICK,MED,BE",CAT001,2.6,0.8,6.2,12.9,0.12,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00126,"HIGHLDNOTES,S/S,PLN,3X5,YW",CAT001,3.1,2.4,10.2,75.89,1.81,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00127,"PHONE,952,2LN,SPKR,DVGY",CAT009,8.7,4.0,10.3,358.44,4.0,fragile,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00128,"PEN,BALLPT,FLEXGRIP,MED,BE",CAT001,0.3,0.3,5.4,0.49,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00129,"KIT,MARKER,DRYERASE,AST",CAT001,6.5,1.5,8.0,78.0,0.48,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00130,"MARKER,FLAIR,BK",CAT001,0.3,0.3,5.5,0.49,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00131,"CUP,FOAM,8 OZ.",CAT006,16.0,13.0,31.5,6552.0,6.0,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00132,"SHARPENER,PENCIL,ELEC,BLK",CAT001,5.6,2.9,7.6,123.42,1.57,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00133,"BINDER,VUE,3-RNG,1.5""-WE",CAT002,11.5,1.8,10.5,217.35,0.7,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00134,"TABS,PLASTIC,3.5""-CLEAR",CAT001,5.1,0.3,5.4,8.26,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00135,"STAPLER,DESK,ECON,FULL,BK",CAT001,7.0,1.5,7.0,73.5,0.49,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00136,"PUNCH,2-HOLE,1/4""-BK",CAT001,4.6,3.4,6.2,96.97,1.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00137,"DISK,3.5""-DS-HD,FRMT,10EA",CAT001,3.8,1.9,4.0,28.88,0.27,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00138,"NOTES,ADHESIVE,1.5""X2""-YW",CAT001,2.0,1.6,4.8,15.36,0.25,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00139,"PUNCH,3-HOLE,ADJUST,1/4""-BK",CAT001,2.8,1.8,11.6,58.46,1.28,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00140,"STAPLES,HVY DTY,3/8""",CAT001,2.7,0.6,2.8,4.54,0.08,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00141,"SCISSORS,8""-STST",CAT001,4.3,0.6,11.0,28.38,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00142,"DISK,3.5""-DS-HD,FRMT,25EA",CAT001,3.7,3.7,3.6,49.28,0.69,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00143,"CARD,INDEX,3X5,RULED,WHITE",CAT001,3.0,0.9,4.9,13.23,0.29,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00144,"CLIP,BINDER,MINI",CAT002,2.38,0.5,4.63,5.51,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00145,"CALC,PRT,2CLR,12DGT,TAX,LGY",CAT001,7.6,2.9,12.2,268.89,1.66,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00146,SEE NO. GEP KM20,CAT001,5.5,1.7,7.1,66.38,0.75,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00147,"FLAGS,POSTIT""SIGNHERE""YW/RD",CAT001,2.8,0.3,4.8,4.03,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00148,"CALCULATOR,DSPLY,ANGLED,IY",CAT001,4.5,0.8,5.8,20.88,0.16,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00149,"POST-IT,PLN,3X3,ULTRA AST",CAT001,3.1,2.1,3.1,20.18,0.49,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00150,"PAD,LEGAL,LGL SZ,CA",CAT002,8.4,0.3,14.0,35.28,0.44,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00151,"REMOVER,STAPLE,WALNUT",CAT001,1.5,1.4,2.3,4.83,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00152,"PEN,MARKING,MED,BK",CAT001,0.3,0.3,5.2,0.47,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00153,"PAPER,COPY,8.5X11,PK",CAT006,8.6,2.2,11.4,215.69,5.05,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00154,"PIN,PYRAMID,1-1/16,NKL,300/",CAT001,1.5,1.0,1.5,2.25,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00155,"CRTDG,INK,DESKJT 660C,CLR",CAT001,3.7,1.5,3.9,21.65,0.21,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00156,"TAPE,CARTON SEALING2""-TRANS",CAT001,3.6,1.9,3.7,25.31,0.3,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00157,"BINDER,VUE,3-RNG,3""-WE",CAT002,11.7,3.3,11.3,436.29,1.55,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00158,"STAPLES,STD,CHISEL POINT",CAT001,2.3,0.9,4.1,8.49,0.25,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00159,"BOOKENDS,7""H,BK",CAT002,5.0,6.0,4.3,129.0,0.65,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00160,"SOFTSOAP,ANTIBACTERAL,7.5OZ",CAT001,1.5,6.0,3.2,28.8,0.45,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00161,"UNTANGLER,PHONE,CL/BK",CAT009,2.3,0.4,1.2,1.1,0.1,fragile,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00162,"LABEL,LSR/IJ,F/FLDR,WE,1500",CAT001,8.8,0.56,11.25,55.44,1.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00163,"KNIFE,BLADE,SNAP-OFF",CAT001,1.2,0.7,5.4,4.54,0.06,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00164,"CLIP,BINDER,3/4""-ASST",CAT002,3.0,2.2,3.0,19.8,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00165,"FILM,600 PLUS,INTEGRAL,1STP",CAT001,4.0,1.6,4.8,30.72,0.35,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00166,"PAPER,FAX,HI SENS,8.5X98",CAT002,1.9,1.8,8.5,29.07,0.66,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00167,"MOISTENER,ENVELOPE",CAT001,1.1,1.2,4.6,6.07,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00168,"BATTERY,ALKAA,AA,8PK,ENGZR",CAT001,2.1,1.2,2.8,7.06,0.43,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00169,"R/BANDS,#117B,1/4LB",CAT001,3.6,2.8,4.7,47.38,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00170,"REFILL,CAL,DESK,3.5X6",CAT001,3.5,1.0,6.0,21.0,0.39,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00171,"TABS,PLASTIC,2""-CLEAR",CAT001,5.0,0.2,5.5,5.5,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00172,"MAGNETS,CIRCLE,30/TUB,AST",CAT001,3.1,2.4,3.2,23.81,0.32,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00173,"CORD MANAGER,TELEPHONE,BK",CAT009,4.0,1.75,7.9,55.3,0.5,fragile,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00174,"DISPENSER,CLIP,PAPER,BK",CAT002,2.3,2.5,2.6,14.95,0.01,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00175,"CLIP,BINDER,1-1/4""-ASST",CAT002,3.4,3.6,3.5,42.84,0.36,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00176,"SPINE INSERTS,1""-WE",CAT001,9.06,0.13,13.13,15.46,0.22,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00177,"GLUE STICK,PERM,.26OZ,CL",CAT001,0.81,0.81,3.06,2.01,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00178,"HIGHLIGHTER,MAJOR ACCENT,YW",CAT001,0.7,0.6,4.6,1.93,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00179,"OPENER,LTR,PRESTO",CAT001,2.5,0.1,3.7,0.93,0.02,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00180,"PEN,BALLPT,RETRACT,BE,MED",CAT001,0.3,0.2,5.1,0.31,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00181,"PAPER,FORE DP,8.5X11,CA",CAT006,8.7,2.2,11.2,214.37,5.05,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00182,"CRTDG,INK,BJC6000,BK",CAT001,3.1,1.4,5.2,22.57,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00183,"TACKS,THUMB,STEEL,3/8""HEAD",CAT001,1.6,0.8,2.3,2.94,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00184,"DISK,3.5""-DS-HD,FRMT,50EA",CAT001,3.7,3.9,7.2,103.9,1.46,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00185,"BATTERY,CALC/WATCH,MANGANES",CAT001,1.8,0.2,3.5,1.26,0.01,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00186,"CLIPS,GEM,VINYL,JUMBO,ASSTD",CAT001,3.9,3.2,3.9,48.67,0.6,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00187,"SCISSORS,STRAIGHT,8""-BE",CAT001,2.9,0.5,9.8,14.21,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00188,"LEAD,.7MM",CAT001,0.3,0.1,2.6,0.08,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00189,"TONER,DCP1000,MFC6800,4800",CAT001,2.9,2.3,11.2,74.7,0.4,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00190,"CRTDG,INKJT,DSKJT 610C,612C",CAT001,4.5,1.5,5.4,36.45,0.19,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00191,"HOLD DOWN,HEAVY DUTY VELCRO",CAT001,2.6,0.5,4.9,6.37,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00192,"R/BANDS,BIG,7""X1/8""",CAT001,2.9,1.7,3.4,16.76,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00193,"NOTES,ADHSV,SPRSAVR,1.5X2YW",CAT001,2.0,1.3,4.7,12.22,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00194,"FLDR,FILE,LTR,1/3,9.5PT,MLA",CAT006,10.0,2.8,12.1,338.8,5.95,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00195,"STAPLER,F/STRIP,BLACK",CAT001,2.5,1.7,6.8,28.9,0.33,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00196,"MAGNIFIER,MAGNA-PAGE",CAT001,8.8,0.1,9.0,7.92,0.32,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00197,"CLIPS,PAPER,RECY,#1",CAT002,2.0,0.9,3.0,5.4,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00198,"NOTES,ADHESIVE,3""X3""-ASST",CAT001,3.1,2.4,6.1,45.38,1.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00199,"PAD,LEGAL,MICRO,LTR SZ,WE",CAT002,8.3,0.4,11.6,38.51,0.45,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00200,"BAND,RUBBER,1 LB",CAT001,4.9,3.5,7.4,126.91,1.11,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00201,"PEN,BRITELINER,YW",CAT001,0.4,0.4,5.1,0.82,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00202,"CORD,NECK,NYLON,BK",CAT001,0.5,0.1,2.4,0.12,0.02,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00203,"MARKER,PERM,BOLD PT,BK",CAT001,0.7,0.5,5.8,2.03,0.03,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00204,"CLIP,BINDER,LRG,1-1/16""CP",CAT002,4.4,2.3,6.2,62.74,0.65,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00205,"HOLDER,BADGE,VERT,PREPCH,12",CAT001,2.9,0.4,4.2,4.87,0.14,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00206,"TAPE,CORRECTION,WE",CAT001,3.0,1.0,7.0,21.0,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00207,"FLDR,HANG,LGL,1/3,GN",CAT001,10.5,2.8,16.6,488.04,4.8,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00208,"CARTRIDGE,TAPE,1/2""-BK/WE",CAT001,3.5,0.8,8.2,22.96,0.31,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00209,"DUSTER,TWIN PK,PLUS",CAT010,5.3,2.7,7.7,110.19,1.75,standard,flammable,measured,valid,spr_sku_dimensions,high
+SPR-00210,"CD-R,700MB,80MIN,50/PK",CAT001,5.3,3.7,5.2,101.97,2.0,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00211,"MOISTENER,BTL,IDL28025",CAT001,2.4,1.6,4.3,16.51,0.03,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00212,"SOFTSOAP,ANTIBACTERIAL,1GAL",CAT006,5.9,10.8,5.7,363.2,8.85,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00213,"SCISSORS,STRAIGHT,8""-OE",CAT001,2.7,0.6,9.2,14.9,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00214,"TONER,FAX,LSR,F/3550,4550",CAT001,2.8,2.4,11.2,75.26,0.4,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00215,SEE NO. GEP 462-00,CAT001,4.5,4.5,5.3,107.33,0.39,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00216,SEE NO. GEP 470-00,CAT001,4.8,2.2,9.1,96.1,0.93,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00217,"CRTDG,TNR,LSR JT 5P/5MP",CAT001,4.9,7.6,13.5,502.74,2.55,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00218,"DATER,DIEPLATE,PRINTY,RD/BE",CAT001,3.1,1.7,5.0,26.35,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00219,SEE NO. ELD 04235,CAT001,1.9,1.8,3.0,10.26,0.14,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00220,"CRTDG,TNR,E40,F/PC795/770",CAT001,7.6,5.0,13.6,516.8,2.35,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00221,"BATTERY,ALKA,AA,12",CAT001,2.0,1.2,3.4,8.16,0.52,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00222,"SPINE INSERTS,2""-WE",CAT001,9.0,0.13,12.88,15.07,0.23,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00223,"LABEL,INKJT,ADD2-5/8X1WE750",CAT001,9.25,0.37,12.0,41.07,0.6,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00224,"REFILL,G-2,FN,BE",CAT001,1.9,0.2,6.0,2.28,0.01,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00225,"TIP,FINGER,AMBER,PARR,SZ 11",CAT001,2.25,2.25,2.25,11.39,0.17,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00226,"CARD,INDX,RULED,3X5,8PT,WE",CAT001,3.0,0.8,5.0,12.0,0.32,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00227,"TAPE,MAGIC,SCOTCH,3/4X1000""",CAT001,2.4,0.9,2.4,5.18,0.07,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00228,"STAPLES,HVY DTY,1/2""",CAT001,2.7,0.7,3.0,5.67,0.12,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00229,"REFILL,INK,BJC4000,BK",CAT001,3.1,1.4,5.5,23.87,0.11,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00230,"PAD,LGL,PERF,8.5X11.75,WE",CAT002,8.3,0.3,11.6,28.88,0.5,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00231,"PAPER,INKJET,87BRT,WE",CAT006,8.6,2.0,11.3,194.36,5.05,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00232,"CUTTER,KNIFE,PKT",CAT001,2.5,0.2,7.1,3.55,0.07,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00233,"HIGHLIGHTER,MAJOR ACCENT,YW",CAT001,0.7,0.6,4.6,1.93,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00234,"CLAMPS,BUTTERFLY,IDEAL,#1",CAT009,2.1,1.9,2.7,10.77,0.1,fragile,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00235,SEE NO. SMD 67902,CAT001,4.5,0.25,7.0,7.88,0.08,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00236,"PLUGINS,CNTRYGRDN,GLADE",CAT001,3.1,1.6,3.3,16.37,0.07,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00237,"TAPE,1""CORE,3/4""W,TRANS",CAT001,2.5,0.9,2.6,5.85,0.12,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00238,"TIP,FINGER,AMBER,SZ-11 1/2",CAT001,2.25,2.25,2.25,11.39,0.17,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00239,"BOOK,NOTE,COLG RUL,1SUB,AST",CAT002,8.5,0.35,11.5,34.21,0.85,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00240,"TAPE,MAGNETIC,ADHES,.5""X10'",CAT001,3.6,0.4,4.0,5.76,0.46,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00241,"TAPE,L/O,WHEELWRTR",CAT001,3.5,1.0,6.5,22.75,0.13,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00242,"ADVIL,REG.STRGTH,ONE DOSE",CAT001,2.4,1.1,10.1,26.66,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00243,"BOOK,MSGE,TEL,400/ST,WE/YW",CAT002,5.7,0.8,11.0,50.16,0.93,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00244,"CARTRIDGE,TAPE,1/4""-BK/WE",CAT001,5.2,0.9,7.3,34.16,0.17,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00245,"BATTERY,ALKA,INDUST,AA,24PK",CAT001,2.2,1.3,7.1,20.31,1.36,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00246,"FILE,STOR,ECONO,LID,LT/LG",CAT001,22.2,0.6,27.1,360.97,1.45,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00247,"PUSH PINS,PLAST,100BX,ASST",CAT001,2.9,1.2,3.8,13.22,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00248,"CLIPS,PAPER,RECY,JUMBO",CAT002,2.3,1.4,4.0,12.88,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00249,"BINDER,3-RNG,1""-BK",CAT002,10.25,1.4,11.6,166.46,0.75,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00250,"TIP,FINGER,GRIPEEZ",CAT001,3.5,0.78,5.38,14.69,0.18,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00251,"HIGHLIGHTER,ACCENT,6CLR",CAT001,4.5,0.8,5.1,18.36,0.25,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00252,"MARKER,PERM,CHISEL TP,BK",CAT001,0.5,0.5,5.1,1.27,0.02,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00253,"BINDER,VUE,3-RNG,.5""-WE",CAT002,9.6,1.1,10.8,114.05,0.7,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00254,"PIN,BRASS T,1.5"" LONG",CAT001,2.3,1.4,4.0,12.88,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00255,"MOISTENER,PENCIL",CAT001,2.7,0.1,7.5,2.03,0.03,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00256,"PAPER,FORE DP,8.5X11,SN",CAT002,8.7,2.1,11.3,206.45,4.9,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00257,SEE NO. SON 10MFD2HD,CAT001,3.7,1.6,3.8,22.5,0.45,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00258,"SUGAR,SWEET-N-LOW",CAT001,5.7,3.7,9.1,191.92,1.25,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00259,"R/BANDS,CREPE,#117B,1LB",CAT001,5.0,3.8,7.4,140.6,1.0,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00260,"HIGHLIGHTER,BRTLNER,5PK",CAT001,4.0,0.5,7.5,15.0,0.03,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00261,"REFILL,TYLENOL,2/PK",CAT001,4.5,3.4,5.8,88.74,0.16,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00262,"RULER,OFFICE,METAL EDGE,12""",CAT001,1.1,0.2,12.0,2.64,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00263,"REMOVER,STAPLE",CAT001,1.8,0.8,8.6,12.38,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00264,"HIGHLIGHTER,PEN,FLYW",CAT001,0.7,0.5,5.6,1.96,0.13,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00265,"HOLDER,BADGE,HORZ,PREPCH,12",CAT001,3.2,0.4,3.9,4.99,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00266,"CALCULATOR,BUSN",CAT001,7.1,1.3,9.7,89.53,1.0,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00267,"REFILL,G-2,FN,BK",CAT001,1.9,0.2,6.0,2.28,0.01,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00268,"PUNCH,HEAVY DUTY,3-HOLE,BK",CAT001,5.8,3.0,10.9,189.66,3.36,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00269,"ENVELOPE,CD,WE",CAT001,5.4,3.5,5.3,100.17,0.8,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00270,"PEN,MARKING,MED,RD",CAT001,0.3,0.3,5.2,0.47,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00271,"HIGHLIGHTER,PEN,4PK",CAT001,3.4,0.8,7.4,20.13,0.12,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00272,"PIN,BRASS T,2"" LONG",CAT001,2.2,1.5,4.0,13.2,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00273,"PAPER,COLORCPR,PHWE",CAT006,8.5,2.5,11.1,235.88,7.15,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00274,"PAD,LEGAL,MICRO,LTR SZ,CA",CAT002,8.3,0.4,11.7,38.84,0.45,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00275,"HIGHLDNOTES,RULED,4X6,YW",CAT001,4.0,0.5,6.0,12.0,0.21,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00276,"FLAGS,POSTIT,RD",CAT001,2.8,0.2,4.8,2.69,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00277,"BINDER,3-RNG,3""-BK",CAT002,11.3,3.5,11.2,442.96,1.77,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00278,"REFILL,TAPE,CORRECTION,WE",CAT001,3.1,0.3,9.8,9.11,0.06,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00279,"SCISSORS,BENT,8""-STST",CAT001,3.5,0.5,10.7,18.72,0.17,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00280,"FLDR,FILE,11PT,STRT,MLA",CAT006,10.3,3.5,12.6,454.23,5.38,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00281,"MARKER,PERM,SHARPIE,FN,RD",CAT001,0.5,0.5,5.2,1.3,0.02,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00282,"FRAME,8.5X11,BK",CAT001,9.3,0.6,11.7,65.29,0.24,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00283,"MOISTENER,SQUEEZE",CAT001,3.5,1.5,5.2,27.3,0.04,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00284,"BINDER,3-RNG,2""-BK",CAT002,10.9,3.1,11.3,381.83,1.08,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00285,"SPONGE,SCRUBBER,S.O.S.3PK",CAT001,2.8,2.8,5.4,42.34,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00286,"REFILLS,PLUGIN,TRPICLMST",CAT001,2.8,0.8,2.9,6.5,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00287,"FLAGS,POSTIT,YW",CAT001,2.8,0.3,4.8,4.03,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00288,"HIGHLIGHTER,""SWING""-6PK",CAT001,6.0,0.6,6.5,23.4,0.16,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00289,"TIP,FINGER,AMBER,PARR",CAT001,2.25,2.25,2.25,11.39,0.17,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00290,"UNIFRAME,LTR/LGL,DSK DRWR",CAT001,10.25,1.0,26.0,266.5,2.4,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00291,SEE NO. MMM 654-RP-A,CAT001,3.1,2.5,6.3,48.82,1.17,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00292,SEE NO. ELD 39706,CAT001,3.8,3.2,5.6,68.1,0.18,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00293,"CARTRIDGE,TAPE,1/2""-BK/CL",CAT001,5.0,0.9,7.2,32.4,0.24,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00294,"PAPER,HP BRIGHT,INKJET,WE",CAT006,8.6,2.5,11.2,240.8,6.0,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00295,"PAD,STAMP,MICROPORE,#1,BK",CAT002,3.1,0.6,4.4,8.18,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00296,"BOOK,MSG,PHONE,TWO-PART",CAT009,6.0,1.0,10.8,64.8,1.05,fragile,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00297,"TAG,SIGN HERE,RD,120",CAT001,3.9,1.0,6.8,26.52,0.11,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00298,"DISPENSER,POPUP,POSTIT3X3BK",CAT001,3.8,2.2,4.5,37.62,1.21,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00299,"SCISSORS,BENT,8""-BK",CAT001,3.0,1.0,9.8,29.4,0.04,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00300,"CRTDG,PRT,LRGE,F/DJ2000C,BK",CAT001,4.0,1.4,4.1,22.96,0.25,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00301,"TAPE,ECON,.5X1296,TRANS",CAT001,2.6,0.7,2.6,4.73,0.07,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00302,SEE NO. GEP SX7,CAT001,6.1,5.5,7.0,234.85,1.95,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00303,"PEN,BALLPT,RDSTIC,FN,BK",CAT001,2.8,1.1,6.1,18.79,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00304,"REINFORCEMENTS,1/4""DIA,WE",CAT001,3.0,0.75,4.0,9.0,0.03,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00305,"SCISSOR,STRAIGHT,8""-STST",CAT001,3.6,0.3,7.0,7.56,0.19,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00306,"BATTERY,ALKA,AAA,12PK,ENGZR",CAT001,1.8,0.9,2.6,4.21,0.3,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00307,"FILE,STOR,R-KIVE,LTR/LGL,BN",CAT001,19.8,0.5,27.5,272.25,2.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00308,"CLIPS,PAPER,#1 GEM",CAT002,1.8,0.9,2.9,4.7,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00309,"PROTCT,SHT,TOPLD,ECON,CL",CAT001,9.81,1.56,11.87,181.65,1.53,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00310,"PROTECTOR,SURGE,6OUTLET",CAT001,4.6,2.1,11.1,107.23,0.75,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00311,"NOTEBOOK,STENO,6X9,60SH,WE",CAT002,5.9,0.3,8.9,15.75,0.3,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00312,"FILE,LTR/LGL,12X15X10",CAT001,22.0,0.2,27.5,121.0,2.0,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00313,"PAD,STAMP,FELT,#1,BK",CAT002,3.19,0.63,4.3,8.64,0.12,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00314,"SHRPNR,PENCIL,ASST",CAT001,1.3,1.2,2.5,3.9,0.08,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00315,"CLIPS,BINDER,SMALL",CAT002,1.6,0.9,2.7,3.89,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00316,"CLIP,GEM,REG,JUMBO,1C/BX",CAT001,2.25,1.25,4.63,13.02,0.42,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00317,"TAPE,MAIL,W/DISP,2""X800""-CL",CAT001,2.4,2.0,6.0,28.8,0.23,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00318,"COFFEE,FOLGERS,39OZ.",CAT001,6.1,6.4,5.9,230.34,3.0,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00319,"PENCIL,WOODCASE,#2.5",CAT001,1.8,0.7,7.6,9.58,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00320,"MARKER,SHARPIE,ULTRA FN,BK",CAT001,0.3,0.3,5.2,0.47,0.02,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00321,"REFILL,SILHOUETTE,MED,BK",CAT001,1.5,0.1,6.0,0.9,0.01,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00322,"PAPER,M/PURP,8.5X11,20#,WE",CAT006,8.7,2.1,11.2,204.62,5.1,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00323,"TAPE,CORRECTION,REFLABLE,WE",CAT001,3.3,0.3,9.6,9.5,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00324,"PAPER,FORE DP,8.5X11,BE",CAT002,8.7,2.0,11.3,196.62,4.85,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00325,"REFILL,BALLPT,MED,BK",CAT001,2.0,0.2,6.7,2.68,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00326,"CANDY,STARLIGHT MINTS",CAT001,6.3,4.2,6.3,166.7,1.65,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00327,"ROLLER,INK,SHR EL2192C",CAT001,4.2,0.4,6.5,10.92,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00328,"CRTDG,LEX 26,Z33,Z23,CLR",CAT001,2.7,1.5,4.0,16.2,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00329,"DISK,3.5,DSHD,1.44MB,PC FRM",CAT001,3.8,1.9,3.8,27.44,0.4,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00330,"CTRDG,F/CNM 800/B540/B550",CAT001,3.0,1.2,5.7,20.52,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00331,"PEN,ROLLBALL,G-2,FN,BK",CAT001,0.5,0.5,5.7,1.43,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00332,"RECORDER,MICRO,W/BATT&TAPE",CAT001,7.0,1.6,11.1,124.32,1.0,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00333,"LABEL,LSR,1-3/4X1/2,WE,2M",CAT001,9.9,0.4,12.0,47.52,0.6,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00334,"PAPER,FORE DP,8.5x11,LC",CAT002,8.4,2.1,11.2,197.57,5.0,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00335,"STAPLER,FULLSTRIP,VERT,BK",CAT001,4.6,1.5,9.1,62.79,0.46,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00336,"WINDEX,READY-USE,32OZ.",CAT001,3.4,10.2,4.3,149.12,1.55,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00337,"CRTDG,INK,SC440/640/740",CAT001,3.5,2.0,4.0,28.0,0.07,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00338,"CLIPBOARD,LTR,HARDBOARD",CAT001,8.6,0.2,12.9,22.19,0.55,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00339,"BAG,MAIL,JIFYLT,SS,6X10",CAT001,7.2,0.5,10.7,38.52,0.04,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00340,"CLAMPS,BUTTERFLY,IDEAL,#2",CAT009,2.9,2.2,4.2,26.8,0.35,fragile,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00341,"BULB,SHOWCASE,60WT",CAT001,2.1,1.5,6.4,20.16,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00342,"INK,REFILL,10ML,F/STAMPS,BE",CAT001,1.2,1.0,2.6,3.12,0.03,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00343,"PLASTI BANDS,4-1/4""",CAT001,3.4,0.7,3.3,7.85,0.08,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00344,"POST-IT,PLN,3X5,YW",CAT001,3.0,0.4,5.0,6.0,0.12,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00345,"TAPE,SEALING,1-7/8""X164'",CAT001,4.0,4.0,11.3,180.8,2.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00346,"CALC,DISP,8DGT",CAT001,5.2,1.2,6.3,39.31,0.26,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00347,"MOUSEPAD,GEL,BE",CAT002,8.8,1.4,11.2,137.98,0.85,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00348,"FILE,HANGING,WALL,SYTM,SMK",CAT001,12.4,4.9,14.9,905.32,2.3,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00349,"CLEANER,SCRN,WPS,100CT",CAT001,3.2,3.2,6.7,68.61,0.51,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00350,"CERTIFICATES,BLUE",CAT001,8.3,0.2,10.8,17.93,0.3,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00351,"POST-IT,PLN,1.5X2,ULTRA AST",CAT001,2.1,1.6,4.6,15.46,0.37,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00352,"PAD,MEMO,PLN,4X6,WE",CAT002,6.3,2.1,7.8,103.19,2.35,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00353,"BOOK,STENO,GREGG,6X9",CAT002,6.0,0.29,9.25,16.09,0.45,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00354,"KNIFE,UTILITY,CARTRIDGE",CAT001,1.8,1.1,6.7,13.27,0.18,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00355,"POST-IT,PLN,1-3/8X1-7/8,AST",CAT001,2.1,1.6,4.6,15.46,0.37,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00356,"STAND,MACH,ADJ,8X10,BK",CAT001,8.1,0.8,12.0,77.76,1.62,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00357,"PEN,CORRECTION,LIQUID",CAT010,0.5,0.2,5.0,0.5,0.1,standard,toxic,measured,valid,spr_sku_dimensions,high
+SPR-00358,"ENVELOPE,REG,#10,WE",CAT006,9.7,4.2,12.0,488.88,6.15,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00359,"MARKER,FLAIR,BE",CAT001,0.3,0.3,5.5,0.49,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00360,SEE NO. GEP 709902,CAT007,10.6,9.5,18.4,1852.88,17.85,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00361,"FASTENER,PRONG,FILE,2""CC",CAT001,3.0,0.8,6.0,14.4,0.5,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00362,"RULER,HARDWOOD,12""",CAT001,1.1,0.1,12.0,1.32,0.02,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00363,"ENV,INTR-DEPT,10X13,KFT",CAT006,10.7,7.9,15.9,1344.03,6.1,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00364,"APPT BK,PROF,WK,8.2X10.9,BK",CAT001,9.0,0.4,11.5,41.4,0.67,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00365,"RBN,CORR,AX10/12/15/20,BK",CAT001,4.7,0.8,4.4,16.54,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00366,"PAPER,COPY,8.5X11,GD",CAT006,8.6,2.2,11.4,215.69,5.05,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00367,"LABEL,LSR,2-5/8X1,WE,3M",CAT001,8.62,0.87,11.15,83.62,2.48,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00368,"BANDS,CURRENCY,$50",CAT001,2.6,2.7,7.9,55.46,1.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00369,"MARKER,SHARPIE,PERM,BK",CAT001,0.4,0.4,5.2,0.83,0.02,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00370,"RULER,CLEAR,12""",CAT001,1.3,0.2,12.0,3.12,0.03,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00371,"HOLDER,CLIP,MESH,BK",CAT001,3.6,2.1,3.7,27.97,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00372,"FILE,STOR,ECONO,LID,LTR",CAT001,16.5,0.2,37.0,122.1,2.5,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00373,SEE NO. SON 3MC60,CAT001,2.6,0.5,6.4,8.32,0.14,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00374,"NOTES,ADHES,3""X3""ASST,400SH",CAT001,3.0,1.5,3.0,13.5,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00375,"SHRPNR,PENCIL,W/RCPT,PLAST",CAT001,1.4,0.8,2.0,2.24,0.06,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00376,SEE NO. GEP HS551,CAT001,4.5,4.7,5.9,124.79,0.35,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00377,"REINFORCEMENT,P/S 1/4""-WE",CAT001,2.9,0.8,2.9,6.73,0.12,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00378,"HOLDER,PENCIL,MESH,BK",CAT001,3.7,3.9,3.8,54.83,0.23,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00379,"BATTERY,ALKA,INDUST,AAA,24",CAT001,2.0,1.1,5.4,11.88,0.66,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00380,"HANGER,POSTER,VELCRO",CAT001,2.5,0.6,4.9,7.35,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00381,"WASTEBASKET,RECT,MED,BK",CAT003,14.9,10.2,13.8,2097.32,1.65,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00382,"POST-IT,PLN,1.5X2,ULTRA AST",CAT001,3.3,0.3,4.3,4.26,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00383,SEE NO. ELD 03946,CAT003,10.7,7.3,13.0,1015.43,1.35,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00384,"SHELF,DESK,3-TIER,MESH,BK",CAT003,12.4,9.0,12.6,1406.16,3.8,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00385,"STAMP,PRINTY,DATER",CAT001,6.1,1.3,8.5,67.41,0.17,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00386,"FLDR,RECY,LTR,1/3,MLA",CAT006,10.3,2.8,12.6,363.38,6.65,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00387,"SPINE INSERTS,1.5""-WE",CAT001,9.06,0.13,13.13,15.46,0.23,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00388,"FASTENER,COMP,2.75""CC,2""C",CAT001,3.5,0.88,5.5,16.94,0.54,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00389,"DISPENSER,TAPE,HAND,3/4""W1""",CAT001,2.9,1.0,3.9,11.31,0.02,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00390,"MARKER,PERM,CHISEL TIP,BK",CAT001,0.6,0.6,5.2,1.87,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00391,"REFILLS,PLUGIN,CNTRYGRDN",CAT001,2.8,0.7,2.8,5.49,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00392,"REMOVER,STAPLE",CAT001,1.7,1.3,2.4,5.3,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00393,"PEN,BALLPT,STICK,FINE,BE",CAT001,2.9,1.1,6.2,19.78,0.14,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00394,"STAPLER,747 ACCENT,BK",CAT001,7.5,2.0,7.5,112.5,1.19,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00395,"LAMINATE,3 MIL,9X11.5",CAT001,9.6,1.0,12.5,120.0,1.29,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00396,"PAD,WYWO,4X5.25,PINK",CAT002,4.0,2.2,5.4,47.52,1.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00397,"BULB,CLEAR,100WT",CAT001,4.5,0.6,7.0,18.9,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00398,"PAPER,GP HOTS,24#,YW",CAT006,8.5,2.6,11.1,245.31,6.05,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00399,"LAMINATE,P/S,MYLAR,9X12,CR",CAT001,9.6,0.5,12.5,60.0,1.4,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00400,SEE NO. DUR MN15VR12Z,CAT001,2.0,1.2,3.4,8.16,0.52,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00401,"CLIP,PANEL,WALL,BEIGE",CAT001,3.2,0.1,6.5,2.08,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00402,"TOWELETTES,WASH'N DRI",CAT001,2.9,1.9,4.1,22.59,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00403,"LABEL,LSR,1X2-5/8,WE",CAT001,9.0,0.75,11.5,77.62,2.72,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00404,"CRTDG,FILM,FAX,UX470,2 RBNS",CAT001,2.2,2.3,9.2,46.55,0.55,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00405,"INDEX,3-RNG,5TAB,CL",CAT001,8.8,0.4,11.0,38.72,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00406,"SHEARS,ECONOMY,STRAIGHT,8""",CAT001,3.3,0.2,10.0,6.6,0.25,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00407,"SOAP,DISHWASHING,25OZ",CAT001,2.2,8.6,3.9,73.79,1.7,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00408,"PEDESTAL,CRT,VURYSER,2""",CAT001,11.4,2.1,11.4,272.92,1.17,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00409,"BATTERY,CALC,WATCH,SR-OX,J",CAT001,1.8,0.3,3.5,1.89,0.01,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00410,"ROLL,STICK BACK,15'X.75""-WE",CAT001,6.2,2.4,6.1,90.77,0.35,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00411,"CLIP,GEM,#1,GOLD TONE",CAT001,2.9,0.75,3.5,7.61,0.09,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00412,"PEN,BALLPT,GRIP,CRYSTAL,BE",CAT001,2.8,1.1,6.1,18.79,0.07,fragile,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00413,"SMART SORTER,W/TRAYS,BK",CAT003,12.5,10.3,14.0,1802.5,4.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00414,"PEN,ROLLBALL,UNI,XFN,BK",CAT001,0.2,0.3,5.2,0.31,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00415,"NOTES,ADHSV,SPRSAVR,3X5,YW",CAT001,3.0,0.4,4.9,5.88,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00416,"PAPER,FORE DP,8.5X11,GN",CAT002,8.8,2.2,11.5,222.64,4.9,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00417,"RULER,PLASTIC,12""",CAT001,2.0,0.1,12.8,2.56,0.04,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00418,"PLNR,PROJECT,9.5X7.25",CAT001,7.4,0.7,9.3,48.17,0.8,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00419,"FLAGS,POSTIT,BE",CAT001,2.8,0.2,4.8,2.69,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00420,"ENVELOPE,CLSP,28#,9X12,KFT",CAT001,9.2,3.8,14.2,496.43,4.3,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00421,"STAMP,DTR,""RECEIVED""-RD/BE",CAT001,4.5,1.8,5.7,46.17,0.25,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00422,"DISK,ZIP,100MB,PC FRMT,10PK",CAT001,4.1,2.3,8.4,79.21,1.8,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00423,SEE NO. PAP 64892,CAT001,0.3,0.2,2.9,0.17,0.01,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00424,"SORTER,INCLINE,REGENRTN,BK",CAT001,8.0,6.5,7.7,400.4,0.6,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00425,"DISPENSER,TAPE,DECOR,1""CORE",CAT001,3.1,3.3,7.6,77.75,1.53,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00426,"OPENER,LETTER",CAT001,0.7,0.2,9.0,1.26,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00427,"MARKER,PERM,INDUSTRIAL,BK",CAT001,0.2,0.3,5.1,0.31,0.01,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00428,"BOARD,CORK,WOODFRM,3X2",CAT006,24.5,1.5,36.5,1341.38,8.0,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00429,"MARKER,PERM,CHISELTP,REG,BK",CAT001,2.4,0.1,5.2,1.25,0.14,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00430,"CUP,PENCIL,REGENRTN,BK",CAT001,2.8,2.3,3.7,23.83,0.09,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00431,"CERTIFICATE,BLANK,GLD.BRDR",CAT001,8.3,0.3,10.9,27.14,0.35,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00432,"CRTDG,INK,BJC4000,BK",CAT001,2.8,1.9,6.2,32.98,0.31,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00433,"PUSH PINS,PLAST,100BX,CL",CAT001,2.7,1.2,3.8,12.31,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00434,"FILM,FAX,2RL,KX-FA95,91,85",CAT001,2.4,2.3,10.3,56.86,0.75,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00435,"REFILL,ERASER,CLIC,2/PK",CAT001,0.7,0.2,4.5,0.63,0.01,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00436,"CARTRIDGE,INKJT,#17,TRI-CLR",CAT001,4.6,1.7,4.7,36.75,0.36,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00437,"ENV,STRNG&BTN,POLY,LTR,CL",CAT001,10.2,0.4,13.9,56.71,0.16,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00438,"NOTES,ADHESIVE,2-7/8X2-7/8",CAT001,3.1,1.9,3.1,18.26,0.44,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00439,"TAPE,CORRECTION,DRYLINE",CAT001,3.0,0.7,7.5,15.75,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00440,"RBN,TYP,CORR,H SERIES,2PK",CAT001,4.6,1.9,5.2,45.45,0.22,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00441,"BASE,CAL,3.5X6,LSELF,BK",CAT001,7.6,1.1,8.2,68.55,0.29,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00442,"PEN,BALLPT,FLEXGRIP,BK",CAT001,0.3,0.2,5.5,0.33,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00443,SEE NO. SMD 10334,CAT006,10.25,3.44,12.25,431.94,7.46,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00444,"INDEX,WRITE-ON,5TAB,WE",CAT001,9.0,0.1,11.0,9.9,0.12,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00445,"MARKER,PERM,CHSLTP,REG,BK",CAT001,0.75,0.75,5.13,2.89,0.14,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00446,SEE NO. GEP SM20,CAT001,6.2,2.1,7.4,96.35,0.6,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00447,SEE NO. MFE 866350,CAT001,7.8,7.9,13.3,819.55,3.65,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00448,"7530 FOLDER,FILE",CAT002,9.9,2.5,12.0,297.0,5.0,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00449,"PEN,ROLLBALL,G-2,FN,BE",CAT001,0.5,0.5,5.7,1.43,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00450,"HIGHLIGHTER,DESK,FLOE",CAT001,0.8,0.8,5.1,3.26,0.14,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00451,"REFILL,BALLPT,MED,BK",CAT001,2.3,0.4,6.5,5.98,0.01,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00452,"LEAD,.5MM,RD",CAT001,0.3,0.1,2.6,0.08,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00453,"LAMINATE,5 MIL,9X11.5",CAT001,9.5,1.0,12.5,118.75,2.02,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00454,"CLIP,BINDER,MINI,ASST",CAT002,2.9,2.2,3.0,19.14,0.21,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00455,"TAPE,COVR-UP/LBL,POSTIT1/3""",CAT001,3.0,0.5,4.8,7.2,0.04,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00456,"FLDR,FILE,11PT,1/5,MLA",CAT006,10.3,2.8,12.7,366.27,6.55,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00457,"BNDR,WPF PSBD,11X8.5,1""-LBE",CAT001,9.63,1.44,11.44,158.64,0.5,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00458,"COPYHOLDER,CLIP,ERGO,PY",CAT001,6.0,1.5,14.5,130.5,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00459,"POCKET,PARTITION,3/PCK,SM",CAT001,8.7,5.2,13.7,619.79,1.7,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00460,"TRAY,LETTER,REGENRTN,BK",CAT001,8.9,2.8,13.0,323.96,0.45,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00461,"PLNR,13 MOS,9X11,BK",CAT001,9.2,0.2,11.4,20.98,0.29,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00462,"PAD,MSE,ECON,BE",CAT002,8.5,0.2,9.8,16.66,0.11,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00463,"CRTDG,LEX 60,Z32/22/12,CLR",CAT001,1.9,2.1,4.1,16.36,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00464,"STAPLES,B8,ARCH CR,1/4""-5M,",CAT001,2.0,1.2,4.5,10.8,0.23,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00465,"PEN,BALLPT,EASYTOUCH,MED,BK",CAT001,0.5,0.5,6.2,1.55,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00466,"MARKER,PERM,SHARPIEX,BK",CAT001,0.4,0.4,5.2,0.83,0.02,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00467,"STAMP,INKED,""COPY""-RD",CAT001,2.3,1.1,2.6,6.58,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00468,"CALC,8 DGT,SLR,LCD,PORT",CAT001,5.8,0.7,8.6,34.92,0.17,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00469,"CRTDG,STYLUS C60,BK",CAT001,4.4,1.5,5.8,38.28,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00470,"PAPER,FORE DP,8.5X14,WE",CAT006,8.6,2.2,14.2,268.66,6.5,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00471,"POST-IT,PLN,3X3,ASST NEON",CAT001,3.1,2.0,3.0,18.6,0.5,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00472,"RBN,PRNT,NYL,OKI ML182/192",CAT001,2.8,1.1,4.4,13.55,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00473,"BOOK,MEMO,END,FAINT,3X5",CAT002,2.8,0.3,5.0,4.2,0.07,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00474,"PEN,BALLPT,CLICSTIC,MED,BK",CAT001,0.4,0.1,5.1,0.2,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00475,"STAPLER,DSK,FL STRIP,BK",CAT001,2.6,1.8,6.8,31.82,0.6,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00476,"FLAGS,POSTIT,""TOGO""5CLRASST",CAT001,2.5,0.1,5.4,1.35,0.19,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00477,"CARD,V-FILE,2.25X4,WE",CAT001,2.2,0.8,4.1,7.22,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00478,"BNDR,WPF PSBD,11X8.5,1""-DBE",CAT001,9.63,1.44,11.44,158.64,0.5,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00479,"RBN,PRNT,FAB,LQ5/8XX/L1000",CAT001,3.0,1.5,12.4,55.8,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00480,"DIVIDER,PKT,3HP,SLASH,MI",CAT001,9.25,1.06,11.25,110.31,1.71,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00481,"CASE,JEWEL,THIN,20PK,CL",CAT001,5.0,4.1,5.7,116.85,1.9,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00482,"REFILL,RETRAC,MED,BK",CAT001,2.0,0.2,6.0,2.4,0.01,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00483,"ORGNIZER,ROTRY,W/O SUPPLIES",CAT001,10.0,7.4,10.2,754.8,1.78,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00484,"CRTDG,INK,STY CLR 880,BK",CAT001,4.3,1.4,5.8,34.92,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00485,"PEN,MARKING,MED,BE",CAT001,0.3,0.3,5.2,0.47,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00486,"BOX,STOR,SQUEZMTIC,LTR/LGL",CAT001,13.5,1.0,27.5,371.25,1.5,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00487,"PEN,GEL,UNI,IMPACT,BK",CAT001,0.5,0.5,5.0,1.25,0.02,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00488,"FLUID,CORRECTION,PEN&INK,WE",CAT010,0.9,0.9,2.3,1.86,0.1,standard,toxic,measured,valid,spr_sku_dimensions,high
+SPR-00489,"REFILL,ERASER",CAT001,0.4,0.3,3.0,0.36,0.01,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00490,"REST,PHONE,SOFTALK II,BK",CAT009,2.8,3.0,7.7,64.68,0.25,fragile,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00491,"BINDER,3-RNG,1""-DBE",CAT002,10.8,1.8,9.9,192.46,0.84,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00492,"PAD,LEGAL,LTR SZ,WE",CAT002,8.2,0.1,11.5,9.43,0.55,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00493,"RULER,OFFICE,METAL EDGE,18""",CAT001,1.1,0.2,18.0,3.96,0.06,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00494,"PROTCT,SHT,TOPLD,CL",CAT001,10.1,1.1,11.4,126.65,0.95,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00495,"CASS,MCR,AUD,60,3PK#179031",CAT001,2.4,0.5,4.4,5.28,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00496,"POST-IT,POPUP,RECY,3X3,NEON",CAT001,3.1,1.4,6.1,26.47,0.56,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00497,"MOISTENER,BOTTLE-TYPE",CAT001,1.4,1.4,3.8,7.45,0.05,fragile,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00498,"BAND,RUBBER,1/4LB",CAT001,3.6,2.9,4.5,46.98,0.29,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00499,"CLIPBOARD,SEE THRU DB.PANEL",CAT001,9.1,0.2,13.3,24.21,0.56,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00500,"TRAY,STACKERLESS,LTR,BK",CAT001,10.7,2.6,12.4,344.97,0.55,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00501,"REFILL,CORRECTION,F/063-04",CAT001,3.0,0.5,7.2,10.8,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00502,"CARD,INDEX,3X5,PLAIN,WHITE",CAT001,3.0,0.9,4.9,13.23,0.29,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00503,"TISSUES,EYEGLASS,PRE-MOIST",CAT008,5.4,2.4,8.9,115.34,0.81,fragile,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00504,"TAB,FLDR,HANG,PLAS,1/5,CL",CAT001,3.5,0.5,3.5,6.12,0.11,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00505,"BOOK,NOTE,SPIRAL,11X8.5,AST",CAT002,8.5,0.4,10.8,36.72,0.6,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00506,"CALC,DESKTOP,PRT,12DGT",CAT001,10.5,5.2,16.0,873.6,4.0,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00507,"CARTRIDGE,TAPE,1/2""-RD/WE",CAT001,5.2,1.1,7.3,41.76,0.12,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00508,"CARTRIDGE,TAPE,3/4"",BK/WE",CAT001,5.2,1.1,7.3,41.76,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00509,"TRAY,LETTER,STCKBLE,S/L,EB",CAT001,8.8,2.7,12.7,301.75,0.5,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00510,"FORK,PLSTC,HEAVY MED.WT,WE",CAT001,6.4,1.7,7.6,82.69,0.65,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00511,"NOTES, POST-IT« 1.5X2 PASTE",CAT001,2.1,1.6,4.6,15.46,0.37,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00512,"NOTE,HGHLAND,S/S,PLN,2X3,YW",CAT001,2.0,0.4,3.0,2.4,0.02,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00513,"NOTES,ADHESIVE,POP-UP,3X3",CAT001,3.1,1.3,6.2,24.99,0.51,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00514,"7530 PAD,NOTE,SELF-STICK,YW",CAT002,1.5,2.0,5.0,15.0,0.25,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00515,"ROLL,FILM,FAX,2PK,BK",CAT001,4.7,2.0,9.3,87.42,1.26,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00516,"TAG,KEY,50 PK,1.25""DIA,WE",CAT001,2.69,1.31,4.81,16.95,0.13,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00517,"WRIST REST PAD,KEYBD,GEL",CAT002,3.1,1.2,19.2,71.42,1.6,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00518,"TRAY,LTR,FRNT LOAD,STACK,EB",CAT001,10.6,4.7,12.5,622.75,0.9,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00519,"SHARPENER,PENCIL,ELEC,BK",CAT001,4.1,6.3,7.2,185.98,1.8,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00520,"TAPE,SEALING,W/DISP,2""X60YD",CAT001,4.3,2.4,4.9,50.57,0.25,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00521,"FLAGS,POSTIT,GN",CAT001,2.8,0.3,4.8,4.03,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00522,"PROTCT,SHT,HVYTWT,CL",CAT001,9.81,1.56,11.87,181.65,2.42,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00523,"PAPER,FORE DP,8.5X11,TE",CAT002,8.6,2.2,11.3,213.8,4.9,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00524,"STAND,MONITOR,NOTEBK,DOCK",CAT009,16.75,3.0,16.75,841.69,3.6,fragile,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00525,"TAPE,L/O,TF,IBM ACTIONWRT 1",CAT001,3.9,1.1,4.1,17.59,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00526,"PAD,LGL,PERF,CA",CAT002,8.3,0.2,11.6,19.26,0.5,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00527,"FLDR,FILE,PLAST,LTR,1/3,AST",CAT001,8.5,1.75,12.5,185.94,2.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00528,"DISK,3.5,DSHD,RAINBO,1.44MB",CAT001,3.8,2.0,3.9,29.64,0.4,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00529,"PROTCT,SHT,TOPLD,NGL",CAT001,9.81,1.56,11.87,181.65,2.0,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00530,"SOFTSOAP,LIQUID,7.5OZ",CAT001,2.9,2.0,5.5,31.9,0.6,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00531,SEE NO. GEP 210-00,CAT007,13.3,9.6,21.5,2745.12,15.8,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00532,"REFILL,STAY-PUT,BK",CAT001,2.0,0.3,7.0,4.2,0.03,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00533,"MARKER,DRYERASE,EXPO,BK",CAT001,0.7,0.6,4.6,1.93,0.03,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00534,"OPENER,LTR,SERRATED,8.25""",CAT001,0.5,0.2,8.1,0.81,0.03,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00535,"PPR,CMPTR,1PT,PLN,9.5X11",CAT007,10.2,10.5,11.4,1220.94,37.9,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00536,"HEATER,3SETTING,GY,WND3150",CAT001,5.5,9.0,11.0,544.5,1.6,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00537,"PAD,LGL,WRLDFIBR,8.5X11,WE",CAT002,8.3,0.3,11.7,29.13,0.4,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00538,"LABEL,F/FLDR,DBE,248",CAT001,4.5,0.5,7.5,16.88,0.18,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00539,"SPONGE,HVYDTY,S.O.S.,3PK",CAT001,2.9,2.8,5.3,43.04,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00540,"LABEL,POST MTR,F/PB E700,60",CAT001,4.49,0.5,7.51,16.86,0.22,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00541,"DECANTER,STANDARD",CAT001,7.4,7.8,7.4,427.13,1.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00542,"DEODORIZER,CNTRYGRDN,13 OZ",CAT010,2.2,8.1,2.4,42.77,0.3,standard,flammable,measured,valid,spr_sku_dimensions,high
+SPR-00543,"CARD,INDEX,RULED,3X5,ASST",CAT001,3.0,0.9,5.0,13.5,0.4,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00544,"FLDR,LTR,1/3,SGL,11PT,AST",CAT006,9.75,2.37,12.0,277.29,7.8,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00545,"ROLLER,INK,CSO FR90,BK",CAT001,4.2,0.3,6.5,8.19,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00546,"PKT,FILE,LTR,2""-2-PLY,MLA",CAT006,10.3,6.2,12.3,785.48,5.8,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00547,"PAD,PRISM,50SH,5X8,AST",CAT002,5.0,1.4,8.0,56.0,1.25,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00548,"SCISSORS,STRAIGHT,8""-BK",CAT001,2.8,0.5,10.0,14.0,0.02,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00549,"TAPE,COVR-UP/LBL,POSTIT,1""",CAT001,3.0,1.2,4.8,17.28,0.11,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00550,"PEN,BALLPT,EASYTOUCH,MED,BE",CAT001,0.5,0.5,6.2,1.55,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00551,"PEN,BALLPT,CLASSIC,BE",CAT001,2.8,1.1,6.1,18.79,0.07,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00552,"LABEL,F/FLDR,WE",CAT001,4.25,0.5,7.13,15.15,0.19,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00553,"CASE,JWL,CDR,12PK,#190069",CAT001,5.0,4.9,5.7,139.65,1.75,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00554,"TAB,INSERT,REPLACEMENT,1/5",CAT001,6.5,0.5,6.5,21.12,0.06,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00555,"PEN,DRYERASE,MRKALOT,4PK",CAT001,4.0,0.8,6.4,20.48,0.13,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00556,"STAPLER,F/STRIP,METAL,BK",CAT001,2.3,1.6,6.8,25.02,0.46,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00557,"STRIP,PWR,6-OUT,PY",CAT001,3.3,2.2,13.5,98.01,0.8,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00558,"FILE,PKT,TOP TAB,LTR,3.5",CAT001,9.75,0.25,12.25,29.86,0.24,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00559,"TONER,10I/10EX/12,OKIPAGE",CAT001,2.2,1.9,11.0,45.98,0.34,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00560,"REFILL,RETRAC,MED,BE",CAT001,2.0,0.2,6.0,2.4,0.01,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00561,"REMOVER,STAPLE,PLATINUM",CAT001,2.0,0.5,7.0,7.0,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00562,"HOLDER,PENCIL,JUMBO,MESH,BK",CAT001,4.7,4.7,6.2,136.96,0.4,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00563,"PENCIL,COL-ERASE,RD",CAT001,1.9,0.7,7.6,10.11,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00564,"CALC,PORT,DUAL PWR,10 DGT",CAT001,5.3,0.9,10.5,50.08,0.43,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00565,"PEN,BALLPT,RDSTIC,FN,BE",CAT001,2.8,1.1,6.1,18.79,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00566,"SCISSORS,STRAIGHT,8""-BE",CAT001,1.9,0.3,8.8,5.02,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00567,"RBN,FORMS PRNT2300/2400 SRS",CAT001,3.7,1.3,4.5,21.65,0.5,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00568,"PEN,BALLPT,RETRACT,BK,FN",CAT001,0.2,0.2,5.4,0.22,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00569,"NOTES,ADHES,RLD,4""X6""-YW",CAT001,3.9,0.4,5.9,9.2,0.85,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00570,"CRTDG,INK,STYLUS,CLR",CAT001,3.5,1.9,4.0,26.6,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00571,"HIGHLIGHTER,MAJOR ACCENT,LV",CAT001,0.7,0.6,4.6,1.93,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00572,"ENV,PEEL&SEAL,9X12,WE",CAT001,9.6,4.2,12.1,487.87,4.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00573,"GLUE,ALL-PURPOSE,55ML,CR",CAT001,1.0,0.5,5.7,2.85,0.13,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00574,"NTBK,STENO,GREGG,6X9,80SH",CAT001,5.8,0.4,9.1,21.11,0.45,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00575,"CLIP,PAPER,OWL,LARGE,#3,100",CAT002,2.3,1.4,4.0,12.88,0.13,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00576,"PEN,BALLPT,FLEXGRIP,BE",CAT001,0.3,0.2,5.5,0.33,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00577,"PEN,ROLLBALL,PRECISE,BK,PV5",CAT001,0.5,0.5,5.5,1.38,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00578,"SET,HIGHLIGHTER,CHISEL TP",CAT001,4.0,0.4,6.0,9.6,0.11,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00579,"GLUE STICK,.28 OZ",CAT001,0.7,0.6,3.2,1.34,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00580,"CLEANER,AIR DUSTER,3.5OZ.",CAT010,2.1,2.2,6.0,27.72,0.23,standard,flammable,measured,valid,spr_sku_dimensions,high
+SPR-00581,"PAPER,FORE DP,8.5X11,PK",CAT002,8.8,2.2,11.3,218.77,4.95,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00582,"POST-IT,RULED,4X6,YW",CAT001,4.0,0.5,6.0,12.0,0.21,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00583,"ROLL,ADD MACHINE,2.25X150",CAT001,2.9,2.3,8.5,56.69,0.82,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00584,"PAD,MEMO,PLN,3X5,WE",CAT002,5.0,2.0,6.0,60.0,1.5,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00585,"LABEL,LSR,2-5/8X1,WE,7500",CAT006,8.8,1.9,11.5,192.28,6.12,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00586,"CLIPS,PLAST,MEDIUM,ASST",CAT001,3.6,2.3,3.6,29.81,0.28,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00587,"TAB,FLDR,SNAP-ON,1/3,CLR",CAT001,5.7,0.7,5.7,22.74,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00588,"SPOON,PLSTC,HEAVY MED.WT,WE",CAT001,6.1,2.1,7.4,94.79,0.65,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00589,"PAPER,COPYPLUS,11X17,WE",CAT006,11.2,2.3,17.2,443.07,10.45,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00590,"NOTES,ADHSV,3""X3"",NEON ASST",CAT001,3.0,1.2,3.0,10.8,0.3,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00591,"BAND,RUBBER,1/4 LB",CAT001,3.6,2.9,4.5,46.98,0.32,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00592,"PEN,ROLLBALL,JIMNIE,BE",CAT001,0.3,0.3,5.9,0.53,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00593,"LABEL,LSR,SHPG,3-1/3X4WE600",CAT001,8.8,0.9,11.4,90.29,2.6,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00594,"CHALK,LOW DUST,WE",CAT001,2.4,0.9,3.3,7.13,0.27,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00595,"STAPLES,HVY DTY",CAT001,2.7,0.8,3.1,6.7,0.14,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00596,"TAB,FLDR,HANG,PLAS,1/3,CR",CAT001,3.5,0.5,3.5,6.12,0.14,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00597,SEE NO. FDP 23944,CAT001,5.9,1.8,8.5,90.27,1.58,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00598,"PAPER,HOTCLRS,24#,AST",CAT002,8.4,1.0,10.9,91.56,2.55,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00599,"POST-IT,RULED,3 X 3,YW",CAT001,4.6,1.8,7.4,61.27,1.48,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00600,"RBN,NYL,CBNLS 2140 POS,PE",CAT001,4.1,1.1,4.6,20.75,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00601,"ORGANIZER,DSK TOP,BK",CAT001,5.2,5.5,6.1,174.46,0.39,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00602,"COVER,CERTIFICATE,LINEN,NVY",CAT001,9.6,0.1,12.3,11.81,0.35,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00603,"CALC,DESKTOP,PRT,HVYDTY",CAT003,12.0,5.7,16.4,1121.76,4.0,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00604,"FORM,RCVD PETTY CASH,5X3.5",CAT001,3.3,0.2,4.8,3.17,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00605,"MARKER,PERM,CHSLTP,LRG,BK",CAT001,0.75,0.75,6.38,3.59,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00606,"NOTES,ADHESIVE,POP-UP,3X3",CAT001,3.1,1.3,6.2,24.99,0.51,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00607,"PPR,CMPTR,1PT,GNBR,15X11",CAT007,11.6,11.5,15.3,2041.02,63.6,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00608,"SHEARS,BENT,8""-STST",CAT001,3.1,0.6,8.5,15.81,0.13,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00609,"LABEL,LSR,2-3/4X1,CL,1500",CAT001,8.87,0.5,11.25,49.89,1.12,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00610,"LABEL,1/4""DIA,TRANS ASST860",CAT001,4.5,0.5,7.5,16.88,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00611,"CRTDG,TNR,HL1250/MFC8600",CAT001,5.8,5.2,14.1,425.26,1.95,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00612,"CALC,DSKTP,PRNTG,12KGT",CAT001,10.0,4.5,14.2,639.0,2.5,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00613,"SUPPORT,BOOK,JUMBO,BASE,BK",CAT002,9.3,6.0,9.1,507.78,1.3,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00614,"LABEL,F/FLDR,WE,248",CAT001,4.5,0.5,7.5,16.88,0.23,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00615,"MOUSEPAD,GEL,GY",CAT002,8.7,1.3,11.3,127.8,0.64,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00616,"HOLDER,CD,4CAP,3-RING,10PK",CAT001,6.1,0.3,12.2,22.33,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00617,"REFILL,CARDS,2.25""X4""",CAT001,2.8,0.9,4.4,11.09,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00618,"CLEANER,MKER BOARD,EXPO,8OZ",CAT010,2.1,2.1,7.5,33.08,0.55,standard,toxic,measured,valid,spr_sku_dimensions,high
+SPR-00619,"CLIPS,BINDER,MEDIUM",CAT002,2.3,1.4,4.8,15.46,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00620,"NOTES,ADHES,3X3,BRT,AST",CAT001,2.9,2.5,3.0,21.75,0.5,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00621,"PEN,ROLLBALL,JIMNIE,BK",CAT001,0.3,0.3,5.9,0.53,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00622,"FASTENER,BASE,2.75""CC,2""C",CAT001,3.25,1.0,5.5,17.88,0.59,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00623,"TABS,HANG FILE,1/5,LASER,WE",CAT001,6.94,0.06,9.0,3.75,0.13,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00624,"SHEARS,OFFICE,10.5-STST",CAT001,4.7,1.0,12.5,58.75,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00625,"ENVELOPE,DBLWIN,#9,WE",CAT006,9.1,4.0,12.1,440.44,5.6,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00626,SEE NO. AVT 60000,CAT001,0.7,0.7,2.2,1.08,0.06,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00627,"CARTRIDGE,TAPE,3/8""-BK/WE",CAT001,4.1,5.2,1.0,21.32,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00628,"NOTE,ADHESIVE,LINED,4X4,YL",CAT001,4.0,1.2,4.0,19.2,0.49,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00629,"PAD,LEGAL,MICRO,JR SZ,WE",CAT002,4.8,0.2,7.8,7.49,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00630,"MARKER,PERM,SHARPIE,FN,BE",CAT001,0.5,0.5,5.2,1.3,0.02,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00631,"BAG,TRASH,HEAVY DUTY,31-33G",CAT006,9.9,7.7,12.4,945.25,13.55,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00632,"NOTEBOOK,GREGG,80SH,GN",CAT002,5.9,0.4,9.1,21.48,0.4,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00633,"CRTDG,INK,F/BJC6000,YW",CAT001,3.0,1.4,5.6,23.52,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00634,"CRTDG,INK,SC480,C40UX,BK",CAT001,3.1,0.7,3.4,7.38,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00635,"COOKIES, FUDGE STRIPES,2OZ",CAT001,5.9,3.4,9.8,196.59,0.8,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00636,"REFILL,BALLPT,MED,BE",CAT001,2.0,0.2,6.7,2.68,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00637,"FILE,CARD,GLIDE,3X5,500C,BK",CAT001,5.5,6.1,12.0,402.6,2.7,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00638,"PAD,LEGAL,LGL SZ,WE",CAT002,8.4,0.3,14.0,35.28,0.44,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00639,"DISK,3.5,DSHD,PC FRMT,25PK",CAT001,3.8,4.1,4.0,62.32,1.01,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00640,"PEN,BALLPT,CLASSIC,BK",CAT001,2.8,1.1,6.1,18.79,0.07,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00641,"STAPLES,HVY DTY,1/4""",CAT001,2.7,0.4,3.0,3.24,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00642,"7530 PAD,SELF-STICK,YW",CAT002,3.0,3.0,4.7,42.3,1.0,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00643,"NOTEBOOK,STENO,6X9,60CT,GN",CAT002,5.8,0.3,9.0,15.66,0.29,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00644,"BAND,RUBBER,33-1LB",CAT001,6.0,2.1,10.5,132.3,1.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00645,"PAPER,FORE DP,8.5X11,OD",CAT002,8.7,2.1,11.3,206.45,4.95,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00646,"TAPE,TRANS,3/4""X1296""",CAT001,2.6,0.7,2.6,4.73,0.06,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00647,"LABEL,INKJT,1X2-5/8,CL,750",CAT001,9.25,0.37,12.0,41.07,0.6,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00648,"CALC,12 DGT,DSKTOP,TAX FUNC",CAT001,8.5,1.3,9.4,103.87,0.54,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00649,"CLEANER,WINDEX,ANTIBACTRAL",CAT001,2.6,10.3,4.3,115.15,1.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00650,"CARTRIDGE,TAPE,1/2""-BK/WE",CAT001,2.5,0.7,3.5,6.12,0.09,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00651,"RULER,STD,METRIC,STR02133",CAT001,1.1,0.2,12.2,2.68,0.03,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00652,"MAGNIFIER,ROUND,5""",CAT001,6.5,1.2,11.2,87.36,0.63,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00653,"LABELING,SYS,ELEC,PORT,TZ",CAT001,9.9,2.6,14.6,375.8,1.9,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00654,"WRIST REST PAD,KEYBD,GEL",CAT002,3.1,1.2,19.2,71.42,1.6,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00655,"FRAME,T,8.5X11",CAT001,8.5,3.6,11.4,348.84,0.49,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00656,"PEN,CORRECTION,POCKET,WE",CAT010,0.4,0.4,4.8,0.77,0.45,standard,toxic,measured,valid,spr_sku_dimensions,high
+SPR-00657,"CLEANER,SFT&SCRB,BLCH,36OZ",CAT001,2.5,10.3,4.1,105.57,2.35,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00658,"DISPENSER,TAPE,BY",CAT001,2.8,2.8,6.6,51.74,1.04,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00659,"CARTRIDGE,FILM,FAX,KX-FP101",CAT001,6.5,2.9,11.7,220.54,1.25,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00660,"OPENER,LTR,COMMRCIAL,CHR",CAT001,1.0,0.1,9.5,0.95,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00661,"CRTDG,INK,STYLUS 500,BK",CAT001,3.1,1.1,3.7,12.62,0.06,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00662,SEE NO. PAP 00103,CAT001,0.4,0.4,2.4,0.38,0.01,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00663,"REFILL,WINDEX,1 GAL",CAT006,5.0,11.0,7.3,401.5,8.15,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00664,"BOARD,CORK,WOODFRM,4X3",CAT006,36.5,1.0,48.5,1770.25,13.0,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00665,"PAD,MEMO,RLD,8.5X11,WE",CAT006,8.3,2.1,11.0,191.73,5.21,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00666,"CALC,SOLAR SCIENTIFIC,10DGT",CAT001,7.3,5.6,10.1,412.89,2.45,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00667,"PROTCT,SHT,11X8.5,CL",CAT001,10.0,1.6,11.4,182.4,0.35,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00668,"FILE,3 PKT,WALL,SMK",CAT001,12.3,5.0,15.2,934.8,2.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00669,"TAPE,SEALING,CT,48MMX50M,CL",CAT001,3.8,1.9,3.7,26.71,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00670,"PEN,BALLPT,FLEXGRIP,MED,RD",CAT001,0.3,0.3,5.4,0.49,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00671,"MARKER,PERM,JUMBO,BK",CAT001,1.2,1.2,6.1,8.78,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00672,"FLDR,LTR,11PT,MAN,STRT,SGL",CAT006,10.25,2.75,12.5,352.34,6.4,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00673,"FILE,STOR/DRWR,STLPLUS,LTR",CAT001,34.5,1.3,18.8,843.18,4.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00674,"PEN,BALLPT,FLEXGRIP,FN,BK",CAT001,0.3,0.3,5.4,0.49,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00675,"PEN,ROLLBALL,PRECISE,BE,PV5",CAT001,0.5,0.5,5.5,1.38,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00676,"TAPE,CORRECTION,MONO,2PK",CAT001,0.3,0.3,6.4,0.58,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00677,"TAB,INDEX,SWIFT,1.5""-WE",CAT001,3.5,0.5,6.3,11.03,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00678,"GLUE,KRAZY,INSTANT,.07OZ",CAT001,2.9,0.8,7.2,16.7,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00679,"CLIP HOLDER,JUMBO,MESH,EXP",CAT001,4.4,2.3,4.6,46.55,0.23,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00680,"PAPER,FORE DP,8.5X11,GD",CAT002,8.6,2.2,11.2,211.9,4.9,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00681,"BATTERY,ALKA,AA,12/PK",CAT001,2.1,1.6,3.6,12.1,0.58,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00682,"FILE,EXP,LTR,A-Z",CAT001,10.1,1.5,12.1,183.31,1.3,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00683,"COOKIES,CHIPS DLX,2OZ",CAT001,5.9,3.4,9.4,188.56,0.8,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00684,"TAPE,COVR-UP/LBL,POSTIT1/6""",CAT001,3.0,0.5,4.8,7.2,0.02,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00685,"REFILL,BALLPT,MED,BE",CAT001,2.0,0.2,6.7,2.68,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00686,"ENV,WVN,24#,#10,WE",CAT006,9.9,4.4,12.2,531.43,6.25,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00687,"NTBK,GREGG,6X9,60SH,GN",CAT001,6.0,0.3,9.1,16.38,0.35,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00688,"BATTERY,ALKA,AAA,8PK,ENGZR",CAT001,1.9,0.9,2.5,4.28,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00689,"TOWELS,C-FOLD,2-PLY,PREM",CAT007,13.5,11.0,22.0,3267.0,17.4,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00690,"CRTDG,LEX 80,7200/V,TRI-CLR",CAT001,2.6,2.0,4.1,21.32,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00691,"REFILL,BALLPT,MED,BK",CAT001,2.0,0.2,6.7,2.68,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00692,"SEAL,NOTARIAL,2""DIA,GD,42",CAT001,4.5,0.5,7.5,16.88,0.18,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00693,"HIGHLIGHTER,DESK,FGN",CAT001,0.8,0.8,5.1,3.26,0.14,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00694,"JACKET,FILE,11X8-1/2,Cl",CAT001,9.5,1.5,12.5,178.12,0.4,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00695,"CRTDG,INK,STY CLR 880,T-CLR",CAT001,4.4,2.2,5.8,56.14,0.12,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00696,"CORD,PHONE,TWISSTOP,25',BK",CAT009,3.5,1.8,7.4,46.62,0.15,fragile,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00697,"BOARD,CORK,ALUMFRM,3X2",CAT006,24.5,1.0,36.5,894.25,6.0,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00698,"CRTDG,INK,SC740/760/860",CAT001,3.6,1.5,3.5,18.9,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00699,"SCISSORS,BENT,8""-BY",CAT001,2.7,0.6,9.2,14.9,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00700,"LEAD,.7MM",CAT001,0.3,0.1,2.6,0.08,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00701,"SUGAR,PURE CANE,2000/BX",CAT006,9.6,7.0,13.1,880.32,14.05,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00702,"HIGHLIGHTER,DESK,FLPK",CAT001,0.8,0.8,5.1,3.26,0.14,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00703,"REFILL,BALLPT,MED,BE",CAT001,2.3,0.4,6.5,5.98,0.01,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00704,"PORTFOLIO,DBLPKT,8.5X11,AST",CAT001,9.8,2.8,12.0,329.28,2.0,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00705,"CRTDG,INK,STYLUS 800,BK",CAT001,3.6,1.5,3.6,19.44,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00706,"SCISSORS,STRAIGHT,8""-RD",CAT001,2.8,0.6,8.6,14.45,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00707,"PUNCH,3-HOLE,9/32""-BK",CAT001,6.3,2.8,11.1,195.8,2.7,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00708,"FLUID,CORRECTION,IY",CAT010,0.9,0.9,2.3,1.86,0.1,standard,toxic,measured,valid,spr_sku_dimensions,high
+SPR-00709,SEE NO. SWI 74015,CAT001,2.38,2.13,11.63,58.96,1.29,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00710,"PAD,LGL,8.5X11.75,CA",CAT002,8.3,0.3,11.5,28.64,0.55,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00711,"WRIST REST/MOUSE PAD,CHAR",CAT002,9.0,1.5,11.5,155.25,1.65,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00712,"SOAP,DISHWASHING,28OZ",CAT001,4.0,2.2,9.0,79.2,1.7,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00713,"FLDR,HANG,LTR,1/5,BE",CAT001,10.5,2.5,13.0,341.25,4.9,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00714,"CARDS,FILE,2-1/4""X4"" WE",CAT001,2.2,0.8,4.1,7.22,0.16,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00715,"TRANSFER,T-SHIRT,IRON,G",CAT001,9.2,0.1,12.0,11.04,0.46,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00716,"POST-IT,PLN,2X3,YW",CAT001,2.1,0.4,3.0,2.52,0.03,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00717,"HOLDER,FILE,TRANSPARENT,CL",CAT001,9.4,1.7,12.1,193.36,2.06,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00718,"MARKER,HIGHLIGHTER,DESK,LBE",CAT001,0.8,0.8,5.1,3.26,0.14,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00719,"CLIPS,PLAST,LARGE,ASST",CAT001,3.6,2.3,3.7,30.64,0.27,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00720,"STAPLER,HVY DTY,BLACK",CAT001,5.6,3.7,11.9,246.57,2.03,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00721,"TAPE,TRANS,MAGIC.5""-1""CORE",CAT001,2.6,0.7,2.6,4.73,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00722,SEE NO. MFE 88501,CAT001,5.6,0.9,6.9,34.78,0.35,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00723,"TAPE,CORRECTION,MINI",CAT001,3.0,0.7,7.5,15.75,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00724,"PEN,BALLPT,RSVP,BK",CAT001,0.7,0.7,5.5,2.69,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00725,SEE NO. ELD 49306,CAT001,6.4,5.9,6.2,234.11,0.5,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00726,"ROLL,CALCULATOR,2.25""-WE",CAT001,2.6,2.3,13.0,77.74,1.55,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00727,"PROTCT,SHT,TOPLD,NGL",CAT001,8.5,2.0,11.87,201.79,2.8,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00728,"CORD,NECK,NYLON,BE",CAT001,0.5,0.1,2.4,0.12,0.02,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00729,"FILE,BUS CRD,CVR,500CD,BK",CAT001,5.0,3.3,7.7,127.05,0.9,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00730,"FILE,CARD,GLIDE,2.25X4,500C",CAT001,5.5,4.7,10.3,266.26,1.65,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00731,"PEN,ROLLBALL,VSNELT,UNI,BK",CAT001,0.4,0.4,5.5,0.88,0.02,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00732,"BINDER,VIEW,RVT,1""-BK",CAT002,10.0,1.4,11.1,155.4,0.7,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00733,"PEN,STICK,MED,RD",CAT001,2.6,0.9,6.2,14.51,0.12,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00734,"CRTDG,INK,BJC600,MA",CAT001,3.0,1.4,5.6,23.52,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00735,SEE NO. DUR MN24VR12Z,CAT001,1.8,0.9,2.6,4.21,0.18,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00736,"TRAY,LTR,HIGH CAP,STACK,EB",CAT001,8.9,5.0,12.9,574.05,0.8,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00737,"BATTERY,ALKAA,AA,2PK,ENGZR",CAT001,2.4,0.6,2.3,3.31,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00738,SEE NO. GEP PFM21,CAT001,8.0,8.6,13.4,921.92,5.0,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00739,"SCISSORS,STUDENT,7""-AST",CAT001,3.0,0.5,9.0,13.5,0.12,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00740,"BANDAIDS,SHEER,3/4""-100",CAT001,4.1,1.9,6.0,46.74,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00741,"HOLDER,STAND-UP,8.5X11",CAT001,8.3,3.4,11.5,324.53,0.35,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00742,"PEN,BALLPT,FLEXGRIP,MED,PE",CAT001,0.3,0.3,5.4,0.49,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00743,"REFILL,ERASER",CAT001,0.2,0.2,2.7,0.11,0.01,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00744,SEE NO. ELD 39906,CAT001,5.8,5.1,9.0,266.22,0.35,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00745,"STAPLER,DESK,FULL STRIP,BK",CAT001,6.75,1.5,6.75,68.34,0.6,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00746,"BOOK,NOTE,WRBND,1SUB,100SHS",CAT002,8.6,0.4,11.0,37.84,0.9,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00747,"GLUE STICK,PERM,1.27 OZ,CL",CAT001,1.2,1.2,4.6,6.62,0.14,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00748,"MARKER,PERM,CHISELTP,LRG,RD",CAT001,0.8,0.8,6.4,4.1,0.14,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00749,"CRTDG,INK,BJ-200/230,BK",CAT001,3.1,1.4,5.4,23.44,0.21,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00750,"WIPES,STAINREMOVER,SHOUT",CAT001,5.2,4.4,6.7,153.3,0.45,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00751,"CRTDG,INK,SC82/80/X5200,BK",CAT001,4.4,1.5,5.4,35.64,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00752,SEE NO. MFE 88504,CAT001,5.5,0.8,10.2,44.88,0.35,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00753,"ENV,CLASP,12X15.5,KFT",CAT006,12.4,3.9,18.2,880.15,7.05,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00754,"TABBING,SHIELD,1""-CL",CAT001,4.3,0.4,5.5,9.46,0.14,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00755,"MARKER,HIGHLIGHTER,4PK",CAT001,4.0,0.9,6.4,23.04,0.19,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00756,"CRTDG,INK,BJC6000,CYN",CAT001,3.0,1.4,5.6,23.52,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00757,"PENCIL,MECH,HRD,#3",CAT001,1.9,0.7,7.6,10.11,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00758,"PEN,BALLPT,FLEXGRIP,FN,BE",CAT001,0.3,0.3,5.4,0.49,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00759,"PEN,ROLLBALL,PRECISE,BK,PV7",CAT001,0.4,0.3,5.1,0.61,0.03,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00760,"HIGHLIGHTER,PKT ACCENT,5CLR",CAT001,2.3,0.6,5.6,7.73,0.12,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00761,"PROTCT,SHT,REDCD-GLR,CL",CAT001,10.1,1.5,11.4,172.71,1.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00762,"CRTDG,INK,SC440/640/660/750",CAT001,3.0,1.0,3.4,10.2,0.07,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00763,"PAD,LEGAL,LTR SZ,CA",CAT002,8.3,0.5,11.6,48.14,0.5,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00764,"INDEX,INSERT,5TAB,CL",CAT001,9.03,0.05,11.0,4.97,0.11,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00765,"FILE,PKT,EXP,5.25""-LGL",CAT001,10.25,0.45,15.5,71.49,0.42,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00766,"PEN,BALLPT,GRP,CMFRTMTE,BK",CAT001,0.5,0.3,5.6,0.84,0.26,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00767,"ENVELOPE,RECY,#10,WE",CAT001,4.5,3.3,9.7,144.04,1.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00768,"BATTERY,ALKA,AAA,12/PK",CAT001,1.8,1.1,2.7,5.35,0.26,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00769,"PEN,ROLLBALL,UNI,XFN,BE",CAT001,0.2,0.3,5.2,0.31,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00770,"ENV,PEEL&SEAL,10X13,WE",CAT006,10.4,4.0,13.5,561.6,5.2,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00771,"HIGHLIGHTER,DBLEND,5CLR",CAT001,2.9,0.7,5.6,11.37,0.11,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00772,"CLIP,PAPER,JUMBO,GOLD",CAT002,2.9,0.75,3.5,7.61,0.09,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00773,"HIGHLIGHTER,DESK,AST",CAT001,4.0,0.9,6.4,23.04,0.19,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00774,"FLDR,PEND,W/ERAS TAB,AST",CAT001,9.75,0.88,11.75,100.81,2.0,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00775,"HIGHLDNOTES,S/S,PLN,3X3,BE",CAT001,3.0,0.4,3.0,3.6,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00776,"PEN,BALLPT,RETRACT,RD,MED",CAT001,0.3,0.2,5.1,0.31,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00777,"PEN,CORRECTION,FNPT",CAT010,0.8,0.6,3.9,1.87,0.06,standard,toxic,measured,valid,spr_sku_dimensions,high
+SPR-00778,"MARKER,MIDAS TOUCH,MED,GD",CAT001,0.5,0.4,5.6,1.12,0.04,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00779,"FORM,TIME CARD,3.5X9",CAT006,6.4,4.0,9.6,245.76,5.55,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00780,"PAD,DESK,16MO,22X17,AY,BK",CAT002,16.7,0.3,21.5,107.71,1.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00781,"SCALE,TRIANGLR,ARCHTCT,12""",CAT001,1.3,1.3,12.1,20.45,0.04,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00782,"PAPER,LSRPRNT,11X17,WE",CAT006,11.2,2.2,17.3,426.27,12.1,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00783,"ENVELOPE,PERS/CONF,10X13",CAT006,10.4,4.1,13.5,575.64,5.05,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00784,SEE NO. ELD 53106,CAT001,9.5,3.0,13.1,373.35,0.45,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00785,"R/BANDS,CREPE,#64,1LB",CAT001,5.0,3.8,7.4,140.6,1.0,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00786,"MAGNETS,BUSINESS CARD,25",CAT001,2.1,0.7,3.5,5.14,0.51,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00787,"CRTDG,TNR,E20,F/PC795/770",CAT001,7.5,5.0,13.5,506.25,2.35,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00788,"CARTRIDGE,REFILL,SOFTSOAP",CAT001,4.0,3.4,4.9,66.64,1.6,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00789,"BATTERY,ALKA,PROCELL,AA,24",CAT001,2.2,2.0,4.8,21.12,1.23,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00790,"SHARPENER,PENCIL,ELEC,BK",CAT001,7.0,4.4,7.6,234.08,1.75,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00791,"FLUID,CORRECTION,WHITE",CAT010,0.9,0.9,2.3,1.86,0.1,standard,toxic,measured,valid,spr_sku_dimensions,high
+SPR-00792,"SPRAY,DISINFECTANT,LYSOL",CAT010,2.7,10.1,2.7,73.63,1.5,standard,flammable,measured,valid,spr_sku_dimensions,high
+SPR-00793,"BASE,FILE FASTENER,2.75,2""C",CAT001,3.4,0.5,5.9,10.03,0.52,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00794,"STAPLER,FULL STRIP,BK",CAT001,4.7,2.19,7.81,80.39,0.59,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00795,"PAPER,CRBN,TYP,8.5X11,BK",CAT002,8.6,0.2,11.5,19.78,0.14,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00796,"PEN,BALLPT,RETRAC,MED,BK",CAT001,0.4,0.3,5.4,0.65,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00797,"CRTDG,FAX,F/MFC660,PPF560",CAT001,5.7,2.5,12.6,179.55,0.8,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00798,"COPYHOLDER,FLIP,MNTR,LGY",CAT001,5.5,1.9,12.2,127.49,0.34,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00799,"BATTERY,CALC/WATCH,LITIUM",CAT001,1.9,0.2,3.5,1.33,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00800,"BULB,HALOGEN,50 WATT",CAT001,3.6,0.2,6.3,4.54,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00801,"DICTIONARY,WEBSTRII,COLLEGE",CAT001,7.1,2.0,9.8,139.16,3.0,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00802,"BOOK,NOTE,SPIRAL,11X8.5,AST",CAT002,8.6,0.4,10.8,37.15,0.85,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00803,"CREAMR,CFFEEMT,22OZ",CAT001,3.5,8.8,3.5,107.8,1.55,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00804,"ROLLER,INK,SHR EL1071S,BK",CAT001,4.2,0.8,6.5,21.84,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00805,"PEN,BALLPT,RSVP,FN,BK",CAT001,0.7,0.7,5.5,2.69,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00806,"ENVELOPE,TYVEK,OPENER",CAT001,2.2,0.4,2.7,2.38,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00807,"REMOVER,HVY DTY",CAT001,3.6,2.1,5.4,40.82,0.3,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00808,"CRTDG,TNR,HI YLD,F/HL1250",CAT001,6.1,5.2,14.3,453.6,2.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00809,"PORTFOLIO,DBLPKT,8.5X11,DBE",CAT001,9.8,2.8,12.0,329.28,2.0,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00810,"HOLDER,CRD BUSINESS,MESH,BK",CAT001,2.0,0.1,3.7,0.74,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00811,"TAPE,INVISBL,ECON,.5X1296",CAT001,2.6,0.7,2.6,4.73,0.07,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00812,SEE NO. PAP 12242,CAT001,1.6,0.6,7.3,7.01,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00813,"INDEX,3-RNG,8TAB,MI",CAT001,8.9,0.3,11.2,29.9,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00814,"STRIPS,STICKY BACK,3.5""-BG",CAT001,2.5,0.9,4.9,11.03,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00815,"LABEL,LSR,ADD,1X4,WE,2M",CAT001,8.88,0.94,11.4,95.16,2.63,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00816,"STAPLES,FOR B8 SERIES",CAT001,2.0,1.1,4.5,9.9,0.23,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00817,"REFILL,INK,BJC4000,CLR",CAT001,3.1,1.4,5.5,23.87,0.11,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00818,"PAPER,LSRJET,8.5X11,24#,WE",CAT006,8.6,2.3,11.3,223.51,6.15,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00819,"RBN,TYP,CORR,BRT AX10,BK",CAT001,4.7,1.3,5.0,30.55,0.13,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00820,"STAMP,INKED,""FAXED""-RD",CAT001,2.3,1.1,2.6,6.58,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00821,"LABEL,F/FLDR,ASST,248",CAT001,4.5,0.5,7.5,16.88,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00822,"SEAL,MAILING,1""-CL,600",CAT001,4.49,0.5,7.51,16.86,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00823,"SUPPORT,WST,UNVSL,NYL",CAT001,3.0,1.0,3.8,11.4,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00824,"PAPER,8.5X11,24#,ULN",CAT006,8.6,2.3,11.5,227.47,6.05,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00825,"CDR,650MB,#623101",CAT001,4.9,0.3,5.6,8.23,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00826,SEE NO. MMM 656-RP-A,CAT001,3.1,2.4,4.1,30.5,0.73,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00827,"CHOCOLATE,HOT,NESTLE,1 OZ",CAT001,5.1,10.1,7.5,386.32,4.25,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00828,"PEN,ROLLBALL,G-2,X-FN,BK",CAT001,0.5,0.5,5.7,1.43,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00829,"PEN,GEL,UNI,RT,BK",CAT001,0.5,0.3,5.4,0.81,0.02,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00830,"MARKER,DRYERASE,EXPO,6CLR",CAT001,5.7,1.6,9.0,82.08,0.35,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00831,"RULER,STAINLESS STEEL,12""",CAT001,1.3,0.1,12.0,1.56,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00832,"PAD,LGL,WRLDFIBR,8.5X11,CA",CAT002,8.3,0.3,11.5,28.64,0.4,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00833,"BOOK,RECY,WB,1SUB,TEAL",CAT002,9.1,0.3,11.0,30.03,0.95,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00834,"BOOK,LAB,5""QUAD.RULED,10X8",CAT002,7.8,0.35,10.3,28.12,0.72,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00835,"SHRPNR,PENCIL,METAL,SILV",CAT001,0.6,0.4,0.9,0.22,0.04,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00836,"REMOVER,STAPLE,CHARCOAL",CAT001,2.8,0.7,8.5,16.66,0.02,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00837,"HOLDER,MSSGE CNTR,8CMPT,SM",CAT001,5.7,4.2,9.1,217.85,1.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00838,"KNIFE,PLSTC,HEAVY,MED.WT,WE",CAT001,5.5,1.7,7.1,66.38,0.75,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00839,"CD-R,PRO,700MB/80,5PK",CAT001,4.9,1.1,5.6,30.18,0.55,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00840,"PEN,GEL,UNI,GRP,BK",CAT001,0.3,0.2,6.4,0.38,0.02,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00841,"FLDR,HANG,LTR,1/5,BE",CAT001,10.4,2.9,13.7,413.19,3.45,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00842,"CARDS,BUSN,LSR,2X3.5,WE",CAT001,8.81,0.63,11.38,63.16,1.0,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00843,"PAD,STAMP,FELT,#1,RD",CAT002,3.1,0.6,4.3,8.0,0.12,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00844,"HOLDR,UNTAB,BUSNCRD,F/3RING",CAT001,8.5,0.11,11.25,10.52,0.37,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00845,"TONER,FAX,MP L6000,IC-11",CAT001,6.5,5.5,13.9,496.93,2.3,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00846,"INDEX,11X8.5,A-Z,MI",CAT001,9.0,0.2,11.2,20.16,0.3,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00847,"CRTDG,HP14,CP1160 SRS,BK",CAT001,4.4,1.3,5.5,31.46,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00848,"SHARPENER,PENCIL,ELEC,GY",CAT001,6.1,4.2,8.4,215.21,1.8,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00849,"RIBBON,PRT,NYL,ML590/591,BK",CAT001,2.7,1.1,3.4,10.1,0.07,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00850,"POWDER,DSHWASHER,CASCADE",CAT001,4.5,1.6,6.8,48.96,1.25,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00851,"CARTRIDGE,STAPLES,F/#5000",CAT001,2.0,1.2,3.0,7.2,0.35,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00852,"BOOK,RCPT,3PT,2.75X7.25",CAT002,8.3,0.4,10.7,35.52,0.65,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00853,"PAD,DESK,KRYSTAL,19X24,CL",CAT002,19.1,0.2,23.7,90.53,1.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00854,"LABEL,LBLPRNT,WE,2RL130,260",CAT001,2.69,2.69,4.44,32.13,0.34,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00855,"PEN,BALLPT,CLICSTIC,MED,BE",CAT001,0.4,0.1,5.1,0.2,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00856,"PEN,BALLPT,RETRAC,WIDE,BK",CAT001,0.4,0.4,5.5,0.88,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00857,"BATTERY,ALKA,ULTRA,AA,8",CAT001,1.9,1.2,3.1,7.07,0.32,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00858,"POST-IT,RULED,3X5,YW",CAT001,3.0,0.5,5.0,7.5,0.16,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00859,"FLAGS,POSTIT""SIGN HERE""MINI",CAT001,3.8,0.2,5.0,3.8,0.04,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00860,"PEN,ROLLBALL,HYBRID GRP,BK",CAT001,0.5,0.3,5.5,0.82,0.01,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00861,"ERASER,CAP,12PK",CAT001,2.7,0.7,2.7,5.1,0.06,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00862,"HIGHLIGHTER,MAJOR ACCENT,PK",CAT001,0.7,0.6,4.6,1.93,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00863,"BNDR,CLRVUE,X-LIFE,3""-WE",CAT001,12.6,3.7,11.7,545.45,1.6,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00864,"BATTERY,ALKA,9V,4/PK,ENGZR",CAT001,2.0,0.7,3.9,5.46,0.35,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00865,SEE NO. PAP 64101-31,CAT001,0.5,0.3,5.6,0.84,0.26,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00866,"REFILL,GEL,IMPACT,BK",CAT001,0.3,0.2,6.0,0.36,0.01,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00867,"PLUNGER,WOOD HANDLE,24""",CAT001,5.5,5.6,30.8,948.64,1.45,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00868,"FLDR,FILE HANG,LTR,1/5,GN",CAT001,9.56,2.31,13.0,287.09,4.0,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00869,"FILE,MAG,ECONOSTOR,WE/BK",CAT001,22.0,0.1,29.5,64.9,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00870,"FILE,EVERYDAY,LTR,42PG,1-31",CAT001,9.9,1.1,11.7,127.41,1.9,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00871,"POST-IT,POPUP,RECY3X3ASSTUL",CAT001,3.1,1.4,6.1,26.47,0.56,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00872,"PEN,ROLLBALL,VSN,UNI,MCR,BK",CAT001,0.3,0.3,5.3,0.48,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00873,"HIGHLIGHTER,BLAZER,UNI,YW",CAT001,0.4,0.3,5.5,0.66,0.02,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00874,"RECORDER,MICRO,VOR,SR",CAT001,7.5,2.5,11.5,215.62,0.76,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00875,"REFILL,TAPE,CORRECTION,WE",CAT001,2.9,0.4,9.3,10.79,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00876,"TABBING,SHIELD,1.5""-CL",CAT001,4.3,0.4,5.5,9.46,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00877,"SCISSORS,BENT,8""-GY",CAT001,3.0,0.5,9.8,14.7,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00878,"CALC,MINI-DESK,LCD",CAT001,7.0,1.0,8.5,59.5,0.26,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00879,"CUBE,MEMO,S/S,LIGHT PASTEL",CAT001,3.0,1.7,3.1,15.81,0.42,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00880,SEE NO. ELD 25010,CAT001,8.8,1.3,15.7,179.61,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00881,"TWISSTOP,PHONE UNTANGLER,BK",CAT009,4.0,0.7,4.2,11.76,0.25,fragile,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00882,"CLIPBOARD,PLAS,9X12,BE",CAT001,9.0,1.7,12.5,191.25,0.46,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00883,"BAG,TRASH,KITCHEN,TALL",CAT006,8.5,6.0,13.1,668.1,6.15,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00884,"FLAGS,PAGE,ADHES,AST",CAT001,4.0,0.1,6.2,2.48,0.03,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00885,"TABBING,SHIELD,2""-CL",CAT001,4.3,0.4,5.5,9.46,0.16,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00886,"CRTDG,INK,STY CLR 777,BK",CAT001,4.4,1.5,5.6,36.96,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00887,"OIL,F/SHREDDER",CAT001,2.6,2.6,8.4,56.78,1.07,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00888,SEE NO. MFE 88528,CAT001,5.5,0.8,10.2,44.88,0.35,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00889,"MARKER,SHARPIE,PERM,FN,4PK",CAT001,2.2,0.5,5.3,5.83,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00890,"NOTES,ADHESIVE,3""X3""-BE",CAT001,3.0,0.5,2.9,4.35,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00891,"PUSH PIN,ASSORTED,20/BX",CAT001,3.5,0.5,4.6,8.05,0.02,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00892,"COVER,RPT,CLRFRNT,DBE",CAT001,9.6,3.1,11.9,354.14,2.3,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00893,"LABEL,LSR/IJ,F/FLDR,AST,750",CAT001,8.8,0.4,11.9,41.89,0.62,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00894,"PLNN,PHONE,MESH,EXPRESSIONS",CAT009,10.1,5.0,11.3,570.65,0.93,fragile,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00895,"FLDR,HANG,LTR,1/5,25B,ASST",CAT001,9.56,2.31,13.0,287.09,4.0,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00896,SEE NO. FDP 23943,CAT001,5.7,1.8,8.6,88.24,1.54,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00897,SEE NO. GEP 47796,CAT001,4.7,2.1,9.6,94.75,0.42,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00898,"FLAGS,POSTIT,PE",CAT001,2.8,0.3,4.8,4.03,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00899,"PEN,BALLPT,STICK,FN,BK",CAT001,0.5,0.5,6.2,1.55,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00900,"FILM,RBN,F/FO1450/1460/1650",CAT001,3.2,3.2,9.2,94.21,0.75,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00901,SEE NO. SMD 11943,CAT006,10.38,2.69,12.69,354.33,7.0,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00902,"INDEX,3-RNG,5TAB,WE",CAT001,9.0,0.3,11.0,29.7,0.07,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00903,"PAPER,COPY,8.5X11,IY",CAT006,8.6,2.2,11.4,215.69,5.05,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00904,"ENV,CLASP,9X12,BN",CAT001,9.3,3.9,15.0,544.05,4.8,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00905,"NOTES,ADHES,RLD,3""X3""-YW",CAT001,3.1,2.2,3.1,21.14,0.5,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00906,"CRTDG,SP 875DC/870,825,CLR",CAT001,3.7,1.5,4.6,25.53,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00907,"PAPER,GP HOTS,24#,OE",CAT006,8.5,2.6,11.1,245.31,6.05,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00908,"CRTDG,HP14,CP1160 SRS,TRICL",CAT001,4.4,1.3,5.5,31.46,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00909,"PAPER,FORE DP,8.5X11,LCY",CAT002,8.8,2.0,11.5,202.4,4.95,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00910,"PAPER,JTPRNT,24#,8.5X11,WE",CAT006,8.6,2.2,11.4,215.69,5.05,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00911,"PEDESTAL,CRT,VURYSER",CAT001,11.4,1.1,11.3,141.7,0.72,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00912,"LABEL,REMV,3/4""DIA,OR,1M",CAT001,4.5,0.5,7.5,16.88,0.18,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00913,"DEODORIZER,SUPERFRESH,13 OZ",CAT010,2.3,8.1,2.3,42.85,0.25,standard,flammable,measured,valid,spr_sku_dimensions,high
+SPR-00914,"CRTDG,SP 1270/875DC,825,BK",CAT001,3.4,0.8,3.6,9.79,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00915,"CRTDG,STYLUS C80,MA",CAT001,4.4,1.5,5.5,36.3,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00916,"FLDR,HANG,LTR,1/5,25B,BE",CAT001,9.56,2.31,13.0,287.09,4.0,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00917,"PAPER,FORE DP,8.5X11,TN",CAT002,8.7,2.2,11.2,214.37,4.9,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00918,"CRTDG,TONER,KX-FL501/FL521",CAT001,2.8,2.2,10.4,64.06,0.35,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00919,"LEAD,.5MM",CAT001,0.3,0.1,2.6,0.08,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00920,"BAG,TRASH,16G,250/RL",CAT007,13.3,4.6,16.4,1003.35,17.2,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00921,"INDEX,3-RNG,5TAB,MI",CAT001,8.8,0.4,11.0,38.72,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00922,"FAN,PERSONAL,TURBO,4""-WHITE",CAT001,5.3,4.0,7.3,154.76,1.4,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00923,"TAPE,L/O,AX/CE/CX SERIES",CAT001,4.1,1.1,4.2,18.94,0.14,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00924,"POSTIT,INDEX,DUR,TABS",CAT001,2.6,0.2,5.4,2.81,0.03,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00925,SEE NO. PAP 64881,CAT001,0.8,0.3,3.0,0.72,0.01,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00926,"FLDR,LTR,11PT,FAST,MLA",CAT006,10.25,3.44,12.75,449.56,5.26,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00927,"NOTEBOOK,STENO,6X9,60CT,OD",CAT002,5.8,0.3,9.0,15.66,0.29,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00928,"PROTRACTOR,6""-CR,ROG02102",CAT001,4.1,0.1,8.1,3.32,0.04,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00929,"HIGHLIGHTER,CHISEL TP,PK",CAT001,0.6,0.5,4.9,1.47,0.02,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00930,"CRTDG,DEVELP/DRUM,50XX",CAT006,15.2,4.5,20.0,1368.0,5.42,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00931,"BATTERY,ALKA,AAA,12",CAT001,1.8,0.9,2.6,4.21,0.18,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00932,"POCKET,FILE,MAGNETIC,SM",CAT001,7.5,4.7,15.1,532.27,1.0,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00933,"PAD,MSE,MED,BK",CAT002,9.5,0.3,11.0,31.35,0.43,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00934,"CORD,OUTLET,3,PRONG,9FT,GY",CAT001,3.1,1.0,11.6,35.96,1.0,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00935,"SCISSORS,BENT,8""-BE",CAT001,3.0,0.5,10.0,15.0,0.12,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00936,"PUNCH,2-HOLE,HVY DTY,BLK",CAT001,5.0,3.4,6.5,110.5,1.45,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00937,"SPONGE,HANDYSIZE,STAY FRESH",CAT001,4.9,1.4,6.3,43.22,0.11,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00938,"BOOK,TEL CALL REC,11X5.75",CAT002,6.1,0.9,10.9,59.84,0.75,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00939,"HIGHLIGHTER,LIQ ACCENT,5CLR",CAT001,2.5,0.6,5.5,8.25,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00940,"NOTES,RLD,3X3,6PK,BRT,AST",CAT001,3.1,2.4,3.1,23.06,0.5,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00941,"PROTCT,SHT,TOPLD,CL",CAT001,10.1,1.6,11.4,184.22,0.65,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00942,"CRTDG,STYLUS C80,YW",CAT001,4.4,1.5,5.5,36.3,0.2,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00943,"ROLL,ADD,1PLY BOND,2.25X165",CAT001,3.0,3.0,4.5,40.5,0.3,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00944,"BAND,RUBBER,1 LB",CAT001,4.9,3.5,7.4,126.91,1.12,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00945,"HIGHLIGHTER,ZAZZLE,5CLR",CAT001,2.5,0.8,5.3,10.6,0.13,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00946,"FASTENER,PRONG,2""-2PC,SR",CAT001,3.5,0.88,5.5,16.94,0.5,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00947,"MARKER,HIGHLIGHTER,DESK,PK",CAT001,0.8,0.8,5.1,3.26,0.14,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00948,"CLOCK,9.75""DIA,BK",CAT001,10.6,1.7,11.6,209.03,0.95,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00949,"HOLDER,LIT,LEAFLET,CL",CAT001,4.5,3.0,8.5,114.75,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00950,"FILE,WORKSTATION,STEP,BLACK",CAT001,7.4,5.8,8.5,364.82,0.55,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00951,"PUNCH,3-HOLE,HVY DTY,BK",CAT001,6.4,3.2,11.1,227.33,3.0,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00952,"MAILER,JIFYPAD,SS,6X1O",CAT002,6.0,0.3,9.8,17.64,0.11,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00953,"SHEARS,KLNEARTH,8""-STST",CAT001,2.8,0.3,10.1,8.48,0.18,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00954,"LABEL,POSTAGEMTR,F/MACH,160",CAT001,4.49,0.5,7.51,16.86,0.22,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00955,"REINFORCEMENTS,P/S,1/4""-WE",CAT001,3.0,0.8,2.9,6.96,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00956,"PAD,MSE,ECON,GY",CAT002,8.5,0.2,9.8,16.66,0.11,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00957,SEE NO. SMD 64259,CAT001,11.88,1.94,13.25,305.38,4.68,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00958,"BINDER,3-RNG,3""-DBE",CAT002,12.0,4.2,12.1,609.84,1.7,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00959,"STAPLER,ELEC,BLACK",CAT001,5.8,2.4,8.6,119.71,1.26,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00960,"TRAY,LETTER,STCKBLE,S/L,SM",CAT001,8.8,2.7,12.7,301.75,0.5,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00961,"FLDR,HANG,LTR,2""EXP,GREEN",CAT006,10.5,2.5,13.0,341.25,5.3,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00962,"CRTDG,INK,DESKJT 800,TRICLR",CAT001,4.5,1.7,4.6,35.19,0.44,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00963,"NOTES,ADHESIVE,2""X3""-YW",CAT001,2.0,0.4,3.0,2.4,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00964,"LUBRIDERM,16 OZ",CAT001,3.4,1.9,6.6,42.64,1.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00965,"SPINE INSERTS,.5""-WE",CAT001,9.06,0.13,13.13,15.46,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00966,"RULER,OFFICE,FLEXIBLE,15""",CAT001,1.1,0.1,15.0,1.65,0.02,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00967,"LABEL,LSR,SHPG,2X4,WE,250",CAT001,9.9,0.4,12.0,47.52,0.6,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00968,"TABS,HANG FILE,1/3,LASER,WE",CAT001,8.0,0.3,8.5,20.4,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00969,"SET,SCREWDRIVER,4-PC.",CAT001,5.5,1.0,12.0,66.0,0.46,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00970,"STAPLER,W/REMOVER,BLACK",CAT001,2.0,2.1,5.7,23.94,0.22,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00971,"CART,ROLL,N FOLD,SIMPLIFILE",CAT006,18.7,13.3,18.5,4601.14,8.1,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00972,"BNDG,PLAS,1/2""-BK",CAT001,3.5,1.8,13.1,82.53,0.32,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00973,"ENVELOPE,POLY,VELC,9X13,CL",CAT001,9.2,0.1,13.1,12.05,0.08,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00974,"REFILL,ROLLERBALL,MED,BK",CAT001,1.2,0.3,5.2,1.87,0.04,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00975,"PEN,BALLPT,RT,RSVP,MED,BK",CAT001,0.7,0.7,5.5,2.69,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00976,GLUE STICK .32OZ,CAT001,0.8,0.6,3.1,1.49,0.04,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00977,"HIGHLIGHTER,MAJOR ACCENT,GN",CAT001,0.7,0.6,4.6,1.93,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00978,"PEN,ROLLBALL,UNI,FN,BK",CAT001,0.3,0.3,5.3,0.48,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00979,SEE NO. SMD 73234,CAT001,9.5,0.34,11.75,37.95,0.26,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00980,"CALC,SOLAR,SCIENT,54 FUNCTN",CAT001,6.7,0.7,9.4,44.09,0.35,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00981,"ROLL,STICK BACK,15'X.75""-BK",CAT001,6.1,2.3,6.2,86.99,0.37,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00982,"TAG,KEY,50 PK,1.25""DIA,ASST",CAT001,2.4,1.8,4.5,19.44,0.15,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00983,"INDEX,INSERT,ECON,8TAB,CL",CAT001,8.9,0.1,10.5,9.35,0.14,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00984,"CRTDG,MFC7300C/9200C,BK",CAT001,2.3,0.9,3.4,7.04,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00985,"PORTFOLIO,DBLPKT,8.5X11,LBE",CAT001,9.8,2.8,12.0,329.28,2.0,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00986,"RBN,FAB,M192/191/190/183,BK",CAT001,2.0,0.5,4.0,4.0,0.05,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00987,"BATTERY,ALKALINE,AA,16PK",CAT001,2.1,1.1,4.6,10.63,0.65,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00988,"BOOK,NOTE,5SUB,11X8.5,AST",CAT002,9.0,0.8,10.8,77.76,1.8,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00989,"TAPE,DBLCOAT,1""CORE,.5""W",CAT001,2.6,0.7,2.6,4.73,0.04,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00990,"FLAGS,POSTIT,OE",CAT001,2.8,0.3,4.8,4.03,0.1,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00991,"CREAMR,LQD,CFFEEMT,RGFLVR",CAT001,3.7,3.7,9.0,123.21,1.37,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00992,"ENVELOPE,CLSP,10X13,KFT",CAT001,10.6,3.9,15.1,624.23,4.9,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00993,"MARKER,DRYERASE,8CLR",CAT001,4.9,0.9,6.0,26.46,0.35,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00994,"FAN,EURO,12""-3SPEED,WHITE",CAT006,14.5,10.0,17.5,2537.5,8.0,heavy,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00995,"PAD,DESK,MO,17.75X10.9",CAT002,11.0,0.4,17.7,77.88,0.45,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00996,"PAD,DESK,KRYSTAL,20X36,CL",CAT002,20.2,0.2,35.6,143.82,2.0,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00997,"LABEL,F/FLDR,DRD,248",CAT001,4.5,0.5,7.5,16.88,0.18,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00998,"STR,STKING,MESH,EXPRESSION",CAT003,9.2,8.0,14.2,1045.12,2.4,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-00999,"POSTIT,NOTES,SUNBRT 3X3",CAT001,3.1,2.1,3.2,20.83,0.39,standard,NONE,measured,valid,spr_sku_dimensions,high
+SPR-01000,"SPRAY,DISINFECTANT,LYSOL",CAT010,2.8,10.1,2.7,76.36,1.55,standard,flammable,measured,valid,spr_sku_dimensions,high

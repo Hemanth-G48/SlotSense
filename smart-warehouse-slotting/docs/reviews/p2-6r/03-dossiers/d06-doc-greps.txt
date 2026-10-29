@@ -1,0 +1,10 @@
+[grep exit=1 — non-zero means no as-supplied cycle/throughput figure remains in the doc]
+80:- Verified empirically: the optimized layout has **0 `SL-02` violations** over **662 beam groups** (the repaired baseline evaluates 922, the as-supplied baseline 960 — quoting 960 for the optimized layout would attribute another layout's count to it). Phase 1 had 4 such violations.
+97:"objective": {"value": 902392.906, "baseline_value": 2321711.382, "per_rule_violations": {},
+171:| Optimizer objective (un-normalised v1 form) | 2,336,184 → 902,393 (−61.4 %) |
+
+SOURCES (PRIMARY)
+/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/docs/PHASE_2_CONSTRAINT_ENGINE.md
+ -> Lines located by the greps above: the as-supplied cycle/throughput figures are absent;
+    the beam counts are 662/922/960; the objective baseline is 2,321,711 in §7 but 2,336,184 in §11
+Command: grep -nE '<pattern>' docs/PHASE_2_CONSTRAINT_ENGINE.md

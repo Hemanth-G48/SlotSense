@@ -1,0 +1,80 @@
+{
+  "schema": "phase4.verification/1",
+  "phase4_dir": "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase4",
+  "tolerance": 0.05,
+  "checks": [
+    {
+      "name": "four_cells_present",
+      "passed": true,
+      "detail": "found={'A1': ('baseline_repaired', 'nearest_neighbor'), 'A2': ('baseline_repaired', 's_shape'), 'B1': ('optimized_fit', 'nearest_neighbor'), 'B2': ('optimized_fit', 's_shape')}"
+    },
+    {
+      "name": "factor_levels_match",
+      "passed": true,
+      "detail": "expected={'A1': ('baseline_repaired', 'nearest_neighbor'), 'A2': ('baseline_repaired', 's_shape'), 'B1': ('optimized_fit', 'nearest_neighbor'), 'B2': ('optimized_fit', 's_shape')}"
+    },
+    {
+      "name": "all_cells_feasible",
+      "passed": true,
+      "detail": "infeasible=[]"
+    },
+    {
+      "name": "assignment_complete",
+      "passed": true,
+      "detail": "values=[100.0, 100.0, 100.0, 100.0]"
+    },
+    {
+      "name": "route_sums_match_summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "cycle_identity_holds",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "throughput_recomputes",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "travel_effects_recompute",
+      "passed": true,
+      "detail": "recomputed=-273685.85, 461.75, 561.9"
+    },
+    {
+      "name": "direct_holdout_change_recomputes",
+      "passed": true,
+      "detail": "recomputed=-53.9119, reported=-53.912"
+    },
+    {
+      "name": "inventory_conserved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "split_checks_pass",
+      "passed": true,
+      "detail": "{'disjoint_orders': True, 'union_equals_input': True, 'fit_scenario_rewritten': True, 'holdout_scenario_rewritten': True, 'fit_lines_belong_to_fit_orders': True, 'holdout_lines_belong_to_holdout_orders': True, 'no_line_in_both_views': True, 'line_counts_match_manifest': True, 'line_union_equals_input': True, 'no_duplicate_order_sku_lines': True, 'all_passed': True}"
+    },
+    {
+      "name": "regime_counts_reconcile",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "headroom_recomputes",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "provenance_hashes_match",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "all_passed": true,
+  "n_checks": 14,
+  "n_failed": 0
+}

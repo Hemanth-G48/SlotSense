@@ -1,0 +1,2 @@
+warehouse_id,warehouse_name,layout_version,data_source,data_quality_status
+WH-INSTACART,Instacart-derived benchmark warehouse,dataset-2.instacart.v1,synthetic,valid

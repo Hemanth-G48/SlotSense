@@ -1,0 +1,2 @@
+warehouse_id,warehouse_name,layout_version,data_source,data_quality_status
+WH-SPR,"S.P. Richards Philadelphia DC (real bins, inferred geometry)",dataset-2.spr.v1,sourced,valid

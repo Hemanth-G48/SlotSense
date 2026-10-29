@@ -1,0 +1,42 @@
+== §11.2 headroom re-derived from the delivered optimized CSV ==
+  beam  ('R5-3-1', np.int64(0), np.int64(3)) load=214.63600000000002     cap=216.0      util=99.368519% headroom=1.363999999999976
+  beam  ('R5-1-1', np.int64(0), np.int64(2)) load=247.878                cap=252.0      util=98.364286% headroom=4.122000000000014
+  beam  ('R1-2-2', np.int64(0), np.int64(3)) load=70.336                 cap=72.0       util=97.688889% headroom=1.6640000000000015
+  level ('R5-3-1', np.int64(1))      load=458.757                cap=460.8      util=99.556641% headroom=2.0430000000000064
+  level ('R5-2-2', np.int64(2))      load=401.19                 cap=403.2      util=99.501488% headroom=2.009999999999991
+  level ('R1-2-2', np.int64(3))      load=114.143                cap=115.2      util=99.082465% headroom=1.0570000000000022
+  rack  R5-2-1                       load=1542.976               cap=2108.0     util=73.196205% headroom=565.0239999999999
+  rack  R5-3-3                       load=1374.7629999999997     cap=2108.0     util=65.216461% headroom=733.2370000000003
+  rack  R5-3-2                       load=1369.056               cap=2108.0     util=64.945731% headroom=738.944
+
+  bins at exactly 100.000% of max_weight_kg:
+    [('LOC002136', 30.0, np.float64(30.0))]
+  bins within 1e-9 of the limit:
+    [('LOC002136', 30.0, np.float64(30.0), np.float64(0.0))]
+
+== §11 cycle/throughput recomputation ==
+  baseline=1471967.35 optimized=747845.0 cycle_delta=-49.194186%
+  baseline_tput=13.24 optimized_tput=26.07 tput_delta=96.903323%
+  diagnostic as-supplied cycle=1484035.5 tput=13.14
+
+== §7 objective fields vs delivered summary ==
+  value                          = 902392.9055567493
+  baseline_value                 = 2321711.3822095753
+  baseline_value_as_supplied     = 2336184.1414095755
+  improvement vs repaired   (%)  = 61.132
+  improvement vs as-supplied(%)  = 61.373
+  doc §11 row says 2,336,184 -> 902,393 (-61.4 %) ; recompute: -61.3732% (as supplied), -61.1324% (repaired)
+
+== §5 tolerance direction probe (placer vs validator, canonical weights) ==
+  distinct weights=1027, residuals=11, cases where placer accepts 0<over<=1e-9: 0
+   none
+
+SOURCES (PRIMARY)
+/home/hemanth/.hermes/profiles/reviewer/cache/scratch/rereview_probe.py
+ -> Probe that produced this output (run with the repo venv, 2026-10-29)
+/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/optimized/optimized_assignments.csv
+ -> Delivered optimized layout, re-aggregated for §11.2
+/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/evaluation/evaluation_summary.json
+ -> Cycle-time and throughput values re-based in §11
+/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/optimized/optimization_summary.json
+ -> objective.baseline_value and improvement percentages quoted in §7/§11

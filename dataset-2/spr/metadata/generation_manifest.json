@@ -1,0 +1,278 @@
+{
+  "dataset_name": "smart_warehouse_benchmark_spr",
+  "dataset_version": "2.0.0",
+  "spine": "spr",
+  "seed": 7,
+  "generated_at": "2026-10-28T16:26:22Z",
+  "python_version": "3.14.7",
+  "config_sha256": "b14bcd2f22f83ff7255f81f69160189ddbee69274277b28e587156ddcef46cd4",
+  "config": {
+    "seed": 7,
+    "spine": "spr",
+    "order_window": {
+      "start_date": "2002-02-01",
+      "days": 242
+    },
+    "inventory": {
+      "cover_days": 30,
+      "safety_factor": 0.2,
+      "min_units": 3,
+      "max_bins_per_class": {
+        "small": 2,
+        "medium": 2,
+        "bulky": 2,
+        "heavy": 1,
+        "fragile": 1,
+        "hazard": 1
+      }
+    },
+    "warehouse": {
+      "dispatch_point_m": [
+        0.0,
+        -3.0
+      ],
+      "aisle_width_m": 2.0,
+      "rack_depth_m": 1.2,
+      "shelf_height_m": 0.5,
+      "zone_gap_m": 2.0,
+      "rack_limit_factor": 0.85,
+      "golden_levels": [
+        1,
+        2
+      ],
+      "n_aisles_per_zone": 4,
+      "n_racks_per_aisle": 4,
+      "n_bays_per_rack": 2,
+      "n_shelves": 4,
+      "n_bins_per_shelf": 2,
+      "zone_layout": [
+        {
+          "zone_type": "general",
+          "count": 3,
+          "bin_class": "standard"
+        },
+        {
+          "zone_type": "small_parts",
+          "count": 1,
+          "bin_class": "small"
+        },
+        {
+          "zone_type": "bulk",
+          "count": 2,
+          "bin_class": "bulk"
+        },
+        {
+          "zone_type": "heavy",
+          "count": 3,
+          "bin_class": "heavy_bulk"
+        },
+        {
+          "zone_type": "hazard",
+          "count": 1,
+          "bin_class": "hazard"
+        },
+        {
+          "zone_type": "general",
+          "count": 1,
+          "bin_class": "oversize"
+        }
+      ],
+      "bin_classes": {
+        "small": {
+          "dims_cm": [
+            45.0,
+            30.0,
+            40.0
+          ],
+          "shelf_weight_kg": [
+            40.0,
+            35.0,
+            30.0,
+            25.0
+          ]
+        },
+        "standard": {
+          "dims_cm": [
+            60.0,
+            40.0,
+            45.0
+          ],
+          "shelf_weight_kg": [
+            80.0,
+            60.0,
+            50.0,
+            40.0
+          ]
+        },
+        "bulk": {
+          "dims_cm": [
+            100.0,
+            70.0,
+            70.0
+          ],
+          "shelf_weight_kg": [
+            200.0,
+            160.0,
+            140.0,
+            120.0
+          ]
+        },
+        "heavy_bulk": {
+          "dims_cm": [
+            130.0,
+            120.0,
+            115.0
+          ],
+          "shelf_weight_kg": [
+            500.0,
+            450.0,
+            400.0,
+            350.0
+          ]
+        },
+        "hazard": {
+          "dims_cm": [
+            60.0,
+            40.0,
+            45.0
+          ],
+          "shelf_weight_kg": [
+            60.0,
+            50.0,
+            40.0,
+            30.0
+          ]
+        },
+        "oversize": {
+          "dims_cm": [
+            130.0,
+            120.0,
+            115.0
+          ],
+          "shelf_weight_kg": [
+            300.0,
+            250.0,
+            220.0,
+            200.0
+          ]
+        }
+      },
+      "zone_rules": {
+        "general": {
+          "allowed_handling": [
+            "standard",
+            "fragile"
+          ],
+          "allowed_hazard": [
+            "NONE"
+          ]
+        },
+        "small_parts": {
+          "allowed_handling": [
+            "standard",
+            "fragile"
+          ],
+          "allowed_hazard": [
+            "NONE"
+          ]
+        },
+        "bulk": {
+          "allowed_handling": [
+            "standard",
+            "fragile",
+            "heavy"
+          ],
+          "allowed_hazard": [
+            "NONE"
+          ]
+        },
+        "heavy": {
+          "allowed_handling": [
+            "standard",
+            "heavy"
+          ],
+          "allowed_hazard": [
+            "NONE"
+          ]
+        },
+        "hazard": {
+          "allowed_handling": [
+            "standard"
+          ],
+          "allowed_hazard": [
+            "flammable",
+            "corrosive",
+            "toxic"
+          ]
+        }
+      },
+      "warehouse_id": "WH-SPR",
+      "warehouse_name": "S.P. Richards Philadelphia DC (real bins, inferred geometry)",
+      "layout_version": "dataset-2.spr.v1"
+    }
+  },
+  "counts": {
+    "warehouses": 1,
+    "categories": 10,
+    "products": 1000,
+    "locations": 3420,
+    "inventory": 1026,
+    "compatibility_rules": 55,
+    "orders": 36035,
+    "order_items": 66497,
+    "storage_assignments_baseline": 1026,
+    "location_graph": 28820,
+    "demand_summary": 3000,
+    "sku_affinity": 15391
+  },
+  "files": {
+    "processed/warehouses.csv": {
+      "rows": 1,
+      "sha256": "4a69611749f79d71738e89d4051454c1d810536fee7f79f29e9b82f0d395f5c1"
+    },
+    "processed/categories.csv": {
+      "rows": 10,
+      "sha256": "4e865fec9c449d162e961a1a358d4427ad396802b9aa68381bc7260d1c3c9a25"
+    },
+    "processed/products.csv": {
+      "rows": 1000,
+      "sha256": "6fa55ce65b6562667e279f2126638135a5ca1579aefda18e71f196e9c40b4107"
+    },
+    "processed/locations.csv": {
+      "rows": 3420,
+      "sha256": "9ecb33718d206ad3cc408f78d7d290fc4fb5aa5d1ac9f64ba5fdafd497dfadbf"
+    },
+    "processed/inventory.csv": {
+      "rows": 1026,
+      "sha256": "d60a0c35b016cd2a4e4990bbf07b7ebe961dfe15cd3c5708d6e08f22ccaa0632"
+    },
+    "processed/compatibility_rules.csv": {
+      "rows": 55,
+      "sha256": "b888700826d96960b45b28cb31e5c5ee517cbe4d783191baac2341c144d07655"
+    },
+    "processed/orders.csv": {
+      "rows": 36035,
+      "sha256": "ad3ab08da3886a04fb4c992edb02218db1b621937bd631d6d48122993128e07e"
+    },
+    "processed/order_items.csv": {
+      "rows": 66497,
+      "sha256": "7b392cc7945e8496aac62ae7f0709689382de893a3f036c1ac67ed172531de79"
+    },
+    "processed/storage_assignments_baseline.csv": {
+      "rows": 1026,
+      "sha256": "a451cc97aa7b008a3500e3adaffe1ea79961a47812f3916bc4169bb628a1dde4"
+    },
+    "processed/location_graph.csv": {
+      "rows": 28820,
+      "sha256": "417c5eb5fc20ed580009f2744c1b60c08b667eaab414bbecd58253cbfaf36c5a"
+    },
+    "processed/demand_summary.csv": {
+      "rows": 3000,
+      "sha256": "ca6b423791002d4f51a74ba3e4c45afd9633b864491964d07b479533abc1b71f"
+    },
+    "processed/sku_affinity.csv": {
+      "rows": 15391,
+      "sha256": "85b77eacda6e629128726f7f5fd1a910c80ae80e14d1ce0031dba99759471f29"
+    }
+  }
+}

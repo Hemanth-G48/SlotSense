@@ -1,0 +1,64 @@
+{
+  "optimized_beam_groups": 662,
+  "repaired_beam_groups": 922,
+  "assupplied_beam_groups": 960,
+  "optimized_max_beam_pct": 99.37,
+  "optimized_max_level_pct": 99.56,
+  "cat01_note": "The as-supplied baseline is infeasible only because the radius is 10 m: at 5 m 169 pairs still violate, at 2 m none do. The validator's own count at 10 m (1071) equals my independent count exactly; the validator evaluated 3594 forbidden pairs inside its 3-D neighbourhood window, my full scan sees 114,986 forbidden pairs in total.",
+  "optimized_checks": 15167,
+  "repaired_checks": 18077,
+  "assupplied_checks": 20699
+}
+{
+  "objective": {
+    "value": 902392.9055567493,
+    "baseline_value": 2321711.3822095753,
+    "baseline_value_as_supplied": 2336184.1414095755,
+    "starter_value": 902392.9055567493,
+    "per_rule_violations": {},
+    "violation_severity_score": 0,
+    "globally_optimal": false
+  },
+  "improvement_repaired": 61.132,
+  "improvement_assupplied": 61.373,
+  "beam_groups": null,
+  "radius": 10.0
+}
+{
+  "baseline": {
+    "cycle": 1471967.35,
+    "tput": 13.24
+  },
+  "optimized": {
+    "cycle": 747845.0,
+    "tput": 26.07
+  },
+  "diagnostic": {
+    "cycle": 1484035.5,
+    "tput": 13.14
+  }
+}
+{
+  "objective": {
+    "value": 902392.9055567493,
+    "baseline_value": 2321711.3822095753,
+    "baseline_value_as_supplied": 2336184.1414095755,
+    "starter_value": 902392.9055567493,
+    "per_rule_violations": {},
+    "violation_severity_score": 0,
+    "globally_optimal": false
+  },
+  "improvement_repaired": 61.132,
+  "improvement_assupplied": 61.373,
+  "starter_beam_violations": 0,
+  "radius": 10.0
+}
+
+SOURCES (PRIMARY)
+/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/docs/PHASE_2_EVIDENCE.json
+ -> beam_groups 662/922/960, max beam 99.37 %, max level 99.56 %, CAT-01 3,594 window
+Command: jq '{...}' docs/PHASE_2_EVIDENCE.json
+/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/optimized/optimization_summary.json
+ -> objective fields and the two improvement percentages
+/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/evaluation/evaluation_summary.json
+ -> baseline/optimized/diagnostic cycle and throughput values

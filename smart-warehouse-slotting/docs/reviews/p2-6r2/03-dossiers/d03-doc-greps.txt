@@ -1,0 +1,24 @@
+== docs/PHASE_2_CONSTRAINT_ENGINE.md : 291 lines, sha256 fb517fe6512e3d05f20b0c8565a31fef9ca4bacc25e3aa83565301f07209c871
+
+== grep for the retracted as-supplied objective in the doc (expect NO output)
+
+== objective-bearing lines in the doc
+104:"objective": {"value": 902392.906, "baseline_value": 2321711.382, "per_rule_violations": {},
+178:| Optimizer objective (un-normalised v1 form, repaired baseline → optimized) | 2,321,711 → 902,393 (**−61.13 %**) |
+
+== §5 tolerance paragraph, verbatim (lines 73-87)
+## 5. How beam capacity is accounted for
+
+- The greedy builds `beam_cap[(rack,bay,level)]` from `beam_max_weight_kg` and tracks `beam_load[...]` beside
+  the bin, level and rack ledgers.
+- `_split_quantity` receives residual **bin, beam, level and rack** capacity and returns the minimum, so a
+  placement can never exceed any scope.
+- Precedence matches the validator: bin → beam → level → rack. **The tolerances are not uniform, and the placer is not uniformly stricter:**
+  - `CAT-01`: identical inclusive boundary in both (`d + 1e-9 >= R`).
+  - `SL-01`/`SL-02`/`RK-01`: both allow `+1e-6`, so they cannot disagree.
+  - `LD-01`/`VD-01`: the **validator is stricter** (no tolerance) while the placer allows `+1e-6` over. The
+    placer could therefore accept a placement the validator rejects by up to 1e-6 kg/cm³ — a real but
+    unreachable divergence in practice, because the placer sizes quantities in whole units (`WEIGHT_EPSILON_KG
+    = 1e-9` only rounds the split arithmetic). An adversarial probe across 1,027 unit weights × 400 residual
+    levels plus exact-boundary cases found no reachable overdraft.
+- Verified empirically: the optimized layout has **0 `SL-02` violations** over **662 beam groups** (the repaired baseline evaluates 922, the as-supplied baseline 960 — quoting 960 for the optimized layout would attribute another layout's count to it). Phase 1 had 4 such violations.

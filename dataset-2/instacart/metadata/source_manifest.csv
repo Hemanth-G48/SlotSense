@@ -1,0 +1,5 @@
+source_id,source_name,url,license,download_date,file_name,record_count,primary_key,notes,status
+instacart_prior,Instacart Market Basket Analysis — prior orders,https://www.kaggle.com/datasets/psparks/instacart-market-basket-analysis,CC0 1.0,2026-10-28,raw/instacart/order_products__prior.csv,1007672,order_id + product_id,First 100000 orders read from the prior history.,sourced
+instacart_orders,Instacart orders,https://www.kaggle.com/datasets/psparks/instacart-market-basket-analysis,CC0 1.0,2026-10-28,raw/instacart/orders.csv,3421083,order_id,Provides order_number and hour of day; no absolute timestamps exist.,sourced
+instacart_products,Instacart product catalogue,https://www.kaggle.com/datasets/psparks/instacart-market-basket-analysis,CC0 1.0,2026-10-28,raw/instacart/products.csv,49688,product_id,"Names, aisles and departments; no physical dimensions.",sourced
+dimensions_class_rule,Class-rule dimension synthesis,,Project-internal,2026-10-28,processed/products.csv,1200,sku_id,Deterministic per-SKU draw around the canonical category base dimensions.,generated

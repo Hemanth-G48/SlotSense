@@ -31,6 +31,9 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
+from app.phase3_contract import load_phase3  # noqa: E402  (path set above)
+from app.phase4_contract import load_phase4  # noqa: E402
+
 DATA_DIR = PROJECT_ROOT.parent / "dataset" / "processed"
 OUT = PROJECT_ROOT / "outputs"
 ANALYSIS = OUT / "analysis"
@@ -129,6 +132,10 @@ def load_all() -> dict:
         "validation_status": _read_json(OUT / "validation_status.json"),
         "dataset_validation": _read_json(OUT / "dataset_validation.json"),
         "config": _read_json(CONFIG),
+        # Phase 3 experiment results, exposed read-only. Missing artifacts stay
+        # "unavailable" inside the contract rather than becoming zeros in a chart.
+        "phase3": load_phase3(OUT / "phase3"),
+        "phase4": load_phase4(OUT / "phase4"),
     }
 
 
@@ -1027,8 +1034,9 @@ def data_availability(data: dict, layout: str = "optimized") -> dict[str, tuple[
             "Golden-zone metrics require evaluation metrics and ABC output.",
         ),
         "optimization": (
-            data.get("opt_summary") is not None,
-            "No optimization summary found; run `python app/main.py optimize`.",
+            bool(data.get("opt_summary"))
+            and (data.get("opt_summary") or {}).get("execution_status") != "ERROR",
+            "No completed optimization summary found; run `python app/main.py optimize`.",
         ),
         "run_history": (
             bool(runs),
@@ -1062,6 +1070,9 @@ def report_payload(data: dict, layout: str = "optimized") -> dict:
     short = unassigned_skus(data, layout)
     return {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "evaluation_status": summary.get("evaluation_status", "UNKNOWN"),
+        "comparison_valid": summary.get("comparison_valid", True),
+        "blocked_layouts": summary.get("blocked_layouts", []),
         "methodology": {
             "abac_rule": abc_rule_text(data.get("config")),
             "evaluation": (

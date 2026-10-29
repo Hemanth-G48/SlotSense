@@ -1,0 +1,20 @@
+source_category,canonical_category,canonical_name,rule,records
+alcohol,CAT008,Glassware,department map,5
+babies,CAT003,Household Goods,department map,11
+bakery,CAT003,Household Goods,department map,51
+beverages,CAT007,Packaged Bulk Goods,department map,111
+breakfast,CAT003,Household Goods,department map,26
+bulk,CAT007,Packaged Bulk Goods,department map,2
+canned goods,CAT007,Packaged Bulk Goods,department map,42
+dairy eggs,CAT008,Glassware,department map,270
+deli,CAT003,Household Goods,department map,42
+dry goods pasta,CAT007,Packaged Bulk Goods,department map,36
+frozen,CAT003,Household Goods,department map,88
+household,CAT003,Household Goods,department map,11
+international,CAT003,Household Goods,department map,2
+meat seafood,CAT003,Household Goods,department map,33
+missing,CAT003,Household Goods,department map,1
+pantry,CAT003,Household Goods,department map,59
+personal care,CAT001,Accessories & Cables,department map,2
+produce,CAT003,Household Goods,department map,293
+snacks,CAT003,Household Goods,department map,115

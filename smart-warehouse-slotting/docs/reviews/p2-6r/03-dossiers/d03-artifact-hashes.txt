@@ -1,0 +1,18 @@
+../dataset/processed/locations.csv: OK
+../dataset/processed/locations.csv.bak-pre-limits: OK
+../dataset/processed/products.csv: OK
+../dataset/processed/compatibility_rules.csv: OK
+../dataset/processed/inventory.csv: OK
+../dataset/processed/storage_assignments_baseline.csv: OK
+configs/benchmark.json: OK
+outputs/optimized/optimized_assignments.csv: OK
+outputs/baseline_repaired_assignments.csv: OK
+outputs/baseline_assignments.csv: OK
+outputs/optimized/optimization_summary.json: OK
+outputs/evaluation/evaluation_summary.json: OK
+
+SOURCES (PRIMARY)
+/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/docs/PHASE_2_EVIDENCE.json
+ -> The 12 recorded sha256 values checked here (all match on 2026-10-29)
+Command: jq '.inputs.sha256 | to_entries[] | "\(.value)  ../\(.key)"' docs/PHASE_2_EVIDENCE.json | sha256sum -c -
+ -> Confirms the doc edits did not invalidate the evidence base

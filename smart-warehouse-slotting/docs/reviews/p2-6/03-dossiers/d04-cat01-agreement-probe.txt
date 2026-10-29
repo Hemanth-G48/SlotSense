@@ -1,0 +1,96 @@
+# D4 — item 2: can the placer's CAT-01 grid disagree with the validator?
+
+Probe script: /home/hemanth/.hermes/profiles/reviewer/cache/scratch/cat01_agreement.py
+
+Three oracles per layout:
+
+  O1  Validator.validate()  — the authority
+  O2  brute force O(n^2) over all bin pairs, predicate d + 1e-9 < R, no grid at all
+  O3  SeparationGrid — what the greedy consults before each placement, incrementally
+
+Command:
+
+    PYTHONPATH=<repo> .venv/bin/python cat01_agreement.py
+
+Output (verbatim; 11/11 cases agree on both counts):
+
+    
+    --- exactly R apart (inclusive) (2 bins) ---
+      O1 validator CAT-01 violations : 0  checks evaluated: 1
+      O2 brute-force violations      : 0
+      O1 == O2                       : True
+      O3 grid never disagrees with O2: True
+      duplicate/self rows beyond one-per-pair: 0
+    
+    --- R - 1e-6 apart (illegal) (2 bins) ---
+      O1 validator CAT-01 violations : 1  checks evaluated: 1
+      O2 brute-force violations      : 1
+      O1 == O2                       : True
+      O3 grid never disagrees with O2: True
+      duplicate/self rows beyond one-per-pair: 0
+    
+    --- R + 1e-6 apart (legal) (2 bins) ---
+      O1 validator CAT-01 violations : 0  checks evaluated: 1
+      O2 brute-force violations      : 0
+      O1 == O2                       : True
+      O3 grid never disagrees with O2: True
+      duplicate/self rows beyond one-per-pair: 0
+    
+    --- 3-D diagonal 9.9/9.9/0 (2 bins) ---
+      O1 validator CAT-01 violations : 0  checks evaluated: 1
+      O2 brute-force violations      : 0
+      O1 == O2                       : True
+      O3 grid never disagrees with O2: True
+      duplicate/self rows beyond one-per-pair: 0
+    
+    --- straddle cell boundary, d just under R (2 bins) ---
+      O1 validator CAT-01 violations : 1  checks evaluated: 1
+      O2 brute-force violations      : 1
+      O1 == O2                       : True
+      O3 grid never disagrees with O2: True
+      duplicate/self rows beyond one-per-pair: 0
+    
+    --- negative coordinates, d just under R (2 bins) ---
+      O1 validator CAT-01 violations : 1  checks evaluated: 1
+      O2 brute-force violations      : 1
+      O1 == O2                       : True
+      O3 grid never disagrees with O2: True
+      duplicate/self rows beyond one-per-pair: 0
+    
+    --- chain A-C-A (3 bins) ---
+      O1 validator CAT-01 violations : 2  checks evaluated: 2
+      O2 brute-force violations      : 2
+      O1 == O2                       : True
+      O3 grid never disagrees with O2: True
+      duplicate/self rows beyond one-per-pair: 0
+    
+    --- same forbidden-in-matrix category, two bins (2 bins) ---
+      O1 validator CAT-01 violations : 0  checks evaluated: 0
+      O2 brute-force violations      : 0
+      O1 == O2                       : True
+      O3 grid never disagrees with O2: True
+      duplicate/self rows beyond one-per-pair: 0
+    
+    --- co-located forbidden pair (2 bins) ---
+      O1 validator CAT-01 violations : 1  checks evaluated: 1
+      O2 brute-force violations      : 1
+      O1 == O2                       : True
+      O3 grid never disagrees with O2: True
+      duplicate/self rows beyond one-per-pair: 0
+    
+    --- dense alternating forbidden partners (24 bins) ---
+      O1 validator CAT-01 violations : 8  checks evaluated: 12
+      O2 brute-force violations      : 8
+      O1 == O2                       : True
+      O3 grid never disagrees with O2: True
+      duplicate/self rows beyond one-per-pair: 0
+    
+    --- radius 0 (rule disabled) (2 bins) ---
+      O1 validator CAT-01 violations : 0  checks evaluated: 0
+      O2 brute-force violations      : 0
+      O1 == O2                       : True
+      O3 grid never disagrees with O2: True
+      duplicate/self rows beyond one-per-pair: 0
+    
+    ================ SUMMARY ================
+    all cases agree: True (11/11 passed)

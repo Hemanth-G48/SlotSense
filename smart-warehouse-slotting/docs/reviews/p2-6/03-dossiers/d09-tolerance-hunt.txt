@@ -1,0 +1,16 @@
+# D9 — tolerance hunt: can the placer accept a load the validator rejects?
+
+Script: /home/hemanth/.hermes/profiles/reviewer/cache/scratch/tolerance_hunt.py
+
+    == hunting for n*per_unit > residual but <= residual + 1e-9 ==
+      distinct unit weights: 1027 (min 0.01 max 134.063)
+      distinct unit volumes: 1194 (min 34.8 max 273554.81999999995)
+      overdraft cases found: 0
+    
+    == does any single-unit placement overshoot its own residual? ==
+      worst positive overshoot at residual == n*per_unit: 0.0
+    
+    == volume guard vs VD-01 tolerance ==
+      optimizer._assert_never_over_limit tolerates residual_volume >= -1e-6
+      validator VD-01 requires total <= usable_volume_cm3 exactly -> overdraft of any size fails
+      => a 1e-7 cm3 overdraft passes the guard and fails VD-01

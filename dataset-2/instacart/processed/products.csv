@@ -1,0 +1,1201 @@
+sku_id,product_name,category_id,width_cm,height_cm,depth_cm,unit_volume_cm3,unit_weight_kg,handling_type,hazard_class,data_source,data_quality_status,physical_data_source,physical_confidence
+IC-00001,Banana,CAT003,30.5,20.09,15.58,9546.57,6.563,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00002,Bag of Organic Bananas,CAT003,27.98,18.25,15.12,7720.8,3.888,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00003,Organic Strawberries,CAT003,16.62,12.72,9.14,1932.25,0.949,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00004,Organic Baby Spinach,CAT003,29.62,19.91,16.22,9565.49,3.818,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00005,Organic Hass Avocado,CAT003,18.81,14.3,11.67,3139.03,1.88,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00006,Organic Avocado,CAT003,17.2,13.72,10.88,2567.51,0.79,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00007,Large Lemon,CAT003,33.62,25.17,19.76,16721.22,10.056,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00008,Strawberries,CAT003,33.56,24.2,20.11,16332.38,10.952,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00009,Limes,CAT003,20.43,14.8,12.19,3685.82,1.656,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00010,Organic Raspberries,CAT003,19.49,14.54,12.35,3499.8,2.169,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00011,Organic Whole Milk,CAT008,11.8,12.87,8.44,1281.75,1.682,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00012,Organic Yellow Onion,CAT003,15.81,11.25,9.98,1775.07,0.851,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00013,Organic Garlic,CAT003,24.79,21.06,15.89,8295.81,4.778,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00014,Organic Zucchini,CAT003,18.13,13.07,10.89,2580.48,1.459,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00015,Organic Blueberries,CAT003,21.86,18.55,13.38,5425.63,2.46,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00016,Cucumber Kirby,CAT003,20.89,14.99,11.63,3641.83,2.224,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00017,Organic Fuji Apple,CAT003,29.09,23.65,18.48,12713.84,5.29,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00018,Organic Lemon,CAT003,29.17,23.61,16.75,11535.79,4.421,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00019,Apple Honeycrisp Organic,CAT003,20.45,14.57,12.87,3834.7,2.667,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00020,Organic Grape Tomatoes,CAT003,27.51,18.89,15.79,8205.49,5.701,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00021,Seedless Red Grapes,CAT003,16.17,12.59,9.87,2009.34,0.859,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00022,Honeycrisp Apple,CAT003,18.64,15.14,10.17,2870.07,1.799,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00023,Organic Half & Half,CAT008,20.82,19.91,14.21,5890.42,7.424,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00024,Organic Cucumber,CAT003,16.85,13.03,9.0,1976.0,0.668,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00025,Organic Baby Carrots,CAT003,30.8,23.3,18.49,13269.16,6.807,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00026,Organic Gala Apples,CAT003,17.86,12.97,10.9,2524.92,1.136,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00027,Sparkling Water Grapefruit,CAT007,17.49,13.67,12.63,3019.69,2.725,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00028,Organic Large Extra Fancy Fuji Apple,CAT003,19.71,12.71,10.61,2657.95,1.82,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00029,Carrots,CAT003,18.87,14.28,11.68,3147.33,1.007,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00030,Yellow Onions,CAT003,17.4,12.97,9.35,2110.09,0.974,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00031,Organic Baby Arugula,CAT003,27.5,18.64,15.36,7873.54,5.088,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00032,Fresh Cauliflower,CAT003,28.86,23.14,16.02,10698.48,5.405,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00033,Original Hummus,CAT003,22.66,17.1,11.67,4521.96,1.591,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00034,Organic Small Bunch Celery,CAT003,32.03,23.26,17.38,12948.41,7.724,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00035,Half & Half,CAT008,20.9,19.17,13.49,5404.81,7.09,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00036,Organic Cilantro,CAT003,27.81,21.9,16.09,9799.44,6.488,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00037,Michigan Organic Kale,CAT003,19.1,13.22,10.67,2694.2,1.341,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00038,Asparagus,CAT003,31.03,23.33,17.73,12835.28,7.631,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00039,Organic Tomato Cluster,CAT003,23.06,18.37,13.52,5727.24,3.285,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00040,Organic Red Onion,CAT003,32.41,23.88,18.33,14186.52,6.854,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00041,Organic Blackberries,CAT003,18.88,13.96,11.41,3007.27,1.123,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00042,100% Whole Wheat Bread,CAT003,30.93,22.64,15.88,11120.05,4.047,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00043,Organic Whole String Cheese,CAT008,17.34,16.2,11.95,3356.85,4.599,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00044,Organic Italian Parsley Bunch,CAT003,24.91,19.21,15.77,7546.28,3.935,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00045,Blueberries,CAT003,19.78,13.85,11.48,3144.98,1.492,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00046,Organic Granny Smith Apple,CAT003,16.34,13.21,10.41,2247.01,1.504,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00047,Organic Red Bell Pepper,CAT003,15.35,11.25,8.44,1457.48,1.018,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00048,Raspberries,CAT003,24.48,17.93,14.41,6324.93,3.308,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00049,Red Peppers,CAT003,21.73,16.72,12.08,4388.97,1.584,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00050,Organic Peeled Whole Baby Carrots,CAT003,19.03,15.87,11.96,3611.99,1.358,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00051,Spring Water,CAT007,16.95,13.34,12.54,2835.46,3.4,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00052,Organic Unsweetened Almond Milk,CAT008,15.26,14.48,9.4,2077.07,2.291,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00053,Organic Garnet Sweet Potato (Yam),CAT003,19.15,16.04,11.3,3470.98,2.182,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00054,Red Vine Tomato,CAT003,17.3,12.16,9.3,1956.42,1.268,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00055,Organic Ginger Root,CAT003,27.14,22.84,17.6,10909.85,5.773,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00056,Green Bell Pepper,CAT003,22.08,15.29,12.57,4243.67,2.312,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00057,Organic D'Anjou Pears,CAT003,26.38,21.13,14.99,8355.57,2.569,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00058,Hass Avocados,CAT003,28.55,20.84,15.69,9335.27,3.681,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00059,Boneless Skinless Chicken Breasts,CAT003,27.84,22.84,15.66,9957.66,5.592,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00060,Organic Kiwi,CAT003,27.37,19.54,15.41,8241.42,3.771,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00061,Unsweetened Almondmilk,CAT008,17.68,18.7,12.56,4152.54,5.106,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00062,Extra Virgin Olive Oil,CAT003,18.05,14.19,9.73,2492.14,1.543,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00063,Small Hass Avocado,CAT003,29.87,19.54,16.31,9519.49,3.89,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00064,Organic Reduced Fat 2% Milk,CAT008,18.7,17.81,12.08,4023.21,3.411,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00065,Grated Parmesan,CAT008,16.17,15.11,9.95,2431.07,2.582,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00066,Bunched Cilantro,CAT003,24.34,17.34,14.06,5934.1,2.823,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00067,Lime Sparkling Water,CAT007,25.17,20.32,16.65,8515.72,9.78,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00068,Sparkling Natural Mineral Water,CAT007,32.53,23.49,23.48,17941.77,13.835,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00069,Organic Lacinato (Dinosaur) Kale,CAT003,18.36,14.21,11.33,2955.95,0.983,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00070,Broccoli Crown,CAT003,20.57,16.46,12.26,4151.02,1.934,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00071,Uncured Genoa Salami,CAT003,18.34,13.7,9.33,2344.24,1.166,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00072,Organic Navel Orange,CAT003,32.22,23.22,18.37,13743.49,9.37,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00073,Red Onion,CAT003,22.65,16.47,12.49,4659.34,1.592,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00074,Jalapeno Peppers,CAT003,22.18,18.72,14.84,6161.71,3.151,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00075,Organic Grade A Free Range Large Brown Eggs,CAT008,20.4,18.5,12.14,4581.64,4.684,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00076,"Clementines, Bag",CAT003,24.4,18.02,14.65,6441.43,3.903,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00077,Roma Tomato,CAT003,28.4,21.55,17.05,10434.94,5.639,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00078,Organic Bartlett Pear,CAT003,29.23,20.92,16.07,9826.67,4.849,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00079,Large Alfresco Eggs,CAT008,9.82,10.36,6.89,700.96,0.975,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00080,Organic Black Beans,CAT007,22.83,16.49,17.08,6430.05,6.348,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00081,Organic Broccoli,CAT003,19.57,14.46,12.11,3426.91,1.718,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00082,100% Raw Coconut Water,CAT007,18.82,15.74,13.59,4025.72,4.088,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00083,Organic Romaine Lettuce,CAT003,29.64,20.4,16.27,9837.75,3.25,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00084,2% Reduced Fat Milk,CAT008,11.24,10.28,6.73,777.63,0.812,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00085,Orange Bell Pepper,CAT003,30.29,24.4,18.33,13547.26,4.081,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00086,Grape White/Green Seedless,CAT003,15.82,11.14,9.01,1587.88,1.082,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00087,Whole Milk,CAT008,11.88,11.82,7.67,1077.03,0.838,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00088,Unsweetened Original Almond Breeze Almond Milk,CAT008,16.27,16.75,11.18,3046.8,4.446,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00089,Shredded Parmesan,CAT008,19.57,18.71,11.68,4276.69,5.352,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00090,Unsalted Butter,CAT008,12.89,14.3,9.56,1762.17,1.745,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00091,Soda,CAT007,19.84,16.05,14.92,4751.01,5.386,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00092,Garlic,CAT003,22.42,16.92,13.56,5143.94,2.95,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00093,Bartlett Pears,CAT003,25.93,19.11,13.24,6560.72,4.052,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00094,Pure Irish Butter,CAT008,9.52,9.13,6.24,542.37,0.52,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00095,Organic Reduced Fat Milk,CAT008,16.11,15.21,10.85,2658.61,3.811,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00096,Organic Large Brown Grade AA Cage Free Eggs,CAT008,21.05,20.82,13.93,6104.98,3.955,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00097,Granny Smith Apples,CAT003,20.37,15.34,11.82,3693.46,1.396,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00098,Organic Carrot Bunch,CAT003,32.59,22.56,19.56,14381.11,9.258,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00099,Organic Broccoli Florets,CAT003,18.29,14.6,10.76,2873.29,1.626,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00100,Organic Sticks Low Moisture Part Skim Mozzarella String Cheese,CAT008,15.26,16.66,10.01,2544.86,3.665,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00101,Organic Spring Mix,CAT003,33.01,24.02,17.29,13709.24,7.307,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00102,Organic Baby Broccoli,CAT003,15.76,11.26,9.61,1705.37,0.945,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00103,Italian Sparkling Mineral Water,CAT007,29.39,23.69,19.14,13326.21,15.184,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00104,Organic Whole Strawberries,CAT003,31.91,26.79,20.93,17892.41,7.404,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00105,Sparkling Lemon Water,CAT007,31.44,24.31,22.88,17487.33,16.891,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00106,Organic Russet Potato,CAT003,16.93,13.35,9.68,2187.83,1.044,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00107,Feta Cheese Crumbles,CAT008,15.76,15.98,11.75,2959.18,3.239,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00108,Total 2% with Strawberry Lowfat Greek Strained Yogurt,CAT008,15.53,14.09,10.44,2284.46,2.904,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00109,Clementines,CAT003,27.74,21.03,15.61,9106.44,4.825,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00110,Organic Garbanzo Beans,CAT007,19.27,15.05,11.97,3471.46,3.799,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00111,Whipped Cream Cheese,CAT008,15.26,13.83,9.57,2019.71,1.949,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00112,Organic Extra Firm Tofu,CAT003,22.15,18.33,13.54,5497.37,2.081,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00113,Organic Roma Tomato,CAT003,16.27,12.22,9.23,1835.1,0.743,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00114,Frozen Organic Wild Blueberries,CAT003,23.31,18.66,13.21,5745.88,1.794,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00115,Vanilla Almond Breeze Almond Milk,CAT008,20.16,20.86,12.19,5126.35,5.419,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00116,Russet Potato,CAT003,27.39,20.47,15.96,8948.35,2.695,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00117,Organic Roasted Turkey Breast,CAT003,15.94,12.65,9.02,1818.8,0.768,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00118,Sharp Cheddar Cheese,CAT008,13.26,13.93,9.42,1739.99,1.324,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00119,No Salt Added Black Beans,CAT007,27.16,22.93,20.92,13028.53,10.227,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00120,Fat Free Milk,CAT008,14.67,16.26,9.72,2318.55,3.202,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00121,Pure Sparkling Water,CAT007,16.88,13.86,11.94,2793.44,2.513,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00122,"Organic Red Radish, Bunch",CAT003,26.2,19.94,16.25,8489.45,3.942,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00123,Organic Coconut Milk,CAT008,17.73,18.01,11.68,3729.63,4.308,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00124,Shredded Mild Cheddar Cheese,CAT008,21.75,19.33,12.89,5419.31,6.011,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00125,Organic Basil,CAT003,20.3,14.69,12.82,3823.01,2.295,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00126,Romaine Hearts,CAT003,25.37,17.1,13.61,5904.39,2.017,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00127,Green Beans,CAT003,33.38,23.16,18.68,14441.15,4.728,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00128,Total 0% Nonfat Greek Yogurt,CAT008,16.02,15.7,9.94,2500.05,2.699,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00129,Green Onions,CAT003,28.54,19.23,17.45,9576.98,3.312,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00130,Organic Fat Free Milk,CAT008,14.61,12.52,8.65,1582.23,1.129,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00131,Organic Milk,CAT008,13.78,13.86,9.71,1854.52,1.817,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00132,Red Raspberries,CAT003,23.55,18.18,14.0,5993.95,3.631,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00133,Ground Turkey Breast,CAT003,18.65,15.48,10.78,3112.21,1.716,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00134,100% Recycled Paper Towels,CAT003,21.94,16.81,12.66,4669.15,2.238,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00135,Total 0% Greek Yogurt,CAT008,20.07,17.37,11.81,4117.15,5.441,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00136,Organic Sour Cream,CAT008,11.13,10.38,7.99,923.08,0.689,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00137,Unsweetened Vanilla Almond Milk,CAT008,18.58,18.37,13.43,4583.86,3.588,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00138,Total Greek Strained Yogurt,CAT008,13.47,14.65,8.79,1734.58,2.598,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00139,Watermelon Chunks,CAT003,17.88,12.53,9.54,2137.31,0.673,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00140,Honey Nut Cheerios,CAT003,28.52,22.91,16.51,10787.52,5.522,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00141,Yellow Bell Pepper,CAT003,15.63,11.83,8.71,1610.5,0.707,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00142,Organic Large Grade AA Brown Eggs,CAT008,19.13,17.83,11.3,3854.29,4.277,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00143,Organic Celery Hearts,CAT003,25.42,18.47,13.87,6512.07,3.797,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00144,Original Orange Juice,CAT007,32.95,25.19,21.77,18069.33,16.09,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00145,Organic Hothouse Cucumbers,CAT003,28.25,23.18,18.34,12009.67,6.995,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00146,Lightly Salted Baked Snap Pea Crisps,CAT003,29.32,24.09,17.77,12551.29,6.233,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00147,Cantaloupe,CAT003,31.55,25.54,18.27,14721.73,7.791,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00148,Organic Bread with 21 Whole Grains,CAT003,30.42,22.51,16.87,11551.8,3.889,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00149,Organic White Onions,CAT003,20.76,16.53,11.9,4083.64,2.076,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00150,Total 2% All Natural Greek Strained Yogurt with Honey,CAT008,16.48,16.94,10.95,3056.92,4.363,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00151,Pineapple Chunks,CAT003,25.29,19.74,15.07,7523.31,2.46,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00152,Organic Heavy Whipping Cream,CAT008,12.24,13.42,7.88,1294.38,1.091,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00153,Organic 2% Reduced Fat Milk,CAT008,13.31,11.61,8.68,1341.31,1.239,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00154,Organic Romaine,CAT003,17.57,12.89,10.73,2430.1,0.799,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00155,Baby Spinach,CAT003,31.37,24.06,17.54,13238.53,8.166,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00156,Gala Apples,CAT003,15.2,11.0,9.77,1633.54,1.029,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00157,Blackberries,CAT003,17.8,13.92,10.57,2618.99,1.423,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00158,Fresh Ginger Root,CAT003,25.99,19.9,16.32,8440.72,2.828,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00159,Organic Diced Tomatoes,CAT007,33.54,27.11,22.8,20731.34,17.19,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00160,Organic Bosc Pear,CAT003,29.38,22.41,15.72,10350.14,6.893,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00161,Boneless Skinless Chicken Breast,CAT003,16.63,11.52,9.63,1844.89,0.834,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00162,Organic Bell Pepper,CAT003,17.16,11.25,9.91,1913.13,0.902,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00163,Sour Cream,CAT008,20.13,18.77,12.07,4560.53,5.462,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00164,Creamy Almond Butter,CAT003,24.33,19.58,15.08,7183.83,4.601,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00165,Organic Green Seedless Grapes,CAT003,14.59,11.54,7.83,1318.33,0.713,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00166,Organic Raw Kombucha Gingerade,CAT007,19.97,16.63,14.71,4885.21,4.354,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00167,Total 2% Lowfat Greek Strained Yogurt With Blueberry,CAT008,12.1,12.08,8.39,1226.35,1.277,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00168,Cherubs Heavenly Salad Tomatoes,CAT003,20.2,14.69,12.02,3566.79,2.213,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00169,Organic Unsalted Butter,CAT008,15.02,14.87,9.82,2193.27,2.757,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00170,Brussels Sprouts,CAT003,21.42,18.52,14.13,5605.35,3.442,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00171,Large Grapefruit,CAT003,22.15,16.5,13.43,4908.33,1.939,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00172,Organic Green Cabbage,CAT003,31.43,27.12,18.75,15982.16,9.272,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00173,Organic Jalapeno Pepper,CAT003,31.26,24.67,19.55,15076.65,4.522,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00174,"Milk, Organic, Vitamin D",CAT008,15.94,15.17,11.2,2708.27,1.797,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00175,Organic Spring Mix Salad,CAT003,32.43,25.05,17.66,14346.48,8.695,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00176,Unsalted Pure Irish Butter,CAT008,16.22,16.67,11.43,3090.53,2.142,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00177,Shredded Mozzarella,CAT008,16.06,15.79,10.84,2748.89,1.957,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00178,Uncured Hickory Smoked Sunday Bacon,CAT003,19.96,16.2,12.46,4028.97,1.968,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00179,Peach Pear Flavored Sparkling Water,CAT007,24.99,20.18,17.68,8915.99,9.77,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00180,Organic Yellow Peaches,CAT003,24.54,18.84,13.67,6320.1,2.144,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00181,"YoKids Squeezers Organic Low-Fat Yogurt, Strawberry",CAT008,14.1,15.38,10.59,2296.53,2.265,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00182,Total 2% Lowfat Greek Strained Yogurt with Peach,CAT008,11.51,12.2,7.43,1043.34,0.984,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00183,Marinara Sauce,CAT007,29.16,22.98,22.63,15164.29,13.789,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00184,Organic Egg Whites,CAT008,16.19,16.47,11.54,3077.13,2.648,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00185,Creamy Peanut Butter,CAT003,28.93,19.75,16.15,9227.59,5.155,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00186,Natural Spring Water,CAT007,16.92,15.36,12.28,3191.46,3.614,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00187,Organic Shredded Carrots,CAT003,28.78,23.24,17.64,11798.46,7.336,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00188,Electrolyte Enhanced Water,CAT007,35.22,25.36,24.38,21775.71,19.873,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00189,Organic Old Fashioned Rolled Oats,CAT003,28.0,20.3,16.13,9168.29,4.715,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00190,Organic Banana,CAT003,23.07,16.97,14.75,5774.59,3.196,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00191,Organic Frozen Peas,CAT003,28.87,22.78,18.33,12054.88,6.201,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00192,Organic Butternut Squash,CAT003,25.45,19.29,14.54,7138.13,4.732,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00193,Organic Thyme,CAT003,17.76,14.11,10.99,2754.02,1.924,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00194,Sweet Onion,CAT003,29.58,20.2,15.47,9243.57,4.853,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00195,Organic Baby Rainbow Carrots,CAT003,27.15,21.53,15.66,9153.89,4.05,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00196,Heavy Whipping Cream,CAT008,13.58,15.1,10.47,2146.96,1.325,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00197,Lemonade,CAT007,28.11,22.56,19.36,12277.37,10.44,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00198,Organic Large Green Asparagus,CAT003,22.64,16.83,12.04,4587.62,1.549,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00199,Sparkling Mineral Water,CAT007,34.3,27.39,25.56,24013.03,27.233,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00200,Organic Leek,CAT003,17.87,13.65,10.01,2441.69,1.255,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00201,European Cucumber,CAT003,20.39,15.2,11.23,3480.49,1.373,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00202,Original No Pulp 100% Florida Orange Juice,CAT007,30.75,25.64,23.18,18275.81,19.991,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00203,Organic Baby Spinach Salad,CAT003,30.65,23.43,18.95,13608.55,6.79,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00204,Organic Yams,CAT003,24.24,17.63,14.87,6354.71,3.733,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00205,Organic Mexican Blend Finely Shredded Cheese,CAT008,9.38,10.09,6.58,622.76,0.542,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00206,Organic American Cheese Singles,CAT008,20.54,20.57,12.05,5091.22,6.573,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00207,Organic Shredded Mozzarella,CAT008,15.83,17.78,11.9,3349.34,2.594,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00208,Icelandic Style Skyr Blueberry Non-fat Yogurt,CAT008,16.92,18.52,12.02,3766.57,4.371,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00209,Salted Butter,CAT008,14.96,14.7,9.71,2135.35,2.54,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00210,Chicken & Maple Breakfast Sausage,CAT003,22.08,16.42,11.51,4172.99,1.979,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00211,Air Chilled Organic Boneless Skinless Chicken Breasts,CAT003,26.91,22.25,16.45,9849.4,3.935,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00212,Organic Mint,CAT003,20.76,15.64,11.73,3808.57,1.631,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00213,Oven Roasted Turkey Breast,CAT003,15.99,12.17,9.63,1873.98,0.591,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00214,Total 2% Greek Strained Yogurt with Cherry 5.3 oz,CAT008,17.15,15.32,9.9,2601.11,2.258,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00215,Organic Broccoli Crowns,CAT003,33.61,26.16,19.91,17505.62,10.056,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00216,Pure Coconut Water,CAT007,19.5,16.64,14.47,4695.23,4.903,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00217,White Corn,CAT003,23.66,17.9,13.1,5548.03,3.652,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00218,Organic Tomato Paste,CAT007,28.31,22.22,18.59,11694.01,13.649,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00219,Ezekiel 4:9 Bread Organic Sprouted Whole Grain,CAT003,24.46,18.63,15.93,7259.14,2.581,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00220,Guacamole,CAT003,16.58,12.35,10.31,2111.11,1.28,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00221,Organic Unsweetened Vanilla Almond Milk,CAT008,10.92,10.79,7.18,846.0,1.193,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00222,Sustainably Soft Bath Tissue,CAT003,32.33,23.88,20.17,15572.05,8.22,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00223,Fridge Pack Cola,CAT007,32.69,24.68,21.2,17103.93,15.337,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00224,Hass Avocado,CAT003,23.73,18.79,12.59,5613.71,1.773,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00225,Sea Salt Pita Chips,CAT003,26.79,21.14,17.29,9792.03,6.357,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00226,Organic Baby Kale,CAT003,29.05,19.95,17.34,10049.35,4.805,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00227,Globe Eggplant,CAT003,23.01,17.96,12.42,5132.68,1.578,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00228,Mango Chunks,CAT003,32.86,25.59,18.41,15480.74,5.239,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00229,Roasted Turkey Breast,CAT003,30.29,22.69,15.48,10639.1,4.077,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00230,Organic Creamy Peanut Butter,CAT003,27.11,21.07,15.86,9059.35,4.343,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00231,Total 2% Lowfat Plain Greek Yogurt,CAT008,10.13,11.18,6.46,731.62,0.858,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00232,Shallot,CAT003,25.91,20.11,15.26,7951.22,3.882,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00233,White Onion,CAT003,18.54,12.84,10.21,2430.53,0.947,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00234,Macaroni & Cheese,CAT003,17.37,11.9,9.44,1951.28,1.35,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00235,Roasted Red Pepper Hummus,CAT003,24.25,17.95,13.37,5819.79,2.89,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00236,Vanilla Skyr Nonfat Yogurt,CAT008,18.31,19.17,13.19,4629.73,5.798,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00237,Organic Low Sodium Chicken Broth,CAT007,32.16,27.31,24.24,21289.74,22.451,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00238,Reduced Fat 2% Milk,CAT008,21.1,18.71,12.71,5017.67,3.604,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00239,Orange Juice,CAT007,18.77,14.99,12.12,3410.11,3.787,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00240,Trilogy Kombucha Drink,CAT007,16.82,14.16,11.48,2734.21,2.912,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00241,Lemon Hummus,CAT003,29.98,20.13,16.43,9915.46,4.15,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00242,Original Veggie Straws,CAT003,17.75,11.65,9.05,1871.43,0.65,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00243,Asparation/Broccolini/Baby Broccoli,CAT003,14.34,12.12,9.32,1619.82,0.898,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00244,Sparkling Water Berry,CAT007,29.84,24.12,22.67,16316.52,16.447,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00245,Total 2% All Natural Low Fat 2% Milkfat Greek Strained Yogurt,CAT008,10.89,10.39,6.51,736.59,0.839,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00246,Organic Beef Hot Dogs,CAT003,22.02,17.08,13.48,5069.85,3.288,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00247,Organic AppleApple,CAT007,35.96,26.62,24.05,23021.99,21.018,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00248,Basil Pesto,CAT007,30.67,23.54,22.03,15905.04,16.657,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00249,Spinach,CAT003,20.68,16.31,13.28,4479.22,1.854,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00250,Organic Ketchup,CAT003,31.72,22.92,17.28,12562.95,6.455,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00251,Total 2% All Natural Plain Greek Yogurt,CAT008,15.28,15.12,10.31,2381.96,2.697,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00252,Large Yellow Flesh Nectarine,CAT003,18.04,13.52,10.56,2575.59,1.252,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00253,Spaghetti,CAT007,17.95,14.14,12.95,3286.88,2.982,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00254,Sourdough Bread,CAT003,27.42,21.71,18.05,10744.95,3.792,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00255,Organic Snipped Green Beans,CAT003,33.59,22.73,19.5,14888.26,5.002,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00256,Organic Tomato Basil Pasta Sauce,CAT007,17.34,12.99,11.3,2545.29,2.131,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00257,XL Emerald White Seedless Grapes,CAT003,17.61,13.3,11.81,2766.06,1.08,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00258,Frozen Broccoli Florets,CAT003,33.78,24.83,18.85,15810.58,7.647,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00259,Organic Dill,CAT003,31.11,25.0,19.26,14979.47,10.072,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00260,Mild Salsa,CAT003,31.67,26.77,20.06,17006.99,6.097,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00261,Organic Grade A Large Brown Eggs,CAT008,10.64,10.51,6.74,753.71,0.615,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00262,Raisin Bran Cereal,CAT003,27.99,19.19,15.62,8389.94,2.573,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00263,2% Reduced Fat Organic Milk,CAT008,17.13,18.95,11.89,3859.65,3.779,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00264,Pretzel Crisps Original Deli Style Pretzel Crackers,CAT003,29.08,19.99,17.24,10021.77,6.602,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00265,Black Beans,CAT007,31.38,27.53,23.23,20068.2,21.667,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00266,Berry Medley,CAT003,32.25,22.74,18.88,13845.93,4.299,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00267,Non Fat Raspberry Yogurt,CAT008,21.35,21.84,13.08,6098.99,4.925,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00268,Sinfully Sweet Campari Tomatoes,CAT003,17.79,13.24,10.59,2494.36,1.704,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00269,Baby Cucumbers,CAT003,24.44,20.52,13.92,6981.0,4.103,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00270,Seedless Small Watermelon,CAT003,24.61,21.19,14.38,7498.97,3.78,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00271,Strawberry Preserves,CAT003,14.06,12.05,9.11,1543.44,0.519,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00272,Bing Cherries,CAT003,19.79,15.16,11.99,3597.2,1.451,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00273,Super Greens Salad,CAT003,15.8,13.36,9.56,2018.0,1.351,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00274,Organic Whole Grassmilk Milk,CAT008,9.04,9.84,5.65,502.59,0.389,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00275,Original Pure Creamy Almond Milk,CAT008,17.03,18.3,12.23,3811.47,4.5,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00276,Organic Rainbow Carrots,CAT003,18.88,14.17,11.97,3202.33,1.915,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00277,Organic Salted Butter,CAT008,14.47,14.55,9.62,2025.38,2.055,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00278,Original Nooks & Crannies English Muffins,CAT003,19.7,14.2,10.7,2993.22,1.155,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00279,Vine Ripe Tomatoes,CAT003,29.0,21.05,16.46,10048.01,3.24,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00280,Natural Chicken & Sage Breakfast Sausage,CAT003,16.22,13.2,9.65,2066.1,1.428,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00281,Organic Lowfat 1% Milk,CAT008,12.03,11.87,8.62,1230.9,0.775,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00282,Mini Original Babybel Cheese,CAT008,21.54,19.87,12.52,5358.56,7.793,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00283,Organic Red Cabbage,CAT003,18.97,14.38,11.68,3186.17,1.579,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00284,Organic Iceberg Lettuce,CAT003,25.74,19.46,15.47,7748.93,2.584,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00285,Grapefruit Sparkling Water,CAT007,27.75,23.24,22.8,14703.95,14.137,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00286,Tilapia Filet,CAT003,32.64,21.91,17.79,12722.38,7.59,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00287,Organic Medium Salsa,CAT003,24.83,18.62,13.57,6273.88,2.735,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00288,Organic Green Leaf Lettuce,CAT003,15.51,11.68,8.61,1559.76,0.562,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00289,Natural Artesian Water,CAT007,16.17,12.31,10.83,2155.74,2.092,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00290,Total 0% Nonfat Plain Greek Yogurt,CAT008,14.51,13.35,9.81,1900.28,1.704,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00291,Organic Large Brown Eggs,CAT008,17.73,17.6,12.88,4019.18,3.565,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00292,Skim Milk,CAT008,19.04,17.01,11.23,3637.06,2.926,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00293,Organic Red Delicious Apple,CAT003,35.06,25.58,20.78,18636.23,5.974,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00294,Organic Whole Grain Wheat English Muffins,CAT003,27.99,20.71,16.83,9755.89,2.962,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00295,Orange Sparkling Water,CAT007,32.52,24.42,21.49,17066.03,17.727,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00296,Gluten Free Whole Grain Bread,CAT003,24.4,17.63,15.37,6611.74,2.414,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00297,Corn Tortillas,CAT003,33.12,22.67,18.32,13755.21,4.868,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00298,Distilled Water,CAT007,14.75,11.62,11.49,1969.33,1.53,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00299,Organic Bunch Beets,CAT003,16.52,12.41,9.68,1984.53,0.765,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00300,Organic Turkey Bacon,CAT003,19.2,14.91,11.69,3346.52,1.906,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00301,Organic Brown Rice,CAT003,23.63,18.29,14.93,6452.64,2.615,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00302,Whole Milk Plain Yogurt,CAT008,10.71,12.2,7.53,983.88,1.09,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00303,Diced Tomatoes,CAT007,27.45,22.86,18.2,11420.63,13.422,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00304,Sea Salt & Vinegar Potato Chips,CAT003,25.15,18.43,13.98,6479.93,4.247,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00305,Organic Bunny Fruit Snacks Berry Patch,CAT003,29.61,22.47,16.2,10778.45,3.696,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00306,Organic Tortilla Chips,CAT003,26.62,21.8,15.74,9134.17,4.722,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00307,Organic Tomato Sauce,CAT007,16.6,13.67,12.13,2752.56,2.967,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00308,Trail Mix,CAT003,26.63,19.43,15.96,8258.04,5.47,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00309,Organic Beef Uncured Hot Dogs,CAT003,27.5,20.83,17.32,9921.33,6.589,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00310,Organic Plain Whole Milk Yogurt,CAT008,21.55,22.23,13.14,6294.8,4.179,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00311,Goat Cheese Crumbles,CAT008,15.03,14.49,9.99,2175.67,2.814,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00312,Baked Aged White Cheddar Rice and Corn Puffs,CAT003,29.0,20.18,17.45,10212.09,3.836,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00313,Ginger Ale,CAT007,29.66,26.45,21.09,16545.25,11.826,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00314,0% Greek Strained Yogurt,CAT008,12.98,12.69,8.11,1335.85,1.864,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00315,Uncured Slow Cooked Ham,CAT003,20.94,15.9,11.81,3932.09,2.252,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00316,Organic Whole Milk with DHA Omega-3,CAT008,17.08,16.34,10.9,3042.05,2.065,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00317,Seedless Cucumbers,CAT003,25.47,17.2,14.73,6452.98,2.455,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00318,Plain Greek Yogurt,CAT008,17.82,18.39,13.56,4443.74,4.402,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00319,Celery Hearts,CAT003,15.2,12.9,8.98,1760.8,1.063,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00320,Chocolate Chip Cookies,CAT003,30.75,25.03,20.05,15431.93,9.832,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00321,"Cage Free Brown Eggs-Large, Grade A",CAT008,15.61,17.37,10.43,2828.05,2.699,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00322,Organic Spaghetti Squash,CAT003,32.61,25.93,18.68,15795.38,10.496,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00323,Organic Free Range Chicken Broth,CAT007,26.37,23.64,21.54,13427.75,9.427,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00324,Chocolate Ice Cream,CAT003,33.96,24.71,18.39,15432.0,8.199,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00325,Organic Spinach Bunch,CAT003,35.99,25.77,18.94,17566.14,6.815,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00326,"Super Spinach! Baby Spinach, Baby Bok Choy, Sweet Baby Kale",CAT003,23.43,18.33,14.19,6094.21,2.275,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00327,Almonds & Sea Salt in Dark Chocolate,CAT003,28.87,21.02,16.58,10061.53,4.339,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00328,Organic Original Hommus,CAT003,14.48,11.52,8.52,1421.22,0.575,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00329,Cinnamon Rolls with Icing,CAT003,18.17,12.95,10.96,2578.9,1.723,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00330,Organic Large Grade A Brown Eggs,CAT008,12.45,11.95,8.47,1260.15,0.882,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00331,Organic Blue Corn Tortilla Chips,CAT003,24.14,19.23,15.43,7162.79,5.005,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00332,Water,CAT007,24.74,19.81,17.16,8410.11,9.714,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00333,Organic Extra Large Grade AA Brown Eggs,CAT008,10.54,10.45,7.37,811.75,0.522,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00334,"Organic Milk Reduced Fat, 2% Milkfat",CAT008,16.79,17.31,11.11,3228.95,2.396,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00335,Tomato Ketchup,CAT003,28.64,24.05,18.32,12618.67,7.73,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00336,I Heart Baby Kale,CAT003,22.18,15.28,12.23,4144.87,2.641,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00337,"Organic Butterhead (Boston, Butter, Bibb) Lettuce",CAT003,13.73,11.49,8.43,1329.9,0.897,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00338,Organic Sunday Bacon,CAT003,22.78,16.35,14.51,5404.29,2.048,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00339,Organic Good Seed Bread,CAT003,21.98,18.49,13.57,5514.99,2.888,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00340,Green Seedless Grapes,CAT003,23.89,17.36,12.9,5350.02,2.198,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00341,Organic Romaine Hearts,CAT003,19.01,13.86,12.1,3188.09,1.688,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00342,1% Lowfat Milk,CAT008,10.8,11.13,6.83,820.99,0.838,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00343,Organic Extra Virgin Olive Oil,CAT003,24.76,18.53,12.84,5891.03,3.437,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00344,Tomato Sauce,CAT007,28.49,21.52,19.16,11747.09,9.257,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00345,Grade A Large White Eggs,CAT008,11.29,12.1,8.03,1096.97,1.169,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00346,Light Brown Sugar,CAT003,22.75,16.84,12.98,4972.77,2.945,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00347,Sparkling Water,CAT007,16.04,12.65,12.58,2552.56,2.364,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00348,Organic Whole Kernel Sweet Corn No Salt Added,CAT007,20.5,18.1,17.04,6322.69,5.026,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00349,Organic Summer Strawberry Bunny Fruit Snacks,CAT003,31.64,24.81,20.33,15958.81,8.73,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00350,Organic Roasted Sliced Chicken Breast,CAT003,27.13,22.28,17.23,10414.78,5.231,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00351,"Flat Parsley, Bunch",CAT003,28.54,20.49,17.78,10397.47,5.499,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00352,Oven Roasted Turkey,CAT003,15.87,11.57,9.85,1808.62,1.005,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00353,Classic Hummus,CAT003,25.94,18.32,13.3,6320.44,4.105,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00354,Cream Cheese Spread,CAT008,17.87,19.51,12.02,4190.7,6.098,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00355,Sea Salt Potato Chips,CAT003,29.31,22.31,17.37,11358.35,6.415,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00356,Potato Yukon Gold Organic,CAT003,23.76,16.07,12.49,4768.97,3.147,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00357,Apples,CAT003,32.28,25.35,18.26,14942.12,7.729,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00358,Organic Cripps Pink Apples,CAT003,20.3,17.2,12.68,4427.35,2.205,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00359,Organic Chicken & Apple Sausage,CAT003,19.35,15.04,11.53,3355.51,2.162,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00360,Organic Plain Greek Whole Milk Yogurt,CAT008,16.56,15.63,10.96,2836.81,4.152,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00361,Packaged Grape Tomatoes,CAT003,25.52,16.97,15.19,6578.4,3.191,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00362,Kids Organic Chocolate Chip ZBars,CAT003,22.77,18.14,13.85,5720.71,3.711,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00363,English Seedless Cucumber,CAT003,24.91,19.58,16.56,8076.94,3.916,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00364,Organic Cheese Frozen Pizza,CAT003,30.1,25.6,20.1,15488.26,6.729,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00365,Kale Greens,CAT003,30.53,22.36,18.26,12465.2,6.052,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00366,Organic Nectarine,CAT003,29.6,24.11,17.49,12481.84,4.728,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00367,Organic Thompson Seedless Raisins,CAT003,22.4,17.75,12.15,4830.84,1.672,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00368,Crushed Tomatoes,CAT007,30.45,22.35,20.17,13726.84,13.687,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00369,Honeycrisp Apples,CAT003,20.9,15.65,12.69,4150.71,1.677,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00370,Hint Of Sea Salt Almond Nut Thins,CAT003,28.29,20.88,17.79,10508.47,4.012,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00371,Italian Extra Virgin Olive Oil,CAT003,27.04,21.14,16.01,9151.73,3.849,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00372,Total 0% Raspberry Yogurt,CAT008,10.57,10.34,6.91,755.22,0.595,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00373,2% Reduced Fat DHA Omega-3 Reduced Fat Milk,CAT008,11.19,10.8,7.8,942.65,1.359,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00374,85% Lean Ground Beef,CAT003,20.16,15.48,11.68,3645.06,1.609,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00375,Whole Almonds,CAT003,22.06,16.08,13.22,4689.46,1.788,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00376,Organic Honey Sweet Whole Wheat Bread,CAT003,29.65,25.65,20.16,15332.13,9.593,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00377,Organic Whole Cashews,CAT003,21.72,16.11,10.92,3821.01,1.49,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00378,Vanilla Pure Almond Milk,CAT008,16.98,17.47,12.4,3678.34,5.419,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00379,Sugar Snap Peas,CAT003,15.96,13.29,9.72,2061.69,0.654,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00380,Vanilla Ice Cream,CAT003,14.61,10.8,8.79,1386.96,0.605,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00381,Organic Cauliflower,CAT003,22.1,17.21,14.01,5328.58,3.519,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00382,Crackers Cheddar Bunnies Snack Packs,CAT003,25.5,16.74,13.87,5920.69,3.859,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00383,Cereal,CAT003,17.5,12.62,9.52,2102.49,1.197,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00384,Organic 1% Low Fat Milk,CAT008,17.17,18.16,10.88,3392.46,2.601,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00385,Sweet Kale Salad Mix,CAT003,21.56,15.58,12.9,4333.17,1.735,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00386,Cola,CAT007,21.92,15.78,13.85,4790.68,3.538,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00387,YoKids Blueberry & Strawberry/Vanilla Yogurt,CAT008,12.51,13.15,8.62,1418.05,1.73,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00388,Green Tea With Ginseng and Honey,CAT003,30.92,21.89,18.5,12521.52,7.608,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00389,Tomato Paste,CAT007,27.88,20.01,18.44,10287.29,11.675,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00390,Organic Baby Kale Mix,CAT003,22.56,17.84,13.57,5461.52,2.361,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00391,Mandarin Oranges,CAT003,28.96,21.8,14.9,9406.79,3.998,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00392,Baby Arugula,CAT003,24.8,19.75,15.44,7562.51,3.521,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00393,Toasted Coconut Almondmilk Blend,CAT008,10.67,12.14,7.47,967.62,1.217,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00394,Organic Red On the Vine Tomato,CAT003,23.9,16.95,12.82,5193.45,2.863,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00395,Aluminum Foil,CAT003,27.24,20.89,16.95,9645.29,3.863,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00396,Alpine Spring Water,CAT007,14.73,11.74,11.04,1909.15,1.527,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00397,Colby Cheese Sticks,CAT008,10.35,11.52,6.98,832.24,1.219,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00398,100 Calorie  Per Bag Popcorn,CAT003,19.59,14.73,10.49,3027.0,2.051,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00399,Iceberg Lettuce,CAT003,28.79,20.93,14.59,8791.56,3.578,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00400,Organic Chopped Spinach,CAT003,27.38,22.41,17.29,10608.9,6.189,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00401,Firm Tofu,CAT003,24.25,17.44,13.23,5595.23,3.179,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00402,Smartwater,CAT007,29.82,23.79,22.27,15798.73,15.301,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00403,Organic Boneless Skinless Chicken Breast,CAT003,14.34,11.51,8.83,1457.42,1.008,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00404,Organic Whipped Naturally Buttery Spread,CAT008,15.38,15.85,10.38,2530.36,1.945,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00405,Organic Chicken Stock,CAT007,33.97,25.25,23.0,19728.08,17.668,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00406,Almond Breeze Original Almond Milk,CAT008,12.66,12.16,7.65,1177.68,1.468,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00407,Natural Premium Coconut Water,CAT007,35.18,24.68,25.24,21914.44,17.906,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00408,Organic Small Curd Cottage Cheese,CAT008,14.51,16.72,9.85,2389.68,2.388,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00409,Pita Chips Simply Naked,CAT003,18.4,13.54,11.18,2785.34,1.747,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00410,Rainbow Bell Peppers,CAT003,20.58,14.66,11.78,3554.06,1.822,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00411,Organic Fresh Basil,CAT003,28.35,21.93,15.59,9692.54,4.778,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00412,Natural Artisan Water,CAT007,32.36,24.0,21.0,16309.44,16.117,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00413,Organic Yellow Squash,CAT003,29.36,23.57,19.66,13605.02,7.686,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00414,"Yogurt, Strained Low-Fat, Coconut",CAT008,19.89,19.39,12.7,4897.97,6.036,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00415,Vitamin D Organic Whole Milk,CAT008,16.95,17.58,11.38,3391.02,2.863,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00416,Green Peas,CAT003,27.77,22.36,17.0,10555.93,3.241,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00417,Large Brown Eggs,CAT008,19.74,20.9,14.59,6019.34,6.887,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00418,Organic Uncured Sliced Black Forest Ham,CAT003,14.98,12.12,10.06,1826.47,0.942,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00419,Organic Whole Wheat Bread,CAT003,21.56,14.45,11.61,3617.0,1.548,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00420,Organic Vanilla Almond Milk,CAT008,17.78,18.67,11.12,3691.31,3.54,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00421,Plain Bagels,CAT003,22.29,18.02,13.68,5494.79,2.004,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00422,Organic Vegetable Broth,CAT007,30.63,23.74,22.66,16477.36,17.044,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00423,Organic Pinto Beans,CAT007,23.92,18.68,19.11,8538.84,7.929,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00424,Organic Dark Chocolate Peanut Butter Cups,CAT003,22.71,19.22,14.7,6416.35,3.058,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00425,Organic Red Chard Greens,CAT003,17.55,12.76,10.18,2279.69,0.976,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00426,Organic Apple Juice,CAT007,17.25,14.47,11.24,2805.59,2.87,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00427,Fresh CA Grown Eggs,CAT008,21.81,21.87,14.61,6968.75,6.282,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00428,Whole Wheat Bread,CAT003,30.53,21.97,17.93,12026.44,4.377,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00429,Original Hot Sauce,CAT003,34.08,23.24,19.7,15602.78,5.099,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00430,Romaine Lettuce,CAT003,17.36,12.52,9.95,2162.6,0.729,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00431,Organic 21 Grain Thin Sliced Bread,CAT003,17.52,13.35,9.6,2245.36,0.877,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00432,Organic Macaroni Shells & Real Aged Cheddar,CAT007,16.19,11.98,12.22,2370.14,2.765,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00433,Pure & Natural Sour Cream,CAT008,13.12,11.57,8.79,1334.31,0.898,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00434,Total 0% with Honey Nonfat Greek Strained Yogurt,CAT008,14.94,13.94,9.84,2049.31,1.844,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00435,Organic Sea Salt Roasted Seaweed Snacks,CAT003,32.87,22.14,17.94,13055.69,7.774,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00436,Blackberry Cucumber Sparkling Water,CAT007,18.27,15.09,12.1,3335.9,3.707,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00437,Vanilla Unsweetened Almond Milk,CAT008,10.6,10.21,6.24,675.33,0.437,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00438,Fresh Mozzarella Ball,CAT008,14.32,13.4,9.84,1888.18,1.197,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00439,Organic Strawberry Smoothie,CAT008,19.48,19.52,13.07,4969.86,6.693,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00440,Organic Strawberry Fruit Spread,CAT003,32.77,24.2,17.41,13806.72,4.31,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00441,Organic Romaine Leaf,CAT003,22.71,18.33,13.53,5632.19,3.306,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00442,Reduced Fat Milk 100% Lactose Free,CAT008,10.7,10.9,8.06,940.04,1.078,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00443,Aged White Cheddar Baked Rice & Corn Puffs Gluten Free Lunch Packs,CAT003,24.96,19.26,16.31,7840.7,4.251,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00444,Organic Whipping Cream,CAT008,12.14,11.64,7.9,1116.35,1.088,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00445,Kiwi,CAT003,24.44,17.16,15.33,6429.25,2.211,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00446,Mozzarella String Cheese,CAT008,20.02,20.48,14.87,6096.84,3.854,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00447,Salted Tub of Butter,CAT008,16.72,17.1,10.89,3113.58,3.899,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00448,Organic Mixed Vegetables,CAT003,34.7,24.03,18.2,15175.91,7.691,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00449,Gluten Free Dark Chocolate Chunk Chewy with a Crunch Granola Bars,CAT003,16.16,13.51,9.48,2069.69,0.796,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00450,Original Whipped Cream Cheese,CAT008,20.2,20.5,12.33,5105.85,5.197,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00451,Organic No Salt Added Diced Tomatoes,CAT007,16.52,13.52,11.41,2548.43,2.096,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00452,Organic Original Almond Milk,CAT008,20.75,19.98,12.64,5240.35,3.516,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00453,Bunny-Luv Fresh Organic Carrots,CAT003,29.72,22.28,17.69,11713.64,5.561,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00454,Collard Greens,CAT003,15.95,11.59,8.41,1554.68,0.655,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00455,Organic Chicken Broth,CAT007,16.49,13.21,12.56,2735.98,2.977,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00456,Organic Multigrain Waffles,CAT003,23.63,18.12,13.98,5985.89,4.101,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00457,Organic Chicken Strips,CAT003,19.34,14.32,10.35,2866.42,1.267,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00458,Organic Dijon Mustard,CAT003,16.34,12.55,9.68,1985.05,0.943,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00459,Mild Cheddar Cheese Sticks,CAT008,12.38,11.55,7.62,1089.58,1.468,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00460,Organic Italian Salad,CAT003,29.59,21.06,17.89,11148.43,7.514,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00461,Roasted Pine Nut Hummus,CAT003,16.61,13.45,10.71,2392.66,1.673,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00462,Organic Medjool Dates,CAT003,30.92,25.66,18.61,14765.31,10.229,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00463,Boneless Skinless Chicken Thighs,CAT003,32.55,23.28,16.78,12715.28,8.276,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00464,Sliced Black Olives,CAT003,17.78,15.43,11.01,3020.54,1.689,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00465,Blood Oranges,CAT003,31.23,22.98,18.18,13047.16,8.798,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00466,Mint,CAT003,20.34,17.25,13.23,4641.94,1.499,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00467,Organic Cream Cheese Bar,CAT008,17.52,15.85,11.3,3137.92,4.552,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00468,Organic Low Sodium Vegetable Broth,CAT007,24.71,20.62,20.42,10404.4,11.985,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00469,Organic Frozen Mango Chunks,CAT003,27.19,18.91,15.85,8149.48,5.42,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00470,Thin Crust Pepperoni Pizza,CAT003,26.53,19.41,15.85,8161.91,3.277,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00471,Marinara Pasta Sauce,CAT007,31.38,23.12,21.55,15634.65,13.647,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00472,Cheddar Bunnies Snack Crackers,CAT003,31.4,24.17,19.48,14784.11,8.646,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00473,Organic Vanilla Extract,CAT003,31.0,22.7,18.27,12856.6,5.649,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00474,Honey Yoghurt,CAT008,9.81,9.71,6.68,636.3,0.782,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00475,Fat Free Strawberry Yogurt,CAT008,13.52,12.95,9.44,1652.79,2.08,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00476,Real Mayonnaise,CAT003,19.4,15.27,10.82,3205.3,1.641,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00477,Medium Navel Orange,CAT003,22.34,17.53,12.08,4730.77,2.64,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00478,Authentic French Brioche Hamburger Buns,CAT003,27.61,18.19,15.44,7754.37,3.446,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00479,Original Semisoft Cheese,CAT008,19.55,20.19,14.57,5750.99,7.377,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00480,Coke Classic,CAT007,20.51,15.79,15.2,4922.56,5.827,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00481,Dried Mango,CAT007,24.22,20.33,16.49,8119.55,8.038,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00482,ALMONDBREEZE UNSWEETENED,CAT008,9.91,10.5,7.35,764.8,0.554,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00483,Organic Quick Oats,CAT003,31.69,24.68,17.13,13397.53,4.452,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00484,Chopped Walnuts,CAT003,24.47,18.96,16.28,7553.13,4.823,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00485,Extra Fancy Unsalted Mixed Nuts,CAT003,31.27,23.92,17.89,13381.33,8.447,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00486,Whole Milk Ricotta Cheese,CAT008,9.12,9.74,5.94,527.64,0.565,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00487,Lime,CAT003,27.74,19.7,15.41,8421.23,3.589,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00488,Purified Water,CAT007,21.51,16.17,14.72,5119.86,5.61,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00489,Raspberry Preserves,CAT003,26.89,20.94,16.32,9189.41,5.125,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00490,Nonfat Icelandic Style Strawberry Yogurt,CAT008,16.71,15.28,11.19,2857.13,2.074,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00491,Organic Golden Delicious Apple,CAT003,20.74,13.89,10.84,3122.77,1.664,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00492,Organic Sliced Peaches,CAT003,30.38,24.98,18.96,14388.6,4.373,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00493,Organic Orange Bell Pepper,CAT003,26.36,20.82,15.41,8457.24,4.673,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00494,Cran Raspberry Sparkling Water,CAT007,32.61,25.44,23.93,19852.29,18.982,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00495,Gluten Free Chocolate Chip Cookies,CAT003,22.04,17.13,12.44,4696.66,2.724,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00496,Pulp Free Orange Juice,CAT007,18.9,16.36,14.59,4511.29,3.603,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00497,Strawberry Rhubarb Yoghurt,CAT008,17.4,19.39,11.27,3802.34,5.549,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00498,Mixed Fruit Fruit Snacks,CAT003,17.14,13.73,11.28,2654.55,0.93,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00499,Organic  Whole Milk,CAT008,21.09,20.07,13.74,5815.82,6.43,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00500,Cage Free Large White Eggs,CAT008,17.64,17.29,11.65,3553.2,3.052,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00501,Black Plum,CAT003,14.7,12.2,8.36,1499.28,0.582,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00502,Walnut Halves & Pieces,CAT003,23.46,17.26,12.77,5170.82,2.982,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00503,Canola Oil,CAT003,30.22,24.89,18.42,13855.08,6.226,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00504,Dha Omega 3 Reduced Fat 2% Milk,CAT008,17.34,19.52,11.29,3821.4,3.5,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00505,Organic Braeburn Apple,CAT003,25.75,20.67,15.06,8015.72,2.654,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00506,Red Potatoes,CAT003,17.57,13.16,9.79,2263.66,0.77,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00507,Organic Rosemary,CAT003,19.15,14.35,11.62,3193.21,1.624,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00508,YoBaby Peach Pear Yogurt,CAT008,15.01,15.17,10.57,2406.81,2.495,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00509,Vanilla Skyr Style Yogurt,CAT008,12.12,12.95,8.22,1290.16,1.118,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00510,Bicolor Sweet Corn,CAT003,15.31,11.88,8.72,1586.02,0.96,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00511,Reduced Fat Milk,CAT008,17.64,17.65,13.0,4047.5,2.778,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00512,Roasted Turkey,CAT003,24.2,19.15,13.97,6474.12,3.195,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00513,Organic Red Potato,CAT003,17.09,13.04,9.8,2183.97,1.121,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00514,Butternut Squash,CAT003,32.2,25.7,19.46,16103.93,10.832,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00515,1% Low Fat Milk,CAT008,16.64,15.69,10.39,2712.64,1.649,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00516,Naturals Chicken Nuggets,CAT003,30.25,23.21,17.7,12427.21,6.797,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00517,Fat Free Skim Milk,CAT008,12.44,12.93,9.5,1528.07,1.443,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00518,Blueberry Yoghurt,CAT008,19.38,21.1,13.69,5598.09,7.741,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00519,Medium Cheddar Cheese Block,CAT008,16.94,17.11,10.14,2939.01,1.957,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00520,Original Popcorn,CAT003,27.38,19.96,15.07,8235.83,3.736,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00521,Supergreens!,CAT003,30.49,21.85,15.83,10546.05,4.919,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00522,Organic Distilled White Vinegar,CAT003,18.83,14.73,12.27,3403.28,1.052,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00523,Unrefined Virgin Coconut Oil,CAT003,29.55,20.51,15.51,9400.15,4.873,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00524,Orange Calcium & Vitamin D Pulp Free,CAT007,29.74,22.05,20.53,13462.9,9.553,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00525,Smoked Turkey Breast Slices,CAT003,28.23,19.73,14.94,8321.25,4.36,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00526,Taco Seasoning,CAT003,20.93,16.16,11.23,3798.31,2.225,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00527,Crunchy Almond Butter,CAT003,28.59,20.49,17.27,10116.92,6.276,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00528,Organic Orange Juice,CAT007,25.0,21.71,18.4,9986.6,7.437,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00529,Gold Potato,CAT003,28.4,20.11,16.83,9612.02,5.005,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00530,Red Seedless Grapes,CAT003,18.83,13.99,9.66,2544.75,0.866,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00531,Large Greenhouse Tomato,CAT003,28.62,24.16,17.03,11775.55,4.519,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00532,Lemon Sparkling Water,CAT007,24.29,19.31,17.96,8423.96,8.496,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00533,Organic Sugar Snap Peas,CAT003,31.64,21.23,17.4,11687.88,5.233,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00534,Natural Free & Clear Dish Liquid,CAT003,30.88,20.93,18.45,11924.57,5.037,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00535,No Pulp Calcium & Vitamin D Pure Orange Juice,CAT007,29.1,23.0,23.22,15541.15,17.327,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00536,Corn Chips,CAT003,32.59,21.6,16.47,11593.96,5.139,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00537,Traditional Hummus,CAT003,27.52,21.5,17.95,10620.66,5.824,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00538,Synergy Organic Kombucha Gingerberry,CAT007,16.44,14.13,12.66,2940.88,3.369,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00539,Whole Organic Omega 3 Milk,CAT008,9.23,9.83,5.85,530.78,0.514,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00540,Organic Chicken Thighs,CAT003,23.85,17.95,13.37,5723.8,3.05,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00541,Boomchickapop Sea Salt Popcorn,CAT003,23.99,17.68,13.65,5789.55,3.239,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00542,Organic English Cucumber,CAT003,21.84,18.38,13.51,5423.17,3.677,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00543,Organic Lactose Free Whole Milk,CAT008,15.01,13.47,9.66,1953.1,1.531,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00544,French Vanilla Creamer,CAT008,10.32,10.18,7.18,754.31,1.072,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00545,Lemon Yogurt,CAT008,16.33,15.21,10.69,2655.17,2.014,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00546,"Dressing, Jersey Sweet Onion, Calorie Free",CAT003,28.84,22.11,16.67,10629.67,4.039,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00547,Cane Sugar,CAT003,13.92,11.45,8.09,1289.42,0.414,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00548,Low Fat 1% Milk,CAT008,15.28,15.51,11.52,2730.16,2.281,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00549,Tommy/Kent/Keitt/Haden Mango,CAT003,25.66,17.55,15.36,6917.11,3.822,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00550,Apple Cinnamon GoGo Squeez,CAT003,29.34,19.94,17.11,10010.03,6.582,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00551,Crunchy Oats 'n Honey Granola Bars,CAT003,17.83,11.95,10.64,2267.05,1.518,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00552,Organic Raw Unfiltered Apple Cider Vinegar,CAT003,32.98,22.62,19.29,14390.49,7.493,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00553,Penne Rigate,CAT007,16.09,12.8,12.25,2522.91,2.382,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00554,Gluten Free 7 Grain Bread,CAT003,32.79,24.51,18.3,14707.4,6.407,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00555,Organic Extra Large Brown Eggs,CAT008,9.77,9.98,6.58,641.58,0.752,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00556,Honey Greek Yogurt,CAT008,11.73,10.82,7.94,1007.73,1.456,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00557,Almond Nut & Rice Cracker Snacks,CAT003,14.72,10.46,9.18,1413.46,0.549,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00558,Whole Strawberries,CAT003,24.27,17.99,12.88,5623.63,2.047,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00559,Organic Greek Whole Milk Blended Vanilla Bean Yogurt,CAT008,19.45,20.14,12.59,4931.79,4.065,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00560,"Juice Beverage, Cold Pressed, Kale Apple Ginger Romaine Spinach Cucumber Celery Parsley Lemon",CAT007,33.09,25.79,24.35,20780.07,18.971,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00561,Chopped Spinach,CAT003,24.44,17.57,13.33,5724.05,3.979,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00562,Organic Mayonnaise,CAT003,30.3,23.11,19.27,13493.49,5.863,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00563,Grade A Large Eggs Cage Free Omega 3,CAT008,14.28,12.87,8.73,1604.43,1.156,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00564,Baby Seedless Cucumbers,CAT003,29.07,20.92,18.05,10977.01,5.289,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00565,YoBaby Blueberry Apple Yogurt,CAT008,19.64,21.79,12.97,5550.58,7.171,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00566,Sweet Potato Tortilla Chips,CAT003,25.19,20.12,15.13,7668.23,3.837,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00567,Organic Mango,CAT003,28.56,22.19,17.05,10805.38,6.199,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00568,Zero Calorie Cola,CAT007,27.05,20.79,20.7,11641.05,11.482,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00569,"Milk, Vitamin D",CAT008,11.75,11.09,7.5,977.31,0.602,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00570,Organic Cinnamon Crunch Cereal,CAT003,26.25,21.32,14.56,8148.5,2.749,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00571,Vitamin D Whole Milk,CAT008,17.47,19.65,11.81,4054.2,3.99,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00572,Non Fat Acai & Mixed Berries Yogurt,CAT008,14.4,14.41,9.21,1911.11,1.17,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00573,Organic Red Grapes,CAT003,23.64,17.59,13.37,5559.62,3.66,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00574,Garlic & Fine Herbs Gournay Cheese,CAT008,15.04,13.5,10.53,2138.01,1.478,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00575,Macaroni Shells & White Cheddar Cheese,CAT007,23.17,16.58,15.19,5835.37,4.502,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00576,Naturals Savory Turkey Breakfast Sausage,CAT003,24.9,19.63,14.51,7092.3,4.534,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00577,Plain Pre-Sliced Bagels,CAT003,21.18,15.73,12.39,4127.87,2.042,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00578,93% Ground Beef,CAT003,28.31,21.2,17.18,10310.95,5.081,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00579,Spinach Peas & Pear Stage 2 Baby Food,CAT003,28.79,20.85,16.17,9706.39,6.747,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00580,Crescent Rolls,CAT003,23.58,19.3,14.87,6767.25,2.464,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00581,Natural Classic Pork Breakfast Sausage,CAT003,33.86,25.57,17.84,15445.88,9.669,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00582,Unsweetened Coconut Milk Beverage,CAT008,12.83,11.89,7.89,1203.61,1.716,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00583,Organic Unbleached All-Purpose Flour,CAT010,27.59,21.28,18.32,10755.95,17.191,standard,corrosive,sourced,valid,synthetic_class_rule,low
+IC-00584,"Parsley, Italian (Flat), New England Grown",CAT003,19.97,15.49,12.76,3947.12,2.128,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00585,Apple Cider Vinegar,CAT003,20.49,16.34,11.46,3836.88,2.338,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00586,Baby Food Stage 2 Blueberry Pear & Purple Carrot,CAT003,24.65,19.45,13.74,6587.54,2.967,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00587,Organic Lemonade,CAT007,25.82,19.9,16.52,8488.27,7.556,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00588,Cold Brew Coffee,CAT007,32.88,25.66,20.94,17667.09,12.642,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00589,Organic Shredded Mild Cheddar,CAT008,20.77,18.48,12.67,4863.12,3.577,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00590,Organic Mountain Forest Amber Honey,CAT003,25.58,20.55,15.0,7885.03,4.429,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00591,Raspberry Yoghurt,CAT008,15.8,14.93,9.39,2215.04,2.641,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00592,Sweet Potatoes,CAT003,25.55,18.68,13.2,6300.02,3.664,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00593,Emmentaler Swiss Slices,CAT008,17.71,18.02,11.63,3711.53,4.373,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00594,Organic Sliced White Mushrooms,CAT003,27.67,21.28,17.51,10310.2,6.579,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00595,Uncured Black Forest Ham,CAT003,32.13,24.71,16.49,13091.94,4.181,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00596,Panko Bread Crumbs,CAT003,26.12,17.35,15.16,6870.24,2.301,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00597,All Natural Marinara Sauce,CAT007,28.38,22.69,18.67,12022.4,12.655,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00598,Red Plums,CAT003,18.57,15.07,10.33,2890.85,1.86,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00599,Organic Cannellini Beans,CAT007,29.69,26.21,22.87,17796.86,13.736,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00600,White Peach,CAT003,30.72,25.34,19.37,15078.48,8.172,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00601,Grape Tomatoes,CAT003,29.9,23.72,19.86,14085.27,4.938,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00602,Eggo Homestyle Waffles,CAT003,28.98,20.33,17.14,10098.26,5.595,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00603,Organic Green Onions,CAT003,26.52,17.79,14.38,6784.35,2.592,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00604,No Pulp Calcium & Vitamin D Pure Premium 100% Pure Orange Juice,CAT007,28.04,23.73,19.69,13101.51,14.51,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00605,Yobaby Organic Plain Yogurt,CAT008,11.08,12.77,7.51,1062.6,1.138,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00606,Multigrain Tortilla Chips,CAT003,27.48,21.35,16.23,9522.11,4.697,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00607,Dairy Free Unsweetened Coconut Milk,CAT008,10.33,9.47,6.39,625.1,0.544,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00608,Organic Simply Naked Pita Chips,CAT003,26.49,21.87,16.3,9443.18,4.535,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00609,Chocolate Chip Cookie Dough Ice Cream,CAT003,26.0,17.28,13.44,6038.32,3.571,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00610,Organic Lite Coconut Milk,CAT008,10.94,11.24,7.35,903.8,0.908,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00611,Red Leaf Lettuce,CAT003,27.25,19.27,15.37,8070.9,3.795,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00612,Kiwi Sandia Sparkling Water,CAT007,30.67,27.13,24.28,20202.83,20.432,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00613,Coconut Water,CAT007,25.35,21.01,20.23,10774.57,10.364,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00614,Organic Chicken Bone Broth,CAT007,35.93,27.79,25.27,25231.96,29.774,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00615,Apple Juice,CAT007,22.98,18.37,15.56,6568.54,5.664,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00616,Provolone,CAT008,14.94,13.33,8.88,1768.45,1.518,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00617,Organic Penne Rigate,CAT007,30.88,24.38,22.22,16728.42,18.052,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00618,Pesto Tortellini  Bowls,CAT003,32.34,25.86,20.64,17261.49,6.728,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00619,Oats & Honey Gluten Free Granola,CAT003,17.54,12.38,8.94,1941.28,0.956,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00620,Honeydew Melon,CAT003,19.67,17.1,11.7,3935.38,1.692,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00621,Traditional Plain Greek Yogurt,CAT008,14.64,13.71,9.92,1991.09,2.472,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00622,White Cheddar Popcorn,CAT003,23.18,17.95,13.09,5446.5,3.036,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00623,Yellow Grape Tomatoes,CAT003,15.13,10.54,8.86,1412.91,0.585,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00624,100% Pure Pumpkin,CAT003,31.85,21.19,18.18,12269.71,6.642,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00625,Organic Homestyle Waffles,CAT003,15.18,11.42,8.52,1476.99,0.884,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00626,Organic Short Grain Brown Rice,CAT007,28.07,22.35,20.97,13155.83,13.319,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00627,Organic Muenster Cheese Slices,CAT008,13.48,13.49,8.41,1529.32,2.242,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00628,Chicken Breast Tenders Breaded,CAT003,23.25,15.12,13.46,4731.73,1.531,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00629,Organic Cottage Cheese,CAT008,12.9,12.77,9.05,1490.83,1.045,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00630,Organic Stringles Mozzarella String Cheese,CAT008,18.54,18.56,12.43,4277.19,3.653,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00631,Original Real Vegetable Chips,CAT003,26.13,18.07,14.32,6761.46,3.891,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00632,Organic Wheat-Free & Gluten-Free Original Crackers,CAT003,21.53,15.63,11.76,3957.4,2.164,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00633,Organic Lightly Salted Brown Rice Cakes,CAT003,23.77,17.49,13.41,5575.04,2.66,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00634,Scoops! Tortilla Chips,CAT003,26.53,21.0,15.79,8797.08,3.435,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00635,Plain Mini Bagels,CAT003,14.97,11.17,9.53,1593.56,0.933,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00636,Organic Red Potatoes,CAT003,22.0,15.92,12.01,4206.38,1.558,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00637,Spaghetti  No 12,CAT007,28.53,22.86,20.05,13076.53,9.936,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00638,Root Beer,CAT007,24.26,20.32,18.83,9282.5,9.494,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00639,Curate Cherry Lime Sparkling Water,CAT007,23.64,20.32,18.39,8833.91,8.285,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00640,Presliced Everything Bagels,CAT003,28.0,20.57,16.31,9393.91,3.967,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00641,Dha Omega 3 Vitamin D Milk,CAT008,19.02,18.96,12.05,4345.46,4.423,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00642,Mini Cucumbers,CAT003,33.66,25.86,17.38,15128.38,7.486,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00643,Cheese Pizza Snacks,CAT003,16.04,12.83,9.69,1994.14,0.714,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00644,Thin & Light Tortilla Chips,CAT003,30.24,23.51,17.89,12718.76,5.722,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00645,Organic Long Grain White Rice,CAT007,25.94,20.74,18.07,9721.58,9.604,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00646,Uncured Pepperoni,CAT003,30.56,22.92,18.25,12782.94,4.239,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00647,Air Chilled Breaded Chicken Breast Nuggets,CAT003,19.14,13.55,12.03,3119.94,1.228,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00648,Sliced White Mushrooms,CAT003,22.96,17.97,13.86,5718.51,2.074,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00649,Original Rice Pilaf Mix,CAT007,23.55,19.41,16.15,7382.25,8.782,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00650,Everything Bagels,CAT003,15.95,12.4,9.51,1880.89,1.182,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00651,Organic Red Lentils,CAT007,28.65,25.67,21.62,15900.33,13.273,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00652,Organic Edamame,CAT003,23.51,20.14,13.71,6491.57,4.165,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00653,Fancy Eggplant,CAT003,28.74,23.28,16.32,10919.18,7.111,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00654,Sonoma Traditional Flour Tortillas 10 Count,CAT003,31.11,23.21,17.19,12412.26,3.798,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00655,Veggie Chips,CAT003,19.94,15.09,11.67,3511.44,1.967,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00656,Organic Low Fat Milk,CAT008,10.17,9.21,7.01,656.6,0.633,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00657,Bunny Pasta with Yummy Cheese Macaroni & Cheese,CAT007,29.85,24.44,22.87,16684.44,12.173,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00658,Organic Riced Cauliflower,CAT003,14.53,11.69,9.12,1549.08,1.042,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00659,Spaghetti Pasta,CAT007,26.65,22.7,21.06,12740.35,11.887,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00660,Lowfat Vanilla Yogurt,CAT008,16.41,16.35,11.31,3034.51,2.069,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00661,Organic White Cheddar Popcorn,CAT003,17.43,12.5,9.57,2085.06,1.168,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00662,California Sourdough Bread,CAT003,20.66,13.61,11.73,3298.27,1.621,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00663,"Yogurt, Lowfat, Strawberry",CAT008,9.48,8.92,6.17,521.75,0.363,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00664,Organic Sliced Crimini Mushrooms,CAT003,31.49,22.86,16.83,12115.27,5.358,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00665,Organic Lactose Free 1% Lowfat Milk,CAT008,14.01,12.97,9.49,1724.43,2.259,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00666,Premium Pure Cane Granulated Sugar,CAT003,25.86,17.2,15.5,6894.28,4.164,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00667,Jalapeno Hummus,CAT003,18.37,12.31,10.81,2444.52,1.343,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00668,YoKids Squeeze! Organic Strawberry Flavor Yogurt,CAT008,19.56,20.02,12.68,4965.38,3.87,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00669,ZBar Organic Chocolate Brownie Energy Snack,CAT003,27.5,23.69,17.77,11576.71,6.796,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00670,Sauvignon Blanc,CAT008,15.4,13.47,9.92,2057.78,2.005,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00671,Original Black Box Tablewater Cracker,CAT003,25.36,18.18,13.69,6311.7,3.835,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00672,Authentic French Brioche,CAT003,27.51,20.94,16.73,9637.47,5.044,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00673,Organic Large Grade AA Omega-3 Eggs,CAT008,16.53,17.99,11.64,3461.44,4.045,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00674,Yukon Gold Potatoes 5lb Bag,CAT003,18.39,13.75,11.23,2839.65,0.921,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00675,Icelandic Style Fat Free Plain Yogurt,CAT008,18.89,19.85,14.33,5373.27,5.022,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00676,Organic Beans & Rice Cheddar Cheese Burrito,CAT003,28.04,19.08,17.3,9255.56,5.664,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00677,Garlic Hummus,CAT003,23.79,18.96,13.84,6242.65,3.082,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00678,Squeeze Tomato Ketchup,CAT003,22.91,16.59,13.93,5294.47,3.176,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00679,Fat Free Blueberry Yogurt,CAT008,9.68,9.75,6.55,618.19,0.721,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00680,Organic Dark Sweet Cherries,CAT003,26.99,19.69,16.15,8582.64,4.065,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00681,Flaky Biscuits,CAT003,22.47,15.17,13.61,4639.24,2.039,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00682,Organic Bagged Carrots,CAT003,24.67,20.22,16.13,8046.09,4.063,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00683,Applewood Smoked Bacon,CAT003,25.78,20.55,17.34,9186.37,4.112,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00684,Organic Crushed Fire Roasted Tomatoes,CAT007,28.21,20.41,19.44,11192.89,8.918,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00685,Peanut Butter Chocolate Chip Fruit & Nut Food Bar,CAT003,20.87,15.51,10.84,3508.84,1.089,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00686,Grated Parmesan Cheese,CAT008,13.34,13.0,10.07,1746.34,1.121,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00687,Cherrios Honey Nut,CAT003,24.34,16.52,12.91,5191.07,1.677,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00688,Organic Whole Wheat Fusilli,CAT007,17.01,13.71,12.15,2833.47,2.272,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00689,Passionfruit Sparkling Water,CAT007,30.2,22.37,21.64,14619.42,10.311,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00690,Organic YoKids Very Berry Smoothies,CAT008,14.61,16.67,10.45,2545.08,3.608,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00691,Organic Smoked Turkey Breast,CAT003,23.12,17.53,14.04,5690.32,3.655,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00692,Enlightened Organic Raw Kombucha,CAT007,19.46,13.5,12.58,3304.89,3.834,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00693,Red Mango,CAT003,26.04,19.56,16.54,8424.52,4.108,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00694,Vanilla Almond Breeze,CAT008,17.59,17.24,12.84,3893.75,2.514,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00695,Organic Blueberry Waffles,CAT003,32.22,24.51,17.37,13717.3,5.233,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00696,Organic Baby Bella Mushrooms,CAT003,25.12,20.06,15.05,7583.8,3.57,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00697,Serrano Chile Peppers,CAT003,25.86,19.44,16.82,8455.72,4.481,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00698,Organic YoKids Smoothie Strawberry Banana Lowfat Yogurt,CAT008,16.71,16.22,10.21,2767.28,1.677,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00699,Wild Berry Smoothie,CAT008,19.38,19.02,12.64,4659.2,5.27,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00700,Cheerios Cereal,CAT003,16.8,11.54,9.84,1907.7,0.966,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00701,Dark Chocolate Pretzels with Sea Salt,CAT003,15.87,12.13,8.46,1628.58,0.766,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00702,Roasted & Salted Almonds,CAT003,30.96,21.05,17.59,11463.54,6.312,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00703,Soft Pretzel Burger Buns,CAT003,26.37,20.0,14.61,7705.31,4.006,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00704,Lowfat Small Curd Cottage Cheese,CAT008,16.58,15.19,10.13,2551.24,2.548,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00705,Popcorn,CAT003,15.08,11.1,8.21,1374.26,0.952,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00706,Unsalted Cultured Butter,CAT008,16.71,15.47,10.27,2654.83,3.968,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00707,Cauliflower Florets,CAT003,31.95,26.03,18.83,15660.13,8.733,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00708,Kidz All Natural Baked Chicken Nuggets,CAT003,18.53,12.36,10.56,2418.57,1.63,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00709,Cucumber & Garlic  Tzatziki,CAT003,25.49,20.73,15.37,8121.63,5.439,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00710,White Corn Tortillas,CAT003,23.59,19.92,15.46,7264.85,2.261,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00711,Shells & Real Aged Cheddar Macaroni & Cheese,CAT007,29.91,24.87,21.87,16268.26,15.411,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00712,Purity Farms Ghee Clarified Butter,CAT008,9.6,10.01,6.97,669.79,0.615,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00713,Apple Pie Fruit & Nut Food Bar,CAT003,15.77,11.47,8.93,1615.28,0.654,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00714,Organic Rainbow Chard Vegetable,CAT003,22.13,17.34,14.52,5571.82,2.221,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00715,Natural Sharp Cheddar Sliced Cheese,CAT008,14.33,13.61,8.38,1634.36,2.404,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00716,Mini Seedless Cucumbers,CAT003,24.75,18.74,13.94,6465.58,2.617,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00717,Monterey Jack Cheese,CAT008,9.49,9.14,5.87,509.16,0.516,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00718,Celery Sticks,CAT003,21.11,15.93,13.27,4462.47,2.116,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00719,Organic Hot House Tomato,CAT003,22.99,16.72,13.35,5131.64,1.888,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00720,Shredded Sharp Cheddar Cheese,CAT008,13.49,13.68,8.25,1522.48,1.378,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00721,Pure Baking Soda,CAT003,19.99,15.24,10.56,3217.08,1.483,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00722,Backyard Barbeque Potato Chips,CAT003,34.55,25.73,18.39,16348.19,10.076,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00723,Organic Wheat Square Crackers,CAT003,17.77,12.58,11.32,2530.55,0.853,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00724,Light Semisoft Cheese,CAT008,10.94,10.54,6.74,777.17,0.551,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00725,Large Grade AA Eggs,CAT008,16.49,17.94,12.51,3700.84,3.7,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00726,Organic Free Range Low Sodium Chicken Broth,CAT007,17.21,14.66,14.0,3532.18,3.693,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00727,100% Lactose Free Fat Free Milk,CAT008,11.09,11.82,8.13,1065.71,1.016,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00728,Florida Orange Juice With Calcium & Vitamin D,CAT007,31.56,28.66,23.38,21147.43,19.377,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00729,Ice Cream Sandwiches Vanilla,CAT003,18.04,13.19,9.82,2336.65,1.609,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00730,Raisins,CAT003,34.02,24.24,20.14,16608.35,10.495,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00731,Organic Mango Chunks,CAT003,30.94,22.08,16.81,11483.84,5.601,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00732,Half And Half Cream,CAT008,9.26,9.17,6.41,544.3,0.791,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00733,Organic Purple Kale,CAT003,32.48,23.22,19.73,14880.08,5.399,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00734,Whole Grain Cheddar Baked Snack Crackers,CAT003,31.56,25.31,19.55,15616.22,6.032,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00735,Organic Kale Greens,CAT003,19.8,14.28,12.13,3429.68,2.134,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00736,Broccoli Florettes,CAT003,14.91,10.71,8.77,1400.45,0.945,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00737,Grade AA Large White Eggs,CAT008,11.91,10.86,7.28,941.61,1.171,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00738,Original Rotisserie Chicken,CAT003,20.23,16.2,12.51,4099.85,2.56,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00739,Arancita Rossa,CAT007,32.76,24.05,22.19,17483.01,15.435,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00740,Sweet Baguette,CAT003,25.26,18.61,13.73,6454.32,3.179,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00741,Thick & Crispy Tortilla Chips,CAT003,19.59,14.15,12.51,3467.75,2.164,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00742,Organic Whole Crimini Mushrooms,CAT003,30.51,22.32,18.06,12298.56,4.833,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00743,Unsweetened Almond Milk,CAT008,13.69,13.07,8.84,1581.73,1.978,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00744,Fusilli No. 34,CAT007,16.59,14.95,13.37,3316.03,2.62,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00745,Super Soft Taco Flour Tortillas,CAT003,32.06,25.72,19.89,16400.96,7.795,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00746,White Sliced Mushrooms,CAT003,16.97,13.91,10.43,2462.03,1.441,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00747,Mixed Berries Whole Milk Icelandic Style Skyr Yogurt,CAT008,16.11,17.29,11.27,3139.17,3.743,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00748,Goldfish Cheddar Baked Snack Crackers,CAT003,19.08,16.25,11.62,3602.78,1.612,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00749,Peach on the Bottom Nonfat Greek Yogurt,CAT008,10.7,10.23,6.65,727.92,1.062,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00750,Mediterranean Mint Gelato,CAT003,27.32,20.79,18.19,10331.61,5.669,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00751,Organic Chicken Noodle Soup,CAT007,32.08,28.23,24.8,22459.34,26.451,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00752,Organic Raw Multigreen Kobmbucha,CAT007,20.53,17.12,14.67,5156.12,5.978,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00753,Diet Coke,CAT007,27.16,22.82,19.46,12061.14,14.159,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00754,100% Recycled Bathroom Tissue,CAT003,19.43,13.65,11.27,2989.02,1.289,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00755,Organic Mini Sandwich Crackers Peanut Butter,CAT003,20.13,16.07,11.6,3752.47,1.601,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00756,Mini Babybel Light Semisoft Edam Cheeses,CAT008,18.48,18.46,11.61,3960.64,4.47,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00757,Seven Grain Crispy Tenders,CAT003,27.67,19.6,16.62,9013.56,5.736,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00758,Classic White Bread,CAT003,16.79,13.24,9.68,2151.86,1.003,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00759,Pink Lady (Cripps) Apple,CAT003,31.89,21.01,16.79,11249.45,4.118,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00760,New Orleans Iced Coffee,CAT007,14.87,12.03,10.86,1942.7,2.147,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00761,Organic & Raw Strawberry Serenity Kombucha,CAT007,17.02,12.96,13.13,2896.2,2.871,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00762,Garnet Sweet Potato (Yam),CAT003,32.69,25.04,17.62,14422.98,5.072,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00763,Liquid Egg Whites,CAT008,19.45,18.16,11.91,4206.75,2.575,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00764,Roasted Salted Cashews,CAT003,23.87,16.91,14.8,5973.9,3.544,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00765,Ancient Grain Original Granola,CAT003,18.52,14.4,11.72,3125.58,1.819,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00766,Margherita Pizza,CAT003,20.36,15.92,10.76,3487.65,1.906,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00767,Bean & Cheese Burrito,CAT003,18.76,14.54,11.02,3005.93,1.788,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00768,Organic Greek Plain Nonfat Yogurt,CAT008,12.77,12.12,8.58,1327.95,1.63,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00769,Organic Whole Milk Strawberry Beet Berry Yogurt Pouch,CAT008,10.28,10.57,6.73,731.28,1.089,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00770,Penne Pasta,CAT007,36.05,28.8,26.2,27201.89,29.758,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00771,Lemon Verbena Dish Soap,CAT003,20.32,15.53,12.17,3840.48,1.449,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00772,Original Beef Jerky,CAT003,25.82,19.48,15.0,7544.6,3.876,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00773,Grilled Chicken Breast,CAT003,22.44,16.89,13.23,5014.32,1.939,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00774,Strawberry on the Bottom Nonfat Greek Yogurt,CAT008,8.94,9.14,5.83,476.38,0.493,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00775,Blue Cheese Crumbles,CAT008,18.92,19.22,14.19,5160.09,4.913,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00776,Whole Wheat English Muffins,CAT003,16.38,11.81,9.12,1764.24,0.743,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00777,Salt & Pepper Krinkle Chips,CAT003,32.49,21.52,17.05,11921.1,6.837,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00778,Classic Almond Butter,CAT003,15.28,12.35,8.48,1600.24,0.485,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00779,Lactose Free 2% Reduced Fat Milk,CAT008,16.8,15.37,10.42,2690.61,2.908,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00780,Low Fat Vanilla Yogurt,CAT008,9.89,8.77,6.0,520.41,0.685,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00781,Organic Cut Green Beans,CAT003,28.2,19.65,15.53,8605.64,5.368,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00782,Ranch Dressing,CAT003,23.8,17.57,13.24,5536.52,1.907,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00783,Plain Whole Milk Yogurt,CAT008,11.85,11.05,7.73,1012.19,1.182,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00784,Saltine Crackers,CAT003,20.69,15.76,12.7,4141.14,2.398,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00785,Philadelphia Original Cream Cheese,CAT008,9.03,8.89,6.83,548.29,0.676,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00786,Organic Sprouted English Muffin,CAT003,26.81,18.13,14.58,7086.83,3.386,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00787,Broccoli & Cheddar Bake Meal Bowl,CAT003,21.83,16.45,11.91,4276.92,2.016,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00788,Special Reserve Extra Sharp Cheddar Cheese,CAT008,15.1,16.36,10.86,2682.81,2.029,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00789,Low Fat Strawberry Yogurt Tubes,CAT008,21.9,19.98,12.83,5613.92,8.15,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00790,Pineapple,CAT003,26.46,19.58,13.91,7206.59,4.02,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00791,Premium Unsweetened Iced Tea,CAT007,35.1,27.74,22.98,22375.03,16.061,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00792,YoKids Strawberry Banana/Strawberry Yogurt,CAT008,13.18,12.52,8.7,1435.62,1.86,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00793,Cheese Pizza,CAT003,25.29,19.8,13.47,6744.99,3.724,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00794,Wheat Gluten Free Waffles,CAT003,18.51,14.03,10.94,2841.07,1.427,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00795,Gluten Free White Sandwich Bread,CAT003,23.03,17.16,13.78,5445.78,2.833,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00796,Gluten Free Blueberry Waffles,CAT003,26.09,21.51,16.38,9192.39,2.774,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00797,Organic Green Lentils,CAT007,33.23,28.5,24.53,23231.26,18.754,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00798,100% Natural Spring Water,CAT007,27.08,20.89,21.55,12190.86,12.717,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00799,Hot Dog Buns,CAT003,26.6,21.67,15.09,8698.21,3.855,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00800,Broccoli & Apple Stage 2 Baby Food,CAT003,18.22,12.34,9.85,2214.62,0.894,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00801,Cherry Pomegranate Greek Yogurt,CAT008,10.8,10.21,7.4,815.98,0.743,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00802,Sea Salt Caramel Gelato,CAT003,30.38,20.93,18.39,11693.34,7.307,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00803,Organic Low Sodium Chicken Cooking Stock,CAT007,26.02,21.04,19.64,10752.13,12.112,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00804,Basil,CAT003,26.06,19.77,16.03,8258.76,5.477,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00805,Goo Berry Pie Probugs Kefir,CAT008,17.96,16.58,11.6,3454.21,3.947,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00806,Gluten Free Peanut Butter Dark Chocolate Chewy With a Crunch Granola Bars,CAT003,20.26,15.81,12.92,4138.41,1.26,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00807,Gallon Freezer Bags,CAT003,15.53,10.93,8.55,1451.3,0.776,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00808,"Crispy Wheat, Crackers",CAT003,22.25,16.78,13.11,4894.68,2.163,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00809,Grilled Chicken Breast Strips,CAT003,21.21,16.07,10.95,3732.25,2.583,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00810,Organic Rolled Oats,CAT007,16.82,13.3,11.4,2550.25,2.482,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00811,Sourdough Baguette,CAT003,24.4,16.91,13.98,5768.2,2.775,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00812,Peanut Butter Creamy With Salt,CAT003,23.01,16.77,12.91,4981.68,1.528,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00813,Large Burrito Flour Tortillas,CAT003,26.85,20.58,14.89,8227.81,3.889,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00814,"Milk, Reduced Fat, 2% Milkfat",CAT008,15.49,17.07,10.91,2884.76,4.083,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00815,Select-A-Size White Paper Towels,CAT003,13.31,10.85,8.17,1179.86,0.782,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00816,Organic Apple Slices,CAT003,34.76,23.29,18.78,15203.54,10.305,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00817,Organic Whole White Mushrooms,CAT003,24.73,18.85,15.3,7132.26,4.561,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00818,Frozen Organic Blueberries,CAT003,30.72,21.27,16.71,10918.55,7.359,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00819,Celery,CAT003,24.43,19.94,14.44,7034.22,3.272,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00820,Poblano Pepper,CAT003,33.16,22.4,20.19,14996.81,10.433,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00821,Synergy Organic & Raw Cosmic Cranberry,CAT007,26.94,22.21,21.38,12792.45,13.352,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00822,Apple Sauce,CAT007,31.77,23.19,21.35,15729.53,13.608,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00823,Penne Rigate #41 Pasta,CAT007,32.02,27.28,25.95,22667.47,20.421,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00824,Organic Greek Nonfat Yogurt With Mixed Berries,CAT008,16.73,15.59,10.76,2806.43,3.224,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00825,Organic String Cheese,CAT008,10.96,11.52,7.57,955.78,1.424,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00826,Club Soda,CAT007,31.37,22.41,21.38,15030.18,15.524,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00827,Organic Chocolate Chip Chewy Granola Bars,CAT003,29.53,22.06,18.1,11790.92,6.536,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00828,Yellow Straightneck Squash,CAT003,16.74,14.53,10.08,2451.78,1.11,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00829,Gourmet Tomato Medley,CAT003,18.91,14.34,12.38,3357.08,2.064,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00830,Crackers Harvest Whole Wheat,CAT003,15.22,10.59,8.08,1302.33,0.822,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00831,Sweet Potato Yam,CAT003,19.85,16.1,11.18,3572.96,2.264,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00832,Cola Soft Drink,CAT007,24.73,20.2,18.1,9041.78,6.505,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00833,Canned Aranciata Orange,CAT007,22.33,17.85,18.22,7262.32,8.148,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00834,Sweet Onions,CAT003,29.06,20.09,16.38,9562.9,4.738,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00835,Cage Free Grade A Large Brown Eggs,CAT008,19.29,18.69,11.95,4308.33,4.823,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00836,Strawberry Ice Cream,CAT003,26.14,20.25,15.63,8273.51,4.492,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00837,Plantain Chips,CAT003,15.32,11.36,8.0,1392.28,0.964,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00838,Coconut Yoghurt,CAT008,15.14,15.39,11.38,2651.59,2.921,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00839,French Vanilla Coconut Milk Creamer,CAT008,16.84,17.31,11.14,3247.31,4.503,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00840,Peeled Garlic,CAT003,18.34,12.4,10.48,2383.32,0.836,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00841,Garlic Powder,CAT003,25.09,18.01,15.38,6949.77,2.247,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00842,Original Restaurant Style Tortilla Chips,CAT003,15.16,12.74,8.99,1736.31,0.91,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00843,Salted Sweet Cream Butter,CAT008,19.18,20.37,13.93,5442.4,4.464,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00844,Organic Beef Broth,CAT007,27.83,22.7,21.24,13418.18,9.583,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00845,Four Cheese Pasta Sauce,CAT007,22.0,17.9,17.5,6891.5,5.019,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00846,Butter,CAT008,17.35,17.35,11.14,3353.39,3.182,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00847,Whole Grain Oat Cereal,CAT003,30.04,22.55,16.93,11468.42,5.516,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00848,Organic Green Beans,CAT003,24.31,17.84,13.37,5798.44,2.364,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00849,Boneless Skinless Chicken Breast Fillets,CAT003,29.57,23.54,18.21,12675.58,6.375,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00850,90% Lean Ground Beef,CAT003,20.69,16.68,12.98,4479.52,1.423,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00851,Cinnamon Raisin Bread,CAT003,19.26,13.76,10.6,2809.19,1.569,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00852,Mache Rosettes French Salad Mix,CAT003,20.91,17.54,12.85,4712.88,3.199,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00853,Curate Melon Pomelo Sparking Water,CAT007,24.84,17.67,15.99,7018.38,8.386,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00854,Ultra Soft Facial Tissues,CAT003,15.9,12.3,10.01,1957.66,0.648,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00855,Organic Yellow Mustard,CAT003,17.05,13.49,10.09,2320.75,1.572,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00856,Pomegranate,CAT003,30.98,22.65,17.29,12132.34,4.661,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00857,Peanut Butter Cereal,CAT003,32.77,23.79,17.55,13681.95,6.077,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00858,Gluten Free SpongeBob Spinach Littles,CAT003,17.33,12.53,9.44,2049.85,0.792,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00859,Chicken & Apple Breakfast Sausage,CAT003,16.81,12.01,9.9,1998.69,0.798,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00860,Artichokes,CAT003,25.87,19.47,15.46,7787.03,2.387,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00861,Organic Yokids Lemonade/Blueberry Variety Pack Yogurt Squeezers Tubes,CAT008,14.54,14.07,9.41,1925.08,2.712,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00862,Grade A Large Brown Eggs,CAT008,12.54,12.78,7.73,1238.82,1.538,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00863,Mozzarella Cheese,CAT008,19.59,20.0,12.28,4811.3,4.909,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00864,Organic Mixed Berry Yogurt & Fruit Snack,CAT003,25.76,19.52,15.01,7547.56,5.018,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00865,White Sandwich Bread,CAT003,17.74,14.33,10.3,2618.41,1.456,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00866,Classic Hummus Family Size,CAT003,27.85,21.08,18.42,10813.98,6.466,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00867,Roasted Garlic Hummus,CAT003,16.21,11.46,9.0,1671.9,0.876,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00868,Free & Clear Unscented Baby Wipes,CAT003,16.81,12.25,9.46,1948.03,1.095,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00869,Freshly Squeezed Orange Juice,CAT007,24.01,18.08,15.11,6559.26,5.377,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00870,Organic Fuji Apples,CAT003,27.64,20.09,16.07,8923.47,2.854,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00871,Organic Cherries,CAT003,30.43,24.75,19.38,14595.9,4.548,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00872,Fresh Cut Golden Sweet Whole Kernel Corn,CAT007,30.24,22.84,20.89,14428.34,11.91,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00873,Organic Shells And White Cheddar,CAT007,21.55,18.11,16.27,6349.7,7.515,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00874,Fresh Asparagus,CAT003,33.16,25.16,18.86,15735.0,7.779,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00875,Cold Brew Coffee Double Espresso with Almond Milk,CAT008,15.2,15.09,8.91,2043.67,3.047,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00876,Medium Salsa Roja,CAT003,31.43,22.73,17.8,12716.39,8.755,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00877,Organic Vanilla Bean Ice Cream,CAT003,30.6,23.44,18.96,13599.33,9.153,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00878,Organic Apple Juice Boxes,CAT007,18.16,16.14,14.03,4112.23,4.719,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00879,Mineral Water,CAT007,20.37,17.31,15.3,5394.85,4.502,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00880,Tart Cherry Yoghurt,CAT008,17.0,17.02,11.71,3388.17,4.489,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00881,Peach,CAT003,18.49,13.55,11.66,2921.29,1.415,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00882,Stage 1 Apples Sweet Potatoes Pumpkin & Blueberries Organic Pureed Baby Food,CAT003,18.96,13.98,11.12,2947.48,1.036,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00883,Organic Black Plum,CAT003,27.83,20.33,16.29,9216.62,6.119,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00884,Frozen Organic Strawberries,CAT003,23.89,16.09,12.47,4793.34,1.823,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00885,Sweet Potato Fries with Sea Salt,CAT003,23.09,15.12,13.61,4751.53,2.756,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00886,Organic Creamy Tomato Soup,CAT007,35.23,27.71,23.2,22648.38,20.886,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00887,Diet Ginger Ale All Natural Soda,CAT007,19.22,15.02,13.67,3946.32,3.357,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00888,Oregano,CAT003,17.8,13.94,10.16,2521.02,1.66,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00889,Half Baked® Ice Cream,CAT003,16.88,13.11,10.02,2217.39,1.389,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00890,Cultured Low Fat Buttermilk,CAT008,16.72,18.65,11.69,3645.27,3.406,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00891,Chicken Pot Pie,CAT003,32.04,21.9,19.02,13345.88,4.036,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00892,Mild Diced Green Chiles,CAT007,27.4,23.07,18.03,11397.09,12.941,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00893,Honey Wheat Bread,CAT003,16.03,13.65,10.4,2275.62,1.56,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00894,Organic Spaghetti Pasta,CAT007,32.16,25.09,23.95,19325.12,18.295,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00895,Organic Strawana Probugs Kefir,CAT008,12.92,13.42,9.4,1629.83,1.328,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00896,Energy Drink,CAT007,30.27,23.06,20.15,14065.23,12.396,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00897,White Giant Paper Towel Rolls,CAT003,24.29,18.06,15.93,6988.13,3.843,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00898,Strawberry Rhubarb Yogurt,CAT008,9.16,8.79,6.22,500.81,0.57,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00899,Mini Seedless Watermelon Pack,CAT003,22.84,14.94,11.86,4046.98,2.455,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00900,Pitted Dates,CAT003,21.37,13.98,12.47,3725.44,2.343,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00901,Organic Milk Chocolate Peanut Butter Cups,CAT003,21.29,17.23,13.26,4864.12,3.184,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00902,"Bread, Country Buttermilk",CAT003,15.66,11.61,8.69,1579.95,0.854,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00903,100% Grated Parmesan Cheese,CAT008,11.75,11.69,7.55,1037.05,1.223,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00904,Hazelnut Spread With Skim Milk & Cocoa,CAT003,24.06,18.99,14.03,6410.3,3.116,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00905,Organic Broccoli Crown,CAT003,15.46,12.1,10.25,1917.43,0.682,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00906,Goat Cheese Log,CAT008,16.86,15.99,9.98,2690.52,3.346,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00907,Chardonnay,CAT008,11.35,12.71,7.68,1107.91,1.43,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00908,Cream Cheese,CAT008,21.05,22.02,13.54,6276.07,6.19,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00909,Bok Choy,CAT003,23.4,18.63,13.51,5889.58,3.995,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00910,Organic Berry Blend,CAT003,15.41,12.47,9.89,1900.49,0.793,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00911,Black Beans No Salt Added,CAT007,29.32,23.24,22.87,15583.54,17.841,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00912,Whole White Mushrooms,CAT003,31.63,24.74,16.84,13177.74,5.29,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00913,Shredded Hash Browns,CAT003,31.81,23.93,17.55,13359.29,4.029,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00914,Sprouted Multi-Grain Bread,CAT003,18.66,13.19,10.37,2552.32,0.913,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00915,100% Pure Apple Juice,CAT007,30.98,21.62,21.16,14172.71,12.798,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00916,Cage Free  100% Liquid Egg Whites,CAT008,12.55,13.27,8.5,1415.58,1.257,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00917,Flax Plus Organic Pumpkin Flax Granola,CAT003,15.74,12.07,9.76,1854.22,0.763,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00918,Cabernet Sauvignon,CAT008,17.09,17.48,10.94,3268.14,3.875,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00919,Chicken Broth,CAT007,30.18,26.42,22.36,17828.87,20.02,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00920,"Tomatoes, Whole Peeled",CAT007,19.16,14.75,13.39,3784.15,4.465,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00921,Multigrain Oat Bread,CAT003,17.03,13.88,10.46,2472.5,0.877,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00922,Organic Peeled & Cooked Beets,CAT003,24.49,17.0,13.44,5595.48,2.913,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00923,Soft Pretzel Mini Buns,CAT003,19.86,13.65,11.89,3223.25,1.195,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00924,Broccoli Florets,CAT003,22.45,15.38,12.28,4240.05,1.831,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00925,Red Grapefruit,CAT003,26.2,20.41,15.97,8539.83,4.788,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00926,Gluten-Free Chicken Nuggets,CAT003,20.5,15.34,12.15,3820.81,1.335,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00927,Original Almondmilk,CAT008,12.08,11.46,7.86,1088.11,1.52,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00928,Total 0% Blueberry Acai Greek Yogurt,CAT008,12.3,12.3,7.93,1199.73,1.472,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00929,Organic Greek Lowfat Yogurt With Strawberries,CAT008,15.42,15.32,9.06,2140.28,2.786,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00930,Sparkling Clementine Juice,CAT007,25.3,19.16,19.48,9442.89,9.131,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00931,Garlic Couscous,CAT007,15.25,12.84,11.53,2257.69,2.09,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00932,"Hummus, Hope, Original Recipe",CAT003,21.96,16.25,13.84,4938.8,1.654,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00933,Organic Super Fruit Punch Juice Drink,CAT007,23.3,16.75,15.73,6139.03,4.638,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00934,Organic YoBaby Vanilla Yogurt,CAT008,12.79,12.85,7.93,1303.31,1.349,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00935,Organic Nonfat Greek Yogurt With Peaches,CAT008,18.25,17.78,11.93,3871.11,2.986,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00936,Cauliflower,CAT003,14.51,12.09,8.43,1478.84,0.604,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00937,Original Instant Oatmeal,CAT003,27.18,20.99,15.84,9036.85,5.684,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00938,Apple Cinnamon Instant Oatmeal,CAT003,32.9,23.17,19.0,14483.57,8.723,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00939,Iced Oatmeal Cookie Kid Z Bar,CAT003,24.74,19.43,15.18,7297.0,3.103,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00940,Jalapeno Potato Chips,CAT003,19.57,14.95,12.55,3671.77,2.314,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00941,Dried Sweetened Cranberries,CAT003,25.56,17.98,14.49,6659.15,2.185,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00942,Mandarins Bag,CAT003,16.31,12.58,9.32,1912.28,0.881,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00943,Yotoddler Organic Pear Spinach Mango Yogurt,CAT008,9.78,9.78,7.02,671.45,0.974,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00944,Medium Scarlet Raspberries,CAT003,28.77,23.93,17.43,11999.96,4.233,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00945,Beef Franks,CAT003,27.39,22.46,16.36,10064.33,6.152,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00946,Organic Jasmine Rice,CAT003,27.55,20.79,16.25,9307.42,3.742,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00947,"Tortillas, Corn, Organic",CAT003,30.03,23.45,17.45,12288.35,5.514,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00948,Bosc Pear,CAT003,16.76,10.86,8.54,1554.4,0.956,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00949,Raspberry Lemonade,CAT007,26.94,21.76,19.66,11524.98,10.934,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00950,Classic Soda,CAT007,34.76,25.09,23.14,20181.05,16.144,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00951,Kids Sensible Foods Broccoli Littles,CAT003,28.98,21.61,15.94,9982.55,4.287,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00952,Organic Coconut Water,CAT007,34.93,27.82,26.12,25382.18,25.031,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00953,Americone Dream® Ice Cream,CAT003,15.24,10.95,8.72,1455.18,0.844,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00954,Philadelphia Cream Cheese Spread,CAT008,9.73,10.16,6.95,687.05,0.568,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00955,Organic Whole Wheat Penne Rigate,CAT007,30.21,23.47,23.25,16484.92,14.056,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00956,Lavender Hand Soap,CAT001,13.56,8.05,7.1,775.02,0.285,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00957,Russet Potatoes,CAT003,22.44,15.52,12.78,4450.88,2.595,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00958,Sour Cream & Onion Potato Chips,CAT003,19.96,13.48,10.64,2862.81,1.243,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00959,Cold-Brew Black Coffee,CAT007,34.51,25.19,24.48,21280.63,25.384,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00960,Mint Chip,CAT003,17.43,13.59,9.96,2359.26,1.209,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00961,Four Cheese Thin Crust Pizza,CAT003,19.24,13.24,11.33,2886.18,0.874,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00962,Tuna Salad,CAT003,28.41,22.1,16.61,10428.77,6.697,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00963,Original Puffins Cereal,CAT003,26.97,22.09,15.86,9448.87,4.98,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00964,Angel Hair Pasta,CAT007,23.5,17.8,16.31,6822.47,6.334,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00965,All Natural Apricot Sparkling Water,CAT007,30.36,25.59,21.5,16703.62,18.324,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00966,Organic Genoa Salami,CAT003,20.29,15.98,13.24,4292.86,2.451,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00967,Baby Portabella Mushrooms,CAT003,14.51,11.51,9.03,1508.1,0.94,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00968,Traditional Refried Beans,CAT007,19.09,17.46,14.73,4909.68,5.36,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00969,Organic Marinara Pasta Sauce,CAT007,20.26,18.3,14.72,5457.56,6.129,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00970,Organic Whole Peeled Tomatoes,CAT007,27.63,24.22,19.14,12808.46,9.712,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00971,Low Fat Plain Yogurt,CAT008,19.58,21.1,14.3,5907.87,8.012,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00972,Shoestring Fries,CAT003,28.62,23.11,16.55,10946.31,6.744,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00973,Natural Artesian Bottled Water,CAT007,17.57,15.33,14.4,3878.61,3.485,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00974,Vodka,CAT008,9.57,9.94,7.05,670.64,0.552,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00975,Vanilla Blueberry Clusters With Flax Seeds Granola,CAT003,35.5,24.9,20.45,18076.78,10.367,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00976,6 OZ LA PANZANELLA CROSTINI ORIGINAL CRACKERS,CAT003,18.26,13.8,11.55,2910.46,1.09,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00977,Original Enriched Rice Drink,CAT008,11.58,12.78,8.17,1209.1,1.088,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00978,Dark with 70% Cacao Content Organic Chocolate Bar,CAT003,30.45,23.04,16.54,11603.93,6.535,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00979,Organic 85% Cacao Dark Chocolate Bar,CAT003,18.03,13.87,9.99,2498.26,1.395,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00980,Oreo Chocolate Sandwich Cookies,CAT003,14.24,11.99,8.26,1410.29,0.909,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00981,Butterhead Lettuce,CAT003,30.3,23.95,20.01,14520.96,8.092,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00982,Coke Zero,CAT007,24.21,20.26,17.58,8622.9,9.882,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00983,Drinking Water,CAT007,28.75,22.41,19.31,12441.19,10.3,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00984,Sliced Prosciutto,CAT003,27.46,21.29,15.28,8933.05,4.806,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00985,Crushed Tomatoes With Basil,CAT007,21.24,15.91,14.9,5035.13,3.976,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00986,Organic Cane Sugar,CAT003,32.39,22.37,16.62,12042.26,7.129,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00987,Caramel Cookie Crunch Gelato,CAT003,31.46,26.63,19.24,16118.88,7.674,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00988,Baby Spinach Salad,CAT003,16.28,11.82,9.35,1799.22,0.63,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00989,Honey & Maple Turkey Breast,CAT003,17.36,13.07,10.74,2436.85,1.519,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00990,Prosciutto,CAT003,25.78,19.43,15.9,7964.4,4.881,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00991,Frosted Mini-Wheats Original Cereal,CAT003,27.76,19.9,16.43,9076.33,4.233,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00992,Vitamin Water Zero Squeezed Lemonade,CAT007,19.03,15.41,14.65,4296.15,4.792,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00993,Large Pineapple Chunks,CAT003,31.72,22.73,17.12,12343.44,8.01,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00994,Organic Russet Potato Bag,CAT003,29.23,21.67,16.83,10660.36,4.045,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00995,Organic Zucchini Spirals,CAT003,16.01,12.67,9.14,1854.02,1.059,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00996,Plain Bagelettes,CAT003,24.7,20.02,15.61,7719.05,3.565,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-00997,Organic Skim Milk,CAT008,20.03,20.14,13.34,5381.41,7.606,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-00998,Organic Orange Fruit Juice,CAT007,19.81,15.34,13.19,4008.25,3.52,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-00999,Free & Clear Natural Laundry Detergent For Sensitive Skin,CAT003,29.55,20.2,16.31,9735.6,5.981,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01000,Organic Stoneground Wheat Crackers,CAT003,20.57,16.41,12.53,4229.55,2.246,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01001,Boneless And Skinless Chicken Breast,CAT003,21.19,15.51,11.17,3671.1,1.573,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01002,100% Apple Juice,CAT007,18.61,16.2,15.21,4585.54,4.706,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01003,Milk Chocolate Almonds,CAT003,17.23,12.7,9.71,2124.75,0.972,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01004,Sharp Cheddar Thick Slices Cheese,CAT008,10.81,9.92,6.63,710.97,0.61,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01005,Heirloom Tomato,CAT003,26.56,19.98,15.3,8119.23,5.211,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01006,Major Dickason's Blend Ground Coffee Dark Roast,CAT007,33.67,29.85,23.96,24080.99,21.621,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01007,Gogo Squeez Organic Apple Strawberry Applesauce on the Go,CAT007,19.3,16.1,14.91,4632.98,4.553,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01008,Just Mayo,CAT003,17.71,13.9,10.73,2641.39,0.821,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01009,Pure Water,CAT007,20.74,17.23,14.39,5142.27,5.626,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01010,Fig Newmans Fruit Filled Cookies,CAT003,25.6,17.8,13.85,6311.17,2.581,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01011,Cherry Pie Fruit & Nut Bar,CAT003,20.15,14.31,12.47,3595.68,1.387,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01012,Organic Sage,CAT003,20.83,16.67,12.37,4295.31,2.204,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01013,Bananas,CAT003,17.88,13.65,11.75,2867.73,1.702,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01014,Organic California Style Sprouted Bread,CAT003,19.67,14.57,10.88,3118.12,2.006,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01015,Goat Milk,CAT008,16.69,17.24,11.71,3369.38,3.369,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01016,Dairy Free Mozarella Style Shreds,CAT008,15.2,15.46,9.68,2274.72,1.999,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01017,Organic 1% Milk,CAT008,18.95,18.76,12.67,4504.21,6.532,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01018,Raspberry on the Bottom Nonfat Greek Yogurt,CAT008,10.83,11.39,6.94,856.07,1.15,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01019,Classic Chicken Salad,CAT003,26.63,21.19,15.63,8819.85,5.975,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01020,Cannellini White Kidney Beans No Salt Added,CAT007,21.62,16.9,13.62,4976.45,4.006,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01021,80% Lean Ground Beef,CAT003,25.79,18.52,15.68,7489.25,2.943,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01022,Lacinato Kale Og,CAT003,34.19,24.8,17.83,15118.27,5.791,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01023,Organic Air Chilled Whole Chicken,CAT003,24.96,19.32,14.27,6881.38,3.687,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01024,Tahitian Vanilla Bean Gelato,CAT003,17.92,13.81,10.17,2516.82,1.549,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01025,Parsley,CAT003,14.05,11.27,8.95,1417.17,0.823,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01026,Semi-Sweet Chocolate Premium Baking Chips,CAT003,23.73,20.02,13.6,6461.01,3.611,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01027,Organic Yukon Select Fries,CAT003,18.34,15.7,11.27,3245.06,2.032,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01028,Spinach Pizza,CAT003,28.01,19.8,16.88,9361.61,5.917,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01029,Multigrain Pita Chips,CAT003,20.41,16.47,11.52,3872.48,1.503,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01030,Vanilla Almond Milk Yogurt,CAT008,16.29,15.3,9.53,2375.23,2.957,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01031,Lemon Lime Soda,CAT007,23.62,18.26,16.64,7176.85,5.655,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01032,Beer,CAT008,14.72,15.38,9.22,2087.35,1.341,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01033,Chopped Pecans,CAT003,23.64,18.16,14.62,6276.4,4.296,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01034,"Tortilla Chips, Clasico, Jalapeno Lime",CAT003,16.72,13.99,10.04,2348.48,0.833,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01035,Plain Non-Fat Greek Yogurt,CAT008,19.3,17.74,11.67,3995.6,4.422,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01036,Blueberry on the Bottom Nonfat Greek Yogurt,CAT008,20.89,21.03,13.96,6132.86,6.673,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01037,Organic Tomato Basil Sauce,CAT007,24.58,20.15,17.89,8860.68,6.493,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01038,Classic Yellow Mustard,CAT003,15.89,12.23,9.3,1807.31,0.57,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01039,Blueberry Whole Milk Yogurt Pouch,CAT008,17.09,19.24,12.59,4139.74,4.52,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01040,Birthday Cake Light Ice Cream,CAT003,31.97,24.13,17.88,13793.28,7.172,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01041,Avocado Roll,CAT003,17.1,14.33,10.05,2462.68,1.229,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01042,Organic Gluten Free Buckwheat Wildberry Waffles,CAT003,21.18,18.05,12.15,4644.93,1.923,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01043,Organic Tahini,CAT003,15.89,13.02,10.22,2114.39,0.693,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01044,Organic Fancy Shredded Mozzarella Cheese,CAT008,19.15,19.7,13.48,5085.4,6.552,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01045,Goldfish Cheddar Baked Snack Crackers Multi Packs,CAT003,14.42,11.87,8.6,1472.02,0.709,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01046,Cream Top Smooth & Creamy Vanilla Yogurt,CAT008,19.78,17.91,12.74,4513.27,6.7,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01047,Original Multigrain Spoonfuls Cereal,CAT003,20.96,16.4,11.53,3963.37,1.793,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01048,Coconut Almond Unsweetened Creamer Blend,CAT008,13.1,13.6,8.18,1457.35,1.393,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01049,Zen Tea,CAT007,28.18,22.51,20.43,12959.4,11.431,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01050,Peanut Butter Bar,CAT003,29.28,22.01,17.86,11509.93,6.145,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01051,Organic Fresh Squeezed Orange Juice,CAT007,32.05,25.29,24.71,20028.55,20.966,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01052,Sparkling Blackberry Juice,CAT007,20.2,18.1,14.52,5308.8,3.875,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01053,Organic Reduced Fat Omega-3 Milk,CAT008,15.46,14.52,10.19,2287.44,2.331,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01054,Pizza Sauce,CAT007,17.12,13.24,12.03,2726.83,2.253,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01055,Organic Ezekiel 49 Bread Cinnamon Raisin,CAT003,32.11,22.03,17.54,12407.5,5.066,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01056,Natural Chicken & Maple Breakfast Sausage Patty,CAT003,20.16,14.81,12.64,3773.92,2.3,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01057,Organic Balsamic Vinegar Of Modena,CAT003,31.52,23.99,16.95,12816.99,5.587,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01058,Extra Ginger Brew Jamaican Style Ginger Beer,CAT007,27.56,21.61,19.58,11661.29,12.151,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01059,Pink Lady Apples,CAT003,21.7,17.33,12.59,4734.61,2.907,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01060,Organic Homestyle Mini Waffles,CAT003,14.92,11.24,9.37,1571.36,0.871,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01061,Naked Green Machine Boosted Juice Smoothie,CAT007,21.06,18.73,16.01,6315.21,4.459,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01062,Light Sour Cream,CAT008,13.35,15.22,9.14,1857.13,1.332,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01063,"Organic Pears, Peas and Broccoli Puree Stage 1",CAT003,16.75,12.95,10.88,2360.01,0.75,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01064,Sparkling Natural Spring Water,CAT007,19.57,16.08,13.98,4399.3,4.227,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01065,Ground Buffalo,CAT003,27.59,19.1,15.1,7957.23,4.421,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01066,Pink Lady Apple Kombucha,CAT007,33.55,27.86,25.46,23797.54,19.211,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01067,Non-Fat Greek Yogurt With Strawberries on the Bottom,CAT008,11.51,10.26,7.57,893.96,0.873,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01068,Almond Milk Strawberry Yogurt,CAT008,13.92,13.25,8.91,1643.36,1.995,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01069,Vanilla Bean Light Ice Cream,CAT003,16.92,12.41,9.6,2015.78,0.725,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01070,Organic Mini Homestyle Waffles,CAT003,24.05,17.03,13.88,5684.85,2.594,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01071,Pure Granulated Cane Sugar,CAT003,31.57,22.0,16.33,11341.84,4.31,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01072,Organic Vanilla Soymilk,CAT008,17.62,16.57,11.43,3337.14,2.844,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01073,Smartwater Electrolyte Enhanced Water,CAT007,19.36,14.84,15.26,4384.23,4.003,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01074,Organic Red Bartlett Pear,CAT003,15.47,11.21,8.38,1453.25,0.845,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01075,Old Fashioned Rolled Oats,CAT003,22.23,17.61,14.17,5547.13,2.768,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01076,Barbecue Potato Chips,CAT003,24.04,20.17,15.07,7307.24,4.681,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01077,Stringless Sugar Snap Peas,CAT003,15.86,12.04,9.39,1793.06,0.778,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01078,Organic Gluten Free Non-Dairy Beans & Rice Burrito,CAT003,32.8,22.26,18.84,13755.61,9.293,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01079,French Baguette,CAT003,24.9,19.57,16.6,8089.06,4.236,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01080,Golden Delicious Apple,CAT003,21.19,15.85,13.13,4409.86,2.343,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01081,Sliced Baby Bella Mushrooms,CAT003,15.41,11.89,8.89,1628.87,0.987,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01082,Mild Salsa Roja,CAT003,22.94,19.45,13.79,6152.86,4.139,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01083,Original Coconut Milk Creamer,CAT008,19.77,21.64,14.41,6164.93,8.335,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01084,Hommus Classic Original,CAT003,15.19,10.86,8.86,1461.58,0.489,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01085,Crunchy Peanut Butter Energy Bar,CAT003,25.42,20.86,14.84,7869.08,4.688,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01086,Sweet Cream Salted Butter,CAT008,13.63,12.51,8.8,1500.5,0.936,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01087,Coconut Chia Bar,CAT003,30.97,25.59,19.79,15684.02,10.838,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01088,"Uncured, No Sugar, Hickory Smoked Bacon",CAT003,25.15,18.83,14.38,6810.0,3.866,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01089,Organic Garbanzo Beans No Salt Added,CAT007,19.95,15.55,13.11,4067.02,4.49,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01090,Organic Acai Berry Smoothie Packs,CAT003,33.29,24.49,18.37,14976.55,7.763,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01091,Frozen Peaches,CAT003,28.26,22.42,16.62,10530.25,3.562,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01092,Pad Thai,CAT003,15.22,12.55,8.98,1715.28,0.694,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01093,Dijon Mustard,CAT003,20.67,15.41,11.32,3605.7,1.364,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01094,Blue Chips Corn Tortilla Chips,CAT003,17.64,12.7,11.03,2471.03,1.463,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01095,Original Whole Fat Lactose Free Milk,CAT008,15.88,14.45,9.89,2269.42,2.868,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01096,Blueberry Muffin Bar,CAT003,18.36,12.54,10.38,2389.83,1.621,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01097,Cream Top Smooth & Creamy Maple Yogurt,CAT008,15.72,15.0,9.3,2192.94,1.917,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01098,Chocolate Sea Salt,CAT003,31.56,24.8,20.38,15951.18,6.132,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01099,Organic Low Fat Chocolate Milk,CAT008,12.67,12.13,8.29,1274.07,0.928,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01100,Everything Deli Style Pretzel Crisps Crackers,CAT003,15.11,11.25,8.77,1490.79,0.537,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01101,Heavy Cream,CAT008,17.31,15.92,11.48,3163.6,2.818,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01102,"Kombucha, Organic Raw, Citrus",CAT007,22.74,20.35,15.98,7394.89,7.643,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01103,Gluten Free Pretzel Sticks,CAT003,24.42,19.01,14.41,6689.47,3.887,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01104,Watermelon Agave Frozen Pops,CAT003,35.72,23.78,18.11,15383.03,5.231,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01105,Ezekiel 4:9 Sprouted Grain Tortillas,CAT003,19.68,14.2,11.46,3202.57,1.761,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01106,Kumato Tomatoes,CAT003,30.94,22.92,17.88,12679.51,7.13,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01107,Bunched Carrots,CAT003,34.36,23.49,17.72,14302.1,6.824,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01108,Organic All Natural Blueberry Mini Waffles,CAT003,16.15,12.46,10.62,2137.05,1.304,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01109,"Almondmilk Creamer, Vanilla",CAT008,16.42,17.76,12.08,3522.76,4.455,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01110,French Roast Ground Coffee,CAT007,15.79,12.9,12.27,2499.29,1.921,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01111,Macaroni & Cheese Dinner Original Flavor,CAT007,21.83,18.28,16.75,6684.13,6.457,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01112,Coconut Cream Pie,CAT003,26.02,20.46,15.82,8422.08,5.245,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01113,Steel Cut Oats,CAT003,19.94,14.25,11.6,3296.08,2.241,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01114,Citrus Mandarins Organic,CAT003,16.4,13.11,9.51,2044.69,1.317,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01115,Chicken & Apple Smoked Chicken Sausage,CAT003,31.72,21.51,18.15,12383.69,4.133,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01116,Bolthouse Baby Carrots,CAT003,15.18,10.73,8.79,1431.73,0.812,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01117,Organic Seasoned Yukon Select Potatoes Hashed Browns,CAT003,29.52,22.28,17.68,11628.24,6.702,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01118,Crunchy Peanut Butter,CAT003,17.26,11.68,10.09,2034.11,0.625,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01119,Instant Oatmeal Variety Pack,CAT003,15.71,10.87,8.45,1442.99,0.704,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01120,Organic Fat-Free Milk,CAT008,16.68,15.38,11.1,2847.58,3.988,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01121,Organic Cherry Tomatoes,CAT003,31.75,24.79,17.85,14049.42,7.553,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01122,Premium Original Saltine Crackers,CAT003,25.33,17.25,12.98,5671.51,2.975,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01123,Organic Greek Lowfat Yogurt With Blueberries,CAT008,16.15,16.85,10.81,2941.7,3.109,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01124,Hamburger Buns,CAT003,19.61,14.02,11.44,3145.22,0.981,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01125,Blueberries Pint,CAT003,28.02,20.06,15.81,8886.5,6.193,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01126,Large Organic Omega3 Brown Eggs,CAT008,16.72,15.21,10.89,2769.45,3.912,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01127,Ataulfo Mango,CAT003,21.6,14.4,12.81,3984.42,2.04,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01128,Fruit Punch Sports Drink,CAT007,30.92,26.76,21.82,18054.29,19.841,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01129,Peanut Butter Whole Grain Clusters,CAT003,35.2,25.68,20.55,18575.88,6.238,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01130,All Natural Virgin Lemonade,CAT007,33.4,25.05,25.76,21552.62,24.061,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01131,Deli Fresh Shaved Smoked Turkey Breast,CAT003,24.6,17.02,13.23,5539.3,2.683,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01132,Baby Food Stage 2 Pumpkin Banana,CAT003,27.12,18.52,16.06,8066.33,4.698,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01133,Whole Grains Oatnut Bread,CAT003,22.91,17.17,14.29,5621.18,1.702,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01134,Organic Strawberry Yogurt & Fruit Snack,CAT003,20.63,15.08,12.76,3969.64,1.383,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01135,Soy Free Buttery Spread,CAT008,16.83,17.69,10.97,3266.02,2.75,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01136,Total Plain Greek Strained Yogurt,CAT008,15.81,14.58,9.67,2229.03,2.114,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01137,Original Cream Cheese,CAT008,17.46,17.92,11.1,3473.0,3.222,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01138,Turkey Bacon,CAT003,16.76,12.98,8.73,1899.17,0.915,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01139,Sweet Corn On The Cob,CAT003,26.41,20.96,16.06,8890.07,5.415,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01140,Organic Quinoa & Brown Rice With Garlic,CAT007,16.62,12.08,11.22,2252.63,1.887,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01141,Peanut Butter Cookie,CAT003,33.8,24.65,19.23,16021.86,8.68,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01142,Panda Puffs Peanut Butter Cereal,CAT003,15.0,11.34,8.37,1423.74,0.821,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01143,Lemon Verbena Hand Soap,CAT001,7.03,4.63,3.49,113.6,0.038,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01144,Thyme,CAT003,31.73,25.4,18.87,15208.13,9.191,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01145,Fuji Apples,CAT003,16.24,11.21,9.7,1765.89,0.545,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01146,Berry Berry Good Lemonade Organic Juice Drink,CAT007,23.04,18.0,17.96,7448.37,8.703,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01147,Cheddar Snack Crackers Cheddar Bunnies,CAT003,26.02,20.56,15.93,8522.09,5.876,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01148,Distilled White Vinegar,CAT003,30.2,21.72,19.05,12495.73,8.321,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01149,Whole Grain White Corn Salted Tortilla Chips,CAT003,17.02,12.9,10.25,2250.47,1.451,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01150,Organic Refried Black Beans,CAT007,17.5,12.95,11.25,2549.53,2.975,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01151,Avocado,CAT003,22.58,14.93,12.19,4109.49,2.024,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01152,100% Lemon Juice,CAT007,28.39,23.04,20.99,13729.68,15.514,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01153,Organic Orzo,CAT007,18.0,14.98,13.2,3559.25,3.852,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01154,Organic Bunny Fruit Tropical Treat Fruit Snacks,CAT003,16.42,12.84,10.19,2148.39,1.145,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01155,Mild Italian Chicken Sausage,CAT003,31.71,21.78,17.5,12086.27,6.506,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01156,Original Baked Whole Grain Wheat Crackers,CAT003,14.91,11.41,9.21,1566.83,0.583,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01157,Brown Fertile Large Grade AA Eggs,CAT008,20.83,20.66,12.59,5418.08,6.613,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01158,Natural Goodness 33% Less Sodium Chicken Broth,CAT007,28.36,23.36,21.74,14402.52,14.203,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01159,Milk and Cookies Ice Cream,CAT003,16.52,11.69,8.76,1691.72,0.811,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01160,Organic Plain Kefir,CAT008,9.06,9.77,6.42,568.27,0.398,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01161,Almonds,CAT003,27.23,19.96,14.76,8022.22,4.027,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01162,Classic Potato Chips,CAT003,26.04,19.6,14.12,7206.62,4.928,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01163,Good Seed Organic Thin Sliced Bread,CAT003,20.5,13.58,11.99,3337.9,1.346,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01164,Plain Goat Milk Yogurt,CAT008,12.21,11.87,7.51,1088.44,0.707,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01165,Butternut Squash Ravioli,CAT003,26.49,19.52,16.34,8449.17,5.824,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01166,Extra Sharp White Cheddar,CAT008,15.59,15.0,10.88,2544.29,2.64,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01167,Organic Hummus,CAT003,23.98,18.84,14.39,6501.16,4.207,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01168,Green Cabbage,CAT003,17.05,12.83,9.38,2051.89,1.225,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01169,Grassmilk 2% Reduced Fat Milk,CAT008,13.67,14.54,10.28,2043.27,1.421,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01170,Cut Green Beans,CAT003,17.77,12.65,9.31,2092.8,1.436,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01171,Beet Apple Carrot Lemon Ginger Organic Cold Pressed Juice Beverage,CAT007,31.1,24.47,21.89,16658.66,14.664,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01172,English Muffins,CAT003,26.41,21.29,15.75,8855.74,5.688,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01173,Goodness Grapeness Organic Juice Drink,CAT007,23.43,17.09,15.23,6098.38,5.64,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01174,Gluten Free Old Fashioned Rolled Oats,CAT003,28.79,19.99,15.7,9035.54,5.002,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01175,Small Macintosh Apple,CAT003,27.75,19.43,15.44,8324.98,2.989,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01176,"Bar, Toffee & Almonds in Milk Chocolate",CAT003,23.83,19.98,13.43,6394.34,2.475,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01177,Pizza 4 Cheese,CAT003,19.66,14.14,11.02,3063.48,2.003,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01178,GOLEAN Crunch! Cereal,CAT003,29.92,21.64,17.24,11162.36,3.71,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01179,Mexican Finely Shredded Cheese,CAT008,14.21,13.47,9.77,1870.06,2.75,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01180,Roasted Tomato Salsa,CAT003,29.48,20.09,16.36,9689.26,5.093,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01181,Low Sodium Bacon,CAT003,26.92,19.22,15.78,8164.61,5.657,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01182,Golden Pineapple,CAT003,27.4,19.57,15.21,8155.88,2.821,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01183,Slim Can Pink Grapefruit Natural Mineral Water,CAT007,23.92,18.34,17.74,7782.41,7.906,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01184,Organic Large White Flesh Peach,CAT003,16.49,13.07,9.22,1987.13,1.069,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01185,Original Fresh Stack Crackers,CAT003,28.38,23.75,16.45,11087.71,6.599,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01186,Cranberry Juice Cocktail,CAT007,27.44,24.46,22.62,15182.15,14.799,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01187,Plain Almond Milk Yogurt,CAT008,16.26,14.94,11.18,2715.89,3.795,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01188,All Purpose Flour,CAT003,22.0,15.47,13.02,4431.23,2.278,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01189,Go Lean Cereal,CAT003,30.93,22.33,16.64,11492.7,3.581,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01190,Organic Lowfat French Vanilla Yogurt,CAT008,16.5,17.54,10.94,3166.15,3.313,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01191,Dried Mangos,CAT003,26.4,18.13,14.57,6973.67,3.512,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01192,Unbleached All-Purpose Flour,CAT010,25.84,17.47,16.43,7416.91,6.872,standard,corrosive,sourced,valid,synthetic_class_rule,low
+IC-01193,Thick Medium Cheddar Slices,CAT008,16.85,18.22,12.26,3763.91,2.778,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01194,Country Morning White Bread,CAT003,19.51,16.71,12.95,4221.86,2.952,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01195,Mango Yoghurt,CAT008,15.2,16.16,10.39,2552.12,3.062,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01196,Half And Half,CAT008,17.26,17.28,12.29,3665.53,2.664,fragile,NONE,sourced,valid,synthetic_class_rule,low
+IC-01197,Uncured Beef Hot Dogs,CAT003,19.46,15.66,11.58,3528.93,2.255,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01198,Dark Chocolate Nuts & Sea Salt Bars,CAT003,26.98,21.02,15.52,8801.7,3.703,standard,NONE,sourced,valid,synthetic_class_rule,low
+IC-01199,Grapefruit Juice,CAT007,33.38,24.33,21.71,17631.46,15.986,heavy,NONE,sourced,valid,synthetic_class_rule,low
+IC-01200,Organic Pumpkin,CAT003,25.83,18.69,14.25,6879.37,4.531,standard,NONE,sourced,valid,synthetic_class_rule,low

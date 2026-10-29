@@ -1,0 +1,55 @@
+source_category,canonical_category,canonical_name,rule,records
+agro_industry_and_commerce,CAT007,Packaged Bulk Goods,explicit map,5
+air_conditioning,CAT005,Appliances,explicit map,2
+art,CAT003,Household Goods,explicit map,1
+audio,CAT009,Electronics & Sensitive,explicit map,8
+auto,CAT006,Tools & Metal Parts,explicit map,28
+baby,CAT003,Household Goods,explicit map,37
+bed_bath_table,CAT003,Household Goods,explicit map,129
+books_general_interest,CAT002,Books & Media,explicit map,2
+books_technical,CAT002,Books & Media,explicit map,1
+cds_dvds_musicals,CAT002,Books & Media,explicit map,1
+christmas_supplies,CAT003,Household Goods,explicit map,1
+computers,CAT009,Electronics & Sensitive,explicit map,5
+computers_accessories,CAT001,Accessories & Cables,explicit map,93
+consoles_games,CAT009,Electronics & Sensitive,explicit map,9
+construction_tools_construction,CAT006,Tools & Metal Parts,explicit map,6
+construction_tools_lights,CAT006,Tools & Metal Parts,explicit map,4
+construction_tools_safety,CAT006,Tools & Metal Parts,explicit map,1
+cool_stuff,CAT001,Accessories & Cables,explicit map,57
+costruction_tools_garden,CAT006,Tools & Metal Parts,explicit map,1
+costruction_tools_tools,CAT006,Tools & Metal Parts,explicit map,1
+drinks,CAT007,Packaged Bulk Goods,explicit map,4
+electronics,CAT009,Electronics & Sensitive,explicit map,51
+fashion_bags_accessories,CAT003,Household Goods,explicit map,18
+fixed_telephony,CAT009,Electronics & Sensitive,explicit map,3
+food,CAT007,Packaged Bulk Goods,explicit map,6
+food_drink,CAT007,Packaged Bulk Goods,explicit map,3
+furniture_decor,CAT004,Storage Containers,explicit map,63
+furniture_living_room,CAT004,Storage Containers,explicit map,3
+furniture_mattress_and_upholstery,CAT004,Storage Containers,explicit map,1
+garden_tools,CAT006,Tools & Metal Parts,explicit map,24
+health_beauty,CAT001,Accessories & Cables,explicit map,120
+home_appliances,CAT005,Appliances,explicit map,4
+home_appliances_2,CAT005,Appliances,explicit map,1
+home_comfort_2,CAT003,Household Goods,explicit map,1
+home_confort,CAT003,Household Goods,explicit map,1
+home_construction,CAT006,Tools & Metal Parts,explicit map,6
+housewares,CAT003,Household Goods,explicit map,55
+industry_commerce_and_business,CAT003,Household Goods,explicit map,3
+kitchen_dining_laundry_garden_furniture,CAT004,Storage Containers,explicit map,4
+luggage_accessories,CAT004,Storage Containers,explicit map,13
+market_place,CAT003,Household Goods,explicit map,4
+musical_instruments,CAT009,Electronics & Sensitive,explicit map,9
+office_furniture,CAT004,Storage Containers,explicit map,28
+perfumery,CAT001,Accessories & Cables,explicit map,44
+pet_shop,CAT007,Packaged Bulk Goods,explicit map,18
+small_appliances,CAT005,Appliances,explicit map,6
+small_appliances_home_oven_and_coffee,CAT005,Appliances,explicit map,1
+sports_leisure,CAT004,Storage Containers,explicit map,85
+stationery,CAT002,Books & Media,explicit map,27
+tablets_printing_image,CAT009,Electronics & Sensitive,explicit map,3
+telephony,CAT009,Electronics & Sensitive,explicit map,69
+toys,CAT003,Household Goods,explicit map,45
+unknown,CAT003,Household Goods,keyword fallback,11
+watches_gifts,CAT001,Accessories & Cables,explicit map,74

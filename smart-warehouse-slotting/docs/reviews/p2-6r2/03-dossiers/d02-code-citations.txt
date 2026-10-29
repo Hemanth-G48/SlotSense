@@ -1,0 +1,383 @@
+src/validation/validator.py:406:        ok = total <= loc.max_weight_kg
+src/validation/validator.py:413:            limit=loc.max_weight_kg,
+src/validation/validator.py:418:                else f"load {total:.1f}kg > per-bin limit {loc.max_weight_kg:.1f}kg"
+src/validation/validator.py:428:        ok = total <= loc.usable_volume_cm3
+src/validation/validator.py:435:            limit=loc.usable_volume_cm3,
+src/validation/validator.py:440:                else f"stored volume {total:.0f}cm3 > {loc.usable_volume_cm3:.0f}cm3"
+src/validation/validator.py:534:                                ok = d + 1e-9 >= radius
+src/validation/validator.py:588:            if loc.beam_max_weight_kg is not None:
+src/validation/validator.py:589:                beam_limit[beam_key] = min(beam_limit.get(beam_key, loc.beam_max_weight_kg),
+src/validation/validator.py:590:                                           loc.beam_max_weight_kg)
+src/validation/validator.py:591:            level_cap = loc.level_max_weight_kg if loc.level_max_weight_kg is not None else loc.shelf_max_weight_kg
+src/validation/validator.py:594:            if loc.rack_max_weight_kg is not None:
+src/validation/validator.py:595:                rack_limit[loc.rack_id] = min(rack_limit.get(loc.rack_id, loc.rack_max_weight_kg),
+src/validation/validator.py:596:                                              loc.rack_max_weight_kg)
+src/validation/validator.py:602:            ok = load <= limit + 1e-6
+src/validation/validator.py:615:            ok = load <= limit + 1e-6
+src/validation/validator.py:628:            ok = load <= limit + 1e-6
+src/optimization/optimizer.py:46:# tolerance is 1e-6; being an order of magnitude tighter here means the starter can never
+src/optimization/optimizer.py:48:WEIGHT_EPSILON_KG = 1e-9
+src/optimization/optimizer.py:335:        beam  -> (rack_id, bay, shelf_level) against ``beam_max_weight_kg``   (SL-02)
+src/optimization/optimizer.py:336:        level -> (rack_id, shelf_level)      against ``level_max_weight_kg``
+src/optimization/optimizer.py:338:                                             ``shelf_max_weight_kg`` alias)   (SL-01)
+src/optimization/optimizer.py:339:        rack  -> rack_id                     against ``rack_max_weight_kg``    (RK-01)
+src/optimization/optimizer.py:348:            if loc.beam_max_weight_kg is not None:
+src/optimization/optimizer.py:350:                beam_cap[key] = min(beam_cap.get(key, loc.beam_max_weight_kg), loc.beam_max_weight_kg)
+src/optimization/optimizer.py:352:                loc.level_max_weight_kg
+src/optimization/optimizer.py:353:                if loc.level_max_weight_kg is not None
+src/optimization/optimizer.py:354:                else loc.shelf_max_weight_kg
+src/optimization/optimizer.py:359:            if loc.rack_max_weight_kg is not None:
+src/optimization/optimizer.py:361:                    rack_cap.get(loc.rack_id, loc.rack_max_weight_kg), loc.rack_max_weight_kg
+src/optimization/optimizer.py:449:        residual_bin_weight = {loc.location_id: loc.max_weight_kg for loc in locations}
+src/optimization/optimizer.py:450:        residual_volume = {loc.location_id: loc.usable_volume_cm3 for loc in locations}
+src/optimization/optimizer.py:550:            if cap is not None and load > cap + WEIGHT_EPSILON_KG:
+src/optimization/optimizer.py:554:            if cap is not None and load > cap + WEIGHT_EPSILON_KG:
+src/optimization/optimizer.py:558:            if cap is not None and load > cap + WEIGHT_EPSILON_KG:
+src/optimization/optimizer.py:561:            if residual < -WEIGHT_EPSILON_KG:
+src/optimization/optimizer.py:564:            if residual < -1e-6:
+src/optimization/optimizer.py:611:                (beam_key in beam_cap and beam_load[beam_key] > beam_cap[beam_key] + 1e-6)
+src/optimization/optimizer.py:612:                or (level_key in level_cap and level_load[level_key] > level_cap[level_key] + 1e-6)
+src/optimization/optimizer.py:613:                or (loc.rack_id in rack_cap and rack_load[loc.rack_id] > rack_cap[loc.rack_id] + 1e-6)
+src/optimization/optimizer.py:640:                    if math.dist((loc_a.x, loc_a.y, loc_a.z), (loc_b.x, loc_b.y, loc_b.z)) + 1e-9 < radius:
+src/optimization/optimizer.py:788:                if weight > loc.max_weight_kg + WEIGHT_EPSILON_KG:
+src/optimization/optimizer.py:790:                if volume > loc.usable_volume_cm3 + 1e-6:
+src/optimization/optimizer.py:797:                if beam_cap.get(beam_b) is not None and post_beam > beam_cap[beam_b] + 1e-6:
+src/optimization/optimizer.py:799:                if level_cap.get(level_b) is not None and post_level > level_cap[level_b] + 1e-6:
+src/optimization/optimizer.py:801:                if rack_cap.get(loc.rack_id) is not None and post_rack > rack_cap[loc.rack_id] + 1e-6:
+src/optimization/optimizer.py:1208:    while n > 0 and n * per_unit > residual + WEIGHT_EPSILON_KG:
+src/optimization/optimizer.py:1231:    bin_weight = loc.max_weight_kg if residual_bin_weight is None else residual_bin_weight
+src/optimization/optimizer.py:1232:    volume = loc.usable_volume_cm3 if residual_volume is None else residual_volume
+src/optimization/separation.py:28:# The validator accepts a pair when ``distance + 1e-9 >= radius``; the placer must reject
+src/optimization/separation.py:30:DISTANCE_TOLERANCE_M = 1e-9
+src/optimization/separation.py:109:                    if math.dist((x, y, z), (px, py, pz)) + DISTANCE_TOLERANCE_M < radius:
+tests/test_phase2_greedy_constraints.py:7:* a placement is never accepted that would push a beam over ``beam_max_weight_kg`` (SL-02),
+tests/test_phase2_greedy_constraints.py:85:        max_weight_kg=bin_cap,
+tests/test_phase2_greedy_constraints.py:86:        usable_volume_cm3=volume,
+tests/test_phase2_greedy_constraints.py:91:        beam_max_weight_kg=beam_cap,
+tests/test_phase2_greedy_constraints.py:92:        level_max_weight_kg=level_cap,
+tests/test_phase2_greedy_constraints.py:93:        shelf_max_weight_kg=level_cap,
+tests/test_phase2_greedy_constraints.py:94:        rack_max_weight_kg=rack_cap,
+tests/test_phase2_greedy_constraints.py:206:        assert n * per_unit <= residual + 1e-9, (residual, per_unit, n)
+tests/test_phase2_greedy_constraints.py:231:    assert all(load <= 180.0 + 1e-9 for load in per_beam.values()), per_beam
+tests/test_phase2_greedy_constraints.py:293:        assert load <= 180.0 + 1e-6, f"beam {key} overloaded: {load}"
+tests/test_phase2_greedy_constraints.py:295:        assert load <= 288.0 + 1e-6, f"level {key} overloaded: {load}"
+tests/test_phase2_greedy_constraints.py:297:        assert load <= 306.0 + 1e-6, f"rack {key} overloaded: {load}"
+tests/test_phase2_greedy_constraints.py:299:        assert load <= 100.0 + 1e-6, f"bin {key} overloaded: {load}"
+
+
+===== src/validation/validator.py — LD-01 (bin weight), NO tolerance =====
+    def _check_location_weight(self, res: ValidationResult, loc_id, group) -> None:
+        loc = self._loc(loc_id)
+        if loc is None:
+            return
+        total = sum(self._sku(a.sku_id).unit_weight_kg * a.assigned_quantity for a in group if self._sku(a.sku_id))
+        ok = total <= loc.max_weight_kg
+        res.record(
+            "LD-01",
+            "location_weight",
+            ok,
+            location_id=loc_id,
+            observed=round(total, 3),
+            limit=loc.max_weight_kg,
+            unit="kg",
+            explanation=(
+                "bin load within limit"
+                if ok
+                else f"load {total:.1f}kg > per-bin limit {loc.max_weight_kg:.1f}kg"
+            ),
+        )
+
+===== src/validation/validator.py — VD-01 (bin volume), NO tolerance =====
+    def _check_volume_residual(self, res: ValidationResult, loc_id, group) -> None:
+        loc = self._loc(loc_id)
+        if loc is None:
+            return
+        total = sum(self._sku(a.sku_id).unit_volume_cm3 * a.assigned_quantity for a in group if self._sku(a.sku_id))
+        ok = total <= loc.usable_volume_cm3
+        res.record(
+            "VD-01",
+            "volume_capacity",
+            ok,
+            location_id=loc_id,
+            observed=round(total, 2),
+            limit=loc.usable_volume_cm3,
+            unit="cm3",
+            explanation=(
+                "stored volume within usable bin volume"
+                if ok
+                else f"stored volume {total:.0f}cm3 > {loc.usable_volume_cm3:.0f}cm3"
+            ),
+        )
+
+===== src/validation/validator.py — SL-02 / SL-01 / RK-01 (+1e-6) =====
+        for key, load in beam_load.items():
+            limit = beam_limit.get(key)
+            if limit is None:
+                continue
+            ok = load <= limit + 1e-6
+            res.record(
+                "SL-02", "beam_load", ok,
+                location_id=f"{key[0]} bay {key[1]} shelf {key[2]}",
+                observed=round(load, 3), limit=limit, unit="kg",
+                explanation=("beam load within structural limit" if ok
+                             else f"beam {key} load {load:.1f}kg > limit {limit:.1f}kg"),
+            )
+
+        for key, load in level_load.items():
+            limit = level_limit.get(key)
+            if limit is None:
+                continue
+            ok = load <= limit + 1e-6
+            res.record(
+                "SL-01", "shelf_load", ok,
+                location_id=f"{key[0]} shelf {key[1]}",
+                observed=round(load, 3), limit=limit, unit="kg",
+                explanation=("shelf level load within structural limit" if ok
+                             else f"shelf {key} load {load:.1f}kg > limit {limit:.1f}kg"),
+            )
+
+        for rack, load in rack_load.items():
+            limit = rack_limit.get(rack)
+            if limit is None:
+                continue
+            ok = load <= limit + 1e-6
+            res.record(
+                "RK-01", "rack_load", ok,
+                location_id=rack,
+                observed=round(load, 3), limit=limit, unit="kg",
+                explanation=("rack load within structural limit" if ok
+                             else f"rack {rack} load {load:.1f}kg > limit {limit:.1f}kg"),
+            )
+
+===== src/validation/validator.py — CAT-01 boundary =====
+                                d = math.dist((loc_a.x, loc_a.y, loc_a.z),
+                                              (loc_b.x, loc_b.y, loc_b.z))
+                                ok = d + 1e-9 >= radius
+                                res.record(
+
+
+===== src/optimization/optimizer.py — epsilon rationale and constant =====
+
+# Float slack when comparing weights against a structural limit. The validator's own
+# tolerance is 1e-6; being an order of magnitude tighter here means the starter can never
+# land on the "just over the line" side of a beam/level/rack comparison.
+WEIGHT_EPSILON_KG = 1e-9
+
+
+===== src/optimization/optimizer.py — ledger guard: weight -1e-9, volume -1e-6 =====
+        """
+        breaches = []
+        for key, load in beam_load.items():
+            cap = beam_cap.get(key)
+            if cap is not None and load > cap + WEIGHT_EPSILON_KG:
+                breaches.append(f"beam {key}: {load:.6f} kg > {cap:.6f} kg")
+        for key, load in level_load.items():
+            cap = level_cap.get(key)
+            if cap is not None and load > cap + WEIGHT_EPSILON_KG:
+                breaches.append(f"level {key}: {load:.6f} kg > {cap:.6f} kg")
+        for key, load in rack_load.items():
+            cap = rack_cap.get(key)
+            if cap is not None and load > cap + WEIGHT_EPSILON_KG:
+                breaches.append(f"rack {key}: {load:.6f} kg > {cap:.6f} kg")
+        for key, residual in residual_bin_weight.items():
+            if residual < -WEIGHT_EPSILON_KG:
+                breaches.append(f"bin {key}: residual {residual:.6f} kg < 0")
+        for key, residual in residual_volume.items():
+            if residual < -1e-6:
+                breaches.append(f"bin {key}: residual volume {residual:.3f} cm3 < 0")
+        if breaches:
+            raise RuntimeError(
+                "greedy_starter exceeded a structural limit it tracks (ledger invariant broken): "
+                + "; ".join(breaches[:5])
+            )
+
+===== src/optimization/optimizer.py — repair target filter: weight +1e-9, volume +1e-6 =====
+            for loc in clear_bins(sku.category_id):
+                if not _static_eligible(sku, loc):
+                    continue
+                if weight > loc.max_weight_kg + WEIGHT_EPSILON_KG:
+                    continue
+                if volume > loc.usable_volume_cm3 + 1e-6:
+                    continue
+                beam_b = (loc.rack_id, loc.bay, loc.shelf_level)
+                level_b = (loc.rack_id, loc.shelf_level)
+                post_beam = beam_load[beam_b] + (0.0 if beam_b == beam_a else weight)
+                post_level = level_load[level_b] + (0.0 if level_b == level_a else weight)
+                post_rack = rack_load[loc.rack_id] + (0.0 if loc.rack_id == loc_a.rack_id else weight)
+                if beam_cap.get(beam_b) is not None and post_beam > beam_cap[beam_b] + 1e-6:
+                    continue
+                if level_cap.get(level_b) is not None and post_level > level_cap[level_b] + 1e-6:
+                    continue
+                if rack_cap.get(loc.rack_id) is not None and post_rack > rack_cap[loc.rack_id] + 1e-6:
+                    continue
+
+===== src/optimization/optimizer.py — _units_affordable / _split_quantity =====
+def _units_affordable(residual: float, per_unit: float) -> int:
+    """Largest n with ``n * per_unit <= residual``, float-safe and inf-safe.
+
+    ``int(residual / per_unit)`` can overshoot by one unit when the division rounds up
+    (e.g. 0.3 / 0.1 -> 3 with 3 * 0.1 = 0.30000000000000004 > 0.3), which would put a beam
+    a hair over its limit. This trims until the comparison holds, using the same epsilon the
+    placement ledger is asserted against.
+    """
+    if per_unit <= 0:
+        return 10**9  # weightless/volumeless unit: only other scopes bind
+    if math.isinf(residual):
+        return 10**9
+    if residual <= 0:
+        return 0
+    n = int(residual / per_unit)
+    # Division can round either way: 0.3/0.1 -> 2.99..., while other pairs round up. Correct
+    # down until the accepted weight is not over, then up while the next unit still fits, so
+    # the ledger never exceeds a limit and never wastes a whole unit on a rounding artefact.
+    while n > 0 and n * per_unit > residual + WEIGHT_EPSILON_KG:
+        n -= 1
+    while (n + 1) * per_unit <= residual:
+        n += 1
+    return n
+
+
+def _split_quantity(
+    sku: SKU,
+    loc,
+    wanted: int,
+    residual_bin_weight: float | None = None,
+    residual_volume: float | None = None,
+    residual_shelf_weight: float | None = None,
+    residual_rack_weight: float | None = None,
+    residual_beam_weight: float | None = None,
+) -> int:
+    """Max units that fit loc and all of its structural parents, but <= wanted.
+
+    Every scope the validator gates is represented: bin weight (LD-01), bin volume (VD-01),
+    beam (SL-02), level (SL-01) and rack (RK-01). The returned quantity therefore satisfies
+    ``qty * unit_weight <= residual`` for all of them simultaneously.
+    """
+    bin_weight = loc.max_weight_kg if residual_bin_weight is None else residual_bin_weight
+    volume = loc.usable_volume_cm3 if residual_volume is None else residual_volume
+    shelf_weight = math.inf if residual_shelf_weight is None else residual_shelf_weight
+    rack_weight = math.inf if residual_rack_weight is None else residual_rack_weight
+    beam_weight = math.inf if residual_beam_weight is None else residual_beam_weight
+    limits = [int(wanted)]
+    if sku.unit_weight_kg > 0:
+        limits.extend(
+            [
+                _units_affordable(bin_weight, sku.unit_weight_kg),
+                _units_affordable(beam_weight, sku.unit_weight_kg),
+                _units_affordable(shelf_weight, sku.unit_weight_kg),
+                _units_affordable(rack_weight, sku.unit_weight_kg),
+            ]
+        )
+    if sku.unit_volume_cm3 > 0:
+        limits.append(_units_affordable(volume, sku.unit_volume_cm3))
+    return max(0, min(limits))
+
+
+===== src/optimization/separation.py — placer CAT-01 boundary (identical to validator) =====
+from typing import Iterable
+
+# The validator accepts a pair when ``distance + 1e-9 >= radius``; the placer must reject
+# exactly when the validator would, so the same tolerance is applied here.
+DISTANCE_TOLERANCE_M = 1e-9
+
+_NEIGHBOUR_OFFSETS = tuple(
+    def allows(self, loc, category_id: str) -> bool:
+        """True when placing ``category_id`` at ``loc`` keeps every forbidden pair >= R apart."""
+        if not self.enabled:
+            return True
+        partners = self._partners.get(category_id)
+        if not partners:
+            return True
+        self.n_queries += 1
+        cx, cy, cz = self.cell(loc)
+        x, y, z = loc.x, loc.y, loc.z
+        radius = self.radius_m
+        for dx, dy, dz in _NEIGHBOUR_OFFSETS:
+            bucket = self._cells.get((cx + dx, cy + dy, cz + dz))
+            if bucket is None:
+                continue
+            for partner in partners:
+                points = bucket.get(partner)
+                if not points:
+                    continue
+                for px, py, pz in points:
+                    if math.dist((x, y, z), (px, py, pz)) + DISTANCE_TOLERANCE_M < radius:
+                        self.n_rejections += 1
+                        return False
+        return True
+
+
+===== tests/test_phase2_greedy_constraints.py — the shipped placer contract is +1e-9 =====
+                           residual_beam_weight=90.0, residual_shelf_weight=1000.0,
+                           residual_rack_weight=1000.0) == 3
+    # No beam residual left at all -> nothing may be placed.
+    assert _split_quantity(sku, loc, 10, residual_bin_weight=100.0, residual_volume=108_000.0,
+                           residual_beam_weight=0.0, residual_shelf_weight=1000.0,
+                           residual_rack_weight=1000.0) == 0
+
+
+def test_units_affordable_never_accepts_a_fraction_of_a_unit_over():
+    for residual, per_unit in [(180.0, 20.283), (0.3, 0.1), (100.0, 25.0), (7.5, 2.5)]:
+        n = _units_affordable(residual, per_unit)
+        assert n * per_unit <= residual + 1e-9, (residual, per_unit, n)
+        # and it is the largest such n
+        assert (n + 1) * per_unit > residual or n >= 10**9
+
+
+def test_greedy_never_exceeds_a_beam_when_two_bins_share_it():
+    """The defect: two 100 kg bins on a 180 kg beam, a 30 kg SKU spanning both."""
+    wh = Warehouse("WH", "w", "1")
+    # Level and rack caps are set out of the way so the beam is the only scope that can bind.
+    for loc_id, bay, x in (("L1", 0, 0.0), ("L2", 0, 1.0), ("L3", 1, 2.0), ("L4", 1, 3.0)):
+        wh.locations[loc_id] = make_loc(
+            loc_id, bay=bay, x=x, y=0.0, bin_cap=100.0, beam_cap=180.0,
+            level_cap=1000.0, rack_cap=1000.0,
+        )
+    skus = {"S1": make_sku("S1", weight=30.0)}
+    opt = build_optimizer(wh, skus, {"S1": 10})
+
+    assignments = opt.greedy_starter()
+
+    per_beam: dict[tuple, float] = {}
+    for a in assignments:
+        loc = wh.locations[a.location_id]
+        key = (loc.rack_id, loc.bay, loc.shelf_level)
+        per_beam[key] = per_beam.get(key, 0.0) + a.assigned_quantity * 30.0
+    assert per_beam, "the starter placed nothing"
+    assert all(load <= 180.0 + 1e-9 for load in per_beam.values()), per_beam
+    assert sum(a.assigned_quantity for a in assignments) == 10
+    # 10 units x 30 kg = 300 kg cannot fit on one 180 kg beam; both beams must be used.
+    assert len(per_beam) == 2, per_beam
+
+
+===== src/optimization/optimizer.py — repair/anneal screen every candidate with the validator =====
+                digest = hash(self._record_digest(cand))
+                if digest in seen:
+                    stats.cycles_detected += 1
+                    stats.moves_rejected += 1
+                    continue
+                seen.add(digest)
+                cand_result = self.validator.validate(cand, record_checks=False)
+                stats.moves_attempted += 1
+                if self._is_strict_improvement(current_result, cand_result):
+                    current, current_result = cand, cand_result
+                    stats.moves_accepted += 1
+                    improved = True
+                    break
+                stats.moves_rejected += 1
+            if not improved:
+                if current_result.is_feasible:
+                    termination = "feasible"
+                elif stats.moves_attempted >= cfg.max_moves:
+                    termination = "max_moves"
+                elif time.perf_counter() - t0 >= cfg.max_seconds:
+                    termination = "max_time"
+            cand = self._random_neighbor(current)
+            if cand is None:
+                T = max(self.cfg.anneal_end, T * 0.995)
+                continue
+            cand_result = self.validator.validate(cand, record_checks=False)
+            if cand_result.is_feasible:
+                score = self.objective.evaluate(cand, self.skus, self.warehouse, self.demand, self.affinity)
+                if (
+                    math.isinf(current_score)

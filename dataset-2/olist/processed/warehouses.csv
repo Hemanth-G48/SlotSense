@@ -1,0 +1,2 @@
+warehouse_id,warehouse_name,layout_version,data_source,data_quality_status
+WH-OLIST,Olist-derived benchmark warehouse,dataset-2.olist.v1,synthetic,valid

@@ -222,6 +222,17 @@ def summarize_layout(
         "optimization_runtime_sec": runtime_sec,
         "n_batches": route_summary.get("n_batches", 0),
         "total_orders": route_summary.get("total_orders", 0),
+        "total_pick_lines": route_summary.get("total_pick_lines", 0),
+        "total_pick_stops": route_summary.get("total_pick_stops", 0),
+        "pick_time_basis": route_summary.get("pick_time_basis", "order_line"),
+        "avg_pick_lines_per_batch": (
+            round(route_summary.get("total_pick_lines", 0) / route_summary.get("n_batches", 1), 4)
+            if route_summary.get("n_batches")
+            else 0.0
+        ),
+        "total_travel_time_sec": route_summary.get("total_travel_time_sec", 0.0),
+        "total_pick_time_sec": route_summary.get("total_pick_time_sec", 0.0),
+        "total_setup_time_sec": route_summary.get("total_setup_time_sec", 0.0),
     }
     if extra:
         metrics.update(extra)

@@ -22,6 +22,22 @@ class SimulationConfig:
     picker_speed_mps: float = 1.3
     pick_time_sec: float = 8.0
     setup_time_sec: float = 10.0
+    # D37: pick time can be charged per order line (the Phase 2/3 definition) or per
+    # distinct physical stop. The per-event constant is explicit for each basis so a
+    # comparison changes the unit, not a hidden multiplier.
+    pick_time_basis: str = "order_line"
+    pick_time_stop_sec: float = 8.0
+
+    def __post_init__(self) -> None:
+        if self.pick_time_basis not in PICK_TIME_BASES:
+            raise ValueError(
+                f"pick_time_basis must be one of {PICK_TIME_BASES}, got {self.pick_time_basis!r}"
+            )
+        if self.pick_time_sec < 0 or self.pick_time_stop_sec < 0:
+            raise ValueError("pick-time constants must be non-negative")
+
+
+PICK_TIME_BASES = ("order_line", "stop")
 
 
 @dataclass
@@ -35,10 +51,8 @@ class RouteResult:
     cycle_time_sec: float
     route: tuple[str, ...] = ()
     legs: tuple[float, ...] = ()
-
-    @property
-    def n_pick_lines(self) -> int:
-        return int(round(self.pick_time_sec / 8.0)) if self.pick_time_sec else 0
+    n_pick_lines: int = 0
+    n_pick_stops: int = 0
 
 
 def build_batches(order_items: pd.DataFrame, batch_size: int) -> list[pd.DataFrame]:
@@ -78,10 +92,15 @@ def simulate_layout(
                 if loc not in pick_locations:
                     pick_locations.append(loc)
         n_pick_lines = len(batch)
+        n_pick_stops = len(pick_locations)
+        pick_units = n_pick_lines if cfg.pick_time_basis == "order_line" else n_pick_stops
+        pick_constant = (
+            cfg.pick_time_sec if cfg.pick_time_basis == "order_line" else cfg.pick_time_stop_sec
+        )
         route, distance = route_fn(pick_locations, location_dist, depot_dist, depot)
         legs = route_legs(route, location_dist, depot_dist, depot)
         travel_time = distance / cfg.picker_speed_mps
-        pick_time = n_pick_lines * cfg.pick_time_sec
+        pick_time = pick_units * pick_constant
         cycle_time = travel_time + pick_time + cfg.setup_time_sec
         results.append(
             RouteResult(
@@ -94,6 +113,8 @@ def simulate_layout(
                 cycle_time_sec=cycle_time,
                 route=tuple(route),
                 legs=tuple(legs),
+                n_pick_lines=n_pick_lines,
+                n_pick_stops=n_pick_stops,
             )
         )
     return results
@@ -105,6 +126,7 @@ def summarize(results: list[RouteResult], cfg: SimulationConfig | None = None) -
             "n_batches": 0,
             "total_orders": 0,
             "total_pick_lines": 0,
+            "total_pick_stops": 0,
             "total_distance_m": 0.0,
             "avg_distance_m": 0.0,
             "total_route_time_sec": 0.0,
@@ -114,6 +136,7 @@ def summarize(results: list[RouteResult], cfg: SimulationConfig | None = None) -
             "total_pick_time_sec": 0.0,
             "total_setup_time_sec": 0.0,
             "throughput_orders_per_hr": 0.0,
+            "pick_time_basis": cfg.pick_time_basis if cfg is not None else "order_line",
         }
     pick_time_sec = cfg.pick_time_sec if cfg is not None else 8.0
     setup_time_sec = cfg.setup_time_sec if cfg is not None else 10.0
@@ -122,11 +145,13 @@ def summarize(results: list[RouteResult], cfg: SimulationConfig | None = None) -
     total_orders = sum(r.n_orders for r in results)
     total_travel = sum(r.travel_time_sec for r in results)
     total_pick = sum(r.pick_time_sec for r in results)
-    n_pick_lines = int(round(total_pick / pick_time_sec)) if pick_time_sec else 0
+    total_pick_lines = sum(r.n_pick_lines for r in results)
+    total_pick_stops = sum(r.n_pick_stops for r in results)
     return {
         "n_batches": len(results),
         "total_orders": total_orders,
-        "total_pick_lines": n_pick_lines,
+        "total_pick_lines": total_pick_lines,
+        "total_pick_stops": total_pick_stops,
         "total_distance_m": round(total_dist, 2),
         "avg_distance_m": round(total_dist / len(results), 2),
         "total_route_time_sec": round(total_cycle, 2),
@@ -136,4 +161,5 @@ def summarize(results: list[RouteResult], cfg: SimulationConfig | None = None) -
         "total_pick_time_sec": round(total_pick, 2),
         "total_setup_time_sec": round(len(results) * setup_time_sec, 2),
         "throughput_orders_per_hr": round(total_orders / (total_cycle / 3600), 2) if total_cycle > 0 else 0.0,
+        "pick_time_basis": cfg.pick_time_basis if cfg is not None else "order_line",
     }

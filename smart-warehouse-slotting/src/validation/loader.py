@@ -50,6 +50,8 @@ def load_warehouse_from_locations(df: pd.DataFrame, warehouse_id: str = "WH_01")
             allowed_hazard=tuple(str(r["allowed_hazard"]).split("|")),
             distance_to_dispatch_m=float(r["distance_to_dispatch_m"]) if "distance_to_dispatch_m" in r and pd.notna(r["distance_to_dispatch_m"]) else 0.0,
             zone_type=r.get("zone_type", ""),
+            beam_max_weight_kg=float(r["beam_max_weight_kg"]) if r.get("beam_max_weight_kg") not in (None, "", "nan") else None,
+            level_max_weight_kg=float(r["level_max_weight_kg"]) if r.get("level_max_weight_kg") not in (None, "", "nan") else None,
             shelf_max_weight_kg=float(r["shelf_max_weight_kg"]) if r.get("shelf_max_weight_kg") not in (None, "", "nan") else None,
             rack_max_weight_kg=float(r["rack_max_weight_kg"]) if r.get("rack_max_weight_kg") not in (None, "", "nan") else None,
         )

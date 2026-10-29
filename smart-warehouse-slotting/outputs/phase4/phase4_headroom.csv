@@ -1,0 +1,21 @@
+layout,picking_policy,scope,rule_id,unit,max_utilization_pct,mean_utilization_pct,pct_over_90,pct_over_95,status,limiting_location,limiting_sku,observed,limit
+baseline_repaired,nearest_neighbor,bin_weight,LD-01,kg,100.0,21.4219,1.474,0.702,at_or_above_95,LOC002120,,30.0,30.0
+baseline_repaired,nearest_neighbor,bin_volume,VD-01,cm3,99.671,21.2802,1.404,0.632,at_or_above_95,LOC001643,,107644.68,108000.0
+baseline_repaired,nearest_neighbor,level_load,SL-01,kg,72.151,20.1127,0.0,0.0,headroom,R7-1-4 shelf 1,,207.795,288.0
+baseline_repaired,nearest_neighbor,beam_load,SL-02,kg,72.4933,18.3937,0.0,0.0,headroom,R7-4-1 bay 1 shelf 1,,130.488,180.0
+baseline_repaired,nearest_neighbor,rack_load,RK-01,kg,36.0479,16.0639,0.0,0.0,headroom,R7-1-2,,441.226,1224.0
+optimized_fit,nearest_neighbor,bin_weight,LD-01,kg,100.0,24.4901,1.008,0.543,at_or_above_95,LOC002120,,30.0,30.0
+optimized_fit,nearest_neighbor,bin_volume,VD-01,cm3,99.9289,23.1974,1.705,1.008,at_or_above_95,LOC000193,,107923.2,108000.0
+optimized_fit,nearest_neighbor,level_load,SL-01,kg,98.0612,32.6474,2.976,1.488,at_or_above_95,R5-3-1 shelf 1,,451.866,460.8
+optimized_fit,nearest_neighbor,beam_load,SL-02,kg,98.7632,26.4725,1.508,0.754,at_or_above_95,R5-3-1 bay 0 shelf 1,,284.438,288.0
+optimized_fit,nearest_neighbor,rack_load,RK-01,kg,69.3645,26.0374,0.0,0.0,headroom,R5-3-3,,1462.204,2108.0
+baseline_repaired,s_shape,bin_weight,LD-01,kg,100.0,21.4219,1.474,0.702,at_or_above_95,LOC002120,,30.0,30.0
+baseline_repaired,s_shape,bin_volume,VD-01,cm3,99.671,21.2802,1.404,0.632,at_or_above_95,LOC001643,,107644.68,108000.0
+baseline_repaired,s_shape,level_load,SL-01,kg,72.151,20.1127,0.0,0.0,headroom,R7-1-4 shelf 1,,207.795,288.0
+baseline_repaired,s_shape,beam_load,SL-02,kg,72.4933,18.3937,0.0,0.0,headroom,R7-4-1 bay 1 shelf 1,,130.488,180.0
+baseline_repaired,s_shape,rack_load,RK-01,kg,36.0479,16.0639,0.0,0.0,headroom,R7-1-2,,441.226,1224.0
+optimized_fit,s_shape,bin_weight,LD-01,kg,100.0,24.4901,1.008,0.543,at_or_above_95,LOC002120,,30.0,30.0
+optimized_fit,s_shape,bin_volume,VD-01,cm3,99.9289,23.1974,1.705,1.008,at_or_above_95,LOC000193,,107923.2,108000.0
+optimized_fit,s_shape,level_load,SL-01,kg,98.0612,32.6474,2.976,1.488,at_or_above_95,R5-3-1 shelf 1,,451.866,460.8
+optimized_fit,s_shape,beam_load,SL-02,kg,98.7632,26.4725,1.508,0.754,at_or_above_95,R5-3-1 bay 0 shelf 1,,284.438,288.0
+optimized_fit,s_shape,rack_load,RK-01,kg,69.3645,26.0374,0.0,0.0,headroom,R5-3-3,,1462.204,2108.0

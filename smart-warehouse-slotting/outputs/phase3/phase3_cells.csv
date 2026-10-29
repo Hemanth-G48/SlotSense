@@ -1,0 +1,5 @@
+cell_id,placement,fragmentation_policy,feasible,pick_rule,demand_weighted_depot_distance,numerator_m,denominator_lines,lines_total,lines_unresolved,coverage_pct,mean_per_line_m,stops,lines_quantity_short,units_short,bins_before,bins_after,multi_bin_skus_before,multi_bin_skus_after,bins_released,fallback_skus
+A1,baseline_repaired,as_is,True,quantity_aware,501569.025,501569.025,5997,5997,0,100.0,83.6367,6164,94,111,1425,1425,208,208,0,0
+A2,baseline_repaired,min_bins,True,quantity_aware,507390.725,507390.725,5997,5997,0,100.0,84.6074,6037,94,111,1425,1274,208,74,151,0
+B1,optimized_fit,as_is,True,quantity_aware,259336.575,259336.575,5997,5997,0,100.0,43.2444,6033,94,111,1290,1290,89,89,0,0
+B2,optimized_fit,min_bins,True,quantity_aware,259300.65,259300.65,5997,5997,0,100.0,43.2384,6032,94,111,1290,1271,89,71,19,3

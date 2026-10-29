@@ -1,0 +1,75 @@
+{
+  "holdout": {
+    "nearest_neighbor": {
+      "baseline": {
+        "layout": "baseline",
+        "status": "feasible",
+        "publishable": true,
+        "blocks_publication": false,
+        "n_violations": 0,
+        "n_violations_reported": 0,
+        "truncated": false,
+        "failure_categories": {},
+        "affected_skus": [],
+        "affected_bins": [],
+        "violations": [],
+        "note": "hard violations are never downgraded to warnings; a rejected layout is excluded from every publishable comparison"
+      },
+      "optimized": {
+        "layout": "optimized",
+        "status": "feasible",
+        "publishable": true,
+        "blocks_publication": false,
+        "n_violations": 0,
+        "n_violations_reported": 0,
+        "truncated": false,
+        "failure_categories": {},
+        "affected_skus": [],
+        "affected_bins": [],
+        "violations": [],
+        "note": "hard violations are never downgraded to warnings; a rejected layout is excluded from every publishable comparison"
+      }
+    },
+    "s_shape": {
+      "baseline": {
+        "layout": "baseline",
+        "status": "feasible",
+        "publishable": true,
+        "blocks_publication": false,
+        "n_violations": 0,
+        "n_violations_reported": 0,
+        "truncated": false,
+        "failure_categories": {},
+        "affected_skus": [],
+        "affected_bins": [],
+        "violations": [],
+        "note": "hard violations are never downgraded to warnings; a rejected layout is excluded from every publishable comparison"
+      },
+      "optimized": {
+        "layout": "optimized",
+        "status": "feasible",
+        "publishable": true,
+        "blocks_publication": false,
+        "n_violations": 0,
+        "n_violations_reported": 0,
+        "truncated": false,
+        "failure_categories": {},
+        "affected_skus": [],
+        "affected_bins": [],
+        "violations": [],
+        "note": "hard violations are never downgraded to warnings; a rejected layout is excluded from every publishable comparison"
+      }
+    }
+  },
+  "regimes": {
+    "B": {
+      "baseline": "FEASIBLE",
+      "optimized": "FEASIBLE"
+    },
+    "C": {
+      "baseline": "FEASIBLE",
+      "optimized": "FEASIBLE"
+    }
+  },
+  "note": "all Phase 4 layouts are feasible; the diagnostics block records the checked status, not invented failures"
+}

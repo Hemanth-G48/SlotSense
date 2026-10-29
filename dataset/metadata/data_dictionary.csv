@@ -96,3 +96,5 @@ sku_affinity,Per-scenario SKU-pair co-occurrence statistics,scenario_id + sku_a 
 sku_affinity,Per-scenario SKU-pair co-occurrence statistics,scenario_id + sku_a + sku_b,confidence_b_to_a,float,share,co_count / orders containing sku_b
 sku_affinity,Per-scenario SKU-pair co-occurrence statistics,scenario_id + sku_a + sku_b,lift,float,ratio,support / (share_a * share_b)
 sku_affinity,Per-scenario SKU-pair co-occurrence statistics,scenario_id + sku_a + sku_b,data_source,str,,derived from the scenario order history
+locations,"Physical bins with geometry, capacity, and compatibility",location_id,beam_max_weight_kg,float,kg,"permissible load for one shelf beam (rack, bay, level)"
+locations,"Physical bins with geometry, capacity, and compatibility",location_id,level_max_weight_kg,float,kg,permissible load for one shelf level across bays

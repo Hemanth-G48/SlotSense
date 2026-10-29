@@ -1,0 +1,470 @@
+{
+  "schema": "phase2-independent-verification/1.0",
+  "task": "t_89e56306 (P2-4, independent verification of the canonical Phase 2 benchmark)",
+  "generated_at_utc": "2026-10-28T23:40:58Z",
+  "generated_by": "verifier profile, own process; every number below was re-derived from the raw files, not copied from a pipeline summary",
+
+  "verdict": {
+    "status": "VERIFIED FEASIBLE",
+    "verdict_line": "VERIFIED FEASIBLE — the published comparison pair (baseline_variant=repaired_minimal + optimized) has zero violations across all hard rules, independently reproduced at the configured 10.0 m; the as-supplied canonical baseline is independently VERIFIED INFEASIBLE (1,071 CAT-01, closest forbidden pair 3.2 m) and is published only as diagnostic_baseline.",
+    "scope": "The two layouts the pipeline publishes as a comparison: baseline_variant=repaired_minimal and the optimized layout. Both were re-validated independently at the configured 10.0 m radius with the production Validator AND with my own pair-by-pair CAT-01 scan: 0 violations, 0 hard violations, 100 % assignment completeness.",
+    "as_supplied_input": "VERIFIED INFEASIBLE. dataset/processed/storage_assignments_baseline.csv has 1071 CAT-01 violations at 10.0 m (binding constraint: 3-D category separation; closest forbidden pair 3.2 m). The pipeline reports this as diagnostic_baseline and does NOT use it as the comparison baseline.",
+    "improvement_caveat": "The published travel improvement is measured against the feasibility-repaired baseline, not against the as-supplied layout: -55.653 % vs repaired (1,691,478.55 m -> 750,119.50 m) and -56.061 % vs as-supplied (1,707,167.15 m). The repair itself moved 96/1425 records (6.737 %) with the objective disabled and changed travel by only -0.919 %, so the published figure is conservative, not inflated.",
+    "gate": "The evaluation gate is open on the delivered run (evaluation_status=OK, comparison_valid=true, blocked_layouts=[]). It was driven closed on purpose and returns exit code 1 with 0 published comparison rows when either layout is infeasible (see gate_and_exit_codes).",
+    "not_verified": [
+      "The routing simulator and the objective function were not re-implemented from scratch; I reproduced their outputs exactly with the same code and checked both layouts are feasible, but I did not independently prove the travel metric's physical model.",
+      "The full pytest suite was not re-run by this card (P2-3/P2-3B handoffs report 181 passed); verification here is artifact-level.",
+      "The Phase-1 claim '4 SL-02 beam violations after optimisation' could not be reproduced from the retained pre-Phase-2 artifact (see findings F6)."
+    ]
+  },
+
+  "environment": {
+    "repo": "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting",
+    "dataset": "/home/hemanth/hackathon/epoch_hackathon/dataset/processed",
+    "python": ".venv/bin/python (CPython 3.14.4)",
+    "config": "configs/benchmark.json",
+    "vcs": "working copy is not a git repository (git rev-parse fails); attribution relies on mtimes and sha256",
+    "mutations_by_this_card": "none in the repo except this file. All pipeline re-runs wrote to /tmp/p2v4/** and to a byte-faithful sandbox copy at /tmp/p2v4/sbx/**. The canonical dataset, config, source, tests and delivered outputs/ were not modified."
+  },
+
+  "radius": {
+    "config_path": "configs/benchmark.json",
+    "configured_value": 10.0,
+    "assertion": "PASS - the script asserts the configured value equals 10.0 and passes it to Validator(..., separation_radius_m=10.0); no default was used",
+    "effective_radius_in_validator": 10.0,
+    "radius_present_in_run_metadata": true,
+    "radius_locations": [
+      "outputs/optimized/optimization_summary.json: separation_radius_m=10.0 and separation_grid.radius_m=10.0",
+      "outputs/evaluation/evaluation_summary.json: separation_radius_m=10.0 and assumptions.separation_radius_m=10.0",
+      "outputs/validation_status.json: separation_radius_m=10.0",
+      "outputs/optimized/run_history.json: separation_radius_m=10.0 on entries run_id>=3 (run_id 1-2 predate the field)"
+    ]
+  },
+
+  "inputs": {
+    "sha256": {
+      "dataset/processed/locations.csv": "ff27b087629564de429c766d3b1873475e5cf97b159c8606b80fa241c83e03b4",
+      "dataset/processed/locations.csv.bak-pre-limits": "1b4c378fe5d985371e258dca6cabba3c0556d8e79d26407834625d9af0e77538",
+      "dataset/processed/products.csv": "296bd089c6c8391abf7a36106317a6b380e6f7c7c681525501961610eb7d5f86",
+      "dataset/processed/compatibility_rules.csv": "b888700826d96960b45b28cb31e5c5ee517cbe4d783191baac2341c144d07655",
+      "dataset/processed/inventory.csv": "76fdffc1fb02dabbdbb03f82bb2e3e9257963ee42c2dfc8a46860dd2b0098fe3",
+      "dataset/processed/storage_assignments_baseline.csv": "c564c0778de5e124e310e9d1e3b0071469bb274a0107bee045ab1cd5addbe944",
+      "configs/benchmark.json": "e786f77c69b1a97039fc3a051cf43d291e87840c6228fb65cb8d02b037cfda76",
+      "outputs/optimized/optimized_assignments.csv": "1269e1114e77b631f06cbcdbcb9aaf2588246f8a6cbb8e6ea1d7439444cf16f0",
+      "outputs/baseline_repaired_assignments.csv": "17380197ee66e1ced7a341ce4b15bdb51774cb479e2bfd9ca14deb8ababdd3fa",
+      "outputs/baseline_assignments.csv": "5c2a1626a2758ed6f5a50d75ebbc5e3d2e33fce50b7e71b108d00750a0775dfa",
+      "outputs/optimized/optimization_summary.json": "6b3fbfdee4624ded9167f0630061a2dca9f5e3aa69dd5fc3fa4cbb9e54c86d96",
+      "outputs/evaluation/evaluation_summary.json": "4ad2a3e3e778f8cbab76a82e06b9dc3caeffc74ef5f69dfb9213d603739139ac"
+    },
+    "rule_matrix": {
+      "rows": 55,
+      "forbidden_category_pairs": 13,
+      "forbidden_pairs_matches_loader": true,
+      "forbidden_pairs_matches_optimizer_summary": "yes (separation_grid.forbidden_pairs = 13)"
+    },
+    "inventory": {"skus": 1200, "units": 6375},
+    "freshness_vs_sources": {
+      "newest_source_file": "configs/benchmark.json",
+      "newest_source_mtime_utc": "2026-10-28T21:12:58Z",
+      "optimized_assignments_mtime_utc": "2026-10-28T23:20:35Z",
+      "baseline_repaired_mtime_utc": "2026-10-28T23:20:00Z",
+      "optimized_is_fresh": true,
+      "repaired_is_fresh": true,
+      "action": "artifacts were fresh; they were nonetheless re-generated from scratch in /tmp and were byte-identical (see reproducibility)"
+    }
+  },
+
+  "layouts": {
+    "as_supplied_baseline": {
+      "role": "diagnostic (the canonical input layout; not the published comparison baseline)",
+      "source": "dataset/processed/storage_assignments_baseline.csv",
+      "radius_m": 10.0,
+      "checks_run": 20699,
+      "violations_total": 1071,
+      "violations_by_rule": {"CAT-01": 1071},
+      "violations_by_severity": {"high": 1071},
+      "feasibility": "INFEASIBLE",
+      "is_feasible": false,
+      "safety_compliant": false,
+      "assignments": 1425,
+      "distinct_skus": 1200,
+      "distinct_bins": 1425,
+      "units_assigned": 6375,
+      "units_on_hand": 6375,
+      "unresolved_skus": [],
+      "skus_short": {},
+      "skus_over": {},
+      "duplicate_sku_bin_rows": 0,
+      "assignments_to_nonexistent_bins": [],
+      "multi_sku_bins": 0,
+      "independent_cat01_pairs_by_radius": {"10_m": 1071, "5_m": 169, "2_m": 0},
+      "forbidden_bin_pairs_evaluated": 114986,
+      "closest_forbidden_pair_m": 3.2,
+      "beam_sl02_violations": 0,
+      "beam_groups_checked": 960,
+      "max_beam_utilisation_pct": 55.56,
+      "max_level_utilisation_pct": 34.72,
+      "max_rack_utilisation_pct": 29.16,
+      "example_violations_observed_over_limit": [
+        {"pair": "LOC002058 (CAT010) - LOC001971 (CAT001)", "observed_m": 7.64, "limit_m": 10.0},
+        {"pair": "LOC002058 (CAT010) - LOC001942 (CAT001)", "observed_m": 7.759, "limit_m": 10.0},
+        {"pair": "LOC002058 (CAT010) - LOC001952 (CAT001)", "observed_m": 7.747, "limit_m": 10.0}
+      ]
+    },
+    "repaired_baseline": {
+      "role": "evaluated baseline (published comparison, baseline_variant=repaired_minimal)",
+      "source": "outputs/baseline_repaired_assignments.csv",
+      "radius_m": 10.0,
+      "checks_run": 18077,
+      "violations_total": 0,
+      "violations_by_rule": {},
+      "violations_by_severity": {},
+      "feasibility": "FEASIBLE",
+      "is_feasible": true,
+      "safety_compliant": true,
+      "assignments": 1425,
+      "distinct_skus": 1200,
+      "distinct_bins": 1425,
+      "units_assigned": 6375,
+      "units_on_hand": 6375,
+      "unresolved_skus": [],
+      "skus_short": {},
+      "skus_over": {},
+      "duplicate_sku_bin_rows": 0,
+      "assignments_to_nonexistent_bins": [],
+      "multi_sku_bins": 0,
+      "independent_cat01_pairs_by_radius": {"10_m": 0, "5_m": 0, "2_m": 0},
+      "closest_forbidden_pair_m": 10.8,
+      "beam_sl02_violations": 0,
+      "beam_groups_checked": 922,
+      "max_beam_utilisation_pct": 72.49,
+      "max_level_utilisation_pct": 72.15,
+      "max_rack_utilisation_pct": 36.05
+    },
+    "optimized": {
+      "role": "optimized layout (published comparison)",
+      "source": "outputs/optimized/optimized_assignments.csv",
+      "radius_m": 10.0,
+      "checks_run": 15167,
+      "violations_total": 0,
+      "violations_by_rule": {},
+      "violations_by_severity": {},
+      "feasibility": "FEASIBLE",
+      "is_feasible": true,
+      "safety_compliant": true,
+      "assignments": 1288,
+      "distinct_skus": 1200,
+      "distinct_bins": 1288,
+      "units_assigned": 6375,
+      "units_on_hand": 6375,
+      "unresolved_skus": [],
+      "skus_short": {},
+      "skus_over": {},
+      "duplicate_sku_bin_rows": 0,
+      "assignments_to_nonexistent_bins": [],
+      "multi_sku_bins": 0,
+      "independent_cat01_pairs_by_radius": {"10_m": 0, "5_m": 0, "2_m": 0},
+      "closest_forbidden_pair_m": 27.2,
+      "beam_sl02_violations": 0,
+      "beam_groups_checked": 662,
+      "max_beam_utilisation_pct": 99.37,
+      "max_level_utilisation_pct": 99.56,
+      "max_rack_utilisation_pct": 73.2
+    }
+  },
+
+  "integrity": {
+    "per_sku_units_assigned_equals_on_hand": {
+      "as_supplied_baseline": true,
+      "repaired_baseline": true,
+      "optimized": true
+    },
+    "skus_short": [],
+    "skus_over": [],
+    "duplicate_sku_bin_rows": 0,
+    "sku_assigned_to_nonexistent_bin": [],
+    "multi_sku_bins": 0,
+    "totals": {
+      "as_supplied_baseline": {"rows": 1425, "distinct_skus": 1200, "units": 6375},
+      "repaired_baseline": {"rows": 1425, "distinct_skus": 1200, "units": 6375},
+      "optimized": {"rows": 1288, "distinct_skus": 1200, "units": 6375}
+    },
+    "delivered_artifact_cross_check": {
+      "outputs/validation_checks_baseline.csv": {"rows": 20699, "failed": 1071, "failed_by_rule": {"CAT-01": 1071}},
+      "outputs/evaluation/validation_checks_baseline.csv": {"rows": 18077, "failed": 0},
+      "outputs/evaluation/validation_checks_optimized.csv": {"rows": 15167, "failed": 0},
+      "outputs/constraint_audit.csv": {"rows": 1071, "failed": 1071},
+      "outputs/evaluation/constraint_audit_baseline.csv": {"rows": 1425, "failed": 0},
+      "outputs/evaluation/constraint_audit_optimized.csv": {"rows": 1288, "failed": 0},
+      "outputs/evaluation/constraint_audit_baseline_as_supplied.csv": {"rows": 1071, "failed": 1071}
+    }
+  },
+
+  "cat01_sensitivity": {
+    "definition": "count of unordered bin pairs holding a forbidden category pair at 3-D Euclidean distance < radius (inclusive boundary: d + 1e-9 >= radius passes), computed by my own full O(N^2) scan over all assignments, not the validator's spatial hash",
+    "as_supplied_baseline": {"10_m": 1071, "5_m": 169, "2_m": 0},
+    "repaired_baseline": {"10_m": 0, "5_m": 0, "2_m": 0},
+    "optimized": {"10_m": 0, "5_m": 0, "2_m": 0},
+    "note": "The as-supplied baseline is infeasible only because the radius is 10 m: at 5 m 169 pairs still violate, at 2 m none do. The validator's own count at 10 m (1071) equals my independent count exactly; the validator evaluated 3594 forbidden pairs inside its 3-D neighbourhood window, my full scan sees 114,986 forbidden pairs in total.",
+    "validator_coverage_caveat": "The validator's spatial hash only evaluates forbidden pairs whose cells differ by at most 1 per axis, which is sound (any pair closer than R must fall in adjacent cells) but makes checks_run an under-count of CAT-01 coverage: the optimized layout records ZERO CAT-01 checks (its closest forbidden pair is 27.2 m, so no pair enters the window) and the repaired baseline records 1039. The 0-violation CAT-01 verdict for the optimized layout therefore rests on my full 95,400-pair scan, not on the validator's window count."
+  },
+
+  "structural_sl02": {
+    "as_supplied_baseline": {"beam_groups": 960, "over_limit": 0, "max_utilisation_pct": 55.56},
+    "repaired_baseline": {"beam_groups": 922, "over_limit": 0, "max_utilisation_pct": 72.49},
+    "optimized": {"beam_groups": 662, "over_limit": 0, "max_utilisation_pct": 99.37},
+    "level_sl01_over_limit": {"as_supplied_baseline": 0, "repaired_baseline": 0, "optimized": 0},
+    "rack_rk01_over_limit": {"as_supplied_baseline": 0, "repaired_baseline": 0, "optimized": 0},
+    "tightest_optimized_groups_observed_over_limit": [
+      {"scope": "beam (rack R5-3-1, bay 0, shelf 3)", "observed_kg": 214.64, "limit_kg": 216.0, "utilisation_pct": 99.37},
+      {"scope": "beam (rack R5-1-1, bay 0, shelf 2)", "observed_kg": 247.88, "limit_kg": 252.0, "utilisation_pct": 98.36},
+      {"scope": "level (rack R5-3-1, shelf 1)", "observed_kg": 458.76, "limit_kg": 460.8, "utilisation_pct": 99.56}
+    ],
+    "note": "Beam limits are nearly binding in the optimized layout (99.4 % of the tightest beam) but not exceeded; no SL-02 violation remains in any delivered layout."
+  },
+
+  "baseline_repair": {
+    "source_artifact": "outputs/baseline_repaired_assignments.csv",
+    "initial_violations": 1071,
+    "initial_violations_by_rule": {"CAT-01": 1071},
+    "final_violations": 0,
+    "moves_attempted": 96,
+    "moves_accepted": 96,
+    "moves_rejected": 0,
+    "termination_reason": "feasible",
+    "objective_enabled": false,
+    "scope": "feasibility only",
+    "rows": 1425,
+    "same_sku_per_row_as_supplied": 1425,
+    "same_quantity_per_row_as_supplied": 1425,
+    "records_relocated": 96,
+    "records_unchanged": 1329,
+    "relocations_pct": 6.737,
+    "total_displacement_m": 1471.373,
+    "mean_displacement_m": 15.327,
+    "median_displacement_m": 12.01,
+    "max_displacement_m": 36.003,
+    "distinct_bins_after_repair": 1425,
+    "destination_bins_that_were_occupied_by_a_record_that_also_moved": 17,
+    "swap_occupants_confirmed_moved_out": "17/17 (each of the 17 destination bins was occupied in the as-supplied layout, and in every case that occupant is itself one of the 96 relocated records; the final layout has 1425 distinct bins)",
+    "source_bins_vacated": 79,
+    "verification": "all six movement figures were recomputed from the two CSVs and locations.csv with math.dist and match the summary exactly; every row keeps its SKU and quantity, only the bin changes, and the repaired layout has 1425 distinct bins with no duplicate (sku,bin) and no multi-SKU bin",
+    "not_an_optimization": "the repair is driven by validator-screened relocation with the objective disabled; the optimized layout is a separate phase-5 product (1288 bins, 750,119.50 m travel vs 1,691,478.55 m for the repaired baseline)"
+  },
+
+  "gate_and_exit_codes": {
+    "canonical_run_all": {
+      "command": "cd <sandbox copy of repo> && .venv/bin/python app/main.py run-all",
+      "exit_code": 0,
+      "evaluation_status": "OK",
+      "comparison_valid": true,
+      "blocked_layouts": [],
+      "comparison_rows_published": 18,
+      "feasibility": {"baseline": "FEASIBLE 0", "optimized": "FEASIBLE 0"},
+      "note": "run in a byte-faithful sandbox copy (/tmp/p2v4/sbx) so the delivered outputs/ tree was not rewritten; the regenerated artifacts were then hash-compared to the delivered ones (18/18 identical)"
+    },
+    "canonical_run_all_with_unrepairable_fixture": {
+      "command": "cd <sandbox copy of repo> && .venv/bin/python app/main.py run-all --processed /tmp/p2v4/fixture/processed",
+      "fixture": "copy of the canonical dataset with one extra inventory row for a SKU that does not exist in products.csv (COMP-01 + INV-02, unrepairable by relocation); the canonical dataset was not touched",
+      "exit_code": 1,
+      "evaluation_status": "BLOCKED_INFEASIBLE_LAYOUT",
+      "blocked_layouts": ["baseline", "optimized"],
+      "comparison_rows_published": 0,
+      "observed": "validate -> 1073 violations; repair 1073 -> 2, terminated=no_improving_move; the repaired layout was REFUSED (baseline_variant stayed as_supplied, conservation 6375/6380 exact=false); simulate printed the gate message and the process exited 1"
+    },
+    "simulate_with_infeasible_layout": {
+      "command": ".venv/bin/python app/main.py simulate --processed /tmp/p2v4/sbx/dataset/processed --scenario A --optimized /tmp/p2v4/sbx/dataset/processed/storage_assignments_baseline.csv --output /tmp/p2v4/cli_blocked_opt_eval",
+      "exit_code": 1,
+      "evaluation_status": "BLOCKED_INFEASIBLE_LAYOUT",
+      "comparison_valid": false,
+      "blocked_layouts": ["optimized"],
+      "stderr": "BLOCKED by the feasibility gate: ... The diagnostic metrics are not valid evidence; fix the layouts and re-run."
+    },
+    "run_phase6_probes": {
+      "evaluated_baseline_as_supplied": {
+        "evaluation_status": "BLOCKED_INFEASIBLE_LAYOUT",
+        "blocked_layouts": ["baseline"],
+        "comparison_rows_published": 0,
+        "diagnostic_comparison_rows": 18,
+        "all_diagnostic_rows_labelled_diagnostic_only": true,
+        "comparison_valid": false
+      },
+      "infeasible_optimized_layout": {
+        "evaluation_status": "BLOCKED_INFEASIBLE_LAYOUT",
+        "blocked_layouts": ["optimized"],
+        "comparison_rows_published": 0
+      }
+    },
+    "exit_helper": {
+      "function": "app.main._exit_if_evaluation_blocked (the exact function run-all and simulate call)",
+      "blocked_baseline": {"raised": true, "exit_code": 1},
+      "blocked_optimized": {"raised": true, "exit_code": 1},
+      "ok_repaired": {"raised": false, "exit_code": 0}
+    },
+    "answers_to_the_card": {
+      "optimization_summary_feasibility_matches_independent_validation": true,
+      "evaluation_status_blocks_when_either_layout_is_infeasible": true,
+      "run_all_exits_non_zero_when_the_gate_blocks": "yes, exit 1 (measured on the fixture run); exit 0 on the canonical feasible run",
+      "effective_radius_present_in_run_metadata": true
+    }
+  },
+
+  "reproducibility": {
+    "independent_reruns_of_the_canonical_pipeline": {
+      "baseline_repair": {"sha256": "17380197ee66e1ced7a341ce4b15bdb51774cb479e2bfd9ca14deb8ababdd3fa", "byte_identical_to_delivered": true, "stats_match": true},
+      "optimize": {"sha256": "1269e1114e77b631f06cbcdbcb9aaf2588246f8a6cbb8e6ea1d7439444cf16f0", "byte_identical_to_delivered": true, "summary_numbers_equal": true},
+      "evaluation": {"metric_values_equal": true, "comparison_table_byte_equal": true, "rows": 18},
+      "cli_run_all_in_sandbox": {
+        "artifacts_compared": 18,
+        "artifacts_byte_identical": 18,
+        "summary_json_differences": [
+          "optimization_summary.baseline_repair.runtime_sec (wall clock)",
+          "optimization_summary.runtime_sec (wall clock)",
+          "evaluation_summary.baseline_repair.runtime_sec (wall clock)",
+          "evaluation_summary.optimized.optimization_runtime_sec (wall clock)"
+        ],
+        "non_runtime_differences": 0
+      }
+    },
+    "determinism": "canonical seed 42; two independent repair runs and two independent optimizer runs produced identical sha256"
+  },
+
+  "cross_checks_vs_pipeline_claims": {
+    "optimization_summary": {
+      "separation_radius_m": {"claim": 10.0, "independent": 10.0, "match": true},
+      "feasibility_status": {"claim": "FEASIBLE", "independent": "FEASIBLE", "match": true},
+      "n_violations": {"claim": 0, "independent": 0, "match": true},
+      "violations_by_rule": {"claim": {}, "independent": {}, "match": true},
+      "baseline_feasibility_status": {"claim": "FEASIBLE", "independent": "FEASIBLE", "match": true},
+      "baseline_n_violations": {"claim": 0, "independent": 0, "match": true},
+      "baseline_checks_run": {"claim": 18077, "independent": 18077, "match": true},
+      "baseline_feasibility_status_as_supplied": {"claim": "INFEASIBLE", "independent": "INFEASIBLE", "match": true},
+      "baseline_n_violations_as_supplied": {"claim": 1071, "independent": 1071, "match": true},
+      "units_placed": {"claim": 6375, "independent": 6375, "match": true},
+      "n_assignments": {"claim": 1288, "independent": 1288, "match": true},
+      "separation_grid": {"claim": {"radius_m": 10.0, "forbidden_pairs": 13, "cells": 14, "bins_indexed": 1288}, "independent": {"radius_m": 10.0, "forbidden_pairs": 13, "cells": 14, "bins_indexed": 1288}, "match": true}
+    },
+    "evaluation_summary": {
+      "evaluation_status": {"claim": "OK", "independent": "OK", "match": true},
+      "comparison_valid": {"claim": true, "independent": true, "match": true},
+      "blocked_layouts": {"claim": [], "independent": [], "match": true},
+      "feasibility.baseline": {"claim": {"status": "FEASIBLE", "n_violations": 0, "checks_run": 18077}, "independent": {"status": "FEASIBLE", "n_violations": 0, "checks_run": 18077}, "match": true},
+      "feasibility.optimized": {"claim": {"status": "FEASIBLE", "n_violations": 0, "checks_run": 15167}, "independent": {"status": "FEASIBLE", "n_violations": 0, "checks_run": 15167}, "match": true},
+      "diagnostic_baseline": {"claim": {"status": "INFEASIBLE", "n_violations": 1071, "by_rule": {"CAT-01": 1071}, "checks_run": 20699}, "independent": {"status": "INFEASIBLE", "n_violations": 1071, "by_rule": {"CAT-01": 1071}, "checks_run": 20699}, "match": true},
+      "comparison_rows": {"claim": 18, "independent": 18, "match": true}
+    },
+    "validation_status_json": {
+      "claim": {"n_assignments": 1425, "n_violations": 1071, "checks_run": 20699, "feasible": false, "safety_compliant": false, "feasibility_pct": 94.08, "valid_assignments": 1129, "required_assignments": 1200},
+      "independent": {"n_assignments": 1425, "n_violations": 1071, "checks_run": 20699, "feasible": false, "safety_compliant": false, "feasibility_pct": 94.08, "valid_assignments": 1129, "required_assignments": 1200},
+      "match": true
+    },
+    "travel_metrics": {
+      "published_baseline_repaired_m": 1691478.55,
+      "published_optimized_m": 750119.5,
+      "published_as_supplied_diagnostic_m": 1707167.15,
+      "percent_change_published": -55.65,
+      "percent_change_recomputed_vs_repaired": -55.653,
+      "percent_change_recomputed_vs_as_supplied": -56.061,
+      "repair_effect_on_travel_pct": -0.919,
+      "both_layouts_feasible_so_comparison_publishable": true
+    },
+    "checks_run_audit": {
+      "formula": "checks_run == 10 x assignments (SP-01, REF-01, REF-02, HZ-01, HD-01, ER-01, QTY-01, LD-01, VD-01, AS-01) + 1200 x INV-03 + 1 x COMP-01 + SL-02 + SL-01 + RK-01 groups + CAT-01 window pairs",
+      "as_supplied_baseline": {"computed": "10*1425 + 1200 + 1 + 960 + 550 + 144 + 3594", "value": 20699, "reported": 20699, "match": true},
+      "repaired_baseline": {"computed": "10*1425 + 1200 + 1 + 922 + 527 + 138 + 1039", "value": 18077, "reported": 18077, "match": true},
+      "optimized": {"computed": "10*1288 + 1200 + 1 + 662 + 336 + 88 + 0", "value": 15167, "reported": 15167, "match": true},
+      "structural_group_counts_match_independent_recount": true
+    },
+    "mismatches_found": []
+  },
+
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "info",
+      "title": "The as-supplied canonical baseline is genuinely infeasible at 10 m, and only at 10 m",
+      "evidence": "1071 CAT-01 pairs (min 3.2 m); 169 pairs < 5 m; 0 pairs < 2 m; all 1071 are severity=high; 71 of 1200 SKUs are implicated (assignment feasibility 94.08 %).",
+      "impact": "Any claim that the supplied layout is feasible is false; the pipeline correctly reports it as diagnostic_baseline/INFEASIBLE."
+    },
+    {
+      "id": "F2",
+      "severity": "major",
+      "title": "The published comparison baseline is a feasibility-repaired layout, not the supplied one",
+      "evidence": "baseline_variant=repaired_minimal; 96/1425 records moved (6.737 %, 1471.373 m total, median 12.01 m, max 36.003 m), objective disabled, 0 rejected moves; the as-supplied metrics appear only under diagnostic_baseline with diagnostic_only=true.",
+      "impact": "Both published layouts are feasible, so the comparison is valid evidence as labelled, but 'the baseline is feasible' must always be qualified as 'the repaired baseline'. The improvement against the as-supplied layout is -56.06 %, i.e. the published -55.65 % is conservative."
+    },
+    {
+      "id": "F3",
+      "severity": "info",
+      "title": "The result is deterministic and fully reproducible",
+      "evidence": "Independent reruns of prepare_baseline_variant, run_phase5 and run_phase6 produced byte-identical assignments (17380197..., 1269e111...) and an identical 18-row comparison table; a full CLI run-all in a sandbox reproduced 18/18 delivered artifact files byte-for-byte, with only wall-clock runtime fields differing.",
+      "impact": "No run-order or hidden-state dependency was found in the delivered evidence."
+    },
+    {
+      "id": "F4",
+      "severity": "major",
+      "title": "Structural limit schema: Phase 1 added derived beam/level caps and redefined shelf_max; the derivation is undocumented in the Phase-1 note",
+      "evidence": "locations.csv vs locations.csv.bak-pre-limits: 2304/2304 rows differ only in shelf_max_weight_kg (uniform factor 2.88) plus two added columns beam_max_weight_kg, level_max_weight_kg. Geometry (x,y,z), width/height/depth, max_weight_kg, usable_volume_cm3 and rack_max_weight_kg are identical on all rows. The current values are systematically derived from the unchanged per-bin cap: beam = 0.90 x (2 bins), level = shelf_max = 0.72 x (4 bins) = 2.88 x bin cap, rack = 0.85 x summed beam caps (2304/2304 rows match; src/data_processing/generate.py STRUCTURAL_FACTORS = beam 0.90 / level 0.80 / rack 0.85). In the backup, shelf_max_weight_kg equalled max_weight_kg on every row, i.e. it was a per-bin duplicate before being redefined as the level alias. Dataset validation: ok, hard_errors 0.",
+      "impact": "The 0-violation structural result is valid under the current schema because both the validator and the optimizer read these fields, and they are internally coherent. But the magnitudes are a Phase-1 construction, and PHASE_1_BASELINE_VERIFICATION.md SS E.5 records only 'two fields added', not the derating factors or the shelf_max redefinition. P2-5/status docs should document the derivation and the fact that shelf_max is now a level alias."
+    },
+    {
+      "id": "F5",
+      "severity": "major",
+      "title": "Stale pre-Phase-2 artifacts exist and one evidence path named by the follow-up card does not exist",
+      "evidence": "outputs/optimization_summary.json does NOT exist (the live summary is outputs/optimized/optimization_summary.json). outputs/optimization/optimization_summary.json is a pre-Phase-2 artifact (mtime 2026-10-28T17:53Z; n_assignments 1358; no feasibility_status, no baseline_variant, no separation_radius_m) and outputs/optimization/optimized_assignments.csv (1358 rows) re-validates today as 1540 CAT-01 + 3 SL-02 + 3 SL-01, INFEASIBLE.",
+      "impact": "Citing the outputs/optimization/ pair as Phase-2 evidence would report an infeasible layout and a summary without the new status vocabulary. Use outputs/optimized/, outputs/evaluation/ and outputs/baseline_repaired_assignments.csv."
+    },
+    {
+      "id": "F6",
+      "severity": "minor",
+      "title": "Phase-1 '4 SL-02 after optimisation' is not reproducible from the retained artifact",
+      "evidence": "The retained pre-Phase-2 optimized CSV yields 3 SL-02 + 3 SL-01 (plus 1540 CAT-01) under the current validator; run_history run 2 records 4 violations in total without a per-rule breakdown. The delivered optimized layout has 0 SL-02 and 0 SL-01.",
+      "impact": "The defect is real in kind (beam violations existed) but the exact '4' cannot be re-derived from what is on disk; documentation should attribute it to the Phase-1 measurement or mark it 'not re-measured'."
+    },
+    {
+      "id": "F7",
+      "severity": "info",
+      "title": "docs/PHASE_2_CONSTRAINT_ENGINE.md appeared while P2-4 was running",
+      "evidence": "mtime 2026-10-29T04:58:42 IST (P2-4 claimed at ~04:57); its 'Verdict: COMPLETE / -55.65 %' and the numbers I spot-checked (1,071; 13 forbidden pairs; 10.0 m; beam 55.6 %, level 34.7 %) are consistent with this verification, but P2-5 (t_54e3bd6d) is still todo and owns that file.",
+      "impact": "Coordination only: P2-5 should review/own the file rather than regenerate it blindly, and must not cite the missing outputs/optimization_summary.json (F5)."
+    },
+    {
+      "id": "F8",
+      "severity": "info",
+      "title": "run_history entries 1-2 predate the radius field",
+      "evidence": "separation_radius_m=10.0 is present on run_id>=3; run_id 1-2 (2026-10-28T17:23Z, 20:56Z) have no radius key.",
+      "impact": "None for the delivered run; the effective radius is present in both summaries and in validation_status.json. Only historical entries are ambiguous."
+    }
+  ],
+
+  "commands_run": [
+    ".venv/bin/python /tmp/p2v4/validate.py            # independent validation of all three layouts + own CAT-01 scan + integrity + cross-checks -> /tmp/p2v4/validate.json",
+    ".venv/bin/python /tmp/p2v4/reproduce.py           # rerun prepare_baseline_variant / run_phase5 / run_phase6, gate probes, exit-helper probe -> /tmp/p2v4/reproduce.json",
+    ".venv/bin/python /tmp/p2v4/extras.py              # delivered check/audit exports, grid cells, run history, legacy artifacts -> /tmp/p2v4/extras.json",
+    ".venv/bin/python /tmp/p2v4/final_checks.py        # legacy optimized artifact, independent feasibility metric, travel deltas -> /tmp/p2v4/final_checks.json",
+    ".venv/bin/python /tmp/p2v4/structural_utilisation.py   # max beam/level/rack utilisation per layout -> /tmp/p2v4/struct.json (renamed: structural_utilisation.py)",
+    ".venv/bin/python /tmp/p2v4/limit_provenance.py    # current vs backup structural limits, coherence, sensitivity -> /tmp/p2v4/limit_provenance.json",
+    ".venv/bin/python /tmp/p2v4/limit_semantics.py     # backup shelf_max == max_weight; derived-cap identities -> /tmp/p2v4/limit_semantics.json",
+    ".venv/bin/python /tmp/p2v4/locations_diff.py      # locations.csv vs locations.csv.bak-pre-limits -> /tmp/p2v4/locations_diff.json",
+    ".venv/bin/python /tmp/p2v4/compare_sandbox.py     # sandbox run-all artifacts vs delivered -> /tmp/p2v4/sandbox_compare.json",
+    "sha256sum <dataset inputs, config, delivered artifacts>",
+    "stat -c '%y %n' <dataset inputs, config, delivered artifacts>",
+    "cd /tmp/p2v4/sbx/smart-warehouse-slotting && .venv/bin/python app/main.py run-all                      # exit 0",
+    "cd /tmp/p2v4/sbx_block/smart-warehouse-slotting && .venv/bin/python app/main.py run-all --processed /tmp/p2v4/fixture/processed   # exit 1 (gate blocked)",
+    "cd /tmp/p2v4/sbx/smart-warehouse-slotting && .venv/bin/python app/main.py simulate --processed /tmp/p2v4/sbx/dataset/processed --scenario A --optimized /tmp/p2v4/sbx/dataset/processed/storage_assignments_baseline.csv --output /tmp/p2v4/cli_blocked_opt_eval   # exit 1 (gate blocked on optimized)"
+  ],
+
+  "scratch_scripts": [
+    "/tmp/p2v4/validate.py",
+    "/tmp/p2v4/reproduce.py",
+    "/tmp/p2v4/extras.py",
+    "/tmp/p2v4/final_checks.py",
+    "/tmp/p2v4/structural_utilisation.py",
+    "/tmp/p2v4/limit_provenance.py",
+    "/tmp/p2v4/limit_semantics.py",
+    "/tmp/p2v4/locations_diff.py",
+    "/tmp/p2v4/shelf_max_diff.py",
+    "/tmp/p2v4/make_fixture.py",
+    "/tmp/p2v4/compare_sandbox.py"
+  ]
+}

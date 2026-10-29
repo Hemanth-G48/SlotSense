@@ -186,6 +186,57 @@ def generate_products(n_skus: int, seed: int) -> list[dict[str, Any]]:
 # Warehouse topology + distance graph
 # ---------------------------------------------------------------------------
 
+# ---------------------------------------------------------------------------
+# Structural limits (PROJECT.md R1.2, ARCHITECTURE.md §5.2 / ADR-9)
+# ---------------------------------------------------------------------------
+# Four scopes, each with its own field, validated independently by the constraint
+# engine: bin (LD-01), beam (SL-02), level (SL-01), rack (RK-01).
+#
+# The limits are proportional because the structure is uniform -- one beam carries
+# `bins_per_shelf` bins, one level carries `bays` beams, one rack carries `shelves`
+# levels. Independence is therefore a property of the LOADS, not of the limits: a
+# single beam can be overloaded while its level average is legal, which is why both
+# checks exist and both gate.
+STRUCTURAL_FACTORS = {"beam": 0.90, "level": 0.80, "rack": 0.85}
+
+
+def apply_structural_limits(
+    locations: list[dict[str, Any]],
+    factors: dict[str, float] | None = None,
+) -> list[dict[str, Any]]:
+    """Fill beam/level/rack limits from bin capacity, consistently, after build.
+
+    beam  = sum of bin capacities on that beam          x beam factor
+    level = sum of beam capacities at that level        x level factor
+    rack  = sum of beam capacities on that rack         x rack factor
+    """
+    from collections import Counter, defaultdict
+
+    f = {**STRUCTURAL_FACTORS, **(factors or {})}
+    per_beam = Counter(
+        (loc["rack_id"], loc["bay"], loc["shelf_level"]) for loc in locations
+    )
+    beam_cap: dict[tuple, float] = {}
+    for loc in locations:
+        key = (loc["rack_id"], loc["bay"], loc["shelf_level"])
+        beam_cap[key] = float(loc["max_weight_kg"]) * per_beam[key] * f["beam"]
+
+    level_cap: dict[tuple, float] = defaultdict(float)
+    rack_cap: dict[str, float] = defaultdict(float)
+    for (rack, bay, level), cap in beam_cap.items():
+        level_cap[(rack, level)] += cap
+        rack_cap[rack] += cap
+
+    for loc in locations:
+        key = (loc["rack_id"], loc["bay"], loc["shelf_level"])
+        loc["beam_max_weight_kg"] = round(beam_cap[key], 3)
+        level = round(level_cap[(loc["rack_id"], loc["shelf_level"])] * f["level"], 3)
+        loc["level_max_weight_kg"] = level
+        loc["shelf_max_weight_kg"] = level  # legacy alias
+        loc["rack_max_weight_kg"] = round(rack_cap[loc["rack_id"]] * f["rack"], 3)
+    return locations
+
+
 def _build_warehouse_3x3(
     wh: dict[str, Any], zones: list[dict[str, Any]]
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, str]]:
@@ -371,6 +422,7 @@ def _build_warehouse_3x3(
                         edges.append((loc_id, cid, lat_dist))
 
     graph_rows = _build_graph_rows(nodes, edges)
+    apply_structural_limits(locations)
     return locations, graph_rows, location_column
 
 
@@ -548,6 +600,7 @@ def build_warehouse(config: dict[str, Any]) -> tuple[list[dict[str, Any]], list[
             raise RuntimeError(f"location {location['location_id']} is unreachable from the depot")
         location["distance_to_dispatch_m"] = round(distance, 3)
 
+    apply_structural_limits(locations)
     return locations, graph_rows, location_column
 
 

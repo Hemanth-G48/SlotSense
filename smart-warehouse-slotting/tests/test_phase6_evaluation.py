@@ -81,13 +81,62 @@ def test_fair_comparison_identical_workload(evaluation):
 
 
 def test_optimized_feasible_and_better(evaluation):
+    """The evaluation must be a valid comparison or an explicit block — never both.
+
+    On this dataset the baseline is infeasible (Phase 1: 1,071 CAT-01 violations at the
+    configured 10 m radius), so the gate refuses to publish a comparison. What this test pins:
+
+      * ``comparison_valid`` is true exactly when BOTH layouts pass independent validation;
+      * a blocked evaluation publishes no comparison and labels every metric diagnostic-only;
+      * the optimized layout itself must be valid — a blocked baseline may not be used as
+        cover for an invalid answer;
+      * when the comparison is valid, the published improvement holds.
+    """
     out, result = evaluation
-    assert result["baseline"]["constraint_violations"] == 0
+    feasibility = result["feasibility"]
+    both_feasible = (
+        feasibility["baseline"]["is_feasible"] and feasibility["optimized"]["is_feasible"]
+    )
+
+    # -- the gate invariant, asserted unconditionally -------------------------
+    assert result["comparison_valid"] is both_feasible
+    assert (result["evaluation_status"] == "OK") is both_feasible
+    assert (result["evaluation_status"] == "BLOCKED_INFEASIBLE_LAYOUT") is (not both_feasible)
+    assert result["blocked_layouts"] == [
+        layout for layout in ("baseline", "optimized") if not feasibility[layout]["is_feasible"]
+    ]
+
+    # -- the optimized layout must be valid in its own right ------------------
+    assert feasibility["optimized"]["is_feasible"] is True, (
+        f"optimized layout has violations: {feasibility['optimized']['violations_by_rule']}"
+    )
     assert result["optimized"]["constraint_violations"] == 0
     assert result["optimized"]["assignment_feasibility_pct"] == 100.0
-    assert result["optimized"]["total_travel_distance_m"] < result["baseline"]["total_travel_distance_m"]
-    # Both layouts store the same inventory, so cube utilization must match exactly.
-    assert result["optimized"]["cube_utilization_pct"] == result["baseline"]["cube_utilization_pct"]
+
+    if both_feasible:
+        assert result["diagnostic_only"] is False
+        assert result["comparison"]
+        assert result["baseline"]["constraint_violations"] == 0
+        assert (
+            result["optimized"]["total_travel_distance_m"]
+            < result["baseline"]["total_travel_distance_m"]
+        )
+        # Both layouts store the same inventory, so cube utilization must match exactly.
+        assert (
+            result["optimized"]["cube_utilization_pct"]
+            == result["baseline"]["cube_utilization_pct"]
+        )
+    else:
+        assert result["comparison"] == []
+        assert result["diagnostic_only"] is True
+        assert result["diagnostic_comparison"]
+        assert all(row["diagnostic_only"] for row in result["diagnostic_comparison"])
+        for layout in result["blocked_layouts"]:
+            assert feasibility[layout]["n_violations"] > 0
+            assert feasibility[layout]["violations_by_rule"]
+        # Metrics are still computed for diagnosis, but they are labelled as such.
+        diagnostic = {row["metric"]: row for row in result["diagnostic_comparison"]}
+        assert "total_travel_distance_m" in diagnostic
 
 
 def test_metrics_output(evaluation):

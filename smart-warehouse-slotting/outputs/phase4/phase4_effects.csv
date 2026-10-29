@@ -1,0 +1,7 @@
+metric,factor_a,factor_b,unit,lower_is_better,reference_cell,reference_value,factor_a_effect,factor_a_effect_pct,factor_b_effect,factor_b_effect_pct,interaction,interaction_pct,note
+total_travel_distance_m,layout,picking_policy,m,True,A1,508174.8,-273685.85,-53.8566,461.75,0.0909,561.9,0.1106,"single deterministic run; effects are a decomposition, not a significance test"
+total_route_time_sec,layout,picking_policy,s,True,A1,442129.69,-210527.575,-47.6167,355.195,0.0803,432.23,0.0978,"single deterministic run; effects are a decomposition, not a significance test"
+throughput_orders_per_hr,layout,picking_policy,orders/h,False,A1,13.23,12.02,90.8541,-0.03,-0.2268,-0.06,-0.4535,"single deterministic run; effects are a decomposition, not a significance test"
+avg_time_per_order_sec,layout,picking_policy,s/order,True,A1,272.08,-129.56,-47.6183,0.22,0.0809,0.26,0.0956,"single deterministic run; effects are a decomposition, not a significance test"
+demand_weighted_depot_distance,layout,picking_policy,m,True,A1,501569.025,-242232.45,-48.2949,0.0,0.0,0.0,0.0,"single deterministic run; effects are a decomposition, not a significance test"
+replenishment_travel_m,layout,picking_policy,m,True,A1,640634.85,-258427.15,-40.3392,0.0,0.0,0.0,0.0,"single deterministic run; effects are a decomposition, not a significance test"

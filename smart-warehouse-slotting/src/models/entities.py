@@ -94,7 +94,14 @@ class Location:
     allowed_hazard: tuple[str, ...] = ("NONE",)
     distance_to_dispatch_m: float = 0.0
     zone_type: str = "general"
-    shelf_max_weight_kg: float | None = None
+    # Structural limits. Each is validated against its own scope (PROJECT R1.2 / ADR-9):
+    #   max_weight_kg          -> this bin
+    #   beam_max_weight_kg     -> (rack, bay, shelf_level)  -> SL-02
+    #   level_max_weight_kg    -> (rack, shelf_level)       -> SL-01
+    #   rack_max_weight_kg     -> rack                      -> RK-01
+    beam_max_weight_kg: float | None = None
+    level_max_weight_kg: float | None = None
+    shelf_max_weight_kg: float | None = None  # legacy alias for level_max_weight_kg
     rack_max_weight_kg: float | None = None
 
     @property

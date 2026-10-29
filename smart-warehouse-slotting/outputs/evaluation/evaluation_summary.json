@@ -1,17 +1,103 @@
 {
-  "dataset": "C:\\Users\\venka\\Desktop\\COLLEGE\\ai_syndicate\\dataset\\processed",
+  "dataset": "../dataset/processed",
   "scenario": "A",
   "affinity_scenario": "C",
+  "execution_status": "OK",
+  "evaluation_status": "OK",
+  "separation_radius_m": 10.0,
+  "baseline_variant": "repaired_minimal",
+  "baseline_source": "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/baseline_repaired_assignments.csv",
+  "baseline_repair": {
+    "enabled": true,
+    "candidate_mode": "feasibility",
+    "initial_violations": 1071,
+    "final_violations": 0,
+    "initial_violations_by_rule": {
+      "CAT-01": 1071
+    },
+    "final_violations_by_rule": {},
+    "initial_severity_score": 1071000,
+    "final_severity_score": 0,
+    "moves_attempted": 96,
+    "moves_accepted": 96,
+    "moves_rejected": 0,
+    "cycles_detected": 0,
+    "unresolved_violations": 0,
+    "termination_reason": "feasible",
+    "feasible": true,
+    "runtime_sec": 7.535,
+    "max_moves": 4000,
+    "max_seconds": 240.0,
+    "attempted": true,
+    "objective_enabled": false,
+    "scope": "feasibility only",
+    "note": "Baseline repaired for feasibility only with the objective disabled: every accepted move was confirmed by the independent validator to remove hard violations and introduce none, no travel/affinity/ergonomics/utilisation term was consulted, and no refinement pass ran.",
+    "output_path": "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/baseline_repaired_assignments.csv",
+    "conservation": {
+      "units_required": 6375,
+      "units_assigned": 6375,
+      "units_conserved": true,
+      "skus_required": 1200,
+      "skus_placed": 1200,
+      "unplaced_skus": [],
+      "unknown_skus": [],
+      "duplicate_sku_bin_pairs": 0,
+      "duplicate_examples": [],
+      "rows": 1425,
+      "exact": true
+    },
+    "movement": {
+      "comparable": true,
+      "records_total": 1425,
+      "records_relocated": 96,
+      "records_unchanged": 1329,
+      "relocations_pct": 6.737,
+      "total_displacement_m": 1471.373,
+      "mean_displacement_m": 15.327,
+      "median_displacement_m": 12.01,
+      "max_displacement_m": 36.003
+    },
+    "final_layout": {
+      "feasibility_status": "FEASIBLE",
+      "is_feasible": true,
+      "n_violations": 0,
+      "violations_by_rule": {},
+      "checks_run": 18077,
+      "top_violations": []
+    }
+  },
+  "baseline_note": "Baseline repaired for feasibility only with the objective disabled: every accepted move was confirmed by the independent validator to remove hard violations and introduce none, no travel/affinity/ergonomics/utilisation term was consulted, and no refinement pass ran.",
+  "feasibility": {
+    "baseline": {
+      "feasibility_status": "FEASIBLE",
+      "is_feasible": true,
+      "n_violations": 0,
+      "violations_by_rule": {},
+      "checks_run": 18077,
+      "top_violations": []
+    },
+    "optimized": {
+      "feasibility_status": "FEASIBLE",
+      "is_feasible": true,
+      "n_violations": 0,
+      "violations_by_rule": {},
+      "checks_run": 15167,
+      "top_violations": []
+    }
+  },
+  "comparison_valid": true,
+  "diagnostic_only": false,
+  "blocked_layouts": [],
   "inventory_units": 6375,
   "skus_with_inventory": 1200,
   "baseline": {
-    "total_travel_distance_m": 382544.2,
-    "avg_travel_distance_m": 353.23,
-    "avg_distance_per_order_m": 70.65,
-    "total_route_time_sec": 465094.77,
-    "avg_route_time_sec": 429.45,
-    "avg_time_per_order_sec": 85.89,
-    "throughput_orders_per_hr": 41.91,
+    "total_travel_distance_m": 1691478.55,
+    "avg_travel_distance_m": 1561.85,
+    "avg_distance_per_order_m": 312.37,
+    "total_route_time_sec": 1471967.35,
+    "avg_route_time_sec": 1359.16,
+    "avg_time_per_order_sec": 271.83,
+    "throughput_orders_per_hr": 13.24,
     "cube_utilization_pct": 15.42,
     "cube_occupied_volume_cm3": 66411409.47,
     "cube_total_usable_volume_cm3": 430592000.0,
@@ -21,25 +107,26 @@
     "valid_assignments": 1200,
     "required_assignments": 1200,
     "rule_check_pass_pct": 100.0,
-    "checks_run": 15631,
-    "golden_zone_demand_share_pct": 37.72,
+    "checks_run": 18077,
+    "golden_zone_demand_share_pct": 38.05,
     "class_a_skus": 294,
     "class_a_skus_outside_golden": 134,
     "optimization_runtime_sec": null,
     "n_batches": 1083,
     "total_orders": 5415,
-    "affinity_separation_m": 24.373,
+    "affinity_separation_m": 127.517,
     "affinity_pairs_evaluated": 5114,
-    "affinity_pairs_skipped": 0
+    "affinity_pairs_skipped": 0,
+    "diagnostic_only": false
   },
   "optimized": {
-    "total_travel_distance_m": 279046.4,
-    "avg_travel_distance_m": 257.66,
-    "avg_distance_per_order_m": 51.53,
-    "total_route_time_sec": 385481.08,
-    "avg_route_time_sec": 355.94,
-    "avg_time_per_order_sec": 71.19,
-    "throughput_orders_per_hr": 50.57,
+    "total_travel_distance_m": 750119.5,
+    "avg_travel_distance_m": 692.63,
+    "avg_distance_per_order_m": 138.53,
+    "total_route_time_sec": 747845.0,
+    "avg_route_time_sec": 690.53,
+    "avg_time_per_order_sec": 138.11,
+    "throughput_orders_per_hr": 26.07,
     "cube_utilization_pct": 15.42,
     "cube_occupied_volume_cm3": 66411409.47,
     "cube_total_usable_volume_cm3": 430592000.0,
@@ -49,16 +136,17 @@
     "valid_assignments": 1200,
     "required_assignments": 1200,
     "rule_check_pass_pct": 100.0,
-    "checks_run": 14916,
-    "golden_zone_demand_share_pct": 60.02,
+    "checks_run": 15167,
+    "golden_zone_demand_share_pct": 61.44,
     "class_a_skus": 294,
-    "class_a_skus_outside_golden": 136,
-    "optimization_runtime_sec": 18.987,
+    "class_a_skus_outside_golden": 137,
+    "optimization_runtime_sec": 33.858,
     "n_batches": 1083,
     "total_orders": 5415,
-    "affinity_separation_m": 20.044,
+    "affinity_separation_m": 55.428,
     "affinity_pairs_evaluated": 5114,
-    "affinity_pairs_skipped": 0
+    "affinity_pairs_skipped": 0,
+    "diagnostic_only": false
   },
   "comparison": [
     {
@@ -67,10 +155,11 @@
       "direction": "lower is better",
       "unit": "m",
       "change_kind": "reduction",
-      "baseline": 382544.2,
-      "optimized": 279046.4,
-      "absolute_diff": -103497.8,
-      "percent_change": -27.06
+      "baseline": 1691478.55,
+      "optimized": 750119.5,
+      "absolute_diff": -941359.05,
+      "percent_change": -55.65,
+      "diagnostic_only": false
     },
     {
       "metric": "avg_travel_distance_m",
@@ -78,10 +167,11 @@
       "direction": "lower is better",
       "unit": "m",
       "change_kind": "reduction",
-      "baseline": 353.23,
-      "optimized": 257.66,
-      "absolute_diff": -95.57,
-      "percent_change": -27.06
+      "baseline": 1561.85,
+      "optimized": 692.63,
+      "absolute_diff": -869.22,
+      "percent_change": -55.65,
+      "diagnostic_only": false
     },
     {
       "metric": "avg_distance_per_order_m",
@@ -89,10 +179,11 @@
       "direction": "lower is better",
       "unit": "m",
       "change_kind": "reduction",
-      "baseline": 70.65,
-      "optimized": 51.53,
-      "absolute_diff": -19.12,
-      "percent_change": -27.06
+      "baseline": 312.37,
+      "optimized": 138.53,
+      "absolute_diff": -173.84,
+      "percent_change": -55.65,
+      "diagnostic_only": false
     },
     {
       "metric": "total_route_time_sec",
@@ -100,10 +191,11 @@
       "direction": "lower is better",
       "unit": "s",
       "change_kind": "reduction",
-      "baseline": 465094.77,
-      "optimized": 385481.08,
-      "absolute_diff": -79613.69,
-      "percent_change": -17.12
+      "baseline": 1471967.35,
+      "optimized": 747845.0,
+      "absolute_diff": -724122.35,
+      "percent_change": -49.19,
+      "diagnostic_only": false
     },
     {
       "metric": "avg_route_time_sec",
@@ -111,10 +203,11 @@
       "direction": "lower is better",
       "unit": "s",
       "change_kind": "reduction",
-      "baseline": 429.45,
-      "optimized": 355.94,
-      "absolute_diff": -73.51,
-      "percent_change": -17.12
+      "baseline": 1359.16,
+      "optimized": 690.53,
+      "absolute_diff": -668.63,
+      "percent_change": -49.19,
+      "diagnostic_only": false
     },
     {
       "metric": "avg_time_per_order_sec",
@@ -122,10 +215,11 @@
       "direction": "lower is better",
       "unit": "s",
       "change_kind": "reduction",
-      "baseline": 85.89,
-      "optimized": 71.19,
-      "absolute_diff": -14.7,
-      "percent_change": -17.11
+      "baseline": 271.83,
+      "optimized": 138.11,
+      "absolute_diff": -133.72,
+      "percent_change": -49.19,
+      "diagnostic_only": false
     },
     {
       "metric": "throughput_orders_per_hr",
@@ -133,10 +227,11 @@
       "direction": "higher is better",
       "unit": "orders/h",
       "change_kind": "improvement",
-      "baseline": 41.91,
-      "optimized": 50.57,
-      "absolute_diff": 8.66,
-      "percent_change": 20.66
+      "baseline": 13.24,
+      "optimized": 26.07,
+      "absolute_diff": 12.83,
+      "percent_change": 96.9,
+      "diagnostic_only": false
     },
     {
       "metric": "cube_utilization_pct",
@@ -147,7 +242,8 @@
       "baseline": 15.42,
       "optimized": 15.42,
       "absolute_diff": 0.0,
-      "percent_change": null
+      "percent_change": null,
+      "diagnostic_only": false
     },
     {
       "metric": "golden_zone_demand_share_pct",
@@ -155,10 +251,11 @@
       "direction": "higher is better",
       "unit": "%",
       "change_kind": "points",
-      "baseline": 37.72,
-      "optimized": 60.02,
-      "absolute_diff": 22.3,
-      "percent_change": null
+      "baseline": 38.05,
+      "optimized": 61.44,
+      "absolute_diff": 23.39,
+      "percent_change": null,
+      "diagnostic_only": false
     },
     {
       "metric": "class_a_skus_outside_golden",
@@ -167,9 +264,10 @@
       "unit": "SKUs",
       "change_kind": "abs",
       "baseline": 134,
-      "optimized": 136,
-      "absolute_diff": 2,
-      "percent_change": null
+      "optimized": 137,
+      "absolute_diff": 3,
+      "percent_change": null,
+      "diagnostic_only": false
     },
     {
       "metric": "affinity_separation_m",
@@ -177,10 +275,11 @@
       "direction": "lower is better",
       "unit": "m",
       "change_kind": "reduction",
-      "baseline": 24.373,
-      "optimized": 20.044,
-      "absolute_diff": -4.329,
-      "percent_change": -17.76
+      "baseline": 127.517,
+      "optimized": 55.428,
+      "absolute_diff": -72.089,
+      "percent_change": -56.53,
+      "diagnostic_only": false
     },
     {
       "metric": "constraint_violations",
@@ -191,7 +290,8 @@
       "baseline": 0,
       "optimized": 0,
       "absolute_diff": 0,
-      "percent_change": null
+      "percent_change": null,
+      "diagnostic_only": false
     },
     {
       "metric": "valid_assignments",
@@ -202,7 +302,8 @@
       "baseline": 1200,
       "optimized": 1200,
       "absolute_diff": 0,
-      "percent_change": null
+      "percent_change": null,
+      "diagnostic_only": false
     },
     {
       "metric": "required_assignments",
@@ -213,7 +314,8 @@
       "baseline": 1200,
       "optimized": 1200,
       "absolute_diff": 0,
-      "percent_change": null
+      "percent_change": null,
+      "diagnostic_only": false
     },
     {
       "metric": "assignment_feasibility_pct",
@@ -224,7 +326,8 @@
       "baseline": 100.0,
       "optimized": 100.0,
       "absolute_diff": 0.0,
-      "percent_change": null
+      "percent_change": null,
+      "diagnostic_only": false
     },
     {
       "metric": "checks_run",
@@ -232,10 +335,11 @@
       "direction": "reference",
       "unit": "checks",
       "change_kind": "abs",
-      "baseline": 15631,
-      "optimized": 14916,
-      "absolute_diff": -715,
-      "percent_change": null
+      "baseline": 18077,
+      "optimized": 15167,
+      "absolute_diff": -2910,
+      "percent_change": null,
+      "diagnostic_only": false
     },
     {
       "metric": "rule_check_pass_pct",
@@ -246,7 +350,8 @@
       "baseline": 100.0,
       "optimized": 100.0,
       "absolute_diff": 0.0,
-      "percent_change": null
+      "percent_change": null,
+      "diagnostic_only": false
     },
     {
       "metric": "safety_compliant",
@@ -257,9 +362,71 @@
       "baseline": true,
       "optimized": true,
       "absolute_diff": null,
-      "percent_change": null
+      "percent_change": null,
+      "diagnostic_only": false
     }
   ],
+  "diagnostic_comparison": null,
+  "diagnostic_baseline": {
+    "baseline_variant": "as_supplied",
+    "diagnostic_only": true,
+    "source": "../dataset/processed/storage_assignments_baseline.csv",
+    "feasibility": {
+      "feasibility_status": "INFEASIBLE",
+      "is_feasible": false,
+      "n_violations": 1071,
+      "violations_by_rule": {
+        "CAT-01": 1071
+      },
+      "checks_run": 20699,
+      "top_violations": [
+        "CAT010 at LOC002058 and CAT001 at LOC001971 are 7.64 m apart (< 10 m)",
+        "CAT010 at LOC002058 and CAT001 at LOC001942 are 7.76 m apart (< 10 m)",
+        "CAT010 at LOC002058 and CAT001 at LOC001952 are 7.75 m apart (< 10 m)",
+        "CAT010 at LOC002058 and CAT001 at LOC001943 are 7.95 m apart (< 10 m)",
+        "CAT010 at LOC002058 and CAT002 at LOC001949 are 7.69 m apart (< 10 m)",
+        "CAT010 at LOC002058 and CAT002 at LOC001969 are 7.62 m apart (< 10 m)",
+        "CAT010 at LOC002058 and CAT002 at LOC001972 are 7.71 m apart (< 10 m)",
+        "CAT010 at LOC002058 and CAT003 at LOC001951 are 7.77 m apart (< 10 m)"
+      ]
+    },
+    "metrics": {
+      "total_travel_distance_m": 1707167.15,
+      "avg_travel_distance_m": 1576.33,
+      "avg_distance_per_order_m": 315.27,
+      "total_route_time_sec": 1484035.5,
+      "avg_route_time_sec": 1370.3,
+      "avg_time_per_order_sec": 274.06,
+      "throughput_orders_per_hr": 13.14,
+      "cube_utilization_pct": 15.42,
+      "cube_occupied_volume_cm3": 66411409.47,
+      "cube_total_usable_volume_cm3": 430592000.0,
+      "constraint_violations": 1071,
+      "safety_compliant": false,
+      "assignment_feasibility_pct": 94.08,
+      "valid_assignments": 1129,
+      "required_assignments": 1200,
+      "rule_check_pass_pct": 94.83,
+      "checks_run": 20699,
+      "golden_zone_demand_share_pct": 37.72,
+      "class_a_skus": 294,
+      "class_a_skus_outside_golden": 134,
+      "optimization_runtime_sec": null,
+      "n_batches": 1083,
+      "total_orders": 5415,
+      "affinity_separation_m": 133.324,
+      "affinity_pairs_evaluated": 5114,
+      "affinity_pairs_skipped": 0,
+      "diagnostic_only": true
+    },
+    "note": "As-supplied baseline: NOT part of the published comparison. Kept so the difference between the illegal input layout and the repaired feasible baseline stays visible.",
+    "delta_vs_evaluated_baseline": {
+      "total_travel_distance_m": -15688.6,
+      "total_route_time_sec": -12068.15,
+      "throughput_orders_per_hr": 0.1,
+      "constraint_violations": -1071
+    }
+  },
   "assumptions": {
     "routing_strategy": "nearest_neighbor",
     "batch_size_orders": 5,
@@ -273,36 +440,37 @@
     "cube_utilization_basis": "on-hand assigned quantity x SKU bounding-box volume / usable bin volume (volume approximation, not 3-D packing)",
     "throughput_definition": "orders completed / total pick-cycle hours (travel + pick + setup)",
     "affinity_weighting": "co-occurrence count for pairs with co_count >= 2 and lift >= 1",
-    "depot_node": "DEPOT"
+    "depot_node": "DEPOT",
+    "separation_radius_m": 10.0
   },
   "route_breakdown": {
     "baseline": {
       "n_batches": 1083,
       "total_orders": 5415,
       "total_pick_lines": 20000,
-      "total_distance_m": 382544.2,
-      "avg_distance_m": 353.23,
-      "total_route_time_sec": 465094.77,
-      "avg_cycle_time_sec": 429.45,
-      "avg_time_per_order_sec": 85.89,
-      "total_travel_time_sec": 294264.77,
+      "total_distance_m": 1691478.55,
+      "avg_distance_m": 1561.85,
+      "total_route_time_sec": 1471967.35,
+      "avg_cycle_time_sec": 1359.16,
+      "avg_time_per_order_sec": 271.83,
+      "total_travel_time_sec": 1301137.35,
       "total_pick_time_sec": 160000.0,
       "total_setup_time_sec": 10830.0,
-      "throughput_orders_per_hr": 41.91
+      "throughput_orders_per_hr": 13.24
     },
     "optimized": {
       "n_batches": 1083,
       "total_orders": 5415,
       "total_pick_lines": 20000,
-      "total_distance_m": 279046.4,
-      "avg_distance_m": 257.66,
-      "total_route_time_sec": 385481.08,
-      "avg_cycle_time_sec": 355.94,
-      "avg_time_per_order_sec": 71.19,
-      "total_travel_time_sec": 214651.08,
+      "total_distance_m": 750119.5,
+      "avg_distance_m": 692.63,
+      "total_route_time_sec": 747845.0,
+      "avg_cycle_time_sec": 690.53,
+      "avg_time_per_order_sec": 138.11,
+      "total_travel_time_sec": 577015.0,
       "total_pick_time_sec": 160000.0,
       "total_setup_time_sec": 10830.0,
-      "throughput_orders_per_hr": 50.57
+      "throughput_orders_per_hr": 26.07
     }
   },
   "notes": {
@@ -312,10 +480,21 @@
     "baseline_was_validated": true,
     "baseline_constraint_violations": 0,
     "optimized_constraint_violations": 0,
-    "baseline_rule_checks": 15631,
-    "optimized_rule_checks": 14916,
+    "baseline_feasibility_status": "FEASIBLE",
+    "optimized_feasibility_status": "FEASIBLE",
+    "baseline_violations_by_rule": {},
+    "optimized_violations_by_rule": {},
+    "baseline_rule_checks": 18077,
+    "optimized_rule_checks": 15167,
     "baseline_inventory_conservation_violations": 0,
     "optimized_inventory_conservation_violations": 0,
-    "same_inventory_units": 6375
+    "same_inventory_units": 6375,
+    "comparison_published_as_valid_evidence": true,
+    "comparison_is_diagnostic_only": false,
+    "gate_blocked_layouts": [],
+    "baseline_variant": "repaired_minimal",
+    "baseline_source": "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/baseline_repaired_assignments.csv",
+    "baseline_repaired_for_feasibility": true,
+    "as_supplied_baseline_published_as": "diagnostic_baseline"
   }
 }

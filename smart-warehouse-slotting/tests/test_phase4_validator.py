@@ -1,9 +1,14 @@
 """Phase-4 validator tests: adversarial invalid assignments must be rejected; a clean
-assignment must pass. Also verifies the baseline passes and the audit exporter runs."""
+assignment must pass. Also verifies the canonical baseline's verdict is reported correctly
+and the audit exporter runs."""
+
+import math
+from collections import defaultdict
 
 import pandas as pd
 import pytest
 
+from src.models.config import Config
 from src.models.entities import (
     AccessibilityZone,
     AssignmentType,
@@ -15,11 +20,47 @@ from src.models.entities import (
     StorageAssignment,
     Warehouse,
 )
+from src.simulation.pipeline import _layout_feasibility
 from src.validation import audit
 from src.validation.loader import load_shipping
 from src.validation.validator import Validator, validate_assignment
 
 PROJECT_ROOT = pytest.importorskip("pathlib").Path(__file__).resolve().parent.parent
+
+
+def _independent_cat01_count(warehouse, skus, assignments, rules, radius_m) -> int:
+    """Count forbidden category pairs closer than ``radius_m`` without using the validator.
+
+    The gate has to be independently checkable: this walks the category pairs the
+    compatibility matrix forbids and measures every stored bin pair with ``math.dist``.
+    """
+    forbidden = {
+        frozenset((r.category_a, r.category_b))
+        for r in rules
+        if not r.allowed and r.category_a != r.category_b
+    }
+    by_category: dict[str, list] = defaultdict(list)
+    for a in assignments:
+        sku = skus.get(a.sku_id)
+        loc = warehouse.locations.get(a.location_id)
+        if sku is not None and loc is not None:
+            by_category[sku.category_id].append(loc)
+
+    count = 0
+    for pair in forbidden:
+        categories = sorted(pair)
+        if len(categories) < 2:
+            continue
+        seen = set()
+        for loc_a in by_category.get(categories[0], []):
+            for loc_b in by_category.get(categories[1], []):
+                key = tuple(sorted((loc_a.location_id, loc_b.location_id)))
+                if key in seen:
+                    continue
+                seen.add(key)
+                if math.dist((loc_a.x, loc_a.y, loc_a.z), (loc_b.x, loc_b.y, loc_b.z)) + 1e-9 < radius_m:
+                    count += 1
+    return count
 
 
 def _fixtures():
@@ -113,14 +154,47 @@ def test_referential_integrity():
     assert any(v.rule_id == "REF-02" for v in res.violations)
 
 
-def test_baseline_feasible_on_benchmark():
-    """The canonical baseline must pass the Phase-4 validator (0 violations)."""
+def test_baseline_feasibility_is_reported_correctly_on_benchmark():
+    """The canonical baseline's verdict must be computed and REPORTED, not assumed.
+
+    Phase 1 established that the baseline is infeasible at the configured 10 m radius
+    (1,071 CAT-01 violations), so "the baseline passes" is not a contract — it is a claim
+    that happens to be false. What this test pins instead:
+
+      * the validator's CAT-01 count equals an independent, pair-by-pair distance count
+        computed here from the same geometry and rule matrix;
+      * a feasible verdict means zero violations, and an infeasible verdict means violations
+        are reported (with rule ids and reasons) and the evaluation gate marks the layout
+        INFEASIBLE — i.e. it cannot be scored.
+    """
     processed = PROJECT_ROOT.parent / "dataset" / "processed"
     if not processed.exists():
         pytest.skip("benchmark data not generated")
     wh, skus, comp, assignments, inventory = load_shipping(processed)
-    res = validate_assignment(assignments, skus, wh, comp, inventory)
-    assert res.is_feasible, f"baseline has {len(res.violations)} violations: {[v.reason for v in res.violations[:5]]}"
+    radius = Config.from_json(PROJECT_ROOT / "configs" / "benchmark.json").separation_radius_m
+
+    res = validate_assignment(
+        assignments, skus, wh, comp, inventory, separation_radius_m=radius
+    )
+
+    expected_cat01 = _independent_cat01_count(wh, skus, assignments, comp, radius)
+    reported = [v for v in res.violations if v.rule_id == "CAT-01"]
+    assert len(reported) == expected_cat01, (
+        f"validator reported {len(reported)} CAT-01 violations, "
+        f"independent pair count is {expected_cat01} at radius {radius} m"
+    )
+    assert res.checks_run > 0, "the validator must actually have run"
+    assert all(v.rule_id and v.reason for v in res.violations)
+
+    if res.is_feasible:
+        assert res.violations == []
+    else:
+        assert res.hard_violations, "an infeasible layout must report at least one hard violation"
+        gate = _layout_feasibility(res)
+        assert gate["feasibility_status"] == "INFEASIBLE"
+        assert gate["is_feasible"] is False
+        assert gate["n_violations"] == len(res.violations)
+        assert gate["violations_by_rule"].get("CAT-01", 0) == len(reported)
 
 
 def test_audit_export_writes_csv(tmp_path):

@@ -24,6 +24,28 @@ def optimized(tmp_path_factory):
     return out, summary
 
 
+@pytest.fixture(scope="module")
+def baseline_verdict():
+    """The canonical baseline's verdict, computed independently of the optimizer."""
+    if not PROCESSED.exists():
+        pytest.skip("canonical dataset not generated")
+    from src.validation.loader import load_shipping
+    from src.validation.validator import validate_assignment
+
+    cfg = Config.from_json(PROJECT_ROOT / "configs" / "benchmark.json")
+    wh, skus, comp, baseline, inventory = load_shipping(PROCESSED)
+    return validate_assignment(
+        baseline, skus, wh, comp, inventory, separation_radius_m=cfg.separation_radius_m
+    )
+
+
+def violations_by_rule(result) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for v in result.violations:
+        counts[v.rule_id] = counts.get(v.rule_id, 0) + 1
+    return dict(sorted(counts.items()))
+
+
 def test_optimizer_feasible(optimized):
     out, summary = optimized
     assert summary["feasibility"] is True
@@ -55,16 +77,47 @@ def test_optimizer_assignments_pass_phase4_validator(optimized):
         StorageAssignment(r.sku_id, r.location_id, int(r.assigned_quantity), AssignmentType(r.assignment_type))
         for r in opt_df.itertuples(index=False)
     ]
-    res = validate_assignment(assignments, skus, wh, comp, inventory)
+    cfg = Config.from_json(PROJECT_ROOT / "configs" / "benchmark.json")
+    res = validate_assignment(
+        assignments, skus, wh, comp, inventory, separation_radius_m=cfg.separation_radius_m
+    )
     assert res.is_feasible, f"optimized output has violations: {[v.reason for v in res.violations[:5]]}"
 
 
-def test_optimizer_improves_over_baseline(optimized):
+def test_optimizer_improves_over_baseline(optimized, baseline_verdict):
+    """The optimized layout must improve on the baseline AND report its statuses honestly.
+
+    The baseline on this dataset is genuinely infeasible (Phase 1: 1,071 CAT-01 violations at
+    the configured 10 m radius), so asserting ``baseline_feasibility is True`` asserted a
+    false premise. What must hold instead: the improvement is measured on the objective, the
+    reported status never claims feasibility it cannot back with zero violations, and the
+    baseline verdict agrees with an independent validation.
+    """
     out, summary = optimized
-    assert summary["baseline_feasibility"] is True
+
     assert summary["final_objective"] < summary["baseline_objective"]
     assert summary["final_objective"] <= summary["starter_objective"]
     assert summary["objective_improvement_pct"] > 0
+
+    # Status vs. evidence: feasible means zero violations; infeasible means they are listed.
+    if summary["feasibility_status"] == "FEASIBLE":
+        assert summary["n_violations"] == 0
+        assert summary["violations_by_rule"] == {}
+    else:
+        assert summary["n_violations"] > 0
+        assert summary["violations_by_rule"]
+
+    # The baseline's verdict is a measurement, not an assumption.
+    assert summary["baseline_feasibility"] is baseline_verdict.is_feasible
+    assert summary["baseline_feasibility_status"] == (
+        "FEASIBLE" if baseline_verdict.is_feasible else "INFEASIBLE"
+    )
+    assert summary["baseline_violations_by_rule"] == violations_by_rule(baseline_verdict)
+
+    # Improvement is only meaningful on top of a layout that is itself valid.
+    assert summary["feasibility_status"] == "FEASIBLE", (
+        f"optimized layout is not valid: {summary.get('top_violations')}"
+    )
 
 
 def test_optimizer_summary_json(optimized):

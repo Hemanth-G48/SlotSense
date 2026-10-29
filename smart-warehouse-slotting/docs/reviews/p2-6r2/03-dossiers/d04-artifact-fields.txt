@@ -1,0 +1,71 @@
+== outputs/optimized/optimization_summary.json — objective + improvement fields
+4:  "baseline_variant": "repaired_minimal",
+58:      "feasibility_status": "FEASIBLE",
+68:  "feasibility_status": "FEASIBLE",
+78:  "objective": {
+79:    "value": 902392.9055567493,
+80:    "baseline_value": 2321711.3822095753,
+81:    "baseline_value_as_supplied": 2336184.1414095755,
+82:    "starter_value": 902392.9055567493,
+89:    "candidate_mode": "objective",
+113:  "separation_radius_m": 10.0,
+128:  "baseline_objective": 2321711.3822095753,
+129:  "baseline_objective_as_supplied": 2336184.1414095755,
+139:  "objective_improvement_pct": 61.132,
+140:  "objective_improvement_pct_vs_as_supplied": 61.373,
+
+== docs/PHASE_2_EVIDENCE.json — beam group counts per layout + hard check counts
+82:      "checks_run": 20699,
+104:      "beam_groups_checked": 960,
+105:      "max_beam_utilisation_pct": 55.56,
+106:      "max_level_utilisation_pct": 34.72,
+107:      "max_rack_utilisation_pct": 29.16,
+118:      "checks_run": 18077,
+139:      "beam_groups_checked": 922,
+140:      "max_beam_utilisation_pct": 72.49,
+141:      "max_level_utilisation_pct": 72.15,
+142:      "max_rack_utilisation_pct": 36.05
+148:      "checks_run": 15167,
+169:      "beam_groups_checked": 662,
+170:      "max_beam_utilisation_pct": 99.37,
+171:      "max_level_utilisation_pct": 99.56,
+172:      "max_rack_utilisation_pct": 73.2
+209:    "validator_coverage_caveat": "The validator's spatial hash only evaluates forbidden pairs whose cells differ by at most 1 per axis, which is sound (any pair closer than R must fall in adjacent cells) but makes checks_run an under-count of CAT-01 coverage: the optimized layout records ZERO CAT-01 checks (its closest forbidden pair is 27.2 m, so no pair enters the window) and the repaired baseline records 1039. The 0-violation CAT-01 verdict for the optimized layout therefore rests on my full 95,400-pair scan, not on the validator's window count."
+213:    "as_supplied_baseline": {"beam_groups": 960, "over_limit": 0, "max_utilisation_pct": 55.56},
+214:    "repaired_baseline": {"beam_groups": 922, "over_limit": 0, "max_utilisation_pct": 72.49},
+215:    "optimized": {"beam_groups": 662, "over_limit": 0, "max_utilisation_pct": 99.37},
+218:    "tightest_optimized_groups_observed_over_limit": [
+219:      {"scope": "beam (rack R5-3-1, bay 0, shelf 3)", "observed_kg": 214.64, "limit_kg": 216.0, "utilisation_pct": 99.37},
+220:      {"scope": "beam (rack R5-1-1, bay 0, shelf 2)", "observed_kg": 247.88, "limit_kg": 252.0, "utilisation_pct": 98.36},
+221:      {"scope": "level (rack R5-3-1, shelf 1)", "observed_kg": 458.76, "limit_kg": 460.8, "utilisation_pct": 99.56}
+340:      "baseline_checks_run": {"claim": 18077, "independent": 18077, "match": true},
+351:      "feasibility.baseline": {"claim": {"status": "FEASIBLE", "n_violations": 0, "checks_run": 18077}, "independent": {"status": "FEASIBLE", "n_violations": 0, "checks_run": 18077}, "match": true},
+352:      "feasibility.optimized": {"claim": {"status": "FEASIBLE", "n_violations": 0, "checks_run": 15167}, "independent": {"status": "FEASIBLE", "n_violations": 0, "checks_run": 15167}, "match": true},
+353:      "diagnostic_baseline": {"claim": {"status": "INFEASIBLE", "n_violations": 1071, "by_rule": {"CAT-01": 1071}, "checks_run": 20699}, "independent": {"status": "INFEASIBLE", "n_violations": 1071, "by_rule": {"CAT-01": 1071}, "checks_run": 20699}, "match": true},
+357:      "claim": {"n_assignments": 1425, "n_violations": 1071, "checks_run": 20699, "feasible": false, "safety_compliant": false, "feasibility_pct": 94.08, "valid_assignments": 1129, "required_assignments": 1200},
+358:      "independent": {"n_assignments": 1425, "n_violations": 1071, "checks_run": 20699, "feasible": false, "safety_compliant": false, "feasibility_pct": 94.08, "valid_assignments": 1129, "required_assignments": 1200},
+371:    "checks_run_audit": {
+372:      "formula": "checks_run == 10 x assignments (SP-01, REF-01, REF-02, HZ-01, HD-01, ER-01, QTY-01, LD-01, VD-01, AS-01) + 1200 x INV-03 + 1 x COMP-01 + SL-02 + SL-01 + RK-01 groups + CAT-01 window pairs",
+
+== outputs/evaluation/evaluation_summary.json — gate + travel/cycle/throughput
+6:  "evaluation_status": "OK",
+7:  "separation_radius_m": 10.0,
+8:  "baseline_variant": "repaired_minimal",
+88:  "comparison_valid": true,
+90:  "blocked_layouts": [],
+94:    "total_travel_distance_m": 1691478.55,
+100:    "throughput_orders_per_hr": 13.24,
+123:    "total_travel_distance_m": 750119.5,
+129:    "throughput_orders_per_hr": 26.07,
+153:      "metric": "total_travel_distance_m",
+225:      "metric": "throughput_orders_per_hr",
+371:    "baseline_variant": "as_supplied",
+394:      "total_travel_distance_m": 1707167.15,
+400:      "throughput_orders_per_hr": 13.14,
+424:      "total_travel_distance_m": -15688.6,
+426:      "throughput_orders_per_hr": 0.1,
+444:    "separation_radius_m": 10.0
+459:      "throughput_orders_per_hr": 13.24
+473:      "throughput_orders_per_hr": 26.07
+494:    "gate_blocked_layouts": [],
+495:    "baseline_variant": "repaired_minimal",

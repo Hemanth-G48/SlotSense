@@ -18,6 +18,9 @@ Thumbs.db
 # Third-party reference checkouts
 useful_repos/
 
+# Upstream source datasets (too large for git; re-download and run build_dataset2.py)
+dataset-2/raw/
+
 # Secrets
 .env
 .env.*

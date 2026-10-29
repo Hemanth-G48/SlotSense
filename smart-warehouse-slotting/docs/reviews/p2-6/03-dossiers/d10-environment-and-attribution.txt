@@ -1,0 +1,103 @@
+# D10 — environment and the sandbox used for item 6
+
+    $ git status --short
+    fatal: not a git repository (or any parent up to mount point /)
+
+There is no VCS in this working copy, so no diff-based attribution is possible. Change
+attribution below relies on file mtimes plus the change lists in
+docs/PHASE_2_PART2_REPAIR_AND_GATE.md and docs/PHASE_2_PART3B_BASELINE_REPAIR.md.
+
+    $ .venv/bin/python --version
+    Python 3.14.4
+
+    $ du -sh ../dataset/processed
+    4.9M
+
+Files touched in the Phase-2 window (02:42-04:48 on 2026-10-29):
+
+    2026-10-29 02:42  src/models/config.py
+    2026-10-29 02:43  src/optimization/separation.py
+    2026-10-29 03:01  tests/test_phase2_greedy_constraints.py
+    2026-10-29 03:20  app/dashboard_data.py
+    2026-10-29 03:26  app/dashboard.py
+    2026-10-29 03:40  tests/test_cat01_separation_radius.py
+    2026-10-29 03:43  tests/test_feasibility_gate.py
+    2026-10-29 03:44  tests/phase2_fixtures.py
+    2026-10-29 03:44  tests/test_artifact_isolation.py
+    2026-10-29 03:45  tests/test_phase4_validator.py
+    2026-10-29 03:45  tests/test_phase5_optimizer.py
+    2026-10-29 03:45  tests/test_phase6_evaluation.py
+    2026-10-29 03:46  tests/test_phase8_integration.py
+    2026-10-29 03:50  tests/test_determinism.py
+    2026-10-29 03:50  tests/test_inventory_integrity.py
+    2026-10-29 03:57  tests/test_structural_scopes.py
+    2026-10-29 04:14  src/optimization/optimizer.py
+    2026-10-29 04:14  src/validation/validator.py
+    2026-10-29 04:15  src/optimization/baseline.py
+    2026-10-29 04:16  src/optimization/pipeline.py
+    2026-10-29 04:48  app/main.py
+    2026-10-29 04:48  src/simulation/pipeline.py
+    2026-10-29 04:48  tests/test_baseline_repair.py
+
+Files predating Phase 2 that matter to scope (unchanged):
+
+    2026-10-28 18:14  app/build_dataset.py
+    2026-10-28 18:14  src/analytics/abc.py
+    2026-10-28 18:14  src/analytics/affinity.py
+    2026-10-28 18:14  src/analytics/demand.py
+    2026-10-28 18:14  src/analytics/__init__.py
+    2026-10-28 18:14  src/analytics/pipeline.py
+    2026-10-28 18:14  src/analytics/volume_profile.py
+    2026-10-28 18:14  src/data_processing/derive.py
+    2026-10-28 18:14  src/data_processing/eda.py
+    2026-10-28 18:14  src/data_processing/__init__.py
+    2026-10-28 18:14  src/data_processing/pipeline.py
+    2026-10-28 18:14  src/evaluation/__init__.py
+    2026-10-28 18:14  src/evaluation/metrics.py
+    2026-10-28 18:14  src/__init__.py
+    2026-10-28 18:14  src/models/__init__.py
+    2026-10-28 18:14  src/models/io.py
+    2026-10-28 18:14  src/models/synthetic.py
+    2026-10-28 18:14  src/optimization/__init__.py
+    2026-10-28 18:14  src/routing/heuristics.py
+    2026-10-28 18:14  src/routing/__init__.py
+    2026-10-28 18:14  src/simulation/__init__.py
+    2026-10-28 18:14  src/simulation/simulator.py
+    2026-10-28 18:14  src/validation/audit.py
+    2026-10-28 18:14  src/validation/__init__.py
+    2026-10-28 18:14  tests/conftest.py
+    2026-10-28 18:14  tests/__init__.py
+    2026-10-28 18:14  tests/test_dataset_pipeline.py
+    2026-10-28 18:14  tests/test_phase1_smoke.py
+    2026-10-28 18:14  tests/test_phase3_analytics.py
+    2026-10-28 18:14  tests/test_phase7_dashboard.py
+    2026-10-28 23:23  src/data_processing/validate.py
+    2026-10-28 23:23  src/models/topology.py
+    2026-10-28 23:23  src/optimization/objective.py
+    2026-10-28 23:23  src/routing/graph.py
+    2026-10-28 23:23  tests/test_phase9_dashboard_data.py
+    2026-10-29 02:03  src/data_processing/schema.py
+    2026-10-29 02:03  src/models/entities.py
+    2026-10-29 02:04  src/data_processing/generate.py
+    2026-10-29 02:04  src/validation/loader.py
+    2026-10-29 02:06  tests/test_structural_and_separation.py
+
+Repo artifacts were NOT modified by this review. outputs/ mtimes after the full
+pytest run and all probe runs:
+
+    total 2672
+    drwxrwxr-x 1 hemanth hemanth     438 2026-10-29T04:56 .
+    drwxrwxr-x 1 hemanth hemanth     198 2026-10-29T04:56 ..
+    drwxrwxr-x 1 hemanth hemanth     240 2026-10-28T18:14 analysis
+    -rw-rw-r-- 1 hemanth hemanth   45752 2026-10-29T04:49 baseline_assignments.csv
+    -rw-rw-r-- 1 hemanth hemanth   45752 2026-10-29T04:50 baseline_repaired_assignments.csv
+    -rw-rw-r-- 1 hemanth hemanth  138220 2026-10-29T04:49 constraint_audit.csv
+    -rw-rw-r-- 1 hemanth hemanth    1796 2026-10-29T04:49 dataset_validation.json
+    drwxrwxr-x 1 hemanth hemanth     168 2026-10-28T18:14 eda
+    drwxrwxr-x 1 hemanth hemanth     564 2026-10-29T04:19 evaluation
+    drwxrwxr-x 1 hemanth hemanth     132 2026-10-28T23:23 optimization
+    drwxrwxr-x 1 hemanth hemanth     132 2026-10-28T23:23 optimized
+    drwxrwxr-x 1 hemanth hemanth     142 2026-10-28T23:23 phase1
+    -rw-rw-r-- 1 hemanth hemanth      96 2026-10-28T18:14 phase1_summary.json
+    -rw-rw-r-- 1 hemanth hemanth 2484184 2026-10-29T04:49 validation_checks_baseline.csv
+    -rw-rw-r-- 1 hemanth hemanth     342 2026-10-29T02:55 validation_status.json

@@ -1,0 +1,86 @@
+# D2 — code citations for the tolerance claim
+
+Repo: /home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting
+Captured: 2026-10-29, from the working tree (no git metadata in this checkout).
+
+## validator.py:400-442 — LD-01 and VD-01 compare with no tolerance
+
+```
+    def _check_location_weight(self, res: ValidationResult, loc_id, group) -> None:
+        ...
+        total = sum(self._sku(a.sku_id).unit_weight_kg * a.assigned_quantity for a in group if self._sku(a.sku_id))
+        ok = total <= loc.max_weight_kg
+        res.record("LD-01", ...)
+
+    def _check_volume_residual(self, res: ValidationResult, loc_id, group) -> None:
+        ...
+        total = sum(self._sku(a.sku_id).unit_volume_cm3 * a.assigned_quantity for a in group if self._sku(a.sku_id))
+        ok = total <= loc.usable_volume_cm3
+        res.record("VD-01", ...)
+```
+
+## validator.py:598-635 — SL-02, SL-01, RK-01 compare with +1e-6
+
+```
+        for key, load in beam_load.items():
+            limit = beam_limit.get(key)
+            ...
+            ok = load <= limit + 1e-6
+            res.record("SL-02", "beam_load", ok, ...)
+
+        for key, load in level_load.items():
+            ...
+            ok = load <= limit + 1e-6
+            res.record("SL-01", "shelf_load", ok, ...)
+
+        for rack, load in rack_load.items():
+            ...
+            ok = load <= limit + 1e-6
+            res.record("RK-01", "rack_load", ok, ...)
+```
+
+## optimizer.py:44-48 — the placer's epsilon
+
+```
+# Float slack when comparing weights against a structural limit. The validator's own
+# tolerance is 1e-6; being an order of magnitude tighter here means the starter can never
+# land on the "just over the line" side of a beam/level/rack comparison.
+WEIGHT_EPSILON_KG = 1e-9
+```
+
+## optimizer.py:1190-1212 — _units_affordable accepts n while n*unit <= residual + 1e-9
+
+```
+def _units_affordable(residual: float, per_unit: float) -> int:
+    ...
+    n = int(residual / per_unit)
+    while n > 0 and n * per_unit > residual + WEIGHT_EPSILON_KG:
+        n -= 1
+    while (n + 1) * per_unit <= residual:
+        n += 1
+    return n
+```
+
+The same helper is used for bin weight (LD-01), bin volume (VD-01), beam, level and rack
+(`_split_quantity`, optimizer.py:1236-1247).
+
+## optimizer.py:536-570 — the runtime guard is equally loose at the bin scopes
+
+```
+        for key, residual in residual_bin_weight.items():
+            if residual < -WEIGHT_EPSILON_KG:
+                breaches.append(f"bin {key}: residual {residual:.6f} kg < 0")
+        for key, residual in residual_volume.items():
+            if residual < -1e-6:
+                breaches.append(f"bin {key}: residual volume {residual:.3f} cm3 < 0")
+```
+
+Consequence: for LD-01/VD-01 the placer may accept a placement up to 1e-9 (weight) or 1e-6
+(volume) over the limit, while the validator's no-tolerance comparison rejects any overshoot.
+"The placer is stricter than the validator" is therefore true only for SL-01/SL-02/RK-01.
+
+SOURCES (PRIMARY)
+/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/src/validation/validator.py
+ -> Lines 400-442 (LD-01/VD-01) and 598-635 (SL-01/SL-02/RK-01); the tolerances the doc cites
+/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/src/optimization/optimizer.py
+ -> Lines 44-48 (epsilon), 1190-1212 (affordability), 1236-1247 (scopes), 536-570 (runtime guard)

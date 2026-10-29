@@ -1,0 +1,56 @@
+# D6 — every doc number checked against the artifact it names
+
+Scripts: /home/hemanth/.hermes/profiles/reviewer/cache/scratch/doc_claims.py, /home/hemanth/.hermes/profiles/reviewer/cache/scratch/pct_and_writes.py
+
+    == doc 5: '0 SL-02 violations over 960 beam checks' ==
+      optimized              rows= 15167 SL-02= 662 SL-02_fail=0 SL-01= 336 RK-01=  88 CAT-01=    0 checks_run_in_file=15167
+      repaired baseline      rows= 18077 SL-02= 922 SL-02_fail=0 SL-01= 527 RK-01= 138 CAT-01= 1039 checks_run_in_file=18077
+      as-supplied baseline   rows= 20699 SL-02= 960 SL-02_fail=0 SL-01= 550 RK-01= 144 CAT-01= 3594 checks_run_in_file=20699
+    
+    == doc 7: quoted optimization_summary block vs the real file ==
+      real objective.baseline_value           = 2321711.3822095753
+      doc 7 quotes baseline_value             = 2336184.141
+      real objective.baseline_value_as_supplied = 2336184.1414095755
+      -> doc 7's baseline_value is the AS-SUPPLIED value; the field of that name holds the
+         REPAIRED baseline value.
+    
+    == doc 11: baseline travel / repaired travel / reduction ==
+      as-supplied travel     1,707,167.15
+      repaired travel        1,691,478.55
+      optimized travel         750,119.50
+      repaired->optimized 55.6530%  (doc: -55.65%)
+      assupplied->repaired 0.9190%  (doc: -0.92%)
+      CYCLE  doc says 1,484,036 -> 747,845
+             as-supplied 1,484,035.5  repaired 1,471,967.4  optimized 747,845.0
+      TPUT   doc says 13.14 -> 26.07
+             as-supplied 13.14  repaired 13.24  optimized 26.07
+    
+    == doc 11.1: 18 comparison rows / max beam utilisation 55.6% -> 72.5% ==
+      comparison rows: 18
+      as supplied  max beam utilisation 55.56%  at ('R9-2-1', np.int64(0), np.int64(3))
+      repaired     max beam utilisation 72.49%  at ('R7-4-1', np.int64(1), np.int64(1))
+      optimized    max beam utilisation 99.37%  at ('R5-3-1', np.int64(0), np.int64(3))
+    
+    == doc 14.3: separation grid queries/rejections on the canonical run ==
+      {'radius_m': 10.0, 'enabled': True, 'forbidden_pairs': 13, 'cells': 14, 'bins_indexed': 1288, 'queries': 1293, 'rejections': 0}
+
+    == doc 11: cycle-time row ==
+      as-supplied baseline cycle 1,484,036 s -> 747,845 s  = -49.607%
+      repaired   baseline cycle 1,471,967 s -> 747,845 s  = -49.194%
+    == doc 11: throughput row ==
+      as-supplied 13.14 -> 26.07 = +98.402%
+      repaired    13.24 -> 26.07 = +96.903%
+      both rows overstate the gain by using the INFEASIBLE layout as the baseline
+    
+    == test write-safety scan (does any Phase-2 test write outside tmp_path?) ==
+      test_dataset_pipeline.py:
+        30: with path.open(newline="", encoding="utf-8") as handle:
+        150: with path.open("w", newline="", encoding="utf-8") as handle:
+      test_feasibility_gate.py:
+        41: path.parent.mkdir(parents=True, exist_ok=True)
+        52: ).to_csv(path, index=False)
+      test_phase1_smoke.py:
+        27: bad.write_text("{not valid json", encoding="utf-8")
+      test_phase8_integration.py:
+        110: bad.write_text("{not valid json")
+      (files with no hits use only in-memory objects or paths derived from tmp_path)

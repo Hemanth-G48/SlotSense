@@ -1,0 +1,41 @@
+==============================================================================
+§11 performance rows vs outputs/evaluation/evaluation_summary.json
+==============================================================================
+  top-level keys: ['dataset', 'scenario', 'affinity_scenario', 'execution_status', 'evaluation_status', 'separation_radius_m', 'baseline_variant', 'baseline_source', 'baseline_note', 'comparison_valid', 'diagnostic_only', 'inventory_units', 'skus_with_inventory', 'diagnostic_comparison']
+  evaluation_status = OK | comparison_valid = True | blocked_layouts = [] | baseline_variant = repaired_minimal | radius = 10.0
+  baseline: {'total_travel_distance_m': 1691478.55, 'throughput_orders_per_hr': 13.24}
+  optimized: {'total_travel_distance_m': 750119.5, 'throughput_orders_per_hr': 26.07}
+  diagnostic_baseline.metrics: {'total_travel_distance_m': 1707167.15, 'throughput_orders_per_hr': 13.14}
+  diagnostic_baseline.delta_vs_evaluated_baseline: {'total_travel_distance_m': -15688.6, 'throughput_orders_per_hr': 0.1}
+
+  §11 doc claims:
+    baseline travel (as supplied → repaired)  1,707,167 m → 1,691,479 m  (−0.92 %)
+    optimized travel                          750,120 m
+    optimized vs repaired baseline            −55.65 %
+    cycle time 1,471,967 s → 747,845 s        (−49.19 %)
+    throughput 13.24 → 26.07 orders/h         (+96.90 %)
+
+==============================================================================
+§11.2 headroom re-derived from the delivered optimized CSV
+==============================================================================
+  top-3 beams by utilisation:
+    ('R5-3-1', 0, 3)  load=214.636 kg  cap=216.0  util=99.3685 %
+    ('R5-1-1', 0, 2)  load=247.878 kg  cap=252.0  util=98.3643 %
+    ('R1-2-2', 0, 3)  load=70.336 kg  cap=72.0  util=97.6889 %
+  top-3 levels by utilisation:
+    ('R5-3-1', 1)  load=458.757 kg  cap=460.8  util=99.5566 %
+    ('R5-2-2', 2)  load=401.190 kg  cap=403.2  util=99.5015 %
+    ('R1-2-2', 3)  load=114.143 kg  cap=115.2  util=99.0825 %
+  bins at 100.00 % of max_weight_kg:
+    LOC002136  load=30.000 kg  cap=30.0  util=100.0000 %
+  rows=1288  skus=1200  units=6375
+  any beam over its cap?   False
+  any level over its cap?  False
+  any bin over its cap?    False
+== arithmetic re-derived (awk, full precision) ==
+  travel improvement vs repaired      = 55.6530 %  (doc: -55.65 %)
+  baseline travel change (repair only) = 0.9190 %  (doc: 0.92 % / -0.92 %)
+  throughput change                    = +96.9033 %  (doc: +96.90 %)
+  cycle-time change                    = -49.1942 %  (doc: -49.19 %)
+  beam util 214.636/216.0              = 99.3685 %  (doc: 99.37 %)
+  level util 458.757/460.8             = 99.5566 %  (doc: 99.56 %)

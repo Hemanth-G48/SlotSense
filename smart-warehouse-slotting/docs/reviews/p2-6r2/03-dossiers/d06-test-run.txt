@@ -1,0 +1,18 @@
+== full suite re-run by this review (P2-6R2), doc §10 claims 181 passed
+== full suite re-run by this review (P2-6R2); the document §10 claims 181 passed
+
+== run 1 ==
+........................................................................ [ 39%]
+........................................................................ [ 79%]
+.....................................                                    [100%]
+181 passed in 238.07s (0:03:58)
+
+== run 2 (captured, same command) ==
+........................................................................ [ 39%]
+........................................................................ [ 79%]
+.....................................                                    [100%]
+181 passed in 239.59s (0:03:59)
+
+Command: .venv/bin/python -m pytest tests/ -q --tb=short -p no:cacheprovider
+ -> 181 passed, 0 failed, 0 skipped, 0 errors, twice; wall clock differs (238.07 s / 239.59 s), the
+    document quotes 248.22 s with a 219.96 s repeat run. Count is exactly as claimed.

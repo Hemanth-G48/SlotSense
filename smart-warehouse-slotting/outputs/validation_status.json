@@ -1,9 +1,14 @@
 {
-  "dataset": "C:\\Users\\venka\\Desktop\\COLLEGE\\ai_syndicate\\dataset\\processed",
+  "dataset": "../dataset/processed",
+  "separation_radius_m": 10.0,
   "n_assignments": 1425,
-  "n_violations": 0,
-  "n_hard_violations": 0,
-  "checks_run": 2850,
-  "feasibility_pct": 100.0,
-  "feasible": true
+  "n_violations": 1071,
+  "n_hard_violations": 1071,
+  "checks_run": 20699,
+  "feasibility_pct": 94.08,
+  "rule_check_pass_pct": 94.83,
+  "valid_assignments": 1129,
+  "required_assignments": 1200,
+  "feasible": false,
+  "safety_compliant": false
 }

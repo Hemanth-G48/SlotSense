@@ -1,6 +1,6 @@
-"""Optimization objective (demand-weighted travel + proximity-based affinity + ergonomics).
+"""Optimization objective (demand-weighted travel + proximity affinity + ergonomics + replenishment).
 
-minimize  alpha*D + beta*A + gamma*E + delta*U
+minimize  alpha*D + beta*A + gamma*E + delta*U + epsilon*Psi_R
 
 - D (travel): demand-weighted distance-to-dispatch. Demand is the SKU's real demand
   frequency, NOT quantity — quantity is fixed real inventory, never fabricated.
@@ -8,6 +8,12 @@ minimize  alpha*D + beta*A + gamma*E + delta*U
   enforced, affinity rewards placing co-ordered SKUs in NEARBY bins (not co-located).
 - E (ergonomics): penalize high-demand SKUs not in the golden zone.
 - U (utilization): penalize under-filled bins.
+- Psi_R (replenishment): restock travel implied by each SKU's assigned bins, in metres
+  (see ``src/optimization/replenishment.py``). Weight ``epsilon`` defaults to 0.0, which
+  reproduces the Phase 2 objective exactly.
+
+Component values are published separately from the weighted sum: a weight is not
+evidence, and a single total cannot show which term moved.
 
 Safety/feasibility and inventory conservation are HARD constraints enforced by the validator,
 never part of this objective.
@@ -28,6 +34,7 @@ class Objective:
     beta: float = 0.4
     gamma: float = 0.3
     delta: float = 0.2
+    epsilon: float = 0.0  # replenishment (Psi_R) weight; 0.0 = Phase 2 behaviour
 
     def evaluate(
         self,
@@ -36,16 +43,60 @@ class Objective:
         warehouse: Warehouse,
         demand: dict[str, float] | None = None,
         affinity_penalty: dict[frozenset[str], float] | None = None,
+        replenishment_travel_m: float | None = None,
     ) -> float:
-        """Lower is better."""
+        """Lower is better. ``replenishment_travel_m`` is the already-computed Psi_R."""
         if not assignments:
             return 0.0
+        return self.components(
+            assignments,
+            skus,
+            warehouse,
+            demand,
+            affinity_penalty,
+            replenishment_travel_m,
+        )["total"]
+
+    def components(
+        self,
+        assignments: list[StorageAssignment],
+        skus: dict[str, SKU],
+        warehouse: Warehouse,
+        demand: dict[str, float] | None = None,
+        affinity_penalty: dict[frozenset[str], float] | None = None,
+        replenishment_travel_m: float | None = None,
+    ) -> dict:
+        """Per-term values and weighted contributions, for audit rather than scoring."""
+        if not assignments:
+            return {
+                "D_travel": 0.0, "A_affinity": 0.0, "E_ergonomics": 0.0,
+                "U_utilization": 0.0, "R_replenishment": 0.0,
+                "alpha_D": 0.0, "beta_A": 0.0, "gamma_E": 0.0,
+                "delta_U": 0.0, "epsilon_R": 0.0, "total": 0.0,
+            }
         demand = demand or {}
         D = _travel_cost(assignments, skus, warehouse, demand)
         E = _ergonomics(assignments, skus, warehouse, demand)
         U = _utilization(assignments, skus, warehouse)
         A = _affinity(assignments, skus, warehouse, affinity_penalty) if affinity_penalty else 0.0
-        return self.alpha * D + self.beta * A + self.gamma * E + self.delta * U
+        R = float(replenishment_travel_m) if replenishment_travel_m is not None else 0.0
+        weighted = {
+            "alpha_D": self.alpha * D,
+            "beta_A": self.beta * A,
+            "gamma_E": self.gamma * E,
+            "delta_U": self.delta * U,
+            "epsilon_R": self.epsilon * R,
+        }
+        return {
+            "D_travel": D,
+            "A_affinity": A,
+            "E_ergonomics": E,
+            "U_utilization": U,
+            "R_replenishment": R,
+            **weighted,
+            "total": sum(weighted.values()),
+        }
+
 
 
 def _travel_cost(assignments, skus, warehouse, demand) -> float:

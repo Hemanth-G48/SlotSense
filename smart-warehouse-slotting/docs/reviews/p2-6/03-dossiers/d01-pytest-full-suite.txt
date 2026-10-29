@@ -1,0 +1,32 @@
+# D1 — full test suite, verbatim
+
+Command (run from the repo root, unconditionally):
+
+    .venv/bin/python -m pytest tests/ -q --tb=no -p no:cacheprovider
+
+Interpreter: .venv/bin/python -> CPython 3.14.4
+
+Output (verbatim and complete — the run printed nothing else):
+
+    ........................................................................ [ 39%]
+    ........................................................................ [ 79%]
+    .....................................                                    [100%]
+    181 passed in 242.06s (0:04:02)
+
+Exit code: 0.  0 failed, 0 skipped, 0 xfailed, 0 errors.
+
+Collection count is 181, not 167: the tree has 167 `def test_` functions and
+parametrize expands them.
+
+The four modules the Phase-2 doc totals as 54:
+
+    .venv/bin/python -m pytest tests/test_phase2_greedy_constraints.py \
+        tests/test_structural_scopes.py tests/test_inventory_integrity.py \
+        tests/test_determinism.py -q --collect-only -p no:cacheprovider
+
+    -> 54 tests collected in 0.50s     (doc claim: 54 — correct)
+
+Whole tree:
+
+    .venv/bin/python -m pytest tests/ -q --collect-only -p no:cacheprovider
+    -> 181 tests collected in 0.35s

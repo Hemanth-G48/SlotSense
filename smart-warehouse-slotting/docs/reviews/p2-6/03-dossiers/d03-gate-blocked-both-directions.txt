@@ -1,0 +1,152 @@
+# D3 — item 6, BLOCKED path: two real CLI runs, both non-zero
+
+## (b) run-all with an infeasible, unrepairable baseline
+
+The canonical dataset was copied and one SKU's on-hand quantity raised to 47 units above
+what its baseline row assigns. That produces INV-02; an INV violation names no bin, so
+_problem_bins() is empty and the repair loop has nothing to relocate. The repaired layout
+then fails exact conservation and is refused, so baseline_variant stays as_supplied.
+
+## (c) simulate with an infeasible optimized layout
+
+The as-supplied baseline CSV (1,071 CAT-01 violations) is passed as --optimized, so the
+optimized side is the illegal layout while the baseline side is the repaired, feasible one.
+
+## Complete output of both runs
+
+    
+    >>> bad dataset: SKU000001 on-hand 3 -> 50 (baseline row assigns 3) -> INV-02, and an INV violation names no bin so repair cannot target it
+    $ /home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/.venv/bin/python app/main.py run-all --processed /home/hemanth/.hermes/profiles/reviewer/cache/scratch/gatecheck/bad_dataset/processed --scenario A
+    == validate ==
+       baseline feasible=False violations=1072 checks=20699
+    == baseline repair ==
+       baseline_variant=as_supplied source=/home/hemanth/.hermes/profiles/reviewer/cache/scratch/gatecheck/bad_dataset/processed/storage_assignments_baseline.csv
+       repair: 1072 -> 1 violations ({'CAT-01': 1071, 'INV-02': 1} -> {'INV-02': 1}), moves attempted=96 accepted=96 rejected=0, terminated=no_improving_move in 7.849s
+       movement: 96/1425 records relocated, 1471.373 m total, median 12.01 m
+       conservation: units 6375/6422 exact=False duplicate_pins=0
+    == analysis ==
+    == optimize ==
+       execution=OK feasibility=FEASIBLE violations=0 rules={}
+    == simulate ==
+       evaluation_status=BLOCKED_INFEASIBLE_LAYOUT comparison_valid=False blocked_layouts=['baseline'] baseline_variant=as_supplied
+    --- stderr ---
+    BLOCKED by the feasibility gate: evaluation_status=BLOCKED_INFEASIBLE_LAYOUT, infeasible layout(s)=baseline. The diagnostic metrics are not valid evidence; fix the layouts and re-run.
+    EXIT_CODE=1
+    RUN_ALL_ON_INFEASIBLE_BASELINE_EXIT=1
+    --- run-all, infeasible baseline: /home/hemanth/.hermes/profiles/reviewer/cache/scratch/gatecheck/smart-warehouse-slotting/outputs/evaluation/evaluation_summary.json ---
+        evaluation_status      'BLOCKED_INFEASIBLE_LAYOUT'
+        comparison_valid       False
+        diagnostic_only        True
+        blocked_layouts        ['baseline']
+        baseline_variant       'as_supplied'
+        comparison rows        0
+        diagnostic_comparison  present
+        every diagnostic row flagged: True  (18 rows)
+        blocked_reason         Independent validation found hard violations in baseline; a baseline-vs-optimized comparison is not valid evidence for an infeasible layout.
+        feasibility[baseline]       INFEASIBLE n=1072 {'CAT-01': 1071, 'INV-02': 1}
+        feasibility[optimized]       FEASIBLE n=0 {}
+        optimization_summary.baseline_variant      'as_supplied'
+        optimization_summary.baseline_repair.feasible False
+        optimization_summary.feasibility_status    'FEASIBLE'
+    $ /home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/.venv/bin/python app/main.py simulate --processed /home/hemanth/.hermes/profiles/reviewer/cache/scratch/gatecheck/dataset/processed --optimized /home/hemanth/.hermes/profiles/reviewer/cache/scratch/gatecheck/dataset/processed/storage_assignments_baseline.csv --output /home/hemanth/.hermes/profiles/reviewer/cache/scratch/gatecheck/blocked_optimized --scenario A
+    ute_time_sec": -12068.15,
+          "throughput_orders_per_hr": 0.1,
+          "constraint_violations": -1071
+        }
+      },
+      "assumptions": {
+        "routing_strategy": "nearest_neighbor",
+        "batch_size_orders": 5,
+        "picker_speed_mps": 1.3,
+        "pick_time_sec_per_line": 8.0,
+        "setup_time_sec_per_batch": 10.0,
+        "golden_shelf_levels": [
+          1,
+          2
+        ],
+        "cube_utilization_basis": "on-hand assigned quantity x SKU bounding-box volume / usable bin volume (volume approximation, not 3-D packing)",
+        "throughput_definition": "orders completed / total pick-cycle hours (travel + pick + setup)",
+        "affinity_weighting": "co-occurrence count for pairs with co_count >= 2 and lift >= 1",
+        "depot_node": "DEPOT",
+        "separation_radius_m": 10.0
+      },
+      "route_breakdown": {
+        "baseline": {
+          "n_batches": 1083,
+          "total_orders": 5415,
+          "total_pick_lines": 20000,
+          "total_distance_m": 1691478.55,
+          "avg_distance_m": 1561.85,
+          "total_route_time_sec": 1471967.35,
+          "avg_cycle_time_sec": 1359.16,
+          "avg_time_per_order_sec": 271.83,
+          "total_travel_time_sec": 1301137.35,
+          "total_pick_time_sec": 160000.0,
+          "total_setup_time_sec": 10830.0,
+          "throughput_orders_per_hr": 13.24
+        },
+        "optimized": {
+          "n_batches": 1083,
+          "total_orders": 5415,
+          "total_pick_lines": 20000,
+          "total_distance_m": 1707167.15,
+          "avg_distance_m": 1576.33,
+          "total_route_time_sec": 1484035.5,
+          "avg_cycle_time_sec": 1370.3,
+          "avg_time_per_order_sec": 274.06,
+          "total_travel_time_sec": 1313205.5,
+          "total_pick_time_sec": 160000.0,
+          "total_setup_time_sec": 10830.0,
+          "throughput_orders_per_hr": 13.14
+        }
+      },
+      "notes": {
+        "identical_orders_geometry_routing": true,
+        "routing_strategy": "nearest_neighbor",
+        "batch_size": 5,
+        "baseline_was_validated": true,
+        "baseline_constraint_violations": 0,
+        "optimized_constraint_violations": 1071,
+        "baseline_feasibility_status": "FEASIBLE",
+        "optimized_feasibility_status": "INFEASIBLE",
+        "baseline_violations_by_rule": {},
+        "optimized_violations_by_rule": {
+          "CAT-01": 1071
+        },
+        "baseline_rule_checks": 18077,
+        "optimized_rule_checks": 20699,
+        "baseline_inventory_conservation_violations": 0,
+        "optimized_inventory_conservation_violations": 0,
+        "same_inventory_units": 6375,
+        "comparison_published_as_valid_evidence": false,
+        "comparison_is_diagnostic_only": true,
+        "gate_blocked_layouts": [
+          "optimized"
+        ],
+        "baseline_variant": "repaired_minimal",
+        "baseline_source": "/home/hemanth/.hermes/profiles/reviewer/cache/scratch/gatecheck/smart-warehouse-slotting/outputs/baseline_repaired_assignments.csv",
+        "baseline_repaired_for_feasibility": true,
+        "as_supplied_baseline_published_as": "diagnostic_baseline"
+      },
+      "blocked_reason": "Independent validation found hard violations in optimized; a baseline-vs-optimized comparison is not valid evidence for an infeasible layout."
+    }
+    --- stderr ---
+    BLOCKED by the feasibility gate: evaluation_status=BLOCKED_INFEASIBLE_LAYOUT, infeasible layout(s)=optimized. The diagnostic metrics are not valid evidence; fix the layouts and re-run.
+    EXIT_CODE=1
+    SIMULATE_ON_INFEASIBLE_OPTIMIZED_EXIT=1
+    --- simulate, infeasible optimized layout: /home/hemanth/.hermes/profiles/reviewer/cache/scratch/gatecheck/blocked_optimized/evaluation_summary.json ---
+        evaluation_status      'BLOCKED_INFEASIBLE_LAYOUT'
+        comparison_valid       False
+        diagnostic_only        True
+        blocked_layouts        ['optimized']
+        baseline_variant       'repaired_minimal'
+        comparison rows        0
+        diagnostic_comparison  present
+        every diagnostic row flagged: True  (18 rows)
+        blocked_reason         Independent validation found hard violations in optimized; a baseline-vs-optimized comparison is not valid evidence for an infeasible layout.
+        feasibility[baseline]       FEASIBLE n=0 {}
+        feasibility[optimized]       INFEASIBLE n=1071 {'CAT-01': 1071}
+    
+    ================ SUMMARY ================
+    (b) run-all with infeasible baseline      exit=1  (want != 0)
+    (c) simulate with infeasible optimized    exit=1  (want != 0)

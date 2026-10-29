@@ -1,0 +1,8 @@
+.                                                                        [100%]
+1 passed in 34.70s
+
+SOURCES (PRIMARY)
+/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/tests/test_phase5_optimizer.py
+ -> The changed test, run alone against the canonical dataset
+Command: .venv/bin/python -m pytest tests/test_phase5_optimizer.py::test_optimizer_assignments_pass_phase4_validator -q --tb=short -p no:cacheprovider
+ -> 1 passed; the test now validates at cfg.separation_radius_m
