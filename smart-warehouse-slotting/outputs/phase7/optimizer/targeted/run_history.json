@@ -1,0 +1,35 @@
+[
+  {
+    "run_id": 1,
+    "completed_at_utc": "2026-10-29T07:47:17+00:00",
+    "algorithm": "greedy (velocity-ordered, inventory-conserving, beam/CAT-01-aware) + constraint-safe repair + simulated annealing",
+    "objective_weights": {
+      "alpha": 1.0,
+      "beta": 0.4,
+      "gamma": 0.3,
+      "delta": 0.2,
+      "epsilon": 0.0
+    },
+    "seed": 42,
+    "separation_radius_m": 10.0,
+    "baseline_variant": "repaired_minimal",
+    "baseline_repair_termination": "feasible",
+    "execution_status": "OK",
+    "feasibility_status": "FEASIBLE",
+    "feasibility": true,
+    "n_violations": 0,
+    "violations_by_rule": {},
+    "repair_termination": "already_feasible",
+    "repair_moves_accepted": 0,
+    "units_placed": 6375,
+    "inventory_units": 6375,
+    "units_unplaced": 0,
+    "final_objective": 625551.4241137003,
+    "objective_improvement_pct": 61.45,
+    "moves_evaluated": 600,
+    "moves_accepted": 52,
+    "runtime_sec": 38.549,
+    "stopping_reason": "max iterations reached (annealing)",
+    "globally_optimal": false
+  }
+]

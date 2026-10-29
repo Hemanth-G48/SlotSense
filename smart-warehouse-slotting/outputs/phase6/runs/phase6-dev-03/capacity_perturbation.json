@@ -1,0 +1,89 @@
+{
+  "schema": "phase6.capacity_perturbation/1",
+  "generated_at_utc": "2026-10-29T04:45:26+00:00",
+  "inputs": {
+    "dataset": "/home/hemanth/hackathon/epoch_hackathon/dataset/processed",
+    "optimized_layout": "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase6/runs/phase6-dev-03/artifacts/phase3/optimized_fit/optimized_assignments.csv",
+    "optimized_layout_sha256": "cafa55e805e817306913186d92889801728a30a3012ffa9a1722e27c3003bd6b",
+    "headroom_artifact": "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase6/runs/phase6-dev-03/artifacts/phase4/phase4_headroom.csv",
+    "headroom_sha256": "ea4c0c8114221e1d8032c39a6ba93cd4bf52b438be3ddf9c7ec05d692d4ad127"
+  },
+  "baseline": {
+    "feasible": true,
+    "n_violations": 0,
+    "units": 6375
+  },
+  "perturbations": [
+    {
+      "scope": "bin_weight",
+      "location": "LOC002120",
+      "sku_id": "SKU001156",
+      "reported_utilization_pct": 100.0,
+      "reported_observed": 30.0,
+      "reported_limit": 30.0,
+      "inventory_only": {
+        "feasible": false,
+        "n_violations": 1,
+        "rules": [
+          "INV-02"
+        ]
+      },
+      "inventory_plus_layout": {
+        "feasible": false,
+        "n_violations": 2,
+        "rules": [
+          "LD-01",
+          "SL-01"
+        ],
+        "violations": [
+          {
+            "rule_id": "LD-01",
+            "reason": "load 40.0kg > per-bin limit 30.0kg",
+            "severity": "high",
+            "location_id": "LOC002120",
+            "sku_id": null
+          },
+          {
+            "rule_id": "SL-01",
+            "reason": "shelf ('R9-2-1', 3) load 86.5kg > limit 86.4kg",
+            "severity": "high",
+            "location_id": "R9-2-1 shelf 3",
+            "sku_id": null
+          }
+        ]
+      }
+    },
+    {
+      "scope": "bin_volume",
+      "location": "LOC000193",
+      "sku_id": "SKU000709",
+      "reported_utilization_pct": 99.9289,
+      "reported_observed": 107923.2,
+      "reported_limit": 108000.0,
+      "inventory_only": {
+        "feasible": false,
+        "n_violations": 1,
+        "rules": [
+          "INV-02"
+        ]
+      },
+      "inventory_plus_layout": {
+        "feasible": false,
+        "n_violations": 1,
+        "rules": [
+          "VD-01"
+        ],
+        "violations": [
+          {
+            "rule_id": "VD-01",
+            "reason": "stored volume 161885cm3 > 108000cm3",
+            "severity": "high",
+            "location_id": "LOC000193",
+            "sku_id": null
+          }
+        ]
+      }
+    }
+  ],
+  "interpretation": "A feasible baseline plus infeasible one-unit perturbations means the hard gate, not a dashboard warning, is what prevents publication. The canonical dataset was not modified."
+}

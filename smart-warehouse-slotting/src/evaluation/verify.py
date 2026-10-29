@@ -48,10 +48,25 @@ def verify_phase4_artifacts(
 ) -> dict:
     phase4_dir = Path(phase4_dir)
     root = phase4_dir.parent.parent
-    phase3_dir = Path(phase3_dir) if phase3_dir else root / "outputs" / "phase3"
-    dataset_dir = Path(dataset_dir) if dataset_dir else root.parent / "dataset" / "processed"
-
     exp = json.loads((phase4_dir / "phase4_experiments.json").read_text())
+    # Prefer the paths recorded in the artifact so a run directory works without the
+    # conventional <root>/outputs layout.
+    recorded_phase3 = (exp.get("phase3") or {}).get("experiments")
+    phase3_dir = (
+        Path(phase3_dir)
+        if phase3_dir
+        else Path(recorded_phase3).parent
+        if recorded_phase3
+        else root / "outputs" / "phase3"
+    )
+    recorded_dataset = exp.get("dataset")
+    dataset_dir = (
+        Path(dataset_dir)
+        if dataset_dir
+        else Path(recorded_dataset)
+        if recorded_dataset
+        else root.parent / "dataset" / "processed"
+    )
     cells = pd.read_csv(phase4_dir / "phase4_cells.csv")
     headroom = pd.read_csv(phase4_dir / "phase4_headroom.csv")
     checks: list[dict] = []

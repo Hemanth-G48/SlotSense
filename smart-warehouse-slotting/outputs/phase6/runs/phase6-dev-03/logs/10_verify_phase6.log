@@ -1,0 +1,18 @@
+$ /home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/.venv/bin/python /home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/tools/verify_phase6.py /home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase6/runs/phase6-dev-03
+
+Traceback (most recent call last):
+  File "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/tools/verify_phase6.py", line 155, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/tools/verify_phase6.py", line 146, in main
+    result = verify(Path(args.run_dir))
+  File "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/tools/verify_phase6.py", line 72, in verify
+    p3 = json.loads((run_dir / "phase3" / "phase3_experiments.json").read_text())
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/hemanth/.local/share/uv/python/cpython-3.14.4-linux-x86_64-gnu/lib/python3.14/pathlib/__init__.py", line 787, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hemanth/.local/share/uv/python/cpython-3.14.4-linux-x86_64-gnu/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase6/runs/phase6-dev-03/phase3/phase3_experiments.json'

@@ -3,7 +3,9 @@ assignment must pass. Also verifies the canonical baseline's verdict is reported
 and the audit exporter runs."""
 
 import math
+import os
 from collections import defaultdict
+from pathlib import Path
 
 import pandas as pd
 import pytest
@@ -167,7 +169,9 @@ def test_baseline_feasibility_is_reported_correctly_on_benchmark():
         are reported (with rule ids and reasons) and the evaluation gate marks the layout
         INFEASIBLE — i.e. it cannot be scored.
     """
-    processed = PROJECT_ROOT.parent / "dataset" / "processed"
+    processed = Path(
+        os.environ.get("DATASET_DIR", PROJECT_ROOT.parent / "dataset" / "processed")
+    ).resolve()
     if not processed.exists():
         pytest.skip("benchmark data not generated")
     wh, skus, comp, assignments, inventory = load_shipping(processed)

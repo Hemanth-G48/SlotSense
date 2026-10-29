@@ -1,0 +1,7 @@
+$ /home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/.venv/bin/python -m src.evaluation.verify_phase5 --out /home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase6/runs/phase6-dev-03/artifacts/phase5
+
+{
+  "all_passed": true,
+  "n_checks": 50,
+  "n_failed": 0
+}

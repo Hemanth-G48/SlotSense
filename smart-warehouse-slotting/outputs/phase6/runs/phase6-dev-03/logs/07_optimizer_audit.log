@@ -1,0 +1,58 @@
+$ /home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/.venv/bin/python /home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/tools/audit_optimizer.py --fit-tree /home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase6/runs/phase6-dev-03/artifacts/phase3/split/A70/fit/processed --out /home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase6/runs/phase6-dev-03/optimizer_audit.json
+
+{
+  "schema": "phase6.optimizer_audit/1",
+  "generated_at_utc": "2026-10-29T04:45:24+00:00",
+  "hand_fixture": {
+    "start_location": "L_FAR",
+    "start_score": 1000.3981481481482,
+    "refined_location": "L_NEAR",
+    "refined_score": 100.39814814814815,
+    "improved": true,
+    "expected_best_score": 100.0,
+    "feasible": true
+  },
+  "canonical": {
+    "seed": 42,
+    "fit_tree": "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase6/runs/phase6-dev-03/artifacts/phase3/split/A70/fit/processed",
+    "samples": 600,
+    "starter": {
+      "feasible": true,
+      "objective": 625551.4241137003,
+      "n_assignment_records": 1290,
+      "n_bins_used": 1290,
+      "D_travel": 622468.9750000011,
+      "independent_D_travel": 622468.975,
+      "D_matches_independent": true
+    },
+    "sampled_neighbours": {
+      "feasible": 270,
+      "invalid_or_infeasible": 330,
+      "improving": 2,
+      "best_delta": -0.0704
+    },
+    "refine": {
+      "objective": 625551.4241137003,
+      "delta_vs_starter": 0.0,
+      "feasible": true,
+      "layout_changed": false
+    },
+    "config": {
+      "alpha": 1.0,
+      "beta": 0.4,
+      "gamma": 0.3,
+      "delta": 0.2,
+      "epsilon": 0.0,
+      "separation_radius_m": 10.0
+    }
+  },
+  "inputs": {
+    "config_sha256": "b37b8231da1cdb6e0c3b4302372d4e98116272e3f9f011f3c1d747ef583dce03",
+    "fit_tree": "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase6/runs/phase6-dev-03/artifacts/phase3/split/A70/fit/processed",
+    "fit_assignments_sha256": "c564c0778de5e124e310e9d1e3b0071469bb274a0107bee045ab1cd5addbe944"
+  },
+  "interpretation": {
+    "fixture": "If hand_fixture.improved is true, the move generator, validator gate and score comparison can improve a layout when an improving move exists.",
+    "canonical": "improving == 0 means the sampled neighbourhood found no layout better than the greedy starter; it does not prove global optimality. refine.delta_vs_starter == 0 means the annealer returned the starter on this instance."
+  }
+}

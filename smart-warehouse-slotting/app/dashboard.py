@@ -11,11 +11,13 @@ Run with: ``streamlit run app/dashboard.py``
 from __future__ import annotations
 
 import json
+import logging
 import sys
 from pathlib import Path
 
 import pandas as pd
 import plotly.graph_objects as go
+import plotly.io as pio
 import streamlit as st
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -27,13 +29,147 @@ try:
 except ModuleNotFoundError:  # streamlit run app/dashboard.py puts app/ on sys.path
     import dashboard_data as dd  # type: ignore[no-redef]
 
+try:
+    from app import phase5_views as p5v
+except ModuleNotFoundError:  # streamlit run app/dashboard.py puts app/ on sys.path
+    import phase5_views as p5v  # type: ignore[no-redef]
+
+try:
+    from app import phase6_registry as p6r
+except ModuleNotFoundError:  # streamlit run app/dashboard.py puts app/ on sys.path
+    import phase6_registry as p6r  # type: ignore[no-redef]
+
 st.set_page_config(page_title="Smart Warehouse Slotting", page_icon="🏭", layout="wide")
 
 PLOT_HEIGHT = 600
 NEUTRAL = "#95a5a6"
 ACCENT = "#2471a3"
-BASELINE_COLOR = "#95a5a6"
-OPTIMIZED_COLOR = "#2471a3"
+BASELINE_COLOR = "#94a3b8"
+OPTIMIZED_COLOR = "#2563eb"
+GOOD = "#15803d"
+BAD = "#b91c1c"
+WARN = "#b45309"
+BORDER = "#dbe3ec"
+TEXT = "#0f2742"
+MUTED = "#52637a"
+
+pio.templates["hermes_ops"] = go.layout.Template(
+    layout=go.Layout(
+        font=dict(family='-apple-system, "Segoe UI", Inter, Roboto, sans-serif', size=12, color=TEXT),
+        paper_bgcolor="#ffffff",
+        plot_bgcolor="#ffffff",
+        colorway=[OPTIMIZED_COLOR, BASELINE_COLOR, GOOD, WARN, BAD, "#7c3aed", "#0891b2"],
+        margin=dict(l=16, r=16, t=58, b=40),
+        legend=dict(orientation="h", yanchor="bottom", y=1.0, x=0),
+        xaxis=dict(gridcolor="#edf2f7", zerolinecolor="#cbd5e1"),
+        yaxis=dict(gridcolor="#edf2f7", zerolinecolor="#cbd5e1"),
+    )
+)
+pio.templates.default = "plotly_white+hermes_ops"
+
+_APP_CSS = f"""
+<style>
+:root {{
+  --canvas: #f6f8fb;
+  --surface: #ffffff;
+  --border: {BORDER};
+  --text: {TEXT};
+  --muted: {MUTED};
+  --blue: {OPTIMIZED_COLOR};
+  --good: {GOOD};
+  --bad: {BAD};
+  --warn: {WARN};
+}}
+html, body, [class*="css"] {{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+}}
+.stApp {{ background: var(--canvas); }}
+.block-container {{ max-width: 1480px; padding-top: 1.2rem; padding-bottom: 3rem; }}
+[data-testid="stHeader"] {{ background: transparent; height: 0; }}
+[data-testid="stAppDeployButton"], #MainMenu, footer {{ display: none !important; }}
+h1, h2, h3 {{ color: var(--text); letter-spacing: -0.015em; }}
+h2 {{ font-size: 1.28rem !important; margin-top: 1.35rem !important; }}
+h3 {{ font-size: 1.02rem !important; }}
+p, li {{ color: #26364a; }}
+.hero {{ border-bottom: 1px solid var(--border); padding: 0 0 1rem 0; margin-bottom: .25rem; }}
+.hero .eyebrow {{
+  color: var(--blue); font-size: .74rem; font-weight: 800; letter-spacing: .11em;
+  text-transform: uppercase; margin-bottom: .35rem;
+}}
+.hero h1 {{ font-size: 1.95rem; line-height: 1.15; margin: 0 0 .45rem 0; }}
+.hero p {{ color: var(--muted); font-size: .92rem; max-width: 960px; margin: 0; }}
+.section-label {{
+  color: var(--text); font-size: .80rem; font-weight: 800; letter-spacing: .08em;
+  text-transform: uppercase; margin: 1.15rem 0 .55rem 0;
+}}
+[data-testid="stSidebar"] {{ background: var(--surface); border-right: 1px solid var(--border); }}
+[data-testid="stSidebar"] .block-container {{ padding-top: 1.2rem; }}
+.sidebar-brand {{ font-size: .72rem; font-weight: 800; letter-spacing: .10em; color: var(--blue); text-transform: uppercase; }}
+.sidebar-title {{ font-size: 1.05rem; font-weight: 750; color: var(--text); margin: .2rem 0 .7rem 0; }}
+[data-testid="stMetric"] {{
+  background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+  padding: 13px 15px; min-height: 128px;
+}}
+[data-testid="stMetricLabel"] p {{
+  white-space: normal !important; overflow: visible !important; text-overflow: clip !important;
+  font-size: .80rem !important; line-height: 1.3 !important; font-weight: 650 !important;
+  color: var(--muted) !important; min-height: 2.1em;
+}}
+[data-testid="stMetricValue"] {{ font-size: 1.55rem !important; font-weight: 750 !important; color: var(--text) !important; }}
+[data-testid="stMetricDelta"] {{ display: none !important; }}
+.kpi-change {{
+  display: inline-block; border-radius: 999px; padding: .12rem .48rem; font-size: .74rem;
+  font-weight: 700; margin: .15rem 0 .05rem 0; border: 1px solid transparent;
+}}
+.kpi-change.good {{ color: #166534; background: #ecfdf3; border-color: #bbf7d0; }}
+.kpi-change.bad {{ color: #991b1b; background: #fef2f2; border-color: #fecaca; }}
+.kpi-change.neutral {{ color: #475569; background: #f1f5f9; border-color: #e2e8f0; }}
+.kpi-baseline {{ color: var(--muted); font-size: .72rem; line-height: 1.35; }}
+.status-strip {{
+  border: 1px solid var(--border); border-radius: 10px; padding: .65rem .8rem; background: #fff;
+  font-size: .84rem; color: var(--text);
+}}
+.stTabs [data-baseweb="tab-list"] {{ gap: .15rem; border-bottom: 1px solid var(--border); }}
+.stTabs [data-baseweb="tab"] {{
+  height: 2.55rem; padding: 0 .9rem; color: var(--muted); font-weight: 650; font-size: .86rem;
+}}
+.stTabs [data-baseweb="tab"]:hover {{ color: var(--text); background: #f8fafc; }}
+.stTabs [aria-selected="true"] {{ color: var(--blue) !important; }}
+.stTabs [data-baseweb="tab-highlight"] {{ background-color: var(--blue) !important; height: 3px !important; }}
+div[data-testid="stExpander"] {{ border: 1px solid var(--border); border-radius: 10px; background: #fff; }}
+div[data-testid="stExpander"] summary {{ font-weight: 650; color: var(--text); }}
+[data-testid="stDataFrame"] {{ border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }}
+[data-testid="stAlert"] {{ border-radius: 10px; }}
+.stButton > button, .stDownloadButton > button {{
+  border-radius: 8px; border: 1px solid #cbd5e1; font-weight: 650; color: #1e3a5f; background: #fff;
+}}
+.stButton > button:hover, .stDownloadButton > button:hover {{ border-color: var(--blue); color: var(--blue); }}
+[data-testid="stSelectbox"] label p, [data-testid="stMultiSelect"] label p,
+[data-testid="stRadio"] label p, [data-testid="stCheckbox"] label p {{
+  font-size: .79rem; font-weight: 650; color: var(--muted);
+}}
+[data-testid="stPlotlyChart"] {{ background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 4px; }}
+@media (max-width: 900px) {{
+  .block-container {{ padding-left: .8rem; padding-right: .8rem; }}
+  .hero h1 {{ font-size: 1.55rem; }}
+  [data-testid="stMetric"] {{ min-height: 112px; }}
+}}
+</style>
+"""
+
+
+def _safe_render(name: str, func, *args, **kwargs) -> None:
+    """Keep one failed tab from taking down every later tab."""
+    try:
+        func(*args, **kwargs)
+    except Exception as exc:  # noqa: BLE001 — boundary is deliberate
+        logging.getLogger(__name__).exception("dashboard view failed: %s", name)
+        st.error(
+            f"**{name} could not be rendered.** The rest of the dashboard is still available. "
+            "Refresh the page; if the problem persists, check the run logs and generated artifacts."
+        )
+        st.caption(f"Reference: {type(exc).__name__}. No partial result is shown as valid.")
+
 
 
 # --------------------------------------------------------------------------- helpers
@@ -106,19 +242,48 @@ def change_label(row: dict) -> str:
         return "not defined (zero baseline)"
     if row.get("change_pct") is not None:
         value = row["change_pct"]
+        if abs(value) < 0.005:
+            return "no change"
         if kind == "reduction":
-            return f"▼ {value:,.1f}% (reduction)"
-        return f"▲ {value:,.1f}% (increase)"
+            return f"↓ {value:,.1f}% lower"
+        return f"↑ {value:,.1f}% higher"
     if row.get("change_pp") is not None:
-        return f"{row['change_pp']:+,.2f} pp"
+        value = row["change_pp"]
+        return "no change" if abs(value) < 0.005 else f"{value:+,.2f} pp"
     if row.get("delta") is not None:
-        return f"{row['delta']:+,.0f}"
+        value = row["delta"]
+        if abs(value) < 1e-9:
+            return "no change"
+        unit = row.get("unit") or ""
+        return f"{value:+,.0f}{(' ' + unit) if unit else ''}"
     return "not defined"
+
+
+def change_tone(row: dict) -> str:
+    """Semantic tone for a change badge; lower/higher is read from the metric definition."""
+    if not row.get("available", True):
+        return "neutral"
+    kind = row.get("change_kind")
+    if kind in ("reduction", "improvement"):
+        return "good" if row.get("change_pct") not in (None, 0) else "neutral"
+    delta = row.get("delta")
+    if delta is None or abs(float(delta)) < 1e-9:
+        return "neutral"
+    direction = str(row.get("direction") or "").lower()
+    if "lower" in direction:
+        return "good" if float(delta) < 0 else "bad"
+    if "higher" in direction:
+        return "good" if float(delta) > 0 else "bad"
+    return "neutral"
+
+
+def _metric_badge_html(row: dict) -> str:
+    return f'<span class="kpi-change {change_tone(row)}">{change_label(row)}</span>'
 
 
 def _metric_note(row: dict) -> str:
     direction = row.get("direction") or ""
-    return f"Baseline: {metric_text(row['key'], row['baseline'])} · {change_label(row)} · {direction}".strip()
+    return f"Baseline: {metric_text(row['key'], row['baseline'])} · {direction}".strip()
 
 
 def _unavailable(reason: str, heading: str = "Data unavailable") -> None:
@@ -176,6 +341,38 @@ _CARD_KEYS = [
     "rule_check_pass_pct",
     "valid_assignments",
 ]
+
+_KPI_GROUPS = (
+    (
+        "Flow and travel",
+        ["total_travel_distance_m", "avg_travel_distance_m", "avg_distance_per_order_m", "throughput_orders_per_hr"],
+    ),
+    (
+        "Time and service",
+        ["total_route_time_sec", "avg_route_time_sec"],
+    ),
+    (
+        "Safety and completeness",
+        ["constraint_violations", "assignment_feasibility_pct", "rule_check_pass_pct", "valid_assignments"],
+    ),
+    (
+        "Storage and ergonomics",
+        ["cube_utilization_pct", "golden_zone_demand_share_pct", "affinity_separation_m"],
+    ),
+)
+
+
+def _render_kpi_card(column, key: str, rows: dict) -> None:
+    row = rows[key]
+    if key == "valid_assignments":
+        required = _num(rows.get("required_assignments", {}).get("optimized"))
+        value = f"{fmt_number(row['optimized'])} / {fmt_number(required)}"
+    else:
+        value = metric_text(key, row["optimized"])
+    with column:
+        st.metric(row["label"], value, help=row.get("definition"))
+        st.markdown(_metric_badge_html(row), unsafe_allow_html=True)
+        st.markdown(f'<div class="kpi-baseline">{_metric_note(row)}</div>', unsafe_allow_html=True)
 
 
 def _normalized_figure(rows: dict, keys: list[str]) -> go.Figure:
@@ -296,18 +493,22 @@ def render_overview(data: dict) -> None:
     )
 
     cards = [key for key in _CARD_KEYS if key in rows]
-    for start in range(0, len(cards), 4):
-        columns = st.columns(4)
-        for column, key in zip(columns, cards[start:start + 4]):
-            row = rows[key]
-            if key == "valid_assignments":
-                required = _num(rows.get("required_assignments", {}).get("optimized"))
-                value = f"{fmt_number(row['optimized'])} / {fmt_number(required)}"
-            else:
-                value = metric_text(key, row["optimized"])
-            with column:
-                st.metric(f"{row['label']}", value, delta=change_label(row), delta_color="off", help=row.get("definition"))
-                st.caption(_metric_note(row))
+    for group_title, group_keys in _KPI_GROUPS:
+        available_keys = [key for key in group_keys if key in cards]
+        if not available_keys:
+            continue
+        st.markdown(f'<div class="section-label">{group_title}</div>', unsafe_allow_html=True)
+        columns = st.columns(min(4, len(available_keys)))
+        for column, key in zip(columns, available_keys):
+            _render_kpi_card(column, key, rows)
+    # Any metric not assigned to a group is still shown rather than silently dropped.
+    grouped = {key for _, keys in _KPI_GROUPS for key in keys}
+    leftovers = [key for key in cards if key not in grouped]
+    if leftovers:
+        st.markdown('<div class="section-label">Additional metrics</div>', unsafe_allow_html=True)
+        columns = st.columns(min(4, len(leftovers)))
+        for column, key in zip(columns, leftovers):
+            _render_kpi_card(column, key, rows)
 
     # ---- safety verdict, only when validation actually ran -------------------
     verdict = dd.safety_status(data, "optimized")
@@ -329,9 +530,10 @@ def render_overview(data: dict) -> None:
     st.metric(
         "Safety compliance",
         verdict["status"],
-        delta=f"{checks_run:,} checks run" if checks_run else "no validation run",
-        delta_color="off",
         help="PASS is shown only when the validator ran on this layout and returned zero failed checks.",
+    )
+    st.caption(
+        f"{checks_run:,} checks run" if checks_run else "No validation run recorded for this layout."
     )
 
     # ---- solver status ------------------------------------------------------
@@ -461,170 +663,116 @@ def _rack_side_name(rack_id: str) -> str:
 
 
 def overview_figure(locations, dispatch=None):
-    """Warehouse boundary + dispatch point overview."""
+    """Warehouse boundary + dispatch point overview in the recorded coordinates."""
     figure = go.Figure()
-    # 40.8m x 40.8m warehouse box
+    if locations is None or locations.empty:
+        figure.update_layout(title="Warehouse overview (no topology)", height=PLOT_HEIGHT)
+        return figure
+    x = pd.to_numeric(locations["x_m"], errors="coerce")
+    y = pd.to_numeric(locations["y_m"], errors="coerce")
+    pad = 2.0
+    x0, x1 = float(x.min()) - pad, float(x.max()) + pad
+    y0, y1 = float(y.min()) - pad, float(y.max()) + pad
     figure.add_shape(
-        type="rect", x0=0.0, x1=40.8, y0=0.0, y1=40.8,
+        type="rect", x0=x0, x1=x1, y0=y0, y1=y1,
         line=dict(color="#1a252f", width=2.5), fillcolor="#f8f9f9", layer="below",
     )
-    # Inter-zone corridors
-    corrs = [1.5, 14.1, 26.7, 39.3]
-    for c in corrs:
-        figure.add_shape(type="line", x0=c, x1=c, y0=0.0, y1=40.8, line=dict(color="#e2e8f0", width=1, dash="dot"), layer="below")
-        figure.add_shape(type="line", x0=0.0, x1=40.8, y0=c, y1=c, line=dict(color="#e2e8f0", width=1, dash="dot"), layer="below")
     if dispatch is not None:
         figure.add_trace(go.Scatter(
             x=[dispatch[0]], y=[dispatch[1]], mode="markers+text", name="Dispatch / I-O",
             marker=dict(symbol="star", size=18, color="#f1c40f", line=dict(width=1, color="#7d6608")),
             text=["I-O"], textposition="bottom center",
         ))
-    figure.update_layout(title="Warehouse overview (3x3 Matrix, 9 Zones)", height=PLOT_HEIGHT, margin=dict(l=10, r=10, t=60, b=40))
-    figure.update_xaxes(title="x (m)", range=[-1, 42], showgrid=False)
-    figure.update_yaxes(title="y (m)", range=[-1, 42], scaleanchor="x", scaleratio=1, showgrid=False)
+    figure.update_layout(
+        title="Warehouse overview — recorded coordinate extent", height=PLOT_HEIGHT,
+        margin=dict(l=10, r=10, t=60, b=40),
+    )
+    figure.update_xaxes(title="x (m, stretched display)", range=[x0, x1], showgrid=False)
+    figure.update_yaxes(title="y (m)", range=[y0, y1], showgrid=False)
     return figure
 
 
-def matrix_3x3_overview_figure(
-    locations: pd.DataFrame | None = None,
+def warehouse_plan_figure(
+    locations: pd.DataFrame | None,
     selected_zone: str = "Z1",
     selected_rack: str | None = None,
+    dispatch: tuple[float, float] | None = None,
     ruler_overlay: dict | None = None,
-    title: str = "Warehouse Layout: 3x3 Matrix with 9 Zones & Edge Racks",
+    racks: pd.DataFrame | None = None,
+    title: str = "Warehouse plan — actual zone extents",
 ) -> go.Figure:
-    """Renders the complete 3x3 matrix layout of 9 zones enclosed in a single warehouse box.
+    """Truthful plan view built from recorded coordinates, not an invented 3x3 box.
 
-    Each zone features 4 edge racks (North, South, East, West) along its borders,
-    with inter-zone corridors running between them. Displays optional invisible ruler paths.
+    The processed dataset stores zones as sequential 17 m bands along Y (total extent
+    ~174 m), so a 40.8 x 40.8 m matrix would misplace every bin. Zone boxes below are
+    the min/max extents of the recorded bin footprints; the display aspect is stretched.
     """
     figure = go.Figure()
-    # 1. Warehouse Bounding Box (40.8m x 40.8m)
-    figure.add_shape(
-        type="rect", x0=0.0, x1=40.8, y0=0.0, y1=40.8,
-        line=dict(color="#1a252f", width=3), fillcolor="#ffffff", layer="below",
+    if locations is None or locations.empty:
+        figure.update_layout(title=title or "Warehouse plan (no data)", height=520)
+        return figure
+    data = locations.copy()
+    data["_x0"] = pd.to_numeric(data["x_m"], errors="coerce") - pd.to_numeric(data["width_cm"], errors="coerce").fillna(0) / 200.0
+    data["_x1"] = pd.to_numeric(data["x_m"], errors="coerce") + pd.to_numeric(data["width_cm"], errors="coerce").fillna(0) / 200.0
+    data["_y0"] = pd.to_numeric(data["y_m"], errors="coerce") - pd.to_numeric(data["depth_cm"], errors="coerce").fillna(0) / 200.0
+    data["_y1"] = pd.to_numeric(data["y_m"], errors="coerce") + pd.to_numeric(data["depth_cm"], errors="coerce").fillna(0) / 200.0
+    zones = data.groupby("zone_id", as_index=False).agg(
+        x0=("_x0", "min"), x1=("_x1", "max"), y0=("_y0", "min"), y1=("_y1", "max"),
+        bins=("location_id", "nunique"),
     )
-
-    # 2. Inter-zone & perimeter corridors
-    corridor_axes = [1.5, 14.1, 26.7, 39.3]
-    for xc in corridor_axes:
-        figure.add_shape(type="line", x0=xc, x1=xc, y0=0.0, y1=40.8, line=dict(color="#e2e8f0", width=1.5, dash="dash"), layer="below")
-    for yc in corridor_axes:
-        figure.add_shape(type="line", x0=0.0, x1=40.8, y0=yc, y1=yc, line=dict(color="#e2e8f0", width=1.5, dash="dash"), layer="below")
-
-    zone_info = [
-        ("Z1", "General", "#ebf5fb", "#2980b9"),
-        ("Z2", "General", "#ebf5fb", "#2980b9"),
-        ("Z3", "General", "#ebf5fb", "#2980b9"),
-        ("Z4", "Small Parts", "#f4ecf7", "#8e44ad"),
-        ("Z5", "Bulk", "#e8f8f5", "#16a085"),
-        ("Z6", "Bulk", "#e8f8f5", "#16a085"),
-        ("Z7", "Heavy", "#fef5e7", "#d35400"),
-        ("Z8", "Heavy", "#fef5e7", "#d35400"),
-        ("Z9", "Hazard", "#fdedec", "#c0392b"),
-    ]
-
-    outer_margin = 3.0
-    zone_size = 9.6
-    aisle_width = 3.0
-    rack_depth = 1.0
-
-    # 3. Render 9 Zones & 4 Edge Racks per Zone
-    for idx, (zid, ztype, bg_color, border_color) in enumerate(zone_info):
-        col = idx % 3
-        row = idx // 3
-        zx0 = outer_margin + col * (zone_size + aisle_width)
-        zy0 = outer_margin + row * (zone_size + aisle_width)
-        zx1 = zx0 + zone_size
-        zy1 = zy0 + zone_size
-
-        is_zone_sel = (zid == selected_zone)
-        z_border = "#f39c12" if is_zone_sel else border_color
-        z_width = 2.5 if is_zone_sel else 1.2
-
-        # Zone interior body
+    for row in zones.itertuples(index=False):
+        is_selected = str(row.zone_id) == str(selected_zone)
         figure.add_shape(
-            type="rect", x0=zx0, x1=zx1, y0=zy0, y1=zy1,
-            line=dict(color=z_border, width=z_width), fillcolor=bg_color, layer="below",
+            type="rect", x0=row.x0, x1=row.x1, y0=row.y0, y1=row.y1,
+            line=dict(color="#2563eb" if is_selected else "#94a3b8", width=2.2 if is_selected else 1),
+            fillcolor="#e8f1fb" if is_selected else "#f8fafc", layer="below",
         )
-
-        # Zone Label
         figure.add_annotation(
-            x=zx0 + zone_size / 2.0, y=zy0 + zone_size / 2.0,
-            text=f"<b>{zid}</b><br><span style='font-size:10px;'>{ztype}</span>",
-            showarrow=False, font=dict(family="Arial", size=13, color=border_color),
+            x=(row.x0 + row.x1) / 2, y=(row.y0 + row.y1) / 2,
+            text=f"<b>{row.zone_id}</b><br>{int(row.bins):,} bins",
+            showarrow=False, font=dict(size=11, color="#0f2742"),
         )
-
-        # 4 edge racks on 4 sides of the zone
-        edge_racks = [
-            ("South", f"R{idx+1}-1-1", zx0, zx1, zy0, zy0 + rack_depth),
-            ("North", f"R{idx+1}-1-2", zx0, zx1, zy1 - rack_depth, zy1),
-            ("West", f"R{idx+1}-2-1", zx0, zx0 + rack_depth, zy0, zy1),
-            ("East", f"R{idx+1}-2-2", zx1 - rack_depth, zx1, zy0, zy1),
-        ]
-
-        for side, rid, rx0, rx1, ry0, ry1 in edge_racks:
-            is_rack_sel = (selected_rack is not None and str(selected_rack) == rid)
-            r_fill = "#f39c12" if is_rack_sel else "#34495e"
-            r_line = "#e67e22" if is_rack_sel else "#1a252f"
-            r_w = 2.5 if is_rack_sel else 1.0
-
+    if racks is not None and not racks.empty:
+        zone_racks = racks[racks["zone_id"].astype(str) == str(selected_zone)]
+        for row in zone_racks.itertuples(index=False):
+            is_rack = str(row.rack_id) == str(selected_rack)
             figure.add_shape(
-                type="rect", x0=rx0, x1=rx1, y0=ry0, y1=ry1,
-                line=dict(color=r_line, width=r_w), fillcolor=r_fill,
+                type="rect", x0=row.x_min, x1=row.x_max, y0=row.y_min, y1=row.y_max,
+                line=dict(color="#b45309" if is_rack else "#64748b", width=2 if is_rack else 0.7),
+                fillcolor="#f59e0b" if is_rack else "#cbd5e1", layer="above",
             )
-
-    # 4. Depot / Dispatch point
-    figure.add_trace(go.Scatter(
-        x=[20.4], y=[0.5], mode="markers+text", name="Depot (I-O)",
-        marker=dict(symbol="star", size=20, color="#f1c40f", line=dict(width=1.5, color="#7d6608")),
-        text=["DEPOT"], textposition="bottom center",
-        hovertemplate="Depot / Dispatch Point (20.4, 0.5) m<extra></extra>",
-    ))
-
-    # 5. Invisible Ruler Overlay (Corridor Shortest Path)
+    if dispatch is not None:
+        figure.add_trace(go.Scatter(
+            x=[dispatch[0]], y=[dispatch[1]], mode="markers+text", name="Dispatch / I-O",
+            marker=dict(symbol="star", size=16, color="#f59e0b", line=dict(width=1, color="#92400e")),
+            text=["Dispatch / I-O"], textposition="bottom center",
+            hovertemplate="Dispatch point (%{x:.1f}, %{y:.1f}) m<extra></extra>",
+        ))
     if ruler_overlay is not None and ruler_overlay.get("xs") and ruler_overlay.get("ys"):
-        r_xs = ruler_overlay["xs"]
-        r_ys = ruler_overlay["ys"]
-        dist = ruler_overlay.get("distance", 0.0)
+        xs, ys = ruler_overlay["xs"], ruler_overlay["ys"]
         figure.add_trace(go.Scatter(
-            x=r_xs, y=r_ys, mode="lines+markers",
-            name=f"Invisible Ruler ({dist} m)",
-            line=dict(color="#00cec9", width=4.5, dash="solid"),
-            marker=dict(size=7, color="#0984e3", symbol="circle"),
-            hovertemplate="Ruler waypoint: (%{x:.2f}, %{y:.2f}) m<extra></extra>",
-        ))
-        # Start & end points
-        figure.add_trace(go.Scatter(
-            x=[r_xs[0]], y=[r_ys[0]], mode="markers+text", name="Ruler Start",
-            marker=dict(size=14, color="#2ecc71", symbol="circle", line=dict(width=2, color="#ffffff")),
-            text=["Start"], textposition="top center", showlegend=False,
-            hovertemplate="Start: (%{x:.2f}, %{y:.2f}) m<extra></extra>",
+            x=xs, y=ys, mode="lines+markers", name=f"Measured corridor path ({ruler_overlay.get('distance', 0)} m)",
+            line=dict(color="#0891b2", width=3), marker=dict(size=5, color="#0891b2"),
+            hovertemplate="Waypoint (%{x:.1f}, %{y:.1f}) m<extra></extra>",
         ))
         figure.add_trace(go.Scatter(
-            x=[r_xs[-1]], y=[r_ys[-1]], mode="markers+text", name="Ruler End",
-            marker=dict(size=14, color="#e74c3c", symbol="square", line=dict(width=2, color="#ffffff")),
-            text=["End"], textposition="top center", showlegend=False,
-            hovertemplate="End: (%{x:.2f}, %{y:.2f}) m<extra></extra>",
+            x=[xs[0]], y=[ys[0]], mode="markers+text", name="Start",
+            marker=dict(size=11, color="#15803d", symbol="circle"), text=["Start"], textposition="top center",
         ))
-        if len(r_xs) >= 2:
-            mid = len(r_xs) // 2
-            figure.add_annotation(
-                x=r_xs[mid], y=r_ys[mid],
-                text=f"<b>📐 Ruler: {dist} m</b>",
-                showarrow=True, arrowhead=2, arrowcolor="#00cec9",
-                bgcolor="#0984e3", font=dict(color="#ffffff", size=11),
-                borderpad=4,
-            )
-
+        figure.add_trace(go.Scatter(
+            x=[xs[-1]], y=[ys[-1]], mode="markers+text", name="End",
+            marker=dict(size=11, color="#b91c1c", symbol="square"), text=["End"], textposition="top center",
+        ))
+    x0 = float(zones["x0"].min()) - 0.6
+    x1 = float(zones["x1"].max()) + 0.6
+    y0 = float(zones["y0"].min()) - 2.0
+    y1 = float(zones["y1"].max()) + 2.0
     figure.update_layout(
-        title=title,
-        height=620,
-        margin=dict(l=10, r=10, t=50, b=40),
-        legend=dict(orientation="h", yanchor="bottom", y=1.02, x=0),
-        plot_bgcolor="#ffffff",
+        title=title, height=520, margin=dict(l=12, r=12, t=54, b=30),
+        legend=dict(orientation="h", yanchor="bottom", y=1.0, x=0),
     )
-    figure.update_xaxes(title="x (meters)", range=[-1, 42], showgrid=False)
-    figure.update_yaxes(title="y (meters)", range=[-1, 42], scaleanchor="x", scaleratio=1, showgrid=False)
+    figure.update_xaxes(title="x (m, stretched display)", range=[x0, x1], showgrid=False)
+    figure.update_yaxes(title="y (m)", range=[y1, y0], showgrid=False)
     return figure
 
 
@@ -781,8 +929,8 @@ def plan_figure(
         legend=dict(orientation="h", yanchor="bottom", y=1.0, x=0),
         plot_bgcolor="#ffffff",
     )
-    figure.update_xaxes(title="x (m)", showgrid=False)
-    figure.update_yaxes(title="y (m)", scaleanchor="x", scaleratio=1, showgrid=False)
+    figure.update_xaxes(title="x (m, stretched display)", showgrid=False)
+    figure.update_yaxes(title="y (m)", showgrid=False)
     return figure
 
 
@@ -1094,50 +1242,27 @@ def render_layout(data: dict, layout: str) -> None:
         )
 
     topology = dd.topology_summary(locations)
+    racks = dd.rack_geometry(locations)
+    aisles = dd.aisle_geometry(locations)
+    dispatch = dd.dispatch_point(data)
     st.caption(
-        f"Topology read from locations.csv: {topology.get('zones')} zones · "
-        f"{topology.get('aisles')} aisles · {topology.get('racks')} racks · "
-        f"{topology.get('bins', 0):,} bins · {topology.get('shelf_levels')} shelf levels "
-        f"(golden levels {topology.get('golden_levels')}) · usable volume "
-        f"{fmt_number(topology.get('usable_volume_m3'), 1)} m³. Showing the **{layout}** assignment "
-        "(switch the detail layout in the sidebar to compare). Aisle connections and cross-aisles are "
-        "modeled in the routing graph (aisle-entrance and zone-hub nodes); the plan draws the aisle bands."
+        f"Recorded topology: {topology.get('zones')} zones · {topology.get('aisles')} aisles · "
+        f"{topology.get('racks')} racks · {topology.get('bins', 0):,} bins · "
+        f"{topology.get('shelf_levels')} shelf levels. The dataset stores zones as sequential "
+        "bands along Y; the plan below uses those coordinates and stretches the display aspect. "
+        "It is a logical schematic, not a CAD floor plan."
     )
 
     zones = sorted(locations["zone_id"].astype(str).unique())
     default_zone_index = zones.index("Z1") if "Z1" in zones else 0
+    view = st.radio("View", ["Zone plan", "Rack elevation"], horizontal=True, key="layout_view")
 
-    # 1. First display the 3x3 matrix layout of all nine zones in a box
-    st.subheader("Warehouse Layout: 3x3 Matrix with 9 Zones & Edge Racks")
-    st.caption(
-        "All nine zones (Z1 to Z9) are enclosed in a 40.8m x 40.8m box. "
-        "Each zone has 4 edge racks on its 4 sides (South, North, West, East) with inter-zone corridors running strictly between them."
-    )
-
-    # Invisible ruler: path follows corridors between zones without cutting through zones
-    with st.expander("📐 **Invisible Ruler — Inter-Zone Corridor Path Distance**", expanded=True):
-        r_col1, r_col2 = st.columns(2)
-        all_locs = sorted(locations["location_id"].astype(str).unique())
-        loc_a = r_col1.selectbox("Start location / SKU bin", all_locs, index=0, key="ruler_loc_a")
-        loc_b = r_col2.selectbox("End location / SKU bin", all_locs, index=min(500, len(all_locs) - 1), key="ruler_loc_b")
-        ruler_res = dd.ruler_path(loc_a, loc_b, locations)
-        if ruler_res.get("distance") is not None:
-            st.success(
-                f"📏 **Measured Corridor Distance:** **{ruler_res['distance']} m** "
-                f"(Strictly follows the perimeter and inter-zone corridors around zones; zero zone penetration)"
-            )
-        else:
-            st.info("Select two locations to measure path distance along inter-zone corridors.")
-
-    # 2. Controls: Plan zone mode removed; only rack elevation mode displayed
-    view = st.radio("View", ["Rack elevation"], horizontal=True, key="layout_view")
     control_a, control_b, control_c, control_d = st.columns(4)
     zone = control_a.selectbox("Zone", zones, index=default_zone_index, key="layout_zone")
-
     zone_racks = sorted(locations.loc[locations["zone_id"].astype(str) == zone, "rack_id"].astype(str).unique())
     selected_rack = control_b.selectbox(
-        "Rack (elevation)", zone_racks,
-        format_func=lambda r: f"{r} ({_rack_side_name(r)} side - 8 Bays)",
+        "Rack", zone_racks,
+        format_func=lambda r: f"{r} ({_rack_side_name(r)} side · 8 bays)",
         key="layout_rack",
     )
     color_mode = control_c.selectbox(
@@ -1146,18 +1271,41 @@ def render_layout(data: dict, layout: str) -> None:
     )
     assigned_only = control_d.checkbox("Assigned bins only", value=False, key="layout_assigned_only")
 
-    # Render 3x3 Matrix Overview Figure at the top
-    overview_3x3 = matrix_3x3_overview_figure(
-        locations, selected_zone=zone, selected_rack=selected_rack, ruler_overlay=ruler_res
-    )
-    st.plotly_chart(overview_3x3, width="stretch", key="layout_3x3_matrix_chart")
+    all_locs = sorted(locations["location_id"].astype(str).unique())
+    with st.expander("Measure a corridor path", expanded=False):
+        ruler_a, ruler_b = st.columns(2)
+        loc_a = ruler_a.selectbox("Start location", all_locs, index=0, key="ruler_loc_a")
+        loc_b = ruler_b.selectbox(
+            "End location", all_locs, index=min(500, len(all_locs) - 1), key="ruler_loc_b"
+        )
+        ruler_res = dd.ruler_path(loc_a, loc_b, locations)
+        show_ruler = st.checkbox("Show this path on the plan", value=False, key="ruler_show")
+        if ruler_res.get("distance") is not None:
+            st.markdown(
+                f'<div class="status-strip"><strong>{ruler_res["distance"]} m</strong> measured along the '
+                "modeled corridor graph. This is a graph distance, not a tape measurement.</div>",
+                unsafe_allow_html=True,
+            )
+        else:
+            st.info("Select two locations to measure the modeled corridor distance.")
 
-    # Filter dropdowns: minimum bin utilization removed per specification
-    filter_a, filter_b, filter_c = st.columns(3)
-    abc_filter = filter_a.multiselect("ABC class", dd.CLASS_ORDER, default=dd.CLASS_ORDER, key="layout_abc")
+    st.subheader("Warehouse plan — recorded coordinate extents")
+    st.caption(
+        "Zone boxes are min/max bin-footprint extents from `locations.csv`; the highlighted rack is the "
+        "current selection. Hover for coordinates. The Y axis is about 174 m, so the display is stretched."
+    )
+    st.plotly_chart(
+        warehouse_plan_figure(
+            locations, selected_zone=zone, selected_rack=selected_rack,
+            dispatch=dispatch, ruler_overlay=ruler_res if show_ruler else None, racks=racks,
+        ),
+        width="stretch", key="warehouse_plan_overview",
+    )
+
+    abc_filter = st.multiselect("ABC class", dd.CLASS_ORDER, default=dd.CLASS_ORDER, key="layout_abc")
     hazard_options = ["All"] + sorted(locations["allowed_hazard"].astype(str).str.split("|").explode().unique())
-    hazard_choice = filter_b.selectbox("Stored hazard class", hazard_options, key="layout_hazard")
-    status_choice = filter_c.selectbox(
+    hazard_choice = st.selectbox("Stored hazard class", hazard_options, key="layout_hazard")
+    status_choice = st.selectbox(
         "Constraint status", ["All", "OK", "FAIL", "UNKNOWN"], key="layout_status"
     )
 
@@ -1166,62 +1314,85 @@ def render_layout(data: dict, layout: str) -> None:
         color_mode = "ABC class"
 
     golden_levels = topology.get("golden_levels", [1, 2])
-    st.subheader(f"Zone {zone} · {_rack_side_name(selected_rack)} Edge Rack ({selected_rack}) Elevation")
-    st.caption("Displays one whole side of the zone (8 bays x 4 shelf levels = 64 bins). Stored boxes are linearly sized by physical item dimensions.")
 
-    rack_frame = dd.filter_locations(
-        state,
-        abc_classes=[c for c in abc_filter if c in dd.CLASS_ORDER],
-        zone=zone,
-        rack=selected_rack,
-        hazard=None if hazard_choice == "All" else hazard_choice,
-        constraint_status=None if status_choice == "All" else status_choice,
-        assigned_only=assigned_only,
-    )
-    if rack_frame.empty:
-        st.info("No bins in this rack match the current filters.")
-        return
-    frame = rack_frame
-    figure = elevation_figure(
-        rack_frame, None, golden_levels, color_mode,
-        f"{zone} · {_rack_side_name(selected_rack)} side ({selected_rack}) — Elevation ({layout})",
-    )
-    chart_key = "layout_elevation_chart"
-
-    if color_mode == "ABC class":
-        st.markdown(_class_legend_html(frame), unsafe_allow_html=True)
-    else:
-        st.caption(
-            "Class colours are fixed across the app (A = red, B = amber, C = blue, unassigned = grey). "
-            "Switch “Colour by” back to ABC class for the demand legend."
+    if view == "Rack elevation":
+        rack_frame = dd.filter_locations(
+            state,
+            abc_classes=[c for c in abc_filter if c in dd.CLASS_ORDER],
+            zone=zone,
+            rack=selected_rack,
+            hazard=None if hazard_choice == "All" else hazard_choice,
+            constraint_status=None if status_choice == "All" else status_choice,
+            assigned_only=assigned_only,
         )
-
-    event = st.plotly_chart(
-        figure, width="stretch", on_select="rerun", selection_mode="points", key=chart_key
-    )
-    clicked = _selection_point(event)
-    options = sorted(frame["location_id"].astype(str).unique())
-    if clicked in options:
-        st.session_state["layout_selected"] = clicked
-    current = st.session_state.get("layout_selected")
-    if current not in options:
-        st.session_state["layout_selected"] = options[0]
-    location_id = st.selectbox(
-        "Inspect storage location", options, key="layout_selected",
-        help="Click a bin on the map or pick a location id here.",
-    )
-
-    highlight = plan_figure(
-        frame, rack_geometry, aisle_geometry, dispatch, location_id, color_mode,
-        f"{zone} · bin {location_id}" if view == "Plan (zone)" else f"rack {selected_rack} · bin {location_id}",
-    ) if view == "Plan (zone)" else elevation_figure(
-        frame, location_id, golden_levels, color_mode, f"rack {selected_rack} · bin {location_id}",
-    )
-    with st.expander("Highlight selected bin", expanded=False):
-        highlight.update_layout(height=340)
-        st.plotly_chart(highlight, width="stretch", key=f"highlight_{view}", config={"displayModeBar": False})
-
-    render_location_detail(data, state, location_id, layout)
+        if rack_frame.empty:
+            st.info("No bins in this rack match the current filters.")
+            return
+        st.subheader(f"{zone} · {_rack_side_name(selected_rack)} edge rack ({selected_rack}) — elevation")
+        st.caption("One side of the zone: 8 bays × 4 shelf levels = 64 bins. Box size is a linear footprint, not a 3-D packing model.")
+        if color_mode == "ABC class":
+            st.markdown(_class_legend_html(rack_frame), unsafe_allow_html=True)
+        else:
+            st.caption(
+                "Class colours are fixed across the app (A = red, B = amber, C = blue, unassigned = grey). "
+                "Switch Colour by back to ABC class for the demand legend."
+            )
+        event = st.plotly_chart(
+            elevation_figure(
+                rack_frame, None, golden_levels, color_mode,
+                f"{zone} · {_rack_side_name(selected_rack)} side ({selected_rack}) — elevation ({layout})",
+            ),
+            width="stretch", on_select="rerun", selection_mode="points", key="layout_elevation_chart",
+        )
+        clicked = _selection_point(event)
+        options = sorted(rack_frame["location_id"].astype(str).unique())
+        if clicked in options:
+            st.session_state["layout_selected"] = clicked
+        current = st.session_state.get("layout_selected")
+        if current not in options:
+            st.session_state["layout_selected"] = options[0]
+        location_id = st.selectbox(
+            "Inspect storage location", options, key="layout_selected",
+            help="Click a bin on the elevation or choose a location id here.",
+        )
+        highlight = elevation_figure(
+            rack_frame, location_id, golden_levels, color_mode,
+            f"{zone} · {selected_rack} · bin {location_id}",
+        )
+        with st.expander("Highlight selected bin", expanded=False):
+            highlight.update_layout(height=340)
+            st.plotly_chart(highlight, width="stretch", key="highlight_rack", config={"displayModeBar": False})
+        render_location_detail(data, state, location_id, layout)
+    else:
+        zone_frame = dd.filter_locations(
+            state,
+            abc_classes=[c for c in abc_filter if c in dd.CLASS_ORDER],
+            zone=zone,
+            hazard=None if hazard_choice == "All" else hazard_choice,
+            constraint_status=None if status_choice == "All" else status_choice,
+            assigned_only=assigned_only,
+        )
+        if zone_frame.empty:
+            st.info("No bins in this zone match the current filters.")
+            return
+        options = sorted(zone_frame["location_id"].astype(str).unique())
+        location_id = st.selectbox(
+            "Inspect storage location", options, key="layout_selected_plan",
+            help="Choose a bin to highlight it on the zone plan.",
+        )
+        st.subheader(f"{zone} — zone plan ({layout})")
+        st.caption("Bins are drawn at their recorded coordinates; the display aspect is stretched to fit the zone strip.")
+        st.plotly_chart(
+            plan_figure(
+                zone_frame, racks[racks["zone_id"].astype(str) == zone],
+                aisles[aisles["zone_id"].astype(str) == zone], dispatch,
+                location_id, color_mode, f"{zone} — bin assignment ({layout})",
+            ),
+            width="stretch", key="layout_zone_plan",
+        )
+        if color_mode == "ABC class":
+            st.markdown(_class_legend_html(zone_frame), unsafe_allow_html=True)
+        render_location_detail(data, state, location_id, layout)
 
     st.subheader("Assignment comparison")
     if "baseline" in data and "optimized" in data:
@@ -1454,49 +1625,54 @@ def render_affinity(data: dict, layout: str) -> None:
 
 # --------------------------------------------------------------------------- routes
 def route_figure(stops: pd.DataFrame, racks: pd.DataFrame, dispatch, title: str) -> go.Figure:
-    """Renders pick routes overlaid on the 3x3 matrix warehouse layout."""
+    """Pick routes in the recorded coordinate system.
+
+    The dataset is a long zone strip (Y extent ~174 m), not the 40.8 m square that an
+    earlier schematic assumed. Axes are fitted to the drawn geometry so no route leaves
+    the plot, and the display aspect is explicitly stretched.
+    """
     figure = go.Figure()
+    xs: list[float] = []
+    ys: list[float] = []
+    if stops is not None and not stops.empty:
+        xs = pd.to_numeric(stops["x_m"], errors="coerce").dropna().tolist()
+        ys = pd.to_numeric(stops["y_m"], errors="coerce").dropna().tolist()
+    if dispatch is not None:
+        xs.append(float(dispatch[0]))
+        ys.append(float(dispatch[1]))
+    if racks is not None and not racks.empty:
+        xs.extend([float(racks["x_min"].min()), float(racks["x_max"].max())])
+        ys.extend([float(racks["y_min"].min()), float(racks["y_max"].max())])
+    if not xs or not ys:
+        figure.update_layout(title=title or "Route (no data)", height=520)
+        return figure
+    x0, x1 = min(xs) - 2.0, max(xs) + 2.0
+    y0, y1 = min(ys) - 4.0, max(ys) + 4.0
 
-    # 1. Outer warehouse box (40.8m x 40.8m)
     figure.add_shape(
-        type="rect", x0=0.0, x1=40.8, y0=0.0, y1=40.8,
-        line=dict(color="#2c3e50", width=2.5), fillcolor="#ffffff", layer="below",
+        type="rect", x0=x0, x1=x1, y0=y0, y1=y1,
+        line=dict(color="#334155", width=1.5), fillcolor="#ffffff", layer="below",
     )
-
-    # 2. Inter-zone corridors
-    corrs = [1.5, 14.1, 26.7, 39.3]
-    for c in corrs:
-        figure.add_shape(type="line", x0=c, x1=c, y0=0.0, y1=40.8, line=dict(color="#e2e8f0", width=1, dash="dot"), layer="below")
-        figure.add_shape(type="line", x0=0.0, x1=40.8, y0=c, y1=c, line=dict(color="#e2e8f0", width=1, dash="dot"), layer="below")
-
-    # 3. 9 zones in 3x3 matrix and 4 edge racks per zone
-    zone_names = ["Z1", "Z2", "Z3", "Z4", "Z5", "Z6", "Z7", "Z8", "Z9"]
-    for idx, zid in enumerate(zone_names):
-        col = idx % 3
-        row = idx // 3
-        zx0 = 3.0 + col * 12.6
-        zy0 = 3.0 + row * 12.6
-        zx1 = zx0 + 9.6
-        zy1 = zy0 + 9.6
-        figure.add_shape(
-            type="rect", x0=zx0, x1=zx1, y0=zy0, y1=zy1,
-            line=dict(color="#bdc3c7", width=1), fillcolor="#f8f9fa", layer="below",
+    if racks is not None and not racks.empty:
+        for row in racks.itertuples(index=False):
+            figure.add_shape(
+                type="rect", x0=row.x_min, x1=row.x_max, y0=row.y_min, y1=row.y_max,
+                line=dict(color="#cbd5e1", width=0.4), fillcolor="#eef2f7", layer="below",
+            )
+        zones = racks.groupby("zone_id", as_index=False).agg(
+            x0=("x_min", "min"), x1=("x_max", "max"), y0=("y_min", "min"), y1=("y_max", "max")
         )
-        figure.add_annotation(
-            x=zx0 + 4.8, y=zy0 + 4.8, text=f"<b>{zid}</b>",
-            showarrow=False, font=dict(family="Arial", size=11, color="#7f8c8d"),
-        )
-        # Edge racks
-        figure.add_shape(type="rect", x0=zx0, x1=zx1, y0=zy0, y1=zy0 + 1.0, line=dict(width=0), fillcolor="#34495e", layer="below")
-        figure.add_shape(type="rect", x0=zx0, x1=zx1, y0=zy1 - 1.0, y1=zy1, line=dict(width=0), fillcolor="#34495e", layer="below")
-        figure.add_shape(type="rect", x0=zx0, x1=zx0 + 1.0, y0=zy0, y1=zy1, line=dict(width=0), fillcolor="#34495e", layer="below")
-        figure.add_shape(type="rect", x0=zx1 - 1.0, x1=zx1, y0=zy0, y1=zy1, line=dict(width=0), fillcolor="#34495e", layer="below")
+        for row in zones.itertuples(index=False):
+            figure.add_annotation(
+                x=float(row.x0) + 0.2, y=(float(row.y0) + float(row.y1)) / 2,
+                text=f"<b>{row.zone_id}</b>", showarrow=False,
+                font=dict(size=10, color="#64748b"), xanchor="left",
+            )
 
-    # 4. Pick route sequence path
     if stops is not None and not stops.empty:
         figure.add_trace(go.Scatter(
             x=stops["x_m"], y=stops["y_m"], mode="lines", name="Route sequence",
-            line=dict(color=ACCENT, width=2.5, dash="solid"),
+            line=dict(color=ACCENT, width=2.2),
             hovertemplate="Stop %{text}<extra></extra>", text=stops.get("sequence", []),
         ))
         labels = ["" if str(stop) == "DEPOT" else str(stop) for stop in stops.get("sequence", [])]
@@ -1504,7 +1680,7 @@ def route_figure(stops: pd.DataFrame, racks: pd.DataFrame, dispatch, title: str)
         cdata = stops[custom_cols].astype(str).values if custom_cols else None
         figure.add_trace(go.Scatter(
             x=stops["x_m"], y=stops["y_m"], mode="markers+text", name="Pick stops",
-            marker=dict(size=10, color="#2471a3", line=dict(width=1, color="#ffffff")),
+            marker=dict(size=8, color=ACCENT, line=dict(width=1, color="#ffffff")),
             text=labels, textposition="top center",
             customdata=cdata,
             hovertemplate=(
@@ -1514,22 +1690,21 @@ def route_figure(stops: pd.DataFrame, racks: pd.DataFrame, dispatch, title: str)
             ),
         ))
 
-    # 5. Depot marker
     dp_x, dp_y = (20.4, 0.5) if dispatch is None else dispatch
     figure.add_trace(go.Scatter(
         x=[dp_x], y=[dp_y], mode="markers+text", name="Dispatch / I-O",
-        marker=dict(symbol="star", size=18, color="#f1c40f", line=dict(width=1, color="#7d6608")),
+        marker=dict(symbol="star", size=16, color="#f59e0b", line=dict(width=1, color="#92400e")),
         text=["I-O"], textposition="bottom center",
         hovertemplate="Dispatch point (%{x:.1f}, %{y:.1f}) m<extra></extra>",
     ))
 
     figure.update_layout(
-        title=title, height=580, margin=dict(l=10, r=10, t=60, b=40),
+        title=title, height=600, margin=dict(l=12, r=12, t=58, b=40),
         legend=dict(orientation="h", yanchor="bottom", y=1.0, x=0),
-        xaxis_title="x (meters)", yaxis_title="y (meters)",
+        xaxis_title="x (m, stretched display)", yaxis_title="y (m)",
     )
-    figure.update_xaxes(range=[-1, 42], showgrid=False)
-    figure.update_yaxes(range=[-1, 42], scaleanchor="x", scaleratio=1, showgrid=False)
+    figure.update_xaxes(range=[x0, x1], showgrid=False)
+    figure.update_yaxes(range=[y0, y1], showgrid=False)
     return figure
 
 
@@ -1565,20 +1740,32 @@ def render_routes(data: dict) -> None:
         cols[0].metric("Orders in batch", f"{fmt_number(base.get('n_orders'))}")
         distance_reduction = dd.pct_reduction(base.get("distance_m"), opt.get("distance_m"))
         time_reduction = dd.pct_reduction(base.get("cycle_time_sec"), opt.get("cycle_time_sec"))
-        cols[1].metric(
-            "Travel distance", f"{fmt_number(opt.get('distance_m'), 1)} m",
-            delta=f"▼ {distance_reduction:.1f}% vs baseline" if distance_reduction is not None else "not defined",
-            delta_color="off",
+        cols[1].metric("Travel distance", f"{fmt_number(opt.get('distance_m'), 1)} m")
+        cols[1].markdown(
+            f'<span class="kpi-change good">↓ {distance_reduction:,.1f}% lower</span>'
+            if distance_reduction is not None else '<span class="kpi-change neutral">not defined</span>',
+            unsafe_allow_html=True,
         )
-        cols[2].metric(
-            "Cycle time", f"{fmt_number(opt.get('cycle_time_sec'), 1)} s",
-            delta=f"▼ {time_reduction:.1f}% vs baseline" if time_reduction is not None else "not defined",
-            delta_color="off",
+        cols[2].metric("Cycle time", f"{fmt_number(opt.get('cycle_time_sec'), 1)} s")
+        cols[2].markdown(
+            f'<span class="kpi-change good">↓ {time_reduction:,.1f}% lower</span>'
+            if time_reduction is not None else '<span class="kpi-change neutral">not defined</span>',
+            unsafe_allow_html=True,
         )
-        cols[3].metric("Pick locations", f"{fmt_number(opt.get('n_locations'))}", delta=f"baseline {fmt_number(base.get('n_locations'))}", delta_color="off")
+        location_delta = _num(opt.get("n_locations")) - _num(base.get("n_locations"))
+        location_label = (
+            "no change" if abs(location_delta) < 1e-9
+            else f"↓ {abs(location_delta):,.0f} fewer" if location_delta < 0
+            else f"↑ {abs(location_delta):,.0f} more"
+        )
+        cols[3].metric("Pick locations", f"{fmt_number(opt.get('n_locations'))}")
+        cols[3].markdown(
+            f'<span class="kpi-change neutral">{location_label} vs baseline</span>',
+            unsafe_allow_html=True,
+        )
         st.caption(
-            f"Baseline: {fmt_number(base.get('distance_m'), 1)} m / {fmt_number(base.get('cycle_time_sec'), 1)} s · "
-            f"Optimized: {fmt_number(opt.get('distance_m'), 1)} m / {fmt_number(opt.get('cycle_time_sec'), 1)} s. "
+            f"Baseline distance {fmt_number(base.get('distance_m'), 1)} m; "
+            f"baseline cycle {fmt_number(base.get('cycle_time_sec'), 1)} s. "
             "Both routes use the same orders, graph, routing heuristic and time assumptions."
         )
 
@@ -1596,7 +1783,10 @@ def render_routes(data: dict) -> None:
                     route_figure(stops, racks, dispatch, f"{layout.title()} route — batch {batch_id}"),
                     width="stretch", key=f"route_{layout}",
                 )
-                st.caption("Plan schematic: axes are metres; the display aspect is stretched so the full route fits.")
+                st.caption(
+                    "Plan schematic: axes are metres, both axes are fitted to the drawn geometry, "
+                    "and the display aspect is stretched so the full route is visible."
+                )
 
     st.subheader("Ordered pick stops")
     table_layout = st.radio("Stops for", ["optimized", "baseline"], horizontal=True, key="route_table_layout")
@@ -1624,7 +1814,8 @@ def render_constraints(data: dict, layout: str) -> None:
         "Failed assignments and unassigned SKUs are shown, not hidden."
     )
     cols = st.columns(4)
-    cols[0].metric("Safety verdict", verdict["status"], delta=f"{layout} layout", delta_color="off")
+    cols[0].metric("Safety verdict", verdict["status"])
+    st.caption(f"Layout under review: {layout}")
     cols[1].metric("Rule checks run", f"{verdict['checks_run']:,}")
     cols[2].metric("Failed checks", f"{verdict['failed_checks']:,}")
     cols[3].metric("High-severity failures", f"{verdict['hard_violations']:,}" if verdict["hard_violations"] is not None else "—")
@@ -1754,8 +1945,13 @@ def render_ergonomics(data: dict, layout: str) -> None:
     )
     shelf = shelf.merge(per_level, on="shelf_level", how="left")
     shelf[["assigned_bins", "units", "a_class_units"]] = shelf[["assigned_bins", "units", "a_class_units"]].fillna(0).astype(int)
+    if bool((shelf["height_min_m"] == shelf["height_max_m"]).all()):
+        shelf = shelf.drop(columns=["height_max_m"]).rename(columns={"height_min_m": "Shelf height (m)"})
+    else:
+        shelf = shelf.rename(columns={"height_min_m": "Height min (m)", "height_max_m": "Height max (m)"})
+    shelf["golden"] = shelf["golden"].map({True: "Yes", False: "No"})
     shelf = shelf.rename(columns={
-        "shelf_level": "Shelf level", "height_min_m": "Height min (m)", "height_max_m": "Height max (m)",
+        "shelf_level": "Shelf level",
         "bin_height_cm": "Bin height (cm)", "bins": "Locations", "golden": "Golden zone",
         "assigned_bins": "Assigned bins", "units": "Units stored", "a_class_units": "Class A units",
     })
@@ -1767,7 +1963,8 @@ def render_ergonomics(data: dict, layout: str) -> None:
     for column, key in zip(card_cols, ("golden_zone_demand_share_pct", "class_a_skus_outside_golden", "constraint_violations")):
         row = rows.get(key)
         if row and row.get("available"):
-            column.metric(row["label"], metric_text(key, row["optimized"]), delta=change_label(row), delta_color="off")
+            column.metric(row["label"], metric_text(key, row["optimized"]))
+            column.markdown(_metric_badge_html(row), unsafe_allow_html=True)
             column.caption(_metric_note(row))
         else:
             column.metric(row["label"] if row else key, "—")
@@ -2211,43 +2408,290 @@ def render_inventory_management(data: dict) -> None:
             st.success(f"Bin {del_loc} has been cleared of SKU {cleared.get('sku_id')} ({cleared.get('product_name')}).")
             st.rerun()
 
+def render_experiments(data: dict) -> None:
+    """Read-only views of the Phase 3 and Phase 4 machine contracts.
+
+    Nothing is recalculated here: the tables come from ``app.phase5_views``, which only
+    selects and labels contract fields. Infeasible or unverified comparisons are shown as
+    blocked rather than as successful results.
+    """
+    p3 = p5v.phase3_view(data.get("phase3"))
+    p4 = p5v.phase4_view(data.get("phase4"))
+
+    st.subheader("Controlled experiments — Phases 3 & 4")
+    st.caption(
+        "Every value below is read from `outputs/phase3/phase3_experiments.json` and "
+        "`outputs/phase4/phase4_experiments.json` through the existing contracts. The "
+        "dashboard does not recompute metrics. Phase 3 travel is a demand-weighted "
+        "order-line metric (metres / resolved line); Phase 4 travel is simulated batch-route "
+        "distance. They are different metrics and are not combined."
+    )
+
+    with st.expander("Phase 6 reproducibility runs", expanded=False):
+        registry_base = PROJECT_ROOT / "outputs" / "phase6" / "runs"
+        latest = p6r.latest_run(registry_base)
+        if not latest["available"]:
+            st.info(f"Run registry unavailable: {latest['reason']}")
+        else:
+            c1, c2, c3 = st.columns(3)
+            c1.metric("Latest run", latest["run_id"])
+            c2.metric("Status", latest["status"])
+            c3.metric("Failed stages", latest["n_failed_stages"])
+            st.caption(
+                f"Finished {latest['finished_at_utc']} · dataset `{str(latest['dataset_sha256'])[:16]}…` · "
+                f"config `{str(latest['config_sha256'])[:16]}…`"
+            )
+            if latest.get("failed_stage"):
+                st.error(f"Failed stage: {latest['failed_stage']}")
+            if not latest["stages_table"].empty:
+                st.dataframe(latest["stages_table"], hide_index=True, use_container_width=True)
+        runs = p6r.load_runs(registry_base)
+        if not runs.empty:
+            st.markdown("**Recorded runs**")
+            statuses = ["All"] + sorted(runs["status"].dropna().unique().tolist())
+            chosen = st.selectbox("Run status", statuses, key="phase6_run_status")
+            st.dataframe(
+                p5v.filter_frame(runs, "status", chosen),
+                hide_index=True,
+                use_container_width=True,
+            )
+        st.caption(
+            "This registry is read-only. Launching runs, editing weights and per-segment "
+            "filters remain outside the current dashboard scope (D28/D44 partial)."
+        )
+
+    tab3, tab4 = st.tabs(["Phase 3 — demand metrics", "Phase 4 — simulation"])
+
+    with tab3:
+        if not p3["available"]:
+            st.warning(f"Phase 3 contract unavailable: {p3['reason']}")
+        else:
+            if p3["blocked"]:
+                st.error(
+                    "Phase 3 comparison is blocked by the Phase 2 feasibility gate. "
+                    "Cells are diagnostic only and must not be read as a successful result."
+                )
+            st.markdown(
+                f"**Experiment:** `{p3['experiment_id']}` · **Baseline:** "
+                f"`{p3['baseline_variant']}` · **Scenario:** `{p3['scenario']}` · "
+                f"**Evaluation:** {p3['evaluation_status']} · "
+                f"**Leakage checked:** {p3['leakage_checked']}"
+            )
+
+            cells = p3["cells"]
+            if not cells.empty:
+                b1 = cells[cells["Cell"] == "B1"]
+                a1 = cells[cells["Cell"] == "A1"]
+                c1, c2, c3 = st.columns(3)
+                if not b1.empty:
+                    c1.metric("Cell B1 — optimized × as-is", f"{b1.iloc[0]['Travel (m, line metric)']:,.1f} m")
+                if not a1.empty:
+                    c2.metric("Cell A1 — baseline × as-is", f"{a1.iloc[0]['Travel (m, line metric)']:,.1f} m")
+                effects = p3["effects"]
+                if not effects.empty:
+                    placement = effects[effects["Effect"] == "Placement"]
+                    if not placement.empty:
+                        value = float(placement.iloc[0]["Value (m)"])
+                        pct = float(placement.iloc[0]["Percent of A1"])
+                        c3.metric("Placement main effect", f"{value:,.1f} m")
+                        c3.markdown(
+                            f'<span class="kpi-change {"good" if value < 0 else "bad"}">'
+                            f'{"↓" if value < 0 else "↑"} {abs(pct):,.2f}% of A1</span>',
+                            unsafe_allow_html=True,
+                        )
+                st.caption(
+                    "Placement effect is the averaged main effect: mean(B1, B2) − mean(A1, A2), "
+                    "not the direct B1 − A1 pair. The published percent is normalized to A1. "
+                    "The fragmentation factor is a real bin-consolidation treatment; the "
+                    "pick-rule sensitivity is a separate design shown below."
+                )
+                st.dataframe(cells, hide_index=True, width="stretch")
+
+            if not p3["effects"].empty:
+                st.markdown("**Main effects and interaction**")
+                st.dataframe(p3["effects"], hide_index=True, use_container_width=True)
+                st.caption(
+                    "Difference-in-differences on this single deterministic workload: "
+                    "negative metres means less travel. These are not significance tests."
+                )
+
+            if not p3["split"].empty:
+                st.markdown("**Fit / holdout split**")
+                st.dataframe(p3["split"], hide_index=True, use_container_width=True)
+                checks = p3.get("split_checks") or {}
+                st.caption(
+                    f"Method: {checks.get('method', 'temporal_order_level')} · "
+                    f"all leakage checks passed: {checks.get('all_passed')} · "
+                    "the optimized layout was fitted on A_FIT only."
+                )
+
+            if not p3["replenishment"].empty:
+                st.markdown("**Replenishment proxy**")
+                st.dataframe(p3["replenishment"], hide_index=True, use_container_width=True)
+                st.caption(
+                    "14-day cover assumption; zero-demand SKUs make zero trips. This is a "
+                    "travel proxy, not a schedule or cost model."
+                )
+
+            if not p3["sweep"].empty:
+                st.markdown("**Objective-weight sensitivity**")
+                st.dataframe(p3["sweep"], hide_index=True, use_container_width=True)
+                if p3.get("sweep_note"):
+                    st.caption(p3["sweep_note"])
+
+            if not p3["pick_rule"].empty:
+                st.markdown("**Secondary sensitivity — layout × pick-rule accounting**")
+                st.dataframe(p3["pick_rule"], hide_index=True, use_container_width=True)
+                st.caption(
+                    "This isolates how much a raw comparison depends on charging every bin a "
+                    "SKU occupies. It is not the fragmentation treatment above."
+                )
+
+            with st.expander("Provenance and reproducibility"):
+                st.json(
+                    {
+                        "experiment_id": p3["experiment_id"],
+                        "generated_at_utc": (data.get("phase3") or {}).get("generated_at_utc"),
+                        "split_checks": p3.get("split_checks"),
+                        "sweep_selected_by_fit_travel": p3.get("sweep_selected"),
+                        "caveat": p3.get("caveat"),
+                    }
+                )
+
+    with tab4:
+        if not p4["available"]:
+            st.warning(f"Phase 4 contract unavailable: {p4['reason']}")
+        else:
+            if p4["blocked"]:
+                st.error(
+                    "Phase 4 comparison is blocked by the feasibility gate. No cell is "
+                    "presented as a successful result."
+                )
+            verification = p4.get("verification") or {}
+            st.markdown(
+                f"**Experiment:** `{p4['experiment_id']}` · **Baseline:** "
+                f"`{p4['baseline_variant']}` · **Evaluation:** {p4['evaluation_status']} · "
+                f"**Independent verification:** {'PASS' if verification.get('all_passed') else 'NOT VERIFIED'}"
+                f" ({verification.get('n_checks', 0)} checks, {verification.get('n_failed', 0)} failed)"
+            )
+            workload = p4.get("workload") or {}
+            if workload:
+                st.caption(
+                    f"Workload `{workload.get('workload_id')}` · {workload.get('orders')} orders · "
+                    f"{workload.get('lines')} lines · scenario `{workload.get('scenario')}`"
+                )
+
+            cells = p4["cells"]
+            if not cells.empty:
+                b1 = cells[(cells["Cell"] == "B1")]
+                a1 = cells[(cells["Cell"] == "A1")]
+                if not b1.empty and not a1.empty:
+                    c1, c2, c3 = st.columns(3)
+                    c1.metric("B1 travel (simulated)", f"{b1.iloc[0]['Travel (m)']:,.1f} m")
+                    c2.metric("B1 cycle time", f"{b1.iloc[0]['Cycle (s)']:,.1f} s")
+                    c3.metric("B1 throughput", f"{b1.iloc[0]['Throughput (orders/h)']:.2f} /h")
+                    st.caption(
+                        f"A1 reference values: travel {a1.iloc[0]['Travel (m)']:,.1f} m · "
+                        f"cycle {a1.iloc[0]['Cycle (s)']:,.1f} s · "
+                        f"throughput {a1.iloc[0]['Throughput (orders/h)']:.2f} orders/h. "
+                        "Changes and interaction are read from the effects table below; the "
+                        "dashboard does not recompute them."
+                    )
+                st.dataframe(cells, hide_index=True, use_container_width=True)
+
+            if not p4["effects"].empty:
+                st.markdown("**Layout × picking-policy effects**")
+                st.dataframe(p4["effects"], hide_index=True, use_container_width=True)
+                st.caption(
+                    "Factor A is layout, factor B is picking policy. The layout effect is the "
+                    "change that survives either route policy; the policy effect is the "
+                    "accounting sensitivity."
+                )
+
+            if not p4["regimes"].empty:
+                st.markdown("**Held-out demand regimes**")
+                regime_values = ["All"] + p4["regimes"]["Regime"].dropna().unique().tolist()
+                regime_choice = st.selectbox(
+                    "Regime filter", regime_values, key="phase4_regime_filter"
+                )
+                st.dataframe(
+                    p5v.filter_frame(p4["regimes"], "Regime", regime_choice),
+                    hide_index=True,
+                    use_container_width=True,
+                )
+                st.caption(
+                    "Regime B and C are different synthetic demand generators, not resamples "
+                    "of A. They were not used to fit or select the layout."
+                )
+
+            if not p4["headroom"].empty:
+                st.markdown("**Structural headroom**")
+                st.dataframe(p4["headroom"], hide_index=True, use_container_width=True)
+                st.caption(
+                    "Near-limit utilisation is a risk, not a target. Hard constraints were not "
+                    "weakened to create headroom."
+                )
+
+            if p4.get("diagnostics"):
+                with st.expander("Rejection diagnostics"):
+                    st.json(p4["diagnostics"])
+
+            with st.expander("Identity and verification"):
+                st.json(
+                    {
+                        "frozen_layouts": p4.get("frozen_layouts"),
+                        "verification": verification,
+                        "caveat": p4.get("caveat"),
+                    }
+                )
+
+
 def main() -> None:
+    st.markdown(_APP_CSS, unsafe_allow_html=True)
     data = _load_cached()
     locations = data.get("locations")
     topology = dd.topology_summary(locations)
 
-    st.title("Smart Warehouse Slotting & Optimization Engine")
-    st.caption(
-        "Constraint-aware slotting with ABC demand classification, order affinity, golden-zone ergonomics "
-        "and measured baseline-vs-optimized pick-path performance. All values are computed from the "
-        "generated dataset and pipeline outputs."
+    st.markdown(
+        '<div class="hero">'
+        '<div class="eyebrow">Warehouse decision support</div>'
+        '<h1>Smart Warehouse Slotting &amp; Optimization Engine</h1>'
+        '<p>Constraint-aware slotting with ABC demand classification, order affinity, golden-zone '
+        'ergonomics and measured baseline-vs-optimized pick-path performance. Every value comes '
+        'from the generated dataset and pipeline artifacts.</p>'
+        '</div>',
+        unsafe_allow_html=True,
     )
 
     with st.sidebar:
-        st.header("Run context")
+        st.markdown(
+            '<div class="sidebar-brand">Warehouse decision support</div>'
+            '<div class="sidebar-title">Run context</div>',
+            unsafe_allow_html=True,
+        )
         if topology:
             st.markdown(
-                f"**Warehouse topology**\n\n"
+                f"**Warehouse topology**  \n"
                 f"{topology.get('zones')} zones · {topology.get('aisles')} aisles · "
-                f"{topology.get('racks')} racks\n\n"
-                f"{topology.get('bins', 0):,} bins · {topology.get('shelf_levels')} shelf levels · "
-                f"golden levels {topology.get('golden_levels')}\n\n"
-                f"Usable volume {fmt_number(topology.get('usable_volume_m3'), 1)} m³"
+                f"{topology.get('racks')} racks  \n"
+                f"{topology.get('bins', 0):,} bins · {topology.get('shelf_levels')} shelf levels  \n"
+                f"Golden levels {topology.get('golden_levels')} · "
+                f"{fmt_number(topology.get('usable_volume_m3'), 1)} m³ usable"
             )
         else:
             st.warning("Topology data not loaded.")
         layout_label = st.radio(
-            "Detail layout", ["Optimized", "Baseline"], index=0,
-            help="Controls the layout, constraints, ergonomics and affinity detail views. The overview always compares both.",
+            "Detail view shows", ["Optimized", "Baseline"], index=0,
+            help="Controls the detail views only. The Overview always compares both layouts.",
             key="sidebar_layout",
         )
         layout = "optimized" if layout_label == "Optimized" else "baseline"
         verdict = dd.safety_status(data, "optimized")
         status = verdict["status"]
         if status == "PASS":
-            st.success(f"Safety: PASS ({verdict['checks_run']:,} checks)")
+            st.success(f"Safety: PASS · {verdict['checks_run']:,} checks")
         elif status == "FAIL":
-            st.error(f"Safety: FAIL ({verdict['failed_checks']:,} failed checks)")
+            st.error(f"Safety: FAIL · {verdict['failed_checks']:,} failed checks")
         else:
             st.warning("Safety: not verified")
 
@@ -2262,20 +2706,23 @@ def main() -> None:
             )
 
     tabs = st.tabs([
-        "Overview", "Warehouse Layout", "Pick Routes", "Ergonomics", "Exports", "Inventory Mgmt",
+        "Overview", "Warehouse Layout", "Pick Routes", "Ergonomics", "Exports",
+        "Experiments", "Inventory",
     ])
     with tabs[0]:
-        render_overview(data)
+        _safe_render("Overview", render_overview, data)
     with tabs[1]:
-        render_layout(data, layout)
+        _safe_render("Warehouse Layout", render_layout, data, layout)
     with tabs[2]:
-        render_routes(data)
+        _safe_render("Pick Routes", render_routes, data)
     with tabs[3]:
-        render_ergonomics(data, layout)
+        _safe_render("Ergonomics", render_ergonomics, data, layout)
     with tabs[4]:
-        render_exports(data, layout)
+        _safe_render("Exports", render_exports, data, layout)
     with tabs[5]:
-        render_inventory_management(data)
+        _safe_render("Experiments", render_experiments, data)
+    with tabs[6]:
+        _safe_render("Inventory", render_inventory_management, data)
 
 
 if __name__ == "__main__":

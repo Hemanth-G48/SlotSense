@@ -224,7 +224,16 @@ class OptimizerConfig:
     max_iterations: int = 600
     anneal_start: float = 5.0
     anneal_end: float = 0.01
+    # "legacy" preserves Phase 2-6 behaviour exactly. "targeted" proposes relocation
+    # only into currently empty bins, biased to the nearest feasible distances.
+    neighborhood: str = "legacy"
     repair: RepairConfig = field(default_factory=RepairConfig)
+
+    def __post_init__(self) -> None:
+        if self.neighborhood not in ("legacy", "targeted"):
+            raise ValueError(
+                f"neighborhood must be 'legacy' or 'targeted', got {self.neighborhood!r}"
+            )
 
 
 class SlottingOptimizer:
@@ -1052,25 +1061,41 @@ class SlottingOptimizer:
         Both operations keep per-SKU totals fixed, so inventory conservation is invariantly
         preserved; the validator still checks it.
         """
-        if len(assignments) < 2:
+        if not assignments:
             return None
         cand = [StorageAssignment(x.sku_id, x.location_id, x.assigned_quantity, x.assignment_type) for x in assignments]
-        idx_a, idx_b = self.rng.sample(range(len(assignments)), 2)
-        a, b = assignments[idx_a], assignments[idx_b]
-        if self.rng.random() < 0.5:
-            # swap bins between two (SKU, quantity) records
-            cand[idx_a] = StorageAssignment(a.sku_id, b.location_id, a.assigned_quantity, a.assignment_type)
-            cand[idx_b] = StorageAssignment(b.sku_id, a.location_id, b.assigned_quantity, b.assignment_type)
+        # Swap needs two records; relocation works for one. Keep the RNG call order
+        # identical for layouts with >= 2 records so frozen Phase 2-5 layouts remain
+        # bit-comparable; only the previously unreachable single-record path is new.
+        if len(assignments) >= 2:
+            idx_a, idx_b = self.rng.sample(range(len(assignments)), 2)
+            a, b = assignments[idx_a], assignments[idx_b]
+            if self.rng.random() < 0.5:
+                # swap bins between two (SKU, quantity) records
+                cand[idx_a] = StorageAssignment(a.sku_id, b.location_id, a.assigned_quantity, a.assignment_type)
+                cand[idx_b] = StorageAssignment(b.sku_id, a.location_id, b.assigned_quantity, b.assignment_type)
+                return cand
         else:
-            # move record a to a new feasible bin for its SKU
-            sku = self.skus.get(a.sku_id)
-            if sku is None:
-                return None
-            feasible = self._feasible_bins_for(sku)
-            if not feasible:
-                return None
-            target = self.rng.choice(feasible)
-            cand[idx_a] = StorageAssignment(a.sku_id, target.location_id, a.assigned_quantity, a.assignment_type)
+            idx_a = 0
+            a = assignments[0]
+        # move record a to a new feasible bin for its SKU
+        sku = self.skus.get(a.sku_id)
+        if sku is None:
+            return None
+        feasible = self._feasible_bins_for(sku)
+        if not feasible:
+            return None
+        if self.cfg.neighborhood == "targeted":
+            # A relocation into an occupied bin is almost always rejected (single-SKU policy
+            # or capacity), and a uniformly random feasible bin ignores distance. Restrict
+            # the proposal to empty bins and bias the draw to the nearest 20.
+            occupied = {x.location_id for x in assignments}
+            empty = [loc for loc in feasible if loc.location_id not in occupied]
+            if empty:
+                empty.sort(key=lambda loc: (loc.distance_to_dispatch_m, loc.location_id))
+                feasible = empty[:20]
+        target = self.rng.choice(feasible)
+        cand[idx_a] = StorageAssignment(a.sku_id, target.location_id, a.assigned_quantity, a.assignment_type)
         return cand
 
     # -- public ------------------------------------------------------------------

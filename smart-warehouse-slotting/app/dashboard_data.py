@@ -23,6 +23,7 @@ import sys
 from collections import defaultdict
 from datetime import datetime, timezone
 from functools import lru_cache
+import os
 from pathlib import Path
 
 import pandas as pd
@@ -34,8 +35,10 @@ if str(PROJECT_ROOT) not in sys.path:
 from app.phase3_contract import load_phase3  # noqa: E402  (path set above)
 from app.phase4_contract import load_phase4  # noqa: E402
 
-DATA_DIR = PROJECT_ROOT.parent / "dataset" / "processed"
-OUT = PROJECT_ROOT / "outputs"
+DATA_DIR = Path(
+    os.environ.get("DATASET_DIR", PROJECT_ROOT.parent / "dataset" / "processed")
+).resolve()
+OUT = Path(os.environ.get("OUTPUTS_DIR", PROJECT_ROOT / "outputs")).resolve()
 ANALYSIS = OUT / "analysis"
 EVAL = OUT / "evaluation"
 OPT = OUT / "optimized"
@@ -57,10 +60,10 @@ CLASS_DESCRIPTIONS = {
 
 KPI_LABELS = {
     "total_travel_distance_m": "Total pick-path travel distance",
-    "avg_travel_distance_m": "Average path per person",
-    "avg_distance_per_order_m": "Path per order (per person)",
-    "total_route_time_sec": "Route completion time per person",
-    "avg_route_time_sec": "Average route time per person",
+    "avg_travel_distance_m": "Average travel per pick batch",
+    "avg_distance_per_order_m": "Average travel per order",
+    "total_route_time_sec": "Total pick-cycle time (all batches)",
+    "avg_route_time_sec": "Average pick-cycle time per batch",
     "avg_time_per_order_sec": "Pick-cycle time per order",
     "throughput_orders_per_hr": "Throughput",
     "cube_utilization_pct": "Volumetric cube utilization",

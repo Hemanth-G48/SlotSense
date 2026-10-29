@@ -9,14 +9,17 @@ unavailable/failure states.
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 
 import pandas as pd
 import pytest
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-PROCESSED = PROJECT_ROOT.parent / "dataset" / "processed"
-OUTPUTS = PROJECT_ROOT / "outputs"
+PROCESSED = Path(
+    os.environ.get("DATASET_DIR", PROJECT_ROOT.parent / "dataset" / "processed")
+).resolve()
+OUTPUTS = Path(os.environ.get("OUTPUTS_DIR", PROJECT_ROOT / "outputs")).resolve()
 
 pytestmark = pytest.mark.skipif(
     not (PROCESSED.exists() and (OUTPUTS / "evaluation" / "optimization_metrics.csv").exists()),

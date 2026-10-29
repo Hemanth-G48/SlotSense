@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -16,7 +17,9 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 # Canonical dataset (single source of truth): ../dataset/processed
-CANONICAL_PROCESSED = PROJECT_ROOT.parent / "dataset" / "processed"
+CANONICAL_PROCESSED = Path(
+    os.environ.get("DATASET_DIR", PROJECT_ROOT.parent / "dataset" / "processed")
+).resolve()
 
 from src.analytics.pipeline import run_phase3
 from src.data_processing.pipeline import DEFAULT_OUTPUT, build_dataset
@@ -33,7 +36,9 @@ from src.validation.loader import load_shipping
 from src.validation.validator import validate_assignment
 
 # Canonical output root: the repaired baseline lives beside the other delivery artifacts.
-OUTPUT_ROOT = PROJECT_ROOT / "outputs"
+# OUTPUT_ROOT lets the Phase 6 clean-room run write into an isolated directory instead of
+# overwriting the canonical evidence.
+OUTPUT_ROOT = Path(os.environ.get("OUTPUT_ROOT", PROJECT_ROOT / "outputs")).resolve()
 
 
 def build_phase1(args: argparse.Namespace) -> None:
@@ -251,6 +256,7 @@ def run_all(args: argparse.Namespace) -> None:
         processed,
         scenario=args.scenario,
         out=out_root / "evaluation",
+        optimized_path=out_root / "optimized" / "optimized_assignments.csv",
         separation_radius_m=config.separation_radius_m,
         **_baseline_evaluation_kwargs(variant),
     )

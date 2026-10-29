@@ -1,0 +1,48 @@
+$ /home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/.venv/bin/python -m src.experiments.run_phase5 --out /home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase6/runs/phase6-dev-05/artifacts/phase5
+
+{
+  "d37": {
+    "travel_unchanged": true,
+    "impact": {
+      "baseline": {
+        "layout": "baseline",
+        "cycle_line_s": 442129.69,
+        "cycle_stop_s": 455849.69,
+        "cycle_delta_s": 13720.0,
+        "cycle_delta_pct": 3.103,
+        "throughput_line": 13.23,
+        "throughput_stop": 12.83,
+        "time_per_order_line_s": 272.08,
+        "time_per_order_stop_s": 280.52
+      },
+      "optimized": {
+        "layout": "optimized",
+        "cycle_line_s": 231386.0,
+        "cycle_stop_s": 231114.0,
+        "cycle_delta_s": -272.0,
+        "cycle_delta_pct": -0.118,
+        "throughput_line": 25.28,
+        "throughput_stop": 25.31,
+        "time_per_order_line_s": 142.39,
+        "time_per_order_stop_s": 142.22
+      }
+    },
+    "decision": "order_line"
+  },
+  "seeds": {
+    "declared": 5,
+    "successful": 5,
+    "unique_layouts": 1,
+    "travel_pct": {
+      "n": 5,
+      "mean": -53.9119,
+      "sd": 0.0,
+      "median": -53.9119,
+      "q1": -53.9119,
+      "q3": -53.9119,
+      "iqr": 0.0,
+      "min": -53.9119,
+      "max": -53.9119
+    }
+  }
+}

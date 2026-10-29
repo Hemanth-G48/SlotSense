@@ -1,0 +1,159 @@
+{
+  "schema": "phase7.optimizer_compare/1",
+  "generated_at_utc": "2026-10-29T07:47:56+00:00",
+  "design": {
+    "workload": "A_FIT",
+    "seed": 42,
+    "budget": 600,
+    "objective_weights": {
+      "alpha": 1.0,
+      "beta": 0.4,
+      "gamma": 0.3,
+      "delta": 0.2,
+      "epsilon": 0.0
+    },
+    "changed_factor": "relocation proposal: legacy uniform feasible bin vs targeted empty nearest-20",
+    "validator": "independent Validator, CAT-01 10 m"
+  },
+  "results": {
+    "legacy": {
+      "summary": {
+        "objective": {
+          "value": 625551.4241137003,
+          "baseline_value": 1622686.5646095695,
+          "baseline_value_as_supplied": 1632434.7274095686,
+          "starter_value": 625551.4241137003,
+          "per_rule_violations": {},
+          "violation_severity_score": 0,
+          "components": {
+            "D_travel": 622468.9750000011,
+            "A_affinity": 5061.246,
+            "E_ergonomics": 2189.999999999981,
+            "U_utilization": 2004.753568495954,
+            "R_replenishment": 423520.7000000005,
+            "alpha_D": 622468.9750000011,
+            "beta_A": 2024.4984000000002,
+            "gamma_E": 656.9999999999942,
+            "delta_U": 400.9507136991908,
+            "epsilon_R": 0.0,
+            "total": 625551.4241137003
+          },
+          "baseline_components": {
+            "D_travel": 1618151.7999999998,
+            "A_affinity": 8324.433,
+            "E_ergonomics": 2682.799999999995,
+            "U_utilization": 2000.7570478478838,
+            "R_replenishment": 620584.3999999999,
+            "alpha_D": 1618151.7999999998,
+            "beta_A": 3329.7732000000005,
+            "gamma_E": 804.8399999999986,
+            "delta_U": 400.1514095695768,
+            "epsilon_R": 0.0,
+            "total": 1622686.5646095695
+          },
+          "globally_optimal": false
+        },
+        "final_objective": 625551.4241137003,
+        "starter_objective": 625551.4241137003,
+        "objective_improvement_pct": 61.45,
+        "moves_evaluated": 600,
+        "moves_accepted": 43,
+        "feasibility": "FEASIBLE",
+        "runtime_sec": 37.823,
+        "n_assignments": 1290
+      },
+      "layout_sha256": "cafa55e805e817306913186d92889801728a30a3012ffa9a1722e27c3003bd6b",
+      "validation": {
+        "feasible": true,
+        "n_violations": 0,
+        "units": 6375,
+        "units_required": 6375,
+        "inventory_conserved": true,
+        "duplicate_pairs": 0,
+        "rows": 1290
+      },
+      "proposal_probe": {
+        "seed": 42,
+        "samples": 600,
+        "feasible": 270,
+        "invalid_or_infeasible": 330,
+        "improving": 2,
+        "best_delta": -0.0704,
+        "feasible_rate_pct": 45.0
+      }
+    },
+    "targeted": {
+      "summary": {
+        "objective": {
+          "value": 625551.4241137003,
+          "baseline_value": 1622686.5646095695,
+          "baseline_value_as_supplied": 1632434.7274095686,
+          "starter_value": 625551.4241137003,
+          "per_rule_violations": {},
+          "violation_severity_score": 0,
+          "components": {
+            "D_travel": 622468.9750000011,
+            "A_affinity": 5061.246,
+            "E_ergonomics": 2189.999999999981,
+            "U_utilization": 2004.753568495954,
+            "R_replenishment": 423520.7000000005,
+            "alpha_D": 622468.9750000011,
+            "beta_A": 2024.4984000000002,
+            "gamma_E": 656.9999999999942,
+            "delta_U": 400.9507136991908,
+            "epsilon_R": 0.0,
+            "total": 625551.4241137003
+          },
+          "baseline_components": {
+            "D_travel": 1618151.7999999998,
+            "A_affinity": 8324.433,
+            "E_ergonomics": 2682.799999999995,
+            "U_utilization": 2000.7570478478838,
+            "R_replenishment": 620584.3999999999,
+            "alpha_D": 1618151.7999999998,
+            "beta_A": 3329.7732000000005,
+            "gamma_E": 804.8399999999986,
+            "delta_U": 400.1514095695768,
+            "epsilon_R": 0.0,
+            "total": 1622686.5646095695
+          },
+          "globally_optimal": false
+        },
+        "final_objective": 625551.4241137003,
+        "starter_objective": 625551.4241137003,
+        "objective_improvement_pct": 61.45,
+        "moves_evaluated": 600,
+        "moves_accepted": 52,
+        "feasibility": "FEASIBLE",
+        "runtime_sec": 38.549,
+        "n_assignments": 1290
+      },
+      "layout_sha256": "cafa55e805e817306913186d92889801728a30a3012ffa9a1722e27c3003bd6b",
+      "validation": {
+        "feasible": true,
+        "n_violations": 0,
+        "units": 6375,
+        "units_required": 6375,
+        "inventory_conserved": true,
+        "duplicate_pairs": 0,
+        "rows": 1290
+      },
+      "proposal_probe": {
+        "seed": 42,
+        "samples": 600,
+        "feasible": 426,
+        "invalid_or_infeasible": 174,
+        "improving": 4,
+        "best_delta": -0.8128,
+        "feasible_rate_pct": 71.0
+      }
+    }
+  },
+  "same_layout": true,
+  "objective_delta_targeted_minus_legacy": 0.0,
+  "holdout_evaluated": false,
+  "limitations": [
+    "one seed and 600 evaluations per arm; this is a controlled deterministic comparison, not a significance test",
+    "targeted proposals are still subject to the full validator"
+  ]
+}

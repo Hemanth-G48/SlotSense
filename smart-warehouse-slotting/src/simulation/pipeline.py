@@ -127,6 +127,9 @@ def run_phase6(
     routing_strategy: str = "nearest_neighbor",
     batch_size: int = 5,
     pick_time_basis: str = "order_line",
+    pick_time_sec: float = 8.0,
+    pick_time_stop_sec: float = 8.0,
+    setup_time_sec: float = 10.0,
 ) -> dict:
     """Baseline-vs-optimized simulation + evaluation.
 
@@ -262,6 +265,9 @@ def run_phase6(
         routing_strategy=routing_strategy,
         batch_size=int(batch_size),
         pick_time_basis=pick_time_basis,
+        pick_time_sec=pick_time_sec,
+        pick_time_stop_sec=pick_time_stop_sec,
+        setup_time_sec=setup_time_sec,
     )
 
     # Precompute pairwise location distances for the involved bins (deterministic, sorted).

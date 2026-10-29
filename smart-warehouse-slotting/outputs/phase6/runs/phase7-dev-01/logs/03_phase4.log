@@ -1,0 +1,281 @@
+$ /home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/.venv/bin/python -m src.experiments.run_phase4 --out /home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase6/runs/phase7-dev-01/artifacts/phase4
+
+{
+  "cells": [
+    {
+      "id": "A1",
+      "layout": "baseline_repaired",
+      "policy": "nearest_neighbor",
+      "travel_m": 508174.8,
+      "cycle_s": 442129.69,
+      "throughput": 13.23,
+      "feasible": true
+    },
+    {
+      "id": "A2",
+      "layout": "baseline_repaired",
+      "policy": "s_shape",
+      "travel_m": 508355.6,
+      "cycle_s": 442268.77,
+      "throughput": 13.23,
+      "feasible": true
+    },
+    {
+      "id": "B1",
+      "layout": "optimized_fit",
+      "policy": "nearest_neighbor",
+      "travel_m": 234208.0,
+      "cycle_s": 231386.0,
+      "throughput": 25.28,
+      "feasible": true
+    },
+    {
+      "id": "B2",
+      "layout": "optimized_fit",
+      "policy": "s_shape",
+      "travel_m": 234950.7,
+      "cycle_s": 231957.31,
+      "throughput": 25.22,
+      "feasible": true
+    }
+  ],
+  "effects": {
+    "total_travel_distance_m": {
+      "factor_a": "layout",
+      "factor_b": "picking_policy",
+      "levels": {
+        "layout": [
+          "baseline_repaired",
+          "optimized_fit"
+        ],
+        "picking_policy": [
+          "nearest_neighbor",
+          "s_shape"
+        ]
+      },
+      "unit": "m",
+      "lower_is_better": true,
+      "reference_cell": "A1",
+      "cell_values": {
+        "baseline_repaired|nearest_neighbor": 508174.8,
+        "baseline_repaired|s_shape": 508355.6,
+        "optimized_fit|nearest_neighbor": 234208.0,
+        "optimized_fit|s_shape": 234950.7
+      },
+      "reference_value": 508174.8,
+      "factor_a_effect": -273685.85,
+      "factor_a_effect_pct": -53.8566,
+      "factor_b_effect": 461.75,
+      "factor_b_effect_pct": 0.0909,
+      "interaction": 561.9,
+      "interaction_pct": 0.1106,
+      "formulas": {
+        "factor_a": "mean over B of (Y(a1,b) - Y(a0,b))",
+        "factor_b": "mean over A of (Y(a,b1) - Y(a,b0))",
+        "interaction": "(Y(a1,b1) - Y(a0,b1)) - (Y(a1,b0) - Y(a0,b0))"
+      },
+      "note": "single deterministic run; effects are a decomposition, not a significance test"
+    },
+    "total_route_time_sec": {
+      "factor_a": "layout",
+      "factor_b": "picking_policy",
+      "levels": {
+        "layout": [
+          "baseline_repaired",
+          "optimized_fit"
+        ],
+        "picking_policy": [
+          "nearest_neighbor",
+          "s_shape"
+        ]
+      },
+      "unit": "s",
+      "lower_is_better": true,
+      "reference_cell": "A1",
+      "cell_values": {
+        "baseline_repaired|nearest_neighbor": 442129.69,
+        "baseline_repaired|s_shape": 442268.77,
+        "optimized_fit|nearest_neighbor": 231386.0,
+        "optimized_fit|s_shape": 231957.31
+      },
+      "reference_value": 442129.69,
+      "factor_a_effect": -210527.575,
+      "factor_a_effect_pct": -47.6167,
+      "factor_b_effect": 355.195,
+      "factor_b_effect_pct": 0.0803,
+      "interaction": 432.23,
+      "interaction_pct": 0.0978,
+      "formulas": {
+        "factor_a": "mean over B of (Y(a1,b) - Y(a0,b))",
+        "factor_b": "mean over A of (Y(a,b1) - Y(a,b0))",
+        "interaction": "(Y(a1,b1) - Y(a0,b1)) - (Y(a1,b0) - Y(a0,b0))"
+      },
+      "note": "single deterministic run; effects are a decomposition, not a significance test"
+    },
+    "throughput_orders_per_hr": {
+      "factor_a": "layout",
+      "factor_b": "picking_policy",
+      "levels": {
+        "layout": [
+          "baseline_repaired",
+          "optimized_fit"
+        ],
+        "picking_policy": [
+          "nearest_neighbor",
+          "s_shape"
+        ]
+      },
+      "unit": "orders/h",
+      "lower_is_better": false,
+      "reference_cell": "A1",
+      "cell_values": {
+        "baseline_repaired|nearest_neighbor": 13.23,
+        "baseline_repaired|s_shape": 13.23,
+        "optimized_fit|nearest_neighbor": 25.28,
+        "optimized_fit|s_shape": 25.22
+      },
+      "reference_value": 13.23,
+      "factor_a_effect": 12.02,
+      "factor_a_effect_pct": 90.8541,
+      "factor_b_effect": -0.03,
+      "factor_b_effect_pct": -0.2268,
+      "interaction": -0.06,
+      "interaction_pct": -0.4535,
+      "formulas": {
+        "factor_a": "mean over B of (Y(a1,b) - Y(a0,b))",
+        "factor_b": "mean over A of (Y(a,b1) - Y(a,b0))",
+        "interaction": "(Y(a1,b1) - Y(a0,b1)) - (Y(a1,b0) - Y(a0,b0))"
+      },
+      "note": "single deterministic run; effects are a decomposition, not a significance test"
+    },
+    "avg_time_per_order_sec": {
+      "factor_a": "layout",
+      "factor_b": "picking_policy",
+      "levels": {
+        "layout": [
+          "baseline_repaired",
+          "optimized_fit"
+        ],
+        "picking_policy": [
+          "nearest_neighbor",
+          "s_shape"
+        ]
+      },
+      "unit": "s/order",
+      "lower_is_better": true,
+      "reference_cell": "A1",
+      "cell_values": {
+        "baseline_repaired|nearest_neighbor": 272.08,
+        "baseline_repaired|s_shape": 272.17,
+        "optimized_fit|nearest_neighbor": 142.39,
+        "optimized_fit|s_shape": 142.74
+      },
+      "reference_value": 272.08,
+      "factor_a_effect": -129.56,
+      "factor_a_effect_pct": -47.6183,
+      "factor_b_effect": 0.22,
+      "factor_b_effect_pct": 0.0809,
+      "interaction": 0.26,
+      "interaction_pct": 0.0956,
+      "formulas": {
+        "factor_a": "mean over B of (Y(a1,b) - Y(a0,b))",
+        "factor_b": "mean over A of (Y(a,b1) - Y(a,b0))",
+        "interaction": "(Y(a1,b1) - Y(a0,b1)) - (Y(a1,b0) - Y(a0,b0))"
+      },
+      "note": "single deterministic run; effects are a decomposition, not a significance test"
+    },
+    "demand_weighted_depot_distance": {
+      "factor_a": "layout",
+      "factor_b": "picking_policy",
+      "levels": {
+        "layout": [
+          "baseline_repaired",
+          "optimized_fit"
+        ],
+        "picking_policy": [
+          "nearest_neighbor",
+          "s_shape"
+        ]
+      },
+      "unit": "m",
+      "lower_is_better": true,
+      "reference_cell": "A1",
+      "cell_values": {
+        "baseline_repaired|nearest_neighbor": 501569.025,
+        "baseline_repaired|s_shape": 501569.025,
+        "optimized_fit|nearest_neighbor": 259336.575,
+        "optimized_fit|s_shape": 259336.575
+      },
+      "reference_value": 501569.025,
+      "factor_a_effect": -242232.45,
+      "factor_a_effect_pct": -48.2949,
+      "factor_b_effect": 0.0,
+      "factor_b_effect_pct": 0.0,
+      "interaction": 0.0,
+      "interaction_pct": 0.0,
+      "formulas": {
+        "factor_a": "mean over B of (Y(a1,b) - Y(a0,b))",
+        "factor_b": "mean over A of (Y(a,b1) - Y(a,b0))",
+        "interaction": "(Y(a1,b1) - Y(a0,b1)) - (Y(a1,b0) - Y(a0,b0))"
+      },
+      "note": "single deterministic run; effects are a decomposition, not a significance test"
+    },
+    "replenishment_travel_m": {
+      "factor_a": "layout",
+      "factor_b": "picking_policy",
+      "levels": {
+        "layout": [
+          "baseline_repaired",
+          "optimized_fit"
+        ],
+        "picking_policy": [
+          "nearest_neighbor",
+          "s_shape"
+        ]
+      },
+      "unit": "m",
+      "lower_is_better": true,
+      "reference_cell": "A1",
+      "cell_values": {
+        "baseline_repaired|nearest_neighbor": 640634.85,
+        "baseline_repaired|s_shape": 640634.85,
+        "optimized_fit|nearest_neighbor": 382207.7,
+        "optimized_fit|s_shape": 382207.7
+      },
+      "reference_value": 640634.85,
+      "factor_a_effect": -258427.15,
+      "factor_a_effect_pct": -40.3392,
+      "factor_b_effect": 0.0,
+      "factor_b_effect_pct": 0.0,
+      "interaction": 0.0,
+      "interaction_pct": 0.0,
+      "formulas": {
+        "factor_a": "mean over B of (Y(a1,b) - Y(a0,b))",
+        "factor_b": "mean over A of (Y(a,b1) - Y(a,b0))",
+        "interaction": "(Y(a1,b1) - Y(a0,b1)) - (Y(a1,b0) - Y(a0,b0))"
+      },
+      "note": "single deterministic run; effects are a decomposition, not a significance test"
+    }
+  },
+  "regimes": [
+    {
+      "regime": "A_HOLDOUT",
+      "baseline_travel_m": 508174.8,
+      "optimized_travel_m": 234208.0,
+      "travel_change_pct": -53.912
+    },
+    {
+      "regime": "B",
+      "baseline_travel_m": 1834069.85,
+      "optimized_travel_m": 1222102.85,
+      "travel_change_pct": -33.367
+    },
+    {
+      "regime": "C",
+      "baseline_travel_m": 1653629.4,
+      "optimized_travel_m": 955970.4,
+      "travel_change_pct": -42.19
+    }
+  ],
+  "selected": "default"
+}

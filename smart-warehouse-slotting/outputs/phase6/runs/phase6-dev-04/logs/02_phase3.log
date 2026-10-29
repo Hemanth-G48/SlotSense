@@ -1,0 +1,2 @@
+$ /home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/.venv/bin/python -m src.experiments.run_phase3 --processed /home/hemanth/hackathon/epoch_hackathon/dataset/processed --out /home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase6/runs/phase6-dev-04/artifacts/phase3
+

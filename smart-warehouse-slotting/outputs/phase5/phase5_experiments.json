@@ -1,0 +1,494 @@
+{
+  "schema": "phase5.experiments/1",
+  "generated_at_utc": "2026-10-29T03:36:26+00:00",
+  "phase3": {
+    "split_manifest": "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase3/split/A70/split_manifest.json",
+    "split_checks": {
+      "disjoint_orders": true,
+      "union_equals_input": true,
+      "fit_scenario_rewritten": true,
+      "holdout_scenario_rewritten": true,
+      "fit_lines_belong_to_fit_orders": true,
+      "holdout_lines_belong_to_holdout_orders": true,
+      "no_line_in_both_views": true,
+      "line_counts_match_manifest": true,
+      "line_union_equals_input": true,
+      "no_duplicate_order_sku_lines": true,
+      "all_passed": true
+    },
+    "baseline_layout": "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase3/optimized_fit/baseline_repaired_assignments.csv",
+    "optimized_layout": "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase3/optimized_fit/optimized_assignments.csv",
+    "baseline_sha256": "17380197ee66e1ced7a341ce4b15bdb51774cb479e2bfd9ca14deb8ababdd3fa",
+    "optimized_sha256": "cafa55e805e817306913186d92889801728a30a3012ffa9a1722e27c3003bd6b"
+  },
+  "d37": {
+    "schema": "phase5.d37/1",
+    "generated_at_utc": "2026-10-29T03:32:10+00:00",
+    "workload": {
+      "workload_id": "wl_ad0d500eae81e001",
+      "sha256": "ad0d500eae81e001577769e2732b89b9ab605b0f6351c282fab310fa01a03965",
+      "scenario": "A_HOLDOUT",
+      "n_orders": 1625,
+      "n_lines": 5997,
+      "n_units": 9626,
+      "n_skus": 899
+    },
+    "layouts": {
+      "baseline_sha256": "17380197ee66e1ced7a341ce4b15bdb51774cb479e2bfd9ca14deb8ababdd3fa",
+      "optimized_sha256": "cafa55e805e817306913186d92889801728a30a3012ffa9a1722e27c3003bd6b"
+    },
+    "definitions": {
+      "order_line": "pick time = order lines in the batch \u00d7 8.0 s",
+      "stop": "pick time = distinct physical bins visited by the batch \u00d7 8.0 s",
+      "stop_model": "one stop per distinct bin holding any SKU in the batch; multi-line picks at one bin share a stop",
+      "cycle": "travel_time + pick_time + setup_time"
+    },
+    "rows": [
+      {
+        "basis": "order_line",
+        "layout": "baseline",
+        "workload_id": "wl_ad0d500eae81e001",
+        "feasible": true,
+        "total_travel_distance_m": 508174.8,
+        "total_route_time_sec": 442129.69,
+        "throughput_orders_per_hr": 13.23,
+        "avg_time_per_order_sec": 272.08,
+        "total_pick_lines": 5997,
+        "total_pick_stops": 7712,
+        "total_travel_time_sec": 390903.69,
+        "total_pick_time_sec": 47976.0,
+        "total_setup_time_sec": 3250.0
+      },
+      {
+        "basis": "order_line",
+        "layout": "optimized",
+        "workload_id": "wl_ad0d500eae81e001",
+        "feasible": true,
+        "total_travel_distance_m": 234208.0,
+        "total_route_time_sec": 231386.0,
+        "throughput_orders_per_hr": 25.28,
+        "avg_time_per_order_sec": 142.39,
+        "total_pick_lines": 5997,
+        "total_pick_stops": 5963,
+        "total_travel_time_sec": 180160.0,
+        "total_pick_time_sec": 47976.0,
+        "total_setup_time_sec": 3250.0
+      },
+      {
+        "basis": "stop",
+        "layout": "baseline",
+        "workload_id": "wl_ad0d500eae81e001",
+        "feasible": true,
+        "total_travel_distance_m": 508174.8,
+        "total_route_time_sec": 455849.69,
+        "throughput_orders_per_hr": 12.83,
+        "avg_time_per_order_sec": 280.52,
+        "total_pick_lines": 5997,
+        "total_pick_stops": 7712,
+        "total_travel_time_sec": 390903.69,
+        "total_pick_time_sec": 61696.0,
+        "total_setup_time_sec": 3250.0
+      },
+      {
+        "basis": "stop",
+        "layout": "optimized",
+        "workload_id": "wl_ad0d500eae81e001",
+        "feasible": true,
+        "total_travel_distance_m": 234208.0,
+        "total_route_time_sec": 231114.0,
+        "throughput_orders_per_hr": 25.31,
+        "avg_time_per_order_sec": 142.22,
+        "total_pick_lines": 5997,
+        "total_pick_stops": 5963,
+        "total_travel_time_sec": 180160.0,
+        "total_pick_time_sec": 47704.0,
+        "total_setup_time_sec": 3250.0
+      }
+    ],
+    "travel_unchanged": true,
+    "impact": {
+      "baseline": {
+        "layout": "baseline",
+        "cycle_line_s": 442129.69,
+        "cycle_stop_s": 455849.69,
+        "cycle_delta_s": 13720.0,
+        "cycle_delta_pct": 3.103,
+        "throughput_line": 13.23,
+        "throughput_stop": 12.83,
+        "time_per_order_line_s": 272.08,
+        "time_per_order_stop_s": 280.52
+      },
+      "optimized": {
+        "layout": "optimized",
+        "cycle_line_s": 231386.0,
+        "cycle_stop_s": 231114.0,
+        "cycle_delta_s": -272.0,
+        "cycle_delta_pct": -0.118,
+        "throughput_line": 25.28,
+        "throughput_stop": 25.31,
+        "time_per_order_line_s": 142.39,
+        "time_per_order_stop_s": 142.22
+      }
+    },
+    "decision": {
+      "authoritative_default": "order_line",
+      "stop_status": "configurable sensitivity model",
+      "reason": "PROJECT.md defines pick-cycle time as travel + pick + setup but does not define the pick-time unit. The line model is retained as the compatibility default because every Phase 2/3/4 figure uses it; the stop model is published as a sensitivity analysis because ARCHITECTURE \u00a710 describes per-stop charging as the target.",
+      "consequence": "Travel is unchanged; cycle time and throughput move because stops differ from lines. Historical cycle/throughput figures remain line-based and must not be mixed with stop-based values."
+    }
+  },
+  "paired_seeds": {
+    "schema": "phase5.paired_seeds/1",
+    "generated_at_utc": "2026-10-29T03:36:26+00:00",
+    "workload": {
+      "workload_id": "wl_ad0d500eae81e001",
+      "sha256": "ad0d500eae81e001577769e2732b89b9ab605b0f6351c282fab310fa01a03965",
+      "scenario": "A_HOLDOUT",
+      "n_orders": 1625,
+      "n_lines": 5997,
+      "n_units": 9626,
+      "n_skus": 899
+    },
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "design": {
+      "paired_unit": "seed",
+      "baseline": "fixed repaired_minimal layout",
+      "optimized": "layout fitted on A_FIT with the seed",
+      "evaluation": "same A_HOLDOUT workload, nearest_neighbor, line-based pick time",
+      "random_source": "simulated annealing (optimizer); simulator is deterministic"
+    },
+    "records": [
+      {
+        "seed": 42,
+        "status": "ok",
+        "layout_sha256": "cafa55e805e817306913186d92889801728a30a3012ffa9a1722e27c3003bd6b",
+        "validation": {
+          "feasible": true,
+          "feasibility_status": "FEASIBLE",
+          "n_violations": 0,
+          "units_placed": 6375,
+          "units_required": 6375,
+          "inventory_conserved": true,
+          "skus_mismatched": 0,
+          "duplicate_pairs": 0
+        },
+        "fit_feasible": true,
+        "fit_objective": 625551.4241137003,
+        "fit_runtime_sec": 42.062,
+        "n_assignments": 1290,
+        "n_bins_used": 1290,
+        "baseline": {
+          "total_travel_distance_m": 508174.8,
+          "total_route_time_sec": 442129.69,
+          "throughput_orders_per_hr": 13.23,
+          "avg_time_per_order_sec": 272.08,
+          "total_pick_lines": 5997,
+          "total_pick_stops": 7712,
+          "total_travel_time_sec": 390903.69,
+          "total_pick_time_sec": 47976.0,
+          "total_setup_time_sec": 3250.0
+        },
+        "optimized": {
+          "total_travel_distance_m": 234208.0,
+          "total_route_time_sec": 231386.0,
+          "throughput_orders_per_hr": 25.28,
+          "avg_time_per_order_sec": 142.39,
+          "total_pick_lines": 5997,
+          "total_pick_stops": 5963,
+          "total_travel_time_sec": 180160.0,
+          "total_pick_time_sec": 47976.0,
+          "total_setup_time_sec": 3250.0
+        },
+        "travel_delta_m": -273966.8,
+        "travel_delta_pct": -53.9119,
+        "cycle_delta_s": -210743.69,
+        "throughput_delta": 12.05,
+        "publishable": true
+      },
+      {
+        "seed": 43,
+        "status": "ok",
+        "layout_sha256": "cafa55e805e817306913186d92889801728a30a3012ffa9a1722e27c3003bd6b",
+        "validation": {
+          "feasible": true,
+          "feasibility_status": "FEASIBLE",
+          "n_violations": 0,
+          "units_placed": 6375,
+          "units_required": 6375,
+          "inventory_conserved": true,
+          "skus_mismatched": 0,
+          "duplicate_pairs": 0
+        },
+        "fit_feasible": true,
+        "fit_objective": 625551.4241137003,
+        "fit_runtime_sec": 43.828,
+        "n_assignments": 1290,
+        "n_bins_used": 1290,
+        "baseline": {
+          "total_travel_distance_m": 508174.8,
+          "total_route_time_sec": 442129.69,
+          "throughput_orders_per_hr": 13.23,
+          "avg_time_per_order_sec": 272.08,
+          "total_pick_lines": 5997,
+          "total_pick_stops": 7712,
+          "total_travel_time_sec": 390903.69,
+          "total_pick_time_sec": 47976.0,
+          "total_setup_time_sec": 3250.0
+        },
+        "optimized": {
+          "total_travel_distance_m": 234208.0,
+          "total_route_time_sec": 231386.0,
+          "throughput_orders_per_hr": 25.28,
+          "avg_time_per_order_sec": 142.39,
+          "total_pick_lines": 5997,
+          "total_pick_stops": 5963,
+          "total_travel_time_sec": 180160.0,
+          "total_pick_time_sec": 47976.0,
+          "total_setup_time_sec": 3250.0
+        },
+        "travel_delta_m": -273966.8,
+        "travel_delta_pct": -53.9119,
+        "cycle_delta_s": -210743.69,
+        "throughput_delta": 12.05,
+        "publishable": true
+      },
+      {
+        "seed": 44,
+        "status": "ok",
+        "layout_sha256": "cafa55e805e817306913186d92889801728a30a3012ffa9a1722e27c3003bd6b",
+        "validation": {
+          "feasible": true,
+          "feasibility_status": "FEASIBLE",
+          "n_violations": 0,
+          "units_placed": 6375,
+          "units_required": 6375,
+          "inventory_conserved": true,
+          "skus_mismatched": 0,
+          "duplicate_pairs": 0
+        },
+        "fit_feasible": true,
+        "fit_objective": 625551.4241137003,
+        "fit_runtime_sec": 41.589,
+        "n_assignments": 1290,
+        "n_bins_used": 1290,
+        "baseline": {
+          "total_travel_distance_m": 508174.8,
+          "total_route_time_sec": 442129.69,
+          "throughput_orders_per_hr": 13.23,
+          "avg_time_per_order_sec": 272.08,
+          "total_pick_lines": 5997,
+          "total_pick_stops": 7712,
+          "total_travel_time_sec": 390903.69,
+          "total_pick_time_sec": 47976.0,
+          "total_setup_time_sec": 3250.0
+        },
+        "optimized": {
+          "total_travel_distance_m": 234208.0,
+          "total_route_time_sec": 231386.0,
+          "throughput_orders_per_hr": 25.28,
+          "avg_time_per_order_sec": 142.39,
+          "total_pick_lines": 5997,
+          "total_pick_stops": 5963,
+          "total_travel_time_sec": 180160.0,
+          "total_pick_time_sec": 47976.0,
+          "total_setup_time_sec": 3250.0
+        },
+        "travel_delta_m": -273966.8,
+        "travel_delta_pct": -53.9119,
+        "cycle_delta_s": -210743.69,
+        "throughput_delta": 12.05,
+        "publishable": true
+      },
+      {
+        "seed": 45,
+        "status": "ok",
+        "layout_sha256": "cafa55e805e817306913186d92889801728a30a3012ffa9a1722e27c3003bd6b",
+        "validation": {
+          "feasible": true,
+          "feasibility_status": "FEASIBLE",
+          "n_violations": 0,
+          "units_placed": 6375,
+          "units_required": 6375,
+          "inventory_conserved": true,
+          "skus_mismatched": 0,
+          "duplicate_pairs": 0
+        },
+        "fit_feasible": true,
+        "fit_objective": 625551.4241137003,
+        "fit_runtime_sec": 41.557,
+        "n_assignments": 1290,
+        "n_bins_used": 1290,
+        "baseline": {
+          "total_travel_distance_m": 508174.8,
+          "total_route_time_sec": 442129.69,
+          "throughput_orders_per_hr": 13.23,
+          "avg_time_per_order_sec": 272.08,
+          "total_pick_lines": 5997,
+          "total_pick_stops": 7712,
+          "total_travel_time_sec": 390903.69,
+          "total_pick_time_sec": 47976.0,
+          "total_setup_time_sec": 3250.0
+        },
+        "optimized": {
+          "total_travel_distance_m": 234208.0,
+          "total_route_time_sec": 231386.0,
+          "throughput_orders_per_hr": 25.28,
+          "avg_time_per_order_sec": 142.39,
+          "total_pick_lines": 5997,
+          "total_pick_stops": 5963,
+          "total_travel_time_sec": 180160.0,
+          "total_pick_time_sec": 47976.0,
+          "total_setup_time_sec": 3250.0
+        },
+        "travel_delta_m": -273966.8,
+        "travel_delta_pct": -53.9119,
+        "cycle_delta_s": -210743.69,
+        "throughput_delta": 12.05,
+        "publishable": true
+      },
+      {
+        "seed": 46,
+        "status": "ok",
+        "layout_sha256": "cafa55e805e817306913186d92889801728a30a3012ffa9a1722e27c3003bd6b",
+        "validation": {
+          "feasible": true,
+          "feasibility_status": "FEASIBLE",
+          "n_violations": 0,
+          "units_placed": 6375,
+          "units_required": 6375,
+          "inventory_conserved": true,
+          "skus_mismatched": 0,
+          "duplicate_pairs": 0
+        },
+        "fit_feasible": true,
+        "fit_objective": 625551.4241137003,
+        "fit_runtime_sec": 40.25,
+        "n_assignments": 1290,
+        "n_bins_used": 1290,
+        "baseline": {
+          "total_travel_distance_m": 508174.8,
+          "total_route_time_sec": 442129.69,
+          "throughput_orders_per_hr": 13.23,
+          "avg_time_per_order_sec": 272.08,
+          "total_pick_lines": 5997,
+          "total_pick_stops": 7712,
+          "total_travel_time_sec": 390903.69,
+          "total_pick_time_sec": 47976.0,
+          "total_setup_time_sec": 3250.0
+        },
+        "optimized": {
+          "total_travel_distance_m": 234208.0,
+          "total_route_time_sec": 231386.0,
+          "throughput_orders_per_hr": 25.28,
+          "avg_time_per_order_sec": 142.39,
+          "total_pick_lines": 5997,
+          "total_pick_stops": 5963,
+          "total_travel_time_sec": 180160.0,
+          "total_pick_time_sec": 47976.0,
+          "total_setup_time_sec": 3250.0
+        },
+        "travel_delta_m": -273966.8,
+        "travel_delta_pct": -53.9119,
+        "cycle_delta_s": -210743.69,
+        "throughput_delta": 12.05,
+        "publishable": true
+      }
+    ],
+    "summary": {
+      "n_declared": 5,
+      "n_successful": 5,
+      "n_failed": 0,
+      "unique_layouts": 1,
+      "optimized": {
+        "total_travel_distance_m": {
+          "n": 5,
+          "mean": 234208.0,
+          "sd": 0.0,
+          "median": 234208.0,
+          "q1": 234208.0,
+          "q3": 234208.0,
+          "iqr": 0.0,
+          "min": 234208.0,
+          "max": 234208.0
+        },
+        "total_route_time_sec": {
+          "n": 5,
+          "mean": 231386.0,
+          "sd": 0.0,
+          "median": 231386.0,
+          "q1": 231386.0,
+          "q3": 231386.0,
+          "iqr": 0.0,
+          "min": 231386.0,
+          "max": 231386.0
+        },
+        "throughput_orders_per_hr": {
+          "n": 5,
+          "mean": 25.28,
+          "sd": 0.0,
+          "median": 25.28,
+          "q1": 25.28,
+          "q3": 25.28,
+          "iqr": 0.0,
+          "min": 25.28,
+          "max": 25.28
+        }
+      },
+      "paired_delta": {
+        "travel_m": {
+          "n": 5,
+          "mean": -273966.8,
+          "sd": 0.0,
+          "median": -273966.8,
+          "q1": -273966.8,
+          "q3": -273966.8,
+          "iqr": 0.0,
+          "min": -273966.8,
+          "max": -273966.8
+        },
+        "travel_pct": {
+          "n": 5,
+          "mean": -53.9119,
+          "sd": 0.0,
+          "median": -53.9119,
+          "q1": -53.9119,
+          "q3": -53.9119,
+          "iqr": 0.0,
+          "min": -53.9119,
+          "max": -53.9119
+        },
+        "cycle_s": {
+          "n": 5,
+          "mean": -210743.69,
+          "sd": 0.0,
+          "median": -210743.69,
+          "q1": -210743.69,
+          "q3": -210743.69,
+          "iqr": 0.0,
+          "min": -210743.69,
+          "max": -210743.69
+        },
+        "throughput_orders_per_hr": {
+          "n": 5,
+          "mean": 12.05,
+          "sd": 0.0,
+          "median": 12.05,
+          "q1": 12.05,
+          "q3": 12.05,
+          "iqr": 0.0,
+          "min": 12.05,
+          "max": 12.05
+        }
+      },
+      "feasible_runs": 5,
+      "inventory_conserved_runs": 5,
+      "interpretation": "exploratory: five predeclared seeds, one deterministic holdout workload per seed. The simulator has no randomness, so this measures optimizer variability only. No significance test is applied."
+    }
+  }
+}

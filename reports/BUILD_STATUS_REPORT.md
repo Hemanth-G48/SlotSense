@@ -3,7 +3,7 @@
 **Date:** 2026-10-29
 **Subject:** what is built, what is partial, what is not built — against `PS_Track2.pdf` and `PROJECT.md`
 **Code under report:** `epoch_hackathon/smart-warehouse-slotting` (the pasted working copy)
-**Companion documents:** `ARCHITECTURE.md` v9.0, `PROJECT.md`, and `smart-warehouse-slotting/docs/PHASE_1_BASELINE_VERIFICATION.md` (Phase 1 evidence, 2026-10-29)
+**Companion documents:** `ARCHITECTURE.md` v9.2, `PROJECT.md`, `smart-warehouse-slotting/docs/PHASE_6_REPRODUCIBILITY.md`, `smart-warehouse-slotting/docs/PHASE_6_REPORT.md`, and `reports/PHASE_6_REPORT.md`
 
 > **Phase 1 update (2026-10-29):** the environment is now reproducible (venv installed), the suite runs
 > (**84 pass / 6 fail**), `run-all` completes locally in 43 s, and the baseline is **confirmed infeasible**
@@ -51,20 +51,67 @@
 > (`load_all()["phase4"]`) but no Streamlit view. Suite: **247 passed / 0 failed / 0 skipped**. Still open:
 > dashboard view (D28/D44), per-stop pick time (D37), seed variability, and the low-headroom risk.
 
+> **Phase 5 update (2026-10-29):** the Phase 3/4 contracts are now visible in a read-only **Experiments**
+> tab (Phase 3 demand metrics + Phase 4 simulation), with no metric recomputation in the presentation layer;
+> a Streamlit `AppTest` run has zero exceptions. **D37 is closed with a compatibility default:** the simulator
+> supports `order_line` (default, historical) and `stop` (distinct bins) pick-time bases. On the frozen
+> layouts, travel is identical, while stop charging adds **+13,720 s (+3.10 %)** to the baseline and removes
+> **−272 s (−0.12 %)** from the optimized layout, strengthening cycle to **−49.30 %** and throughput to
+> **+97.27 %** (line: −47.67 % / +91.08 %). Five predeclared seeds (42–46) produce **one unique layout**,
+> byte-identical to the Phase 3 optimized layout, with 5/5 feasible runs, 6,375/6,375 units and **zero**
+> variance in paired travel/cycle/throughput; the annealer's search path varies (18–43 accepted moves) but its
+> best incumbent never beats the greedy starter. Phase 5 adds **50 independent checks**, a D37/seed provenance
+> manifest, and **26 tests**. Full suite: **273 passed / 0 failed / 0 skipped**. D37 moved to closed; backlog
+> **31 open (1 P0, 16 P1, 14 P2), 17 closed**. Still open: D28/D44 segment filters and run registry, physical
+> calibration of pick-time constants, stronger seeded search, and the D13 clean-checkout reproduction.
+
+> **Phase 6 update (2026-10-29):** **D13 is closed.** A root `run-all` now orchestrates the base pipeline,
+> Phase 3, Phase 4, Phase 5, the Phase 4/5 verifiers, an optimizer audit, a capacity audit, the complete test
+> suite and a Phase 6 verifier, with isolated artifacts and per-stage logs. A fresh Git clone of the source
+> snapshot (`8df87d5`, clean worktree) with a fresh virtualenv and no `outputs/` completed **10/10 stages**,
+> **294 passed / 0 failed / 0 skipped** and **27/27** Phase 6 checks in **35 min 50 s**
+> (`outputs/phase6/runs/clean-01/`). The optimizer audit found and fixed a real defect: `_random_neighbor`
+> rejected every layout with fewer than two records, so a one-record layout could never relocate; a
+> hand fixture now improves from 1000.398 to 100.398 at the near bin. On the canonical instance only
+> **2/600** sampled neighbours improved, best **−0.0704** objective units, so the five identical seed layouts
+> are explained by a strong greedy starter and a low-yield neighbourhood — not by a broken objective; no
+> improvement is forced and no optimality claim is made. Capacity one-unit perturbations fail safely
+> (`LD-01` 40 > 30 kg, `SL-01` 86.5 > 86.4 kg, `VD-01` 161,885 > 108,000 cm³) with the baseline still
+> feasible at 0 violations / 6,375 units. The Experiments tab now also shows a read-only Phase 6 run registry.
+> Backlog: **30 open (0 P0, 16 P1, 14 P2), 18 closed**. Still open: D28/D44 launch/edit/segment filters,
+> physical calibration of pick-time constants, a stronger seeded search, `s_shape` fidelity and low headroom.
+
+> **Phase 7 update (2026-10-29):** optimizer search was diagnosed and a targeted neighbourhood was added as
+> an **opt-in** (`neighborhood="targeted"`; default `legacy` preserves Phase 2–6). On A_FIT, legacy yielded
+> **270/600** feasible proposals (45 %), **2** improving, best **−0.0704**; targeted yielded **426/600** (71 %),
+> **4** improving, best **−0.8128**. The final objective stayed **625,551.4241** and the layout hash stayed
+> `cafa55e8…`: the starter is locally saturated, so no material improvement is claimed. The dashboard gained
+> a Phase 4 regime filter and a run-status filter over the Phase 6 registry; launching runs and editing
+> weights remain unimplemented. Pick-time sensitivity at 6/8/10 s keeps travel fixed (508,174.8 / 234,208.0 m)
+> and is explicitly hypothetical, not calibrated. Full suite: **303 passed / 0 failed / 0 skipped**;
+> Phase 7 verifier: **18/18**. Phase 7 remains **PARTIALLY COMPLETE** on D28/D44 and optimizer outcome
+> improvement. Backlog unchanged at **30 open (0 P0, 16 P1, 14 P2), 18 closed**.
+
 ---
 
-## 0. Verdict (current, Phase 4)
+## 0. Verdict (current, Phase 7)
 
 The **design** covers every PS requirement (§15 of `ARCHITECTURE.md`, 20 rows, each with a mechanism). The
 **code executes end-to-end on this machine**: `run_phase3` rebuilds the split, fits on `A_FIT`, validates
 every cell independently, runs the placement × fragmentation 2×2, the replenishment metric, the weight sweep
 and the provenance manifest; `run_phase4` runs the layout × picking-policy 2×2, demand regimes B/C, headroom,
-rejection diagnostics and provenance, and `tools/verify_phase4.py` recomputes the headline numbers (14/14).
+rejection diagnostics and provenance; `run_phase5` compares the two pick-time bases and runs five paired
+seeds, and `tools/verify_phase4.py` / `src/evaluation/verify_phase5.py` independently recompute the
+headline numbers (**14/14** and **50/50**).
 The canonical baseline was repaired to feasibility (1,071 → 0 `CAT-01`, objective disabled), the optimized
 layout is feasible (0 violations, 6,375/6,375 units), and the frozen holdout gives **−53.91 % travel**,
 **−47.67 % cycle time** and **+91.1 % throughput** under nearest-neighbour; S-shape changes travel by only
-**+0.09 %**. The suite is **247 passed / 0 failed / 0 skipped**. Remaining gaps: no dashboard view
-(D28/D44), per-stop pick time (D37), one deterministic instance, and very low structural headroom.
+**+0.09 %**. The Experiments tab exposes both experiment contracts, a Phase 4 regime filter and a read-only
+Phase 6 run registry. The suite is **303 passed / 0 failed / 0 skipped**, a fresh Git clone completed the whole
+`run-all` chain (**10/10 stages, 27/27 verifier checks**), and Phase 7's targeted optimizer neighbourhood is
+measured but does not change the final layout. Remaining gaps: D28/D44 launch/edit/segment filters, a material
+optimizer outcome improvement, physical calibration of pick-time constants, `s_shape` fidelity, and very low
+structural headroom (bin weight 100 %).
 
 > **Historical note.** §1–§7 below are the original **Phase 1** assessment (84 pass / 6 fail, infeasible
 > baseline, no local end-to-end run) retained as history. They are superseded by this verdict and the Phase

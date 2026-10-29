@@ -1,0 +1,74 @@
+{
+  "viewport": [
+    1600,
+    1000
+  ],
+  "tabs": {
+    "Overview": {
+      "screenshot": "outputs/phase7_5/after1/after1_00_overview_1600.png",
+      "text_excerpt": "Baseline vs optimized \u2014 operational KPIs\n\nSame order workload, warehouse geometry, routing method and on-hand inventory in both layouts. Percent changes are computed from the baseline and optimized values shown. Utilization is reported in percentage points (pp).\n\nFLOW AND TRAVEL\n\nTotal pick-path travel distance\n\n750,120 m\n\n\u2193 55.7% lower\n\nBaseline: 1,691,479 m \u00b7 lower is better\n\nAverage path per person\n\n692.6 m\n\n\u2193 55.7% lower\n\nBaseline: 1,561.8 m \u00b7 lower is better\n\nPath per order (per person)\n\n138.5 m\n\n\u2193 55.7% lower\n\nBaseline: 312.4 m \u00b7 lower is better\n\nThroughput\n\n26.07 orders/h\n\n\u2191 96.9% higher\n\nBaseline: 13.24 orders/h \u00b7 higher is better\nTIME AND SERVICE\n\nRoute completion time per person\n\n747,845 s\n\n\u2193 49.2% lower\n\nBaseline: 1,471,967 s \u00b7 lower is better\n\nAverage route time per person\n\n690.5 s\n\n\u2193 49.2% lower\n\nBaseline: 1,359.2 s \u00b7 lower is better\nSAFETY AND COMPLETENESS\n\nConstraint violations (hard)\n\n0\n\nno change\n\nBaseline: 0 \u00b7 must be 0\n\nAssignment feasibility\n\n100.00 %\n\nno change\n\nBaseline: 100.00 % \u00b7 must be 100%\n\nRule-check pass rate\n\n100.00 %\n\nno change\n\nBaseline: 100.00 % \u00b7 must be 100%\n\nValid assignments\n\n1,200 / 1,200\n\nno change\n\nBaseline: 1,200 \u00b7 must equal required\nSTORAG",
+      "selectboxes": 0,
+      "buttons": 52,
+      "tables": 1,
+      "plotly_charts": 6
+    },
+    "Warehouse Layout": {
+      "screenshot": "outputs/phase7_5/after1/after1_01_warehouse_layout_1600.png",
+      "text_excerpt": "Recorded topology: 9 zones \u00b7 36 aisles \u00b7 144 racks \u00b7 2,304 bins \u00b7 4 shelf levels. The dataset stores zones as sequential bands along Y; the plan below uses those coordinates and stretches the display aspect. It is a logical schematic, not a CAD floor plan.\n\nView\n\nZone plan\n\nRack elevation\n\nZone\n\nRack\n\nColour by\n\nAssigned bins only\n\nkeyboard_arrow_right\n\nMeasure a corridor path\n\nWarehouse plan \u2014 recorded coordinate extents\n\nZone boxes are min/max bin-footprint extents from locations.csv; the highlighted rack is the current selection. Hover for coordinates. The Y axis is about 174 m, so the display is stretched.\n\nDispatch / I-O\nStart\nEnd\n0\n1\n2\n3\n4\n5\n6\n7\n8\n0\n20\n40\n60\n80\n100\n120\n140\n160\nDispatch / I-O\nMeasured corridor path (62.6 m)\nStart\nEnd\nWarehouse plan \u2014 actual zone extents\nx (m, stretched display)\ny (m)\nZ1256 bins\nZ2256 bins\nZ3256 bins\nZ4256 bins\nZ5256 bins\nZ6256 bins\nZ7256 bins\nZ8256 bins\nZ9256 bins\n\nABC class\n\nA\nB\nC\nunassigned\n\nStored hazard class\n\nConstraint status\n\nInspect storage location\n\nZ1 \u2014 zone plan (optimized)\n\nBins are drawn at their recorded coordinates; the display aspect is stretched to fit the zone strip.\n\nDispatch / I-O\n0\n1\n2\n3\n4\n0\n5\n10\n15\nClass A\nDispatch / I-O\n",
+      "selectboxes": 7,
+      "buttons": 35,
+      "tables": 1,
+      "plotly_charts": 6
+    },
+    "Pick Routes": {
+      "screenshot": "outputs/phase7_5/after1/after1_02_pick_routes_1600.png",
+      "text_excerpt": "",
+      "selectboxes": 0,
+      "buttons": 2,
+      "tables": 0,
+      "plotly_charts": 6
+    },
+    "Ergonomics": {
+      "screenshot": "outputs/phase7_5/after1/after1_03_ergonomics_1600.png",
+      "text_excerpt": "",
+      "selectboxes": 0,
+      "buttons": 2,
+      "tables": 0,
+      "plotly_charts": 6
+    },
+    "Exports": {
+      "screenshot": "outputs/phase7_5/after1/after1_04_exports_1600.png",
+      "text_excerpt": "",
+      "selectboxes": 0,
+      "buttons": 2,
+      "tables": 0,
+      "plotly_charts": 6
+    },
+    "Experiments": {
+      "screenshot": "outputs/phase7_5/after1/after1_05_experiments_1600.png",
+      "text_excerpt": "",
+      "selectboxes": 0,
+      "buttons": 2,
+      "tables": 0,
+      "plotly_charts": 6
+    },
+    "Inventory": {
+      "screenshot": "outputs/phase7_5/after1/after1_06_inventory_1600.png",
+      "text_excerpt": "",
+      "selectboxes": 0,
+      "buttons": 2,
+      "tables": 0,
+      "plotly_charts": 6
+    }
+  },
+  "console": [],
+  "tabs_found": [
+    "Overview",
+    "Warehouse Layout",
+    "Pick Routes",
+    "Ergonomics",
+    "Exports",
+    "Experiments",
+    "Inventory"
+  ]
+}

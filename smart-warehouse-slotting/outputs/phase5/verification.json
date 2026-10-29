@@ -1,0 +1,258 @@
+{
+  "schema": "phase5.verification/1",
+  "all_passed": true,
+  "n_checks": 50,
+  "n_failed": 0,
+  "checks": [
+    {
+      "name": "d37_order_line_baseline_route_sums",
+      "passed": true,
+      "detail": "508174.8 m, 442129.69 s"
+    },
+    {
+      "name": "d37_order_line_baseline_cycle_identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "d37_order_line_optimized_route_sums",
+      "passed": true,
+      "detail": "234208.0 m, 231386.0 s"
+    },
+    {
+      "name": "d37_order_line_optimized_cycle_identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "d37_order_line_pick_units",
+      "passed": true,
+      "detail": "pick_units=5997.0, published=5997"
+    },
+    {
+      "name": "d37_stop_baseline_route_sums",
+      "passed": true,
+      "detail": "508174.8 m, 455849.69 s"
+    },
+    {
+      "name": "d37_stop_baseline_cycle_identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "d37_stop_optimized_route_sums",
+      "passed": true,
+      "detail": "234208.0 m, 231114.0 s"
+    },
+    {
+      "name": "d37_stop_optimized_cycle_identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "d37_stop_pick_units",
+      "passed": true,
+      "detail": "pick_units=7712.0, published=7712"
+    },
+    {
+      "name": "d37_travel_unchanged",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "d37_baseline_travel_identical",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "d37_baseline_setup_identical",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "d37_optimized_travel_identical",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "d37_optimized_setup_identical",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "seed_42_layout_hash",
+      "passed": true,
+      "detail": "cafa55e805e8"
+    },
+    {
+      "name": "seed_42_feasible",
+      "passed": true,
+      "detail": "violations=0"
+    },
+    {
+      "name": "seed_42_inventory",
+      "passed": true,
+      "detail": "units=6375, duplicates=0"
+    },
+    {
+      "name": "seed_42_fit_matches_layout",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "seed_43_layout_hash",
+      "passed": true,
+      "detail": "cafa55e805e8"
+    },
+    {
+      "name": "seed_43_feasible",
+      "passed": true,
+      "detail": "violations=0"
+    },
+    {
+      "name": "seed_43_inventory",
+      "passed": true,
+      "detail": "units=6375, duplicates=0"
+    },
+    {
+      "name": "seed_43_fit_matches_layout",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "seed_44_layout_hash",
+      "passed": true,
+      "detail": "cafa55e805e8"
+    },
+    {
+      "name": "seed_44_feasible",
+      "passed": true,
+      "detail": "violations=0"
+    },
+    {
+      "name": "seed_44_inventory",
+      "passed": true,
+      "detail": "units=6375, duplicates=0"
+    },
+    {
+      "name": "seed_44_fit_matches_layout",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "seed_45_layout_hash",
+      "passed": true,
+      "detail": "cafa55e805e8"
+    },
+    {
+      "name": "seed_45_feasible",
+      "passed": true,
+      "detail": "violations=0"
+    },
+    {
+      "name": "seed_45_inventory",
+      "passed": true,
+      "detail": "units=6375, duplicates=0"
+    },
+    {
+      "name": "seed_45_fit_matches_layout",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "seed_46_layout_hash",
+      "passed": true,
+      "detail": "cafa55e805e8"
+    },
+    {
+      "name": "seed_46_feasible",
+      "passed": true,
+      "detail": "violations=0"
+    },
+    {
+      "name": "seed_46_inventory",
+      "passed": true,
+      "detail": "units=6375, duplicates=0"
+    },
+    {
+      "name": "seed_46_fit_matches_layout",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "seed_count",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "seed_all_successful",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "seed_unique_layouts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "seed_all_feasible",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "seed_all_inventory_conserved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "seed_42_paired_delta",
+      "passed": true,
+      "detail": "-53.9119%"
+    },
+    {
+      "name": "seed_43_paired_delta",
+      "passed": true,
+      "detail": "-53.9119%"
+    },
+    {
+      "name": "seed_44_paired_delta",
+      "passed": true,
+      "detail": "-53.9119%"
+    },
+    {
+      "name": "seed_45_paired_delta",
+      "passed": true,
+      "detail": "-53.9119%"
+    },
+    {
+      "name": "seed_46_paired_delta",
+      "passed": true,
+      "detail": "-53.9119%"
+    },
+    {
+      "name": "seed_stats_travel_pct",
+      "passed": true,
+      "detail": "mean=-53.9119, sd=0.0"
+    },
+    {
+      "name": "seed_stats_cycle_s",
+      "passed": true,
+      "detail": "mean=-210743.69, sd=0.0"
+    },
+    {
+      "name": "seed_stats_throughput",
+      "passed": true,
+      "detail": "mean=12.05, sd=0.0"
+    },
+    {
+      "name": "provenance_output_hashes",
+      "passed": true,
+      "detail": "bad=[]"
+    },
+    {
+      "name": "provenance_phase3_layouts",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

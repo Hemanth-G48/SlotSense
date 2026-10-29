@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Version | 9.0 — design specified against `PS_Track2.pdf` (pass 11). "Specified" means every PS requirement has a mechanism here; it does **not** mean the code exists (§15) or that no decisions remain (§18). |
+| Version | 9.3 — design specified against `PS_Track2.pdf` (pass 11), updated with Phase 6 reproducibility and Phase 7 optimizer-neighbourhood evidence. "Specified" means every PS requirement has a mechanism here; it does **not** mean the code exists (§15) or that no decisions remain (§18). |
 | Status | Every PS requirement resolves to a mechanism in this document (§15). §16 lists what is not yet built. |
 | Derived from | `PS_Track2.pdf` (Track 2, warehouse slotting) and `PROJECT.md` (R1–R3, data vectors, deliverables) |
 | Verification | `python tools/check_architecture.py` asserts the document's structural invariants |
@@ -386,17 +386,19 @@ of `dijkstra(depot → location)`, recomputed at load and asserted equal to the 
 "how far must someone walk" and the other "how close are these physically".
 
 Routing is nearest-neighbour with a return-to-depot leg, applied identically to both layouts. Cycle time =
-travel (`d / 1.3 m/s`) + pick + setup, with pick charged **per stop** so travel and handling share one event.
-Both nearest-neighbour and S-shape are implemented (`src/routing/heuristics.py`); Phase 2/3 reported
-nearest-neighbour, and Phase 4 evaluates both in a layout × policy 2×2. S-shape is a documented node-order
-serpentine simplification, not a full aisle-grid S-shape. The per-stop pick-time target (D37) is not applied;
-the current simulator charges pick time per order line, as Phase 2/3 did.
+travel (`d / 1.3 m/s`) + pick + setup. The simulator supports two pick-time bases: **`order_line`** (default;
+one charge per order line, preserving Phase 2/3 comparability) and **`stop`** (one charge per distinct bin
+visited by the batch, the §10 target). Phase 5 measured both on the frozen layouts: travel is identical,
+while cycle time and throughput move because stops differ from lines (D37). Both nearest-neighbour and
+S-shape are implemented (`src/routing/heuristics.py`); Phase 2/3 reported nearest-neighbour, and Phase 4
+evaluates both in a layout × policy 2×2. S-shape is a documented node-order serpentine simplification, not a
+full aisle-grid S-shape.
 
 ### 10.1 Assumptions
 
 | ID | Assumption | Cancels? |
 |---|---|---|
-| A-1 | Pick time per stop, independent of quantity | Yes |
+| A-1 | Pick time per event, independent of quantity; the event is an order line (default) or a distinct stop (sensitivity) | Yes |
 | A-2 | A picker visits every bin holding a SKU **until the pick-rule change lands**; target is quantity-aware nearest bin | **No** — layout-dependent, measured by the 2×2 (§11.5) |
 | A-3 | Shortest-path travel, constant speed, no congestion | Yes |
 | A-4 | Fixed batch size 5, sorted composition | Yes — held constant so it cannot explain the delta |
@@ -428,17 +430,17 @@ layouts comparable; they do **not** make the number out-of-sample — that is §
 | whole-warehouse cube utilisation | % | **immovable** | no — numerator fixed by inventory, denominator is the whole warehouse |
 | charged pick stops | count | diagnostic | no — an input to travel |
 | multi-bin SKUs | count | diagnostic | no |
-| total pick-cycle time | s | **layout-dependent** | yes — pick time is charged per stop (§10), and stops differ by layout |
+| total pick-cycle time | s | **layout-dependent** | yes — pick time is charged per line (default) or per stop (sensitivity); stop counts differ by layout |
 | throughput | orders/h | **layout-dependent** | yes — `orders / cycle` |
 | replenishment travel | m | movable | yes |
 | violations / verdicts | count, bool | status | yes |
 
-**Cycle time carries its own information under the target cost model.** The identity "cycle Δ = travel Δ ÷
-1.3" holds only while pick time is charged **per order line**, because both layouts then pick the same
-20,000 lines. The design charges pick time **per stop** (§10), and stops differ by layout (25,767 vs
-21,324), so pick time is layout-dependent and cycle time is not a rescaled distance. The identity is a
-property of the current implementation (D37), not of the metric — which is why cycle time and throughput are
-listed as first-class rows and the derived-labelling applies only until D37 lands.
+**Cycle time carries its own information under either cost model.** Under the **line** basis both layouts pick
+the same 5,997 lines, so the identity "cycle Δ = travel Δ ÷ 1.3" holds and cycle time is a rescaled distance.
+Under the **stop** basis pick time is layout-dependent: Phase 5 measured 7,712 stops for the baseline and
+5,963 for the optimized layout. The stop model therefore strengthens the cycle/throughput result (baseline
+pays more stops; the optimized layout pays fewer) while leaving travel unchanged. The line basis remains the
+default for Phase 2/3/4 comparability; the stop basis is a published sensitivity, not a silent redefinition.
 
 **Immovable metrics are labelled.** Cube utilisation cannot move when inventory is fixed; publishing it alone
 would look like a non-result. That is why `bins occupied` and replenishment travel sit beside it.
@@ -508,6 +510,14 @@ therefore about placement, not routing. B/C regime shifts preserve the gain (−
 optimized layout has almost no structural headroom (bin weight 100 %, volume 99.93 %, level 98.06 %, beam
 98.76 %).
 
+**Optimizer neighbourhood (Phase 7).** The default relocation operator samples every feasible bin for a SKU,
+including bins already occupied by another SKU. On A_FIT that yields 270/600 feasible proposals (45 %) and
+only 2 improving proposals, best −0.0704 objective units; the final incumbent equals the greedy starter.
+An opt-in `neighborhood="targeted"` proposal restricts relocation to empty bins and biases the draw to the
+nearest 20: 426/600 feasible (71 %), 4 improving, best −0.8128, but the final layout and objective are
+unchanged. The default remains `legacy`; targeted is a measured efficiency experiment, not a claimed
+operational improvement. The canonical search is locally saturated, not broken.
+
 ### 11.6 Weight sweep
 
 α/β/γ/δ are swept over a documented grid; each run publishes its per-term contributions and metric table. The
@@ -515,18 +525,19 @@ sweep turns the weights from arbitrary multipliers into a stated trade-off and i
 `PROJECT.md D-3 (documentation)` asks for. Normalisation alone does not achieve this — it fixes scale, not
 range.
 
-### 11.7 Current measurements (v1 artifacts, not yet reproduced here)
+### 11.7 Current measurements (reproduced in Phase 6)
 
 **Source:** `outputs/baseline_assignments.csv` and `outputs/optimized/optimized_assignments.csv` (one
-artifact set), `pick_route_stops_*.csv`, `evaluation_summary.json`. The committed artifacts were produced on
-another machine, so these are **reported**, not reproduced, until D13 closes.
+artifact set), `pick_route_stops_*.csv`, `evaluation_summary.json`. Phase 6's clean-clone `run-all`
+regenerated this chain end to end; the figures below are reproduced from this checkout, not copied from
+another machine (D13 closed).
 
 | Metric | Baseline | Optimized | Change |
 |---|---|---|---|
-| total travel distance | 382,544.2 m | 279,046.4 m | −27.06% |
-| charged pick stops | 25,767 | 21,324 | −4,443 (−17.2%) |
-| assignment records | 1,425 | 1,358 | −67 |
-| multi-bin SKUs | 208 | 150 | −58 |
+| total travel distance | 1,691,478.6 m | 750,119.5 m | −55.65% |
+| charged pick stops | 25,767 | 20,388 | −5,379 (−20.9%) |
+| assignment records | 1,425 | 1,288 | −137 |
+| multi-bin SKUs | 208 | 88 | −120 |
 | whole-warehouse cube utilisation | 15.42% | 15.42% | 0.00 pp (immovable) |
 | hard violations | 0 | 0 | only for the rules implemented today (D5, D34) |
 
@@ -535,7 +546,7 @@ gives 1,071 violations at `R = 10 m`, 169 at `R = 5 m`, 0 at `R = 2 m` (3,594 pa
 "0 violations" was true only because the rule did not exist. Consequences: the layout must be re-solved with
 `CAT-01` active, and `R` is now a real design parameter with a measured sensitivity rather than a default.
 
-The −17.2% stop reduction is **not** evidence of a −17.2% travel gain: pricing removed stops at the average
+The −20.9% stop reduction is **not** evidence of a −55.65% travel gain: pricing removed stops at the average
 14.85 m/stop is biased by tour concavity and circular by construction. §11.5's 2×2 is what separates the
 fragmentation effect from the placement effect (D22).
 
@@ -618,10 +629,7 @@ reproduce offline.
 | `partial` | mechanism partly exists; a named gap remains | gap row in §16 |
 | `specified` | designed here, no code | §16 row |
 
-**Headline count: 8 implemented · 5 partial · 0 specified · 7 verified.** R1.3 and R1.4 moved to *verified* on the canonical benchmark in Phase 2; the eight implemented rows remain source-plus-artifact claims that have not been exercised end-to-end here. No requirement in
-the table below has been executed in this workspace: the venv is empty and the committed artifacts were
-produced on another machine (D13). "Implemented" is therefore a claim about source and artifacts, not about
-a run — and it is the strongest claim this checkout currently supports.
+**Headline count: 8 implemented · 5 partial · 0 specified · 7 verified.** R1.3 and R1.4 moved to *verified* on the canonical benchmark in Phase 2; the eight implemented rows remain source-plus-artifact claims. Phase 6 executed the whole chain end-to-end in a clean clone (`run-all`, 10/10 stages, 294 tests, 27/27 verifier checks), so the checkout is no longer an unexecuted source snapshot; the status labels below remain conservative classifications of requirement coverage, not of whether the code ran.
 
 | PS requirement | Mechanism | Section | Status |
 |---|---|---|---|
@@ -661,9 +669,7 @@ once they have been run here. 48 registered items.
 
 ### 16.1 P0 — blocks every claim
 
-| ID | Gap | Change | Acceptance |
-|---|---|---|---|
-| D13 | artifacts generated elsewhere | regenerate every artifact here | `run-all` reproduces §11 figures on a clean checkout |
+None open. D13 (clean-checkout reproduction) closed in Phase 6; see §16.4.
 
 ### 16.2 P1 — makes the verdicts and metrics honest
 
@@ -701,7 +707,6 @@ once they have been run here. 48 registered items.
 | D19 | neighbourhood is feasibility-blind | capacity-aware sampling, justified by D42 |
 | D20 | dashboard allocations unvalidated | validate, or label the tab a sandbox |
 | D32 | mixed scenario contract | one scenario end-to-end per run |
-| D37 | travel per stop, pick time per line | charge pick time per stop |
 | D41 | stock never depleted | document as A-7; optional depletion model |
 | D43 | no scenario stresses all terms | term-coverage matrix |
 | D45 | oracle built too late | move to the S5 precondition |
@@ -724,11 +729,14 @@ once they have been run here. 48 registered items.
 | D21 | fitness and evaluation in-sample | closed in Phase 3/4: temporal order-level fit/holdout split with 10 integrity checks; Phase 4 evaluates the frozen layout on the holdout and on regimes B/C without refitting |
 | D25 | objective undecomposed | closed in Phase 3/4: `Objective.components` publishes `D/A/E/U/R`, weighted contributions and the total in every optimization summary and Phase 4 cell artifact |
 | D27 | determinism untested | closed: `tests/test_determinism.py` plus the byte-identical split rebuild and frozen layout hashes; Phase 4 route sums are deterministic across repeated runs |
+| D37 | travel per stop, pick time per line | closed in Phase 5 with a compatibility default: `SimulationConfig.pick_time_basis` supports `order_line` (default; historical series) and `stop` (distinct bins per batch; §10 target). Controlled comparison: travel identical (508,174.8 / 234,208.0 m), baseline stop charging **+13,720 s (+3.10 %)** because 7,712 stops > 5,997 lines, optimized **−272 s (−0.12 %)** because 5,963 stops < 5,997 lines; stop basis strengthens cycle **−49.30 %** and throughput **+97.27 %** vs line **−47.67 %** / **+91.08 %**. Default retained for Phase 2/3/4 comparability |
+| D13 | artifacts generated elsewhere; no reproduction entry point | closed in Phase 6: root `run-all` orchestrates base pipeline → Phase 3 → Phase 4 → Phase 5 → verifiers → optimizer audit → capacity audit → full suite → Phase 6 verifier. A fresh Git clone of the source snapshot (`8df87d5`, clean worktree) with a fresh venv and no `outputs/` completed **10/10 stages**, **294 tests** and **27/27** Phase 6 checks in 35 min 50 s; `outputs/phase6/runs/clean-01/` holds the manifest and logs |
 | D34 | structural limits had no defined unit; beam/level/rack were not separate fields | four explicit limits emitted by `apply_structural_limits`; validator compares each aggregate to its own field. 8 unit tests; 960 beam / 550 level / 144 rack checks execute on the v1 dataset |
 | D5 | category matrix inert — `CAT-01` did not exist | 3-D Euclidean radius with a uniform grid index, `separation_radius_m` configurable. 8 unit tests; 3,594 pair checks run on the baseline — which reveals **1,071 violations at R=10 m** |
 
-**Backlog status:** 32 open (1 P0, 16 P1, 15 P2), 16 closed. Closing the P0 set is required before any
-improvement figure is published as reproduced.
+**Backlog status:** 30 open (0 P0, 16 P1, 14 P2), 18 closed. Closing the P0 set is required before any
+improvement figure is published as reproduced; the P0 set is currently empty (D13 closed in Phase 6), so the
+gate is satisfied. Any new P0 reopens the reproduction gate.
 
 ---
 
@@ -785,7 +793,7 @@ above.
 
 ---
 
-*End of document. §15 is the conformance claim; §16 is what remains to be built. Most of §1–§14 stands on its
-own, but three dependencies are explicit and must not be read past: §11.7's figures depend on D13 and D22,
-§9.2's `T` depends on D29, and §10's cost model depends on D37. Until those close, the design is specified and
-the numbers are provisional.*
+*End of document. §15 is the conformance claim; §16 is what remains to be built. D13, D22, D29 and D37 are
+closed: Phase 6 reproduced §11.7 end-to-end in a clean clone, and Phase 3/5 measured the
+placement/fragmentation decomposition, order-line travel and the pick-time basis. Re-run `run-all` after any
+change that touches the data, constraints, objective or simulation constants.*

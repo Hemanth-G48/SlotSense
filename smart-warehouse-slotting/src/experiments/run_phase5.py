@@ -23,7 +23,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-import statistics
+import os
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -47,8 +47,8 @@ from src.validation.loader import (
 from src.validation.validator import Validator
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-PHASE3 = PROJECT_ROOT / "outputs" / "phase3"
-PHASE4 = PROJECT_ROOT / "outputs" / "phase4"
+PHASE3 = Path(os.environ.get("PHASE3_DIR", PROJECT_ROOT / "outputs" / "phase3")).resolve()
+PHASE4 = Path(os.environ.get("PHASE4_DIR", PROJECT_ROOT / "outputs" / "phase4")).resolve()
 FIT_TREE = PHASE3 / "split" / "A70" / "fit" / "processed"
 HOLDOUT_TREE = PHASE3 / "split" / "A70" / "holdout" / "processed"
 BASELINE_LAYOUT = PHASE3 / "optimized_fit" / "baseline_repaired_assignments.csv"
@@ -415,7 +415,9 @@ def run(out_root: Path) -> dict:
 
     manifest = build_manifest(
         root=PROJECT_ROOT,
-        processed=PROJECT_ROOT.parent / "dataset" / "processed",
+        processed=Path(
+            os.environ.get("DATASET_DIR", PROJECT_ROOT.parent / "dataset" / "processed")
+        ),
         config_path=PROJECT_ROOT / "configs" / "benchmark.json",
         outputs=outputs,
         experiment_id="phase5-d37-and-paired-seeds",

@@ -52,6 +52,7 @@ def run_phase5(
     baseline_variant: BaselineVariant | None = None,
     fit_scenario: str = "A",
     affinity_scenario: str | None = None,
+    optimizer_neighborhood: str = "legacy",
 ) -> dict:
     """Optimise a layout from a processed tree.
 
@@ -65,7 +66,8 @@ def run_phase5(
     try:
         return _run_phase5(processed, config, out, baseline_variant,
                            fit_scenario=fit_scenario,
-                           affinity_scenario=affinity_scenario or fit_scenario)
+                           affinity_scenario=affinity_scenario or fit_scenario,
+                           optimizer_neighborhood=optimizer_neighborhood)
     except Exception as exc:  # noqa: BLE001 - the summary must exist even when the run died
         # A crash is not an infeasible layout: nothing was validated, so feasibility is left
         # undetermined (``None``) rather than being reported as INFEASIBLE.
@@ -138,6 +140,7 @@ def _run_phase5(
     baseline_variant: BaselineVariant | None = None,
     fit_scenario: str = "A",
     affinity_scenario: str = "A",
+    optimizer_neighborhood: str = "legacy",
 ) -> dict:
     locations = pd.read_csv(processed / "locations.csv")
     products = pd.read_csv(processed / "products.csv")
@@ -186,7 +189,10 @@ def _run_phase5(
         delta=config.optimization.delta,
         epsilon=config.optimization.epsilon,
     )
-    opt_cfg = OptimizerConfig(seed=config.dataset.seed)
+    opt_cfg = OptimizerConfig(
+        seed=config.dataset.seed,
+        neighborhood=optimizer_neighborhood,
+    )
 
     optimizer = SlottingOptimizer(
         warehouse=wh,

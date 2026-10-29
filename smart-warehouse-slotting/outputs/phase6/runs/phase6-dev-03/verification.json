@@ -1,0 +1,143 @@
+{
+  "schema": "phase6.verification/1",
+  "all_passed": false,
+  "n_checks": 27,
+  "n_failed": 2,
+  "checks": [
+    {
+      "name": "run_summary_exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "run_status_pass",
+      "passed": false,
+      "detail": "FAILED"
+    },
+    {
+      "name": "all_stages_pass",
+      "passed": false,
+      "detail": ""
+    },
+    {
+      "name": "stage_logs_exist",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "dataset_manifest_matches",
+      "passed": true,
+      "detail": "28abd23eb798 vs 28abd23eb798"
+    },
+    {
+      "name": "config_hash_matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "phase3_all_cells_feasible",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "phase3_all_cells_priced",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "phase3_split_checks",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "phase3_inventory_units",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "phase3_duplicate_pairs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "phase4_verifier_pass",
+      "passed": true,
+      "detail": "14 checks"
+    },
+    {
+      "name": "phase5_verifier_pass",
+      "passed": true,
+      "detail": "50 checks"
+    },
+    {
+      "name": "d37_travel_unchanged",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "seed_count",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "seed_one_layout",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "seed_zero_variance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "optimizer_fixture_improved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "optimizer_canonical_D_matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "optimizer_no_worse_than_starter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "optimizer_audit_layout_feasible",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "capacity_baseline_feasible",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "capacity_baseline_units",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "capacity_perturbations_present",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "capacity_perturbations_fail",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "capacity_expected_rules",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "output_hashes_match",
+      "passed": true,
+      "detail": "bad=[]"
+    }
+  ]
+}

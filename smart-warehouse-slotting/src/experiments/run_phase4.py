@@ -22,6 +22,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -37,7 +38,7 @@ from src.routing.graph import build_graph, depot_distance_map, find_depot_node
 from src.simulation.pipeline import run_phase6
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-PHASE3 = PROJECT_ROOT / "outputs" / "phase3"
+PHASE3 = Path(os.environ.get("PHASE3_DIR", PROJECT_ROOT / "outputs" / "phase3")).resolve()
 HOLDOUT_TREE = PHASE3 / "split" / "A70" / "holdout" / "processed"
 BASELINE_LAYOUT = PHASE3 / "optimized_fit" / "baseline_repaired_assignments.csv"
 OPTIMIZED_LAYOUT = PHASE3 / "optimized_fit" / "optimized_assignments.csv"
@@ -274,7 +275,9 @@ def run(out_root: Path) -> dict:
         }
     ]
 
-    canonical = PROJECT_ROOT.parent / "dataset" / "processed"
+    canonical = Path(
+        os.environ.get("DATASET_DIR", PROJECT_ROOT.parent / "dataset" / "processed")
+    )
     for scenario in ("B", "C"):
         profile = _regime_profile(canonical, scenario)
         run_dir = out_root / "regimes" / scenario

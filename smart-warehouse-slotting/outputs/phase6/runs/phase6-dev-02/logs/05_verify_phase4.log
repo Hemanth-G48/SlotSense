@@ -1,0 +1,31 @@
+$ /home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/.venv/bin/python /home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/tools/verify_phase4.py /home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase6/runs/phase6-dev-02/artifacts/phase4
+
+Traceback (most recent call last):
+  File "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/tools/verify_phase4.py", line 46, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/tools/verify_phase4.py", line 31, in main
+    report = verify_phase4_artifacts(Path(args.phase4_dir))
+  File "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/src/evaluation/verify.py", line 172, in verify_phase4_artifacts
+    pd.read_csv(dataset_dir / "inventory.csv")
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/.venv/lib/python3.14/site-packages/pandas/io/parsers/readers.py", line 1866, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/.venv/lib/python3.14/site-packages/pandas/io/parsers/readers.py", line 423, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/.venv/lib/python3.14/site-packages/pandas/io/parsers/readers.py", line 2721, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/.venv/lib/python3.14/site-packages/pandas/io/parsers/readers.py", line 2988, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/.venv/lib/python3.14/site-packages/pandas/io/common.py", line 948, in get_handle
+    handle = open(handle, ioargs.mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase6/runs/dataset/processed/inventory.csv'

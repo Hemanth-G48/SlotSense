@@ -2,6 +2,7 @@
 
 import json
 import math
+import os
 from pathlib import Path
 
 import pandas as pd
@@ -21,7 +22,9 @@ from src.simulation.pipeline import run_phase6
 from src.simulation.simulator import build_batches
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-PROCESSED = PROJECT_ROOT.parent / "dataset" / "processed"
+PROCESSED = Path(
+    os.environ.get("DATASET_DIR", PROJECT_ROOT.parent / "dataset" / "processed")
+).resolve()
 
 
 @pytest.fixture(scope="module")

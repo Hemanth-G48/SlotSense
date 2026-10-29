@@ -8,6 +8,7 @@ run-order dependent).
 """
 
 import json
+import os
 from pathlib import Path
 
 import pandas as pd
@@ -23,7 +24,9 @@ from tests.phase2_fixtures import (
 )
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-PROCESSED = PROJECT_ROOT.parent / "dataset" / "processed"
+PROCESSED = Path(
+    os.environ.get("DATASET_DIR", PROJECT_ROOT.parent / "dataset" / "processed")
+).resolve()
 
 
 def test_required_artifacts_are_produced_by_the_pipeline(tmp_path):

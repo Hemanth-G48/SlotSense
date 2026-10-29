@@ -81,10 +81,10 @@ check exists separately.
 
 | Rule | Validator | Placer — greedy path | Placer — move filter | Who is stricter |
 |---|---|---|---|---|
-| `LD-01` weight | none — `total <= max_weight_kg` (l. 406) | `_units_affordable(bin_weight, unit_weight)` → 1e-9 (`WEIGHT_EPSILON_KG`, l. 1242, called l. 1281) | `> max_weight_kg + WEIGHT_EPSILON_KG` → 1e-9 (l. 823) | validator, by 1e-9 kg |
-| `VD-01` volume | none — `total <= usable_volume_cm3` (l. 428) | `_units_affordable(volume, unit_volume_cm3)` → 1e-9 (l. 1242, called l. 1281) | `> usable_volume_cm3 + 1e-6` (l. 825) | validator, by 1e-9 cm³ (greedy) / 1e-6 cm³ (move filter) |
-| `SL-01` / `SL-02` / `RK-01` | `<= limit + 1e-6` (l. 602, 615, 628) | ledger audit at 1e-9 (`WEIGHT_EPSILON_KG`, l. 585, 589, 593) | `> cap + 1e-6` (l. 832, 834, 836) | equal in the move filter, stricter in the ledger audit |
-| `CAT-01` | rejects when `d + 1e-9 < R` | `d + 1e-9 < radius` (l. 675) | same | identical |
+| `LD-01` weight | none — `total <= max_weight_kg` (l. 406) | `_units_affordable(bin_weight, unit_weight)` → 1e-9 (`WEIGHT_EPSILON_KG`, l. 1267, called l. 1306) | `> max_weight_kg + WEIGHT_EPSILON_KG` → 1e-9 (l. 832) | validator, by 1e-9 kg |
+| `VD-01` volume | none — `total <= usable_volume_cm3` (l. 428) | `_units_affordable(volume, unit_volume_cm3)` → 1e-9 (l. 1267, called l. 1306) | `> usable_volume_cm3 + 1e-6` (l. 834) | validator, by 1e-9 cm³ (greedy) / 1e-6 cm³ (move filter) |
+| `SL-01` / `SL-02` / `RK-01` | `<= limit + 1e-6` (l. 602, 615, 628) | ledger audit at 1e-9 (`WEIGHT_EPSILON_KG`, l. 594, 598, 602) | `> cap + 1e-6` (l. 841, 843, 845) | equal in the move filter, stricter in the ledger audit |
+| `CAT-01` | rejects when `d + 1e-9 < R` | `d + 1e-9 < radius` (l. 684) | same | identical |
 
   Three consequences worth stating rather than hiding. First, **the placer is more permissive than the validator
   only on `LD-01` (by 1e-9 kg) and `VD-01` (by 1e-9 cm³ on the greedy path, 1e-6 cm³ in the move filter)**; every

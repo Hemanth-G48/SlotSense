@@ -1,0 +1,18 @@
+$ /home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/.venv/bin/python /home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/tools/verify_phase4.py /home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase6/runs/phase6-dev-03/artifacts/phase4
+
+checks: 14  failed: 0
+  ok   four_cells_present
+  ok   factor_levels_match
+  ok   all_cells_feasible
+  ok   assignment_complete
+  ok   route_sums_match_summary
+  ok   cycle_identity_holds
+  ok   throughput_recomputes
+  ok   travel_effects_recompute
+  ok   direct_holdout_change_recomputes
+  ok   inventory_conserved
+  ok   split_checks_pass
+  ok   regime_counts_reconcile
+  ok   headroom_recomputes
+  ok   provenance_hashes_match
+report: /home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase6/runs/phase6-dev-03/artifacts/phase4/verification.json

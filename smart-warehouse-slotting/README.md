@@ -89,16 +89,38 @@ python app/main.py run-all                   # validate + analysis + optimize + 
 streamlit run app/dashboard.py
 ```
 
-Nine tabs: Overview (baseline vs optimized KPIs, safety verdict, solver status), Warehouse Layout
-(plan + rack elevation built from the topology), Demand & ABC, Order Affinity, Pick Routes,
-Constraints & Safety (per-check audit with observed values and limits), Ergonomics,
-Optimization controls, and Exports. `app/dashboard_data.py` holds the data mapping and documented
-formulas; every value comes from the generated artifacts below.
+Seven tabs: Overview (baseline vs optimized KPIs, safety verdict, solver status), Warehouse Layout
+(plan + rack elevation built from the topology), Pick Routes, Ergonomics, Exports, Experiments
+(read-only Phase 3 demand metrics and Phase 4 simulation contracts), and Inventory Mgmt.
+`app/dashboard_data.py` holds the data mapping and documented formulas; `app/phase5_views.py`
+shapes the experiment contracts without recomputing them. Every value comes from the generated
+artifacts below.
 
 Additional evaluation artifacts: `outputs/evaluation/validation_checks_{baseline,optimized}.csv`
 (every rule evaluation with observed value/limit), `pick_route_stops_{baseline,optimized}.csv`
 (ordered pick sequences with leg distances), and `outputs/optimized/run_history.json`
 (completed optimizer runs).
+
+## Reproducibility (Phase 6)
+
+```bash
+./run-all          # base pipeline + Phase 3-5 + verifiers + audits + full suite
+```
+
+One run directory per invocation under `outputs/phase6/runs/<run_id>/`, with per-stage logs,
+`run_summary.json` (dataset/config/output hashes, versions, exit codes) and `verification.json`.
+A fresh Git clone of the source snapshot with a fresh virtualenv and no `outputs/` completed
+**10/10 stages, 294 tests and 27/27 Phase 6 checks**; see `docs/PHASE_6_REPRODUCIBILITY.md` and
+`docs/PHASE_6_REPORT.md`. The Phase 7 tree re-ran the same chain as `phase7-dev-01`:
+**10/10 stages, 303 tests and 27/27 Phase 6 checks** (`docs/PHASE_7_REPORT.md`).
+
+## Optimizer neighbourhood experiment (Phase 7)
+
+The default relocation operator remains `legacy` (Phase 2–6 bit-compatible). An opt-in
+`neighborhood="targeted"` proposal restricts relocation to empty bins and biases it to the nearest 20.
+On A_FIT/seed 42/600 evaluations it raised feasible proposals from 270 to 426 and improving proposals
+from 2 to 4, but the final layout and objective were identical. The measured conclusion is a locally
+saturated search, not an operational gain; see `outputs/phase7/optimizer_compare.json`.
 
 ## Tests
 
@@ -127,7 +149,7 @@ python -m pytest tests/ -q
   nearest-neighbor routing, identical workload for both layouts. **Result: −24.07% total travel
   distance, +27.02% throughput, 0 pp cube-utilization change (same inventory), 0 violations for
   both layouts.**
-- **Phase 7 (dashboard)** — COMPLETE. Nine-section operational dashboard reading the canonical
+- **Phase 7 (dashboard)** — COMPLETE. Seven-tab operational dashboard reading the canonical
   dataset and real outputs: warehouse plan/elevation by ABC class, Pareto/ABC analysis, affinity
   pairs and clusters, ordered pick routes, per-rule constraint audit, ergonomics, optimizer
   controls, and CSV/JSON exports with explicit unavailable/failure states.

@@ -1,0 +1,74 @@
+{
+  "viewport": [
+    1600,
+    1000
+  ],
+  "tabs": {
+    "Overview": {
+      "screenshot": "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase7_5/before/overview_00_overview_1600.png",
+      "text_excerpt": "Baseline vs optimized \u2014 operational KPIs\n\nSame order workload, warehouse geometry, routing method and on-hand inventory in both layouts. Percent changes are computed from the baseline and optimized values shown. Utilization is reported in percentage points (pp).\n\nTotal pick-path travel distance\n\n750,120 m\n\n\u25bc 55.7% (reduction)\n\nBaseline: 1,691,479 m \u00b7 \u25bc 55.7% (reduction) \u00b7 lower is better\n\nAverage path per person\n\n692.6 m\n\n\u25bc 55.7% (reduction)\n\nBaseline: 1,561.8 m \u00b7 \u25bc 55.7% (reduction) \u00b7 lower is better\n\nPath per order (per person)\n\n138.5 m\n\n\u25bc 55.7% (reduction)\n\nBaseline: 312.4 m \u00b7 \u25bc 55.7% (reduction) \u00b7 lower is better\n\nRoute completion time per person\n\n747,845 s\n\n\u25bc 49.2% (reduction)\n\nBaseline: 1,471,967 s \u00b7 \u25bc 49.2% (reduction) \u00b7 lower is better\n\nAverage route time per person\n\n690.5 s\n\n\u25bc 49.2% (reduction)\n\nBaseline: 1,359.2 s \u00b7 \u25bc 49.2% (reduction) \u00b7 lower is better\n\nThroughput\n\n26.07 orders/h\n\n\u25b2 96.9% (increase)\n\nBaseline: 13.24 orders/h \u00b7 \u25b2 96.9% (increase) \u00b7 higher is better\n\nVolumetric cube utilization\n\n15.42 %\n\n+0.00 pp\n\nBaseline: 15.42 % \u00b7 +0.00 pp \u00b7 reference\n\nConstraint violations (hard)\n\n0\n\n+0\n\nBaseline: 0 \u00b7 +0 \u00b7 must be 0\n\nAssignment feasibility\n\n100.00 %\n\n+0.00 pp\n\nBaseline",
+      "selectboxes": 0,
+      "buttons": 54,
+      "tables": 1,
+      "plotly_charts": 11
+    },
+    "Warehouse Layout": {
+      "screenshot": "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase7_5/before/overview_01_warehouse_layout_1600.png",
+      "text_excerpt": "Topology read from locations.csv: 9 zones \u00b7 36 aisles \u00b7 144 racks \u00b7 2,304 bins \u00b7 4 shelf levels (golden levels [1, 2]) \u00b7 usable volume 430.6 m\u00b3. Showing the optimized assignment (switch the detail layout in the sidebar to compare). Aisle connections and cross-aisles are modeled in the routing graph (aisle-entrance and zone-hub nodes); the plan draws the aisle bands.\n\nWarehouse Layout: 3x3 Matrix with 9 Zones & Edge Racks\n\nAll nine zones (Z1 to Z9) are enclosed in a 40.8m x 40.8m box. Each zone has 4 edge racks on its 4 sides (South, North, West, East) with inter-zone corridors running strictly between them.\n\nkeyboard_arrow_down\n\n\ud83d\udcd0 Invisible Ruler \u2014 Inter-Zone Corridor Path Distance\n\nStart location / SKU bin\n\nEnd location / SKU bin\n\n\ud83d\udccf\n\nMeasured Corridor Distance: 62.6 m (Strictly follows the perimeter and inter-zone corridors around zones; zero zone penetration)\n\nView\n\nRack elevation\n\nZone\n\nRack (elevation)\n\nColour by\n\nAssigned bins only\n\nDEPOT\nStart\nEnd\n\u221220\n\u221210\n0\n10\n20\n30\n40\n50\n60\n0\n5\n10\n15\n20\n25\n30\n35\n40\nDepot (I-O)\nInvisible Ruler (62.6 m)\nWarehouse Layout: 3x3 Matrix with 9 Zones & Edge Racks\nx (meters)\ny (meters)\nZ1General\nZ2General\nZ3General\nZ4Small Parts\nZ5Bulk\nZ6Bulk\nZ7Heavy",
+      "selectboxes": 9,
+      "buttons": 39,
+      "tables": 1,
+      "plotly_charts": 11
+    },
+    "Pick Routes": {
+      "screenshot": "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase7_5/before/overview_02_pick_routes_1600.png",
+      "text_excerpt": "Pick-path simulation\n\nPick batch\n\nOrders in batch\n\n5\n\nTravel distance\n\n630.4 m\n\n\u25bc 57.8% vs baseline\n\nCycle time\n\n598.9 s\n\n\u25bc 52.5% vs baseline\n\nPick locations\n\n14\n\nbaseline 15\n\nBaseline: 1,492.2 m / 1,261.8 s \u00b7 Optimized: 630.4 m / 598.9 s. Both routes use the same orders, graph, routing heuristic and time assumptions.\n\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\nI-O\n0\n10\n20\n30\n40\n50\n0\n10\n20\n30\n40\nRoute sequence\nPick stops\nDispatch / I-O\nBaseline route \u2014 batch 0\nx (meters)\ny (meters)\nZ1\nZ2\nZ3\nZ4\nZ5\nZ6\nZ7\nZ8\nZ9\n\nPlan schematic: axes are metres; the display aspect is stretched so the full route fits.\n\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\nI-O\n0\n10\n20\n30\n40\n50\n0\n10\n20\n30\n40\nRoute sequence\nPick stops\nDispatch / I-O\nOptimized route \u2014 batch 0\nx (meters)\ny (meters)\nZ1\nZ2\nZ3\nZ4\nZ5\nZ6\nZ7\nZ8\nZ9\n\nPlan schematic: axes are metres; the display aspect is stretched so the full route fits.\n\nOrdered pick stops\n\nStops for\n\noptimized\n\nbaseline\n\nkeyboard_arrow_right\n\nRoute assumptions",
+      "selectboxes": 1,
+      "buttons": 25,
+      "tables": 1,
+      "plotly_charts": 11
+    },
+    "Ergonomics": {
+      "screenshot": "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase7_5/before/overview_03_ergonomics_1600.png",
+      "text_excerpt": "Ergonomics and replenishment\n\nGolden-zone shelf levels are read from the topology (ergonomic_zone = golden): levels [1, 2]. Heavy items are restricted to shelf levels 0\u20132 by rule ER-01.\n\nGolden-zone boundaries and shelf usage\n\nGolden-zone demand share\n\n61.44 %\n\n+23.39 pp\n\nBaseline: 38.05 % \u00b7 +23.39 pp \u00b7 higher is better\n\nClass A SKUs with no golden-shelf stock\n\n137 SKUs\n\n+3\n\nBaseline: 134 SKUs \u00b7 +3 \u00b7 lower is better\n\nConstraint violations (hard)\n\n0\n\n+0\n\nBaseline: 0 \u00b7 +0 \u00b7 must be 0\n\n38.05 %\n61.44 %\nBaseline\nOptimized\n0\n20\n40\n60\nDemand-weighted share of units in the golden zone (%)\n%\n134 SKUs\n137 SKUs\nBaseline\nOptimized\n0\n50\n100\n150\nClass A SKUs without golden-zone stock (SKUs)\nSKUs\n\nClass A exceptions \u2014 no unit on a golden shelf level\n\n137 Class A SKUs have no unit on a golden shelf level. They remain placed in feasible locations; the reason is capacity, zone eligibility (hazard/handling) or hard structural limits, not a relaxation of safety rules.\n\nHeavy-item placement restrictions\n\nHeavy SKUs\n\n180\n\nHeavy SKUs stored above level 2\n\n0\n\nER-01 rule checks failed\n\n0\n\nReplenishment metrics\n\nNot modeled. The dataset contains no replenishment policy, reorder points, lead times, or replen",
+      "selectboxes": 0,
+      "buttons": 28,
+      "tables": 2,
+      "plotly_charts": 11
+    },
+    "Exports": {
+      "screenshot": "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase7_5/before/overview_04_exports_1600.png",
+      "text_excerpt": "Exports and reports\n\nEvery export contains the same results shown on screen; tabular outputs are CSV and structured run metadata is JSON. PDF report generation is not implemented \u2014 the JSON report carries the methodology, assumptions, results and safety audit.\n\nBaseline assignments (CSV)\n\nOptimized assignments (CSV)\n\nConstraint validation audit \u2014 optimized (CSV)\n\nSKU demand / ABC analysis (CSV)\n\nAffinity analysis results (CSV)\n\nBaseline vs optimized KPI report (CSV)\n\nOptimization configuration and run summary (JSON)\n\nFull evaluation report (JSON)\n\nReport contents\n\nMethodology and ABC rule \u00b7 evaluation conditions \u00b7 assumptions (walker speed, pick/setup time, batch size) \u00b7 baseline and optimized metrics \u00b7 safety audit verdicts for both layouts \u00b7 optimization run metadata \u00b7 unassigned-SKU list \u00b7 stated limitations.\n\nkeyboard_arrow_right\n\nPreview report metadata",
+      "selectboxes": 0,
+      "buttons": 12,
+      "tables": 0,
+      "plotly_charts": 11
+    },
+    "Experiments": {
+      "screenshot": "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase7_5/before/overview_05_experiments_1600.png",
+      "text_excerpt": "Controlled experiments \u2014 Phases 3 & 4\n\nEvery value below is read from outputs/phase3/phase3_experiments.json and outputs/phase4/phase4_experiments.json through the existing contracts. The dashboard does not recompute metrics. Phase 3 travel is a demand-weighted order-line metric (metres / resolved line); Phase 4 travel is simulated batch-route distance. They are different metrics and are not combined.\n\nkeyboard_arrow_right\n\nPhase 6 reproducibility runs",
+      "selectboxes": 0,
+      "buttons": 4,
+      "tables": 0,
+      "plotly_charts": 11
+    },
+    "Inventory Mgmt": {
+      "screenshot": "/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase7_5/before/overview_06_inventory_mgmt_1600.png",
+      "text_excerpt": "",
+      "selectboxes": 0,
+      "buttons": 4,
+      "tables": 0,
+      "plotly_charts": 11
+    }
+  },
+  "console": [],
+  "tabs_found": [
+    "Overview",
+    "Warehouse Layout",
+    "Pick Routes",
+    "Ergonomics",
+    "Exports",
+    "Experiments",
+    "Inventory Mgmt"
+  ]
+}

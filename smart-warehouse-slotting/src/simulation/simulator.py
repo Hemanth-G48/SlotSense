@@ -15,6 +15,9 @@ from dataclasses import dataclass, field
 import pandas as pd
 
 
+PICK_TIME_BASES = ("order_line", "stop")
+
+
 @dataclass
 class SimulationConfig:
     batch_size: int = 5
@@ -35,9 +38,6 @@ class SimulationConfig:
             )
         if self.pick_time_sec < 0 or self.pick_time_stop_sec < 0:
             raise ValueError("pick-time constants must be non-negative")
-
-
-PICK_TIME_BASES = ("order_line", "stop")
 
 
 @dataclass
@@ -138,7 +138,6 @@ def summarize(results: list[RouteResult], cfg: SimulationConfig | None = None) -
             "throughput_orders_per_hr": 0.0,
             "pick_time_basis": cfg.pick_time_basis if cfg is not None else "order_line",
         }
-    pick_time_sec = cfg.pick_time_sec if cfg is not None else 8.0
     setup_time_sec = cfg.setup_time_sec if cfg is not None else 10.0
     total_dist = sum(r.distance_m for r in results)
     total_cycle = sum(r.cycle_time_sec for r in results)

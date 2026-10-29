@@ -1,0 +1,97 @@
+{
+  "schema": "phase7.timing_sensitivity/1",
+  "generated_at_utc": "2026-10-29T07:52:48+00:00",
+  "constants": [
+    6.0,
+    8.0,
+    10.0
+  ],
+  "status": "hypothetical sensitivity; not physically calibrated",
+  "rows": [
+    {
+      "basis": "order_line",
+      "pick_time_sec": 6.0,
+      "workload_id": "wl_ad0d500eae81e001",
+      "baseline_travel_m": 508174.8,
+      "optimized_travel_m": 234208.0,
+      "baseline_cycle_s": 430135.69,
+      "optimized_cycle_s": 219392.0,
+      "baseline_throughput": 13.6,
+      "optimized_throughput": 26.66,
+      "cycle_change_pct": -48.9947,
+      "throughput_change_pct": 96.0294,
+      "feasible": true
+    },
+    {
+      "basis": "order_line",
+      "pick_time_sec": 8.0,
+      "workload_id": "wl_ad0d500eae81e001",
+      "baseline_travel_m": 508174.8,
+      "optimized_travel_m": 234208.0,
+      "baseline_cycle_s": 442129.69,
+      "optimized_cycle_s": 231386.0,
+      "baseline_throughput": 13.23,
+      "optimized_throughput": 25.28,
+      "cycle_change_pct": -47.6656,
+      "throughput_change_pct": 91.0809,
+      "feasible": true
+    },
+    {
+      "basis": "order_line",
+      "pick_time_sec": 10.0,
+      "workload_id": "wl_ad0d500eae81e001",
+      "baseline_travel_m": 508174.8,
+      "optimized_travel_m": 234208.0,
+      "baseline_cycle_s": 454123.69,
+      "optimized_cycle_s": 243380.0,
+      "baseline_throughput": 12.88,
+      "optimized_throughput": 24.04,
+      "cycle_change_pct": -46.4067,
+      "throughput_change_pct": 86.646,
+      "feasible": true
+    },
+    {
+      "basis": "stop",
+      "pick_time_sec": 6.0,
+      "workload_id": "wl_ad0d500eae81e001",
+      "baseline_travel_m": 508174.8,
+      "optimized_travel_m": 234208.0,
+      "baseline_cycle_s": 440425.69,
+      "optimized_cycle_s": 219188.0,
+      "baseline_throughput": 13.28,
+      "optimized_throughput": 26.69,
+      "cycle_change_pct": -50.2327,
+      "throughput_change_pct": 100.9789,
+      "feasible": true
+    },
+    {
+      "basis": "stop",
+      "pick_time_sec": 8.0,
+      "workload_id": "wl_ad0d500eae81e001",
+      "baseline_travel_m": 508174.8,
+      "optimized_travel_m": 234208.0,
+      "baseline_cycle_s": 455849.69,
+      "optimized_cycle_s": 231114.0,
+      "baseline_throughput": 12.83,
+      "optimized_throughput": 25.31,
+      "cycle_change_pct": -49.3004,
+      "throughput_change_pct": 97.272,
+      "feasible": true
+    },
+    {
+      "basis": "stop",
+      "pick_time_sec": 10.0,
+      "workload_id": "wl_ad0d500eae81e001",
+      "baseline_travel_m": 508174.8,
+      "optimized_travel_m": 234208.0,
+      "baseline_cycle_s": 471273.69,
+      "optimized_cycle_s": 243040.0,
+      "baseline_throughput": 12.41,
+      "optimized_throughput": 24.07,
+      "cycle_change_pct": -48.4291,
+      "throughput_change_pct": 93.9565,
+      "feasible": true
+    }
+  ],
+  "travel_unchanged_within_basis": true
+}

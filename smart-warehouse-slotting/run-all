@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Reproducible Phase 2-6 evidence chain.
+#
+# Prerequisites (documented in docs/PHASE_6_REPRODUCIBILITY.md):
+#   uv venv .venv
+#   uv pip install --python .venv/bin/python -r requirements.txt
+#
+# Usage:
+#   ./run-all [--dataset PATH] [--run-id ID] [--out-base DIR] [--force]
+#
+# Exit status is the orchestrator's status: 0 only if every stage passed.
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PYTHON="${PYTHON:-$ROOT/.venv/bin/python}"
+
+exec "$PYTHON" "$ROOT/tools/run_all.py" "$@"

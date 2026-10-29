@@ -77,7 +77,17 @@ def test_dashboard_app_renders_all_sections(dashboard_data):
     at = AppTest.from_file(str(PROJECT_ROOT / "app" / "dashboard.py"), default_timeout=180)
     at.run()
     assert not at.exception, [str(e) for e in at.exception]
-    assert len(at.tabs) == 9
+    tab_labels = {t.label for t in at.tabs}
+    assert {
+        "Overview",
+        "Warehouse Layout",
+        "Pick Routes",
+        "Ergonomics",
+        "Exports",
+        "Experiments",
+        "Inventory",
+    } <= tab_labels
+    assert {"Phase 3 — demand metrics", "Phase 4 — simulation"} <= tab_labels
 
     labels = {m.label: m.value for m in at.metric}
     assert labels["Safety compliance"] == "PASS"

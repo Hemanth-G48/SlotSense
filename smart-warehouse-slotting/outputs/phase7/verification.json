@@ -1,0 +1,98 @@
+{
+  "schema": "phase7.verification/1",
+  "all_passed": true,
+  "n_checks": 18,
+  "n_failed": 0,
+  "checks": [
+    {
+      "name": "comparison_has_two_arms",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "comparison_same_seed_budget",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "legacy_feasible",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "targeted_feasible",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "both_inventory_conserved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "targeted_proposal_yield_improved",
+      "passed": true,
+      "detail": "legacy={'seed': 42, 'samples': 600, 'feasible': 270, 'invalid_or_infeasible': 330, 'improving': 2, 'best_delta': -0.0704, 'feasible_rate_pct': 45.0} targeted={'seed': 42, 'samples': 600, 'feasible': 426, 'invalid_or_infeasible': 174, 'improving': 4, 'best_delta': -0.8128, 'feasible_rate_pct': 71.0}"
+    },
+    {
+      "name": "same_layout_not_forced",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "objective_delta_consistent",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "targeted_layout_hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "legacy_layout_hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "timing_six_runs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "timing_constants",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "timing_travel_fixed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "timing_all_feasible",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "timing_line_default_matches_phase6",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "capacity_baseline_feasible",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "capacity_perturbations_rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "phase6_clean_verifier_present",
+      "passed": true,
+      "detail": "27 checks"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+basis,layout,workload_id,feasible,total_travel_distance_m,total_route_time_sec,throughput_orders_per_hr,avg_time_per_order_sec,total_pick_lines,total_pick_stops,total_travel_time_sec,total_pick_time_sec,total_setup_time_sec
+order_line,baseline,wl_ad0d500eae81e001,True,508174.8,442129.69,13.23,272.08,5997,7712,390903.69,47976.0,3250.0
+order_line,optimized,wl_ad0d500eae81e001,True,234208.0,231386.0,25.28,142.39,5997,5963,180160.0,47976.0,3250.0
+stop,baseline,wl_ad0d500eae81e001,True,508174.8,455849.69,12.83,280.52,5997,7712,390903.69,61696.0,3250.0
+stop,optimized,wl_ad0d500eae81e001,True,234208.0,231114.0,25.31,142.22,5997,5963,180160.0,47704.0,3250.0

@@ -25,3 +25,6 @@ dataset-2/raw/
 .env
 .env.*
 .streamlit/secrets.toml
+
+# Phase 6 run artifacts are copies of already-tracked phase outputs
+smart-warehouse-slotting/outputs/phase6/runs/*/artifacts/

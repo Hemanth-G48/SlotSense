@@ -1,0 +1,116 @@
+{
+  "schema": "phase5.d37/1",
+  "generated_at_utc": "2026-10-29T03:32:10+00:00",
+  "workload": {
+    "workload_id": "wl_ad0d500eae81e001",
+    "sha256": "ad0d500eae81e001577769e2732b89b9ab605b0f6351c282fab310fa01a03965",
+    "scenario": "A_HOLDOUT",
+    "n_orders": 1625,
+    "n_lines": 5997,
+    "n_units": 9626,
+    "n_skus": 899
+  },
+  "layouts": {
+    "baseline_sha256": "17380197ee66e1ced7a341ce4b15bdb51774cb479e2bfd9ca14deb8ababdd3fa",
+    "optimized_sha256": "cafa55e805e817306913186d92889801728a30a3012ffa9a1722e27c3003bd6b"
+  },
+  "definitions": {
+    "order_line": "pick time = order lines in the batch \u00d7 8.0 s",
+    "stop": "pick time = distinct physical bins visited by the batch \u00d7 8.0 s",
+    "stop_model": "one stop per distinct bin holding any SKU in the batch; multi-line picks at one bin share a stop",
+    "cycle": "travel_time + pick_time + setup_time"
+  },
+  "rows": [
+    {
+      "basis": "order_line",
+      "layout": "baseline",
+      "workload_id": "wl_ad0d500eae81e001",
+      "feasible": true,
+      "total_travel_distance_m": 508174.8,
+      "total_route_time_sec": 442129.69,
+      "throughput_orders_per_hr": 13.23,
+      "avg_time_per_order_sec": 272.08,
+      "total_pick_lines": 5997,
+      "total_pick_stops": 7712,
+      "total_travel_time_sec": 390903.69,
+      "total_pick_time_sec": 47976.0,
+      "total_setup_time_sec": 3250.0
+    },
+    {
+      "basis": "order_line",
+      "layout": "optimized",
+      "workload_id": "wl_ad0d500eae81e001",
+      "feasible": true,
+      "total_travel_distance_m": 234208.0,
+      "total_route_time_sec": 231386.0,
+      "throughput_orders_per_hr": 25.28,
+      "avg_time_per_order_sec": 142.39,
+      "total_pick_lines": 5997,
+      "total_pick_stops": 5963,
+      "total_travel_time_sec": 180160.0,
+      "total_pick_time_sec": 47976.0,
+      "total_setup_time_sec": 3250.0
+    },
+    {
+      "basis": "stop",
+      "layout": "baseline",
+      "workload_id": "wl_ad0d500eae81e001",
+      "feasible": true,
+      "total_travel_distance_m": 508174.8,
+      "total_route_time_sec": 455849.69,
+      "throughput_orders_per_hr": 12.83,
+      "avg_time_per_order_sec": 280.52,
+      "total_pick_lines": 5997,
+      "total_pick_stops": 7712,
+      "total_travel_time_sec": 390903.69,
+      "total_pick_time_sec": 61696.0,
+      "total_setup_time_sec": 3250.0
+    },
+    {
+      "basis": "stop",
+      "layout": "optimized",
+      "workload_id": "wl_ad0d500eae81e001",
+      "feasible": true,
+      "total_travel_distance_m": 234208.0,
+      "total_route_time_sec": 231114.0,
+      "throughput_orders_per_hr": 25.31,
+      "avg_time_per_order_sec": 142.22,
+      "total_pick_lines": 5997,
+      "total_pick_stops": 5963,
+      "total_travel_time_sec": 180160.0,
+      "total_pick_time_sec": 47704.0,
+      "total_setup_time_sec": 3250.0
+    }
+  ],
+  "travel_unchanged": true,
+  "impact": {
+    "baseline": {
+      "layout": "baseline",
+      "cycle_line_s": 442129.69,
+      "cycle_stop_s": 455849.69,
+      "cycle_delta_s": 13720.0,
+      "cycle_delta_pct": 3.103,
+      "throughput_line": 13.23,
+      "throughput_stop": 12.83,
+      "time_per_order_line_s": 272.08,
+      "time_per_order_stop_s": 280.52
+    },
+    "optimized": {
+      "layout": "optimized",
+      "cycle_line_s": 231386.0,
+      "cycle_stop_s": 231114.0,
+      "cycle_delta_s": -272.0,
+      "cycle_delta_pct": -0.118,
+      "throughput_line": 25.28,
+      "throughput_stop": 25.31,
+      "time_per_order_line_s": 142.39,
+      "time_per_order_stop_s": 142.22
+    }
+  },
+  "decision": {
+    "authoritative_default": "order_line",
+    "stop_status": "configurable sensitivity model",
+    "reason": "PROJECT.md defines pick-cycle time as travel + pick + setup but does not define the pick-time unit. The line model is retained as the compatibility default because every Phase 2/3/4 figure uses it; the stop model is published as a sensitivity analysis because ARCHITECTURE \u00a710 describes per-stop charging as the target.",
+    "consequence": "Travel is unchanged; cycle time and throughput move because stops differ from lines. Historical cycle/throughput figures remain line-based and must not be mixed with stop-based values."
+  }
+}

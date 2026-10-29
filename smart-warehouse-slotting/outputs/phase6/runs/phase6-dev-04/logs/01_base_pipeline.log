@@ -1,0 +1,15 @@
+$ /home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/.venv/bin/python /home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/app/main.py run-all --processed /home/hemanth/hackathon/epoch_hackathon/dataset/processed
+
+== validate ==
+   baseline feasible=False violations=1071 checks=20699
+== baseline repair ==
+   baseline_variant=repaired_minimal source=/home/hemanth/hackathon/epoch_hackathon/smart-warehouse-slotting/outputs/phase6/runs/phase6-dev-04/artifacts/baseline_repaired_assignments.csv
+   repair: 1071 -> 0 violations ({'CAT-01': 1071} -> {}), moves attempted=96 accepted=96 rejected=0, terminated=feasible in 8.989s
+   movement: 96/1425 records relocated, 1471.373 m total, median 12.01 m
+   conservation: units 6375/6375 exact=True duplicate_pins=0
+== analysis ==
+== optimize ==
+   execution=OK feasibility=FEASIBLE violations=0 rules={}
+== simulate ==
+   evaluation_status=OK comparison_valid=True blocked_layouts=[] baseline_variant=repaired_minimal
+== done ==
