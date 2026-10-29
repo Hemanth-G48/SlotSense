@@ -1,0 +1,8 @@
+# Used by Streamlit Community Cloud (entrypoint: smart-warehouse-slotting/app/dashboard.py).
+# Keep in sync with smart-warehouse-slotting/requirements.txt.
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+plotly>=5.0
+streamlit>=1.30
+pytest>=7.0

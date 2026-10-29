@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SlotSense — Smart Warehouse Slotting &amp; Optimization</title>
+<meta name="description" content="Constraint-aware SKU slotting for fulfilment centres. 1,200 SKUs placed across 576 locations with zero hard violations and 55.7% less picker travel.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232471a3'/%3E%3Cg fill='white'%3E%3Crect x='7' y='7' width='7' height='7' rx='1.5'/%3E%3Crect x='18' y='7' width='7' height='7' rx='1.5' opacity='.55'/%3E%3Crect x='7' y='18' width='7' height='7' rx='1.5' opacity='.55'/%3E%3Crect x='18' y='18' width='7' height='7' rx='1.5'/%3E%3C/g%3E%3C/svg%3E">
+<style>
+  :root{
+    --canvas:#f6f8fb; --surface:#fff; --line:#dbe3ee; --line-soft:#eaf0f7;
+    --ink:#0f2742; --muted:#52637a; --blue:#2471a3; --blue-dark:#1b5a84;
+    --green:#166534; --green-bg:#ecfdf3; --green-line:#bbf7d0;
+    --shadow:0 1px 2px rgba(15,39,66,.05), 0 10px 30px rgba(15,39,66,.06);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--canvas); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;
+    line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--blue-dark); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 24px}
+  .skip{position:absolute; left:-9999px}
+  .skip:focus{left:16px; top:16px; background:#fff; padding:8px 12px; border-radius:8px; z-index:20}
+
+  header{border-bottom:1px solid var(--line); background:rgba(246,248,251,.9); backdrop-filter:blur(10px); position:sticky; top:0; z-index:10}
+  .nav{display:flex; align-items:center; gap:28px; min-height:66px}
+  .brand{display:flex; align-items:center; gap:10px; font-weight:750; font-size:1.08rem; color:var(--ink); letter-spacing:-.01em}
+  .brand:hover{text-decoration:none}
+  .brand svg{display:block}
+  .nav-links{display:flex; align-items:center; gap:22px; margin-left:auto; font-size:.92rem}
+  .nav-links a{color:var(--muted); font-weight:550}
+  .nav-links a:hover{color:var(--ink); text-decoration:none}
+
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding:11px 18px; border-radius:9px; font-size:.92rem; font-weight:650;
+    border:1px solid transparent; transition:background .15s, border-color .15s, transform .15s;
+  }
+  .btn:hover{text-decoration:none; transform:translateY(-1px)}
+  .btn-primary{background:var(--blue); color:#fff}
+  .btn-primary:hover{background:var(--blue-dark)}
+  .btn-ghost{background:var(--surface); color:var(--ink); border-color:var(--line)}
+  .btn-ghost:hover{border-color:#b9c7d9}
+
+  .hero{padding:72px 0 56px; position:relative; overflow:hidden}
+  .hero::before{
+    content:""; position:absolute; inset:0; pointer-events:none; opacity:.5;
+    background-image:linear-gradient(var(--line-soft) 1px, transparent 1px), linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
+    background-size:44px 44px;
+    mask-image:radial-gradient(ellipse 70% 60% at 50% 0%, #000 20%, transparent 75%);
+    -webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 0%, #000 20%, transparent 75%);
+  }
+  .hero > .wrap{position:relative}
+  .eyebrow{display:inline-flex; align-items:center; gap:8px; font-size:.76rem; font-weight:700; letter-spacing:.09em; text-transform:uppercase; color:var(--blue-dark); background:#e8f1f8; border:1px solid #cfe2f1; padding:5px 11px; border-radius:999px; margin-bottom:22px}
+  h1{font-size:clamp(2.15rem, 5vw, 3.5rem); line-height:1.08; letter-spacing:-.035em; margin:0 0 20px; max-width:19ch; font-weight:780}
+  .lede{font-size:1.1rem; color:var(--muted); max-width:60ch; margin:0 0 30px}
+  .actions{display:flex; flex-wrap:wrap; gap:12px; margin-bottom:26px}
+  .meta{display:flex; flex-wrap:wrap; gap:8px 22px; font-size:.85rem; color:var(--muted); margin:0; padding:0; list-style:none}
+  .meta li{display:flex; align-items:center; gap:7px}
+  .dot{width:6px; height:6px; border-radius:50%; background:var(--blue); flex:none}
+
+  section{padding:52px 0}
+  .section-head{max-width:64ch; margin-bottom:26px}
+  h2{font-size:1.55rem; letter-spacing:-.02em; margin:0 0 8px; font-weight:730}
+  .section-head p{margin:0; color:var(--muted); font-size:.98rem}
+
+  .kpis{display:grid; grid-template-columns:repeat(4,1fr); gap:16px}
+  .kpi{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:20px; box-shadow:var(--shadow)}
+  .kpi .label{font-size:.78rem; font-weight:650; letter-spacing:.04em; text-transform:uppercase; color:var(--muted); margin:0 0 10px}
+  .kpi .value{font-size:1.9rem; line-height:1; letter-spacing:-.03em; font-weight:770; margin:0 0 10px; font-variant-numeric:tabular-nums}
+  .kpi .sub{font-size:.84rem; color:var(--muted); margin:0; font-variant-numeric:tabular-nums}
+  .pill{display:inline-block; font-size:.76rem; font-weight:700; color:var(--green); background:var(--green-bg); border:1px solid var(--green-line); padding:2px 8px; border-radius:999px; margin-left:6px; vertical-align:middle}
+
+  .panel{background:var(--surface); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow); overflow:hidden}
+  table{width:100%; border-collapse:collapse; font-size:.9rem; font-variant-numeric:tabular-nums}
+  caption{text-align:left; padding:16px 20px; font-weight:650; font-size:.9rem; border-bottom:1px solid var(--line-soft)}
+  th,td{padding:11px 20px; text-align:right; border-bottom:1px solid var(--line-soft)}
+  th:first-child,td:first-child{text-align:left}
+  thead th{font-size:.74rem; letter-spacing:.05em; text-transform:uppercase; color:var(--muted); font-weight:650; background:#fbfcfe}
+  tbody tr:last-child td{border-bottom:0}
+  .good{color:var(--green); font-weight:650}
+  .num{color:var(--muted)}
+
+  .steps{display:grid; grid-template-columns:repeat(4,1fr); gap:16px}
+  .step{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:20px}
+  .step .n{font-size:.75rem; font-weight:750; color:var(--blue); letter-spacing:.08em; margin:0 0 12px}
+  .step h3{font-size:.98rem; margin:0 0 6px; letter-spacing:-.01em}
+  .step p{margin:0; font-size:.86rem; color:var(--muted)}
+  .stack{display:flex; flex-wrap:wrap; gap:8px; margin-top:20px}
+  .tag{font-size:.76rem; color:var(--muted); background:var(--surface); border:1px solid var(--line); border-radius:999px; padding:4px 10px}
+
+  footer{border-top:1px solid var(--line); padding:28px 0 40px; font-size:.84rem; color:var(--muted)}
+  .foot{display:flex; flex-wrap:wrap; gap:14px 26px; align-items:center}
+  .foot .spacer{margin-left:auto}
+  .foot a{color:var(--muted)}
+  .foot a:hover{color:var(--ink)}
+
+  @media (max-width:900px){
+    .kpis{grid-template-columns:repeat(2,1fr)}
+    .steps{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (max-width:640px){
+    .nav-links a:not(.btn){display:none}
+    .hero{padding:52px 0 40px}
+    .kpis,.steps{grid-template-columns:1fr}
+    th,td{padding:10px 14px}
+    caption{padding:14px}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <nav class="wrap nav" aria-label="Main">
+    <a class="brand" href="/">
+      <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#2471a3"/><g fill="#fff"><rect x="7" y="7" width="7" height="7" rx="1.5"/><rect x="18" y="7" width="7" height="7" rx="1.5" opacity=".55"/><rect x="7" y="18" width="7" height="7" rx="1.5" opacity=".55"/><rect x="18" y="18" width="7" height="7" rx="1.5"/></g></svg>
+      SlotSense
+    </a>
+    <div class="nav-links">
+      <a href="#results">Results</a>
+      <a href="#how">How it works</a>
+      <a href="https://github.com/Hemanth-G48/SlotSense" target="_blank" rel="noopener">GitHub</a>
+      <!-- Streamlit Community Cloud URL. If your app uses a different subdomain, change it here. -->
+      <a class="btn btn-primary" href="https://slot-sense.streamlit.app" target="_blank" rel="noopener">Open dashboard</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Epoch Hackathon · Track 2</p>
+      <h1>Put every SKU where the picker needs it.</h1>
+      <p class="lede">
+        SlotSense assigns 1,200 SKUs to 576 physical storage locations while satisfying 3-D fit,
+        weight, safety, category-separation and ergonomic rules — then proves the gain against a
+        feasible baseline under identical demand, geometry and routing.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://slot-sense.streamlit.app" target="_blank" rel="noopener">Explore the live dashboard →</a>
+        <a class="btn btn-ghost" href="https://github.com/Hemanth-G48/SlotSense" target="_blank" rel="noopener">View source</a>
+      </div>
+      <ul class="meta">
+        <li><span class="dot"></span>576 locations</li>
+        <li><span class="dot"></span>1,200 SKUs · 6,375 units</li>
+        <li><span class="dot"></span>5,415 orders</li>
+        <li><span class="dot"></span>0 hard violations</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="results">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Same warehouse. Half the walking.</h2>
+        <p>Baseline and optimized layouts evaluated against the same pick batches, route network and demand. Values are read from the committed evaluation artifacts.</p>
+      </div>
+      <div class="kpis">
+        <article class="kpi">
+          <p class="label">Travel per order</p>
+          <p class="value">−55.7%<span class="pill">312 → 139 m</span></p>
+          <p class="sub">941 km less travel across the test horizon</p>
+        </article>
+        <article class="kpi">
+          <p class="label">Throughput</p>
+          <p class="value">+96.9%<span class="pill">26.1 /h</span></p>
+          <p class="sub">13.24 → 26.07 orders per pick-cycle hour</p>
+        </article>
+        <article class="kpi">
+          <p class="label">Golden-zone demand</p>
+          <p class="value">61.4%<span class="pill">+23.4 pts</span></p>
+          <p class="sub">Share of demand-weighted units on golden shelf levels</p>
+        </article>
+        <article class="kpi">
+          <p class="label">Feasibility</p>
+          <p class="value">100%<span class="pill">0 violations</span></p>
+          <p class="sub">1,200 of 1,200 required SKUs placed and validated</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="panel">
+        <table>
+          <caption>Baseline vs. optimized — identical demand, geometry and routing</caption>
+          <thead>
+            <tr><th scope="col">Metric</th><th scope="col">Baseline</th><th scope="col">Optimized</th><th scope="col">Change</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Average travel per order</th><td class="num">312.37 m</td><td>138.53 m</td><td class="good">−55.65%</td></tr>
+            <tr><th scope="row">Pick-cycle time per order</th><td class="num">271.83 s</td><td>138.11 s</td><td class="good">−49.19%</td></tr>
+            <tr><th scope="row">Throughput</th><td class="num">13.24 orders/h</td><td>26.07 orders/h</td><td class="good">+96.90%</td></tr>
+            <tr><th scope="row">Demand on golden shelf levels</th><td class="num">38.05%</td><td>61.44%</td><td class="good">+23.39 pts</td></tr>
+            <tr><th scope="row">Affinity separation</th><td class="num">127.52 m</td><td>55.43 m</td><td class="good">−56.53%</td></tr>
+            <tr><th scope="row">Hard constraint violations</th><td class="num">0</td><td>0</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>How the engine works</h2>
+        <p>A reproducible pipeline: data → constraints → optimisation → independent verification. Nothing in the dashboard is hardcoded.</p>
+      </div>
+      <div class="steps">
+        <article class="step">
+          <p class="n">01 · DATA</p>
+          <h3>Warehouse + demand</h3>
+          <p>3×3 rack topology, SKU master data, order lines, ABC velocity and basket affinity from the generated benchmark.</p>
+        </article>
+        <article class="step">
+          <p class="n">02 · CONSTRAINTS</p>
+          <h3>Hard rules first</h3>
+          <p>3-D fit, volume, per-bin/shelf/rack weight, heavy-SKU height limits, hazard and category separation.</p>
+        </article>
+        <article class="step">
+          <p class="n">03 · OPTIMISE</p>
+          <h3>Demand-aware placement</h3>
+          <p>Simulated-annealing search over relocation proposals, scoring travel, affinity, ergonomics and utilisation.</p>
+        </article>
+        <article class="step">
+          <p class="n">04 · PROVE</p>
+          <h3>Independent evaluation</h3>
+          <p>Separate validator re-checks every assignment; baseline and optimized run through the same route simulation.</p>
+        </article>
+      </div>
+      <div class="stack" aria-label="Technology">
+        <span class="tag">Python 3.11</span><span class="tag">pandas</span><span class="tag">NumPy</span>
+        <span class="tag">Plotly</span><span class="tag">Streamlit</span><span class="tag">pytest</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>SlotSense — Smart Warehouse Slotting &amp; Optimization Engine</span>
+    <span class="spacer"></span>
+    <a href="https://github.com/Hemanth-G48/SlotSense/blob/main/PROJECT.md" target="_blank" rel="noopener">Problem &amp; scope</a>
+    <a href="https://github.com/Hemanth-G48/SlotSense/blob/main/ARCHITECTURE.md" target="_blank" rel="noopener">Architecture</a>
+    <a href="https://slot-sense.streamlit.app" target="_blank" rel="noopener">Dashboard</a>
+  </div>
+</footer>
+</body>
+</html>
