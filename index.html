@@ -34,6 +34,8 @@
   .nav-links{display:flex; align-items:center; gap:22px; margin-left:auto; font-size:.92rem}
   .nav-links a{color:var(--muted); font-weight:550}
   .nav-links a:hover{color:var(--ink); text-decoration:none}
+  .nav-links .btn-primary{color:#fff}
+  .nav-links .btn-primary:hover{color:#fff}
 
   .btn{
     display:inline-flex; align-items:center; justify-content:center; gap:8px;
@@ -75,7 +77,7 @@
   .kpi .sub{font-size:.84rem; color:var(--muted); margin:0; font-variant-numeric:tabular-nums}
   .pill{display:inline-block; font-size:.76rem; font-weight:700; color:var(--green); background:var(--green-bg); border:1px solid var(--green-line); padding:2px 8px; border-radius:999px; margin-left:6px; vertical-align:middle}
 
-  .panel{background:var(--surface); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow); overflow:hidden}
+  .panel{background:var(--surface); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow); overflow-x:auto}
   table{width:100%; border-collapse:collapse; font-size:.9rem; font-variant-numeric:tabular-nums}
   caption{text-align:left; padding:16px 20px; font-weight:650; font-size:.9rem; border-bottom:1px solid var(--line-soft)}
   th,td{padding:11px 20px; text-align:right; border-bottom:1px solid var(--line-soft)}
@@ -107,8 +109,8 @@
     .nav-links a:not(.btn){display:none}
     .hero{padding:52px 0 40px}
     .kpis,.steps{grid-template-columns:1fr}
-    th,td{padding:10px 14px}
-    caption{padding:14px}
+    th,td{padding:10px 12px; font-size:.84rem}
+    caption{padding:14px; font-size:.86rem}
   }
 </style>
 </head>
